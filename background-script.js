@@ -70,7 +70,7 @@ async function getAllLanguages() {
 
 	for ( i = 0; i < response.results.bindings.length; i++ ) {
 		language = response.results.bindings[ i ];
-		languages[ language.id.value ] = language.idLabel.value;
+		languages[ language.id.value.split( '/' ).pop() ] = language.idLabel.value;
 	}
 
 	return languages;
@@ -78,9 +78,12 @@ async function getAllLanguages() {
 
 // Loading all vidéos in a given sign language
 async function getAllRecords( language ) {
-	var i, record, word,
-		records = {},
-		response = await $.post( sparqlEndpoint, { format: 'json', query: sparqlVideoQuery.replace( '$(lang)', language ) } );
+	var i, record, word, response,
+		records = {};
+
+	state = 'loading';
+
+	response = await $.post( sparqlEndpoint, { format: 'json', query: sparqlVideoQuery.replace( '$(lang)', language ) } );
 
 	for ( i = 0; i < response.results.bindings.length; i++ ) {
 		record = response.results.bindings[ i ];
@@ -91,6 +94,9 @@ async function getAllRecords( language ) {
 		records[ word ].push( record.filename.value );
 	}
 
+	state = 'ready';
+
+	console.log( Object.keys( records ).length + ' records loaded' );
 	return records;
 }
 
@@ -102,6 +108,12 @@ function wordToUrls( word ) {
 	}
 
 	return records[ word ];
+}
+
+async function changeLanguage( newLang ) {
+	language = newLang;
+	records = await getAllRecords( newLang );
+	await browser.storage.local.set( { 'language': newLang } );
 }
 
 /**

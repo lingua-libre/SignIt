@@ -1,0 +1,27 @@
+html, body {
+  width: 350px;
+  min-height: 300px;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+#popup-loading {
+	width: 100%;
+	text-align: center;
+	color: black;
+}
+
+#popup-loading-spinner {
+	animation: spinner 1.5s linear infinite;
+	width:40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin: auto;
+}
+
+#popup-options {
+	display:none;
+
+}
