@@ -1,0 +1,36 @@
+{
+  "name": "sign-it",
+  "version": "0.1.0",
+  "description": "SignIt translate a word in Sign Language.",
+  "main": "background-script.js",
+  "dependencies": {
+    "oojs-ui": "^0.29.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lingua-libre/SignIt.git"
+  },
+  "keywords": [
+    "sign",
+    "language",
+    "signlanguage",
+    "webextension",
+    "firefox",
+    "chrome",
+    "video"
+  ],
+  "author": {
+    "name": "Antoine '0x010C' Lamielle",
+    "email": "gh@0x010c.fr",
+    "url": "https://0x010c.fr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lingua-libre/SignIt/issues"
+  },
+  "homepage": "https://github.com/lingua-libre/SignIt#readme"
+}
