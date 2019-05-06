@@ -8,18 +8,12 @@ var state = 'up', // up / loading / ready / error
 	language = 'Q99628';
 
 // TODO:
-// - popup
-//   * spinner when in loading state
-//   * get all languages
-//   * display language selector
-//   * change language when asked
-//   * save selected language in local storage
 // - multi-videos
-// - WT descriptions
+// - WT/Lexeme defenition
 // - underline available words in the page
 // - support link right click
 
-// state: started
+// state: uo
 // listen to event 1
 // loading saved params from localstorage
 // state: loading
@@ -28,28 +22,12 @@ var state = 'up', // up / loading / ready / error
 // create context menu
 // state: ready
 
-// Recieved events
-// ===============
-
-// Event 1: Get state (popup)
-// addListener
-// return state
-
-// Event 2: Get languages (popup)
-// addListener
-// return language + languages
-
-// Event 3: Switch language (popup)
-// addListener
+// change language asked from popup box
+// update global var
 // state: loading
-// getAllRecords
+// loading vidéos urls
+// set local storage
 // state: ready
-// return language + languages
-
-// Event 4: Context menu cliqued (browser)
-// addListener
-// get selected text
-// send message to display video of selected word
 
 /**
  * Functions

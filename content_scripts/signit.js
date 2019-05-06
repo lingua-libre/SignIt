@@ -37,34 +37,6 @@
 		popup.position();
 	}
 
-	async function getVideoUrl( word ) {
-		var title,
-			members,
-			result = await $.post('https://commons.wikimedia.org/w/api.php', {
-				"action": "query",
-				"format": "json",
-				"list": "categorymembers",
-				"cmtitle": "Category:Videos Langue des signes française",
-				"cmprop": "title",
-				"cmtype": "file",
-				"cmlimit": "1",
-				"cmstartsortkeyprefix": word,
-				"origin": "*"
-			});
-		console.log( result );
-		members = result.query.categorymembers;
-		if ( members.length === 0 ) {
-			return null;
-		}
-
-		title = members[ 0 ].title.toLowerCase().replace( /_/g, ' ' );
-		if ( title.lastIndexOf( word.toLowerCase(), 5) === -1 ) {
-			return null;
-		}
-
-		return 'https://commons.wikimedia.org/wiki/Special:FilePath/' + members[ 0 ].title;
-	}
-
 	function setVideoToPopup( title, url ) {
 		popupTitle.text( title );
 		popupVideo.attr( 'src', url );
