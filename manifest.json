@@ -30,7 +30,9 @@
     {
       "matches": ["<all_urls>"],
       "css": [
-      	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.css"
+      	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.css",
+		"node_modules/oojs-ui/dist/oojs-ui-wikimediaui-icons-movement.min.css",
+      	"content_scripts/signit.css"
       ],
       "js": [
       	"node_modules/jquery/dist/jquery.min.js",

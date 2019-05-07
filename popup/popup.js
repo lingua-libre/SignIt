@@ -25,7 +25,6 @@
 		$( '#popup-loading' ).hide();
 		$( '#popup-options' ).hide();
 		$( '#popup-' + tab ).show();
-
 	}
 
 	async function changeLanguage( item ) {

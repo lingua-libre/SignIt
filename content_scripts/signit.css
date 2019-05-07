@@ -1,0 +1,33 @@
+.signit-popup h1 {
+	margin-bottom: 0.6em;
+	font-size: 188%;
+	color: black;
+	padding-top: 0.5em;
+	padding-bottom: 0.17em;
+	border-bottom: 1px solid #a2a9b1;
+}
+
+.signit-popup-content {
+	display: flex;
+	flex: 1;
+}
+
+.signit-popup-separator {
+  width: 1px;
+  margin: 25px 10px;
+  background: #a2a9b1;
+}
+
+.signit-popup-leftpanel, .signit-popup-rightpanel {
+	flex: 0 1 auto;
+	width: 50%;
+}
+
+.signit-popup-leftpanel-video {
+	display: flex;
+	align-items: center;
+}
+
+.signit-popup-anchor {
+	position: absolute;
+}
