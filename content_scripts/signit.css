@@ -1,3 +1,7 @@
+.signit-popup .oo-ui-popupWidget-popup {
+	max-height: 500px;
+}
+
 .signit-popup h1 {
 	margin-bottom: 0.6em;
 	font-size: 188%;
@@ -30,4 +34,8 @@
 
 .signit-popup-anchor {
 	position: absolute;
+}
+
+.signit-popup-rightpanel ol ul {
+	display: none;
 }

@@ -87,6 +87,8 @@
 		files = files || [];
 		this.$videos = [];
 
+		this.setWiktionaryContent( title );
+
 		this.$title.text( title );
 		this.$videoContainer.empty();
 
@@ -122,6 +124,26 @@
 		} else {
 			this.nextVideoButton.setDisabled( false );
 		}
+	};
+
+	SignItPopup.prototype.setWiktionaryContent = async function ( title ) {
+		var content, frsection, definition,
+			result = await $.post( 'https://fr.wiktionary.org/w/api.php', {
+				"action": "parse",
+				"format": "json",
+				"page": title,
+				"prop": "text",
+				"disableeditsection": 1,
+				"disabletoc": 1,
+				"mobileformat": 1,
+				"noimages": 1,
+				"formatversion": "2"
+			} );
+		content = $( result.parse.text );
+		frsection = content.find( '#Français' ).parent().next();
+		definition = frsection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
+
+		this.$rightPanelContent.html( definition );
 	};
 
 	SignItPopup.prototype.toggle = function ( visible ) {
