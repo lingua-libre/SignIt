@@ -36,7 +36,7 @@
 		$( 'body' ).append( this.$anchor );
 
 		this.$title = $( '<h1>' );
-		this.$video = $( '<video width="420" controls muted>' );
+		this.$videoContainer = $( '<div>' );
 
 		this.$leftPanelNoVideo = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).html( 'Ce mot n\'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.<br><br>' );
 		contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
@@ -51,7 +51,7 @@
 			this.switchVideo( this.currentIndex + 1 );
 		}.bind( this ) );
 
-		this.$leftPanelContent = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).addClass( 'signit-popup-leftpanel-video' ).append( this.previousVideoButton.$element ).append( this.$video ).append( this.nextVideoButton.$element );
+		this.$leftPanelContent = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).addClass( 'signit-popup-leftpanel-video' ).append( this.previousVideoButton.$element ).append( this.$videoContainer ).append( this.nextVideoButton.$element );
 		this.$contentSeparator = $( '<div>' ).addClass( 'signit-popup-separator' );
 		this.$rightPanelContent = $( '<div>' ).addClass( 'signit-popup-rightpanel' );
 		this.$content = $( '<div>' ).addClass( 'signit-popup-content' ).append( this.$leftPanelNoVideo ).append( this.$leftPanelContent ).append( this.$contentSeparator ).append( this.$rightPanelContent );
@@ -83,10 +83,19 @@
 	};
 
 	SignItPopup.prototype.refresh = function ( title, urls ) {
-		this.videos = urls || [];
-		this.$title.text( title );
+		var i;
+		urls = urls || [];
+		this.$videos = [];
 
-		if ( this.videos.length > 0 ) {
+		this.$title.text( title );
+		this.$videoContainer.empty();
+
+		for ( i = 0; i < urls.length; i++ ) {
+			this.$videos.push( $( '<video controls="" muted="" preload="auto" width="420">' ).attr( 'src', urls[ i ] ).hide() );
+			this.$videoContainer.append( this.$videos[ i ] );
+		}
+
+		if ( this.$videos.length > 0 ) {
 			this.$leftPanelNoVideo.hide();
 			this.$leftPanelContent.show();
 			this.switchVideo( 0 );
@@ -97,9 +106,10 @@
 	};
 
 	SignItPopup.prototype.switchVideo = function ( newIndex ) {
+		this.$videos[ this.currentIndex ].hide();
 		this.currentIndex = newIndex;
-		this.$video.attr( 'src', this.videos[ this.currentIndex ] );
-		this.$video[ 0 ].play();
+		this.$videos[ this.currentIndex ].show();
+		this.$videos[ this.currentIndex ][ 0 ].play();
 
 		if ( this.currentIndex === 0 ) {
 			this.previousVideoButton.setDisabled( true );
@@ -107,7 +117,7 @@
 			this.previousVideoButton.setDisabled( false );
 		}
 
-		if ( this.currentIndex >= this.videos.length ) {
+		if ( this.currentIndex >= this.$videos.length - 1 ) {
 			this.nextVideoButton.setDisabled( true );
 		} else {
 			this.nextVideoButton.setDisabled( false );
