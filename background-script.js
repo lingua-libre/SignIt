@@ -1,6 +1,6 @@
 const sparqlEndpoint = 'https://lingualibre.fr/bigdata/namespace/wdq/sparql';
 const sparqlLangQuery = 'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
-const sparqlVideoQuery = 'SELECT ?word ?filename WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . }';
+const sparqlVideoQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
 
 var state = 'up', // up / loading / ready / error
 	records = {},
@@ -69,7 +69,7 @@ async function getAllRecords( language ) {
 		if ( records.hasOwnProperty( word ) === false ) {
 			records[ word ] = [];
 		}
-		records[ word ].push( record.filename.value );
+		records[ word ].push( { filename: record.filename.value, speaker: record.speaker.value } );
 	}
 
 	state = 'ready';
@@ -78,7 +78,7 @@ async function getAllRecords( language ) {
 	return records;
 }
 
-function wordToUrls( word ) {
+function wordToFiles( word ) {
 	word = word.toLowerCase();
 
 	if ( records.hasOwnProperty( word ) === false ) {
@@ -114,7 +114,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 		    browser.tabs.sendMessage(tabs[0].id, {
 		      command: "signit.sign",
 		      selection: info.selectionText,
-			  urls: wordToUrls( info.selectionText ),
+			  files: wordToFiles( info.selectionText ),
 		    });
         });
       break;

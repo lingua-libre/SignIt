@@ -62,7 +62,7 @@
 		this.popup = new OO.ui.PopupWidget( {
 			$content: this.$container,
 			padded: true,
-			width: '800px',
+			width: '850px',
 			$floatableContainer: this.$anchor,
 			position: 'above',
 			align: 'center',
@@ -82,16 +82,16 @@
 		this.popup.position();
 	};
 
-	SignItPopup.prototype.refresh = function ( title, urls ) {
+	SignItPopup.prototype.refresh = function ( title, files ) {
 		var i;
-		urls = urls || [];
+		files = files || [];
 		this.$videos = [];
 
 		this.$title.text( title );
 		this.$videoContainer.empty();
 
-		for ( i = 0; i < urls.length; i++ ) {
-			this.$videos.push( $( '<video controls="" muted="" preload="auto" width="420">' ).attr( 'src', urls[ i ] ).hide() );
+		for ( i = 0; i < files.length; i++ ) {
+			this.$videos.push( $( '<div>' ).html( 'par ' + files[ i ].speaker + '<br>Vidéo ' + ( i + 1 ) + ' sur ' + files.length + ' - <a href="https://commons.wikimedia.org/wiki/File:' + files[ i ].filename.split( '/' ).pop() + '">voir sur WM Commons</a>' ).prepend( $( '<video controls="" muted="" preload="auto" width="420">' ).attr( 'src', files[ i ].filename ) ).hide() );
 			this.$videoContainer.append( this.$videos[ i ] );
 		}
 
@@ -109,7 +109,7 @@
 		this.$videos[ this.currentIndex ].hide();
 		this.currentIndex = newIndex;
 		this.$videos[ this.currentIndex ].show();
-		this.$videos[ this.currentIndex ][ 0 ].play();
+		this.$videos[ this.currentIndex ].children( 'video' )[ 0 ].play();
 
 		if ( this.currentIndex === 0 ) {
 			this.previousVideoButton.setDisabled( true );
@@ -133,7 +133,6 @@
 	*/
 	browser.runtime.onMessage.addListener( function ( message ) {
 		if ( message.command === 'signit.sign' ) {
-			console.log( message.urls );
 			if ( popup === undefined ) {
 				popup = new SignItPopup();
 			}
@@ -141,7 +140,7 @@
 			popup.toggle( false );
 
 			popup.move();
-			popup.refresh( message.selection, message.urls );
+			popup.refresh( message.selection, message.files );
 
 			popup.toggle( true );
 		}
