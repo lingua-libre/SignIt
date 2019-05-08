@@ -14,12 +14,14 @@
 .signit-popup-content {
 	display: flex;
 	flex: 1;
+	align-items: center;
 }
 
 .signit-popup-separator {
-  width: 1px;
-  margin: 25px 5px;
-  background: #a2a9b1;
+	flex: 0 0 1px;
+	margin: 25px 10px;
+	background: #a2a9b1;
+	align-self: stretch;
 }
 
 .signit-popup-leftpanel, .signit-popup-rightpanel {
@@ -36,6 +38,16 @@
 	position: absolute;
 }
 
+.signit-popup-rightpanel {
+	overflow-y: auto;
+	max-height: 360px;
+	text-align: left;
+}
+
 .signit-popup-rightpanel ol ul {
+	display: none;
+}
+
+.signit-popup-rightpanel .reference {
 	display: none;
 }

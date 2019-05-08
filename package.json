@@ -4,7 +4,7 @@
   "description": "SignIt translate a word in Sign Language.",
   "main": "background-script.js",
   "dependencies": {
-    "oojs-ui": "^0.29.5"
+    "oojs-ui": "^0.29.6"
   },
   "devDependencies": {},
   "scripts": {

@@ -62,11 +62,13 @@
 		this.popup = new OO.ui.PopupWidget( {
 			$content: this.$container,
 			padded: true,
-			width: '850px',
+			width: 850,
 			$floatableContainer: this.$anchor,
 			position: 'above',
 			align: 'center',
 			autoClose: true,
+			autoFlip: true,
+			hideWhenOutOfView: false,
 			$container: $( 'body' ),
 			classes: [ 'signit-popup' ]
 		} );
@@ -78,8 +80,6 @@
 
 		this.$anchor.css( 'top', coords.y );
 		this.$anchor.css( 'left', coords.x );
-
-		this.popup.position();
 	};
 
 	SignItPopup.prototype.refresh = function ( title, files ) {
@@ -148,6 +148,11 @@
 
 	SignItPopup.prototype.toggle = function ( visible ) {
 		this.popup.toggle( visible );
+		if ( visible ) {
+			// The clipping behaviour of the popup is not wanted, and brings strange edge-clases
+			// We have to disable it each time the popup is turned on
+			this.popup.toggleClipping( false );
+		}
 	};
 
 	/**
