@@ -42,6 +42,10 @@
 		contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
 		this.$leftPanelNoVideo.append( contributeButton.$element );
 
+		this.$rightPanelSpinner = $( '<div class="popup-loading signit-popup-rightpanel"><img class="popup-loading-spinner" src="' + browser.extension.getURL( 'icons/Spinner_font_awesome.svg' ) + '" width="40" height="40"></div>' ).hide();
+		this.$rightPanelError = $( '<div>' ).addClass( 'signit-popup-rightpanel' ).html( 'Aucune définition n\'a été trouvée.' ).hide();
+
+
 		this.previousVideoButton = new OO.ui.ButtonWidget( { icon: 'previous', framed: false } );
 		this.nextVideoButton = new OO.ui.ButtonWidget( { icon: 'next', framed: false } );
 		this.previousVideoButton.on( 'click', function () {
@@ -54,7 +58,7 @@
 		this.$leftPanelContent = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).addClass( 'signit-popup-leftpanel-video' ).append( this.previousVideoButton.$element ).append( this.$videoContainer ).append( this.nextVideoButton.$element );
 		this.$contentSeparator = $( '<div>' ).addClass( 'signit-popup-separator' );
 		this.$rightPanelContent = $( '<div>' ).addClass( 'signit-popup-rightpanel' );
-		this.$content = $( '<div>' ).addClass( 'signit-popup-content' ).append( this.$leftPanelNoVideo ).append( this.$leftPanelContent ).append( this.$contentSeparator ).append( this.$rightPanelContent );
+		this.$content = $( '<div>' ).addClass( 'signit-popup-content' ).append( this.$leftPanelNoVideo ).append( this.$leftPanelContent ).append( this.$contentSeparator ).append( this.$rightPanelContent ).append( this.$rightPanelSpinner ).append( this.$rightPanelError );
 
 		this.$container = $( '<div>' ).append( this.$title ).append( this.$content );
 		this.$container.css( 'text-align', 'center' );
@@ -93,7 +97,7 @@
 		this.$videoContainer.empty();
 
 		for ( i = 0; i < files.length; i++ ) {
-			this.$videos.push( $( '<div>' ).html( 'par ' + files[ i ].speaker + '<br>Vidéo ' + ( i + 1 ) + ' sur ' + files.length + ' - <a href="https://commons.wikimedia.org/wiki/File:' + files[ i ].filename.split( '/' ).pop() + '">voir sur WM Commons</a>' ).prepend( $( '<video controls="" muted="" preload="auto" width="420">' ).attr( 'src', files[ i ].filename ) ).hide() );
+			this.$videos.push( $( '<div>' ).html( 'par ' + files[ i ].speaker + '<br>Vidéo ' + ( i + 1 ) + ' sur ' + files.length + ' - <a href="https://commons.wikimedia.org/wiki/File:' + files[ i ].filename.split( '/' ).pop() + '">voir sur WM Commons</a>' ).prepend( $( '<video controls="" muted="" preload="auto" width="335">' ).attr( 'src', files[ i ].filename ) ).hide() );
 			this.$videoContainer.append( this.$videos[ i ] );
 		}
 
@@ -127,7 +131,14 @@
 	};
 
 	SignItPopup.prototype.setWiktionaryContent = async function ( title ) {
-		var content, frsection, definition,
+		var content, frsection, definition, result;
+
+		this.$rightPanelContent.hide();
+		this.$rightPanelError.hide();
+		this.$rightPanelSpinner.show();
+
+		console.log( 'tty' );
+		try {
 			result = await $.post( 'https://fr.wiktionary.org/w/api.php', {
 				"action": "parse",
 				"format": "json",
@@ -139,11 +150,28 @@
 				"noimages": 1,
 				"formatversion": "2"
 			} );
+		} catch (error) {
+			result = { error: { code: error } };
+		}
+
+		// Error managment
+		if ( result.error !== undefined ) {
+			if ( result.error.code === 'missingtitle' && title.toLowerCase() !== title ) {
+				return this.setWiktionaryContent( title.toLowerCase() );
+			}
+
+			this.$rightPanelSpinner.hide();
+			this.$rightPanelError.show();
+			return;
+		}
+
 		content = $( result.parse.text );
 		frsection = content.find( '#Français' ).parent().next();
 		definition = frsection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
 
 		this.$rightPanelContent.html( definition );
+		this.$rightPanelSpinner.hide();
+		this.$rightPanelContent.show();
 	};
 
 	SignItPopup.prototype.toggle = function ( visible ) {

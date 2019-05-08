@@ -79,13 +79,20 @@ async function getAllRecords( language ) {
 }
 
 function wordToFiles( word ) {
-	word = word.toLowerCase();
-
 	if ( records.hasOwnProperty( word ) === false ) {
-		return null;
+		word = word.toLowerCase();
+		if ( records.hasOwnProperty( word ) === false ) {
+			return null;
+		}
 	}
 
 	return records[ word ];
+}
+
+function normalize( word ) {
+	word = word.trim();
+
+	return word;
 }
 
 async function changeLanguage( newLang ) {
@@ -111,10 +118,11 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
     case "signit":
       browser.tabs.query({active: true, currentWindow: true})
         .then((tabs) => {
+			var word = normalize( info.selectionText );
 		    browser.tabs.sendMessage(tabs[0].id, {
 		      command: "signit.sign",
-		      selection: info.selectionText,
-			  files: wordToFiles( info.selectionText ),
+		      selection: word,
+			  files: wordToFiles( word ),
 		    });
         });
       break;

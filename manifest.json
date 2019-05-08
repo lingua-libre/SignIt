@@ -48,5 +48,8 @@
 		"node_modules/jquery/dist/jquery.min.js",
 		"background-script.js"
 	]
-  }
+  },
+  "web_accessible_resources": [
+    "icons/Spinner_font_awesome.svg"
+  ]
 }
