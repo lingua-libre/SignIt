@@ -1,6 +1,7 @@
 {
 	"extends": "wikimedia",
 	"env": {
+		"es6": true,
 		"browser": true,
 		"jquery": true,
 		"qunit": true

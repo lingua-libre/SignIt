@@ -27,41 +27,43 @@
 	}
 
 	SignItPopup = function () {
-		var contributeButton;
-
 		this.videos = [];
 		this.currentIndex = 0;
 
-		this.$anchor = $( '<div>' ).addClass( 'signit-popup-anchor' );
-		$( 'body' ).append( this.$anchor );
+		this.$container = $( `
+			<div>
+				<h1></h1>
+				<div class="signit-popup-content">
+					<div class="signit-popup-leftpanel signit-popup-leftpanel-novideo">
+						Ce mot n'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.<br><br>
+					</div>
+					<div class="signit-popup-leftpanel signit-popup-leftpanel-video">
+						<div class="signit-videogallery"></div>
+					</div>
+					<div class="signit-popup-separator"></div>
+					<div class="signit-popup-rightpanel signit-wtdef"></div>
+					<div class="popup-loading signit-popup-rightpanel">
+						<img class="popup-loading-spinner" src="${ browser.extension.getURL( 'icons/Spinner_font_awesome.svg' ) }" width="40" height="40">
+					</div>
+					<div class="signit-popup-rightpanel signit-error">Aucune définition n'a été trouvée.</div>
+				</div>
+			</div>
+		` );
 
-		this.$title = $( '<h1>' );
-		this.$videoContainer = $( '<div>' );
-
-		this.$leftPanelNoVideo = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).html( 'Ce mot n\'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.<br><br>' );
-		contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
-		this.$leftPanelNoVideo.append( contributeButton.$element );
-
-		this.$rightPanelSpinner = $( '<div class="popup-loading signit-popup-rightpanel"><img class="popup-loading-spinner" src="' + browser.extension.getURL( 'icons/Spinner_font_awesome.svg' ) + '" width="40" height="40"></div>' ).hide();
-		this.$rightPanelError = $( '<div>' ).addClass( 'signit-popup-rightpanel' ).html( 'Aucune définition n\'a été trouvée.' ).hide();
-
-
+		this.contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
 		this.previousVideoButton = new OO.ui.ButtonWidget( { icon: 'previous', framed: false } );
 		this.nextVideoButton = new OO.ui.ButtonWidget( { icon: 'next', framed: false } );
-		this.previousVideoButton.on( 'click', function () {
-			this.switchVideo( this.currentIndex - 1 );
-		}.bind( this ) );
-		this.nextVideoButton.on( 'click', function () {
-			this.switchVideo( this.currentIndex + 1 );
-		}.bind( this ) );
 
-		this.$leftPanelContent = $( '<div>' ).addClass( 'signit-popup-leftpanel' ).addClass( 'signit-popup-leftpanel-video' ).append( this.previousVideoButton.$element ).append( this.$videoContainer ).append( this.nextVideoButton.$element );
-		this.$contentSeparator = $( '<div>' ).addClass( 'signit-popup-separator' );
-		this.$rightPanelContent = $( '<div>' ).addClass( 'signit-popup-rightpanel' );
-		this.$content = $( '<div>' ).addClass( 'signit-popup-content' ).append( this.$leftPanelNoVideo ).append( this.$leftPanelContent ).append( this.$contentSeparator ).append( this.$rightPanelContent ).append( this.$rightPanelSpinner ).append( this.$rightPanelError );
+		this.$title = this.$container.children( 'h1' );
+		this.$videoContainer = this.$container.find( '.signit-videogallery' );
+		this.$leftPanelNoVideo = this.$container.find( '.signit-popup-leftpanel-novideo' ).append( this.contributeButton.$element );
+		this.$leftPanelContent = this.$container.find( '.signit-popup-leftpanel-video' ).prepend( this.previousVideoButton.$element ).append( this.nextVideoButton.$element );
+		this.$rightPanelContent = this.$container.find( '.signit-wtdef' );
+		this.$rightPanelSpinner = this.$container.find( '.popup-loading' );
+		this.$rightPanelError = this.$container.find( '.signit-error' );
 
-		this.$container = $( '<div>' ).append( this.$title ).append( this.$content );
-		this.$container.css( 'text-align', 'center' );
+		this.$anchor = $( '<div class="signit-popup-anchor">' );
+		$( 'body' ).append( this.$anchor );
 
 		this.popup = new OO.ui.PopupWidget( {
 			$content: this.$container,
@@ -77,6 +79,16 @@
 			classes: [ 'signit-popup' ]
 		} );
 		$( 'body' ).append( this.popup.$element );
+
+		this.previousVideoButton.on( 'click', function () {
+			this.switchVideo( this.currentIndex - 1 );
+		}.bind( this ) );
+		this.nextVideoButton.on( 'click', function () {
+			this.switchVideo( this.currentIndex + 1 );
+		}.bind( this ) );
+		this.contributeButton.on( 'click', function () {
+			// TODO: Do something
+		}.bind( this ) );
 	};
 
 	SignItPopup.prototype.move = function () {
@@ -97,7 +109,13 @@
 		this.$videoContainer.empty();
 
 		for ( i = 0; i < files.length; i++ ) {
-			this.$videos.push( $( '<div>' ).html( 'par ' + files[ i ].speaker + '<br>Vidéo ' + ( i + 1 ) + ' sur ' + files.length + ' - <a href="https://commons.wikimedia.org/wiki/File:' + files[ i ].filename.split( '/' ).pop() + '">voir sur WM Commons</a>' ).prepend( $( '<video controls="" muted="" preload="auto" width="335">' ).attr( 'src', files[ i ].filename ) ).hide() );
+			this.$videos.push( $( `
+				<div style="display: none;">
+					<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="335"></video>
+					par ${ files[ i ].speaker }<br>
+					Vidéo ${ i + 1 } sur ${ files.length } - <a href="https://commons.wikimedia.org/wiki/File:${ files[ i ].filename.split( '/' ).pop() }">voir sur WM Commons</a>
+				</div>
+			` ) );
 			this.$videoContainer.append( this.$videos[ i ] );
 		}
 
