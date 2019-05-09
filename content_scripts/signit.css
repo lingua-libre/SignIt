@@ -1,3 +1,63 @@
+
+/*  */
+.signit-wtdef p,
+.signit-wtdef b,
+.signit-wtdef span,
+.signit-wtdef i,
+.signit-wtdef a,
+.signit-wtdef ol,
+.signit-wtdef li {
+	all: initial;
+	font-size: 16px;
+	font-family: sans-serif;
+	line-height: 1.42857143em;
+	color: #222222;
+}
+
+.signit-wtdef p {
+	margin: 0.4em 0 0.5em 0;
+	padding: 0;
+	display: block;
+}
+
+.signit-wtdef ol {
+	list-style-type: decimal;
+	margin: 0.3em 0 0 3.2em;
+	display: block;
+}
+
+.signit-wtdef ol li {
+	display: list-item;
+	list-style-type: decimal;
+	margin-bottom: 0.8em;
+}
+
+.signit-wtdef i {
+	font-style: italic;
+}
+
+.signit-wtdef b {
+	font-weight: bold;
+}
+
+.signit-wtdef a {
+	color: #0645ad;
+}
+
+.signit-wtdef a:hover {
+	text-decoration: underline;
+}
+
+.signit-wtdef ol ul {
+	display: none;
+}
+
+.signit-wtdef .reference {
+	display: none;
+}
+
+
+/*  */
 .signit-popup .oo-ui-popupWidget-popup {
 	max-height: 500px;
 }
@@ -25,6 +85,10 @@
 	align-self: stretch;
 }
 
+.signit-popup-leftpanel {
+	text-align: center;
+}
+
 .signit-popup-leftpanel-video {
 	display: flex;
 	align-items: center;
@@ -34,10 +98,18 @@
 	position: absolute;
 }
 
-.signit-popup-rightpanel {
+.signit-wtdef {
 	overflow-y: auto;
-	max-height: 360px;
+	max-height: 340px;
 	text-align: left;
+}
+
+.signit-wtsource {
+	height: 20px;
+	text-align: right;
+	margin-top: 4px;
+	width: 100%;
+	font-style: italic;
 }
 
 .signit-popup-leftpanel, .signit-popup-rightpanel {
@@ -58,62 +130,4 @@
 	animation: spinner 1.5s linear infinite;
 	width:40px;
 	margin: auto;
-}
-
-
-
-.signit-popup-rightpanel p,
-.signit-popup-rightpanel b,
-.signit-popup-rightpanel span,
-.signit-popup-rightpanel i,
-.signit-popup-rightpanel a,
-.signit-popup-rightpanel ol,
-.signit-popup-rightpanel li {
-	all: initial;
-	font-size: 16px;
-	font-family: sans-serif;
-	line-height: 1.42857143em;
-	color: #222222;
-}
-
-.signit-popup-rightpanel p {
-	margin: 0.4em 0 0.5em 0;
-	padding: 0;
-	display: block;
-}
-
-.signit-popup-rightpanel ol {
-	list-style-type: decimal;
-	margin: 0.3em 0 0 3.2em;
-	display: block;
-}
-
-.signit-popup-rightpanel ol li {
-	display: list-item;
-	list-style-type: decimal;
-	margin-bottom: 0.8em;
-}
-
-.signit-popup-rightpanel i {
-	font-style: italic;
-}
-
-.signit-popup-rightpanel b {
-	font-weight: bold;
-}
-
-.signit-popup-rightpanel a {
-	color: #0645ad;
-}
-
-.signit-popup-rightpanel a:hover {
-	text-decoration: underline;
-}
-
-.signit-popup-rightpanel ol ul {
-	display: none;
-}
-
-.signit-popup-rightpanel .reference {
-	display: none;
 }

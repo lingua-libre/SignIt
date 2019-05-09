@@ -41,7 +41,12 @@
 						<div class="signit-videogallery"></div>
 					</div>
 					<div class="signit-popup-separator"></div>
-					<div class="signit-popup-rightpanel signit-wtdef"></div>
+					<div class="signit-popup-rightpanel signit-wt">
+						<div class="signit-wtdef"></div>
+						<div class="signit-wtsource">
+							<a href="https://fr.wiktionary.org">voir sur le Wiktionnaire</a>
+						</div>
+					</div>
 					<div class="popup-loading signit-popup-rightpanel">
 						<img class="popup-loading-spinner" src="${ browser.extension.getURL( 'icons/Spinner_font_awesome.svg' ) }" width="40" height="40">
 					</div>
@@ -56,9 +61,11 @@
 
 		this.$title = this.$container.children( 'h1' );
 		this.$videoContainer = this.$container.find( '.signit-videogallery' );
+		this.$wtdef = this.$container.find( '.signit-wtdef' );
+		this.$wtsource = this.$container.find( '.signit-wtsource a' );
 		this.$leftPanelNoVideo = this.$container.find( '.signit-popup-leftpanel-novideo' ).append( this.contributeButton.$element );
 		this.$leftPanelContent = this.$container.find( '.signit-popup-leftpanel-video' ).prepend( this.previousVideoButton.$element ).append( this.nextVideoButton.$element );
-		this.$rightPanelContent = this.$container.find( '.signit-wtdef' );
+		this.$rightPanelContent = this.$container.find( '.signit-wt' );
 		this.$rightPanelSpinner = this.$container.find( '.popup-loading' );
 		this.$rightPanelError = this.$container.find( '.signit-error' );
 
@@ -149,7 +156,7 @@
 	};
 
 	SignItPopup.prototype.setWiktionaryContent = async function ( title ) {
-		var content, frsection, definition, result;
+		var content, frsection, definition, result, wtsource;
 
 		this.$rightPanelContent.hide();
 		this.$rightPanelError.hide();
@@ -183,11 +190,15 @@
 			return;
 		}
 
+		// Parse the content of the WT entry
+		// TODO: No FR section error
 		content = $( result.parse.text );
 		frsection = content.find( '#Français' ).parent().next();
 		definition = frsection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
 
-		this.$rightPanelContent.html( definition );
+		this.$wtsource.attr( 'href', `https://fr.wiktionary.org/wiki/${ title }` );
+
+		this.$wtdef.html( definition );
 		this.$rightPanelSpinner.hide();
 		this.$rightPanelContent.show();
 	};
