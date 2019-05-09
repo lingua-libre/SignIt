@@ -3,7 +3,7 @@
 
 	function initOptions() {
 		/* Language picker */
-		var i, languageDropdown,
+		var i, languageDropdown, languageLayout,
 		 	items = [];
 
 		for ( qid in backgroundPage.languages ) {
@@ -16,7 +16,14 @@
 		languageDropdown.getMenu().selectItemByData( backgroundPage.language );
 		languageDropdown.getMenu().on( 'choose', changeLanguage );
 
-		$( '#popup-options-languages' ).append( languageDropdown.$element );
+		languageLayout = new OO.ui.FieldLayout( languageDropdown, {
+			label: 'Langue :',
+			align: 'top',
+			help: 'Change la langue des signes utilisée dans les vidéos.',
+			//helpInline: true
+		} ),
+
+		$( '#popup-options-languages' ).append( languageLayout.$element );
 
 		switchTab( 'options' );
 	}
