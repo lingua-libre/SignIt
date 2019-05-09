@@ -51,5 +51,12 @@
   },
   "web_accessible_resources": [
     "icons/Spinner_font_awesome.svg"
-  ]
+	],
+	"commands": {
+	  "_execute_browser_action": {
+	    "suggested_key": {
+	      "default": "Ctrl+Shift+L"
+	    }
+	  }
+	}
 }
