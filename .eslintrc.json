@@ -15,6 +15,7 @@
 		"dataValues": false
 	},
 	"rules": {
-		"no-underscore-dangle": [ 0 ]
+		"no-underscore-dangle": [ 0 ],
+		"no-implicit-globals": 0
 	}
 }

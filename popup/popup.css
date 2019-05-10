@@ -1,6 +1,6 @@
 html, body {
   width: 420px;
-  min-height: 300px;
+  min-height: 400px;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -61,12 +61,15 @@ html, body {
 
 .popup-tabs .oo-ui-panelLayout-expanded {
 	position: static;
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.popup-tab-param {
-	margin: 10px 6px 5px 6px;
+.popup-tab-param,
+.popup-tab-view-search {
+	margin: 0 6px 10px 6px;
     padding-right: 10px;
+	overflow-x: hidden;
 }
 
 
@@ -151,12 +154,12 @@ html, body {
 }
 
 .signit-popup-container h2 {
-	background-color: lightgrey;
-	border-top: 1px solid darkgrey;
-	border-bottom: 1px solid darkgrey;
+	background-color: #00a99d;
 	padding: 5px 6px;
 	font-size: 1em;
-	font-weight: normal;
+	font-weight: bold;
+	color: white;
+	margin-top: 20px;
 }
 
 .signit-popup-separator {

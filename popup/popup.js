@@ -26,16 +26,55 @@
 	};
 
 	UI.prototype.initView = async function () {
-		tabs = await browser.tabs.query({active: true, currentWindow: true});
-	  	selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
+		// Word input 2 : text field
+		this.searchWidget = new SearchWidget( { placeholder: `Rechercher parmis les ${ Object.keys( backgroundPage.records ).length } signes.` } );
+		this.searchWidget.setRecords( backgroundPage.records );
+		var searchButton = new OO.ui.ButtonWidget( {
+			icon: 'search',
+			label: 'Rechercher',
+			invisibleLabel: true,
+			title: 'Lancer la recherche'
+		} )
+		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
+			align: 'top',
+			label: 'Rechercher',
+			invisibleLabel: true,
+			classes: [ 'popup-tab-view-search' ]
+		} );
+
+		// Add the CoreContent view
+		this.coreContent = new SignItCoreContent();
+		this.coreContent.getContainer().hide();
+
+		// Put all that in the tab
+		this.viewTab.$element.append( searchLayout.$element ).append( this.coreContent.getContainer() );
+
+		// Connect events to those elements
+
+		// if the current window has a selected text, initialise the view with it
+		var tabs = await browser.tabs.query({active: true, currentWindow: true});
+	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
-		word = backgroundPage.normalize( selection );
-		files = backgroundPage.wordToFiles ( word );
-		content = new SignItCoreContent();
-		content.refresh( word, files );
-		this.viewTab.$element.append( content.getContainer() );
+		if ( selection !== '' ) {
+			this.changeView( selection );
+		}
+
+		// refresh the view each time a search is made
+		searchButton.on( 'click', this.changeView.bind( this ) );
+		this.searchWidget.lookupMenu.on( 'choose', this.changeView.bind( this ) );
 	};
+
+	UI.prototype.changeView = function( text ) {
+		if ( typeof text !== 'string' ) {
+			text = this.searchWidget.getValue();
+		}
+		word = backgroundPage.normalize( text );
+		files = backgroundPage.wordToFiles ( word );
+		this.coreContent.refresh( word, files );
+		this.searchWidget.setValue( word );
+		this.coreContent.getContainer().show();
+	}
 
 	UI.prototype.initHistory = function () {
 
@@ -52,7 +91,7 @@
 				label: backgroundPage.languages[ qid ],
 			} ) );
 		}
-		languageDropdown = new OO.ui.DropdownWidget( { label: 'Change language', menu: { items: items } } );
+		languageDropdown = new OO.ui.DropdownWidget( { label: 'Change language', menu: { items: items }, $overlay: $( 'body' ) } );
 		languageDropdown.getMenu().selectItemByData( backgroundPage.language );
 		languageDropdown.getMenu().on( 'choose', changeLanguage );
 
