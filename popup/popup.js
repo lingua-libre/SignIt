@@ -5,21 +5,21 @@
 	var UI = function () {
 		// Setup the main tab layout
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: 'Consulter' } );
-		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: 'Historique' } );
+		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: 'Historique', classes: [ 'popup-tab-history' ] } );
 		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: 'Paramètres', classes: [ 'popup-tab-param' ] } );
 
 		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'popup-tabs' ] } );
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
-		// Setup the view tab
-		this.initView();
+		// Setup the param tab
+		this.initParam();
 
 		// Setup the history tab
 		this.initHistory();
 
-		// Setup the param tab
-		this.initParam();
+		// Setup the view tab
+		this.initView();
 
 		// show the UI we have just build
 		this.switchPanel( 'loaded' );
@@ -74,13 +74,52 @@
 		this.coreContent.refresh( word, files );
 		this.searchWidget.setValue( word );
 		this.coreContent.getContainer().show();
+		this.addHistory( word );
 	}
 
 	UI.prototype.initHistory = function () {
+		this.$noHistory = $( '<div>C\'est vide</div>' );
+		this.history = [];
+		this.$history = [];
+		this.historyTab.$element.append( this.$noHistory );
 
+		var tmp = backgroundPage.getStoredParam( 'history' );
+		for ( i = tmp.length-1; i >= 0 ; i-- ) {
+			this.addHistory( tmp[ i ], false );
+		}
 	};
 
+	UI.prototype.addHistory = function( word, store ) {
+		if ( this.params.history === 0 ) {
+			return;
+		}
+
+		this.$noHistory.hide();
+		var index = this.history.indexOf( word );
+		if ( index > -1 ) {
+			this.history.splice( index, 1 );
+			this.$history.splice( index, 1 )[ 0 ].remove();
+		}
+
+		this.history.unshift( word );
+		this.$history.unshift( $( `<a class="popup-historyline">${ word }</a>` ) );
+		this.$history[ 0 ].on( 'click', this.changeView.bind( this, word ) );
+		this.$history[ 0 ].on( 'click', this.indexLayout.setTabPanel.bind( this.indexLayout, 'view' ) );
+		this.historyTab.$element.prepend( this.$history[ 0 ] );
+		if ( store !== false ) {
+			backgroundPage.storeParam( 'history', this.history );
+		}
+
+		if ( this.history.length > this.params.history ) {
+			this.history.pop();
+			this.$history.pop().remove();
+		}
+	}
+
 	UI.prototype.initParam = function () {
+		this.params = {};
+		this.params.history = 6;
+
 		/* Language picker */
 		var i, languageDropdown, languageLayout,
 		 	items = [];

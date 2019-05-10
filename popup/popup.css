@@ -72,8 +72,18 @@ html, body {
 	overflow-x: hidden;
 }
 
+.popup-historyline {
+    padding: 8px 20px;
+    color: #00a99d;
+    font-weight: bold;
+	display: block;
+	cursor: pointer;
+}
 
-
+.popup-historyline:hover {
+    background-color: #00a99d;
+    color: white;
+}
 
 
 
