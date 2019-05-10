@@ -62,20 +62,32 @@
 	max-height: 500px;
 }
 
+.signit-popup .oo-ui-popupWidget-body {
+	margin: 0;
+}
+
 .signit-popup h1 {
 	margin-bottom: 0.6em;
 	font-size: 188%;
 	color: black;
 	padding-top: 0.5em;
-	padding-bottom: 0.17em;
+	padding-bottom: 0.5em;
 	border-bottom: 1px solid #a2a9b1;
 	text-align: center;
+	background-color: #00a99d;
+	color: white;
+	box-shadow: 0 0px 5px -2px black;
+}
+
+.signit-popup h2 {
+	display: none;
 }
 
 .signit-popup-content {
 	display: flex;
 	flex: 1;
 	align-items: center;
+	margin: 0 0.85714286em 0.57142857em;
 }
 
 .signit-popup-separator {
@@ -92,6 +104,10 @@
 .signit-popup-leftpanel-video {
 	display: flex;
 	align-items: center;
+}
+
+.signit-popup-leftpanel-video video {
+	box-shadow: 0 0 .5rem #999;
 }
 
 .signit-popup-anchor {
