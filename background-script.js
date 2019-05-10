@@ -69,7 +69,7 @@ async function getAllRecords( language ) {
 		if ( records.hasOwnProperty( word ) === false ) {
 			records[ word ] = [];
 		}
-		records[ word ].push( { filename: record.filename.value, speaker: record.speaker.value } );
+		records[ word ].push( { filename: record.filename.value.replace( 'http://', 'https://' ), speaker: record.speaker.value } );
 	}
 
 	state = 'ready';

@@ -59,5 +59,6 @@
 	      "default": "Ctrl+Shift+L"
 	    }
 	  }
-	}
+  },
+  "content_security_policy": "default-src 'self' https://lingualibre.fr https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'"
 }
