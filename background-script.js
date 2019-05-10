@@ -33,12 +33,16 @@ var state = 'up', // up / loading / ready / error
  * Functions
  */
 
-async function getSavedLanguage() {
-	var params = await browser.storage.local.get( 'language' );
-	if ( params.language === undefined ) {
-		return null;
-	}
-	return params.language;
+async function getStoredParam( name ) {
+	var params = await browser.storage.local.get( name );
+
+	return params[ name ] || null;
+}
+
+async function storeParam( name, value ) {
+	var param = {};
+	param[ name ] = value;
+	return await browser.storage.local.set( param );
 }
 
 async function getAllLanguages() {
@@ -98,7 +102,7 @@ function normalize( word ) {
 async function changeLanguage( newLang ) {
 	language = newLang;
 	records = await getAllRecords( newLang );
-	await browser.storage.local.set( { 'language': newLang } );
+	await storeParam( 'language', newLang );
 }
 
 /**
@@ -152,7 +156,7 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 
 async function main() {
 	state = 'loading';
-	language = await getSavedLanguage() || language;
+	language = await getStoredParam( 'language' ) || language;
 	languages = await getAllLanguages();
 	records = await getAllRecords( language );
 	state = 'ready';

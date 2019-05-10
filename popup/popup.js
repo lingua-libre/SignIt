@@ -1,7 +1,7 @@
 (async function() {
 	var backgroundPage = await browser.runtime.getBackgroundPage();
 
-	function initOptions() {
+	async function initOptions() {
 		/* Language picker */
 		var i, languageDropdown, languageLayout,
 		 	items = [];
@@ -26,6 +26,16 @@
 		$( '#popup-options-languages' ).append( languageLayout.$element );
 
 		switchTab( 'options' );
+
+		tabs = await browser.tabs.query({active: true, currentWindow: true});
+	  	selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
+			command: "signit.getSelection",
+		} );
+		word = backgroundPage.normalize( selection );
+		files = backgroundPage.wordToFiles ( word );
+		content = new SignItCoreContent();
+		content.refresh( word, files );
+		$( '#popup-options' ).append( content.getContainer() );
 	}
 
 	function switchTab( tab ) {

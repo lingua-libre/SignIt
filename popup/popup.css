@@ -1,5 +1,5 @@
 html, body {
-  width: 350px;
+  width: 410px;
   min-height: 300px;
   padding: 0;
   margin: 0;
@@ -44,4 +44,145 @@ html, body {
 
 .popup-options {
 	margin: 10px 6px 5px 6px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+.signit-wtdef p,
+.signit-wtdef b,
+.signit-wtdef span,
+.signit-wtdef i,
+.signit-wtdef a,
+.signit-wtdef ol,
+.signit-wtdef li {
+	all: initial;
+	font-size: 16px;
+	font-family: sans-serif;
+	line-height: 1.42857143em;
+	color: #222222;
+}
+
+.signit-wtdef p {
+	margin: 0.4em 0 0.5em 0;
+	padding: 0;
+	display: block;
+}
+
+.signit-wtdef ol {
+	list-style-type: decimal;
+	margin: 0.3em 0 0 3.2em;
+	display: block;
+}
+
+.signit-wtdef ol li {
+	display: list-item;
+	list-style-type: decimal;
+	margin-bottom: 0.8em;
+}
+
+.signit-wtdef i {
+	font-style: italic;
+}
+
+.signit-wtdef b {
+	font-weight: bold;
+}
+
+.signit-wtdef a {
+	color: #0645ad;
+}
+
+.signit-wtdef a:hover {
+	text-decoration: underline;
+}
+
+.signit-wtdef ol ul {
+	display: none;
+}
+
+.signit-wtdef .reference {
+	display: none;
+}
+
+
+
+
+
+
+
+.signit-popup-container h1 {
+	display: none;
+}
+
+.signit-popup-container h2 {
+	background-color: lightgrey;
+	border-top: 1px solid darkgrey;
+	border-bottom: 1px solid darkgrey;
+	padding: 5px 6px;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.signit-popup-separator {
+	display:none;
+}
+
+.signit-popup-leftpanel {
+	text-align: center;
+}
+
+.signit-popup-leftpanel-video {
+	display: flex;
+	align-items: center;
+}
+
+.signit-popup-leftpanel-video video {
+	box-shadow: 0 0 .5rem #999;
+}
+
+.signit-wt {
+	padding-right: 12px;
+	padding-left: 6px;
+}
+
+.signit-wtdef {
+	padding-right: 8px;
+}
+
+.signit-wtsource {
+	height: 20px;
+	text-align: right;
+	margin-top: 4px;
+	width: 100%;
+	font-style: italic;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.popup-loading {
+	text-align: center;
+	color: black;
+}
+
+.popup-loading-spinner {
+	animation: spinner 1.5s linear infinite;
+	width:40px;
+	margin: auto;
 }

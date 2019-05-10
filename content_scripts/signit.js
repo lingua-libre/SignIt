@@ -26,6 +26,22 @@
 		return { x: x, y: y };
 	}
 
+	function getSelectionText() {
+		var text = '',
+			activeEl = document.activeElement,
+			activeElTagName = activeEl ? activeEl.tagName.toLowerCase() : null;
+		if (
+			( activeElTagName === 'textarea' ) || ( activeElTagName === 'input' &&
+			/^(?:text|search|password|tel|url)$/i.test( activeEl.type ) ) &&
+			( typeof activeEl.selectionStart === 'number' )
+		) {
+			text = activeEl.value.slice( activeEl.selectionStart, activeEl.selectionEnd );
+		} else if ( window.getSelection ) {
+			text = window.getSelection().toString();
+		}
+		return text;
+	}
+
 	/*
 	 * Initialisation of the UI
 	 */
@@ -57,7 +73,7 @@
 	/**
 	* Listen for messages from the background script.
 	*/
-	browser.runtime.onMessage.addListener( function ( message ) {
+	browser.runtime.onMessage.addListener( async function ( message ) {
 		var coords;
 
 		if ( message.command === 'signit.sign' ) {
@@ -77,6 +93,8 @@
 
 			popup.toggle( true );
 			popup.toggleClipping( false );
+		} else if ( message.command === 'signit.getSelection' ) {
+			return getSelectionText();
 		}
 	} );
 
