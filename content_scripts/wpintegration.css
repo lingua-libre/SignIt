@@ -1,0 +1,11 @@
+.signit-inline-container {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	max-width: 300px;
+}
+
+.signit-inline-container video {
+	box-shadow: 0 0 .5rem #999;
+}

@@ -133,6 +133,15 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
   }
 });
 
+//
+browser.runtime.onMessage.addListener( async function ( message ) {
+	var coords;
+
+	if ( message.command === 'signit.getfiles' ) {
+		return records[ message.word ] || records[ message.word.toLowerCase() ] || [];
+	}
+} );
+
 // Edit the header of all pages on-the-fly to bypass Content-Security-Policy
 browser.webRequest.onHeadersReceived.addListener(info => {
     const headers = info.responseHeaders; // original headers
