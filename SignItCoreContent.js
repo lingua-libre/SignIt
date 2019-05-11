@@ -1,7 +1,4 @@
 var SignItCoreContent = function () {
-	this.videos = [];
-	this.currentIndex = 0;
-
 	this.$container = $( `
 		<div class="signit-popup-container">
 			<h1></h1>
@@ -11,7 +8,6 @@ var SignItCoreContent = function () {
 					Ce mot n'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.<br><br>
 				</div>
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-video">
-					<div class="signit-videogallery"></div>
 				</div>
 				<div class="signit-popup-separator"></div>
 				<h2>Définitions :</h2>
@@ -30,25 +26,18 @@ var SignItCoreContent = function () {
 	` );
 
 	this.contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
-	this.previousVideoButton = new OO.ui.ButtonWidget( { icon: 'previous', framed: false } );
-	this.nextVideoButton = new OO.ui.ButtonWidget( { icon: 'next', framed: false } );
 
 	this.$title = this.$container.children( 'h1' );
-	this.$videoContainer = this.$container.find( '.signit-videogallery' );
 	this.$wtdef = this.$container.find( '.signit-wtdef' );
 	this.$wtsource = this.$container.find( '.signit-wtsource a' );
 	this.$leftPanelNoVideo = this.$container.find( '.signit-popup-leftpanel-novideo' ).append( this.contributeButton.$element );
-	this.$leftPanelContent = this.$container.find( '.signit-popup-leftpanel-video' ).prepend( this.previousVideoButton.$element ).append( this.nextVideoButton.$element );
+	this.$leftPanelContent = this.$container.find( '.signit-popup-leftpanel-video' );
 	this.$rightPanelContent = this.$container.find( '.signit-wt' );
 	this.$rightPanelSpinner = this.$container.find( '.popup-loading' );
 	this.$rightPanelError = this.$container.find( '.signit-error' );
 
-	this.previousVideoButton.on( 'click', function () {
-		this.switchVideo( this.currentIndex - 1 );
-	}.bind( this ) );
-	this.nextVideoButton.on( 'click', function () {
-		this.switchVideo( this.currentIndex + 1 );
-	}.bind( this ) );
+	this.videosGallery = new SignItVideosGallery( this.$leftPanelContent );
+
 	this.contributeButton.on( 'click', function () {
 		// TODO: Do something
 	}.bind( this ) );
@@ -57,49 +46,18 @@ var SignItCoreContent = function () {
 SignItCoreContent.prototype.refresh = function ( title, files ) {
 	var i;
 	files = files || [];
-	this.$videos = [];
 
 	this.setWiktionaryContent( title );
 
 	this.$title.text( title );
-	this.$videoContainer.empty();
+	this.videosGallery.refresh( files );
 
-	for ( i = 0; i < files.length; i++ ) {
-		this.$videos.push( $( `
-			<div style="display: none;">
-				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="335"></video>
-				par <a href="https://commons.wikimedia.org/wiki/File:${ files[ i ].filename.split( '/' ).pop() }">${ files[ i ].speaker }</a> – Vidéo ${ i + 1 } sur ${ files.length }
-			</div>
-		` ) );
-		this.$videoContainer.append( this.$videos[ i ] );
-	}
-
-	if ( this.$videos.length > 0 ) {
+	if ( files.length > 0 ) {
 		this.$leftPanelNoVideo.hide();
 		this.$leftPanelContent.show();
-		this.switchVideo( 0 );
 	} else {
 		this.$leftPanelContent.hide();
 		this.$leftPanelNoVideo.show();
-	}
-};
-
-SignItCoreContent.prototype.switchVideo = function ( newIndex ) {
-	this.$videos[ this.currentIndex ].hide();
-	this.currentIndex = newIndex;
-	this.$videos[ this.currentIndex ].show();
-	this.$videos[ this.currentIndex ].children( 'video' )[ 0 ].play();
-
-	if ( this.currentIndex === 0 ) {
-		this.previousVideoButton.setDisabled( true );
-	} else {
-		this.previousVideoButton.setDisabled( false );
-	}
-
-	if ( this.currentIndex >= this.$videos.length - 1 ) {
-		this.nextVideoButton.setDisabled( true );
-	} else {
-		this.nextVideoButton.setDisabled( false );
 	}
 };
 

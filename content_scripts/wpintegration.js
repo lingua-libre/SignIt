@@ -32,44 +32,8 @@ $( async function () {
 	}
 
 	videoContainer = $( '<div class="signit-inline-container">' );
-	videos = [];
-	for ( i = 0; i < files.length; i++ ) {
-		videos.push( $( `
-			<div style="display: none;">
-				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="335"></video>
-				par <a href="https://commons.wikimedia.org/wiki/File:${ files[ i ].filename.split( '/' ).pop() }">${ files[ i ].speaker }</a> – Vidéo ${ i + 1 } sur ${ files.length }
-			</div>
-		` ) );
-		videoContainer.append( videos[ i ] );
-	}
-	previousVideoButton = new OO.ui.ButtonWidget( { icon: 'previous', framed: false } );
-	nextVideoButton = new OO.ui.ButtonWidget( { icon: 'next', framed: false } );
-	previousVideoButton.on( 'click', function () {
-		switchVideo( currentIndex - 1 );
-	} );
-	nextVideoButton.on( 'click', function () {
-		switchVideo( currentIndex + 1 );
-	} );
-	videoContainer.prepend( previousVideoButton.$element ).append( nextVideoButton.$element );
-
-	function switchVideo ( newIndex ) {
-		videos[ currentIndex ].hide();
-		currentIndex = newIndex;
-		videos[ currentIndex ].show();
-		videos[ currentIndex ].children( 'video' )[ 0 ].play();
-
-		if ( currentIndex === 0 ) {
-			previousVideoButton.setDisabled( true );
-		} else {
-			previousVideoButton.setDisabled( false );
-		}
-
-		if ( currentIndex >= videos.length - 1 ) {
-			nextVideoButton.setDisabled( true );
-		} else {
-			nextVideoButton.setDisabled( false );
-		}
-	};
+	videosGallery = new SignItVideosGallery( videoContainer );
+	videosGallery.refresh( files );
 
 	infobox = $( '.infobox, .infobox_v2, .infobox_v3' ).eq( 0 );
 	if ( infobox.length === 0 ) {
@@ -82,6 +46,5 @@ $( async function () {
 		console.info( 'div infobox' );
 		infobox.children( 'div' ).eq( 0 ).after( videoContainer );
 	}
-	switchVideo ( 0 );
 
 } );
