@@ -83,14 +83,14 @@
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
 
-		var tmp = backgroundPage.getStoredParam( 'history' );
+		var tmp = backgroundPage.params.history;
 		for ( i = tmp.length-1; i >= 0 ; i-- ) {
 			this.addHistory( tmp[ i ], false );
 		}
 	};
 
 	UI.prototype.addHistory = function( word, store ) {
-		if ( this.params.history === 0 ) {
+		if ( backgroundPage.params.history === 0 ) {
 			return;
 		}
 
@@ -106,20 +106,26 @@
 		this.$history[ 0 ].on( 'click', this.changeView.bind( this, word ) );
 		this.$history[ 0 ].on( 'click', this.indexLayout.setTabPanel.bind( this.indexLayout, 'view' ) );
 		this.historyTab.$element.prepend( this.$history[ 0 ] );
-		if ( store !== false ) {
-			backgroundPage.storeParam( 'history', this.history );
-		}
 
-		if ( this.history.length > this.params.history ) {
+		this.cleanHistory( store );
+	}
+
+	UI.prototype.cleanHistory = function( store ) {
+		while ( this.history.length > backgroundPage.params.historylimit ) {
 			this.history.pop();
 			this.$history.pop().remove();
 		}
+
+		if ( this.history.length === 0 ) {
+			this.$noHistory.show();
+		}
+
+		if ( store !== false ) {
+			backgroundPage.storeParam( 'history', this.history );
+		}
 	}
 
-	UI.prototype.initParam = function () {
-		this.params = {};
-		this.params.history = 6;
-
+	UI.prototype.initParam = async function () {
 		/* Language picker */
 		var i, languageDropdown, languageLayout,
 		 	items = [];
@@ -130,10 +136,8 @@
 				label: backgroundPage.languages[ qid ],
 			} ) );
 		}
-		languageDropdown = new OO.ui.DropdownWidget( { label: 'Change language', menu: { items: items }, $overlay: $( 'body' ) } );
-		languageDropdown.getMenu().selectItemByData( backgroundPage.language );
-		languageDropdown.getMenu().on( 'choose', changeLanguage );
 
+		languageDropdown = new OO.ui.DropdownWidget( { label: 'Change language', menu: { items: items }, $overlay: $( 'body' ) } );
 		languageLayout = new OO.ui.FieldLayout( languageDropdown, {
 			label: 'Langue :',
 			align: 'top',
@@ -141,7 +145,44 @@
 			//helpInline: true
 		} );
 
-		this.paramTab.$element.append( languageLayout.$element );
+		/* History length chooser */
+		historyWidget = new OO.ui.NumberInputWidget( {
+			value: 20,
+			min: 0
+		} );
+		historyLayout = new OO.ui.FieldLayout( historyWidget, {
+			label: 'Nombre de lignes d\'historique :',
+			align: 'top',
+			help: 'Mettre à 0 désactive l\'historique',
+		} );
+
+		/* WP integrator */
+		wpintegrationWidget = new OO.ui.ToggleSwitchWidget( {
+			value: true
+		} );
+		wpintegrationLayout = new OO.ui.FieldLayout( wpintegrationWidget, {
+			label: 'Intégration native sur Wikipédia :',
+			align: 'top',
+		} );
+
+		// Populate
+		languageDropdown.getMenu().selectItemByData( backgroundPage.params.language );
+		historyWidget.setValue( backgroundPage.params.historylimit );
+		wpintegrationWidget.setValue( backgroundPage.params.wpintegration );
+
+		// Events
+		languageDropdown.getMenu().on( 'choose', changeLanguage );
+		historyWidget.on( 'change', function( newLimit ) {
+			newLimit = parseInt( newLimit ) || 0;
+			if ( newLimit < 0 ) {
+				newLimit = 0;
+			}
+			backgroundPage.storeParam( 'historylimit', newLimit );
+			this.cleanHistory();
+		}.bind( this ) );
+		wpintegrationWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'wpintegration' ) )
+
+		this.paramTab.$element.append( languageLayout.$element ).append( historyLayout.$element ).append( wpintegrationLayout.$element );
 	};
 
 	UI.prototype.switchPanel = function( tab ) {
@@ -152,7 +193,7 @@
 
 	async function changeLanguage( item ) {
 		var newLang = item.getData();
-		if ( backgroundPage.language === newLang ) {
+		if ( backgroundPage.params.language === newLang ) {
 			return;
 		}
 

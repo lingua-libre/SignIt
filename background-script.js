@@ -5,7 +5,12 @@ const sparqlVideoQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P
 var state = 'up', // up / loading / ready / error
 	records = {},
 	languages = {},
-	language = 'Q99628';
+	params = {
+		language: 'Q99628',
+		historylimit: 10,
+		wpintegration: true,
+		history: []
+	};
 
 // TODO:
 // - multi-videos
@@ -34,15 +39,25 @@ var state = 'up', // up / loading / ready / error
  */
 
 async function getStoredParam( name ) {
-	var params = await browser.storage.local.get( name );
+	var tmp = await browser.storage.local.get( name );
 
-	return params[ name ] || null;
+	params[ name ] = tmp[ name ] || params[ name ] || null;
+
+	return params[ name ];
 }
 
 async function storeParam( name, value ) {
-	var param = {};
-	param[ name ] = value;
-	return await browser.storage.local.set( param );
+	var tmp = {};
+
+	// If the value is an array, we make a copy of it to avoid dead references issues
+	if ( Array.isArray( value ) ) {
+		value = Array.from( value );
+	}
+
+	tmp[ name ] = value;
+
+	params[ name ] = value;
+	return await browser.storage.local.set( tmp );
 }
 
 async function getAllLanguages() {
@@ -100,7 +115,6 @@ function normalize( word ) {
 }
 
 async function changeLanguage( newLang ) {
-	language = newLang;
 	records = await getAllRecords( newLang );
 	await storeParam( 'language', newLang );
 }
@@ -165,7 +179,10 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 
 async function main() {
 	state = 'loading';
-	language = await getStoredParam( 'language' ) || language;
+	await getStoredParam( 'history' );
+	await getStoredParam( 'historylimit' );
+	await getStoredParam( 'wpintegration' );
+	language = await getStoredParam( 'language' );
 	languages = await getAllLanguages();
 	records = await getAllRecords( language );
 	state = 'ready';
