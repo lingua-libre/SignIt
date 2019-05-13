@@ -50,9 +50,9 @@ SignItCoreContent.prototype.refresh = function ( title, files ) {
 	this.setWiktionaryContent( title );
 
 	this.$title.text( title );
-	this.videosGallery.refresh( files );
 
 	if ( files.length > 0 ) {
+		this.videosGallery.refresh( files );
 		this.$leftPanelNoVideo.hide();
 		this.$leftPanelContent.show();
 	} else {

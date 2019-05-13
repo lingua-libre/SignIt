@@ -22,6 +22,7 @@ SignItVideosGallery.prototype.refresh = function ( files ) {
 	this.$videos = [];
 
 	this.$videoContainer.empty();
+	this.currentIndex = 0;
 
 	for ( i = 0; i < files.length; i++ ) {
 		this.$videos.push( $( `
