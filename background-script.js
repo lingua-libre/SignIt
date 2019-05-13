@@ -162,6 +162,7 @@ browser.contextMenus.onClicked.addListener( async function( info, tab ) {
 				selection: word,
 				files: wordToFiles( word ),
 			} );
+			storeParam( 'history', [ word, ...params.history ] );
 			break;
 	}
 });
