@@ -30,15 +30,15 @@
     {
       "matches": ["<all_urls>"],
       "css": [
-      	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.css",
-		"node_modules/oojs-ui/dist/oojs-ui-wikimediaui-icons-movement.min.css",
+      	"lib/oojs-ui-wikimediaui.min.css",
       	"content_scripts/signit.css"
       ],
       "js": [
-      	"node_modules/jquery/dist/jquery.min.js",
-      	"node_modules/oojs/dist/oojs.jquery.js",
-      	"node_modules/oojs-ui/dist/oojs-ui.js",
-      	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.js",
+      	"lib/browser-polyfill.min.js",
+      	"lib/jquery.min.js",
+      	"lib/oojs.jquery.min.js",
+      	"lib/oojs-ui.min.js",
+      	"lib/oojs-ui-wikimediaui.min.js",
 		"SignItVideosGallery.js",
       	"SignItCoreContent.js",
       	"content_scripts/signit.js"
@@ -46,15 +46,15 @@
     }, {
         "matches": ["https://*.wikipedia.org/*"],
         "css": [
-        	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.css",
-  			"node_modules/oojs-ui/dist/oojs-ui-wikimediaui-icons-movement.min.css",
+        	"lib/oojs-ui-wikimediaui.min.css",
   			"content_scripts/wpintegration.css"
 		],
         "js": [
-        	"node_modules/jquery/dist/jquery.min.js",
-	      	"node_modules/oojs/dist/oojs.jquery.js",
-	      	"node_modules/oojs-ui/dist/oojs-ui.js",
-	      	"node_modules/oojs-ui/dist/oojs-ui-wikimediaui.js",
+        	"lib/browser-polyfill.min.js",
+	      	"lib/jquery.min.js",
+	      	"lib/oojs.jquery.min.js",
+	      	"lib/oojs-ui.min.js",
+	      	"lib/oojs-ui-wikimediaui.min.js",
 			"SignItVideosGallery.js",
   			"content_scripts/wpintegration.js"
         ],
@@ -63,7 +63,8 @@
   ],
   "background": {
     "scripts": [
-		"node_modules/jquery/dist/jquery.min.js",
+		"lib/browser-polyfill.min.js",
+		"lib/jquery.min.js",
 		"background-script.js"
 	]
   },
@@ -77,5 +78,5 @@
 	    }
 	  }
   },
-  "content_security_policy": "default-src 'self' https://lingualibre.fr https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'"
+  "content_security_policy": "default-src 'self' data: https://lingualibre.fr https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
 }
