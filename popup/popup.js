@@ -53,6 +53,7 @@
 
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
+		await backgroundPage.checkInjection( tabs[ 0 ].id );
 	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );

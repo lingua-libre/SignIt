@@ -60,6 +60,25 @@ async function storeParam( name, value ) {
 	return await browser.storage.local.set( tmp );
 }
 
+async function checkInjection( tab ) {
+	console.log( 'check' )
+	try {
+		await browser.tabs.sendMessage( tab, { command: "ping" } );
+	} catch ( error ) {
+		console.log( 'catch' )
+		var i, scripts = browser.runtime.getManifest().content_scripts[ 0 ].js,
+			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
+
+		for( i = 0; i < scripts.length; i++ ) {
+			await browser.tabs.executeScript( tab, { file: scripts[ i ] } );
+		}
+		for( i = 0; i < stylesheets.length; i++ ) {
+			await browser.tabs.insertCSS( tab, { file: stylesheets[ i ] } );
+		}
+		console.log( 'end injection' )
+	}
+}
+
 async function getAllLanguages() {
 	var i, language,
 		languages = {},
@@ -131,20 +150,20 @@ browser.contextMenus.create({
 }, function() {return;});
 
 // Send a message to the content script when our context menu is clicked
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  switch (info.menuItemId) {
-    case "signit":
-      browser.tabs.query({active: true, currentWindow: true})
-        .then((tabs) => {
-			var word = normalize( info.selectionText );
-		    browser.tabs.sendMessage(tabs[0].id, {
-		      command: "signit.sign",
-		      selection: word,
-			  files: wordToFiles( word ),
-		    });
-        });
-      break;
-  }
+browser.contextMenus.onClicked.addListener( async function( info, tab ) {
+	switch (info.menuItemId) {
+		case "signit":
+			var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
+				word = normalize( info.selectionText );
+
+			await checkInjection( tabs[ 0 ].id );
+			browser.tabs.sendMessage( tabs[ 0 ].id, {
+				command: "signit.sign",
+				selection: word,
+				files: wordToFiles( word ),
+			} );
+			break;
+	}
 });
 
 //
