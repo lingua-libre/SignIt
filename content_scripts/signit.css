@@ -113,6 +113,7 @@
 
 .signit-popup-anchor {
 	position: absolute;
+	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
 }
 
 .signit-wtdef {

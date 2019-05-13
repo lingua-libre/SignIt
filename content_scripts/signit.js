@@ -15,15 +15,20 @@
 		var rect,
 			x = 0,
 			y = 0,
+			width = 0,
+			height = 0,
 			sel = window.getSelection(),
 			range = sel.getRangeAt( 0 ).cloneRange(),
 			rects = range.getClientRects();
+
 		if ( rects.length > 0 ) {
 			rect = rects[ 0 ];
 		}
-		x = rect.left + ( ( rect.right - rect.left ) / 2 ) + window.scrollX;
+		x = rect.left + window.scrollX;
 		y = rect.top + window.scrollY;
-		return { x: x, y: y };
+		width = rect.right - rect.left;
+		height = rect.bottom - rect.top;
+		return { x: x, y: y, width: width, height: height };
 	}
 
 	function getSelectionText() {
@@ -88,6 +93,8 @@
 			coords = getSelectionCoords();
 			anchor.css( 'top', coords.y );
 			anchor.css( 'left', coords.x );
+			anchor.css( 'width', coords.width );
+			anchor.css( 'height', coords.height );
 
 			content.refresh( message.selection, message.files );
 
