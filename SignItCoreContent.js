@@ -68,7 +68,6 @@ SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
 	this.$rightPanelError.hide();
 	this.$rightPanelSpinner.show();
 
-	console.log( 'tty' );
 	try {
 		result = await $.post( 'https://fr.wiktionary.org/w/api.php', {
 			"action": "parse",

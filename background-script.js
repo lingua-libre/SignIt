@@ -61,11 +61,9 @@ async function storeParam( name, value ) {
 }
 
 async function checkInjection( tab ) {
-	console.log( 'check' )
 	try {
 		await browser.tabs.sendMessage( tab, { command: "ping" } );
 	} catch ( error ) {
-		console.log( 'catch' )
 		var i, scripts = browser.runtime.getManifest().content_scripts[ 0 ].js,
 			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
 
@@ -75,7 +73,6 @@ async function checkInjection( tab ) {
 		for( i = 0; i < stylesheets.length; i++ ) {
 			await browser.tabs.insertCSS( tab, { file: stylesheets[ i ] } );
 		}
-		console.log( 'end injection' )
 	}
 }
 

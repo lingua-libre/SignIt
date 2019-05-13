@@ -204,7 +204,6 @@
 	}
 
 	function waitWhileLoading() {
-		console.log( 'loading' );
 		if ( backgroundPage.state === 'ready' ) {
 			ui = new UI();
 		} else {
