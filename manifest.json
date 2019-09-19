@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "SignIt",
-  "version": "0.1.0",
+  "name": "Lingua Libre SignIt",
+  "version": "1.0.0",
   "author": "Antoine '0x010C' Lamielle",
   "description": "SignIt translate a word in Sign Language.",
   "homepage_url": "https://lingualibre.fr",
@@ -11,7 +11,9 @@
     }
   },
   "icons": {
-    "48": "icons/signit-48.png"
+    "32": "icons/signit-32.png",
+    "48": "icons/signit-48.png",
+	"64": "icons/signit-64.png"
   },
   "permissions": [
     "activeTab",
@@ -23,7 +25,7 @@
   ],
   "browser_action": {
     "default_icon": "icons/signit-32.png",
-    "default_title": "SignIt",
+    "default_title": "Lingua Libre SignIt",
     "default_popup": "popup/popup.html"
   },
   "content_scripts": [

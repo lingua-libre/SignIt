@@ -142,7 +142,7 @@ async function changeLanguage( newLang ) {
 // Create a context menu item
 browser.contextMenus.create({
   id: "signit",
-  title: 'SignIt',
+  title: 'Lingua Libre SignIt',
   contexts: ["selection"]
 }, function() {return;});
 
