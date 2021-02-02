@@ -7,8 +7,16 @@ This extension allows you to translate a word into French sign language on any w
 * Firefox > Open: https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/ > Install.
 
 ## Build & hack
-> npm install
-> web-ext build
+```
+npm install
+web-ext build
+```
+
+## Visuals
+<img src="doc/LinguaLibre_SignIt-01.png"/>
+<img src="doc/LinguaLibre_SignIt-02.png"/>
+<img src="doc/LinguaLibre_SignIt-03.png"/>
+<img src="doc/LinguaLibre_SignIt-04.png"/>
 
 ## Contact
 _{to complete}_
