@@ -14,9 +14,6 @@ web-ext build
 
 ## Visuals
 <img src="doc/LinguaLibre_SignIt-01.png"/>
-<img src="doc/LinguaLibre_SignIt-02.png"/>
-<img src="doc/LinguaLibre_SignIt-03.png"/>
-<img src="doc/LinguaLibre_SignIt-04.png"/>
 
 ## Contact
 _{to complete}_
