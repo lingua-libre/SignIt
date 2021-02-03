@@ -1,4 +1,4 @@
-const sparqlEndpoint = 'https://lingualibre.fr/bigdata/namespace/wdq/sparql';
+const sparqlEndpoint = 'https://lingualibre.org/bigdata/namespace/wdq/sparql';
 const sparqlLangQuery = 'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
 const sparqlVideoQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
 

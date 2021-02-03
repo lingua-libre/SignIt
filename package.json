@@ -1,15 +1,19 @@
 {
-  "name": "sign-it",
-  "version": "0.1.0",
-  "description": "SignIt translate a word in Sign Language.",
+  "name": "sign-it-text",
+  "version": "0.1.1",
+  "description": "SignIt translate a selected word in Sign Language.",
   "main": "background-script.js",
   "dependencies": {
-    "oojs-ui": "^0.31.6",
+    "oojs-ui": "^0.41.1",
     "webextension-polyfill": "^0.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "web-ext": "^5.5.0"
+  },
   "scripts": {
-    "postinstall": "bin/build.sh"
+    "postinstall": "bin/build.sh",
+    "webext":"web-ext build",
+    "start:firefox": "web-ext run --source-dir ./extension-dist/"
   },
   "repository": {
     "type": "git",
