@@ -9,7 +9,7 @@ This extension allows you to translate a word into French sign language on any w
 ## Build & hack
 ```
 npm install
-web-ext build
+npm run webext
 ```
 
 ## Visuals

@@ -1,5 +1,5 @@
 {
-  "name": "sign-it-text",
+  "name": "sign-it",
   "version": "0.1.1",
   "description": "SignIt translate a selected word in Sign Language.",
   "main": "background-script.js",
@@ -12,8 +12,7 @@
   },
   "scripts": {
     "postinstall": "bin/build.sh",
-    "webext":"web-ext build",
-    "start:firefox": "web-ext run --source-dir ./extension-dist/"
+    "web-ext:firefox":"web-ext build"
   },
   "repository": {
     "type": "git",
