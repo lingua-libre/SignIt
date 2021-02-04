@@ -8,8 +8,8 @@ This extension allows you to translate a word into French sign language on any w
 
 ## Build & hack
 ```
-npm install
-npm run webext
+npm install                 # Install dependencies
+npm run web-ext:firefox     # build the firefox extension into an instalable and usable .zip
 ```
 
 ## Visuals
