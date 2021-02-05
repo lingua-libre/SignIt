@@ -13,7 +13,7 @@
   "scripts": {
     "postinstall": "bin/build.sh",
     "web-ext:build":"web-ext build",
-    "web-ext:test": "web-ext run --source-dir ./ --url=fr.wikipedia.org",
+    "web-ext:test": "web-ext run --source-dir ./ --url=fr.wikipedia.org"
   },
   "repository": {
     "type": "git",
