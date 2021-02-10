@@ -1,7 +1,7 @@
 {
   "name": "sign-it",
-  "version": "0.1.1",
-  "description": "SignIt translate a selected word in Sign Language.",
+  "version": "0.1.2",
+  "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
     "oojs-ui": "^0.41.1",

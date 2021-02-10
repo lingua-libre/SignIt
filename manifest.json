@@ -1,84 +1,84 @@
 {
-  "manifest_version": 2,
-  "name": "Lingua Libre SignIt",
-  "version": "1.0.1",
-  "author": "Antoine '0x010C' Lamielle",
-  "description": "SignIt translate a word in Sign Language.",
-  "homepage_url": "https://lingualibre.org",
-  "applications": {
-    "gecko": {
-      "id": "signit@lingualibre.fr"
-    }
-  },
-  "icons": {
-    "32": "icons/signit-32.png",
-    "48": "icons/signit-48.png",
-	"64": "icons/signit-64.png"
-  },
-  "permissions": [
-    "activeTab",
-    "contextMenus",
-	"webRequest",
-	"webRequestBlocking",
-	"storage",
-    "<all_urls>"
-  ],
-  "browser_action": {
-    "default_icon": "icons/signit-32.png",
-    "default_title": "Lingua Libre SignIt",
-    "default_popup": "popup/popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": [
-      	"lib/oojs-ui-wikimediaui.min.css",
-      	"content_scripts/signit.css"
-      ],
-      "js": [
-      	"lib/browser-polyfill.min.js",
-      	"lib/jquery.min.js",
-      	"lib/oojs.jquery.min.js",
-      	"lib/oojs-ui.min.js",
-      	"lib/oojs-ui-wikimediaui.min.js",
-		"SignItVideosGallery.js",
-      	"SignItCoreContent.js",
-      	"content_scripts/signit.js"
-      ]
-    }, {
-        "matches": ["https://*.wikipedia.org/*"],
-        "css": [
-        	"lib/oojs-ui-wikimediaui.min.css",
-  			"content_scripts/wpintegration.css"
+	"manifest_version": 2,
+	"name": "Lingua Libre SignIt",
+	"version": "1.0.2",
+	"author": "Antoine '0x010C' Lamielle",
+	"description": "SignIt translate a selected word in Sign Language videos.",
+	"homepage_url": "https://lingualibre.org",
+	"applications": {
+		"gecko": {
+			"id": "signit@lingualibre.fr"
+		}
+	},
+	"icons": {
+		"32": "icons/signit-32.png",
+		"48": "icons/signit-48.png",
+		"64": "icons/signit-64.png"
+	},
+	"permissions": [
+		"activeTab",
+		"contextMenus",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"<all_urls>"
+	],
+	"browser_action": {
+		"default_icon": "icons/signit-32.png",
+		"default_title": "Lingua Libre SignIt",
+		"default_popup": "popup/popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"css": [
+				"lib/oojs-ui-wikimediaui.min.css",
+				"content_scripts/signit.css"
+			],
+			"js": [
+				"lib/browser-polyfill.min.js",
+				"lib/jquery.min.js",
+				"lib/oojs.jquery.min.js",
+				"lib/oojs-ui.min.js",
+				"lib/oojs-ui-wikimediaui.min.js",
+				"SignItVideosGallery.js",
+				"SignItCoreContent.js",
+				"content_scripts/signit.js"
+			]
+		}, {
+				"matches": ["https://*.wikipedia.org/*"],
+				"css": [
+					"lib/oojs-ui-wikimediaui.min.css",
+					"content_scripts/wpintegration.css"
 		],
-        "js": [
-        	"lib/browser-polyfill.min.js",
-	      	"lib/jquery.min.js",
-	      	"lib/oojs.jquery.min.js",
-	      	"lib/oojs-ui.min.js",
-	      	"lib/oojs-ui-wikimediaui.min.js",
-			"SignItVideosGallery.js",
-  			"content_scripts/wpintegration.js"
-        ],
+				"js": [
+					"lib/browser-polyfill.min.js",
+					"lib/jquery.min.js",
+					"lib/oojs.jquery.min.js",
+					"lib/oojs-ui.min.js",
+					"lib/oojs-ui-wikimediaui.min.js",
+					"SignItVideosGallery.js",
+					"content_scripts/wpintegration.js"
+				],
 		"run_at": "document_end"
-      }
-  ],
-  "background": {
-    "scripts": [
+			}
+	],
+	"background": {
+		"scripts": [
 		"lib/browser-polyfill.min.js",
 		"lib/jquery.min.js",
 		"background-script.js"
 	]
-  },
-  "web_accessible_resources": [
-    "icons/Spinner_font_awesome.svg"
+	},
+	"web_accessible_resources": [
+		"icons/Spinner_font_awesome.svg"
 	],
 	"commands": {
-	  "_execute_browser_action": {
-	    "suggested_key": {
-	      "default": "Ctrl+Shift+L"
-	    }
-	  }
-  },
-  "content_security_policy": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+L"
+			}
+		}
+	},
+	"content_security_policy": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
 }
