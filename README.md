@@ -7,9 +7,13 @@ This extension allows you to translate a word into French sign language on any w
 * Firefox > Open: https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/ > Install.
 
 ## Build & hack
+Euning local extension requires [special flavors of Firefox](https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct#w_what-are-my-options-if-i-want-to-use-an-unsigned-add-on-advanced-users) to be installed.
+
+Then
+
 ```
 npm install                 # Install dependencies
-npm run web-ext:build       # build the firefox extension into an instalable and usable .zip
+npm run web-ext:build       # build the firefox extension into an instalable .zip
 npm run web-ext:test        # runs current dev version in Firefox, opens url defined in package.json
 ```
 See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
