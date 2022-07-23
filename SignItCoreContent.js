@@ -25,7 +25,7 @@ var SignItCoreContent = function () {
 		</div>
 	` );
 
-	this.contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer !', flags: [ 'primary', 'progressive' ] } );
+	this.contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer en LSF !', flags: [ 'primary', 'progressive' ], href: 'https://lingualibre.org/wiki/Special:RecordWizard' } );
 
 	this.$title = this.$container.children( 'h1' );
 	this.$wtdef = this.$container.find( '.signit-wtdef' );
