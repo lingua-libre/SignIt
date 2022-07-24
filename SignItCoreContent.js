@@ -23,9 +23,13 @@ var SignItCoreContent = function () {
 				<div class="signit-popup-rightpanel signit-error">Aucune définition n'a été trouvée.</div>
 			</div>
 		</div>
-	` );
-
-	this.contributeButton = new OO.ui.ButtonWidget( { label: 'Contribuer en LSF !', flags: [ 'primary', 'progressive' ], href: 'https://lingualibre.org/wiki/Special:RecordWizard' } );
+	`);
+	var optionsContribute = { 
+		flags: [ 'primary', 'progressive' ], 
+		label: 'Contribuer en LSF', 
+		href: 'https://lingualibre.org/wiki/Special:RecordWizard'
+	};
+	this.contributeButton = new OO.ui.ButtonWidget( optionsContribute );
 
 	this.$title = this.$container.children( 'h1' );
 	this.$wtdef = this.$container.find( '.signit-wtdef' );
@@ -38,9 +42,9 @@ var SignItCoreContent = function () {
 
 	this.videosGallery = new SignItVideosGallery( this.$leftPanelContent );
 
-	this.contributeButton.on( 'click', function () {
-		// TODO: Do something
-	}.bind( this ) );
+	// this.contributeButton.on( 'click', function () {
+	//	// TODO: Do something
+	// }.bind( this ) );
 };
 
 SignItCoreContent.prototype.refresh = function ( title, files ) {
