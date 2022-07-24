@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Lingua Libre SignIt",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"author": "Antoine '0x010C' Lamielle",
 	"description": "SignIt translate a selected word in Sign Language videos.",
 	"homepage_url": "https://lingualibre.org",
@@ -45,30 +45,31 @@
 				"SignItCoreContent.js",
 				"content_scripts/signit.js"
 			]
-		}, {
-				"matches": ["https://*.wikipedia.org/*"],
-				"css": [
-					"lib/oojs-ui-wikimediaui.min.css",
-					"content_scripts/wpintegration.css"
-		],
-				"js": [
-					"lib/browser-polyfill.min.js",
-					"lib/jquery.min.js",
-					"lib/oojs.jquery.min.js",
-					"lib/oojs-ui.min.js",
-					"lib/oojs-ui-wikimediaui.min.js",
-					"SignItVideosGallery.js",
-					"content_scripts/wpintegration.js"
-				],
+		},
+		{
+			"matches": ["https://*.wikipedia.org/*"],
+			"css": [
+				"lib/oojs-ui-wikimediaui.min.css",
+				"content_scripts/wpintegration.css"
+			],
+			"js": [
+				"lib/browser-polyfill.min.js",
+				"lib/jquery.min.js",
+				"lib/oojs.jquery.min.js",
+				"lib/oojs-ui.min.js",
+				"lib/oojs-ui-wikimediaui.min.js",
+				"SignItVideosGallery.js",
+				"content_scripts/wpintegration.js"
+			],
 		"run_at": "document_end"
-			}
+		}
 	],
 	"background": {
 		"scripts": [
 		"lib/browser-polyfill.min.js",
 		"lib/jquery.min.js",
 		"background-script.js"
-	]
+		]
 	},
 	"web_accessible_resources": [
 		"icons/Spinner_font_awesome.svg"

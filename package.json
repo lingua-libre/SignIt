@@ -1,18 +1,18 @@
 {
   "name": "sign-it",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
-    "oojs-ui": "^0.41.1",
-    "webextension-polyfill": "^0.4.0"
+    "oojs-ui": "^0.44.1",
+    "webextension-polyfill": "^0.9.0"
   },
   "devDependencies": {
-    "web-ext": "^5.5.0"
+    "web-ext": "^7.1.1"
   },
   "scripts": {
     "postinstall": "bin/build.sh",
-    "web-ext:build":"web-ext build",
+    "web-ext:build": "web-ext build",
     "web-ext:test": "web-ext run --source-dir ./ --url=fr.wikipedia.org"
   },
   "repository": {
