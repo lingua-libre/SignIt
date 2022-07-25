@@ -18,7 +18,7 @@ var SignItCoreContent = function () {
 					</div>
 				</div>
 				<div class="popup-loading signit-popup-rightpanel">
-					<img class="popup-loading-spinner" src="${ browser.extension.getURL( 'icons/Spinner_font_awesome.svg' ) }" width="40" height="40">
+					<img class="popup-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg' ) }" width="40" height="40">
 				</div>
 				<div class="signit-popup-rightpanel signit-error">Aucune définition n'a été trouvée.</div>
 			</div>
