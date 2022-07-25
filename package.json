@@ -1,6 +1,6 @@
 {
   "name": "sign-it",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
