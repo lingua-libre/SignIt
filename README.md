@@ -21,5 +21,19 @@ There, `Load temporary Add-on`, fin "Lingua Libre SignIt" : click `Inspect`.
 ## Visuals
 <img src="doc/LinguaLibre_SignIt-01.png"/>
 
+## Development
+```
+/background-script.js — main script.
+/SignItCoreContent.js — creates duo panels "Video | Definition"
+/SignItVideosGallery.js — given urls, creates gallery of videos.
+/content_scripts/
+  ├── signit.js — creates above text SignIt popup
+  └── wpintegration.js — on wikimedia sites, if page's title has a sign language video available, then display smartly.
+/popup/
+  ├── popup.html — top bar SignIt icon's popup, with search, history and settings.
+  ├── popup.js — same.
+  └── SearchWidget.js — handle the search queries  
+```
+
 ## Contact
 * @hugolpz
