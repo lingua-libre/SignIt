@@ -1,5 +1,8 @@
+// Base Sparql enpoint
 const sparqlEndpoint = 'https://lingualibre.org/bigdata/namespace/wdq/sparql';
+// All languages (P4) for which media type (P24) is video (Q88890)
 const sparqlLangQuery = 'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
+// Given a language (P4) with media video, fetch the list of writen word (P7), url (P3) speakers (P5)
 const sparqlVideoQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
 
 var state = 'up', // up / loading / ready / error
