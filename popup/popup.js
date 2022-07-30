@@ -1,6 +1,7 @@
 (async function() {
 	var ui,
 		backgroundPage = await browser.runtime.getBackgroundPage();
+		document.querySelector('#fetchList').innerHTML = 'Fetching the list of all videos available on Lingua Libre.';
 	
 	/* *********************************************************** */
 	// Master
@@ -81,7 +82,7 @@
 	/* *********************************************************** */
 	// History tab
 	UI.prototype.initHistory = function () {
-		this.$noHistory = $( '<div>C\'est vide</div>' );
+		this.$noHistory = $( "<div>C'est vide</div>" );
 		this.history = [];
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
@@ -175,7 +176,7 @@
 			value: true
 		} );
 		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
-			label: 'Lecture doublée normal / lent :',
+			label: 'Lecture double normal / lent :',
 			align: 'top',
 		} );
 

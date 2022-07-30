@@ -13,7 +13,7 @@ var state = 'up', // up / loading / ready / error
 		historylimit: 10,
 		wpintegration: true,
 		twospeed: true,
-		history: []
+		history: ['lapin', 'crabe', 'fraise']
 	};
 
 // TODO:
