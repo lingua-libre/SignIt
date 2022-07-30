@@ -7,8 +7,7 @@ var SignItCoreContent = function () {
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-novideo">
 					Ce mot n'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.<br><br>
 				</div>
-				<div class="signit-popup-leftpanel signit-popup-leftpanel-video">
-				</div>
+				<div class="signit-popup-leftpanel signit-popup-leftpanel-video"></div>
 				<div class="signit-popup-separator"></div>
 				<h2>Définitions :</h2>
 				<div class="signit-popup-rightpanel signit-wt">
