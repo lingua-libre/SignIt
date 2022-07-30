@@ -9,6 +9,7 @@ var state = 'up', // up / loading / ready / error
 		language: 'Q99628',
 		historylimit: 10,
 		wpintegration: true,
+		twospeed: true,
 		history: []
 	};
 
@@ -199,6 +200,7 @@ async function main() {
 	await getStoredParam( 'history' );
 	await getStoredParam( 'historylimit' );
 	await getStoredParam( 'wpintegration' );
+	await getStoredParam( 'twospeed' );
 	language = await getStoredParam( 'language' );
 	languages = await getAllLanguages();
 	records = await getAllRecords( language );

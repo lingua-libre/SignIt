@@ -1,7 +1,9 @@
 (async function() {
 	var ui,
 		backgroundPage = await browser.runtime.getBackgroundPage();
-
+	
+	/* *********************************************************** */
+	// Master
 	var UI = function () {
 		// Setup the main tab layout
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: 'Consulter' } );
@@ -12,19 +14,17 @@
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
-		// Setup the param tab
+		// Setup tabs
 		this.initParam();
-
-		// Setup the history tab
 		this.initHistory();
-
-		// Setup the view tab
 		this.initView();
 
 		// show the UI we have just build
 		this.switchPanel( 'loaded' );
 	};
-
+	
+	/* *********************************************************** */
+	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
 		this.searchWidget = new SearchWidget( { placeholder: `Rechercher parmis les ${ Object.keys( backgroundPage.records ).length } signes.` } );
@@ -77,7 +77,9 @@
 		this.coreContent.getContainer().show();
 		this.addHistory( word );
 	}
-
+	
+	/* *********************************************************** */
+	// History tab
 	UI.prototype.initHistory = function () {
 		this.$noHistory = $( '<div>C\'est vide</div>' );
 		this.history = [];
@@ -126,6 +128,8 @@
 		}
 	}
 
+	/* *********************************************************** */
+	// Settings tab
 	UI.prototype.initParam = async function () {
 		/* Language picker */
 		var i, languageDropdown, languageLayout,
@@ -166,10 +170,20 @@
 			align: 'top',
 		} );
 
+		/* Two speed playback integrator */
+		twospeedWidget = new OO.ui.ToggleSwitchWidget( {
+			value: true
+		} );
+		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
+			label: 'Lecture doublée normal / lent :',
+			align: 'top',
+		} );
+
 		// Populate
 		languageDropdown.getMenu().selectItemByData( backgroundPage.params.language );
 		historyWidget.setValue( backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( backgroundPage.params.wpintegration );
+		twospeedWidget.setValue( backgroundPage.params.twospeed );
 
 		// Events
 		languageDropdown.getMenu().on( 'choose', changeLanguage );
@@ -182,16 +196,24 @@
 			this.cleanHistory();
 		}.bind( this ) );
 		wpintegrationWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'wpintegration' ) )
+		twospeedWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'twospeed' ) )
 
-		this.paramTab.$element.append( languageLayout.$element ).append( historyLayout.$element ).append( wpintegrationLayout.$element );
+		this.paramTab.$element
+			.append( languageLayout.$element )
+			.append( historyLayout.$element )
+			.append( wpintegrationLayout.$element )
+			.append( twospeedLayout.$element );
 	};
 
+	/* *********************************************************** */
+	// Tab switcher
 	UI.prototype.switchPanel = function( tab ) {
 		$( '#popup-loading' ).hide();
 		$( '#popup-loaded' ).hide();
 		$( '#popup-' + tab ).show();
 	};
-
+	/* *********************************************************** */
+	// Others
 	async function changeLanguage( item ) {
 		var newLang = item.getData();
 		if ( backgroundPage.params.language === newLang ) {
