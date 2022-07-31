@@ -6,21 +6,22 @@
 	/* *********************************************************** */
 	// Master
 	var UI = function () {
-		// Setup the main tab layout
+		// Setup the main tabs
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: 'Consulter' } );
 		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: 'Historique', classes: [ 'popup-tab-history' ] } );
 		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: 'Paramètres', classes: [ 'popup-tab-param' ] } );
 
+		// Set up the popup page layout
 		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'popup-tabs' ] } );
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
-		// Setup tabs
+		// Build the full tabs inner content
 		this.initParam();
 		this.initHistory();
 		this.initView();
 
-		// show the UI we have just build
+		// Show the UI we have just build
 		this.switchPanel( 'loaded' );
 	};
 	
@@ -80,7 +81,8 @@
 	}
 	
 	/* *********************************************************** */
-	// History tab
+	// History tab 
+	// .initHistory calls .addHistory which calls .cleanHistory
 	UI.prototype.initHistory = function () {
 		this.$noHistory = $( "<div>C'est vide</div>" );
 		this.history = [];
@@ -89,7 +91,7 @@
 
 		var tmp = backgroundPage.params.history;
 		for ( i = tmp.length-1; i >= 0 ; i-- ) {
-			this.addHistory( tmp[ i ], false );
+			this.addHistory( tmp[ i ], false ); // weird, store always false then why define it as parameter ?
 		}
 	};
 
@@ -132,22 +134,47 @@
 	/* *********************************************************** */
 	// Settings tab
 	UI.prototype.initParam = async function () {
-		/* Language picker */
-		var i, languageDropdown, languageLayout,
-		 	items = [];
-
-		for ( qid in backgroundPage.languages ) {
+		/* Sign Language picker */
+		// Data
+		var items = [];
+		for ( qid in backgroundPage.signLanguages ) {
 			items.push( new OO.ui.MenuOptionWidget( {
 				data: qid,
-				label: backgroundPage.languages[ qid ],
+				label: backgroundPage.signLanguages[ qid ], // name of the language
 			} ) );
 		}
-
-		languageDropdown = new OO.ui.DropdownWidget( { label: 'Change language', menu: { items: items }, $overlay: $( 'body' ) } );
-		languageLayout = new OO.ui.FieldLayout( languageDropdown, {
-			label: 'Langue :',
+		// Layout
+		signLanguageDropdown = new OO.ui.DropdownWidget( { 
+			label: 'Change videos language', 
+			menu: { items: items }, 
+			$overlay: $( 'body' ) 
+		} );
+		signLanguageLayout = new OO.ui.FieldLayout( signLanguageDropdown, {
+			label: 'Langue des signes:',
 			align: 'top',
 			help: 'Change la langue des signes utilisée dans les vidéos.',
+			//helpInline: true
+		} );
+		
+		/* UI Languages picker */		
+		// Data
+		items = [];
+		for ( qid in backgroundPage.uiLanguages ) {
+			items.push( new OO.ui.MenuOptionWidget( {
+				data: qid,
+				label: backgroundPage.uiLanguages[ qid ], // name of the language
+			} ) );
+		}
+		// Layout
+		uiLanguageDropdown = new OO.ui.DropdownWidget({ 
+			label: 'Change interface language', 
+			menu: { items: items }, 
+			$overlay: $( 'body' ) 
+		} );
+		uiLanguageLayout = new OO.ui.FieldLayout( uiLanguageDropdown, {
+			label: 'Langue de l\'interface:',
+			align: 'top',
+			help: 'Change la langue de l\'interface.',
 			//helpInline: true
 		} );
 
@@ -181,13 +208,16 @@
 		} );
 
 		// Populate
-		languageDropdown.getMenu().selectItemByData( backgroundPage.params.language );
+		signLanguageDropdown.getMenu().selectItemByData( backgroundPage.params.signLanguage );
+		uiLanguageDropdown.getMenu().selectItemByData( backgroundPage.params.uiLanguage );
 		historyWidget.setValue( backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( backgroundPage.params.wpintegration );
 		twospeedWidget.setValue( backgroundPage.params.twospeed );
 
 		// Events
-		languageDropdown.getMenu().on( 'choose', changeLanguage );
+		signLanguageDropdown.getMenu().on( 'choose', changeLanguage );
+		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
+		backgroundPage.storeParam( 'uiLanguage', backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( newLimit ) {
 			newLimit = parseInt( newLimit ) || 0;
 			if ( newLimit < 0 ) {
@@ -198,9 +228,11 @@
 		}.bind( this ) );
 		wpintegrationWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'wpintegration' ) )
 		twospeedWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'twospeed' ) )
+		backgroundPage.storeParam( 'twospeed', backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
 
 		this.paramTab.$element
-			.append( languageLayout.$element )
+			.append( signLanguageLayout.$element )
+			.append( uiLanguageLayout.$element )
 			.append( historyLayout.$element )
 			.append( wpintegrationLayout.$element )
 			.append( twospeedLayout.$element );
@@ -217,12 +249,22 @@
 	// Others
 	async function changeLanguage( item ) {
 		var newLang = item.getData();
-		if ( backgroundPage.params.language === newLang ) {
+		if ( backgroundPage.params.signLanguage === newLang ) {
 			return;
 		}
 
 		ui.switchPanel( 'loading' );
 		await backgroundPage.changeLanguage( newLang );
+		ui.switchPanel( 'loaded' );
+	}
+	async function changeUiLanguage( item ) {
+		var newLang = item.getData();
+		if ( backgroundPage.params.uiLanguage === newLang ) {
+			return;
+		}
+
+		ui.switchPanel( 'loading' );
+		await backgroundPage.changeUiLanguage( newLang );
 		ui.switchPanel( 'loaded' );
 	}
 
