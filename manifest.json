@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Lingua Libre SignIt",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"author": "Antoine '0x010C' Lamielle",
 	"description": "SignIt translate a selected word in Sign Language videos.",
 	"homepage_url": "https://lingualibre.org",
@@ -41,6 +41,7 @@
 				"lib/oojs.jquery.min.js",
 				"lib/oojs-ui.min.js",
 				"lib/oojs-ui-wikimediaui.min.js",
+				"lib/banana-i18n.js",
 				"SignItVideosGallery.js",
 				"SignItCoreContent.js",
 				"content_scripts/signit.js"
@@ -55,6 +56,7 @@
 			"js": [
 				"lib/browser-polyfill.min.js",
 				"lib/jquery.min.js",
+				"lib/banana-i18n.js",
 				"lib/oojs.jquery.min.js",
 				"lib/oojs-ui.min.js",
 				"lib/oojs-ui-wikimediaui.min.js",
@@ -68,6 +70,7 @@
 		"scripts": [
 		"lib/browser-polyfill.min.js",
 		"lib/jquery.min.js",
+		"lib/banana-i18n.js",
 		"background-script.js"
 		]
 	},

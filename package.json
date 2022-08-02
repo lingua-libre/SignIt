@@ -1,9 +1,10 @@
 {
   "name": "sign-it",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
+    "banana-i18n": "^2.3.3",
     "oojs-ui": "^0.44.1",
     "webextension-polyfill": "^0.9.0"
   },
