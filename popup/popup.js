@@ -1,25 +1,32 @@
 (async function() {
 	var ui,
 		backgroundPage = await browser.runtime.getBackgroundPage();
-		document.querySelector('#fetchList').innerHTML = 'Fetching the list of all videos available on Lingua Libre.';
-	
+
 	/* *********************************************************** */
 	// Master
 	var UI = function () {
+		// Make internalisations available
+		banana = backgroundPage.banana;
+		// Placeholder while fetching data
+		document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
+
 		// Setup the main tabs
-		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: 'Consulter' } );
-		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: 'Historique', classes: [ 'popup-tab-history' ] } );
-		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: 'Paramètres', classes: [ 'popup-tab-param' ] } );
+		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: banana.i18n('si-popup-browse-title') } );
+		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: banana.i18n('si-popup-history-title'), classes: [ 'popup-tab-history' ] } );
+		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: banana.i18n('si-popup-settings-title'), classes: [ 'popup-tab-param' ] } );
 
 		// Set up the popup page layout
 		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'popup-tabs' ] } );
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
+
+		// Clean then append
+		document.querySelector( '#popup-loaded' ).innerHTML = "";
 		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
 		// Build the full tabs inner content
-		this.initParam();
-		this.initHistory();
 		this.initView();
+		this.initHistory();
+		this.initParam();
 
 		// Show the UI we have just build
 		this.switchPanel( 'loaded' );
@@ -29,17 +36,17 @@
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		this.searchWidget = new SearchWidget( { placeholder: `Rechercher parmis les ${ Object.keys( backgroundPage.records ).length } signes.` } );
+		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( backgroundPage.records ).length ) } );
 		this.searchWidget.setRecords( backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon: 'search',
-			label: 'Rechercher',
+			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
-			title: 'Lancer la recherche'
+			title: banana.i18n("si-popup-browse-icon")
 		} )
 		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
 			align: 'top',
-			label: 'Rechercher',
+			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
 			classes: [ 'popup-tab-view-search' ]
 		} );
@@ -84,7 +91,7 @@
 	// History tab 
 	// .initHistory calls .addHistory which calls .cleanHistory
 	UI.prototype.initHistory = function () {
-		this.$noHistory = $( "<div>C'est vide</div>" );
+		this.$noHistory = $( `<div>${banana.i18n("si-popup-history-noHistory")}</div>` );
 		this.history = [];
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
@@ -145,14 +152,14 @@
 		}
 		// Layout
 		signLanguageDropdown = new OO.ui.DropdownWidget( { 
-			label: 'Change videos language', 
+			label: banana.i18n("si-popup-settings-signlanguage-dropdown"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		signLanguageLayout = new OO.ui.FieldLayout( signLanguageDropdown, {
-			label: 'Langue des signes:',
+			label: banana.i18n("si-popup-settings-signlanguage"),
 			align: 'top',
-			help: 'Change la langue des signes utilisée dans les vidéos.',
+			help: banana.i18n("si-popup-settings-signlanguage-help"),
 			//helpInline: true
 		} );
 		
@@ -167,14 +174,14 @@
 		}
 		// Layout
 		uiLanguageDropdown = new OO.ui.DropdownWidget({ 
-			label: 'Change interface language', 
+			label: banana.i18n("si-popup-settings-signlanguage"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		uiLanguageLayout = new OO.ui.FieldLayout( uiLanguageDropdown, {
-			label: 'Langue de l\'interface:',
+			label: banana.i18n("si-popup-settings-uilanguage"),
 			align: 'top',
-			help: 'Change la langue de l\'interface.',
+			help: banana.i18n("si-popup-settings-uilanguage-help"),
 			//helpInline: true
 		} );
 
@@ -184,9 +191,9 @@
 			min: 0
 		} );
 		historyLayout = new OO.ui.FieldLayout( historyWidget, {
-			label: 'Nombre de lignes d\'historique :',
+			label: banana.i18n("si-popup-settings-history"),
 			align: 'top',
-			help: 'Mettre à 0 désactive l\'historique',
+			help: banana.i18n("si-popup-settings-history-help"),
 		} );
 
 		/* WP integrator */
@@ -194,7 +201,7 @@
 			value: true
 		} );
 		wpintegrationLayout = new OO.ui.FieldLayout( wpintegrationWidget, {
-			label: 'Intégration native sur Wikipédia :',
+			label: banana.i18n("si-popup-settings-wpintegration"),
 			align: 'top',
 		} );
 
@@ -203,7 +210,7 @@
 			value: true
 		} );
 		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
-			label: 'Lecture double normal / lent :',
+			label: banana.i18n("si-popup-settings-twospeed"),
 			align: 'top',
 		} );
 
@@ -215,7 +222,7 @@
 		twospeedWidget.setValue( backgroundPage.params.twospeed );
 
 		// Events
-		signLanguageDropdown.getMenu().on( 'choose', changeLanguage );
+		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
 		backgroundPage.storeParam( 'uiLanguage', backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( newLimit ) {
@@ -247,24 +254,27 @@
 	};
 	/* *********************************************************** */
 	// Others
-	async function changeLanguage( item ) {
-		var newLang = item.getData();
-		if ( backgroundPage.params.signLanguage === newLang ) {
+	async function changeSignLanguage( item ) {
+		var newLanguage = item.getData(); // `item` is the oojs Select element's object.
+		if ( backgroundPage.params.signLanguage === newLanguage ) {
 			return;
 		}
 
 		ui.switchPanel( 'loading' );
-		await backgroundPage.changeLanguage( newLang );
+		await backgroundPage.changeLanguage( newLanguage );
 		ui.switchPanel( 'loaded' );
 	}
 	async function changeUiLanguage( item ) {
-		var newLang = item.getData();
-		if ( backgroundPage.params.uiLanguage === newLang ) {
+		var newLanguage = item.getData();
+		console.log("stored language:", backgroundPage.params.uiLanguage);
+		console.log('passed language:', newLanguage)
+		if ( backgroundPage.params.uiLanguage === newLanguage ) {
 			return;
 		}
-
 		ui.switchPanel( 'loading' );
-		await backgroundPage.changeUiLanguage( newLang );
+		banana = backgroundPage.banana;
+		await backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
+		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
 

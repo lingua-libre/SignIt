@@ -38,7 +38,21 @@ const sparqlSignLanguagesQuery = 'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity
 // Lingualibre: Given a language (P4) with media video, fetch the list of writen word (P7), url (P3) speakers (P5)
 const sparqlSignVideosQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
 // Wikidata: All Sign languages who have a Commons lingualibre category
-
+const sparqlFilesInCategoryQuery = `SELECT ?file ?url ?title
+WHERE {
+  SERVICE wikibase:mwapi {
+    bd:serviceParam wikibase:api "Generator" ;
+                    wikibase:endpoint "commons.wikimedia.org" ;
+                    mwapi:gcmtitle "Category:Videos Langue des signes française" ;
+                    mwapi:generator "categorymembers" ;
+                    mwapi:gcmtype "file" ;
+                    mwapi:gcmlimit "max" .
+    ?title wikibase:apiOutput mwapi:title .
+    ?pageid wikibase:apiOutput "@pageid" .
+  }
+  BIND (URI(CONCAT('https://commons.wikimedia.org/entity/M', ?pageid)) AS ?file)
+  BIND (URI(CONCAT('https://commons.wikimedia.org/wiki/', ?title)) AS ?url)
+}`
 
 /* *************************************************************** */
 /* Init state if no localStorage ********************************* */
@@ -48,14 +62,20 @@ var state = 'up', // up / loading / ready / error
 	uiLanguages = {},
 	// Default values, will be stored in localStorage as well for persistency.
 	params = {
-		signLanguage: 'Q99628', // for videos
-		uiLanguage: 'Q150', // for interface
+		signLanguage: 'Q99628', // for videos : French Sign language
+		uiLanguage: 'Q150', // for interface : French
 		historylimit: 6,
-		history: ['lapin', 'crabe', 'fraise'],
+		history: ['lapin', 'crabe', 'fraise'], // Some fun
 		wpintegration: true,
 		twospeed: true,
-	};
-
+	},
+	// Init internationalisation support with Banana-i18n.js
+	banana = new Banana('fr');
+	loadI18nLocalization(params.uiLanguage);
+	// Add url support
+	banana.registerParserPlugin('link', (nodes) => {
+		return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
+	  });
 
 /* *************************************************************** */
 /* Toolbox functions ********************************************* */
@@ -112,11 +132,12 @@ async function getSignLanguagesWithVideos() {
 }
 
 // Get UI languages with translations on github
-async function getSignLanguagesWithTranslations() {
-	return { Q150: "Français", Q1860: "English", Q1321: "Español" }
+async function getUiLanguagesWithTranslations() {
+	var uiLanguages = { Q150: "Français", Q1860: "English", Q1321: "Español", Q7930: "Magalasy" }
+	return uiLanguages;
 }
-// Loading all vidéos of a given sign language 
-// records: [{ word: { filename: url, speaker: name }}, ... ]
+// Loading all vidéos of a given sign language. Format:
+// records = { word: { filename: url, speaker: name }, ... };
 async function getAllRecords( signLanguage ) {
 	var i, record, word, response,
 		records = {};
@@ -156,15 +177,62 @@ function normalize( word ) {
 	return word.trim();
 }
 
+async function fetchJS(filepath) {
+	try {
+		const response = await fetch(`${filepath}`, {
+			method: 'GET',
+			credentials: 'same-origin'
+		});
+		const content = await response.json();
+		return content;
+	} catch (error) { console.error(error); }
+}
+// messages = await fetchJS(`i18n/${iso}.json`);
+
+// Loading all UI translations
+async function loadI18nLocalization( uiLanguageQid ) {
+	var messages = {};
+
+	state = 'loading';
+
+	var Qid2Iso = {
+		Q150: 'fr',
+		Q1860: 'en',
+		Q1321: 'es',
+		Q7930: "mg"
+	}
+	iso = Qid2Iso[uiLanguageQid]; // uiLanguage is a Qid
+	console.log("uiLanguageQid",uiLanguageQid)
+	console.log("iso",iso)
+
+	// Load messages
+	const res = await fetch(`i18n/${iso}.json`)
+	messages = await res.json();
+	console.log("messages",messages["si-popup-settings-title"])
+	// Load messages into localisation
+	banana.load(messages, iso); // Load localized messages (should be conditional to empty data for that local)
+
+	// Declare localisation
+	banana.setLocale(iso); // Change to new locale
+	console.log("background 215",banana.i18n('si-popup-settings-title'))
+	console.log("background 216",banana);
+	state = 'ready';
+
+	console.log( Object.keys( messages ).length + ' messages loaded' );
+}
+
+
 // Given language's Qid, reload list of available videos and records/words data
 async function changeLanguage( newLang ) {
+	console.log('changeLanguage newLang', newLang);
 	records = await getAllRecords( newLang );
 	await storeParam( 'signLanguage', newLang ); // localStorage save
 }
 
 // Given language's Qid, reload available translations
 async function changeUiLanguage( newLang ) {
-	// records = await getAllRecords( newLang );
+	console.log('changeUiLanguage newLang', newLang); // => 'Q150' for french
+	messages = await loadI18nLocalization( newLang );
 	await storeParam( 'uiLanguage', newLang ); // localStorage save
 }
 
@@ -237,7 +305,7 @@ async function main() {
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
 	uiLanguage = await getStoredParam( 'uiLanguage' );
-	uiLanguages = await getSignLanguagesWithTranslations();
+	uiLanguages = await getUiLanguagesWithTranslations();
 	records = await getAllRecords( signLanguage );
 	state = 'ready';
 }
