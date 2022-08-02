@@ -34,8 +34,6 @@
 	"si-popup-settings-twospeed":"Setting title for video's double play at different speed.",	
 	"si-popup-settings-enlighten":"Setting title to enlighten available words.",
 
-	"si-videosGallery-video":"Video",
-	"si-videosGallery-video-by":"by",
-	"si-videosGallery-video-ratio":"of",
+	"si-videosGallery-video":"Vidéo de $1 par $2. ($3)"
 }
 
