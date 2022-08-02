@@ -12,10 +12,10 @@
 	"si-overlay-coreContent-left-novideo":"Placeholder paragraph when no video available, encouragin user to contribute a video.",
 	"si-overlay-coreContent-left-contribute-label":"One liner to direct user to Sign Language video recorder on LinguaLibre",
 	"si-overlay-coreContent-right-title":"Title of the section displaying Wiktionary's definitions.",
-	"si-overlay-coreContent-right-wtsource-default":"Default Wiktionary to use on installation, its language wiki code.",
-	"si-overlay-coreContent-right-wtsource-text":"One liner link to Witionary",
+	"si-overlay-coreContent-right-wikt-iso":"Default Wiktionary to use on installation, its language wiki code.",
+	"si-overlay-coreContent-right--wikt-section-id":"One liner link to Witionary",
+	"si-overlay-coreContent-right-wikt-section-id":"Within the target wiktionary, the html id anchor of the relevant section.",
 	"si-overlay-coreContent-right-error":"Placeholder when no defition found.",
-	"si-overlay-coreContent-":"",
 	
 	"si-popup-browse-title":"Title of the search / browse tab.",
 	"si-popup-browse-placeholder":"Announce the number of available videos.",
@@ -26,14 +26,19 @@
 	"si-popup-history-noHistory":"Placeholder when no log is available.",
 	
 	"si-popup-settings-title":"Title of the settings tab.",
-	"si-popup-settings-language":"Setting title for the sign language selection among sign languages available.",
-	"si-popup-settings-language-help":"Hint on the change sign language selector.",
+	"si-popup-settings-signlanguage":"Setting title for the sign language selection among sign languages available.",
+	"si-popup-settings-signlanguage-help":"Hint on the change sign language selector.",
+	"si-popup-settings-signlanguage-dropdown":"",
+	"si-popup-settings-uilanguage":":",
+	"si-popup-settings-uilanguage-help":"",
+	"si-popup-settings-uilanguage-dropdown":"",
+
 	"si-popup-settings-history":"Setting title to change history's length.",
 	"si-popup-settings-history-help":"Hint on how to desactivate history logs",	
 	"si-popup-settings-wpintegration":"Setting title for sign language video integration into Wikip|media websites.",
 	"si-popup-settings-twospeed":"Setting title for video's double play at different speed.",	
 	"si-popup-settings-enlighten":"Setting title to enlighten available words.",
 
-	"si-videosGallery-video":"Vidéo de $1 par $2. ($3)"
+	"si-videosGallery-video":"Video attibution at bottom of video gallery, with Commons URL, speaker, and position of the video within the gallery"
 }
 

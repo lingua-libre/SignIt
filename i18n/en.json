@@ -12,10 +12,10 @@
 	"si-overlay-coreContent-left-novideo":"This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
 	"si-overlay-coreContent-left-contribute-label":"Contribute with Sign Language",
 	"si-overlay-coreContent-right-title":"Definitions:",
-	"si-overlay-coreContent-right-wtsource-default":"en",
-	"si-overlay-coreContent-right-wtsource-text":"see on Wiktionary",
+	"si-overlay-coreContent-right-wikt-iso":"en",
+	"si-overlay-coreContent-right-wikt-section-id":"#English",
+	"si-overlay-coreContent-right-wikt-pointer":"see on Wiktionary",
 	"si-overlay-coreContent-right-error":"No defition found.",
-	"si-overlay-coreContent-":"",
 	
 	"si-popup-browse-title":"Browse",
 	"si-popup-browse-placeholder":"Search among $1 signs.",
@@ -26,13 +26,18 @@
 	"si-popup-history-noHistory":"It's empty",
 	
 	"si-popup-settings-title":"Settings",
-	"si-popup-settings-language":"Language:",
-	"si-popup-settings-language-help":"Changes to another sign language in videos.",
+	"si-popup-settings-signlanguage":"Sign language:",
+	"si-popup-settings-signlanguage-help":"Change videos to another sign language.",
+	"si-popup-settings-signlanguage-dropdown":"Change videos language",
+	"si-popup-settings-uilanguage":"Interface's language:",
+	"si-popup-settings-uilanguage-help":"Change the user interface's language.",
+	"si-popup-settings-uilanguage-dropdown":"Change interface language",
+
 	"si-popup-settings-history":"Length of the history:",
 	"si-popup-settings-history-help":"Set to 0 desactivates the history log",	
 	"si-popup-settings-wpintegration":"Native integration into Wikipedia:",
 	"si-popup-settings-twospeed":"Double play normal / slow:",	
 	"si-popup-settings-enlighten":"Enlighten available words: ",
 
-	"si-videosGallery-video":"Video of $1 by $2. ($3)"
+	"si-videosGallery-video": "by {{link|$1|$2}} – Video $3 of $4"
 }

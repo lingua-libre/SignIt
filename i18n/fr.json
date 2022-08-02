@@ -12,28 +12,33 @@
 	"si-overlay-coreContent-left-novideo":"Ce mot n'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.",
 	"si-overlay-coreContent-left-contribute-label":"Contribute with Sign Language",
 	"si-overlay-coreContent-right-title":"Définitions :",
-	"si-overlay-coreContent-right-wtsource-default":"fr",
-	"si-overlay-coreContent-right-wtsource-text":"voir sur le Wiktionnaire",
+	"si-overlay-coreContent-right-wikt-iso":"fr",
+	"si-overlay-coreContent-right-wikt-section-id":"#Français",
+	"si-overlay-coreContent-right-wikt-pointer":"voir sur le Wiktionnaire",
 	"si-overlay-coreContent-right-error":"Aucune définition n'a été trouvée.",
-	"si-overlay-coreContent-":"",
 
 	"si-popup-browse-title":"Consulter",
 	"si-popup-browse-placeholder":"Rechercher parmis les $1 signes.",
-	"si-popup-browse-label":"Chercher",
+	"si-popup-browse-label":"Rechercher",
 	"si-popup-browse-icon":"Lancer la recherche",
 
 	"si-popup-history-title":"Historique",
 	"si-popup-history-noHistory":"C'est vide",
 
 	"si-popup-settings-title":"Paramètres",
-	"si-popup-settings-language":"Langue:",
-	"si-popup-settings-language-help":"Change la langue des signes utilisée dans les vidéos.",
+	"si-popup-settings-signlanguage":"Langue des signes:",
+	"si-popup-settings-signlanguage-help":"Change la langue des signes utilisée dans les vidéos.",
+	"si-popup-settings-signlanguage-dropdown":"Change videos language",
+	"si-popup-settings-uilanguage":"Langue de l'interface:",
+	"si-popup-settings-uilanguage-help":"Change la langue de l'interface.",
+	"si-popup-settings-uilanguage-dropdown":"Change la langue",
+
 	"si-popup-settings-history":"Nombre de lignes d'historique:",
 	"si-popup-settings-history-help":"Mettre à 0 désactive l'historique",	
 	"si-popup-settings-wpintegration":"Intégration native sur Wikipédia :",
 	"si-popup-settings-twospeed":"Lecture double normal / lent :",	
 	"si-popup-settings-enlighten":"Enlighten available words: ",
 
-	"si-videosGallery-video":"Vidéo de $1 par $2. ($3)"
+	"si-videosGallery-video": "par {{link|$1|$2}} – Vidéo $3 sur $4"
 }
 
