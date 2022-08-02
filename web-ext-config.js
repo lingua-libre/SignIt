@@ -8,6 +8,7 @@ module.exports = {
 		'package-lock.json',
 		'bin/',
 		'dist/',
+		'videos/',
 		'README.md',
 		'web-ext-config.js'
 	],
