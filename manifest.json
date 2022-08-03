@@ -38,10 +38,10 @@
 			"js": [
 				"lib/browser-polyfill.min.js",
 				"lib/jquery.min.js",
+				"lib/banana-i18n.js",
 				"lib/oojs.jquery.min.js",
 				"lib/oojs-ui.min.js",
 				"lib/oojs-ui-wikimediaui.min.js",
-				"lib/banana-i18n.js",
 				"SignItVideosGallery.js",
 				"SignItCoreContent.js",
 				"content_scripts/signit.js"
