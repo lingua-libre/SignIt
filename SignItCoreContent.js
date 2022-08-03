@@ -1,31 +1,36 @@
+console.log("SignItCore 1")
+// console.log("banana",banana) // -> fails : background.js not accessible natively
+var toto = "hi !";
+
 var SignItCoreContent = function () {
 	this.$container = $( `
 		<div class="signit-popup-container">
 			<h1></h1>
 			<div class="signit-popup-content">
-				<h2>${ banana.i18n("si-overlay-coreContent-left-title") }</h2>
+				<h2>${ toto /* banana.i18n("si-overlay-coreContent-left-title") */ }</h2>
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-novideo">
-					${ banana.i18n("si-overlay-coreContent-left-novideo") }<br><br>
+					${ toto /* banana.i18n("si-overlay-coreContent-left-novideo") */ }<br><br>
 				</div>
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-video"></div>
 				<div class="signit-popup-separator"></div>
-				<h2>${ banana.i18n("si-overlay-coreContent-right-title") }</h2>
+				<h2>${ toto /* banana.i18n("si-overlay-coreContent-right-title") */ }</h2>
 				<div class="signit-popup-rightpanel signit-wt">
 					<div class="signit-wtdef"></div>
 					<div class="signit-wtsource">
-						<a href="https://${ banana.i18n("si-overlay-coreContent-right-wikt-iso") }.wiktionary.org">${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") }</a>
+						<a href="https://${ toto /* banana.i18n("si-overlay-coreContent-right-wikt-iso") */ }
+						.wiktionary.org">${ toto /* banana.i18n("si-overlay-coreContent-right-wikt-pointer") */ }</a>
 					</div>
 				</div>
 				<div class="popup-loading signit-popup-rightpanel">
 					<img class="popup-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg') }" width="40" height="40">
 				</div>
-				<div class="signit-popup-rightpanel signit-error">${ banana.i18n("si-overlay-coreContent-right-error") }</div>
+				<div class="signit-popup-rightpanel signit-error">${ toto /* banana.i18n("si-overlay-coreContent-right-error") */ }</div>
 			</div>
 		</div>
 	`);
 	var optionsContribute = { 
 		flags: [ 'primary', 'progressive' ], 
-		label: banana.i18n("si-overlay-coreContent-left-contribute-label"),
+		label: toto /* banana.i18n("si-overlay-coreContent-left-contribute-label") */,
 		href: 'https://lingualibre.org/wiki/Special:RecordWizard'
 	};
 	this.contributeButton = new OO.ui.ButtonWidget( optionsContribute );
@@ -101,10 +106,10 @@ SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
 	// Parse the content of the WT entry
 	// TODO: No FR section error
 	content = $( result.parse.text );
-	frsection = content.find( banana.i18n("si-overlay-coreContent-right-wikt-section-id") ).parent().next();
+	frsection = content.find( toto /* banana.i18n("si-overlay-coreContent-right-wikt-section-id") */ ).parent().next();
 	definition = frsection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
 
-	this.$wtsource.attr( 'href', `https://${banana.i18n("si-overlay-coreContent-right-wikt-iso")}.wiktionary.org/wiki/${ title }` );
+	this.$wtsource.attr( 'href', `https://${ toto /* banana.i18n("si-overlay-coreContent-right-wikt-iso") */ }.wiktionary.org/wiki/${ title }` );
 
 	this.$wtdef.html( definition );
 	this.$rightPanelSpinner.hide();

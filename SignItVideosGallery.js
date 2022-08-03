@@ -25,14 +25,15 @@ SignItVideosGallery.prototype.refresh = function ( files ) {
 	this.currentIndex = 0;
 
 	for ( i = 0; i < files.length; i++ ) {
-		filename = files[ i ].filename,
-		url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
-		speaker = files[ i ].speaker,
-		total = files.length;
+		// filename = files[ i ].filename,
+		// url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
+		// speaker = files[ i ].speaker,
+		// total = files.length;
+		// ${ banana.i18n("si-videosGallery-video", url, speaker, i+1, total) }
 		this.$videos.push( $( `
 			<div style="display: none;">
 				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></video>
-				${ banana.i18n("si-videosGallery-video", url, speaker, i+1, total) }
+				par <a href="https://commons.wikimedia.org/wiki/File:${ files[ i ].filename.split( '/' ).pop() }">${ files[ i ].speaker }</a> – Vidéo ${ i + 1 } sur ${ files.length }
 			</div>
 		` ) );
 		this.$videoContainer.append( this.$videos[ i ] );
