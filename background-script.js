@@ -77,6 +77,7 @@ var state = 'up', // up / loading / ready / error
 		return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
 	  });
 
+
 /* *************************************************************** */
 /* Toolbox functions ********************************************* */
 
@@ -133,8 +134,7 @@ async function getSignLanguagesWithVideos() {
 
 // Get UI languages with translations on github
 async function getUiLanguagesWithTranslations() {
-	var uiLanguages = { Q150: "Français", Q1860: "English", Q1321: "Español", Q7930: "Magalasy" }
-	return uiLanguages;
+	return { Q150: "Français", Q1860: "English", Q1321: "Español", Q7930: "Magalasy" }
 }
 // Loading all vidéos of a given sign language. Format:
 // records = { word: { filename: url, speaker: name }, ... };
@@ -221,10 +221,8 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	console.log( Object.keys( messages ).length + ' messages loaded' );
 }
 
-
 // Given language's Qid, reload list of available videos and records/words data
 async function changeLanguage( newLang ) {
-	console.log('changeLanguage newLang', newLang);
 	records = await getAllRecords( newLang );
 	await storeParam( 'signLanguage', newLang ); // localStorage save
 }

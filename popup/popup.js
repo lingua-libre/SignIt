@@ -19,7 +19,7 @@
 		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'popup-tabs' ] } );
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 
-		// Clean then append
+		// Clean up then append
 		document.querySelector( '#popup-loaded' ).innerHTML = "";
 		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
@@ -272,7 +272,7 @@
 			return;
 		}
 		ui.switchPanel( 'loading' );
-		banana = backgroundPage.banana;
+		//banana = backgroundPage.banana;
 		await backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
