@@ -68,15 +68,27 @@ var state = 'up', // up / loading / ready / error
 		history: ['lapin', 'crabe', 'fraise'], // Some fun
 		wpintegration: true,
 		twospeed: true,
-	},
+	};
+
+/* *************************************************************** */
+/* i18n context ************************************************** */	
+	var supportedUiLanguages = [
+		{ wdQid: "Q150", nativeName: "Français", associatedWikt: "fr", associatedAnchorId: "#Français" },
+		{ wdQid: "Q1860", nativeName: "English", associatedWikt: "en", associatedAnchorId: "#English" }
+	//	{ wdQid: "Q1321", nativeName: "Español", associatedWikt: "es", associatedAnchorId: "#Español" },
+	//	{ wdQid: "Q7930", nativeName: "Magalasy", associatedWikt: "mg", associatedAnchorId: "" },
+	];
+	var filterArrayBy = function (arr, key, value){
+		return arr.filter(item => (item[key]==value) )[0]
+	};
+
 	// Init internationalisation support with Banana-i18n.js
 	banana = new Banana('fr');
 	loadI18nLocalization(params.uiLanguage);
 	// Add url support
 	banana.registerParserPlugin('link', (nodes) => {
 		return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
-	  });
-
+	});
 
 /* *************************************************************** */
 /* Toolbox functions ********************************************* */
@@ -129,12 +141,16 @@ async function getSignLanguagesWithVideos() {
 		signLanguage = response.results.bindings[ i ];
 		signLanguages[ signLanguage.id.value.split( '/' ).pop() ] = signLanguage.idLabel.value;
 	}
-	return signLanguages; // { Q99628: "langue des signes française", ... }
+	return signLanguages; // [{ Q99628: "langue des signes française", ... }]
 }
 
 // Get UI languages with translations on github
 async function getUiLanguagesWithTranslations() {
-	return { Q150: "Français", Q1860: "English", Q1321: "Español", Q7930: "Magalasy" }
+	var formerData = { 
+		Q150: "Français", 
+		Q1860: "English"
+	}
+	return supportedUiLanguages;
 }
 // Loading all vidéos of a given sign language. Format:
 // records = { word: { filename: url, speaker: name }, ... };
@@ -192,17 +208,19 @@ async function fetchJS(filepath) {
 // Loading all UI translations
 async function loadI18nLocalization( uiLanguageQid ) {
 	var messages = {};
+	console.log("uiLanguageQid)",uiLanguageQid);
+	console.log("supportedUiLanguages",supportedUiLanguages);
+	console.log("filterArrayBy1",filterArrayBy);
+	var filterArrayBy = function (arr, key, value){
+		return arr.filter(item => (item[key]==value) )[0]
+	};
+	console.log("filterArrayBy2",filterArrayBy);
 
 	state = 'loading';
-
-	var Qid2Iso = {
-		Q150: 'fr',
-		Q1860: 'en',
-		Q1321: 'es',
-		Q7930: "mg"
-	}
-	iso = Qid2Iso[uiLanguageQid]; // uiLanguage is a Qid
-	console.log("uiLanguageQid",uiLanguageQid)
+	lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) )
+	iso = lang[0]["associatedWikt"];
+	//filterArrayBy(supportedUiLanguages,"wdQid",uiLanguageQid)["associatedWikt"]; // uiLanguage is a Qid
+	console.log("uiLanguageQid",uiLanguageQid);
 	console.log("iso",iso)
 
 	// Load messages
@@ -303,7 +321,8 @@ async function main() {
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
 	uiLanguage = await getStoredParam( 'uiLanguage' );
-	uiLanguages = await getUiLanguagesWithTranslations();
+	console.log("supportedUiLanguages",supportedUiLanguages)
+	uiLanguages = supportedUiLanguages;
 	records = await getAllRecords( signLanguage );
 	state = 'ready';
 }

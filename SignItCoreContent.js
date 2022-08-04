@@ -1,6 +1,8 @@
 var SignItCoreContent = function () {
 	console.log("SignItCore 1")
 	// console.log("banana",banana) // -> fails : background.js not accessible natively
+	// HOW TO IMPORT background.js and its banana i18n ?
+	// See issue #21
 	var toto = ":";
 	console.log(toto)
 

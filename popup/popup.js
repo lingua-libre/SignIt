@@ -1,12 +1,12 @@
 (async function() {
 	var ui,
-		backgroundPage = await browser.runtime.getBackgroundPage();
+		_backgroundPage = await browser.runtime.getBackgroundPage();
 
 	/* *********************************************************** */
 	// Master
 	var UI = function () {
 		// Make internalisations available
-		banana = backgroundPage.banana;
+		banana = _backgroundPage.banana;
 		// Placeholder while fetching data
 		document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
 
@@ -36,8 +36,8 @@
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( backgroundPage.records ).length ) } );
-		this.searchWidget.setRecords( backgroundPage.records );
+		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
+		this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon: 'search',
 			label: banana.i18n("si-popup-browse-label"),
@@ -62,7 +62,7 @@
 
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
-		await backgroundPage.checkInjection( tabs[ 0 ].id );
+		await _backgroundPage.checkInjection( tabs[ 0 ].id );
 	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
@@ -79,12 +79,12 @@
 		if ( typeof text !== 'string' ) {
 			text = this.searchWidget.getValue();
 		}
-		word = backgroundPage.normalize( text );
-		files = backgroundPage.wordToFiles ( word );
-		this.coreContent.refresh( word, files );
-		this.searchWidget.setValue( word );
+		_word = _backgroundPage.normalize( text );
+		_files = _backgroundPage.wordToFiles ( _word );
+		this.coreContent.refresh( _word, _files );
+		this.searchWidget.setValue( _word );
 		this.coreContent.getContainer().show();
-		this.addHistory( word );
+		this.addHistory( _word );
 	}
 	
 	/* *********************************************************** */
@@ -96,14 +96,14 @@
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
 
-		var tmp = backgroundPage.params.history;
-		for ( i = tmp.length-1; i >= 0 ; i-- ) {
-			this.addHistory( tmp[ i ], false ); // weird, store always false then why define it as parameter ?
+		var _tmp = _backgroundPage.params.history;
+		for ( i = _tmp.length-1; i >= 0 ; i-- ) {
+			this.addHistory( _tmp[ i ], false ); // weird, store always false then why define it as parameter ?
 		}
 	};
 
 	UI.prototype.addHistory = function( word, store ) {
-		if ( backgroundPage.params.history === 0 ) {
+		if ( _backgroundPage.params.history === 0 ) {
 			return;
 		}
 
@@ -124,7 +124,7 @@
 	}
 
 	UI.prototype.cleanHistory = function( store ) {
-		while ( this.history.length > backgroundPage.params.historylimit ) {
+		while ( this.history.length > _backgroundPage.params.historylimit ) {
 			this.history.pop();
 			this.$history.pop().remove();
 		}
@@ -134,7 +134,7 @@
 		}
 
 		if ( store !== false ) {
-			backgroundPage.storeParam( 'history', this.history );
+			_backgroundPage.storeParam( 'history', this.history );
 		}
 	}
 
@@ -144,10 +144,13 @@
 		/* Sign Language picker */
 		// Data
 		var items = [];
-		for ( qid in backgroundPage.signLanguages ) {
+		_signLanguages = _backgroundPage.signLanguages
+		for (i=0;i<_signLanguages.length;i++ ) {
+			lang= _signLanguages[i];
+			console.log("sign qid ", lang )
 			items.push( new OO.ui.MenuOptionWidget( {
-				data: qid,
-				label: backgroundPage.signLanguages[ qid ], // name of the language
+				data: Object.keys(lang)[0],
+				label: Object.values(lang)[0], // name of the language
 			} ) );
 		}
 		// Layout
@@ -166,10 +169,14 @@
 		/* UI Languages picker */		
 		// Data
 		items = [];
-		for ( qid in backgroundPage.uiLanguages ) {
+		_uiLanguages = _backgroundPage.uiLanguages
+		for (i=0;i<_uiLanguages.length;i++ ) {
+			console.log('lang', _uiLanguages);
+			lang = _uiLanguages[i];
+			console.log('lang', lang);
 			items.push( new OO.ui.MenuOptionWidget( {
-				data: qid,
-				label: backgroundPage.uiLanguages[ qid ], // name of the language
+				data: lang.wdQid,
+				label: lang.nativeName, // name of the language
 			} ) );
 		}
 		// Layout
@@ -215,27 +222,27 @@
 		} );
 
 		// Populate
-		signLanguageDropdown.getMenu().selectItemByData( backgroundPage.params.signLanguage );
-		uiLanguageDropdown.getMenu().selectItemByData( backgroundPage.params.uiLanguage );
-		historyWidget.setValue( backgroundPage.params.historylimit );
-		wpintegrationWidget.setValue( backgroundPage.params.wpintegration );
-		twospeedWidget.setValue( backgroundPage.params.twospeed );
+		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
+		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
+		historyWidget.setValue( _backgroundPage.params.historylimit );
+		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
+		twospeedWidget.setValue( _backgroundPage.params.twospeed );
 
 		// Events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
-		backgroundPage.storeParam( 'uiLanguage', backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
+		_backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( newLimit ) {
 			newLimit = parseInt( newLimit ) || 0;
 			if ( newLimit < 0 ) {
 				newLimit = 0;
 			}
-			backgroundPage.storeParam( 'historylimit', newLimit );
+			_backgroundPage.storeParam( 'historylimit', newLimit );
 			this.cleanHistory();
 		}.bind( this ) );
-		wpintegrationWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'wpintegration' ) )
-		twospeedWidget.on( 'change', backgroundPage.storeParam.bind( backgroundPage, 'twospeed' ) )
-		backgroundPage.storeParam( 'twospeed', backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
+		wpintegrationWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'wpintegration' ) )
+		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) )
+		_backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
 
 		this.paramTab.$element
 			.append( signLanguageLayout.$element )
@@ -256,30 +263,30 @@
 	// Others
 	async function changeSignLanguage( item ) {
 		var newLanguage = item.getData(); // `item` is the oojs Select element's object.
-		if ( backgroundPage.params.signLanguage === newLanguage ) {
+		if ( _backgroundPage.params.signLanguage === newLanguage ) {
 			return;
 		}
 
 		ui.switchPanel( 'loading' );
-		await backgroundPage.changeLanguage( newLanguage );
+		await _backgroundPage.changeLanguage( newLanguage );
 		ui.switchPanel( 'loaded' );
 	}
 	async function changeUiLanguage( item ) {
 		var newLanguage = item.getData();
-		console.log("stored language:", backgroundPage.params.uiLanguage);
+		console.log("stored language:", _backgroundPage.params.uiLanguage);
 		console.log('passed language:', newLanguage)
-		if ( backgroundPage.params.uiLanguage === newLanguage ) {
+		if ( _backgroundPage.params.uiLanguage === newLanguage ) {
 			return;
 		}
 		ui.switchPanel( 'loading' );
-		//banana = backgroundPage.banana;
-		await backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
+		//banana = _backgroundPage.banana;
+		await _backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
 
 	function waitWhileLoading() {
-		if ( backgroundPage.state === 'ready' ) {
+		if ( _backgroundPage.state === 'ready' ) {
 			ui = new UI();
 		} else {
 			setTimeout( waitWhileLoading, 100 );
