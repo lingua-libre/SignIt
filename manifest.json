@@ -1,8 +1,8 @@
 {
 	"manifest_version": 2,
 	"name": "Lingua Libre SignIt",
-	"version": "1.0.9",
-	"author": "Antoine '0x010C' Lamielle",
+	"version": "1.0.10",
+	"author": "Antoine '0x010C' Lamielle, Hugo Lopez",
 	"description": "SignIt translate a selected word in Sign Language videos.",
 	"homepage_url": "https://lingualibre.org",
 	"applications": {
