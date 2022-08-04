@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt ($1)",
 	"si-addon-preload": "Fetching the list of all videos available on Lingua Libre.",
 
-	"si-overlay-coreContent-left-title":"Medias:",
+	"si-overlay-coreContent-left-title":"Media:",
 	"si-overlay-coreContent-left-novideo":"This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
 	"si-overlay-coreContent-left-contribute-label":"Contribute with Sign Language",
 	"si-overlay-coreContent-right-title":"Definitions:",
@@ -29,15 +29,15 @@
 	"si-popup-settings-signlanguage":"Sign language:",
 	"si-popup-settings-signlanguage-help":"Change videos to another sign language.",
 	"si-popup-settings-signlanguage-dropdown":"Change videos language",
-	"si-popup-settings-uilanguage":"Interface's language:",
+	"si-popup-settings-uilanguage":"Interface language:",
 	"si-popup-settings-uilanguage-help":"Change the user interface's language.",
 	"si-popup-settings-uilanguage-dropdown":"Change interface language",
 
 	"si-popup-settings-history":"Length of the history:",
-	"si-popup-settings-history-help":"Set to 0 desactivates the history log",	
-	"si-popup-settings-wpintegration":"Native integration into Wikipedia:",
+	"si-popup-settings-history-help":"Set to 0 deactivates the history log",	
+	"si-popup-settings-wpintegration":"Native integration with Wikipedia:",
 	"si-popup-settings-twospeed":"Double play normal / slow:",	
-	"si-popup-settings-enlighten":"Enlighten available words: ",
+	"si-popup-settings-enlighten":"Highlight available words: ",
 
 	"si-videosGallery-video": "by {{link|$1|$2}} – Video $3 of $4"
 }
