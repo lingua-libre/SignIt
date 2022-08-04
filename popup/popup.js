@@ -144,13 +144,14 @@
 		/* Sign Language picker */
 		// Data
 		var items = [];
-		_signLanguages = _backgroundPage.signLanguages
-		for (i=0;i<_signLanguages.length;i++ ) {
-			lang= _signLanguages[i];
-			console.log("sign qid ", lang )
+		_signLanguages = _backgroundPage.signLanguages;
+		console.log("148 signLanguages", _signLanguages )
+		for (var i=0;i<_signLanguages.length;i++ ) {
+			lang = _signLanguages[i];
+			console.log("151 lang", lang ) // #136
 			items.push( new OO.ui.MenuOptionWidget( {
-				data: Object.keys(lang)[0],
-				label: Object.values(lang)[0], // name of the language
+				data: lang.wdQid, // qid
+				label: lang.nativeName, // sign language name (en)
 			} ) );
 		}
 		// Layout
@@ -269,6 +270,7 @@
 
 		ui.switchPanel( 'loading' );
 		await _backgroundPage.changeLanguage( newLanguage );
+		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
 	async function changeUiLanguage( item ) {

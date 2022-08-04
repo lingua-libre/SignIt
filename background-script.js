@@ -58,8 +58,8 @@ WHERE {
 /* Init state if no localStorage ********************************* */
 var state = 'up', // up / loading / ready / error
 	records = {},
-	signLanguages = {},
-	uiLanguages = {},
+	signLanguages = [],
+	uiLanguages = [],
 	// Default values, will be stored in localStorage as well for persistency.
 	params = {
 		signLanguage: 'Q99628', // for videos : French Sign language
@@ -71,7 +71,8 @@ var state = 'up', // up / loading / ready / error
 	};
 
 /* *************************************************************** */
-/* i18n context ************************************************** */	
+/* i18n context ************************************************** */
+	// Get UI languages with translations on github
 	var supportedUiLanguages = [
 		{ wdQid: "Q150", nativeName: "Français", associatedWikt: "fr", associatedAnchorId: "#Français" },
 		{ wdQid: "Q1860", nativeName: "English", associatedWikt: "en", associatedAnchorId: "#English" }
@@ -83,7 +84,7 @@ var state = 'up', // up / loading / ready / error
 	};
 
 	// Init internationalisation support with Banana-i18n.js
-	banana = new Banana('fr');
+	banana = new Banana('fr'); // use document browser language
 	loadI18nLocalization(params.uiLanguage);
 	// Add url support
 	banana.registerParserPlugin('link', (nodes) => {
@@ -119,7 +120,8 @@ async function checkInjection( tab ) {
 	try {
 		await browser.tabs.sendMessage( tab, { command: "ping" } );
 	} catch ( error ) {
-		var i, scripts = browser.runtime.getManifest().content_scripts[ 0 ].js,
+		var i,
+			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifié
 			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
 
 		for( i = 0; i < scripts.length; i++ ) {
@@ -133,25 +135,23 @@ async function checkInjection( tab ) {
 
 // Get sign languages covered by Lingualibre
 async function getSignLanguagesWithVideos() {
-	var i, signLanguage,
-		signLanguages = {},
-		response = await $.post( sparqlEndpoints.lingualibre.url, { format: 'json', query: sparqlSignLanguagesQuery } );
+	var i,
+		signLanguage,
+		signLanguages = [], // ?? already define in global scopte
+		response = await $.post( 
+			sparqlEndpoints.lingualibre.url, 
+			{ format: 'json', query: sparqlSignLanguagesQuery } 
+		);
 
+	// create signLanguages objects
 	for ( i = 0; i < response.results.bindings.length; i++ ) {
-		signLanguage = response.results.bindings[ i ];
-		signLanguages[ signLanguage.id.value.split( '/' ).pop() ] = signLanguage.idLabel.value;
+		var signLanguageRaw = response.results.bindings[ i ];
+		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), nativeName: signLanguageRaw.idLabel.value }
+		signLanguages[i] = signLanguage;
 	}
-	return signLanguages; // [{ Q99628: "langue des signes française", ... }]
+	return signLanguages; // [{ Q99628: "langue des signes française"},{},...]
 }
 
-// Get UI languages with translations on github
-async function getUiLanguagesWithTranslations() {
-	var formerData = { 
-		Q150: "Français", 
-		Q1860: "English"
-	}
-	return supportedUiLanguages;
-}
 // Loading all vidéos of a given sign language. Format:
 // records = { word: { filename: url, speaker: name }, ... };
 async function getAllRecords( signLanguage ) {
@@ -193,6 +193,7 @@ function normalize( word ) {
 	return word.trim();
 }
 
+/* ************************************************ 
 async function fetchJS(filepath) {
 	try {
 		const response = await fetch(`${filepath}`, {
@@ -203,24 +204,29 @@ async function fetchJS(filepath) {
 		return content;
 	} catch (error) { console.error(error); }
 }
-// messages = await fetchJS(`i18n/${iso}.json`);
+ messages = await fetchJS(`i18n/${iso}.json`); */
 
 // Loading all UI translations
 async function loadI18nLocalization( uiLanguageQid ) {
 	var messages = {};
+
 	console.log("uiLanguageQid)",uiLanguageQid);
 	console.log("supportedUiLanguages",supportedUiLanguages);
+
+	// Test creation and usage of filter function : fails somehow. 
+	/*
 	console.log("filterArrayBy1",filterArrayBy);
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
 	};
 	console.log("filterArrayBy2",filterArrayBy);
+	lang = filterArrayBy(supportedUiLanguages, "wdQid", "Q150")
+	console.log(lang)   /* */
 
 	state = 'loading';
-	lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) )
+	
+	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
 	iso = lang[0]["associatedWikt"];
-	//filterArrayBy(supportedUiLanguages,"wdQid",uiLanguageQid)["associatedWikt"]; // uiLanguage is a Qid
-	console.log("uiLanguageQid",uiLanguageQid);
 	console.log("iso",iso)
 
 	// Load messages
@@ -232,8 +238,9 @@ async function loadI18nLocalization( uiLanguageQid ) {
 
 	// Declare localisation
 	banana.setLocale(iso); // Change to new locale
-	console.log("background 215",banana.i18n('si-popup-settings-title'))
-	console.log("background 216",banana);
+	console.log("background #215",banana.i18n('si-popup-settings-title'))
+	console.log("background #216",banana);
+	
 	state = 'ready';
 
 	console.log( Object.keys( messages ).length + ' messages loaded' );
@@ -263,8 +270,9 @@ browser.contextMenus.create({
 }, function() {return;});
 
 // Send a message to the content script when our context menu is clicked   // <-- This seems to run the overlay popup
-browser.contextMenus.onClicked.addListener( async function( info, tab ) { // var tab not used ? Can remove ?
+browser.contextMenus.onClicked.addListener( async function( info, __tab ) { // var tab not used ? Can remove ?
 	switch (info.menuItemId) {
+		// a splité cf manu
 		case "signit":
 			var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
 				word = normalize( info.selectionText );
@@ -312,7 +320,9 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 /* Main ********************************************************** */
 async function main() {
 	state = 'loading';
+
 	// Get local storage value if exist, else get default values
+	// promise.all 
 	await getStoredParam( 'history' );
 	await getStoredParam( 'historylimit' );
 	await getStoredParam( 'wpintegration' );
@@ -324,6 +334,7 @@ async function main() {
 	console.log("supportedUiLanguages",supportedUiLanguages)
 	uiLanguages = supportedUiLanguages;
 	records = await getAllRecords( signLanguage );
+
 	state = 'ready';
 }
 // Run it
