@@ -1,38 +1,39 @@
+// const { default: backgroundPage } = require("./background-script"); // to try
+
 var SignItCoreContent = function () {
 	console.log("SignItCore 1")
-	// console.log("banana",banana) // -> fails : background.js not accessible natively
+	// console.log("banana",banana) // -> Uncaught (in promise) Error: banana is not defined
+	// background.js not accessible natively
 	// HOW TO IMPORT background.js and its banana i18n ?
 	// See issue #21
-	var toto = ":";
-	console.log(toto)
 
 	this.$container = $( `
 		<div class="signit-popup-container">
 			<h1></h1>
 			<div class="signit-popup-content">
-				<h2>Media ${ toto /* banana.i18n("si-overlay-coreContent-left-title") */ }</h2>
+				<h2>Media:`+/* ${ banana.i18n("si-overlay-coreContent-left-title") } */`</h2>
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-novideo">
-					${ toto /* banana.i18n("si-overlay-coreContent-left-novideo") */ }<br><br>
+					Pas de video disponible.`+/* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
 				</div>
 				<div class="signit-popup-leftpanel signit-popup-leftpanel-video"></div>
 				<div class="signit-popup-separator"></div>
-				<h2>Definition ${ toto /* banana.i18n("si-overlay-coreContent-right-title") */ }</h2>
+				<h2>Definition:`+/* ${ banana.i18n("si-overlay-coreContent-right-title") } */`</h2>
 				<div class="signit-popup-rightpanel signit-wt">
 					<div class="signit-wtdef"></div>
 					<div class="signit-wtsource">
-						<a href="https://${ toto /* banana.i18n("si-overlay-coreContent-right-wikt-iso") */ }.wiktionary.org">${ toto /* banana.i18n("si-overlay-coreContent-right-wikt-pointer") */ }</a>
+						<a href="https://fr`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */`.wiktionary.org">voir sur Wiktionaire`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */`</a>
 					</div>
 				</div>
 				<div class="popup-loading signit-popup-rightpanel">
 					<img class="popup-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg') }" width="40" height="40">
 				</div>
-				<div class="signit-popup-rightpanel signit-error">${ toto /* banana.i18n("si-overlay-coreContent-right-error") */ }</div>
+				<div class="signit-popup-rightpanel signit-error">Pas définition disponible.`+/* ${ banana.i18n("si-overlay-coreContent-right-error") } */`</div>
 			</div>
 		</div>
 	`);
 	var optionsContribute = { 
 		flags: [ 'primary', 'progressive' ], 
-		label: toto /* banana.i18n("si-overlay-coreContent-left-contribute-label") */,
+		label: "Contributer en LSF" /* banana.i18n("si-overlay-coreContent-left-contribute-label") */,
 		href: 'https://lingualibre.org/wiki/Special:RecordWizard'
 	};
 	this.contributeButton = new OO.ui.ButtonWidget( optionsContribute );
@@ -53,10 +54,8 @@ var SignItCoreContent = function () {
 	// }.bind( this ) );
 };
 
-SignItCoreContent.prototype.refresh = function ( title, files ) {
-	var i;
-	files = files || [];
-
+SignItCoreContent.prototype.refresh = function ( title, files=[] ) {
+	// var i;
 	this.setWiktionaryContent( title );
 
 	this.$title.text( title );
@@ -72,7 +71,7 @@ SignItCoreContent.prototype.refresh = function ( title, files ) {
 };
 
 SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
-	var content, frsection, definition, result, wtsource;
+	var content, $wiktSection, definition, result;//, wtsource;
 
 	this.$rightPanelContent.hide();
 	this.$rightPanelError.hide();
@@ -108,8 +107,8 @@ SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
 	// Parse the content of the WT entry
 	// TODO: No FR section error
 	content = $( result.parse.text );
-	frsection = content.find( "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id") */ ).parent().next();
-	definition = frsection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
+	$wiktSection = content.find( "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id") */ ).parent().next();
+	definition = $wiktSection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
 
 	this.$wtsource.attr( 'href', `https://fr.wiktionary.org/wiki/${ title }` );
 
@@ -118,6 +117,6 @@ SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
 	this.$rightPanelContent.show();
 };
 
-SignItCoreContent.prototype.getContainer = function ( visible ) {
+SignItCoreContent.prototype.getContainer = function () {
 	return this.$container;
 };
