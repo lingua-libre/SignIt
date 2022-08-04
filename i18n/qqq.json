@@ -26,12 +26,12 @@
 	"si-popup-history-noHistory":"Placeholder when no log is available.",
 	
 	"si-popup-settings-title":"Title of the settings tab.",
-	"si-popup-settings-signlanguage":"Setting title for the sign language selection among sign languages available.",
-	"si-popup-settings-signlanguage-help":"Hint on the change sign language selector.",
-	"si-popup-settings-signlanguage-dropdown":"",
-	"si-popup-settings-uilanguage":":",
-	"si-popup-settings-uilanguage-help":"",
-	"si-popup-settings-uilanguage-dropdown":"",
+	"si-popup-settings-signlanguage":"Setting title for the sign language selection among available sign languages.",
+	"si-popup-settings-signlanguage-help":"Hint on the element to change sign language.",
+	"si-popup-settings-signlanguage-dropdown":"Placeholder if no language available (for developers)",
+	"si-popup-settings-uilanguage":"Setting title for the interface language selection among available interface languages.",
+	"si-popup-settings-uilanguage-help":"Hint  on the element to change sinterface language.",
+	"si-popup-settings-uilanguage-dropdown":"Placeholder if no language available (for developers)",
 
 	"si-popup-settings-history":"Setting title to change history's length.",
 	"si-popup-settings-history-help":"Hint on how to desactivate history logs",	
