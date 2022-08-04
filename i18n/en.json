@@ -36,7 +36,7 @@
 	"si-popup-settings-history":"Length of the history:",
 	"si-popup-settings-history-help":"Set to 0 deactivates the history log",	
 	"si-popup-settings-wpintegration":"Native integration with Wikipedia:",
-	"si-popup-settings-twospeed":"Double play normal / slow:",	
+	"si-popup-settings-twospeed":"Play at normal speed, then at slow speed",	
 	"si-popup-settings-enlighten":"Highlight available words: ",
 
 	"si-videosGallery-video": "by {{link|$1|$2}} – Video $3 of $4"
