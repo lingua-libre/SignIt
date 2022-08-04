@@ -13,8 +13,8 @@
 	"si-overlay-coreContent-left-contribute-label":"One liner to direct user to Sign Language video recorder on LinguaLibre",
 	"si-overlay-coreContent-right-title":"Title of the section displaying Wiktionary's definitions.",
 	"si-overlay-coreContent-right-wikt-iso":"Default Wiktionary to use on installation, its language wiki code.",
-	"si-overlay-coreContent-right--wikt-section-id":"One liner link to Witionary",
 	"si-overlay-coreContent-right-wikt-section-id":"Within the target wiktionary, the html id anchor of the relevant section.",
+	"si-overlay-coreContent-right-wikt-section-pointer":"One liner link to Witionary",
 	"si-overlay-coreContent-right-error":"Placeholder when no defition found.",
 	
 	"si-popup-browse-title":"Title of the search / browse tab.",
