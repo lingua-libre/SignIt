@@ -1,5 +1,11 @@
+/* *************************************************************** */
+/* Definition panel (right/bottom) ******************************* */
+.signit-wtdef {
+	overflow-y: auto;
+	max-height: 340px;
+	text-align: left;
+}
 
-/*  */
 .signit-wtdef p,
 .signit-wtdef b,
 .signit-wtdef span,
@@ -56,8 +62,16 @@
 	display: none;
 }
 
+.signit-wtsource {
+	height: 20px;
+	text-align: right;
+	margin-top: 4px;
+	width: 100%;
+	font-style: italic;
+}
 
-/*  */
+/* *************************************************************** */
+/* Popup outline ************************************************* */
 .signit-popup { z-index: 9999; }  /* above everythings */
 
 .signit-popup .oo-ui-popupWidget-popup {
@@ -99,6 +113,20 @@
 	align-self: stretch;
 }
 
+.signit-popup-leftpanel, .signit-popup-rightpanel {
+	flex: 0 1 auto;
+	width: 50%;
+}
+
+/* *************************************************************** */
+/* Modal structure *********************************************** */
+.signit-popup-anchor {
+	position: absolute;
+	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
+}
+
+/* *************************************************************** */
+/* Video gallery panel (left or top) ***************************** */
 .signit-popup-leftpanel {
 	text-align: center;
 }
@@ -113,30 +141,9 @@
 	width: 100%;
 }
 
-.signit-popup-anchor {
-	position: absolute;
-	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
-}
 
-.signit-wtdef {
-	overflow-y: auto;
-	max-height: 340px;
-	text-align: left;
-}
-
-.signit-wtsource {
-	height: 20px;
-	text-align: right;
-	margin-top: 4px;
-	width: 100%;
-	font-style: italic;
-}
-
-.signit-popup-leftpanel, .signit-popup-rightpanel {
-	flex: 0 1 auto;
-	width: 50%;
-}
-
+/* *************************************************************** */
+/* Loading ******************************************************* */
 @keyframes spinner {
   to {transform: rotate(360deg);}
 }
@@ -152,6 +159,8 @@
 	margin: auto;
 }
 
+/* *************************************************************** */
+/* Icons ********************************************************* */
 .oo-ui-icon-next {
 	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQluZXh0Cgk8L3RpdGxlPgoJPHBhdGggZD0iTTcgMUw1LjYgMi41IDEzIDEwbC03LjQgNy41TDcgMTlsOS05eiIvPgo8L3N2Zz4K' );
 }
@@ -164,7 +173,8 @@
 	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' );
 }
 
-/* Hint icon*/
+/* *************************************************************** */
+/* Hint icon ***************************************************** */
 .signit-hint-container {
 	border:1px solid #14aea3; /* #14aea3: logo green*/
 	background: #FFF; /*#474847 : logo grey */
