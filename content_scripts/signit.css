@@ -163,3 +163,24 @@
 .oo-ui-icon-search {
 	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' );
 }
+
+/* Hint icon*/
+.signit-hint-container {
+	border:1px solid #14aea3; /* #14aea3: logo green*/
+	background: #FFF; /*#474847 : logo grey */
+	height: 32px !important; 
+	width: 32px !important; 
+	cursor: pointer; 
+	border-radius:3px;
+	z-index: 1000;
+} 
+.signit-hint-icon {
+	height: 32px !important; 
+	width: 32px !important; 
+	background-image: url( '../icons/Lingualibre-logo-no-text-old.svg' );
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.signit-hint-icon:hover {
+	background-image: url( '../icons/Lingualibre-logo-no-text.svg' );
+}
