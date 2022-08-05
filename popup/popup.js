@@ -1,3 +1,4 @@
+var browser = browser || chrome;
 (async function() {
 	var ui,
 		_backgroundPage = await browser.runtime.getBackgroundPage();

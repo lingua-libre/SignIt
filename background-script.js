@@ -146,6 +146,7 @@ async function getSignLanguagesWithVideos() {
 	// create signLanguages objects
 	for ( i = 0; i < response.results.bindings.length; i++ ) {
 		var signLanguageRaw = response.results.bindings[ i ];
+		console.log("#149",signLanguageRaw)
 		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), nativeName: signLanguageRaw.idLabel.value }
 		signLanguages[i] = signLanguage;
 	}
@@ -269,15 +270,16 @@ browser.contextMenus.create({
   contexts: ["selection"]
 }, function() {return;});
 
-// Send a message to the content script when our context menu is clicked   // <-- This seems to run the overlay popup
+// Send a message to the content script when our context menu is clicked   // <-- This seems to start the modal popup
 browser.contextMenus.onClicked.addListener( async function( info, __tab ) { // var tab not used ? Can remove ?
 	switch (info.menuItemId) {
-		// a splité cf manu
+		// a splité cf manu1400
 		case "signit":
 			var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
 				word = normalize( info.selectionText );
 
 			await checkInjection( tabs[ 0 ].id );
+			console.log("#282", tabs[0].id)
 			browser.tabs.sendMessage( tabs[ 0 ].id, {
 				command: "signit.sign",
 				selection: word,
@@ -290,8 +292,6 @@ browser.contextMenus.onClicked.addListener( async function( info, __tab ) { // v
 
 //
 browser.runtime.onMessage.addListener( async function ( message ) {
-	var coords; // var coords not used ? Can remove ?
-
 	if ( message.command === 'signit.getfiles' ) {
 		return records[ message.word ] || records[ message.word.toLowerCase() ] || [];
 	}
