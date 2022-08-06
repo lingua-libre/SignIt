@@ -187,6 +187,7 @@ function wordToFiles( word ) {
 			return null;
 		}
 	}
+	console.log("files:",records[ word ]);
 	return records[ word ];
 }
 
@@ -262,40 +263,51 @@ async function changeUiLanguage( newLang ) {
 
 /* *************************************************************** */
 /* Browser interactions ****************************************** */
-
-// Create a context menu item    ??? what is that?
+// Create a context menu item (right-click on text to see)
 browser.contextMenus.create({
   id: "signit",
   title: 'Lingua Libre SignIt',
   contexts: ["selection"]
 }, function() {return;});
 
-// Send a message to the content script when our context menu is clicked   // <-- This seems to start the modal popup
-browser.contextMenus.onClicked.addListener( async function( info, __tab ) { // var tab not used ? Can remove ?
-	switch (info.menuItemId) {
-		// a splité cf manu1400
-		case "signit":
-			var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
-				word = normalize( info.selectionText );
+var startModal = async function(data){
+		// a spliter cf manu1400 ?
+	console.log("data",{ data });
+	var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
+		word = normalize( data.selectionText || data.text );
 
-			await checkInjection( tabs[ 0 ].id );
-			console.log("#282", tabs[0].id)
-			browser.tabs.sendMessage( tabs[ 0 ].id, {
-				command: "signit.sign",
-				selection: word,
-				files: wordToFiles( word ),
-			} );
-			storeParam( 'history', [ word, ...params.history ] );
-			break;
-	}
+	await checkInjection( tabs[ 0 ].id );
+	console.log("#282", tabs[0].id)
+	browser.tabs.sendMessage( tabs[ 0 ].id, {
+		command: "signit.sign",
+		text: word,
+		files: wordToFiles( word ),
+	} );
+	storeParam( 'history', [ word, ...params.history ] );
+}
+
+
+browser.contextMenus.onClicked.addListener( async function( clickMessage, __tab ) { // var tab not used ? Can remove ?
+	startModal(clickMessage);
 });
 
-//
+// 
 browser.runtime.onMessage.addListener( async function ( message ) {
+	if(!message.files){ 
+		console.log("message.files: false. Create it from .text: ", message.text )
+		message.files = wordToFiles( message.text );
+	}
+	console.log("Message heard in background-script.js: ", message, "---------------------" )
+	// When message 'signit.getfiles' is heard, refresh records[]
 	if ( message.command === 'signit.getfiles' ) {
 		return records[ message.word ] || records[ message.word.toLowerCase() ] || [];
 	}
-} );
+	// Start modal
+	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
+	if ( message.command === 'signit.hinticon' ) {
+		startModal(message);
+	}
+});
 
 // Edit the header of all pages on-the-fly to bypass Content-Security-Policy
 browser.webRequest.onHeadersReceived.addListener(info => {
@@ -314,8 +326,6 @@ browser.webRequest.onHeadersReceived.addListener(info => {
     types: [ "main_frame" ] // to focus only the main document of a tab
 }, ["blocking", "responseHeaders"]);
 
-
-
 /* *************************************************************** */
 /* Main ********************************************************** */
 async function main() {
@@ -327,7 +337,7 @@ async function main() {
 	await getStoredParam( 'historylimit' );
 	await getStoredParam( 'wpintegration' );
 	await getStoredParam( 'twospeed' );
-	// storeParam( 'twospeed', params.twospeed ); // so
+	// storeParam( 'twospeed', params.twospeed );
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
 	uiLanguage = await getStoredParam( 'uiLanguage' );
