@@ -30,7 +30,7 @@
 	"si-popup-settings-signlanguage-help":"Hint on the element to change sign language.",
 	"si-popup-settings-signlanguage-dropdown":"Placeholder if no language available (for developers)",
 	"si-popup-settings-uilanguage":"Setting title for the interface language selection among available interface languages.",
-	"si-popup-settings-uilanguage-help":"Hint  on the element to change sinterface language.",
+	"si-popup-settings-uilanguage-help":"Hint on the element to change sinterface language.",
 	"si-popup-settings-uilanguage-dropdown":"Placeholder if no language available (for developers)",
 
 	"si-popup-settings-history":"Setting title to change history's length.",
@@ -39,6 +39,5 @@
 	"si-popup-settings-twospeed":"Setting title for video's double play at different speed.",	
 	"si-popup-settings-enlighten":"Setting title to enlighten available words.",
 
-	"si-videosGallery-video":"Video attibution at bottom of video gallery, with Commons URL, speaker, and position of the video within the gallery"
+	"si-videosGallery-video":"Video attibution at bottom of video gallery, with Commons URL ($1), speaker ($2), and position ($3) of the video within the gallery ($4)"
 }
-
