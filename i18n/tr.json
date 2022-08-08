@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt ($1)",
+	"si-addon-preload": "Lingua Libre'de bulunan tüm videoların listesi getiriliyor.",
+	"si-overlay-coreContent-left-title": "Medyalar:",
+	"si-overlay-coreContent-left-novideo": "Bu kelime henüz kaydedilmedi<br> ancak SignIt kitle kaynaklı bir projedir ve SignIt'e katkıda bulunabilirsiniz.",
+	"si-overlay-coreContent-left-contribute-label": "İşaret Dili ile Katkıda Bulunun",
+	"si-overlay-coreContent-right-title": "Tanımlar:",
+	"si-overlay-coreContent-right-wikt-iso": "tr",
+	"si-overlay-coreContent-right-wikt-section-id": "#Türkçe",
+	"si-overlay-coreContent-right-wikt-pointer": "Vikisözlük'te gör",
+	"si-overlay-coreContent-right-error": "Herhangi bir tanım bulunamadı.",
+	"si-popup-browse-title": "Göz at",
+	"si-popup-browse-placeholder": "$1 işaret arasında arama yapın.",
+	"si-popup-browse-label": "Ara",
+	"si-popup-browse-icon": "Aramayı başlat",
+	"si-popup-history-title": "Geçmiş",
+	"si-popup-history-noHistory": "Boş",
+	"si-popup-settings-title": "Ayarlar",
+	"si-popup-settings-signlanguage": "İşaret dili:",
+	"si-popup-settings-signlanguage-help": "Videoları başka bir işaret diliyle değiştirin.",
+	"si-popup-settings-signlanguage-dropdown": "Videoların dilini değiştir",
+	"si-popup-settings-uilanguage": "Arayüz dili:",
+	"si-popup-settings-uilanguage-help": "Kullanıcı arayüz dilini değiştirin.",
+	"si-popup-settings-uilanguage-dropdown": "Arayüz dilini değiştir",
+	"si-popup-settings-history": "Değişiklik geçmişi uzunluğu:",
+	"si-popup-settings-history-help": "0 yapılırsa geçmiş günlüğünü devre dışı bırakılır",
+	"si-popup-settings-wpintegration": "Wikipedia'ya yerel entegrasyon:",
+	"si-popup-settings-twospeed": "Normal / yavaş çift oynatma:",
+	"si-popup-settings-enlighten": "Mevcut kelimeleri aydınlatın:",
+	"si-videosGallery-video": "{{link|$1|$2}} – Video $3/$4"
+}

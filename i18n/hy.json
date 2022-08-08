@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"GeoO"
+		]
+	},
+	"si-overlay-coreContent-right-wikt-pointer": "տես Վիքիբառարանում",
+	"si-popup-browse-icon": "Սկսեք որոնումը",
+	"si-popup-history-title": "Պատմություն",
+	"si-popup-history-noHistory": "Դատարկ է",
+	"si-popup-settings-title": "Կարգավորումներ",
+	"si-popup-settings-signlanguage": "Ժեստերի լեզու.",
+	"si-popup-settings-signlanguage-dropdown": "Փոխել տեսանյութերի լեզուն",
+	"si-popup-settings-uilanguage": "Ինտերֆեյսի լեզու.",
+	"si-popup-settings-uilanguage-dropdown": "Փոխել ինտերֆեյսի լեզուն"
+}

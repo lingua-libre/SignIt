@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sabelöga"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt ($1)",
+	"si-addon-preload": "Hämtar listan över alla tillgängliga videor på Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Det här ordet har ännu inte spelats in,<br>men SignIt är ett samarbetsprojekt så du kan bidra med det.",
+	"si-overlay-coreContent-left-contribute-label": "Bidra med teckenspråk",
+	"si-overlay-coreContent-right-title": "Definitioner:",
+	"si-overlay-coreContent-right-wikt-iso": "sv",
+	"si-overlay-coreContent-right-wikt-section-id": "#Svenska",
+	"si-overlay-coreContent-right-wikt-pointer": "läs på Wiktionary",
+	"si-overlay-coreContent-right-error": "Ingen definition hittades.",
+	"si-popup-browse-title": "Bläddra",
+	"si-popup-browse-placeholder": "Sök igenom $1 tecken.",
+	"si-popup-browse-label": "Sök",
+	"si-popup-browse-icon": "Starta sökningen",
+	"si-popup-history-title": "Historik",
+	"si-popup-history-noHistory": "Den är tom",
+	"si-popup-settings-title": "Inställningar",
+	"si-popup-settings-signlanguage": "Teckenspråk:",
+	"si-popup-settings-signlanguage-help": "Byt videorna till ett annat teckenspråk.",
+	"si-popup-settings-signlanguage-dropdown": "Byt videospråk",
+	"si-popup-settings-uilanguage": "Gränssnittsspråk:",
+	"si-popup-settings-uilanguage-help": "Byt användargränssnittsspråk.",
+	"si-popup-settings-uilanguage-dropdown": "Byt gränssnittsspråk",
+	"si-popup-settings-history": "Historikens längd:",
+	"si-popup-settings-history-help": "Sätts detta till 0 inaktiveras historikloggen",
+	"si-popup-settings-wpintegration": "Inbyggd integration med Wikipedia:",
+	"si-popup-settings-twospeed": "Spela i normal hastighet, sedan i låg hastighet:",
+	"si-popup-settings-enlighten": "Markera tillgängliga ord:",
+	"si-videosGallery-video": "av {{link|$1|$2}} – Video $3 av $4"
+}

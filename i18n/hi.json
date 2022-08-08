@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Abijeet Patro",
+			"Saurmandal"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt ($1)",
+	"si-addon-preload": "Lingua Libre पर उपलब्ध सभी वीडियों की सूची प्राप्त की जा रही है।",
+	"si-overlay-coreContent-left-title": "मीडिया:",
+	"si-overlay-coreContent-left-novideo": "इस शब्द को अभी तक रिकॉर्ड नहीं किया गया है,<br>मगर SignIt, लोगों द्वारा बनाई गई एक परियोजना है, और आप इसमें योगदान कर सकते हैं।",
+	"si-overlay-coreContent-left-contribute-label": "सांकेतिक भाषा पर योगदान करें",
+	"si-overlay-coreContent-right-title": "परिभाषाएँ:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#Hindi",
+	"si-overlay-coreContent-right-wikt-pointer": "विकिकोष पर देखें",
+	"si-overlay-coreContent-right-error": "कोई परिभाषा नहीं मिली।",
+	"si-popup-browse-title": "खोजें",
+	"si-popup-browse-placeholder": "$1 संकेतों में खोजें।",
+	"si-popup-browse-label": "खोजें",
+	"si-popup-browse-icon": "खोज शुरू करें",
+	"si-popup-history-title": "इतिहास",
+	"si-popup-history-noHistory": "यह खाली है",
+	"si-popup-settings-title": "सेटिंग्स",
+	"si-popup-settings-signlanguage": "सांकेतिक भाषा:",
+	"si-popup-settings-signlanguage-help": "दूसरी सांकेतिक भाषा में वीडियों को बदलें।",
+	"si-popup-settings-signlanguage-dropdown": "वीडियो की भाषा बदलें",
+	"si-popup-settings-uilanguage": "इंटरफ़ेस की भाषा:",
+	"si-popup-settings-uilanguage-help": "सदस्य इंटरफ़ेस की भाषा बदलें।",
+	"si-popup-settings-uilanguage-dropdown": "इंटरफ़ेस की भाषा बदलें",
+	"si-popup-settings-history": "इतिहास की लंबाई:",
+	"si-popup-settings-history-help": "0 पर सेट करने पर इतिहास लॉग अक्षम हो जाता है",
+	"si-popup-settings-wpintegration": "विकिपीडिया के साथ मूल एकीकरण:",
+	"si-popup-settings-twospeed": "पहले साधारण गति से, और उसके बाद धीमी गति से देखें:",
+	"si-popup-settings-enlighten": "उपलब्ध शब्दों को हाइलाइट करें:",
+	"si-videosGallery-video": "{{link|$1|$2}} द्वारा – $4 में से $3 नंबरी वीडियो"
+}

@@ -1,0 +1,30 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"si-addon-preload": "אחזור רשימת כל הסרטים הזמינים בלינגווה ליברה.",
+	"si-overlay-coreContent-left-novideo": "המילה הזאת עוד לא הוקלטה,<br>אבל SignIt הוא מיזם במיקור המונים, אז יש לך הזדמנות לתרום לו.",
+	"si-overlay-coreContent-left-contribute-label": "תרומה בשפת סימנים",
+	"si-overlay-coreContent-right-title": "הגדרות:",
+	"si-overlay-coreContent-right-wikt-iso": "he",
+	"si-overlay-coreContent-right-wikt-pointer": "לראות בוויקימילון",
+	"si-overlay-coreContent-right-error": "לא נמצאה הגדרה.",
+	"si-popup-browse-title": "עיון",
+	"si-popup-browse-placeholder": "חיפוש ב־$1 סימנים.",
+	"si-popup-browse-label": "חיפוש",
+	"si-popup-browse-icon": "תחילת החיפוש",
+	"si-popup-history-title": "היסטוריה",
+	"si-popup-history-noHistory": "היומן ריק",
+	"si-popup-settings-title": "הגדרות",
+	"si-popup-settings-signlanguage": "שפת סימנים:",
+	"si-popup-settings-signlanguage-help": "שינוי סרטים לשפת סימים אחרת.",
+	"si-popup-settings-signlanguage-dropdown": "שינוי שפת הסרטים",
+	"si-popup-settings-uilanguage": "שפת ממשק:",
+	"si-popup-settings-uilanguage-help": "שינוי שפת הממשק.",
+	"si-popup-settings-uilanguage-dropdown": "שינוי שפת הממשק",
+	"si-popup-settings-history": "אורך ההיסטוריה:",
+	"si-popup-settings-history-help": "הגדרת 0 מכבה את יומן ההיסטוריה",
+	"si-popup-settings-wpintegration": "שילוב ישיר עם ויקיפדיה:"
+}

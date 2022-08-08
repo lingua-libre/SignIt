@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"TayfunEt."
+		]
+	},
+	"si-addon-preload": "Lingua Libre-de bar bolan wideolaryň sanawyny almak.",
+	"si-overlay-coreContent-left-title": "Mediýa:",
+	"si-overlay-coreContent-right-wikt-iso": "tk",
+	"si-overlay-coreContent-right-error": "Kesgitleme tapylmady.",
+	"si-popup-browse-title": "Göz aýla",
+	"si-popup-history-title": "Taryh",
+	"si-popup-history-noHistory": "Boş",
+	"si-popup-settings-title": "Sazlamalar",
+	"si-popup-settings-uilanguage": "Interfeýs dili:",
+	"si-popup-settings-uilanguage-help": "Ulanyjy interfeýsiniň dilini üýtgediň.",
+	"si-popup-settings-wpintegration": "Wikipediýa bilen ýerli integrasiýa:",
+	"si-popup-settings-twospeed": "Adaty tizlikde, soňra haýal tizlikde oýnaň:",
+	"si-popup-settings-enlighten": "Elýeterli sözleri belläň:"
+}

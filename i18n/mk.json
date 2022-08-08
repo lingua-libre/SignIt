@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"si-overlay-coreContent-right-wikt-iso": "mk",
+	"si-popup-browse-title": "Прелистај",
+	"si-popup-browse-label": "Пребарај",
+	"si-popup-history-title": "Историја",
+	"si-popup-history-noHistory": "Празно е",
+	"si-popup-settings-title": "Нагодувања",
+	"si-popup-settings-signlanguage": "Знаковен јазик:",
+	"si-popup-settings-uilanguage": "Јазик на посредникот:",
+	"si-popup-settings-uilanguage-help": "Измени го јазикот на корисничкиот посредник.",
+	"si-popup-settings-uilanguage-dropdown": "Измени го јазикот на посредникот",
+	"si-popup-settings-history": "Должина на историјата:"
+}

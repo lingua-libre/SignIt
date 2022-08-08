@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"MathXplore",
+			"Sou0012"
+		]
+	},
+	"si-overlay-coreContent-left-title": "メディア：",
+	"si-overlay-coreContent-left-contribute-label": "手話で貢献する",
+	"si-overlay-coreContent-right-title": "定義:",
+	"si-overlay-coreContent-right-wikt-section-id": "英語",
+	"si-overlay-coreContent-right-wikt-pointer": "ウィクショナリーで見る",
+	"si-overlay-coreContent-right-error": "定義が見つかりません。",
+	"si-popup-browse-title": "閲覧",
+	"si-popup-browse-label": "検索",
+	"si-popup-browse-icon": "検索を開始",
+	"si-popup-history-title": "履歴",
+	"si-popup-history-noHistory": "空っぽです",
+	"si-popup-settings-title": "設定",
+	"si-popup-settings-signlanguage": "手話：",
+	"si-popup-settings-signlanguage-help": "動画を他の手話に変更する。",
+	"si-popup-settings-signlanguage-dropdown": "動画の言語を変更",
+	"si-popup-settings-uilanguage": "インターフェイスの言語:",
+	"si-popup-settings-uilanguage-help": "利用者インターフェースの言語を変更する。",
+	"si-popup-settings-uilanguage-dropdown": "インターフェース言語を変更",
+	"si-popup-settings-history": "履歴の長さ:",
+	"si-popup-settings-history-help": "0に設定すると、履歴ログが無効になります",
+	"si-popup-settings-wpintegration": "ウィキペディアとのネイティブな統合。",
+	"si-popup-settings-twospeed": "通常速度で再生し、次に低速で再生する。",
+	"si-popup-settings-enlighten": "使用可能な単語をハイライト表示します:"
+}

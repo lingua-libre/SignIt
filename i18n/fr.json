@@ -2,43 +2,37 @@
 	"@metadata": {
 		"authors": [
 			"Antoine Lamielle",
-			"Hugo Lopez"
+			"Hugo Lopez",
+			"Verdy p"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
-	"si-addon-preload": "Chargement des vidéos disponibles via Lingua Libre.",
-
-	"si-overlay-coreContent-left-title":"Médias :",
-	"si-overlay-coreContent-left-novideo":"Ce mot n'a pas encore été enregistré.<br>Mais SignIt est un projet participatif, auquel vous pouvez participer.",
-	"si-overlay-coreContent-left-contribute-label":"Contribute with Sign Language",
-	"si-overlay-coreContent-right-title":"Définitions :",
-	"si-overlay-coreContent-right-wikt-iso":"fr",
-	"si-overlay-coreContent-right-wikt-section-id":"#Français",
-	"si-overlay-coreContent-right-wikt-pointer":"voir sur le Wiktionnaire",
-	"si-overlay-coreContent-right-error":"Aucune définition n'a été trouvée.",
-
-	"si-popup-browse-title":"Consulter",
-	"si-popup-browse-placeholder":"Rechercher parmis les $1 signes.",
-	"si-popup-browse-label":"Rechercher",
-	"si-popup-browse-icon":"Lancer la recherche",
-
-	"si-popup-history-title":"Historique",
-	"si-popup-history-noHistory":"C'est vide",
-
-	"si-popup-settings-title":"Paramètres",
-	"si-popup-settings-signlanguage":"Langue des signes:",
-	"si-popup-settings-signlanguage-help":"Change la langue des signes utilisée dans les vidéos.",
-	"si-popup-settings-signlanguage-dropdown":"Change langue des videos",
-	"si-popup-settings-uilanguage":"Langue de l'interface:",
-	"si-popup-settings-uilanguage-help":"Change la langue de l'interface.",
-	"si-popup-settings-uilanguage-dropdown":"Change la langue",
-
-	"si-popup-settings-history":"Nombre de lignes d'historique:",
-	"si-popup-settings-history-help":"Mettre à 0 désactive l'historique",	
-	"si-popup-settings-wpintegration":"Intégration native sur Wikipédia :",
-	"si-popup-settings-twospeed":"Lecture double normal / lent :",	
-	"si-popup-settings-enlighten":"Enlighten available words: ",
-
+	"si-addon-preload": "Chargement des vidéos disponibles sur Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Média :",
+	"si-overlay-coreContent-left-novideo": "Ce mot n’a pas encore été enregistré.<br/> Mais SignIt est un projet participatif, auquel vous pouvez participer.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuer en langue des signes",
+	"si-overlay-coreContent-right-title": "Définitions :",
+	"si-overlay-coreContent-right-wikt-iso": "fr",
+	"si-overlay-coreContent-right-wikt-section-id": "#Français",
+	"si-overlay-coreContent-right-wikt-pointer": "voir sur le Wiktionnaire",
+	"si-overlay-coreContent-right-error": "Aucune définition n’a été trouvée.",
+	"si-popup-browse-title": "Consulter",
+	"si-popup-browse-placeholder": "Rechercher parmi $1 signes.",
+	"si-popup-browse-label": "Rechercher",
+	"si-popup-browse-icon": "Lancer la recherche",
+	"si-popup-history-title": "Historique",
+	"si-popup-history-noHistory": "C’est vide",
+	"si-popup-settings-title": "Paramètres",
+	"si-popup-settings-signlanguage": "Langue des signes :",
+	"si-popup-settings-signlanguage-help": "Change la langue des signes utilisée dans les vidéos.",
+	"si-popup-settings-signlanguage-dropdown": "Change la langue des vidéos",
+	"si-popup-settings-uilanguage": "Langue de l’interface :",
+	"si-popup-settings-uilanguage-help": "Change la langue de l’interface utilisateur.",
+	"si-popup-settings-uilanguage-dropdown": "Change la langue de l’interface",
+	"si-popup-settings-history": "Nombre de lignes d’historique :",
+	"si-popup-settings-history-help": "Mettre à 0 désactive le journal de l’historique",
+	"si-popup-settings-wpintegration": "Intégration native sur Wikipédia :",
+	"si-popup-settings-twospeed": "Lecture à vitesse normale, puis lente :",
+	"si-popup-settings-enlighten": "Mettre en évidence les mots disponibles :",
 	"si-videosGallery-video": "par {{link|$1|$2}} – Vidéo $3 sur $4"
 }
-

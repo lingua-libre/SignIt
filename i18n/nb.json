@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt ($1)",
+	"si-addon-preload": "Henter lista over alle videoer som er tilgjengelig på Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Dette ordet har ikke blitt spilt inn ennå,<br>men SignIt er et dugnadsprosjekt, så du kan spille det inn.",
+	"si-overlay-coreContent-left-contribute-label": "Bidra med tegnspråk",
+	"si-overlay-coreContent-right-title": "Definisjoner:",
+	"si-overlay-coreContent-right-wikt-iso": "et",
+	"si-overlay-coreContent-right-wikt-section-id": "#Engelsk",
+	"si-overlay-coreContent-right-wikt-pointer": "se på Wiktionary",
+	"si-overlay-coreContent-right-error": "Ingen definisjon funnet.",
+	"si-popup-browse-title": "Bla gjennom",
+	"si-popup-browse-placeholder": "Søk blant $1 tegn.",
+	"si-popup-browse-label": "Søk",
+	"si-popup-browse-icon": "Start søket",
+	"si-popup-history-title": "Historikk",
+	"si-popup-history-noHistory": "Det er tomt",
+	"si-popup-settings-title": "Innstillinger",
+	"si-popup-settings-signlanguage": "Tegnspråk:",
+	"si-popup-settings-signlanguage-help": "Endre videoer til et annet tegnspråk.",
+	"si-popup-settings-signlanguage-dropdown": "Endre videospråk",
+	"si-popup-settings-uilanguage": "Grensesnittspråk:",
+	"si-popup-settings-uilanguage-help": "Endre språket for brukergrensesnittet.",
+	"si-popup-settings-uilanguage-dropdown": "Endre grensesnittspråk",
+	"si-popup-settings-history": "Historikkens lengde:",
+	"si-popup-settings-history-help": "Å sette denne til 0 deaktiverer historikkloggen",
+	"si-popup-settings-wpintegration": "Innebygd integrasjon med Wikipedia:",
+	"si-popup-settings-twospeed": "Spill av raskere eller tregere:",
+	"si-popup-settings-enlighten": "Merk tilgjengelige ord:",
+	"si-videosGallery-video": "av {{link|$1|$2}} – video $3 av $4"
+}
