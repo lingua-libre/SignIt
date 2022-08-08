@@ -74,10 +74,25 @@ var state = 'up', // up / loading / ready / error
 /* i18n context ************************************************** */
 	// Get UI languages with translations on github
 	var supportedUiLanguages = [
-		{ wdQid: "Q150", nativeName: "Français", associatedWikt: "fr", associatedAnchorId: "#Français" },
-		{ wdQid: "Q1860", nativeName: "English", associatedWikt: "en", associatedAnchorId: "#English" }
-	//	{ wdQid: "Q1321", nativeName: "Español", associatedWikt: "es", associatedAnchorId: "#Español" },
-	//	{ wdQid: "Q7930", nativeName: "Magalasy", associatedWikt: "mg", associatedAnchorId: "" },
+		{ wdQid:"Q150",wikimediaCode:"fr",nativeName:"Français",wiktinarySection: "#Français" },
+		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection: "#English" },
+		{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
+		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"हिन्दी",wiktinarySection:"Q123"},
+		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:"Q123"},
+		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection:"Q22"},
+		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:"Q389"},
+		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:"Q44"},
+		{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:"Q207"},
+		{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:"Q396"},
+		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:"Q397"},
+		{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:"Q306"},
+		{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:"Q307"},
+		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:"Q401"}
+		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
+		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
+
+	//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
+	//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
 	];
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
@@ -150,7 +165,7 @@ async function getSignLanguagesWithVideos() {
 		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), nativeName: signLanguageRaw.idLabel.value }
 		signLanguages[i] = signLanguage;
 	}
-	return signLanguages; // [{ Q99628: "langue des signes française"},{},...]
+	return signLanguages; // [{ wdQid: "Q99628", nativeName: "langue des signes française"},{},...]
 }
 
 // Loading all vidéos of a given sign language. Format:
@@ -227,7 +242,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	
 	// Get iso code and corresponding wiktionary
 	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
-	iso = lang[0]["associatedWikt"];
+	iso = lang[0][wikimediaCode];
 	console.log("iso",iso)
 
 	// Load i18n messages
