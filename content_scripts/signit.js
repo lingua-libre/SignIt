@@ -27,7 +27,7 @@
 		} else if ( window.getSelection ) {
 			text = window.getSelection().toString();
 		}
-		return text;
+		return text.trim();
 	}
 
 	function getSelectionCoords() {
@@ -171,18 +171,15 @@
 		if(!$('.signit-hint-container')[0]){ console.log("No hintIcon element!") } 
 		$(".signit-hint-container").on( "click", async function(){ 
 			// var tabs = await browser.tabs.query( { active: true, currentWindow: true } );
-			word = getSelectionText();
+			iconText = getSelectionText();
 			// await checkInjection( tabs[ 0 ].id );
 			browser.runtime.sendMessage({
 				command: "signit.hinticon",
-				text: word.trim(),
-				// files: wordToFiles( word ), // function from 
-				},
-				function() { console.log("#328"); }
-			);
-			console.log("Message > Emited: hintIcon clicked ! --------------------------- ")
+				iconText: iconText
+			});
+		console.log("Message > Emited: hintIcon clicked ! --------------------------- ")
 		})
 	}
 
-	addHintIconEmit(); 
+	addHintIconEmit();
 }() );

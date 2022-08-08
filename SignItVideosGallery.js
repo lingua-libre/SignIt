@@ -17,6 +17,8 @@ var SignItVideosGallery = function ( container ) {
 };
 
 SignItVideosGallery.prototype.refresh = function ( files ) {
+	console.log("#20 files ",files )
+	console.log("Expected: [{ filename: url, speaker: ... },...]")	
 	var i;
 	files = files || [];
 	this.$videos = [];

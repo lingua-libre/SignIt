@@ -121,7 +121,7 @@ async function checkInjection( tab ) {
 		await browser.tabs.sendMessage( tab, { command: "ping" } );
 	} catch ( error ) {
 		var i,
-			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifié
+			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifier
 			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
 
 		for( i = 0; i < scripts.length; i++ ) {
@@ -187,12 +187,20 @@ function wordToFiles( word ) {
 			return null;
 		}
 	}
-	console.log("files:",records[ word ]);
 	return records[ word ];
 }
 
-function normalize( word ) {
-	return word.trim();
+
+function normalize( selection ) { // this could do more
+	return selection.trim();
+}
+var normalizeMessage = function(msg){
+	var text = msg.selectionText || msg.iconText || msg.wpTitle;
+	delete msg.selectionText; // when from background-script.js via right-click menu
+	delete msg.iconText; // when from signit.js icon click
+	delete msg.wpTitle; // when from wpintegration.js auto-injection
+	msg.text = text.trim();
+	return msg
 }
 
 /* ************************************************ 
@@ -215,33 +223,22 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	console.log("uiLanguageQid)",uiLanguageQid);
 	console.log("supportedUiLanguages",supportedUiLanguages);
 
-	// Test creation and usage of filter function : fails somehow. 
-	/*
-	console.log("filterArrayBy1",filterArrayBy);
-	var filterArrayBy = function (arr, key, value){
-		return arr.filter(item => (item[key]==value) )[0]
-	};
-	console.log("filterArrayBy2",filterArrayBy);
-	lang = filterArrayBy(supportedUiLanguages, "wdQid", "Q150")
-	console.log(lang)   /* */
-
 	state = 'loading';
 	
+	// Get iso code and corresponding wiktionary
 	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
 	iso = lang[0]["associatedWikt"];
 	console.log("iso",iso)
 
-	// Load messages
+	// Load i18n messages
 	const res = await fetch(`i18n/${iso}.json`)
 	messages = await res.json();
 	console.log("messages",messages["si-popup-settings-title"])
 	// Load messages into localisation
-	banana.load(messages, iso); // Load localized messages (should be conditional to empty data for that local)
+	banana.load(messages, iso); // Load localized messages (chould be conditional to empty)
 
 	// Declare localisation
 	banana.setLocale(iso); // Change to new locale
-	console.log("background #215",banana.i18n('si-popup-settings-title'))
-	console.log("background #216",banana);
 	
 	state = 'ready';
 
@@ -270,42 +267,43 @@ browser.contextMenus.create({
   contexts: ["selection"]
 }, function() {return;});
 
-var startModal = async function(data){
-		// a spliter cf manu1400 ?
-	console.log("data",{ data });
-	var tabs = await browser.tabs.query( { active: true, currentWindow: true } ),
-		word = normalize( data.selectionText || data.text );
-
+var callModal = async function(msg){
+	// Tab
+	console.log("Call modal > msg",{ msg });
+	var tabs = await browser.tabs.query( { active: true, currentWindow: true } );
 	await checkInjection( tabs[ 0 ].id );
-	console.log("#282", tabs[0].id)
+	console.log("Call modal > #282 > tab id", tabs[0].id)
+	// Data
+	var videosFiles = msg.files || wordToFiles( msg.text );
+	// Send message which opens the modal
 	browser.tabs.sendMessage( tabs[ 0 ].id, {
 		command: "signit.sign",
-		text: word,
-		files: wordToFiles( word ),
+		text: msg.text,
+		files: videosFiles,
+		banana : banana
 	} );
 	storeParam( 'history', [ word, ...params.history ] );
 }
 
-
-browser.contextMenus.onClicked.addListener( async function( clickMessage, __tab ) { // var tab not used ? Can remove ?
-	startModal(clickMessage);
+// Listen for right-click menu's signals
+browser.contextMenus.onClicked.addListener( async function( menuMessage, __tab ) { // var tab not used ? Can remove ?
+	message = normalizeMessage(menuMessage)
+	callModal(message);
 });
 
-// 
+// Listen for other signals
 browser.runtime.onMessage.addListener( async function ( message ) {
-	if(!message.files){ 
-		console.log("message.files: false. Create it from .text: ", message.text )
-		message.files = wordToFiles( message.text );
-	}
 	console.log("Message heard in background-script.js: ", message, "---------------------" )
-	// When message 'signit.getfiles' is heard, refresh records[]
+	message = normalizeMessage(message);
+
+	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
 	if ( message.command === 'signit.getfiles' ) {
-		return records[ message.word ] || records[ message.word.toLowerCase() ] || [];
+		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
 	}
 	// Start modal
 	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
 	if ( message.command === 'signit.hinticon' ) {
-		startModal(message);
+		callModal(message);
 	}
 });
 

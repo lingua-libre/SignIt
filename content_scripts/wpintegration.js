@@ -25,7 +25,10 @@ $( async function () {
 	}
 
 	title = $( 'h1.firstHeading' ).text();
-	files = await browser.runtime.sendMessage( { command: 'signit.getfiles', text: title } );
+	files = await browser.runtime.sendMessage({ 
+		command: 'signit.getfiles', 
+		wpTitle: title 
+	});
 	if ( files.length === 0 ) {
 		console.warn( 'no files for this page' );
 		return;
