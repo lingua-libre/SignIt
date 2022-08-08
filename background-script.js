@@ -242,7 +242,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	
 	// Get iso code and corresponding wiktionary
 	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
-	iso = lang[0][wikimediaCode];
+	iso = lang[0].wikimediaCode;
 	console.log("iso",iso)
 
 	// Load i18n messages
