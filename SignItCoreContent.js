@@ -54,12 +54,12 @@ var SignItCoreContent = function () {
 	// }.bind( this ) );
 };
 
-SignItCoreContent.prototype.refresh = function ( title, files=[] ) {
-	// var i;
-	this.setWiktionaryContent( title );
-
+SignItCoreContent.prototype.refresh = function ( title, files ) {
+	files = files || [];
 	this.$title.text( title );
-
+	// Definition panel
+	this.setWiktionaryContent( title );
+	// Media panel
 	if ( files.length > 0 ) {
 		this.videosGallery.refresh( files );
 		this.$leftPanelNoVideo.hide();
