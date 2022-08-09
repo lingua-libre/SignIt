@@ -64,8 +64,8 @@
 					style="left: ${iconX}px; top:${iconY}px; position: absolute; display:none;"
 					title=""
 					text="no b"
-					src=${ browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old-32px.png') }
-					/>`
+					src=${browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old.svg')}
+					></img>`
 	}
 
 	function initHintIconUI(word) {
@@ -78,13 +78,13 @@
 		}
 	}
 
-	function toggleHintIcon(event) {
-		console.log("#87 toggleHintIcon",event)
+	async function toggleHintIcon() {
+		var isActive = await browser.storage.local.get( 'hinticon' );
 		var selection = getSelectionText();
-		if(selection && selection.toString().trim() != '') {
+		$anchorHintIcon = $(".signit-hint-icon");
+		
+		if(isActive && selection && selection.toString().trim() != '') {
 			// Update title, position, display
-			$anchorHintIcon = $(".signit-hint-icon");
-
 			$anchorHintIcon.attr("title", `Rechercher "${selection}"`);
 			$anchorHintIcon.attr("text", selection);
 
