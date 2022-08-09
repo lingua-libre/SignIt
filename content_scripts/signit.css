@@ -185,6 +185,7 @@
 	z-index: 1000;
 } 
 .signit-hint-icon {
+	background-image: url( '../icons/Lingualibre-logo-no-text-old.svg' );
 	background-size: cover;
 	opacity:0.5;
 }

@@ -222,36 +222,48 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-twospeed"),
 			align: 'top',
 		} );
+		/* Hint icon shortcut */
+		hinticonWidget = new OO.ui.ToggleSwitchWidget( {
+			value: true
+		} );
+		hinticonLayout = new OO.ui.FieldLayout( hinticonWidget, {
+			label: banana.i18n("si-popup-settings-hint-icon"),
+			align: 'top',
+		} );
 
-		// Populate
+
+		// Populate UI with correct values
 		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
 		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
 		historyWidget.setValue( _backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
 		twospeedWidget.setValue( _backgroundPage.params.twospeed );
+		hinticonWidget.setValue( _backgroundPage.params.hinticon );
 
-		// Events
+		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
-		_backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
+		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( newLimit ) {
 			newLimit = parseInt( newLimit ) || 0;
-			if ( newLimit < 0 ) {
-				newLimit = 0;
-			}
+			if ( newLimit < 0 ) { newLimit = 0; }
 			_backgroundPage.storeParam( 'historylimit', newLimit );
 			this.cleanHistory();
 		}.bind( this ) );
 		wpintegrationWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'wpintegration' ) )
 		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) )
-		_backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
+		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
+		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) )
 
+
+		// Build Settings UI
 		this.paramTab.$element
 			.append( signLanguageLayout.$element )
 			.append( uiLanguageLayout.$element )
 			.append( historyLayout.$element )
 			.append( wpintegrationLayout.$element )
-			.append( twospeedLayout.$element );
+			.append( twospeedLayout.$element )
+			.append( hinticonLayout.$element );
 	};
 
 	/* *********************************************************** */

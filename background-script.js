@@ -68,6 +68,7 @@ var state = 'up', // up / loading / ready / error
 		history: ['lapin', 'crabe', 'fraise'], // Some fun
 		wpintegration: true,
 		twospeed: true,
+		hinticon: true,
 	};
 
 /* *************************************************************** */
@@ -108,14 +109,6 @@ var state = 'up', // up / loading / ready / error
 
 /* *************************************************************** */
 /* Toolbox functions ********************************************* */
-
-// Check if localStorage has parameter values, else use hard coded value from above.
-async function getStoredParam( name ) {
-	var tmp = await browser.storage.local.get( name );
-	params[ name ] = tmp[ name ] || params[ name ] || null;
-	return params[ name ];
-}
-
 // Save parameter and value in localStorage
 async function storeParam( name, value ) {
 	// If the value is an array, we make a copy of it to avoid dead references issues
@@ -128,6 +121,15 @@ async function storeParam( name, value ) {
 	// reset params
 	params[ name ] = value;
 	return await browser.storage.local.set( tmp );
+}
+// Check if localStorage has parameter value, else use and save default value
+async function getStoredParam( name ) {
+	var tmp = await browser.storage.local.get( name );
+	params[ name ] = tmp[ name ] || params[ name ] || null;	
+	// Missing from local storage, save default values there
+	if(tmp.length == undefined ) { await storeParam(name, params[name]); }
+	var tmp = await browser.storage.local.get( name );
+	return params[ name ];
 }
 
 // ???
@@ -351,7 +353,8 @@ async function main() {
 	await getStoredParam( 'historylimit' );
 	await getStoredParam( 'wpintegration' );
 	await getStoredParam( 'twospeed' );
-	// storeParam( 'twospeed', params.twospeed );
+    // storeParam( 'twospeed', params.twospeed ); //
+	await getStoredParam( 'hinticon' );
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
 	uiLanguage = await getStoredParam( 'uiLanguage' );

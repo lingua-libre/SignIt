@@ -63,10 +63,9 @@
 		return `<img class="signit-hint-container signit-hint-icon" 
 					style="left: ${iconX}px; top:${iconY}px; position: absolute; display:none;"
 					title=""
-					text=""
-					src=${browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old.svg')}
-					>
-				</img>`
+					text="no b"
+					src=${ browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old-32px.png') }
+					/>`
 	}
 
 	function initHintIconUI(word) {
