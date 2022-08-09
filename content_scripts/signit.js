@@ -79,10 +79,9 @@
 	}
 
 	async function toggleHintIcon() {
-		var isActive = await browser.storage.local.get( 'hinticon' );
+		var isActive = Object.values( await browser.storage.local.get( 'hinticon' ) )[0]
 		var selection = getSelectionText();
 		$anchorHintIcon = $(".signit-hint-icon");
-		
 		if(isActive && selection && selection.toString().trim() != '') {
 			// Update title, position, display
 			$anchorHintIcon.attr("title", `Rechercher "${selection}"`);
