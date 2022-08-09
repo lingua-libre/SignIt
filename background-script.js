@@ -289,11 +289,12 @@ var callModal = async function(msg){
 	await checkInjection( tabs[ 0 ].id );
 	console.log("Call modal > #282 > tab id", tabs[0].id)
 	// Data
-	var videosFiles = msg.files || wordToFiles( msg.text );
+	var word = msg.text,
+		videosFiles = msg.files || wordToFiles( word );
 	// Send message which opens the modal
 	browser.tabs.sendMessage( tabs[ 0 ].id, {
 		command: "signit.sign",
-		text: msg.text,
+		text: word,
 		files: videosFiles,
 		banana : banana
 	} );
