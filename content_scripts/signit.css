@@ -179,18 +179,15 @@
 	/* border:1px solid #14aea3;  #14aea3: logo green*/
 	background: #FFF; /*#474847 : logo grey */
 	height: 32px !important; 
-	width: 32px !important; 
-	cursor: pointer; 
+	width: 32px !important;
 	border-radius:3px;
+	cursor: pointer; 
 	z-index: 1000;
 } 
 .signit-hint-icon {
-	height: 32px !important; 
-	width: 32px !important; 
-	background-image: url( '../icons/Lingualibre-logo-no-text-old.svg' );
-	background-repeat: no-repeat;
 	background-size: cover;
+	opacity:0.5;
 }
 .signit-hint-icon:hover {
-	background-image: url( '../icons/Lingualibre-logo-no-text.svg' );
+	opacity:1;
 }

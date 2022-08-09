@@ -62,8 +62,10 @@
 	var hintIconElement = function(iconX=0,iconY=0){ 
 		return `<img class="signit-hint-container signit-hint-icon" 
 					style="left: ${iconX}px; top:${iconY}px; position: absolute; display:none;"
-					title="" 
-					src="">
+					title=""
+					text=""
+					src=${browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old.svg')}
+					>
 				</img>`
 	}
 
@@ -83,10 +85,14 @@
 		if(selection && selection.toString().trim() != '') {
 			// Update title, position, display
 			$anchorHintIcon = $(".signit-hint-icon");
+
 			$anchorHintIcon.attr("title", `Rechercher "${selection}"`);
+			$anchorHintIcon.attr("text", selection);
+
 			var selectionCoords = getSelectionCoords(),
 				hintCoords = selectionToHintIconCoords(selectionCoords,0,25);
 			repositionElement($anchorHintIcon,hintCoords);
+
 			$anchorHintIcon.show();
 		} else {
 			$anchorHintIcon.hide();
