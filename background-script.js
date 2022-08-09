@@ -316,11 +316,20 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
 	if ( message.command === 'signit.getfiles' ) {
+		console.log('bg>signit.getfiles')
 		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
 	}
+	 // When message 'signit.i18n' is heard, returns banada object
+	else if ( message.command === 'signit.getfilesb' ) {
+		console.log('bg>signit.getfilesB')
+		// var iso = await getStoredParam( 'uiLanguage' )
+		// loadI18nLocalization(iso);
+		return banana;
+	}
+	
 	// Start modal
 	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
-	if ( message.command === 'signit.hinticon' ) {
+	else if ( message.command === 'signit.hinticon' ) {
 		callModal(message);
 	}
 });

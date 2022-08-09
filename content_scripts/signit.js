@@ -158,6 +158,8 @@
 	/* Listen for messages from the background script. *************** */
 	browser.runtime.onMessage.addListener( async function ( message ) {
 		console.log("Message heard in signit.js: ", message, "---------------------" )
+
+		// Modal generation or refresh
 		if ( message.command === 'signit.sign' || message.command === 'signit.hinticon') {
 			if ( popup === undefined ) { initModalUI(); }
 			var coords = getSelectionCoords();
