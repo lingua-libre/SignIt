@@ -75,7 +75,7 @@
 		]
 	},
 	"web_accessible_resources": [
-		"icons/Spinner_font_awesome.svg"
+		"icons/*"
 	],
 	"commands": {
 		"_execute_browser_action": {
