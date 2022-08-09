@@ -29,8 +29,9 @@
 	"si-popup-settings-uilanguage-dropdown": "Placeholder if no language available (for developers)",
 	"si-popup-settings-history": "Setting title to change history's length.",
 	"si-popup-settings-history-help": "Hint on how to desactivate history logs",
-	"si-popup-settings-wpintegration": "Setting title for sign language video integration into Wikip|media websites.",
-	"si-popup-settings-twospeed": "Setting title for video's double play at different speed.",
-	"si-popup-settings-enlighten": "Setting title to enlighten available words.",
+	"si-popup-settings-wpintegration": "Setting title to toggle sign language video integration into Wikip|media websites.",
+	"si-popup-settings-twospeed": "Setting title to toggle video's double play at different speed.",
+	"si-popup-settings-hint-icon": "Setting title to toggle hint icon on selected text.",
+	"si-popup-settings-enlighten": "Setting title to toggle enlightening of available words in page.",
 	"si-videosGallery-video": "Video attibution at bottom of video gallery, with Commons URL ($1), speaker ($2), and position ($3) of the video within the gallery ($4)"
 }
