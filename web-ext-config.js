@@ -9,6 +9,7 @@ module.exports = {
 		'bin/',
 		'dist/',
 		'videos/',
+		'doc/',
 		'README.md',
 		'web-ext-config.js'
 	],
