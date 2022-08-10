@@ -77,18 +77,17 @@ var state = 'up', // up / loading / ready / error
 	var supportedUiLanguages = [
 		{ wdQid:"Q150",wikimediaCode:"fr",nativeName:"Français",wiktinarySection: "#Français" },
 		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection: "#English" },
-		{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
-		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"हिन्दी",wiktinarySection:"Q123"},
+		//{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
 		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:"Q123"},
 		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection:"Q22"},
 		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:"Q389"},
 		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:"Q44"},
-		{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:"Q207"},
-		{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:"Q396"},
+		//{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:"Q207"},
+		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:"Q396"},
 		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:"Q397"},
-		{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:"Q306"},
-		{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:"Q307"},
-		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:"Q401"}
+		//{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:"Q306"},
+		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:"Q307"},
+		//{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:"Q401"}
 		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
 		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
 
