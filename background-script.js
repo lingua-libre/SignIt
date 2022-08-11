@@ -78,21 +78,22 @@ var state = 'up', // up / loading / ready / error
 		{ wdQid:"Q150",wikimediaCode:"fr",nativeName:"Français",wiktinarySection: "#Français" },
 		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection: "#English" },
 		//{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
-		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:"Q123"},
-		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection:"Q22"},
-		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:"Q389"},
-		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:"Q44"},
-		//{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:"Q207"},
-		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:"Q396"},
-		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:"Q397"},
-		//{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:"Q306"},
-		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:"Q307"},
-		//{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:"Q401"}
-		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
-		//	{ wdQid: "", nativeName: "", wikimediaCode: "", wiktinarySection: "#" },
+		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:""},
+		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection:""},
+		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:""},
+		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:""},
+		//{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:""},
+		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:""},
+		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:""},
+		{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:""},
+		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:""},
+		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:""}	
+		//	{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
+		 wdQid: "Q7737", nativeName: "Русский язык", wikimediaCode: "ru", wiktinarySection: "#" },
 
-	//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
-	//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
+		//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
+		//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
+		//	{ wdQid: "", nativeName: "", wikimediaCode: "scn", wiktinarySection: "" },
 	];
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
