@@ -4,11 +4,14 @@
 			"Amire80"
 		]
 	},
+	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "אחזור רשימת כל הסרטים הזמינים בלינגווה ליברה.",
+	"si-overlay-coreContent-left-title": "מדיה:",
 	"si-overlay-coreContent-left-novideo": "המילה הזאת עוד לא הוקלטה,<br>אבל SignIt הוא מיזם במיקור המונים, אז יש לך הזדמנות לתרום לו.",
 	"si-overlay-coreContent-left-contribute-label": "תרומה בשפת סימנים",
 	"si-overlay-coreContent-right-title": "הגדרות:",
 	"si-overlay-coreContent-right-wikt-iso": "he",
+	"si-overlay-coreContent-right-wikt-section-id": "#אנגלית",
 	"si-overlay-coreContent-right-wikt-pointer": "לראות בוויקימילון",
 	"si-overlay-coreContent-right-error": "לא נמצאה הגדרה.",
 	"si-popup-browse-title": "עיון",
@@ -26,5 +29,9 @@
 	"si-popup-settings-uilanguage-dropdown": "שינוי שפת הממשק",
 	"si-popup-settings-history": "אורך ההיסטוריה:",
 	"si-popup-settings-history-help": "הגדרת 0 מכבה את יומן ההיסטוריה",
-	"si-popup-settings-wpintegration": "שילוב ישיר עם ויקיפדיה:"
+	"si-popup-settings-wpintegration": "שילוב ישיר עם ויקיפדיה:",
+	"si-popup-settings-twospeed": "לנגן במהירות רגילה, ואחר־כך לאט:",
+	"si-popup-settings-hint-icon": "סמל קיצור דרך בטקסט מסומן:",
+	"si-popup-settings-enlighten": "סימון מילים זמינות:",
+	"si-videosGallery-video": "מאת {{link|$1|$2}} – סרט $3 מתוך $4"
 }

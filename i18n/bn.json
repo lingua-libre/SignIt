@@ -1,21 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"আজিজ",
 			"আফতাবুজ্জামান"
 		]
 	},
 	"si-addon-title": "লিঙ্গুয়া লিব্রে সাইনইট",
+	"si-overlay-coreContent-left-title": "মিডিয়া:",
 	"si-overlay-coreContent-right-title": "সংজ্ঞা:",
 	"si-overlay-coreContent-right-wikt-iso": "bn",
 	"si-overlay-coreContent-right-wikt-section-id": "#বাংলা",
 	"si-overlay-coreContent-right-wikt-pointer": "উইকিঅভিধানে দেখুন",
 	"si-overlay-coreContent-right-error": "কোনও সংজ্ঞা পাওয়া যায়নি।",
 	"si-popup-browse-title": "ব্রাউজ করুন",
+	"si-popup-browse-placeholder": "$1টি চিহ্নের মধ্যে খুঁজুন।",
 	"si-popup-browse-label": "অনুসন্ধান",
 	"si-popup-browse-icon": "অনুসন্ধান শুরু করুন",
 	"si-popup-history-title": "ইতিহাস",
 	"si-popup-history-noHistory": "এটি খালি",
 	"si-popup-settings-title": "সেটিংস",
+	"si-popup-settings-signlanguage-dropdown": "ভিডিওর ভাষা পরিবর্তন করুন",
+	"si-popup-settings-uilanguage": "ইন্টারফেসের ভাষা:",
+	"si-popup-settings-uilanguage-help": "ব্যবহারকারী ইন্টারফেসের ভাষা পরিবর্তন করুন।",
 	"si-popup-settings-uilanguage-dropdown": "ইন্টারফেসের ভাষা পরিবর্তন করুন",
-	"si-popup-settings-history": "ইতিহাসের দৈর্ঘ্য:"
+	"si-popup-settings-history": "ইতিহাসের দৈর্ঘ্য:",
+	"si-popup-settings-twospeed": "স্বাভাবিক গতিতে চালান, তারপর ধীর গতিতে:",
+	"si-popup-settings-enlighten": "উপলব্ধ শব্দগুলি হাইলাইট করুন:"
 }

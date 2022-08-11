@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Carricamentu di l'alencu di tutti li vìdii dispunìbbili supra Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Midia:",
+	"si-overlay-coreContent-left-novideo": "Sta palora nun è ancora riggistrata,<br>pirò SignIt è nu pruggettu participativu, a cui tu poi cuntribbuiri.",
+	"si-overlay-coreContent-left-contribute-label": "Cuntribbuisci ntâ lingua dî signa",
+	"si-overlay-coreContent-right-title": "Difinizzioni:",
+	"si-overlay-coreContent-right-wikt-iso": "scn",
+	"si-overlay-coreContent-right-wikt-section-id": "#Sicilianu",
+	"si-overlay-coreContent-right-wikt-pointer": "talìa supra lu Wikizziunariu",
+	"si-overlay-coreContent-right-error": "Nudda difinizzioni attruvata.",
+	"si-popup-browse-title": "Sfogghia",
+	"si-popup-browse-placeholder": "Arricerca ntra $1 signa.",
+	"si-popup-browse-label": "Arricerca",
+	"si-popup-browse-icon": "Accuminza l'arricerca",
+	"si-popup-history-title": "Crunuluggìa",
+	"si-popup-history-noHistory": "È vacanti",
+	"si-popup-settings-title": "Mpustazzioni",
+	"si-popup-settings-signlanguage": "Lingua dî signa:",
+	"si-popup-settings-signlanguage-help": "Cancia la lingua dî signa usata ntî vìdii.",
+	"si-popup-settings-signlanguage-dropdown": "Cancia la lingua dî vìdii",
+	"si-popup-settings-uilanguage": "Lingua dâ ntirfaccia:",
+	"si-popup-settings-uilanguage-help": "Cancia la lingua dâ ntirfaccia utenti.",
+	"si-popup-settings-uilanguage-dropdown": "Cancia la lingua dâ ntirfaccia.",
+	"si-popup-settings-history": "Lunchizza dâ crunuluggìa:",
+	"si-popup-settings-history-help": "Mpustari a 0 disattiva lu riggistru dâ crunuluggìa",
+	"si-popup-settings-wpintegration": "Ntigrazzioni nativa cu Wikipedia:",
+	"si-popup-settings-twospeed": "Littura a vilucitati nurmali, appoi a vilucitati lenta:",
+	"si-popup-settings-hint-icon": "Cona d'accurzu supra lu testu silizziunatu:",
+	"si-popup-settings-enlighten": "Evidenzia li palori dispunìbbili:",
+	"si-videosGallery-video": "di {{link|$1|$2}} – Vìdiu $3 di $4"
+}
