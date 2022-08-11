@@ -93,7 +93,7 @@ var state = 'up', // up / loading / ready / error
 
 		//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
 		//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
-		//	{ wdQid: "", nativeName: "", wikimediaCode: "scn", wiktinarySection: "" },
+		{ wdQid: "Q33973", nativeName: "Sicilianu", wikimediaCode: "scn", wiktinarySection: "" },
 	];
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
