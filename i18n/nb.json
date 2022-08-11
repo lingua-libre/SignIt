@@ -30,7 +30,8 @@
 	"si-popup-settings-history": "Historikkens lengde:",
 	"si-popup-settings-history-help": "Å sette denne til 0 deaktiverer historikkloggen",
 	"si-popup-settings-wpintegration": "Innebygd integrasjon med Wikipedia:",
-	"si-popup-settings-twospeed": "Spill av raskere eller tregere:",
+	"si-popup-settings-twospeed": "Spill av i normal hastighet, deretter saktere hastighet:",
+	"si-popup-settings-hint-icon": "Ikon som vises på merket tekst:",
 	"si-popup-settings-enlighten": "Merk tilgjengelige ord:",
 	"si-videosGallery-video": "av {{link|$1|$2}} – video $3 av $4"
 }
