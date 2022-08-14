@@ -29,7 +29,7 @@ const sparqlEndpoints = {
 	lingualibre: { url: "https://lingualibre.org/bigdata/namespace/wdq/sparql", verb: "POST" },
 	wikidata: { url: "https://query.wikidata.org/sparql", verb: "GET" },
 	commons: { url: "https://commons-query.wikimedia.org/sparql", verb: "GET" },
-	"dictionaire-francophone": { url: "https://www.dictionnairedesfrancophones.org/sparql", verb: "" },
+	dictionaireFrancophone: { url: "https://www.dictionnairedesfrancophones.org/sparql", verb: "" },
 };
 /* *************************************************************** */
 /* Sparql ******************************************************** */
@@ -56,7 +56,7 @@ WHERE {
 
 /* *************************************************************** */
 /* Init state if no localStorage ********************************* */
-var state = 'up', // up / loading / ready / error
+var state = 'up', // up, loading, ready, error
 	records = {},
 	signLanguages = [],
 	uiLanguages = [],
@@ -65,7 +65,7 @@ var state = 'up', // up / loading / ready / error
 		signLanguage: 'Q99628', // for videos : French Sign language
 		uiLanguage: 'Q150', // for interface : French
 		historylimit: 6,
-		history: ['lapin', 'crabe', 'fraise'], // Some fun
+		history: ['lapin', 'crabe', 'fraise', 'canard'], // Some fun
 		wpintegration: true,
 		twospeed: true,
 		hinticon: true,
@@ -89,7 +89,7 @@ var state = 'up', // up / loading / ready / error
 		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:""},
 		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:""}	
 		//	{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
-		 wdQid: "Q7737", nativeName: "Русский язык", wikimediaCode: "ru", wiktinarySection: "#" },
+		{ wdQid: "Q7737", nativeName: "Русский язык", wikimediaCode: "ru", wiktinarySection: "#" },
 
 		//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
 		//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
@@ -151,6 +151,7 @@ async function checkInjection( tab ) {
 }
 
 // Get sign languages covered by Lingualibre
+// returns: [{ wdQid: "Q99628", nativeName: "langue des signes française"},{},...]
 async function getSignLanguagesWithVideos() {
 	var i,
 		signLanguage,
@@ -167,11 +168,11 @@ async function getSignLanguagesWithVideos() {
 		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), nativeName: signLanguageRaw.idLabel.value }
 		signLanguages[i] = signLanguage;
 	}
-	return signLanguages; // [{ wdQid: "Q99628", nativeName: "langue des signes française"},{},...]
+	return signLanguages;
 }
 
 // Loading all vidéos of a given sign language. Format:
-// records = { word: { filename: url, speaker: name }, ... };
+// returns format: { word: { filename: url, speaker: name }, ... };
 async function getAllRecords( signLanguage ) {
 	var i, record, word, response,
 		records = {};
@@ -196,6 +197,7 @@ async function getAllRecords( signLanguage ) {
 }
 
 // Given a word string, check if exist in available records data, if so return data on that word
+// returns format: { filename: url, speaker: name }
 function wordToFiles( word ) {
 	// could use a switch for clarity
 	if ( records.hasOwnProperty( word ) === false ) {
@@ -206,7 +208,6 @@ function wordToFiles( word ) {
 	}
 	return records[ word ];
 }
-
 
 function normalize( selection ) { // this could do more
 	return selection.trim();
@@ -259,7 +260,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	
 	state = 'ready';
 
-	console.log( Object.keys( messages ).length + ' messages loaded' );
+	console.log( Object.keys( messages ).length + ' i18n messages loaded' );
 }
 
 // Given language's Qid, reload list of available videos and records/words data
@@ -364,6 +365,7 @@ async function main() {
 	await getStoredParam( 'twospeed' );
     // storeParam( 'twospeed', params.twospeed ); //
 	await getStoredParam( 'hinticon' );
+
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
 	uiLanguage = await getStoredParam( 'uiLanguage' );
