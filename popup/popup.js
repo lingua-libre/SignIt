@@ -230,6 +230,14 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-hint-icon"),
 			align: 'top',
 		} );
+		/* Colored text */
+		coloredwordsWidget = new OO.ui.ToggleSwitchWidget( {
+			value: true
+		} );
+		coloredwordsLayout = new OO.ui.FieldLayout( coloredwordsWidget, {
+			label: banana.i18n("si-popup-settings-enlighten"),
+			align: 'top',
+		} );
 
 
 		// Populate UI with correct values
@@ -239,6 +247,7 @@ var browser = browser || chrome;
 		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
 		twospeedWidget.setValue( _backgroundPage.params.twospeed );
 		hinticonWidget.setValue( _backgroundPage.params.hinticon );
+		coloredwordsWidget.setValue( _backgroundPage.params.coloredwords );
 
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
@@ -254,6 +263,7 @@ var browser = browser || chrome;
 		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) )
 		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
 		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) )
+		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) )
 
 
 		// Build Settings UI
@@ -264,6 +274,7 @@ var browser = browser || chrome;
 			.append( wpintegrationLayout.$element )
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element );
+			.append( coloredwordsLayout.$element );
 	};
 
 	/* *********************************************************** */

@@ -69,6 +69,7 @@ var state = 'up', // up, loading, ready, error
 		wpintegration: true,
 		twospeed: true,
 		hinticon: true,
+		coloredwords: false,
 	};
 
 /* *************************************************************** */
@@ -218,6 +219,7 @@ var normalizeMessage = function(msg){
 	delete msg.iconText; // when from signit.js icon click
 	delete msg.wpTitle; // when from wpintegration.js auto-injection
 	msg.text = text.trim();
+	// msg.list = getAllRecords() <--------- how to do
 	return msg
 }
 
@@ -299,6 +301,7 @@ var callModal = async function(msg){
 		command: "signit.sign",
 		text: word,
 		files: videosFiles,
+		// allRecords: records,    <------ array for coloredwords feature
 		banana : banana
 	} );
 	storeParam( 'history', [ word, ...params.history ] );
@@ -365,6 +368,7 @@ async function main() {
 	await getStoredParam( 'twospeed' );
     // storeParam( 'twospeed', params.twospeed ); //
 	await getStoredParam( 'hinticon' );
+	await getStoredParam( 'coloredwords' );
 
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();

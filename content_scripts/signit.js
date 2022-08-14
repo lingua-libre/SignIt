@@ -104,6 +104,38 @@
 		// document.addEventListener("click", click);
 		// document.addEventListener("keydown", keyDown);
 	//}
+
+
+	// Text coloring for available word-video pairs
+	var colorThoseWords = function(arr){
+		words = arr.join('|');
+		var s = `\\b(${words})\\b`,
+			r = new RegExp(s,'gi');
+		console.log({r})
+		
+		$("p,li,h2,h3,a").each(function(){
+			var text = $(this).text();
+			$(this).html(text.replace(r, "<i class='signit-colored'>$1</i>"));
+		});
+	}
+	var uncolorWords = function(){
+		$(".signit-colored").each(function(){
+			var $text = $(this).text();
+			$(this).replaceWith($text);
+		});
+	}
+	async function toggleColoredText() {
+		var isActive = Object.values( await browser.storage.local.get( 'coloredtext' ) )[0],
+			noColoredWords = $('.signit-colored').length == 0;
+
+		if(isActive && noColoredWords && arr.length>0) {
+			console.log("No colored text! Tag relevant words.")
+			colorThoseWords(arr);
+		}else if (!isActive && !noColoredWords) {
+			uncolorWords();
+		}
+	}
+	// i.signit-colored { background-color: ##FFFF0055; }
 		
 
 	/* *************************************************************** */
@@ -173,8 +205,7 @@
 
 	// Hint icon clicked sends message to the content script.
 	var addHintIconEmit = function(){
-		console.log("#318");
-		if(!$('.signit-hint-container')[0]){ console.log("No hintIcon element!") } 
+		if(!$('.signit-hint-container')[0]){ console.log("No hintIcon element! Create one.") } 
 		$(".signit-hint-container").on( "click", async function(){ 
 			// var tabs = await browser.tabs.query( { active: true, currentWindow: true } );
 			iconText = getSelectionText();
