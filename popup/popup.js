@@ -254,6 +254,7 @@ var browser = browser || chrome;
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
 		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( newLimit ) {
+			// newLimit = parseInt( newLimit ) >-1 ? parseInt( newLimit ) : 0; // works ?
 			newLimit = parseInt( newLimit ) || 0;
 			if ( newLimit < 0 ) { newLimit = 0; }
 			_backgroundPage.storeParam( 'historylimit', newLimit );
@@ -273,7 +274,7 @@ var browser = browser || chrome;
 			.append( historyLayout.$element )
 			.append( wpintegrationLayout.$element )
 			.append( twospeedLayout.$element )
-			.append( hinticonLayout.$element );
+			.append( hinticonLayout.$element )
 			.append( coloredwordsLayout.$element );
 	};
 

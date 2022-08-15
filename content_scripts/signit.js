@@ -124,10 +124,11 @@
 			$(this).replaceWith($text);
 		});
 	}
-	async function toggleColoredText() {
-		var isActive = Object.values( await browser.storage.local.get( 'coloredtext' ) )[0],
+	async function toggleColoredText(arr) {
+		var coloredwords = await browser.storage.local.get( 'coloredwords'),
+			isActive = Object.values( coloredwords  )[0],
 			noColoredWords = $('.signit-colored').length == 0;
-
+		console.log("toggleColoredText: ", isActive, noColoredWords, arr.length)
 		if(isActive && noColoredWords && arr.length>0) {
 			console.log("No colored text! Tag relevant words.")
 			colorThoseWords(arr);
@@ -135,8 +136,7 @@
 			uncolorWords();
 		}
 	}
-	// i.signit-colored { background-color: ##FFFF0055; }
-		
+			
 
 	/* *************************************************************** */
 	/* Modal: init helped by SignItCoreContent *********************** */
@@ -198,6 +198,7 @@
 			repositionElement($anchorModal,coords);
 			resizeElement($anchorModal,coords);
 			refreshModal(message);
+			toggleColoredText(message.supportedWords);
 		} else if ( message.command === 'signit.getSelection' ) {
 			return getSelectionText();
 		}

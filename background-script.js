@@ -78,23 +78,22 @@ var state = 'up', // up, loading, ready, error
 	var supportedUiLanguages = [
 		{ wdQid:"Q150",wikimediaCode:"fr",nativeName:"Français",wiktinarySection: "#Français" },
 		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection: "#English" },
-		//{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
 		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:""},
 		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection:""},
 		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:""},
 		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:""},
-		//{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:""},
-		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:""},
 		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:""},
 		{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:""},
-		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:""},
-		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:""}	
-		//	{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
+		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:""},
 		{ wdQid: "Q7737", nativeName: "Русский язык", wikimediaCode: "ru", wiktinarySection: "#" },
-
-		//	{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
-		//	{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
 		{ wdQid: "Q33973", nativeName: "Sicilianu", wikimediaCode: "scn", wiktinarySection: "" },
+		//{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:"Q297"},
+		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:""},
+		//{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
+		//{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:""},
+		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:""},
+		//{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
+		//{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
 	];
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
@@ -301,7 +300,7 @@ var callModal = async function(msg){
 		command: "signit.sign",
 		text: word,
 		files: videosFiles,
-		// allRecords: records,    <------ array for coloredwords feature
+		supportedWords: Object.keys(records),    // <------ array for coloredwords feature
 		banana : banana
 	} );
 	storeParam( 'history', [ word, ...params.history ] );
