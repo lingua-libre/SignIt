@@ -1,8 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yug"
+			"Okras",
+			"Pacha Tchernof"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Выдаёт список всех видео, доступных на Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Медиа:",
+	"si-overlay-coreContent-left-novideo": "Это слово еще не записано,<br> но SignIt — это краудсорсинговый проект, и вы можете внести свой вклад!",
+	"si-overlay-coreContent-left-contribute-label": "Внесите свой вклад на жестовом языке",
+	"si-overlay-coreContent-right-title": "Определения:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#английский",
+	"si-overlay-coreContent-right-wikt-pointer": "см. в Викисловаре",
+	"si-overlay-coreContent-right-error": "Определение не найдено.",
+	"si-popup-browse-title": "Обзор",
+	"si-popup-browse-placeholder": "Поиск среди $1 {{PLURAL:$1|жеста|жестов}}",
+	"si-popup-browse-label": "Искать",
+	"si-popup-browse-icon": "Начать поиск",
+	"si-popup-history-title": "История",
+	"si-popup-history-noHistory": "Здесь пусто",
+	"si-popup-settings-title": "Настройки",
+	"si-popup-settings-signlanguage": "Жестовый язык:",
+	"si-popup-settings-signlanguage-help": "Изменить видео на другой жестовый язык.",
+	"si-popup-settings-signlanguage-dropdown": "Изменить язык в видео",
+	"si-popup-settings-uilanguage": "Язык интерфейса:",
+	"si-popup-settings-uilanguage-help": "Изменить язык в пользовательском интерфейсе.",
+	"si-popup-settings-uilanguage-dropdown": "Изменить язык в интерфейсе",
+	"si-popup-settings-history": "Длина истории:",
+	"si-popup-settings-history-help": "Установите 0, чтобы деактивировать журнал истории",
+	"si-popup-settings-wpintegration": "Нативная интеграция с Википедией:",
+	"si-popup-settings-twospeed": "Воспроизводить на нормальной скорости, а после на замедленной:",
+	"si-popup-settings-hint-icon": "Значок быстрого доступа к выделенному тексту:",
+	"si-popup-settings-enlighten": "Выделить доступные слова:",
+	"si-videosGallery-video": "авторство: {{link|$1|$2}} – видео $3 в $4"
 }
