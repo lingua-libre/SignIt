@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Antoine Lamielle",
-			"Hugo Lopez"
+			"Hugo Lopez",
+			"Yug"
 		]
 	},
 	"si-addon-title": "The add-on name",
@@ -13,6 +14,7 @@
 	"si-overlay-coreContent-right-title": "Title of the section displaying Wiktionary's definitions.",
 	"si-overlay-coreContent-right-wikt-iso": "Default Wiktionary to use on installation, its language wiki code.",
 	"si-overlay-coreContent-right-wikt-section-id": "Within the target wiktionary, the html id anchor of the relevant section.",
+	"si-overlay-coreContent-right-wikt-pointer": "A short phrase to point to Wiktionary and it's definition of the written word.",
 	"si-overlay-coreContent-right-error": "Placeholder when no defition found.",
 	"si-popup-browse-title": "Title of the search / browse tab.",
 	"si-popup-browse-placeholder": "Announce the number of available videos.",

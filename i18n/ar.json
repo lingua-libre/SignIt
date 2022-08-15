@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yug"
+			"Yug",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
-	"si-addon-title": "Lingua Libre SignIt"
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-popup-browse-icon": "ابدأ البحث"
 }
