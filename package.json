@@ -1,6 +1,6 @@
 {
   "name": "sign-it",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
@@ -34,6 +34,13 @@
     "email": "gh@0x010c.fr",
     "url": "https://0x010c.fr"
   },
+  "contributors": [
+    {
+      "name": "Hugo Lopez",
+      "email": "",
+      "url": "https://meta.wikimedia.org"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/lingua-libre/SignIt/issues"
