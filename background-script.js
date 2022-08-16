@@ -69,7 +69,7 @@ var state = 'up', // up, loading, ready, error
 		wpintegration: true,
 		twospeed: true,
 		hinticon: true,
-		coloredwords: false,
+		coloredwords: true,
 	};
 
 /* *************************************************************** */

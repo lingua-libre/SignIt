@@ -109,21 +109,24 @@
 	// Text coloring for available word-video pairs
 	var colorThoseWords = function(arr){
 		words = arr.join('|');
-		var s = `\\b(${words})\\b`,
+		// Regex lookareound: https://regular-expressions.info/lookaround.html
+		// Regex `negative lookbehind` and `negative lookahead`
+		// Run it: https://regex101.com/r/NZ5LQZ/1
+		var s = `(?<![<=#"'\`:;,./({[-])\\b(${words})\\b(?![>=#"'\`:)\]}-])`,
 			r = new RegExp(s,'gi');
 		console.log({r})
-		
+	
 		$("p,li,h2,h3,a").each(function(){
-			var text = $(this).text();
+			var text = $(this).html();
 			$(this).html(text.replace(r, "<i class='signit-colored'>$1</i>"));
 		});
-	}
+	};
 	var uncolorWords = function(){
 		$(".signit-colored").each(function(){
 			var $text = $(this).text();
 			$(this).replaceWith($text);
 		});
-	}
+	};
 	async function toggleColoredText(arr) {
 		var coloredwords = await browser.storage.local.get( 'coloredwords'),
 			isActive = Object.values( coloredwords  )[0],
