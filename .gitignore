@@ -9,4 +9,4 @@ web-ext-artifacts/*
 dist/*
 .accountRecovery.txt
 assets/
-./doc/*.pdf
+doc/*.pdf
