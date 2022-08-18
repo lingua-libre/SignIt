@@ -31,6 +31,7 @@
 	"si-popup-settings-history-help": "Sätts detta till 0 inaktiveras historikloggen",
 	"si-popup-settings-wpintegration": "Inbyggd integration med Wikipedia:",
 	"si-popup-settings-twospeed": "Spela i normal hastighet, sedan i låg hastighet:",
+	"si-popup-settings-hint-icon": "Genvägsikon på vald text:",
 	"si-popup-settings-enlighten": "Markera tillgängliga ord:",
 	"si-videosGallery-video": "av {{link|$1|$2}} – Video $3 av $4"
 }

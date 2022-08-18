@@ -1,8 +1,39 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ericliu1912",
+			"Kly",
 			"Yug"
 		]
 	},
-	"si-addon-title": "Lingua Libre SignIt"
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "取得在 Lingua Libre 上的所有可用影片清單。",
+	"si-overlay-coreContent-left-title": "媒體：",
+	"si-overlay-coreContent-left-novideo": "SignIt 是個群眾外包專案，<br>因此目前雖然尚無該字詞的影片，您可以參與其中來協助完成。",
+	"si-overlay-coreContent-left-contribute-label": "以手語貢獻",
+	"si-overlay-coreContent-right-title": "定義：",
+	"si-overlay-coreContent-right-wikt-iso": "zh-hant",
+	"si-overlay-coreContent-right-wikt-section-id": "#繁體中文",
+	"si-overlay-coreContent-right-wikt-pointer": "參見維基詞典",
+	"si-overlay-coreContent-right-error": "找不到定義。",
+	"si-popup-browse-title": "瀏覽",
+	"si-popup-browse-placeholder": "在 $1 種手語裡搜尋。",
+	"si-popup-browse-label": "搜尋",
+	"si-popup-browse-icon": "開始搜尋",
+	"si-popup-history-title": "歷史",
+	"si-popup-history-noHistory": "空的",
+	"si-popup-settings-title": "設定",
+	"si-popup-settings-signlanguage": "手語：",
+	"si-popup-settings-signlanguage-help": "將影片變更成別的手語。",
+	"si-popup-settings-signlanguage-dropdown": "變更影片語言",
+	"si-popup-settings-uilanguage": "介面語言：",
+	"si-popup-settings-uilanguage-help": "變更使用者介面語言。",
+	"si-popup-settings-uilanguage-dropdown": "變更介面語言",
+	"si-popup-settings-history": "歷史長度：",
+	"si-popup-settings-history-help": "設定成 0 來停用歷史日誌",
+	"si-popup-settings-wpintegration": "與維基百科的原生整合：",
+	"si-popup-settings-twospeed": "先以正常速度播放，然後慢速播放：",
+	"si-popup-settings-hint-icon": "在所選文字的捷徑圖示：",
+	"si-popup-settings-enlighten": "突顯可用的字詞：",
+	"si-videosGallery-video": "貢獻者：{{link|$1|$2}} – 影片$3/$4"
 }
