@@ -1,6 +1,6 @@
 {
   "name": "sign-it",
-  "version": "1.0.13",
+  "version": "1.1.0",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
@@ -37,8 +37,8 @@
   "contributors": [
     {
       "name": "Hugo Lopez",
-      "email": "",
-      "url": "https://meta.wikimedia.org"
+      "email": "https://meta.wikimedia.org/wiki/Special:EmailUser/Yug",
+      "url": "https://meta.wikimedia.org/wiki/user:Yug"
     }
   ],
   "license": "MIT",
