@@ -6,7 +6,7 @@
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre'de bulunan tüm videoların listesi getiriliyor.",
-	"si-overlay-coreContent-left-title": "Medyalar:",
+	"si-overlay-coreContent-left-title": "Medya:",
 	"si-overlay-coreContent-left-novideo": "Bu kelime henüz kaydedilmedi<br> ancak SignIt kitle kaynaklı bir projedir ve SignIt'e katkıda bulunabilirsiniz.",
 	"si-overlay-coreContent-left-contribute-label": "İşaret Dili ile Katkıda Bulunun",
 	"si-overlay-coreContent-right-title": "Tanımlar:",
@@ -29,8 +29,9 @@
 	"si-popup-settings-uilanguage-dropdown": "Arayüz dilini değiştir",
 	"si-popup-settings-history": "Değişiklik geçmişi uzunluğu:",
 	"si-popup-settings-history-help": "0 yapılırsa geçmiş günlüğünü devre dışı bırakılır",
-	"si-popup-settings-wpintegration": "Wikipedia'ya yerel entegrasyon:",
-	"si-popup-settings-twospeed": "Normal / yavaş çift oynatma:",
-	"si-popup-settings-enlighten": "Mevcut kelimeleri aydınlatın:",
+	"si-popup-settings-wpintegration": "Wikipedia ile yerel entegrasyon:",
+	"si-popup-settings-twospeed": "Normal hızda, ardından yavaş hızda oynatın:",
+	"si-popup-settings-hint-icon": "Seçili metinde kısayol simgesi:",
+	"si-popup-settings-enlighten": "Mevcut kelimeleri vurgulayın:",
 	"si-videosGallery-video": "{{link|$1|$2}} – Video $3/$4"
 }

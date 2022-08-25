@@ -34,5 +34,5 @@
 	"si-popup-settings-twospeed": "Juega a velocidad normal, luego a velocidad lenta:",
 	"si-popup-settings-hint-icon": "Icono de acceso directo en el texto seleccionado:",
 	"si-popup-settings-enlighten": "Destacar las palabras disponibles:",
-	"si-videosGallery-video": "por {{enlace| $1 | $2 }} – Video $3 de $4"
+	"si-videosGallery-video": "por {{link|$1|$2}} – Video $3 de $4"
 }
