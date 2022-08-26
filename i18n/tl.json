@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"GinawaSaHapon"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Kinukuha ang listahan ng lahat ng mga magagamit na video sa Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Midya:",
+	"si-overlay-coreContent-left-novideo": "Hindi pa nare-record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag-ambag rito.",
+	"si-overlay-coreContent-left-contribute-label": "Mag-ambag gamit ang Wikang Nakasenyas",
+	"si-overlay-coreContent-right-title": "Mga kahulugan:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#English",
+	"si-overlay-coreContent-right-wikt-pointer": "tingnan sa Ingles na Wiktionary",
+	"si-overlay-coreContent-right-error": "Walang nakitang kahulugan.",
+	"si-popup-browse-title": "Mag-browse",
+	"si-popup-browse-placeholder": "Maghanap sa $1 (na) senyas.",
+	"si-popup-browse-label": "Maghanap",
+	"si-popup-browse-icon": "Maghanap na",
+	"si-popup-history-title": "Nakaraan",
+	"si-popup-history-noHistory": "Walang laman",
+	"si-popup-settings-title": "Pagsasaayos",
+	"si-popup-settings-signlanguage": "Wikang nakasenyas:",
+	"si-popup-settings-signlanguage-help": "Palitan ang mga video sa iba pang wikang nakasenyas.",
+	"si-popup-settings-signlanguage-dropdown": "Palitan ang mga wika ng video",
+	"si-popup-settings-uilanguage": "Wika ng interface:",
+	"si-popup-settings-uilanguage-help": "Palitan ang wika ng user interface.",
+	"si-popup-settings-uilanguage-dropdown": "Palitan ang wika ng interface",
+	"si-popup-settings-history": "Haba ng nakaraan:",
+	"si-popup-settings-history-help": "Itakda sa 0 para patayin ang log sa nakaraan",
+	"si-popup-settings-wpintegration": "Native na integration sa Wikipedia:",
+	"si-popup-settings-twospeed": "I-play nang normal muna, tapos mabagal:",
+	"si-popup-settings-hint-icon": "Shortcut icon sa napiling teksto:",
+	"si-popup-settings-enlighten": "I-highlight ang mga available na salita:",
+	"si-videosGallery-video": "ni {{link|$1|$2}} - Video $3 ng $4"
+}

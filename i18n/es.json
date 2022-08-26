@@ -1,8 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
+			"Wikipucine",
 			"Yug"
 		]
 	},
-	"si-addon-title": "Lingua Libre SignIt"
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Obteniendo la lista de todos los videos disponibles en Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Vídeo o audio:",
+	"si-overlay-coreContent-left-novideo": "Esta palabra aún no ha sido grabada,<br> pero SignIt es un proyecto colaborativo, ¡puedes contribuir a él!",
+	"si-overlay-coreContent-left-contribute-label": "Contribuye con Lengua de señas",
+	"si-overlay-coreContent-right-title": "Definiciones:",
+	"si-overlay-coreContent-right-wikt-iso": "es",
+	"si-overlay-coreContent-right-wikt-section-id": "#Español",
+	"si-overlay-coreContent-right-wikt-pointer": "ver en Wikcionario",
+	"si-overlay-coreContent-right-error": "No se encontró una definición.",
+	"si-popup-browse-title": "Explorar",
+	"si-popup-browse-placeholder": "Busque en $1 signos.",
+	"si-popup-browse-label": "Buscar",
+	"si-popup-browse-icon": "Iniciar la búsqueda",
+	"si-popup-history-title": "Historial",
+	"si-popup-history-noHistory": "Es vacío",
+	"si-popup-settings-title": "Preferencias",
+	"si-popup-settings-signlanguage": "Lenguaje de señas:",
+	"si-popup-settings-signlanguage-help": "Cambiar videos a otra lengua de señas.",
+	"si-popup-settings-signlanguage-dropdown": "Cambiar el idioma de los videos",
+	"si-popup-settings-uilanguage": "Idioma de la interfaz:",
+	"si-popup-settings-uilanguage-help": "Cambiar el idioma de la interfaz del usuario.",
+	"si-popup-settings-uilanguage-dropdown": "Cambiar el idioma de la interfaz",
+	"si-popup-settings-history": "Longitud del historial:",
+	"si-popup-settings-history-help": "Poner 0 desactiva el registro de historial",
+	"si-popup-settings-wpintegration": "Integración nativa con Wikipedia:",
+	"si-popup-settings-twospeed": "Juega a velocidad normal, luego a velocidad lenta:",
+	"si-popup-settings-hint-icon": "Icono de acceso directo en el texto seleccionado:",
+	"si-popup-settings-enlighten": "Destacar las palabras disponibles:",
+	"si-videosGallery-video": "por {{link|$1|$2}} – Video $3 de $4"
 }
