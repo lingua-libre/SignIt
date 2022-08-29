@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "A obter a lista de todos os vídeos disponíveis em Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Multimédia:",
+	"si-overlay-coreContent-left-novideo": "Esta palavra ainda não foi gravada,<br> mas como SignIt é um projeto de ''crowdsourcing'' pode participar nele.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuir com língua de sinais",
+	"si-overlay-coreContent-right-title": "Definições:",
+	"si-overlay-coreContent-right-wikt-iso": "pt",
+	"si-overlay-coreContent-right-wikt-section-id": "#Português",
+	"si-overlay-coreContent-right-wikt-pointer": "ver no Wikcionário",
+	"si-overlay-coreContent-right-error": "Não foi encontrada nenhuma definição.",
+	"si-popup-browse-title": "Procurar",
+	"si-popup-browse-placeholder": "Procurar entre $1 sinais.",
+	"si-popup-browse-label": "Procurar",
+	"si-popup-browse-icon": "Iniciar a pesquisa",
+	"si-popup-history-title": "Histórico",
+	"si-popup-history-noHistory": "Está vazio",
+	"si-popup-settings-title": "Definições",
+	"si-popup-settings-signlanguage": "Língua dos sinais:",
+	"si-popup-settings-signlanguage-help": "Alterar a língua de sinais dos vídeos.",
+	"si-popup-settings-signlanguage-dropdown": "Alterar a língua dos vídeos",
+	"si-popup-settings-uilanguage": "Língua da interface:",
+	"si-popup-settings-uilanguage-help": "Alterar a língua da interface do utilizador.",
+	"si-popup-settings-uilanguage-dropdown": "Alterar a língua da interface",
+	"si-popup-settings-history": "Dimensão do histórico:",
+	"si-popup-settings-history-help": "Dimensão 0 desativa o registo do histórico",
+	"si-popup-settings-wpintegration": "Integração nativa com a Wikipédia:",
+	"si-popup-settings-twospeed": "Reproduzir em velocidade normal e depois em velocidade lenta:",
+	"si-popup-settings-hint-icon": "Ícone de atalho sobre o texto selecionado:",
+	"si-popup-settings-enlighten": "Destacar as palavras disponíveis:",
+	"si-videosGallery-video": "de {{link|$1|$2}} – Vídeo $3 de $4"
+}

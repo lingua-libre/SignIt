@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Duke of Wikipädia"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Buscando a lista de todos os vídeos disponíveis no Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Mídia:",
+	"si-overlay-coreContent-left-novideo": "Esta palavra ainda não foi gravada,<br /> mas SignIt é um projeto de crowdsourcingpara o qual você pode contribuir.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuir com a língua de sinais",
+	"si-overlay-coreContent-right-title": "Definições:",
+	"si-overlay-coreContent-right-wikt-iso": "pt",
+	"si-overlay-coreContent-right-wikt-section-id": "#Português",
+	"si-overlay-coreContent-right-wikt-pointer": "veja no Wikcionário",
+	"si-overlay-coreContent-right-error": "Nenhuma definição encontrada.",
+	"si-popup-browse-title": "Navegar",
+	"si-popup-browse-placeholder": "Pesquise entre $1 sinais.",
+	"si-popup-browse-label": "Pesquisar",
+	"si-popup-browse-icon": "Começar a busca",
+	"si-popup-history-title": "Histórico",
+	"si-popup-history-noHistory": "Está vazio",
+	"si-popup-settings-title": "Configurações",
+	"si-popup-settings-signlanguage": "Linguagem de sinais:",
+	"si-popup-settings-signlanguage-help": "Alterar os vídeos para outra língua de sinais.",
+	"si-popup-settings-signlanguage-dropdown": "Alterar o idioma dos vídeos",
+	"si-popup-settings-uilanguage": "Idioma da interface:",
+	"si-popup-settings-uilanguage-help": "Alterar o idioma da interface do usuário.",
+	"si-popup-settings-uilanguage-dropdown": "Alterar o idioma da interface",
+	"si-popup-settings-history": "Duração da história:",
+	"si-popup-settings-history-help": "Defina como 0 para desativar o registro do histórico",
+	"si-popup-settings-wpintegration": "Integração nativa com a Wikipedia:",
+	"si-popup-settings-twospeed": "Jogue em velocidade normal e depois em velocidade lenta:",
+	"si-popup-settings-hint-icon": "Ícone de atalho no texto selecionado:",
+	"si-popup-settings-enlighten": "Destaque as palavras disponíveis:",
+	"si-videosGallery-video": "por {{link|$1|$2}} – Vídeo $3 de $4"
+}
