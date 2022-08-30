@@ -118,7 +118,7 @@
 	
 		$("p,li,h2,h3,a").each(function(){
 			var text = $(this).html();
-			$(this).html(text.replace(r, "<i class='signit-colored'>$1</i>"));
+			$(this).html(text.replace(r, "<si class='signit-colored'>$1</si>"));
 		});
 	};
 	var uncolorWords = function(){
