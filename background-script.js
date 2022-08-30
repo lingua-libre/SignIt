@@ -76,23 +76,26 @@ var state = 'up', // up, loading, ready, error
 /* i18n context ************************************************** */
 	// Get UI languages with translations on github
 	var supportedUiLanguages = [
-		{ wdQid:"Q150",wikimediaCode:"fr",nativeName:"Français",wiktinarySection: "#Français" },
-		{ wdQid:"Q1860",wikimediaCode:"en",nativeName:"English",wiktinarySection: "#English" },
-		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी",wiktinarySection:""},
-		{ wdQid:"Q5287",wikimediaCode:"ja",nativeName:"日本語",wiktinarySection:""},
-		{ wdQid:"Q9027",wikimediaCode:"sv",nativeName:"Svenska",wiktinarySection:""},
-		{ wdQid:"Q9288",wikimediaCode:"he",nativeName:"עברית",wiktinarySection:""},
-		{ wdQid:"Q9296",wikimediaCode:"mk",nativeName:"Македонски",wiktinarySection:""},
-		{ wdQid:"Q25167",wikimediaCode:"nb",nativeName:"Bokmål",wiktinarySection:""},
-		{ wdQid:"Q7737",wikimediaCode:"ru",nativeName:"Русский язык",wiktinarySection: "#" },
-		{ wdQid:"Q33973",wikimediaCode:"scn",nativeName:"Sicilianu",wiktinarySection: "" },
-		{ wdQid:"Q9176",wikimediaCode:"ko",nativeName:"한국어",wiktinarySection:""},
-		{ wdQid:"Q18130932",wikimediaCode:"zh-hant",nativeName:"中文 (繁體)",wiktinarySection:""},
-		{ wdQid:"Q13414913",wikimediaCode:"zh-hans",nativeName:"中文 (简体)",wiktinarySection:""},
-		//{ wdQid: "Q1321", nativeName: "Español", wikimediaCode: "es", wiktinarySection: "#Español" },
+		{ wdQid:"Q9610",wikimediaCode:"bn",labelFR:"bengali",labelEN:"Bengali",nativeName:"বাংলা", wkt:"#Franais" },
+		{ wdQid:"Q1860",wikimediaCode:"en",labelFR:"anglais",labelEN:"English",nativeName:"English", wkt:"#English" },
+		{ wdQid:"Q1321",wikimediaCode:"es",labelFR:"espagnol",labelEN:"Spanish",nativeName:"Español", wkt: "#Español" },
+		{ wdQid:"Q150",wikimediaCode:"fr",labelFR:"français",labelEN:"French",nativeName:"Français", wkt:"" },
+		{ wdQid:"Q9288",wikimediaCode:"he",labelFR:"hébreu",labelEN:"Hebrew",nativeName:"עברית", wkt:"" },
+		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी", wkt:"" },
+		{ wdQid:"Q5287",wikimediaCode:"ja",labelFR:"japonais",labelEN:"Japanese",nativeName:"日本語", wkt:"" },
+		{ wdQid:"Q9176",wikimediaCode:"ko",labelFR:"coréen",labelEN:"Korean",nativeName:"한국어", wkt:"" },
+		{ wdQid:"Q9296",wikimediaCode:"mk",labelFR:"macédonien",labelEN:"Macedonian",nativeName:"Македонски", wkt:"" },
+		{ wdQid:"Q25167",wikimediaCode:"nb",labelFR:"bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wkt:"" },
+		{ wdQid:"Q5146",wikimediaCode:"pt",labelFR:"portugais",labelEN:"Portuguese",nativeName:"Português", wkt:"" },
+		
+		{ wdQid:"Q7737",wikimediaCode:"ru",labelFR:"russe",labelEN:"Russian",nativeName:"Русский язык", wkt:"" },
+		{ wdQid:"Q9027",wikimediaCode:"sv",labelFR:"suédois",labelEN:"Swedish",nativeName:"Svenska", wkt:"" },
+		{ wdQid:"Q256",wikimediaCode:"tr",labelFR:"turc",labelEN:"Turkish",nativeName:"Türkçe", wkt:"" }
+
+		{ wdQid:"Q33973",wikimediaCode:"scn",nativeName:"Sicilianu", wkt:"" },
+		{ wdQid:"Q18130932",wikimediaCode:"zh-hant",nativeName:"中文 (繁體)", wkt:"" },
+		{ wdQid:"Q13414913",wikimediaCode:"zh-hans",nativeName:"中文 (简体)", wkt:"" },
 		//{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
-		//{ wdQid:"Q9610",wikimediaCode:"bn",nativeName:"বাংলা",wiktinarySection:""},
-		//{ wdQid:"Q256",wikimediaCode:"tr",nativeName:"Türkçe",wiktinarySection:""},
 		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:""},
 		//{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
 	];
