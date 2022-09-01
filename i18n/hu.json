@@ -8,6 +8,7 @@
 	"si-overlay-coreContent-right-title": "Definíciók:",
 	"si-overlay-coreContent-right-wikt-section-id": "#Angol",
 	"si-overlay-coreContent-right-wikt-pointer": "lásd a Wikiszótárban",
+	"si-overlay-coreContent-right-error": "Nincs leírás.",
 	"si-popup-browse-title": "Böngészés",
 	"si-popup-browse-icon": "Keresés indítása",
 	"si-popup-history-title": "Előzmények",
@@ -17,6 +18,9 @@
 	"si-popup-settings-uilanguage": "Interfész nyelve:",
 	"si-popup-settings-uilanguage-dropdown": "Felület nyelvének megváltoztatása",
 	"si-popup-settings-history": "Előzmény terjedelme:",
+	"si-popup-settings-history-help": "0-ra állítva deaktiválhatod az előzménynaplót",
+	"si-popup-settings-wpintegration": "Natív integráció a Wikipédiával:",
 	"si-popup-settings-twospeed": "Játszd normál sebességen, majd lassan:",
+	"si-popup-settings-hint-icon": "Parancsikon a kiválasztott szövegben:",
 	"si-popup-settings-enlighten": "Elérhető szavak kiemelése:"
 }

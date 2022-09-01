@@ -4,5 +4,8 @@
 			"Yug"
 		]
 	},
-	"si-addon-title": "Lingua Libre SignIt"
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-right-title": "Definitionen:",
+	"si-overlay-coreContent-right-wikt-iso": "de",
+	"si-overlay-coreContent-right-wikt-section-id": "#Deutsch"
 }
