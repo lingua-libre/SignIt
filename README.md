@@ -20,6 +20,7 @@ There, `Load temporary Add-on`, fin "Lingua Libre SignIt" : click `Inspect`.
 
 ## Visuals
 <img src="doc/LinguaLibre_SignIt-01.png"/>
+<img src="doc/LinguaLibre_SignIt-all.png"/>
 
 ## Development
 ```
