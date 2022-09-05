@@ -12,22 +12,22 @@ var SignItCoreContent = function () {
 			<h1></h1>
 			<div class="signit-popup-content">
 				<h2>Media:`+/* ${ banana.i18n("si-overlay-coreContent-left-title") } */`</h2>
-				<div class="signit-popup-leftpanel signit-novideo">
+				<div class="signit-panel-videos signit-novideo">
 					Pas de video disponible.`+/* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
 				</div>
-				<div class="signit-popup-leftpanel signit-video"></div>
-				<div class="signit-popup-separator"></div>
+				<div class="signit-panel-videos signit-video"></div>
+				<div class="signit-panel-separator"></div>
 				<h2>Definition:`+/* ${ banana.i18n("si-overlay-coreContent-right-title") } */`</h2>
-				<div class="signit-popup-rightpanel signit-definition">
+				<div class="signit-panel-definition signit-definition">
 					<div class="signit-definition-text"></div>
 					<div class="signit-definition-source">
 						<a href="https://fr`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */`.wiktionary.org">voir sur Wiktionaire`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */`</a>
 					</div>
 				</div>
-				<div class="signit-popup-rightpanel signit-loading">
+				<div class="signit-panel-definition signit-loading">
 					<img class="signit-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg') }" width="40" height="40">
 				</div>
-				<div class="signit-popup-rightpanel signit-error">Pas définition disponible.`+/* ${ banana.i18n("si-overlay-coreContent-right-error") } */`</div>
+				<div class="signit-panel-definition signit-error">Pas définition disponible.`+/* ${ banana.i18n("si-overlay-coreContent-right-error") } */`</div>
 			</div>
 		</div>
 	`);

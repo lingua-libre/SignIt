@@ -1,4 +1,78 @@
 /* *************************************************************** */
+/* Modal structure *********************************************** */
+.signit-popup-anchor {
+	position: absolute;
+	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
+}
+
+/* *************************************************************** */
+/* Popup outline ************************************************* */
+.signit-popup { z-index: 9999; }  /* above everythings */
+
+.signit-popup .oo-ui-popupWidget-popup {
+	max-height: 500px;
+}
+
+.signit-popup .oo-ui-popupWidget-body {
+	margin: 0;
+}
+
+/* *************************************************************** */
+/* Popup content ************************************************* */
+.signit-popup h1 {
+	margin-bottom: 0.6em;
+	font-size: 188%;
+	color: black;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #a2a9b1;
+	text-align: center;
+	background-color: #00a99d;
+	color: white;
+	box-shadow: 0 0px 5px -2px black;
+}
+
+.signit-popup h2 {
+	display: none;
+}
+
+.signit-popup-content {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	margin: 0 0.85714286em 0.57142857em;
+}
+
+.signit-panel-separator {
+	flex: 0 0 1px;
+	margin: 25px 10px;
+	background: #a2a9b1;
+	align-self: stretch;
+}
+
+.signit-panel-videos,
+.signit-panel-definition {
+	flex: 0 1 auto;
+	width: 50%;
+}
+
+/* *************************************************************** */
+/* Video gallery panel (left or top) ***************************** */
+.signit-panel-videos {
+	text-align: center;
+}
+
+.signit-video {
+	display: flex;
+	align-items: center;
+}
+
+.signit-video video {
+	box-shadow: 0 0 .5rem #999;
+	width: 100%;
+}
+
+/* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */
 .signit-definition-text {
 	overflow-y: auto;
@@ -69,78 +143,6 @@
 	width: 100%;
 	font-style: italic;
 }
-
-/* *************************************************************** */
-/* Popup outline ************************************************* */
-.signit-popup { z-index: 9999; }  /* above everythings */
-
-.signit-popup .oo-ui-popupWidget-popup {
-	max-height: 500px;
-}
-
-.signit-popup .oo-ui-popupWidget-body {
-	margin: 0;
-}
-
-.signit-popup h1 {
-	margin-bottom: 0.6em;
-	font-size: 188%;
-	color: black;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	border-bottom: 1px solid #a2a9b1;
-	text-align: center;
-	background-color: #00a99d;
-	color: white;
-	box-shadow: 0 0px 5px -2px black;
-}
-
-.signit-popup h2 {
-	display: none;
-}
-
-.signit-popup-content {
-	display: flex;
-	flex: 1;
-	align-items: center;
-	margin: 0 0.85714286em 0.57142857em;
-}
-
-.signit-popup-separator {
-	flex: 0 0 1px;
-	margin: 25px 10px;
-	background: #a2a9b1;
-	align-self: stretch;
-}
-
-.signit-popup-leftpanel, .signit-popup-rightpanel {
-	flex: 0 1 auto;
-	width: 50%;
-}
-
-/* *************************************************************** */
-/* Modal structure *********************************************** */
-.signit-popup-anchor {
-	position: absolute;
-	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
-}
-
-/* *************************************************************** */
-/* Video gallery panel (left or top) ***************************** */
-.signit-popup-leftpanel {
-	text-align: center;
-}
-
-.signit-video {
-	display: flex;
-	align-items: center;
-}
-
-.signit-video video {
-	box-shadow: 0 0 .5rem #999;
-	width: 100%;
-}
-
 
 /* *************************************************************** */
 /* Loading ******************************************************* */
