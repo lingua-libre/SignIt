@@ -21,8 +21,8 @@ var browser = browser || chrome;
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 
 		// Clean up then append
-		document.querySelector( '#signit-loaded' ).innerHTML = "";
-		$( '#signit-loaded' ).append( this.indexLayout.$element );
+		document.querySelector( '#popup-loaded' ).innerHTML = "";
+		$( '#popup-loaded' ).append( this.indexLayout.$element );
 
 		// Build the full tabs inner content
 		this.initView();
@@ -281,8 +281,8 @@ var browser = browser || chrome;
 	/* *********************************************************** */
 	// Tab switcher
 	UI.prototype.switchPanel = function( tab ) {
-		$( '#signit-loading' ).hide();
-		$( '#signit-loaded' ).hide();
+		$( '#popup-loading' ).hide();
+		$( '#popup-loaded' ).hide();
 		$( '#popup-' + tab ).show();
 	};
 	/* *********************************************************** */

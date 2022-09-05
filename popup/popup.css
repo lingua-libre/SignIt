@@ -24,13 +24,13 @@ html, body {
 	height: 100%;
 }
 
-#signit-loading {
+#popup-loading {
 	width: 100%;
 	text-align: center;
 	color: black;
 }
 
-#signit-loading-spinner {
+#popup-loading-spinner {
 	animation: spinner 1.5s linear infinite;
 	width:40px;
 	padding-top: 40px;
@@ -38,7 +38,7 @@ html, body {
 	margin: auto;
 }
 
-#signit-loaded {
+#popup-loaded {
 	display:none; /* hidden by default, will be shown when it's ready to be shown */
 }
 
