@@ -1,18 +1,18 @@
 /* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */
-.signit-wtdef {
+.signit-definition-text {
 	overflow-y: auto;
 	max-height: 340px;
 	text-align: left;
 }
 
-.signit-wtdef p,
-.signit-wtdef b,
-.signit-wtdef span,
-.signit-wtdef i,
-.signit-wtdef a,
-.signit-wtdef ol,
-.signit-wtdef li {
+.signit-definition-text p,
+.signit-definition-text b,
+.signit-definition-text span,
+.signit-definition-text i,
+.signit-definition-text a,
+.signit-definition-text ol,
+.signit-definition-text li {
 	all: initial;
 	font-size: 16px;
 	font-family: sans-serif;
@@ -20,49 +20,49 @@
 	color: #222222;
 }
 
-.signit-wtdef p {
+.signit-definition-text p {
 	margin: 0.4em 0 0.5em 0;
 	padding: 0;
 	display: block;
 }
 
-.signit-wtdef ol {
+.signit-definition-text ol {
 	list-style-type: decimal;
 	margin: 0.3em 0 0 3.2em;
 	display: block;
 }
 
-.signit-wtdef ol li {
+.signit-definition-text ol li {
 	display: list-item;
 	list-style-type: decimal;
 	margin-bottom: 0.8em;
 }
 
-.signit-wtdef i {
+.signit-definition-text i {
 	font-style: italic;
 }
 
-.signit-wtdef b {
+.signit-definition-text b {
 	font-weight: bold;
 }
 
-.signit-wtdef a {
+.signit-definition-text a {
 	color: #0645ad;
 }
 
-.signit-wtdef a:hover {
+.signit-definition-text a:hover {
 	text-decoration: underline;
 }
 
-.signit-wtdef ol ul {
+.signit-definition-text ol ul {
 	display: none;
 }
 
-.signit-wtdef .reference {
+.signit-definition-text .reference {
 	display: none;
 }
 
-.signit-wtsource {
+.signit-definition-source {
 	height: 20px;
 	text-align: right;
 	margin-top: 4px;
@@ -131,12 +131,12 @@
 	text-align: center;
 }
 
-.signit-popup-leftpanel-video {
+.signit-video {
 	display: flex;
 	align-items: center;
 }
 
-.signit-popup-leftpanel-video video {
+.signit-video video {
 	box-shadow: 0 0 .5rem #999;
 	width: 100%;
 }
@@ -148,12 +148,12 @@
   to {transform: rotate(360deg);}
 }
 
-.popup-loading {
+.signit-loading {
 	text-align: center;
 	color: black;
 }
 
-.popup-loading-spinner {
+.signit-loading-spinner {
 	animation: spinner 1.5s linear infinite;
 	width:40px;
 	margin: auto;

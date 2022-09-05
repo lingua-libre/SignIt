@@ -12,20 +12,20 @@ var SignItCoreContent = function () {
 			<h1></h1>
 			<div class="signit-popup-content">
 				<h2>Media:`+/* ${ banana.i18n("si-overlay-coreContent-left-title") } */`</h2>
-				<div class="signit-popup-leftpanel signit-popup-leftpanel-novideo">
+				<div class="signit-popup-leftpanel signit-novideo">
 					Pas de video disponible.`+/* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
 				</div>
-				<div class="signit-popup-leftpanel signit-popup-leftpanel-video"></div>
+				<div class="signit-popup-leftpanel signit-video"></div>
 				<div class="signit-popup-separator"></div>
 				<h2>Definition:`+/* ${ banana.i18n("si-overlay-coreContent-right-title") } */`</h2>
-				<div class="signit-popup-rightpanel signit-wt">
-					<div class="signit-wtdef"></div>
-					<div class="signit-wtsource">
+				<div class="signit-popup-rightpanel signit-definition">
+					<div class="signit-definition-text"></div>
+					<div class="signit-definition-source">
 						<a href="https://fr`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */`.wiktionary.org">voir sur Wiktionaire`+/* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */`</a>
 					</div>
 				</div>
-				<div class="popup-loading signit-popup-rightpanel">
-					<img class="popup-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg') }" width="40" height="40">
+				<div class="signit-popup-rightpanel signit-loading">
+					<img class="signit-loading-spinner" src="${ browser.runtime.getURL( 'icons/Spinner_font_awesome.svg') }" width="40" height="40">
 				</div>
 				<div class="signit-popup-rightpanel signit-error">Pas définition disponible.`+/* ${ banana.i18n("si-overlay-coreContent-right-error") } */`</div>
 			</div>
@@ -39,12 +39,12 @@ var SignItCoreContent = function () {
 	this.contributeButton = new OO.ui.ButtonWidget( optionsContribute );
 
 	this.$title = this.$container.children( 'h1' );
-	this.$wtdef = this.$container.find( '.signit-wtdef' );
-	this.$wtsource = this.$container.find( '.signit-wtsource a' );
-	this.$leftPanelNoVideo = this.$container.find( '.signit-popup-leftpanel-novideo' ).append( this.contributeButton.$element );
-	this.$leftPanelContent = this.$container.find( '.signit-popup-leftpanel-video' );
-	this.$rightPanelContent = this.$container.find( '.signit-wt' );
-	this.$rightPanelSpinner = this.$container.find( '.popup-loading' );
+	this.$wtdef = this.$container.find( '.signit-definition-text' );
+	this.$wtsource = this.$container.find( '.signit-definition-source a' );
+	this.$leftPanelNoVideo = this.$container.find( '.signit-novideo' ).append( this.contributeButton.$element );
+	this.$leftPanelContent = this.$container.find( '.signit-video' );
+	this.$rightPanelContent = this.$container.find( '.signit-definition' );
+	this.$rightPanelSpinner = this.$container.find( '.signit-loading' );
 	this.$rightPanelError = this.$container.find( '.signit-error' );
 
 	this.videosGallery = new SignItVideosGallery( this.$leftPanelContent );
