@@ -1,8 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
+			"Darzz",
 			"Yug"
 		]
 	},
-	"si-addon-title": "Lingua Libre SignIt"
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre-де қолжетімді барлық бейне тізімі алынуда.",
+	"si-overlay-coreContent-left-title": "Медиа:",
+	"si-overlay-coreContent-left-novideo": "Бұл сөзге әлі бейне түсірілмеген,<br>бірақ SignIt краудсорсиң жобасы болғандықтан, сіз оған үлес қоса аласыз.",
+	"si-overlay-coreContent-left-contribute-label": "Ым тілінде үлес қосу",
+	"si-overlay-coreContent-right-title": "Мағыналар:",
+	"si-overlay-coreContent-right-wikt-iso": "ru",
+	"si-overlay-coreContent-right-wikt-section-id": "#Казахский",
+	"si-overlay-coreContent-right-wikt-pointer": "Уикисөздіктен көру",
+	"si-overlay-coreContent-right-error": "Мағына табылмады.",
+	"si-popup-browse-title": "Шолу",
+	"si-popup-browse-placeholder": "$1 ым ішінен іздеу.",
+	"si-popup-browse-label": "Іздеу",
+	"si-popup-browse-icon": "Іздей бастау",
+	"si-popup-history-title": "Тарих",
+	"si-popup-history-noHistory": "Бос",
+	"si-popup-settings-title": "Баптау",
+	"si-popup-settings-signlanguage": "Ым тілі:",
+	"si-popup-settings-signlanguage-help": "Бейнелерді басқа ым тіліне ауыстыру.",
+	"si-popup-settings-signlanguage-dropdown": "Бейне тілін ауыстыру",
+	"si-popup-settings-uilanguage": "Интерфейс тілі:",
+	"si-popup-settings-uilanguage-help": "Қолданушы интерфейсінің тілін ауыстыру.",
+	"si-popup-settings-uilanguage-dropdown": "Интерфейс тілін ауыстыру",
+	"si-popup-settings-history": "Тарих ұзындығы:",
+	"si-popup-settings-history-help": "Тарих журналын өшіру үшін 0-ге орнатыңыз",
+	"si-popup-settings-wpintegration": "Уикипедиямен нативті интеграция:",
+	"si-popup-settings-twospeed": "Алдымен қалыпты жылдамдықпен, сосын баяу жылдамдықпен ойнату:",
+	"si-popup-settings-hint-icon": "Таңдалған мәтінде таңбаша белгісі:",
+	"si-popup-settings-enlighten": "Қолжетімді сөздерді бөлектеу:",
+	"si-videosGallery-video": "авторы: {{link|$1|$2}} — $3/$4 бейне"
 }

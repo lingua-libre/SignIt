@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf",
+			"Beta16",
+			"Valepert",
+			"Yug"
+		]
+	},
+	"si-addon-title": "Lingua Libera SignIt",
+	"si-addon-preload": "Recupero l'elenco di tutti i video disponibili su Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Questa parola non è stata ancora registrata,<br>ma SignIt è un progetto in crowdsourcing, puoi contribuire anche tu.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuisci con la lingua dei segni",
+	"si-overlay-coreContent-right-title": "Definizioni:",
+	"si-overlay-coreContent-right-wikt-iso": "it",
+	"si-overlay-coreContent-right-wikt-section-id": "#Italiano",
+	"si-overlay-coreContent-right-wikt-pointer": "vedi su Wikizionario",
+	"si-overlay-coreContent-right-error": "Nessuna definizione trovata.",
+	"si-popup-browse-title": "Esplora",
+	"si-popup-browse-placeholder": "Cerca tra i $1 segni.",
+	"si-popup-browse-label": "Cerca",
+	"si-popup-browse-icon": "Inizia la ricerca",
+	"si-popup-history-title": "Cronologia",
+	"si-popup-history-noHistory": "È vuota",
+	"si-popup-settings-title": "Impostazioni",
+	"si-popup-settings-signlanguage": "Lingua dei segni:",
+	"si-popup-settings-signlanguage-help": "Cambia la lingua dei segni utilizzata nei filmati.",
+	"si-popup-settings-signlanguage-dropdown": "Cambia la lingua dei filmati",
+	"si-popup-settings-uilanguage": "Lingua dell'interfaccia:",
+	"si-popup-settings-uilanguage-help": "Cambia la lingua dell'interfaccia.",
+	"si-popup-settings-uilanguage-dropdown": "Cambia la lingua dell'interfaccia",
+	"si-popup-settings-history": "Lunghezza della cronologia:",
+	"si-popup-settings-history-help": "Imposta a 0 per disabilitare la cronologia",
+	"si-popup-settings-wpintegration": "Integrazione nativa con Wikipedia:",
+	"si-popup-settings-twospeed": "Riproduci a velocità normale, quindi a velocità ridotta:",
+	"si-popup-settings-hint-icon": "Icona sul testo selezionato:",
+	"si-popup-settings-enlighten": "Evidenzia le parole disponibili:",
+	"si-videosGallery-video": "di {{link|$1|$2}} - Video $3 di $4"
+}
