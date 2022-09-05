@@ -70,35 +70,46 @@ var state = 'up', // up, loading, ready, error
 		twospeed: true,
 		hinticon: true,
 		coloredwords: true,
+		// Preparation for issues/36
+		showvideo: true;
+		showdefinition: true;
 	};
 
 /* *************************************************************** */
 /* i18n context ************************************************** */
 	// Get UI languages with translations on github
 	var supportedUiLanguages = [
-		{ wdQid:"Q9610",wikimediaCode:"bn",labelFR:"bengali",labelEN:"Bengali",nativeName:"বাংলা", wkt:"#Franais" },
-		{ wdQid:"Q1860",wikimediaCode:"en",labelFR:"anglais",labelEN:"English",nativeName:"English", wkt:"#English" },
-		{ wdQid:"Q1321",wikimediaCode:"es",labelFR:"espagnol",labelEN:"Spanish",nativeName:"Español", wkt: "#Español" },
-		{ wdQid:"Q150",wikimediaCode:"fr",labelFR:"français",labelEN:"French",nativeName:"Français", wkt:"" },
-		{ wdQid:"Q9288",wikimediaCode:"he",labelFR:"hébreu",labelEN:"Hebrew",nativeName:"עברית", wkt:"" },
-		{ wdQid:"Q1568",wikimediaCode:"hi",nativeName:"मानक हिन्दी", wkt:"" },
-		{ wdQid:"Q5287",wikimediaCode:"ja",labelFR:"japonais",labelEN:"Japanese",nativeName:"日本語", wkt:"" },
-		{ wdQid:"Q9176",wikimediaCode:"ko",labelFR:"coréen",labelEN:"Korean",nativeName:"한국어", wkt:"" },
-		{ wdQid:"Q9296",wikimediaCode:"mk",labelFR:"macédonien",labelEN:"Macedonian",nativeName:"Македонски", wkt:"" },
-		{ wdQid:"Q25167",wikimediaCode:"nb",labelFR:"bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wkt:"" },
-		{ wdQid:"Q5146",wikimediaCode:"pt",labelFR:"portugais",labelEN:"Portuguese",nativeName:"Português", wkt:"" },
-		
-		{ wdQid:"Q7737",wikimediaCode:"ru",labelFR:"russe",labelEN:"Russian",nativeName:"Русский язык", wkt:"" },
-		{ wdQid:"Q9027",wikimediaCode:"sv",labelFR:"suédois",labelEN:"Swedish",nativeName:"Svenska", wkt:"" },
-		{ wdQid:"Q256",wikimediaCode:"tr",labelFR:"turc",labelEN:"Turkish",nativeName:"Türkçe", wkt:"" }
+		{ wdQid:"Q13955",wikimediaCode:"ar",labelFR:"Arabe",labelEN:"Arabic",nativeName:"اللُّغَة العَرَبِيّة", wikt:"" },
+		{ wdQid:"Q9610",wikimediaCode:"bn",labelFR:"Bengali",labelEN:"Bengali",nativeName:"বাংলা", wikt:"#Francais" },
+		{ wdQid:"Q188",wikimediaCode:"de",labelFR:"Allemand",labelEN:"German",nativeName:"Deutsch", wikt:"" },
+		{ wdQid:"Q1860",wikimediaCode:"en",labelFR:"Anglais",labelEN:"English",nativeName:"English", wikt:"#English" },
+		//{ wdQid:"Q9240",wikimediaCode:"id",labelFR:"indonésien",labelEN:"Indonesian",nativeName:"Bahasa Indonesia", wikt:"" },
+		{ wdQid:"Q652",wikimediaCode:"it",labelFR:"Italien",labelEN:"Italian",nativeName:"Italiano", wikt:"" },
+		{ wdQid:"Q1321",wikimediaCode:"es",labelFR:"Espagnol",labelEN:"Spanish",nativeName:"Español", wikt: "#Español" },
+		{ wdQid:"Q150",wikimediaCode:"fr",labelFR:"Français",labelEN:"French",nativeName:"Français", wikt:"" },
+		{ wdQid:"Q9288",wikimediaCode:"he",labelFR:"Hébreu",labelEN:"Hebrew",nativeName:"עברית", wikt:"" },
+		{ wdQid:"Q1568",wikimediaCode:"hi",labelFR:"Hindi",labelEN:"Hindi",nativeName:"मानक हिन्दी", wikt:"" },
+		//{ wdQid:"Q9067",wikimediaCode:"hu",labelFR:"hongrois",labelEN:"Hungarian",nativeName:"Magyar", wikt:"" },
+		{ wdQid:"Q5287",wikimediaCode:"ja",labelFR:"Japonais",labelEN:"Japanese",nativeName:"日本語", wikt:"" },
+		{ wdQid:"Q9252",wikimediaCode:"kk",labelFR:"Kazakh",labelEN:"Kazakh",nativeName:"Казақша", wikt:"" },
+		{ wdQid:"Q9176",wikimediaCode:"ko",labelFR:"Coréen",labelEN:"Korean",nativeName:"한국어", wikt:"" },
+		//{ wdQid: "Q7930",wikimediaCode:"mg",labelFR:"malgache",labelEN:"Malagasy",nativeName:"Fiteny Magalasy",wikt:"" },
+		{ wdQid:"Q9296",wikimediaCode:"mk",labelFR:"Macédonien",labelEN:"Macedonian",nativeName:"Македонски", wikt:"" },
+		{ wdQid:"Q25167",wikimediaCode:"nb",labelFR:"Bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wikt:"" },
+		{ wdQid:"Q5146",wikimediaCode:"pt",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português", wikt:"" },
+		{ wdQid:"Q7737",wikimediaCode:"ru",labelFR:"Russe",labelEN:"Russian",nativeName:"Русский язык", wikt:"" },
+		{ wdQid:"Q33973",wikimediaCode:"scn",labelFR:"Sicilien",labelEN:"Sicilian",nativeName:"Sicilianu", wikt:"" },
+		{ wdQid:"Q9027",wikimediaCode:"sv",labelFR:"Suédois",labelEN:"Swedish",nativeName:"Svenska", wikt:"" },
+		//{ wdQid:"Q7838",wikimediaCode:"sw",labelFR:"swahili",labelEN:"Swahili",nativeName:"Kiswahili", wikt:"" },
+		//{ wdQid:"Q9267",wikimediaCode:"tk",labelFR:"turkmène",labelEN:"Turkmen",nativeName:"Türkmençe",wikt:"" },
+		{ wdQid:"Q34057",wikimediaCode:"tl",labelFR:"Tagalog",labelEN:"Tagalog",nativeName:"Wikang Tagalog", wikt:"" },
+		{ wdQid:"Q256",wikimediaCode:"tr",labelFR:"Turc",labelEN:"Turkish",nativeName:"Türkçe", wikt:"" },		
+		{ wdQid:"Q18130932",wikimediaCode:"zh-hant",labelFR:"Chinois traditionel",labelEN:"Traditional Chinese",nativeName:"中文 (繁體)", wikt:"" },
+		{ wdQid:"Q13414913",wikimediaCode:"zh-hans",labelFR:"Chinois moderne",labelEN:"Modern Chinese",nativeName:"中文 (简体)", wikt:"" },
 
-		{ wdQid:"Q33973",wikimediaCode:"scn",nativeName:"Sicilianu", wkt:"" },
-		{ wdQid:"Q18130932",wikimediaCode:"zh-hant",nativeName:"中文 (繁體)", wkt:"" },
-		{ wdQid:"Q13414913",wikimediaCode:"zh-hans",nativeName:"中文 (简体)", wkt:"" },
-		//{ wdQid: "Q9252", nativeName: "Казақша", wikimediaCode: "kk", wiktinarySection: "#" },
-		//{ wdQid:"Q9267",wikimediaCode:"tk",nativeName:"Türkmençe",wiktinarySection:""},
-		//{ wdQid: "Q7930", nativeName: "Magalasy", wikimediaCode: "mg", wiktinarySection: "" },
+		//{ wdQid:"",wikimediaCode:"",labelFR:"",labelEN:"",nativeName:"", wikt:"" },
 	];
+
 	var filterArrayBy = function (arr, key, value){
 		return arr.filter(item => (item[key]==value) )[0]
 	};
