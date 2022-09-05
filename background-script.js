@@ -71,8 +71,8 @@ var state = 'up', // up, loading, ready, error
 		hinticon: true,
 		coloredwords: true,
 		// Preparation for issues/36
-		showvideo: true;
-		showdefinition: true;
+		showvideo: true,
+		showdefinition: true,
 	};
 
 /* *************************************************************** */
