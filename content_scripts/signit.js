@@ -2,13 +2,9 @@
 	var popup, $anchorModal, content;
 	var hintIcon, $anchorHintIcon;
 	//captureUserEvents();
-	/**
-	* Check and set a global guard variable.
-	* If this content script is injected into the same page again,
-	* it will do nothing next time.
-	*/
+
 	/* *********************************************************** */
-	/* If already ran once: break ******************************** */
+	/* Global guard variable, prevents multi-runs **************** */
 	if ( window.hasRun ) { return; }
 	window.hasRun = true;
 	
@@ -105,8 +101,8 @@
 		// document.addEventListener("keydown", keyDown);
 	//}
 
-
-	// Text coloring for available word-video pairs
+	/* *************************************************************** */
+	/* Text coloring for available word-video pairs ****************** */
 	var colorThoseWords = function(arr){
 		words = arr.join('|');
 		// Regex lookareound: https://regular-expressions.info/lookaround.html

@@ -1,7 +1,7 @@
 // const { default: backgroundPage } = require("./background-script"); // to try
 
 var SignItCoreContent = function () {
-	console.log("SignItCore 1")
+	console.log("SignItCoreContent.js")
 	// console.log("banana",banana) // -> Uncaught (in promise) Error: banana is not defined
 	// background.js not accessible natively
 	// HOW TO IMPORT background.js and its banana i18n ?
