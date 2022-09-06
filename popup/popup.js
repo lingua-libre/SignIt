@@ -63,7 +63,7 @@ var browser = browser || chrome;
 
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
-		await _backgroundPage.checkInjection( tabs[ 0 ].id );
+		await _backgroundPage.checkActiveTabInjections( tabs[ 0 ].id );
 	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
@@ -168,7 +168,8 @@ var browser = browser || chrome;
 			//helpInline: true
 		} );
 		
-		/* UI Languages picker */		
+		/* Open-ended settings options : *********************************** */
+		// UI Languages picker
 		// Data
 		items = [];
 		_uiLanguages = _backgroundPage.uiLanguages
@@ -194,7 +195,7 @@ var browser = browser || chrome;
 			//helpInline: true
 		} );
 
-		/* History length chooser */
+		// History-logs length
 		historyWidget = new OO.ui.NumberInputWidget( {
 			value: 20,
 			min: 0
@@ -205,7 +206,9 @@ var browser = browser || chrome;
 			help: banana.i18n("si-popup-settings-history-help"),
 		} );
 
-		/* WP integrator */
+		
+		/* Toogle settings options : on/off ******************************** */
+		// WP integrator
 		wpintegrationWidget = new OO.ui.ToggleSwitchWidget( {
 			value: true
 		} );
@@ -214,7 +217,7 @@ var browser = browser || chrome;
 			align: 'top',
 		} );
 
-		/* Two speed playback integrator */
+		// Two speed playback integrator
 		twospeedWidget = new OO.ui.ToggleSwitchWidget( {
 			value: true
 		} );
@@ -222,7 +225,7 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-twospeed"),
 			align: 'top',
 		} );
-		/* Hint icon shortcut */
+		// Hint icon shortcut
 		hinticonWidget = new OO.ui.ToggleSwitchWidget( {
 			value: true
 		} );
@@ -230,7 +233,7 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-hint-icon"),
 			align: 'top',
 		} );
-		/* Colored text */
+		// Colored text
 		coloredwordsWidget = new OO.ui.ToggleSwitchWidget( {
 			value: true
 		} );
@@ -238,6 +241,8 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-enlighten"),
 			align: 'top',
 		} );
+		// Show video 
+		// Show definitions 
 
 
 		// Populate UI with correct values
