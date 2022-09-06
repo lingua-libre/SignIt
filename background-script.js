@@ -1,9 +1,6 @@
 /* *************************************************************** */
 /* TODO ********************************************************** */
-// [ ] multi-videos (?)
-// [ ] WT/Lexeme defenition
-// [ ] underline available words in the page
-// [ ] support link right click
+// See https://github.com/lingua-libre/SignIt/issues
 
 /* Phases ******************************************************** */
 // state: up
@@ -55,7 +52,7 @@ WHERE {
 }`
 
 /* *************************************************************** */
-/* Init state if no localStorage ********************************* */
+/* Initial state if no localStorage ********************************* */
 var state = 'up', // up, loading, ready, error
 	records = {},
 	signLanguages = [],
@@ -77,54 +74,92 @@ var state = 'up', // up, loading, ready, error
 
 /* *************************************************************** */
 /* i18n context ************************************************** */
-	// Get UI languages with translations on github
-	var supportedUiLanguages = [
-		{ wdQid:"Q13955",wiki:"ar",i18n:"ar",labelFR:"Arabe",labelEN:"Arabic",nativeName:"اللُّغَة العَرَبِيّة", wikt:"" },
-		{ wdQid:"Q9610",wiki:"bn",i18n:"bn",labelFR:"Bengali",labelEN:"Bengali",nativeName:"বাংলা", wikt:"" },
-		{ wdQid:"Q188",wiki:"de",i18n:"de",labelFR:"Allemand",labelEN:"German",nativeName:"Deutsch", wikt:"" },
-		{ wdQid:"Q1860",wiki:"en",i18n:"en",labelFR:"Anglais",labelEN:"English",nativeName:"English", wikt:"" },
-		{ wdQid:"Q1321",wiki:"es",i18n:"es",labelFR:"Espagnol",labelEN:"Spanish",nativeName:"Español", wikt: "" },
-		{ wdQid:"Q150",wiki:"fr",i18n:"fr",labelFR:"Français",labelEN:"French",nativeName:"Français", wikt:"" },
-		{ wdQid:"Q9288",wiki:"he",i18n:"he",labelFR:"Hébreu",labelEN:"Hebrew",nativeName:"עברית", wikt:"" },
-		{ wdQid:"Q1568",wiki:"hi",i18n:"hi",labelFR:"Hindi",labelEN:"Hindi",nativeName:"मानक हिन्दी", wikt:"" },
-		//{ wdQid:"Q9067",wiki:"hu",i18n:"hu",labelFR:"hongrois",labelEN:"Hungarian",nativeName:"Magyar", wikt:"" },
-		//{ wdQid:"Q9240",wiki:"id",i18n:"id",labelFR:"indonésien",labelEN:"Indonesian",nativeName:"Bahasa Indonesia", wikt:"" },
-		{ wdQid:"Q652",wiki:"it",i18n:"it",labelFR:"Italien",labelEN:"Italian",nativeName:"Italiano", wikt:"" },
-		{ wdQid:"Q5287",wiki:"ja",i18n:"ja",labelFR:"Japonais",labelEN:"Japanese",nativeName:"日本語", wikt:"" },
-		{ wdQid:"Q9252",wiki:"kk",i18n:"kk-cyrl",labelFR:"Kazakh",labelEN:"Kazakh",nativeName:"Казақша", wikt:"" },
-		{ wdQid:"Q9176",wiki:"ko",i18n:"ko",labelFR:"Coréen",labelEN:"Korean",nativeName:"한국어", wikt:"" },
-		//{ wdQid: "Q7930",wiki:"mg",i18n:"mg",labelFR:"malgache",labelEN:"Malagasy",nativeName:"Fiteny Magalasy",wikt:"" },
-		{ wdQid:"Q9296",wiki:"mk",i18n:"mk",labelFR:"Macédonien",labelEN:"Macedonian",nativeName:"Македонски", wikt:"" },
-		{ wdQid:"Q25167",wiki:"nb",i18n:"nb",labelFR:"Bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wikt:"" },
-		{ wdQid:"Q5146",wiki:"pt",i18n:"pt",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (pt)", wikt:"" },
-		{ wdQid:"Q5146",wiki:"pt",i18n:"pt-br",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (br)", wikt:"" },
-		{ wdQid:"Q7737",wiki:"ru",i18n:"ru",labelFR:"Russe",labelEN:"Russian",nativeName:"Русский язык", wikt:"" },
-		{ wdQid:"Q33973",wiki:"scn",i18n:"scn",labelFR:"Sicilien",labelEN:"Sicilian",nativeName:"Sicilianu", wikt:"" },
-		{ wdQid:"Q9027",wiki:"sv",i18n:"sv",labelFR:"Suédois",labelEN:"Swedish",nativeName:"Svenska", wikt:"" },
-		//{ wdQid:"Q7838",wiki:"sw",i18n:"sw",labelFR:"swahili",labelEN:"Swahili",nativeName:"Kiswahili", wikt:"" },
-		//{ wdQid:"Q9267",wiki:"tk",i18n:"tk",labelFR:"turkmène",labelEN:"Turkmen",nativeName:"Türkmençe",wikt:"" },
-		{ wdQid:"Q34057",wiki:"tl",i18n:"tl",labelFR:"Tagalog",labelEN:"Tagalog",nativeName:"Wikang Tagalog", wikt:"" },
-		{ wdQid:"Q256",wiki:"tr",i18n:"tr",labelFR:"Turc",labelEN:"Turkish",nativeName:"Türkçe", wikt:"" },		
-		{ wdQid:"Q18130932",wiki:"zh",i18n:"zh-hant",labelFR:"Chinois traditionel",labelEN:"Traditional Chinese",nativeName:"中文 (繁體)", wikt:"" },
-		{ wdQid:"Q13414913",wiki:"zh",i18n:"zh-hans",labelFR:"Chinois moderne",labelEN:"Modern Chinese",nativeName:"中文 (简体)", wikt:"" },
+// Get UI languages with translations on github
+var supportedUiLanguages = [
+	{ wdQid:"Q13955",wiki:"ar",i18n:"ar",labelFR:"Arabe",labelEN:"Arabic",nativeName:"اللُّغَة العَرَبِيّة", wikt:"" },
+	{ wdQid:"Q9610",wiki:"bn",i18n:"bn",labelFR:"Bengali",labelEN:"Bengali",nativeName:"বাংলা", wikt:"" },
+	{ wdQid:"Q188",wiki:"de",i18n:"de",labelFR:"Allemand",labelEN:"German",nativeName:"Deutsch", wikt:"" },
+	{ wdQid:"Q1860",wiki:"en",i18n:"en",labelFR:"Anglais",labelEN:"English",nativeName:"English", wikt:"" },
+	{ wdQid:"Q1321",wiki:"es",i18n:"es",labelFR:"Espagnol",labelEN:"Spanish",nativeName:"Español", wikt: "" },
+	{ wdQid:"Q150",wiki:"fr",i18n:"fr",labelFR:"Français",labelEN:"French",nativeName:"Français", wikt:"" },
+	{ wdQid:"Q9288",wiki:"he",i18n:"he",labelFR:"Hébreu",labelEN:"Hebrew",nativeName:"עברית", wikt:"" },
+	{ wdQid:"Q1568",wiki:"hi",i18n:"hi",labelFR:"Hindi",labelEN:"Hindi",nativeName:"मानक हिन्दी", wikt:"" },
+	//{ wdQid:"Q9067",wiki:"hu",i18n:"hu",labelFR:"hongrois",labelEN:"Hungarian",nativeName:"Magyar", wikt:"" },
+	//{ wdQid:"Q9240",wiki:"id",i18n:"id",labelFR:"indonésien",labelEN:"Indonesian",nativeName:"Bahasa Indonesia", wikt:"" },
+	{ wdQid:"Q652",wiki:"it",i18n:"it",labelFR:"Italien",labelEN:"Italian",nativeName:"Italiano", wikt:"" },
+	{ wdQid:"Q5287",wiki:"ja",i18n:"ja",labelFR:"Japonais",labelEN:"Japanese",nativeName:"日本語", wikt:"" },
+	{ wdQid:"Q9252",wiki:"kk",i18n:"kk-cyrl",labelFR:"Kazakh",labelEN:"Kazakh",nativeName:"Казақша", wikt:"" },
+	{ wdQid:"Q9176",wiki:"ko",i18n:"ko",labelFR:"Coréen",labelEN:"Korean",nativeName:"한국어", wikt:"" },
+	//{ wdQid: "Q7930",wiki:"mg",i18n:"mg",labelFR:"malgache",labelEN:"Malagasy",nativeName:"Fiteny Magalasy",wikt:"" },
+	{ wdQid:"Q9296",wiki:"mk",i18n:"mk",labelFR:"Macédonien",labelEN:"Macedonian",nativeName:"Македонски", wikt:"" },
+	{ wdQid:"Q25167",wiki:"nb",i18n:"nb",labelFR:"Bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wikt:"" },
+	{ wdQid:"Q5146",wiki:"pt",i18n:"pt",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (pt)", wikt:"" },
+	{ wdQid:"Q5146",wiki:"pt",i18n:"pt-br",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (br)", wikt:"" },
+	{ wdQid:"Q7737",wiki:"ru",i18n:"ru",labelFR:"Russe",labelEN:"Russian",nativeName:"Русский язык", wikt:"" },
+	{ wdQid:"Q33973",wiki:"scn",i18n:"scn",labelFR:"Sicilien",labelEN:"Sicilian",nativeName:"Sicilianu", wikt:"" },
+	{ wdQid:"Q9027",wiki:"sv",i18n:"sv",labelFR:"Suédois",labelEN:"Swedish",nativeName:"Svenska", wikt:"" },
+	//{ wdQid:"Q7838",wiki:"sw",i18n:"sw",labelFR:"swahili",labelEN:"Swahili",nativeName:"Kiswahili", wikt:"" },
+	//{ wdQid:"Q9267",wiki:"tk",i18n:"tk",labelFR:"turkmène",labelEN:"Turkmen",nativeName:"Türkmençe",wikt:"" },
+	{ wdQid:"Q34057",wiki:"tl",i18n:"tl",labelFR:"Tagalog",labelEN:"Tagalog",nativeName:"Wikang Tagalog", wikt:"" },
+	{ wdQid:"Q256",wiki:"tr",i18n:"tr",labelFR:"Turc",labelEN:"Turkish",nativeName:"Türkçe", wikt:"" },		
+	{ wdQid:"Q18130932",wiki:"zh",i18n:"zh-hant",labelFR:"Chinois traditionel",labelEN:"Traditional Chinese",nativeName:"中文 (繁體)", wikt:"" },
+	{ wdQid:"Q13414913",wiki:"zh",i18n:"zh-hans",labelFR:"Chinois moderne",labelEN:"Modern Chinese",nativeName:"中文 (简体)", wikt:"" },
 
-		//{ wdQid:"",wiki:"",i18n:"",labelFR:"",labelEN:"",nativeName:"", wikt:"" },
-	];
+	//{ wdQid:"",wiki:"",i18n:"",labelFR:"",labelEN:"",nativeName:"", wikt:"" },
+];
 
-	var filterArrayBy = function (arr, key, value){
-		return arr.filter(item => (item[key]==value) )
-	};
+// Init internationalisation support with Banana-i18n.js
+banana = new Banana('fr'); // use document browser language
+loadI18nLocalization(params.uiLanguage);
+// Add url support
+banana.registerParserPlugin('link', (nodes) => {
+	return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
+});
 
-	// Init internationalisation support with Banana-i18n.js
-	banana = new Banana('fr'); // use document browser language
-	loadI18nLocalization(params.uiLanguage);
-	// Add url support
-	banana.registerParserPlugin('link', (nodes) => {
-		return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
-	});
+/* ************************************************ 
+async function fetchJS(filepath) {
+	try {
+		const response = await fetch(`${filepath}`, {
+			method: 'GET',
+			credentials: 'same-origin'
+		});
+		const content = await response.json();
+		return content;
+	} catch (error) { console.error(error); }
+}
+messages = await fetchJS(`i18n/${locale}.json`); */
+
+// Loading all UI translations
+async function loadI18nLocalization( uiLanguageQid ) {
+	var localizedPhrases = {};
+
+	console.log("uiLanguageQid)",uiLanguageQid);
+	console.log("supportedUiLanguages",supportedUiLanguages);
+
+	state = 'loading';
+	
+	// Get locale code and corresponding wiktionary
+	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
+	locale = lang[0].i18n;
+	console.log("locale",locale)
+
+	// Load i18n messages
+	const res = await fetch(`i18n/${locale}.json`)
+	localizedPhrases = await res.json();
+	console.log("messages",localizedPhrases["si-popup-settings-title"])
+	// Load messages into localisation
+	banana.load(localizedPhrases, locale); // Load localized messages (chould be conditional to empty)
+
+	// Declare localisation
+	banana.setLocale(locale); // Change to new locale
+	
+	state = 'ready';
+
+	console.log( Object.keys( localizedPhrases ).length + ' i18n messages loaded' );
+}
 
 /* *************************************************************** */
-/* Toolbox functions ********************************************* */
+/* Settings management : memory, updates ************************* */
 // Save parameter and value in localStorage
 async function storeParam( name, value ) {
 	// If the value is an array, we make a copy of it to avoid dead references issues
@@ -148,23 +183,6 @@ async function getStoredParam( name ) {
 	return params[ name ];
 }
 
-// ???
-async function checkInjection( tab ) {
-	try {
-		await browser.tabs.sendMessage( tab, { command: "ping" } );
-	} catch ( error ) {
-		var i,
-			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifier
-			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
-
-		for( i = 0; i < scripts.length; i++ ) {
-			await browser.tabs.executeScript( tab, { file: scripts[ i ] } );
-		}
-		for( i = 0; i < stylesheets.length; i++ ) {
-			await browser.tabs.insertCSS( tab, { file: stylesheets[ i ] } );
-		}
-	}
-}
 
 // Get sign languages covered by Lingualibre
 // returns: [{ wdQid: "Q99628", nativeName: "langue des signes française"},{},...]
@@ -215,74 +233,6 @@ async function getAllRecords( signLanguage ) {
 	return records;
 }
 
-// Given a word string, check if exist in available records data, if so return data on that word
-// returns format: { filename: url, speaker: name }
-function wordToFiles( word ) {
-	// could use a switch for clarity
-	if ( records.hasOwnProperty( word ) === false ) {
-		word = word.toLowerCase();
-		if ( records.hasOwnProperty( word ) === false ) {
-			return null;
-		}
-	}
-	return records[ word ];
-}
-
-function normalize( selection ) { // this could do more
-	return selection.trim();
-}
-var normalizeMessage = function(msg){
-	var text = msg.selectionText || msg.iconText || msg.wpTitle;
-	delete msg.selectionText; // when from background-script.js via right-click menu
-	delete msg.iconText; // when from signit.js icon click
-	delete msg.wpTitle; // when from wpintegration.js auto-injection
-	msg.text = text.trim();
-	// msg.list = getAllRecords() <--------- how to do
-	return msg
-}
-
-/* ************************************************ 
-async function fetchJS(filepath) {
-	try {
-		const response = await fetch(`${filepath}`, {
-			method: 'GET',
-			credentials: 'same-origin'
-		});
-		const content = await response.json();
-		return content;
-	} catch (error) { console.error(error); }
-}
- messages = await fetchJS(`i18n/${locale}.json`); */
-
-// Loading all UI translations
-async function loadI18nLocalization( uiLanguageQid ) {
-	var messages = {};
-
-	console.log("uiLanguageQid)",uiLanguageQid);
-	console.log("supportedUiLanguages",supportedUiLanguages);
-
-	state = 'loading';
-	
-	// Get locale code and corresponding wiktionary
-	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
-	locale = lang[0].i18n;
-	console.log("locale",locale)
-
-	// Load i18n messages
-	const res = await fetch(`i18n/${locale}.json`)
-	messages = await res.json();
-	console.log("messages",messages["si-popup-settings-title"])
-	// Load messages into localisation
-	banana.load(messages, locale); // Load localized messages (chould be conditional to empty)
-
-	// Declare localisation
-	banana.setLocale(locale); // Change to new locale
-	
-	state = 'ready';
-
-	console.log( Object.keys( messages ).length + ' i18n messages loaded' );
-}
-
 // Given language's Qid, reload list of available videos and records/words data
 async function changeLanguage( newLang ) {
 	records = await getAllRecords( newLang );
@@ -296,15 +246,76 @@ async function changeUiLanguage( newLang ) {
 	await storeParam( 'uiLanguage', newLang ); // localStorage save
 }
 
+
+/* *************************************************************** */
+/* Toolbox functions ********************************************* */
+var filterArrayBy = function (arr, key, value){
+	return arr.filter(item => (item[key]==value) )
+};
+function normalize( selection ) { // this could do more
+	return selection.trim();
+}
+
+// Given a word string, check if exist in available records data, if so return data on that word
+// returns format: { filename: url, speaker: name }
+function wordToFiles( word ) {
+	var fileData =
+		records.hasOwnProperty( word ) ? records[ word ]
+		:records.hasOwnProperty( word.toLowerCase() )? records[ word.toLowerCase() ]
+		:null;
+	return fileData;
+}
+
+var normalizeMessage = function(msg){
+	var text = msg.selectionText || msg.iconText || msg.wpTitle;
+	delete msg.selectionText; // when from background-script.js via right-click menu
+	delete msg.iconText; // when from signit.js icon click
+	delete msg.wpTitle; // when from wpintegration.js auto-injection
+	msg.text = text.trim();
+	// msg.list = getAllRecords() <--------- how to do
+	return msg
+}
+
+/* *************************************************************** */
+/* Dependencies, CSP ********************************************* */
+// CSS, JS dependencie loaded and executed, to be sure
+async function checkInjection( tab ) {
+	try {
+		await browser.tabs.sendMessage( tab, { command: "ping" } );
+	} catch ( error ) {
+		var i,
+			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifier
+			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
+
+		for( i = 0; i < scripts.length; i++ ) {
+			await browser.tabs.executeScript( tab, { file: scripts[ i ] } );
+		}
+		for( i = 0; i < stylesheets.length; i++ ) {
+			await browser.tabs.insertCSS( tab, { file: stylesheets[ i ] } );
+		}
+	}
+}
+
+// Edit the header of all pages on-the-fly to bypass Content-Security-Policy
+browser.webRequest.onHeadersReceived.addListener(info => {
+    const headers = info.responseHeaders; // original headers
+    for (let i=headers.length-1; i>=0; --i) {
+        let header = headers[i].name.toLowerCase();
+        if (header === "content-security-policy") { // csp header is found
+            // modifying media-src; this implies that the directive is already present
+            headers[i].value = headers[i].value.replace("media-src", "media-src https://commons.wikimedia.org https://upload.wikimedia.org");
+        }
+    }
+    // return modified headers
+    return {responseHeaders: headers};
+}, {
+    urls: [ "<all_urls>" ], // match all pages
+    types: [ "main_frame" ] // to focus only the main document of a tab
+}, ["blocking", "responseHeaders"]);
+
+
 /* *************************************************************** */
 /* Browser interactions ****************************************** */
-// Create a context menu item (right-click on text to see)
-browser.contextMenus.create({
-  id: "signit",
-  title: 'Lingua Libre SignIt',
-  contexts: ["selection"]
-}, function() {return;});
-
 var callModal = async function(msg){
 	// Tab
 	console.log("Call modal > msg",{ msg });
@@ -325,6 +336,13 @@ var callModal = async function(msg){
 	storeParam( 'history', [ word, ...params.history ] );
 }
 
+// Create a context menu item (right-click on text to see)
+browser.contextMenus.create({
+	id: "signit",
+	title: 'Lingua Libre SignIt',
+	contexts: ["selection"]
+  }, function() {return;});
+  
 // Listen for right-click menu's signals
 browser.contextMenus.onClicked.addListener( async function( menuMessage, __tab ) { // var tab not used ? Can remove ?
 	message = normalizeMessage(menuMessage)
@@ -355,23 +373,6 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 		callModal(message);
 	}
 });
-
-// Edit the header of all pages on-the-fly to bypass Content-Security-Policy
-browser.webRequest.onHeadersReceived.addListener(info => {
-    const headers = info.responseHeaders; // original headers
-    for (let i=headers.length-1; i>=0; --i) {
-        let header = headers[i].name.toLowerCase();
-        if (header === "content-security-policy") { // csp header is found
-            // modifying media-src; this implies that the directive is already present
-            headers[i].value = headers[i].value.replace("media-src", "media-src https://commons.wikimedia.org https://upload.wikimedia.org");
-        }
-    }
-    // return modified headers
-    return {responseHeaders: headers};
-}, {
-    urls: [ "<all_urls>" ], // match all pages
-    types: [ "main_frame" ] // to focus only the main document of a tab
-}, ["blocking", "responseHeaders"]);
 
 /* *************************************************************** */
 /* Main ********************************************************** */
