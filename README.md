@@ -48,7 +48,7 @@ We look for volunteers:
 * [hugolpz](https://github.com/hugolpz)
 
 ## See also
-* [:meta:Lingua Libre/SignIt]https://meta.wikimedia.org/wiki/Lingua_Libre/SignIt) — Wikimedia project page with mission statement.
+* [:meta:Lingua Libre/SignIt](https://meta.wikimedia.org/wiki/Lingua_Libre/SignIt) — Wikimedia project page with mission statement.
 * [Lingua Libre SignIt for Firefox](https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/) — a browser extension to click words in browser and show sign language videos generated via Lingualibre.
 * [Translate SignIt's user interface](https://translatewiki.net/wiki/Translating:Lingua_Libre_SignIt)
 * [Lingualibre.org > Recording Studio](https://LinguaLibre.org/wiki/Special:RecordWizard) — online tool to record words, once you specify a sign language, you can record videos of signed word at 400 per hour. They will be automatically available to SignIt.
