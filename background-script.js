@@ -278,14 +278,19 @@ var normalizeMessage = function(msg){
 
 /* *************************************************************** */
 /* Dependencies, CSP ********************************************* */
-// CSS, JS dependencie loaded and executed, to be sure
-async function checkInjection( tab ) {
+async function getActiveTabId () {
+	await browser.tabs.query({active: true, currentWindow: true});
+	return tabs[ 0 ].id;
+}
+// Ping tab, if fails, then CSS, JS dependencies loaded and executed
+async function checkActiveTabInjections( tab ) {
 	try {
 		await browser.tabs.sendMessage( tab, { command: "ping" } );
 	} catch ( error ) {
 		var i,
-			scripts = browser.runtime.getManifest().content_scripts[ 0 ].js, // manu a simplifier
-			stylesheets = browser.runtime.getManifest().content_scripts[ 0 ].css;
+			dependencies = browser.runtime.getManifest().content_scripts[ 0 ];
+			scripts = dependencies.js,
+			stylesheets = dependencies.css;
 
 		for( i = 0; i < scripts.length; i++ ) {
 			await browser.tabs.executeScript( tab, { file: scripts[ i ] } );
@@ -319,8 +324,8 @@ browser.webRequest.onHeadersReceived.addListener(info => {
 var callModal = async function(msg){
 	// Tab
 	console.log("Call modal > msg",{ msg });
-	var tabs = await browser.tabs.query( { active: true, currentWindow: true } );
-	await checkInjection( tabs[ 0 ].id );
+	var tabs = await browser.tabs.query({active: true, currentWindow: true});
+	await checkActiveTabInjections( tabs[ 0 ].id );
 	console.log("Call modal > #282 > tab id", tabs[0].id)
 	// Data
 	var word = msg.text,
