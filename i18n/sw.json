@@ -1,9 +1,36 @@
 {
 	"@metadata": {
 		"authors": [
+			"Wangombe",
 			"Yug"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
-	"si-overlay-coreContent-right-wikt-section-id": "#Swahili"
+	"si-overlay-coreContent-left-novideo": "Neno hili bado halijarekodiwa,<br> lakini SignIt ni mradi unaotokana na umati, unaweza kuuchangia.",
+	"si-overlay-coreContent-left-contribute-label": "Changia kwa Lugha ya Ishara",
+	"si-overlay-coreContent-right-title": "Ufafanuzi:",
+	"si-overlay-coreContent-right-wikt-iso": "sw",
+	"si-overlay-coreContent-right-wikt-section-id": "#Swahili",
+	"si-overlay-coreContent-right-wikt-pointer": "tazama kwenye Wiktionary",
+	"si-overlay-coreContent-right-error": "Hakuna ufafanuzi uliopatikana.",
+	"si-popup-browse-title": "Vinjari",
+	"si-popup-browse-placeholder": "Tafuta kati ya ishara $1.",
+	"si-popup-browse-label": "Tafuta",
+	"si-popup-browse-icon": "Anza utafutaji",
+	"si-popup-history-title": "Historia",
+	"si-popup-history-noHistory": "Hamna",
+	"si-popup-settings-title": "Mipangilio",
+	"si-popup-settings-signlanguage": "Lugha ya ishara:",
+	"si-popup-settings-signlanguage-help": "Badilisha video hadi lugha nyingine ya ishara",
+	"si-popup-settings-signlanguage-dropdown": "Badilisha lugha ya video",
+	"si-popup-settings-uilanguage": "Lugha ya kiolesura:",
+	"si-popup-settings-uilanguage-help": "Badilisha lugha ya kiolesura cha mtumiaji.",
+	"si-popup-settings-uilanguage-dropdown": "Badilisha lugha ya kiolesura",
+	"si-popup-settings-history": "Urefu wa historia:",
+	"si-popup-settings-history-help": "Zima kumbukumbu ya historia kwa kuweka 0",
+	"si-popup-settings-wpintegration": "Ujumuishaji wa asili na Wikipedia:",
+	"si-popup-settings-twospeed": "Cheza kwa kasi ya kawaida, kisha kwa kasi ndogo:",
+	"si-popup-settings-hint-icon": "Aikoni ya njia ya mkato kwenye maandishi yaliyochaguliwa:",
+	"si-popup-settings-enlighten": "Angazia maneno yanayopatikana:",
+	"si-videosGallery-video": "na {{kiungo|$1|$2}} - Video $3 kati ya $4"
 }
