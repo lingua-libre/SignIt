@@ -9,7 +9,7 @@
 		]
 	},
 	"si-addon-title": "The add-on name",
-	"si-addon-preload": "A placeholder for when the web query for the total number of files available is running.",
+	"si-addon-preload": "A placeholder for when the web query for available sign language videos is running. Can take few seconds.",
 	"si-overlay-coreContent-left-title": "Title of the section displaying the video (or audio).",
 	"si-overlay-coreContent-left-novideo": "Placeholder paragraph when no media is available for this word, encouraging user to contribute a video.",
 	"si-overlay-coreContent-left-contribute-label": "One liner to direct user to Sign Language video recorder on LinguaLibre. Should stay short, will go into a clickable button element.",
