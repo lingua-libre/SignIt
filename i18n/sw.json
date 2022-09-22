@@ -6,6 +6,8 @@
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Inaleta orodha ya video zote zinazopatikana kwenye Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Vyombo vya habari:",
 	"si-overlay-coreContent-left-novideo": "Neno hili bado halijarekodiwa,<br> lakini SignIt ni mradi unaotokana na umati, unaweza kuuchangia.",
 	"si-overlay-coreContent-left-contribute-label": "Changia kwa Lugha ya Ishara",
 	"si-overlay-coreContent-right-title": "Ufafanuzi:",
