@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Пан Хаунд"
+		]
+	},
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#Англійська",
+	"si-overlay-coreContent-right-error": "Визначення не знайдено.",
+	"si-popup-browse-title": "Переглянути",
+	"si-popup-browse-placeholder": "Пошук серед знаків $1.",
+	"si-popup-browse-label": "Пошук",
+	"si-popup-browse-icon": "Почати пошук",
+	"si-popup-history-title": "Історія",
+	"si-popup-settings-title": "Налаштування",
+	"si-popup-settings-signlanguage": "Мова жестів:",
+	"si-popup-settings-signlanguage-help": "Змініть відео на іншу мову жестів.",
+	"si-popup-settings-signlanguage-dropdown": "Змінити мову відео",
+	"si-popup-settings-uilanguage": "Мова інтерфейсу:",
+	"si-popup-settings-uilanguage-help": "Змініть мову інтерфейсу користувача.",
+	"si-popup-settings-uilanguage-dropdown": "Змінити мову інтерфейсу"
+}

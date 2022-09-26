@@ -6,6 +6,9 @@
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-right-title": "Definisi:",
+	"si-overlay-coreContent-right-wikt-iso": "hi",
+	"si-overlay-coreContent-right-wikt-section-id": "#Bahasa_Indonesia",
 	"si-overlay-coreContent-right-wikt-pointer": "lihat di Wikikamus",
 	"si-popup-browse-label": "Cari",
 	"si-popup-browse-icon": "Mulai pencarian",
@@ -15,5 +18,6 @@
 	"si-popup-settings-signlanguage": "Bahasa isyarat:",
 	"si-popup-settings-signlanguage-dropdown": "Ubah bahasa video",
 	"si-popup-settings-uilanguage": "Bahasa antarmuka:",
+	"si-popup-settings-uilanguage-help": "Ubah bahasa antarmuka pengguna.",
 	"si-popup-settings-uilanguage-dropdown": "Ubah bahasa antarmuka"
 }
