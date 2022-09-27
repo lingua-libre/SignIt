@@ -107,7 +107,8 @@ SignItCoreContent.prototype.setWiktionaryContent = async function ( title ) {
 
 	// Parse the content of the WT entry
 	// TODO: No FR section error
-	content = $( result.parse.text );
+	var updatedUrl = result.replace(/\/wiki/g,"https://fr.wiktionary.org/wiki");
+	content = $( updatedUrl.parse.text );
 	$wiktSection = content.find( "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id") */ ).parent().next();
 	definition = $wiktSection.find( '.titredef' ).parent().parent().nextUntil( 'h2, h3, h4' ).filter( 'p, ol' );
 
