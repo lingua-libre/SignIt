@@ -6,6 +6,7 @@
 	},
 	"si-overlay-coreContent-right-wikt-iso": "en",
 	"si-overlay-coreContent-right-wikt-section-id": "#Англійська",
+	"si-overlay-coreContent-right-wikt-pointer": "дивіться у Вікісловнику",
 	"si-overlay-coreContent-right-error": "Визначення не знайдено.",
 	"si-popup-browse-title": "Переглянути",
 	"si-popup-browse-placeholder": "Пошук серед знаків $1.",
@@ -18,5 +19,6 @@
 	"si-popup-settings-signlanguage-dropdown": "Змінити мову відео",
 	"si-popup-settings-uilanguage": "Мова інтерфейсу:",
 	"si-popup-settings-uilanguage-help": "Змініть мову інтерфейсу користувача.",
-	"si-popup-settings-uilanguage-dropdown": "Змінити мову інтерфейсу"
+	"si-popup-settings-uilanguage-dropdown": "Змінити мову інтерфейсу",
+	"si-popup-settings-history": "Тривалість історії:"
 }
