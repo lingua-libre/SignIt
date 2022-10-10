@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bgo eiu"
+		]
+	},
+	"si-addon-title": "لینگوا لیبر سائین بھاشا",
+	"si-addon-preload": "سارے ویڈیو لبھدے",
+	"si-overlay-coreContent-left-title": "میڈیا:",
+	"si-overlay-coreContent-left-novideo": "حالیہ ریکارڈ نہیں لبھیا،<br>پر تسیں ریکارڈ کر سکیو۔",
+	"si-overlay-coreContent-left-contribute-label": "سائین بھاشا ورتو",
+	"si-overlay-coreContent-right-wikt-iso": "skr",
+	"si-overlay-coreContent-right-wikt-pointer": "وِکشنیری تے ویکھو",
+	"si-popup-browse-title": "لبھو",
+	"si-popup-browse-placeholder": "$1 سائیناں وچ کھوجو۔",
+	"si-popup-browse-label": "کھوج",
+	"si-popup-settings-title": "سیٹنگاں",
+	"si-popup-settings-signlanguage": "سائین بھاشا:",
+	"si-popup-settings-uilanguage": "انٹرفیس بولی:",
+	"si-popup-settings-uilanguage-dropdown": "انٹرفیس بولی بدلو"
+}
