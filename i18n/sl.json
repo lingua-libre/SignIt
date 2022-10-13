@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Pridobivanje seznama vseh videoposnetkov, ki so na voljo v Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Predstavnosti:",
+	"si-overlay-coreContent-left-novideo": "Ta beseda še ni bila zapisana,<br> vendar je SignIt sodelovalni projekt in lahko prispevate k njemu.",
+	"si-overlay-coreContent-left-contribute-label": "Prispevajte z znakovnim jezikom",
+	"si-overlay-coreContent-right-title": "Opredelitve:",
+	"si-overlay-coreContent-right-wikt-iso": "sl",
+	"si-overlay-coreContent-right-wikt-section-id": "#Slovenščina",
+	"si-overlay-coreContent-right-wikt-pointer": "glej v Wikislovarju",
+	"si-overlay-coreContent-right-error": "Najdena ni bila nobena opredelitev.",
+	"si-popup-browse-title": "Prebrskaj",
+	"si-popup-browse-placeholder": "Išči med $1 znaki.",
+	"si-popup-browse-label": "Išči",
+	"si-popup-browse-icon": "Začni iskanje",
+	"si-popup-history-title": "Zgodovina",
+	"si-popup-history-noHistory": "Tu ni ničesar.",
+	"si-popup-settings-title": "Nastavitve",
+	"si-popup-settings-signlanguage": "Znakovni jezik:",
+	"si-popup-settings-signlanguage-help": "Spremenite videoposnetke v drug znakovni jezik.",
+	"si-popup-settings-signlanguage-dropdown": "Spremenite jezik videoposnetkov",
+	"si-popup-settings-uilanguage": "Jezik vmesnika:",
+	"si-popup-settings-uilanguage-help": "Spremenite jezik uporabniškega vmesnika.",
+	"si-popup-settings-uilanguage-dropdown": "Spremenite jezik vmesnika",
+	"si-popup-settings-history": "Dolžina zgodovine:",
+	"si-popup-settings-history-help": "Nastavitev na 0 deaktivira dnevnik zgodovine",
+	"si-popup-settings-wpintegration": "AVtohtona integracija z Wikipedijo:",
+	"si-popup-settings-twospeed": "Predvajanje z normalno hitrostjo, nato s počasno hitrostjo:",
+	"si-popup-settings-hint-icon": "Ikona bližnjice na označenem besedilu:",
+	"si-popup-settings-enlighten": "Označevanje razpoložljivih besed:",
+	"si-videosGallery-video": "avtor {{link|$1|$2}} – video $3 od $4"
+}
