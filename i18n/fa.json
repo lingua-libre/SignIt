@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Darafsh"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "در حال واکشی لیست همهٔ ویدیوهای موجود در Lingua Libre.",
+	"si-overlay-coreContent-left-title": "رسانه:",
+	"si-overlay-coreContent-left-novideo": "این کلمه هنوز ثبت نشده‌است،<br>اما SignIt یک پروژهٔ جمعی است، می‌توانید در آن مشارکت کنید.",
+	"si-overlay-coreContent-left-contribute-label": "با زبان اشاره همکاری کنید",
+	"si-overlay-coreContent-right-title": "تعاریف:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#انگلیسی",
+	"si-overlay-coreContent-right-wikt-pointer": "در ویکی‌واژه ببینید",
+	"si-overlay-coreContent-right-error": "هیچ تعریفی پیدا نشد.",
+	"si-popup-browse-title": "مرور",
+	"si-popup-browse-placeholder": "جستجو در میان علائم $1.",
+	"si-popup-browse-label": "جستجو",
+	"si-popup-browse-icon": "آغاز جستجو",
+	"si-popup-history-title": "تاریخچه",
+	"si-popup-history-noHistory": "خالی است",
+	"si-popup-settings-title": "تنظیمات",
+	"si-popup-settings-signlanguage": "زبان اشاره:",
+	"si-popup-settings-signlanguage-help": "ویدیوها را به زبان اشارهٔ دیگری تغییر دهید.",
+	"si-popup-settings-signlanguage-dropdown": "تغییر زبان ویدیوها",
+	"si-popup-settings-uilanguage": "زبان رابط کاربری:",
+	"si-popup-settings-uilanguage-help": "زبان رابط کاربری را تغییر دهید.",
+	"si-popup-settings-uilanguage-dropdown": "تغییر زبان رابط کاربری",
+	"si-popup-settings-history": "طول تاریخچه:",
+	"si-popup-settings-history-help": "تنظیم روی ۰ (صفر)، گزارش سابقه را غیرفعال می‌کند",
+	"si-popup-settings-twospeed": "با سرعت معمولی و سپس با سرعت آهسته پخش شود:",
+	"si-popup-settings-hint-icon": "نماد میانبر روی متن انتخاب‌شده:",
+	"si-popup-settings-enlighten": "برجسته‌سازی واژه‌های موجود:",
+	"si-videosGallery-video": "توسط {{link|$1|$2}} – ویدئو $3 از میان $4"
+}
