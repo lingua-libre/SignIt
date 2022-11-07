@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Къарачайлы"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre-де болгъан бютеу видеоланы тизмесин келтиреди.",
+	"si-overlay-coreContent-left-title": "Медиа:",
+	"si-overlay-coreContent-left-novideo": "Бу сёз алкъын джаздырылмагъанды<br> алай а SignIt краудсорсинг проект болгъаны себебли, кесигизни юлюшюгюзню къошаргъа боллукъсуз.",
+	"si-overlay-coreContent-left-contribute-label": "Къол силкиу тилде кесигизни юлюшюгюзню къошугъуз",
+	"si-overlay-coreContent-right-title": "Ачыкълау:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#Ингилизча",
+	"si-overlay-coreContent-right-wikt-pointer": "Викисёзлюкде къара",
+	"si-overlay-coreContent-right-error": "Ачыкълау табылмады.",
+	"si-popup-browse-title": "Къарау",
+	"si-popup-browse-placeholder": "$1 белгилени ичинде изле.",
+	"si-popup-browse-label": "Изле",
+	"si-popup-browse-icon": "Излеуню башла",
+	"si-popup-history-title": "Тарих",
+	"si-popup-history-noHistory": "Бошду",
+	"si-popup-settings-title": "Джарашдырыўла",
+	"si-popup-settings-signlanguage": "Къол силкиу тил:",
+	"si-popup-settings-signlanguage-help": "Видеоланы башха къол силкиу тилге ауушдуругъуз.",
+	"si-popup-settings-signlanguage-dropdown": "Видеоланы тиллерин ауушдур",
+	"si-popup-settings-uilanguage": "Интерфейсни тили:",
+	"si-popup-settings-uilanguage-help": "Къошулуучуну интерфейсинде тилни алмашдыр.",
+	"si-popup-settings-uilanguage-dropdown": "Интерфейс тилни алмашдыр",
+	"si-popup-settings-history": "Тарихни узунлугъу:",
+	"si-popup-settings-history-help": "0 салсагъыз, тарихни журналы активациядан чыгъарыкъды",
+	"si-popup-settings-wpintegration": "Википедия бла натив интеграция:",
+	"si-popup-settings-twospeed": "Нормал терклик бла, сора да акъыртын теркликде ойнат:",
+	"si-popup-settings-hint-icon": "Сайланнган текстде къысхаджол белги:",
+	"si-popup-settings-enlighten": "Ушагъыулу сёзлени черт:",
+	"si-videosGallery-video": "{{link|$1|$2}} – Видео $3/$4"
+}
