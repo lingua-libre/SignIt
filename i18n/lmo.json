@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Salvemm el lombard"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Adree a portà a voltra la lista de tucc i video disponibil in su Lengua Libre.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Questa parolla chì l'è stada nan'mò registrada,<br>ma SignIt a l'è un proget in collaborazzion, te podet contribuì an' ti.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuiss con la lengua di segni",
+	"si-overlay-coreContent-right-title": "Definizzionː",
+	"si-overlay-coreContent-right-wikt-iso": "lmo",
+	"si-overlay-coreContent-right-wikt-section-id": "#Lombard",
+	"si-overlay-coreContent-right-wikt-pointer": "varda in sul Wikizzionari",
+	"si-overlay-coreContent-right-error": "Nanca ona definizzion trovada.",
+	"si-popup-browse-title": "Curiosa",
+	"si-popup-browse-placeholder": "Cerca intra i $1 segn.",
+	"si-popup-browse-label": "Cerca",
+	"si-popup-browse-icon": "Taca a cercà",
+	"si-popup-history-title": "Storia",
+	"si-popup-history-noHistory": "A l'è voeuja",
+	"si-popup-settings-title": "Impostazzion",
+	"si-popup-settings-signlanguage": "Lengua di segnː",
+	"si-popup-settings-signlanguage-help": "Cambia la lengua di segn drovada doperada in di video.",
+	"si-popup-settings-signlanguage-dropdown": "Cambia la lengua di video",
+	"si-popup-settings-uilanguage": "Lengua de l'interfaciaː",
+	"si-popup-settings-uilanguage-help": "Cambia la lengua de l'interfacia de l'utent.",
+	"si-popup-settings-uilanguage-dropdown": "Cambia la lengua de l'interfacia",
+	"si-popup-settings-history": "Longhezza de la storiaː",
+	"si-popup-settings-history-help": "Imposta a 0 per fà via la storia",
+	"si-popup-settings-wpintegration": "Completament nativ con la Wikipedia:",
+	"si-popup-settings-twospeed": "Riproduss a la velocità normal, donca adasi:",
+	"si-popup-settings-hint-icon": "Imagin sul test catad foeura:",
+	"si-popup-settings-enlighten": "Marca le parolle disponibil:",
+	"si-videosGallery-video": "de {{link|$1|$2}} - Video $3 de $4"
+}
