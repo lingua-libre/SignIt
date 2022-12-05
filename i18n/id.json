@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"DARMAS BUDI SANTOSO",
 			"Veracious"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Fetching the list of all videos available on Lingua Libre.",
 	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
 	"si-overlay-coreContent-right-title": "Definisi:",
 	"si-overlay-coreContent-right-wikt-iso": "hi",
 	"si-overlay-coreContent-right-wikt-section-id": "#Bahasa_Indonesia",
