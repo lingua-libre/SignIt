@@ -1,12 +1,15 @@
 {
 	"@metadata": {
 		"authors": [
+			"Agam Riyandana",
 			"DARMAS BUDI SANTOSO",
 			"Veracious"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Mengambil daftar semua video yang tersedia di Lingua Libre.",
 	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Kata ini belum direkam,<br> tetapi SignIt adalah proyek yang bersumber dari orang banyak, Anda dapat berkontribusi untuk itu.",
 	"si-overlay-coreContent-right-title": "Definisi:",
 	"si-overlay-coreContent-right-wikt-iso": "hi",
 	"si-overlay-coreContent-right-wikt-section-id": "#Bahasa_Indonesia",
