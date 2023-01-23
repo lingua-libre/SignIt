@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tofeiku"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-right-wikt-pointer": "lihat di Wikikamus",
+	"si-popup-browse-label": "Cari",
+	"si-popup-history-title": "Sejarah",
+	"si-popup-settings-title": "Tetapan",
+	"si-popup-settings-signlanguage": "Bahasa isyarat:",
+	"si-popup-settings-signlanguage-dropdown": "Ubah bahasa video",
+	"si-popup-settings-uilanguage": "Bahasa antara muka:",
+	"si-popup-settings-uilanguage-dropdown": "Ubah bahasa antara muka"
+}
