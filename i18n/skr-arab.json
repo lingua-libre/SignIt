@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saraiki"
+		]
+	},
+	"si-overlay-coreContent-left-title": "میڈیا",
+	"si-overlay-coreContent-right-title": "تعریفاں:",
+	"si-overlay-coreContent-right-wikt-iso": "skr",
+	"si-overlay-coreContent-right-wikt-section-id": "#سرائیکی",
+	"si-overlay-coreContent-right-error": "کوئی تعریف کائنی لبھی۔",
+	"si-popup-browse-title": "براؤز",
+	"si-popup-browse-label": "ڳولو",
+	"si-popup-browse-icon": "ڳولݨ شروع کرو",
+	"si-popup-history-title": "تاریخ",
+	"si-popup-history-noHistory": "ایہ خالی ہے",
+	"si-popup-settings-title": "ترتیباں",
+	"si-popup-settings-signlanguage-dropdown": "وڈیو دی زبان وٹاؤ",
+	"si-popup-settings-uilanguage": "انٹر فیس زبان"
+}
