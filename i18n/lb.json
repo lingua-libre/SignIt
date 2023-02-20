@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby",
+			"Volvox"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-left-title": "Medien:",
+	"si-overlay-coreContent-left-contribute-label": "Mat Gebäerdesprooch bäidroen",
+	"si-overlay-coreContent-right-title": "Definitioun:",
+	"si-overlay-coreContent-right-wikt-iso": "lb",
+	"si-overlay-coreContent-right-error": "Keng Definitioun fonnt.",
+	"si-popup-browse-label": "Sichen",
+	"si-popup-settings-title": "Astellungen",
+	"si-popup-settings-signlanguage": "Zeechesprooch:",
+	"si-popup-settings-signlanguage-help": "Videoen an eng aner Gebäerdesprooch änneren.",
+	"si-popup-settings-signlanguage-dropdown": "Sprooch vun de Videoen änneren",
+	"si-popup-settings-uilanguage": "Sprooch vum Interface:",
+	"si-popup-settings-uilanguage-help": "D'Sprooch vum Benotzerinterface änneren.",
+	"si-popup-settings-uilanguage-dropdown": "Benotzersprooch änneren"
+}
