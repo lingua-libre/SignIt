@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"咽頭べさ"
+		]
+	},
+	"si-addon-title": "လုပ်အကံက်လေန်ဂွါ လဳပရေ",
+	"si-addon-preload": "သ္ပတံၚ်ကေတ်ဗဳဒဳယဝ်စရၚ်မနွံပ္ဍဲလ္တူလေန်ဂွါ လဳပရေသီုဖအိုတ်။",
+	"si-overlay-coreContent-left-title": "မဳဒဳယာ:",
+	"si-overlay-coreContent-left-contribute-label": "မနွံပံၚ်ကောံနကဵုအရေဝ်သာသာတဲ",
+	"si-overlay-coreContent-right-title": "မပွံက်အဓိပ္ပာဲ:",
+	"si-overlay-coreContent-right-wikt-iso": "mnw",
+	"si-overlay-coreContent-right-wikt-section-id": "#မန်",
+	"si-overlay-coreContent-right-wikt-pointer": "ဗဵုလ္တူဝိက်ရှေန်နရဳ",
+	"si-overlay-coreContent-right-error": "မအရေဝ်မပွံက်အဓိပ္ပာဲလဝ်ဟွံဆဵု။",
+	"si-popup-browse-title": "ကိတ်ဍေက်",
+	"si-popup-browse-placeholder": "ဂၠာဲရံၚ်နကဵုအကြာမသမ္တီလဝ် $1 ။",
+	"si-popup-browse-label": "ဂၠာဲ",
+	"si-popup-browse-icon": "စဂၠာဲရံၚ်",
+	"si-popup-history-title": "ဝၚ်",
+	"si-popup-history-noHistory": "မသၠးမံၚ်",
+	"si-popup-settings-title": "ဖျေဟ်ဒၞာဲ",
+	"si-popup-settings-signlanguage": "အရေဝ်ဘာသာမသမ္တီလဝ်:",
+	"si-popup-settings-signlanguage-help": "ပြံၚ်လှာဲဗဳဒဳယဝ်တၞဟ်နကဵုအရေဝ်ဘာသာတဲ။",
+	"si-popup-settings-signlanguage-dropdown": "ပြံၚ်လှာဲအရေဝ်ဘာသာဗဳဒဳယဝ်",
+	"si-popup-settings-uilanguage": "အရေဝ်ဘာသာမုက်လဒဲ:"
+}
