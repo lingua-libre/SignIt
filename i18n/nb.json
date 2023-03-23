@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"EdoAug",
 			"Jon Harald Søby"
 		]
 	},
@@ -10,8 +11,8 @@
 	"si-overlay-coreContent-left-novideo": "Dette ordet har ikke blitt spilt inn ennå,<br>men SignIt er et dugnadsprosjekt, så du kan spille det inn.",
 	"si-overlay-coreContent-left-contribute-label": "Bidra med tegnspråk",
 	"si-overlay-coreContent-right-title": "Definisjoner:",
-	"si-overlay-coreContent-right-wikt-iso": "et",
-	"si-overlay-coreContent-right-wikt-section-id": "#Engelsk",
+	"si-overlay-coreContent-right-wikt-iso": "no",
+	"si-overlay-coreContent-right-wikt-section-id": "#Norsk",
 	"si-overlay-coreContent-right-wikt-pointer": "se på Wiktionary",
 	"si-overlay-coreContent-right-error": "Ingen definisjon funnet.",
 	"si-popup-browse-title": "Bla gjennom",
