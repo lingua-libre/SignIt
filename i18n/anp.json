@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Proabscorp!"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre प उपलब्ध सब्भे वीडियो क सूची प्राप्त होय रहलौ छौं।",
+	"si-overlay-coreContent-left-title": "मीडिया:",
+	"si-overlay-coreContent-left-novideo": "हैय शब्द क एखनी तलक रिकॉर्ड नाय करलौ गेलौ छौं,<br>किंतु SignIt, लोगौ सिनी द्वारा बनैलौ गेलौ एगो परियोजना छेकै, आरो तोंय एकरा मँ योगदान करै सकै छौ।",
+	"si-overlay-coreContent-left-contribute-label": "सांकेतिक भाषा प योगदान करौ",
+	"si-overlay-coreContent-right-title": "परिभाषा:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#Angika",
+	"si-overlay-coreContent-right-wikt-pointer": "विकिकोष प देखौ",
+	"si-overlay-coreContent-right-error": "कोय परिभाषा नाय मिललौं।",
+	"si-popup-browse-title": "खोजौ",
+	"si-popup-browse-placeholder": "$1 संकेतौ सिनी मँ खोजौ।",
+	"si-popup-browse-label": "खोजौ",
+	"si-popup-browse-icon": "खोज शुरू करौ",
+	"si-popup-history-title": "इतिहास",
+	"si-popup-history-noHistory": "हैय खाली छै",
+	"si-popup-settings-title": "सेटिंग्स",
+	"si-popup-settings-signlanguage": "सांकेतिक भाषा:",
+	"si-popup-settings-signlanguage-help": "दोसरौ सांकेतिक भाषा मँ वीडियो क बदलौ।",
+	"si-popup-settings-signlanguage-dropdown": "वीडियो क भाषा बदलौ",
+	"si-popup-settings-uilanguage": "इंटरफ़ेस केरौ भाषा:",
+	"si-popup-settings-uilanguage-help": "सदस्य इंटरफ़ेस क भाषा बदलौ।",
+	"si-popup-settings-uilanguage-dropdown": "इंटरफ़ेस क भाषा बदलौ",
+	"si-popup-settings-history": "इतिहास क लंबाई:",
+	"si-popup-settings-history-help": "0 प सेट करला प इतिहास लॉग अक्षम होय छै",
+	"si-popup-settings-wpintegration": "विकिपीडिया केरौ साथ मूल एकीकरण:",
+	"si-popup-settings-twospeed": "पहिलअ साधारण गति सँ, आरो ओकरौ बाद धीमा गति सँ देखौ:",
+	"si-popup-settings-hint-icon": "चयनित टेक्स्ट प शॉर्टकट आइकॉन:",
+	"si-popup-settings-enlighten": "उपलब्ध शब्दौ क हाइलाइट करौ:",
+	"si-videosGallery-video": "{{link|$1|$2}} द्वारा – $4 मँ सँ $3 नंबरिया वीडियो"
+}
