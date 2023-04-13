@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Adriendelucca"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "N'eo bet bet enrollet ar ger-se c'hoazh,<br>SignIt zo ur raktres kenlabourat avat ha gallout 'rit degas ho lod ivez.",
+	"si-overlay-coreContent-left-contribute-label": "Kendeurel gant yezh ar sinoù",
+	"si-overlay-coreContent-right-title": "Termenadurioù:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#Saozneg",
+	"si-overlay-coreContent-right-wikt-pointer": "gwelet war Wikeriadur",
+	"si-overlay-coreContent-right-error": "N'eus bet kavet termenadur ebet.",
+	"si-popup-browse-title": "Furchal",
+	"si-popup-browse-label": "Klask",
+	"si-popup-history-title": "Istor",
+	"si-popup-history-noHistory": "Goulo eo",
+	"si-popup-settings-title": "Arventennoù",
+	"si-popup-settings-signlanguage": "Yezh ar sinoù:",
+	"si-popup-settings-uilanguage": "Yezh an etrefas :",
+	"si-popup-settings-uilanguage-dropdown": "Cheñch yezh an etrefas",
+	"si-videosGallery-video": "gant {{link|$1|$2}} – Video $3 eus $4"
+}
