@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Haetaan luetteloa kaikista Lingua Libressä saatavilla olevista videoista.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Tätä sanaa ei ole vielä tallennettu,<br> mutta SignIt on joukkolähdeprojekti, voit osallistua siihen.",
+	"si-overlay-coreContent-right-title": "Määritelmät:",
+	"si-overlay-coreContent-right-wikt-iso": "fi",
+	"si-overlay-coreContent-right-wikt-section-id": "#suomi",
+	"si-overlay-coreContent-right-wikt-pointer": "katso Wikisanakirjasta",
+	"si-overlay-coreContent-right-error": "Määritelmiä ei löytynyt.",
+	"si-popup-browse-title": "Selaa",
+	"si-popup-browse-placeholder": "Hae $1 viittoman joukosta.",
+	"si-popup-browse-label": "Hae",
+	"si-popup-browse-icon": "Aloita haku",
+	"si-popup-history-title": "Historia",
+	"si-popup-history-noHistory": "Se on tyhjä",
+	"si-popup-settings-title": "Asetukset",
+	"si-popup-settings-signlanguage": "Viittomakieli:",
+	"si-popup-settings-signlanguage-help": "Vaihda videot toiselle viittomakielelle.",
+	"si-popup-settings-signlanguage-dropdown": "Vaihda videoiden kieli",
+	"si-popup-settings-uilanguage": "Käyttöliittymän kieli:",
+	"si-popup-settings-uilanguage-help": "Vaihda käyttäjän käyttöliittymän kieli.",
+	"si-popup-settings-uilanguage-dropdown": "Vaihda käyttöliittymän kieli",
+	"si-popup-settings-history": "Historian pituus:",
+	"si-popup-settings-history-help": "Aseta arvoksi 0 poistaaksesi historialokin käytöstä.",
+	"si-popup-settings-twospeed": "Toista normaalilla nopeudella, sitten hitaalla nopeudella:",
+	"si-popup-settings-hint-icon": "Pikakuvake valitussa tekstissä:",
+	"si-popup-settings-enlighten": "Korosta käytettävissä olevat sanat:",
+	"si-videosGallery-video": "tekijä: {{link|$1|$2}} – Video $3 / $4"
+}
