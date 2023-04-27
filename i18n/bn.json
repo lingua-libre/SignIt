@@ -6,7 +6,10 @@
 		]
 	},
 	"si-addon-title": "লিঙ্গুয়া লিব্রে সাইনইট",
+	"si-addon-preload": "Lingua Libre-এ উপলব্ধ সমস্ত ভিডিওর তালিকা আনা হচ্ছে৷",
 	"si-overlay-coreContent-left-title": "মিডিয়া:",
+	"si-overlay-coreContent-left-novideo": "এই শব্দটি এখনও রেকর্ড করা হয়নি,<br>কিন্তু SignIt একটি ক্রাউড সোর্সড প্রজেক্ট, আপনি এতে অবদান রাখতে পারেন।",
+	"si-overlay-coreContent-left-contribute-label": "সাইন ল্যাঙ্গুয়েজ দিয়ে অবদান রাখুন",
 	"si-overlay-coreContent-right-title": "সংজ্ঞা:",
 	"si-overlay-coreContent-right-wikt-iso": "bn",
 	"si-overlay-coreContent-right-wikt-section-id": "#বাংলা",
@@ -19,12 +22,17 @@
 	"si-popup-history-title": "ইতিহাস",
 	"si-popup-history-noHistory": "এটি খালি",
 	"si-popup-settings-title": "সেটিংস",
+	"si-popup-settings-signlanguage": "ইশারা ভাষা:",
+	"si-popup-settings-signlanguage-help": "ভিডিওগুলিকে অন্য সাইন ল্যাঙ্গুয়েজে পরিবর্তন করুন।",
 	"si-popup-settings-signlanguage-dropdown": "ভিডিওর ভাষা পরিবর্তন করুন",
 	"si-popup-settings-uilanguage": "ইন্টারফেসের ভাষা:",
 	"si-popup-settings-uilanguage-help": "ব্যবহারকারী ইন্টারফেসের ভাষা পরিবর্তন করুন।",
 	"si-popup-settings-uilanguage-dropdown": "ইন্টারফেসের ভাষা পরিবর্তন করুন",
 	"si-popup-settings-history": "ইতিহাসের দৈর্ঘ্য:",
+	"si-popup-settings-history-help": "0 তে সেট করা ইতিহাস লগ নিষ্ক্রিয় করে",
+	"si-popup-settings-wpintegration": "উইকিপিডিয়ার সাথে নেটিভ ইন্টিগ্রেশন:",
 	"si-popup-settings-twospeed": "স্বাভাবিক গতিতে চালান, তারপর ধীর গতিতে:",
 	"si-popup-settings-hint-icon": "নির্বাচিত পাঠ্যের শর্টকাট আইকন:",
-	"si-popup-settings-enlighten": "উপলব্ধ শব্দগুলি হাইলাইট করুন:"
+	"si-popup-settings-enlighten": "উপলব্ধ শব্দগুলি হাইলাইট করুন:",
+	"si-videosGallery-video": "{{link|$1|$2}} দ্বারা – $4 এর মধ্যে $3 ভিডিও"
 }
