@@ -39,16 +39,23 @@ There, `Load temporary Add-on`, fin "Lingua Libre SignIt" : click `Inspect`.
     └── SearchWidget.js — handle the search queries
 ```
 
-## Call for contributors
+## Contribute
+### Contributors
 We look for volunteers:
 * Co-owners, JS developers
 * Signers
 
-## Contact
+### Contact
 * [hugolpz](https://github.com/hugolpz)
 
-## See also
-* [:meta:Lingua Libre/SignIt](https://meta.wikimedia.org/wiki/Lingua_Libre/SignIt) — Wikimedia project page with mission statement.
-* [Lingua Libre SignIt for Firefox](https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/) — a browser extension to click words in browser and show sign language videos generated via Lingualibre.
+### Code
+- [Github: Lingua-libre/SignIt/Issues](https://github.com/Lingua-libre/SignIt/Issues) — tickets manager
+- [Github: Lingua-libre/SignIt](https://github.com/lingua-libre/SignIt) — code (JS)
 * [Translate SignIt's user interface](https://translatewiki.net/wiki/Translating:Lingua_Libre_SignIt)
+
+## Documentation
+* [:meta:Lingua Libre/SignIt](https://meta.wikimedia.org/wiki/Lingua_Libre/SignIt) — Wikimedia project page with mission statement.
+
+## Services
 * [Lingualibre.org > Recording Studio](https://LinguaLibre.org/wiki/Special:RecordWizard) — online tool to record words, once you specify a sign language, you can record videos of signed word at 400 per hour. They will be automatically available to SignIt.
+* [Lingua Libre SignIt for Firefox](https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/) — a browser extension to click words in browser and show sign language videos generated via Lingualibre.
