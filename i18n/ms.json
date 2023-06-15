@@ -1,17 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
+			"Hakimi97",
 			"Tofeiku"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Mengambil senarai semua video yang tersedia di Lingua Libre.",
 	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Perkataan ini belum dirakam lagi,<br>tetapi SignIt adalah projek hasil usaha sama dari orang ramai, maka anda boleh memberi sumbangan.",
+	"si-overlay-coreContent-left-contribute-label": "Menyumbang dengan Bahasa Isyarat",
+	"si-overlay-coreContent-right-title": "Definisi:",
+	"si-overlay-coreContent-right-wikt-iso": "ms",
+	"si-overlay-coreContent-right-wikt-section-id": "#BahasaMelayu",
 	"si-overlay-coreContent-right-wikt-pointer": "lihat di Wikikamus",
+	"si-overlay-coreContent-right-error": "Tiada definisi ditemui.",
+	"si-popup-browse-title": "Layari",
+	"si-popup-browse-placeholder": "Cari antara penanda $1.",
 	"si-popup-browse-label": "Cari",
+	"si-popup-browse-icon": "Mulakan pencarian",
 	"si-popup-history-title": "Sejarah",
+	"si-popup-history-noHistory": "Log pencarian ini kosong",
 	"si-popup-settings-title": "Tetapan",
 	"si-popup-settings-signlanguage": "Bahasa isyarat:",
+	"si-popup-settings-signlanguage-help": "Tukar video kepada bahasa isyarat lain.",
 	"si-popup-settings-signlanguage-dropdown": "Ubah bahasa video",
 	"si-popup-settings-uilanguage": "Bahasa antara muka:",
-	"si-popup-settings-uilanguage-dropdown": "Ubah bahasa antara muka"
+	"si-popup-settings-uilanguage-help": "Tukar bahasa antara muka pengguna.",
+	"si-popup-settings-uilanguage-dropdown": "Ubah bahasa antara muka",
+	"si-popup-settings-history": "Garis masa sejarah:",
+	"si-popup-settings-history-help": "Penetapan kepada 0 menyahaktifkan log sejarah",
+	"si-popup-settings-wpintegration": "Penyepaduan asli dengan Wikipedia:",
+	"si-popup-settings-twospeed": "Main pada kelajuan biasa, kemudian pada kelajuan perlahan:",
+	"si-popup-settings-hint-icon": "Ikon pintasan pada teks yang dipilih:",
+	"si-popup-settings-enlighten": "Serlahkan perkataan yang tersedia:",
+	"si-videosGallery-video": "karya {{link|$1|$2}} – Video $3 dari $4"
 }
