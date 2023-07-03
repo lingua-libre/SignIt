@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Narazeni"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre-ს ხემიოლუ არძა ვიდეოშ ერკებულს მუკარჩქინანს.",
+	"si-overlay-coreContent-left-title": "მედია:",
+	"si-overlay-coreContent-left-novideo": "ათე ზიტყვა დიო ვენოჭარჷ,<br> მარა SignIt — ქრაუდსორსინგული პროექტი რე დო შეილებჷნა თიშა თქვან თიაშ მიშაღალა!",
+	"si-overlay-coreContent-left-contribute-label": "თქვან თიაშ მიშაღალა ჟესტურ ნინაშა",
+	"si-overlay-coreContent-right-title": "გოთანჯუეფი:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#ინგლისური",
+	"si-overlay-coreContent-right-wikt-pointer": "ქძ. ვიქსიკონს",
+	"si-overlay-coreContent-right-error": "გოთანჯუეფქ ვეგორინჷ."
+}
