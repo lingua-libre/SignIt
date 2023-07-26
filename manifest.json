@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Lingua Libre SignIt",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"author": "Antoine '0x010C' Lamielle, Hugo Lopez",
 	"description": "SignIt translate a selected word into Sign Language videos.",
 	"homepage_url": "https://lingualibre.org",
@@ -11,9 +11,9 @@
 		}
 	},
 	"icons": {
-		"32": "icons/signit-32.png",
-		"48": "icons/signit-48.png",
-		"64": "icons/signit-64.png"
+		"32": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
+		"48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
+		"64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
 	},
 	"permissions": [
 		"activeTab",
@@ -24,7 +24,7 @@
 		"<all_urls>"
 	],
 	"browser_action": {
-		"default_icon": "icons/signit-32.png",
+		"default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
 		"default_title": "Lingua Libre SignIt",
 		"default_popup": "popup/popup.html"
 	},

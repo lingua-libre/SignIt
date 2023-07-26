@@ -1,6 +1,6 @@
 {
   "name": "sign-it",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "SignIt translate a selected word into Sign Language videos",
   "main": "background-script.js",
   "dependencies": {
@@ -9,7 +9,7 @@
     "webextension-polyfill": "^0.9.0"
   },
   "devDependencies": {
-    "web-ext": "^7.1.1"
+    "web-ext": "^7.0.0"
   },
   "scripts": {
     "postinstall": "bin/build.sh",
