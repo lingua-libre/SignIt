@@ -103,7 +103,7 @@ var supportedUiLanguages = [
   {i18nCode: "nb",labelEN: "Bokmål",labelNative: "Bokmål",wdQid: "Q25167",wiki: "nb"},
   {i18nCode: "pnb",labelEN: "Western Punjabi",labelNative: "ਪੰਜਾਬੀ",wdQid: "Q1389492"},
     {i18nCode: "pt",labelEN: "Portuguese",labelNative: "Português (pt)",wdQid: "Q5146",wiki: "pt"},
-    {i18nCode: "pt-br",labelEN: "Portuguese",labelNative: "Português (br)" wdQid: "Q5146",wiki: "pt"},
+    {i18nCode: "pt-br",labelEN: "Portuguese",labelNative: "Português (br)",wdQid: "Q5146",wiki: "pt"},
   {i18nCode: "ru",labelEN: "Russian",labelNative: "Русский язык",wdQid: "Q7737",wiki: "ru"},
   {i18nCode: "scn",labelEN: "Sicilian",labelNative: "Sicilianu",wdQid: "Q33973",wiki: "scn"},
   {i18nCode: "sl",labelEN: "Slovene",labelNative: "Slovenski jezik",wdQid: "Q9063",wiki: "sl"},
