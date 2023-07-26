@@ -152,7 +152,7 @@ var browser = browser || chrome;
 			console.log("151 lang", lang ) // #136
 			items.push( new OO.ui.MenuOptionWidget( {
 				data: lang.wdQid, // qid
-				label: lang.nativeName, // sign language name (en)
+				label: lang.labelNative, // sign language name (en)
 			} ) );
 		}
 		// Layout
@@ -179,7 +179,7 @@ var browser = browser || chrome;
 			console.log('lang', lang);
 			items.push( new OO.ui.MenuOptionWidget( {
 				data: lang.wdQid,
-				label: lang.nativeName, // name of the language
+				label: lang.labelNative, // name of the language
 			} ) );
 		}
 		// Layout

@@ -76,36 +76,36 @@ var state = 'up', // up, loading, ready, error
 /* i18n context ************************************************** */
 // Get UI languages with translations on github
 var supportedUiLanguages = [
-	{ wdQid:"Q13955",wiki:"ar",i18n:"ar",labelFR:"Arabe",labelEN:"Arabic",nativeName:"اللُّغَة العَرَبِيّة", wikt:"" },
-	{ wdQid:"Q9610",wiki:"bn",i18n:"bn",labelFR:"Bengali",labelEN:"Bengali",nativeName:"বাংলা", wikt:"" },
-	{ wdQid:"Q188",wiki:"de",i18n:"de",labelFR:"Allemand",labelEN:"German",nativeName:"Deutsch", wikt:"" },
-	{ wdQid:"Q1860",wiki:"en",i18n:"en",labelFR:"Anglais",labelEN:"English",nativeName:"English", wikt:"" },
-	{ wdQid:"Q1321",wiki:"es",i18n:"es",labelFR:"Espagnol",labelEN:"Spanish",nativeName:"Español", wikt: "" },
-	{ wdQid:"Q150",wiki:"fr",i18n:"fr",labelFR:"Français",labelEN:"French",nativeName:"Français", wikt:"" },
-	{ wdQid:"Q9288",wiki:"he",i18n:"he",labelFR:"Hébreu",labelEN:"Hebrew",nativeName:"עברית", wikt:"" },
-	{ wdQid:"Q1568",wiki:"hi",i18n:"hi",labelFR:"Hindi",labelEN:"Hindi",nativeName:"मानक हिन्दी", wikt:"" },
-	//{ wdQid:"Q9067",wiki:"hu",i18n:"hu",labelFR:"hongrois",labelEN:"Hungarian",nativeName:"Magyar", wikt:"" },
-	//{ wdQid:"Q9240",wiki:"id",i18n:"id",labelFR:"indonésien",labelEN:"Indonesian",nativeName:"Bahasa Indonesia", wikt:"" },
-	{ wdQid:"Q652",wiki:"it",i18n:"it",labelFR:"Italien",labelEN:"Italian",nativeName:"Italiano", wikt:"" },
-	{ wdQid:"Q5287",wiki:"ja",i18n:"ja",labelFR:"Japonais",labelEN:"Japanese",nativeName:"日本語", wikt:"" },
-	{ wdQid:"Q9252",wiki:"kk",i18n:"kk-cyrl",labelFR:"Kazakh",labelEN:"Kazakh",nativeName:"Казақша", wikt:"" },
-	{ wdQid:"Q9176",wiki:"ko",i18n:"ko",labelFR:"Coréen",labelEN:"Korean",nativeName:"한국어", wikt:"" },
-	//{ wdQid: "Q7930",wiki:"mg",i18n:"mg",labelFR:"malgache",labelEN:"Malagasy",nativeName:"Fiteny Magalasy",wikt:"" },
-	{ wdQid:"Q9296",wiki:"mk",i18n:"mk",labelFR:"Macédonien",labelEN:"Macedonian",nativeName:"Македонски", wikt:"" },
-	{ wdQid:"Q25167",wiki:"nb",i18n:"nb",labelFR:"Bokmål",labelEN:"Bokmål",nativeName:"Bokmål", wikt:"" },
-	{ wdQid:"Q5146",wiki:"pt",i18n:"pt",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (pt)", wikt:"" },
-	{ wdQid:"Q5146",wiki:"pt",i18n:"pt-br",labelFR:"Portugais",labelEN:"Portuguese",nativeName:"Português (br)", wikt:"" },
-	{ wdQid:"Q7737",wiki:"ru",i18n:"ru",labelFR:"Russe",labelEN:"Russian",nativeName:"Русский язык", wikt:"" },
-	{ wdQid:"Q33973",wiki:"scn",i18n:"scn",labelFR:"Sicilien",labelEN:"Sicilian",nativeName:"Sicilianu", wikt:"" },
-	{ wdQid:"Q9027",wiki:"sv",i18n:"sv",labelFR:"Suédois",labelEN:"Swedish",nativeName:"Svenska", wikt:"" },
-	//{ wdQid:"Q7838",wiki:"sw",i18n:"sw",labelFR:"swahili",labelEN:"Swahili",nativeName:"Kiswahili", wikt:"" },
-	//{ wdQid:"Q9267",wiki:"tk",i18n:"tk",labelFR:"turkmène",labelEN:"Turkmen",nativeName:"Türkmençe",wikt:"" },
-	{ wdQid:"Q34057",wiki:"tl",i18n:"tl",labelFR:"Tagalog",labelEN:"Tagalog",nativeName:"Wikang Tagalog", wikt:"" },
-	{ wdQid:"Q256",wiki:"tr",i18n:"tr",labelFR:"Turc",labelEN:"Turkish",nativeName:"Türkçe", wikt:"" },		
-	{ wdQid:"Q18130932",wiki:"zh",i18n:"zh-hant",labelFR:"Chinois traditionel",labelEN:"Traditional Chinese",nativeName:"中文 (繁體)", wikt:"" },
-	{ wdQid:"Q13414913",wiki:"zh",i18n:"zh-hans",labelFR:"Chinois moderne",labelEN:"Modern Chinese",nativeName:"中文 (简体)", wikt:"" },
+	{ wdQid:"Q13955",wiki:"ar",i18nCode:"ar",labelFR:"Arabe",labelEN:"Arabic",labelNative:"اللُّغَة العَرَبِيّة", wikt:"" },
+	{ wdQid:"Q9610",wiki:"bn",i18nCode:"bn",labelFR:"Bengali",labelEN:"Bengali",labelNative:"বাংলা", wikt:"" },
+	{ wdQid:"Q188",wiki:"de",i18nCode:"de",labelFR:"Allemand",labelEN:"German",labelNative:"Deutsch", wikt:"" },
+	{ wdQid:"Q1860",wiki:"en",i18nCode:"en",labelFR:"Anglais",labelEN:"English",labelNative:"English", wikt:"" },
+	{ wdQid:"Q1321",wiki:"es",i18nCode:"es",labelFR:"Espagnol",labelEN:"Spanish",labelNative:"Español", wikt: "" },
+	{ wdQid:"Q150",wiki:"fr",i18nCode:"fr",labelFR:"Français",labelEN:"French",labelNative:"Français", wikt:"" },
+	{ wdQid:"Q9288",wiki:"he",i18nCode:"he",labelFR:"Hébreu",labelEN:"Hebrew",labelNative:"עברית", wikt:"" },
+	{ wdQid:"Q1568",wiki:"hi",i18nCode:"hi",labelFR:"Hindi",labelEN:"Hindi",labelNative:"मानक हिन्दी", wikt:"" },
+	//{ wdQid:"Q9067",wiki:"hu",i18nCode:"hu",labelFR:"hongrois",labelEN:"Hungarian",labelNative:"Magyar", wikt:"" },
+	//{ wdQid:"Q9240",wiki:"id",i18nCode:"id",labelFR:"indonésien",labelEN:"Indonesian",labelNative:"Bahasa Indonesia", wikt:"" },
+	{ wdQid:"Q652",wiki:"it",i18nCode:"it",labelFR:"Italien",labelEN:"Italian",labelNative:"Italiano", wikt:"" },
+	{ wdQid:"Q5287",wiki:"ja",i18nCode:"ja",labelFR:"Japonais",labelEN:"Japanese",labelNative:"日本語", wikt:"" },
+	{ wdQid:"Q9252",wiki:"kk",i18nCode:"kk-cyrl",labelFR:"Kazakh",labelEN:"Kazakh",labelNative:"Казақша", wikt:"" },
+	{ wdQid:"Q9176",wiki:"ko",i18nCode:"ko",labelFR:"Coréen",labelEN:"Korean",labelNative:"한국어", wikt:"" },
+	//{ wdQid: "Q7930",wiki:"mg",i18nCode:"mg",labelFR:"malgache",labelEN:"Malagasy",labelNative:"Fiteny Magalasy",wikt:"" },
+	{ wdQid:"Q9296",wiki:"mk",i18nCode:"mk",labelFR:"Macédonien",labelEN:"Macedonian",labelNative:"Македонски", wikt:"" },
+	{ wdQid:"Q25167",wiki:"nb",i18nCode:"nb",labelFR:"Bokmål",labelEN:"Bokmål",labelNative:"Bokmål", wikt:"" },
+	{ wdQid:"Q5146",wiki:"pt",i18nCode:"pt",labelFR:"Portugais",labelEN:"Portuguese",labelNative:"Português (pt)", wikt:"" },
+	{ wdQid:"Q5146",wiki:"pt",i18nCode:"pt-br",labelFR:"Portugais",labelEN:"Portuguese",labelNative:"Português (br)", wikt:"" },
+	{ wdQid:"Q7737",wiki:"ru",i18nCode:"ru",labelFR:"Russe",labelEN:"Russian",labelNative:"Русский язык", wikt:"" },
+	{ wdQid:"Q33973",wiki:"scn",i18nCode:"scn",labelFR:"Sicilien",labelEN:"Sicilian",labelNative:"Sicilianu", wikt:"" },
+	{ wdQid:"Q9027",wiki:"sv",i18nCode:"sv",labelFR:"Suédois",labelEN:"Swedish",labelNative:"Svenska", wikt:"" },
+	//{ wdQid:"Q7838",wiki:"sw",i18nCode:"sw",labelFR:"swahili",labelEN:"Swahili",labelNative:"Kiswahili", wikt:"" },
+	//{ wdQid:"Q9267",wiki:"tk",i18nCode:"tk",labelFR:"turkmène",labelEN:"Turkmen",labelNative:"Türkmençe",wikt:"" },
+	{ wdQid:"Q34057",wiki:"tl",i18nCode:"tl",labelFR:"Tagalog",labelEN:"Tagalog",labelNative:"Wikang Tagalog", wikt:"" },
+	{ wdQid:"Q256",wiki:"tr",i18nCode:"tr",labelFR:"Turc",labelEN:"Turkish",labelNative:"Türkçe", wikt:"" },		
+	{ wdQid:"Q18130932",wiki:"zh",i18nCode:"zh-hant",labelFR:"Chinois traditionel",labelEN:"Traditional Chinese",labelNative:"中文 (繁體)", wikt:"" },
+	{ wdQid:"Q13414913",wiki:"zh",i18nCode:"zh-hans",labelFR:"Chinois moderne",labelEN:"Modern Chinese",labelNative:"中文 (简体)", wikt:"" },
 
-	//{ wdQid:"",wiki:"",i18n:"",labelFR:"",labelEN:"",nativeName:"", wikt:"" },
+	//{ wdQid:"",wiki:"",i18nCode:"",labelFR:"",labelEN:"",labelNative:"", wikt:"" },
 ];
 
 // Init internationalisation support with Banana-i18n.js
@@ -140,7 +140,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	
 	// Get locale code and corresponding wiktionary
 	var lang = supportedUiLanguages.filter(item => (item.wdQid==uiLanguageQid) );
-	locale = lang[0].i18n;
+	locale = lang[0].i18nCode;
 	console.log("locale",locale)
 
 	// Load i18n messages
@@ -185,7 +185,7 @@ async function getStoredParam( name ) {
 
 
 // Get sign languages covered by Lingualibre
-// returns: [{ wdQid: "Q99628", nativeName: "langue des signes française"},{},...]
+// returns: [{ wdQid: "Q99628", labelNative: "langue des signes française"},{},...]
 async function getSignLanguagesWithVideos() {
 	var i,
 		signLanguage,
@@ -198,7 +198,7 @@ async function getSignLanguagesWithVideos() {
 	for ( i = 0; i < response.results.bindings.length; i++ ) {
 		var signLanguageRaw = response.results.bindings[ i ];
 		console.log("#149",signLanguageRaw)
-		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), nativeName: signLanguageRaw.idLabel.value }
+		signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), labelNative: signLanguageRaw.idLabel.value }
 		signLanguages[i] = signLanguage;
 	}
 	// TEMPORARY, WHEN ONLY LSF HAS VIDEOS
@@ -364,7 +364,7 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 		console.log('bg>signit.getfiles')
 		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
 	}
-	 // When message 'signit.i18n' is heard, returns banada object
+	 // When message 'signit.i18nCode' is heard, returns banada object
 	else if ( message.command === 'signit.getfilesb' ) {
 		console.log('bg>signit.getfilesB')
 		// var locale = await getStoredParam( 'uiLanguage' )
