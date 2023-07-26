@@ -60,7 +60,7 @@
 					style="left: ${iconX}px; top:${iconY}px; position: absolute; display:none;"
 					title=""
 					text="no b"
-					src=${browser.runtime.getURL( 'icons/Lingualibre-logo-no-text-old.svg')}
+					src=${browser.runtime.getURL( 'icons/Lingualibre_SignIt-logo-no-text.svg')}
 					></img>`
 	}
 
