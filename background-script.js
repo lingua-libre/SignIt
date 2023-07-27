@@ -31,6 +31,7 @@ const sparqlEndpoints = {
 /* *************************************************************** */
 /* Sparql ******************************************************** */
 // Lingualibre: All languages (P4) for which media type (P24) is video (Q88890)
+// TODO: NEEDS QUERY HITING ON LLQS+WDQS, FETCHING NATIVE NAME (P1705)
 const sparqlSignLanguagesQuery = 'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
 // Lingualibre: Given a language (P4) with media video, fetch the list of writen word (P7), url (P3) speakers (P5)
 const sparqlSignVideosQuery = 'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
@@ -199,7 +200,7 @@ async function getSignLanguagesWithVideos() {
 	var i,
 		signLanguage,
 		signLanguages = [], // ?? already define in global scopte
-		response = await $.post( 
+		response = await $.post(
 			sparqlEndpoints.lingualibre.url, 
 			{ format: 'json', query: sparqlSignLanguagesQuery } 
 		);
