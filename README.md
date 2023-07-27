@@ -50,9 +50,9 @@ We look for volunteers:
 * [hugolpz](https://github.com/hugolpz)
 
 ### Code
-- [Github: Lingua-libre/SignIt/Issues](https://github.com/Lingua-libre/SignIt/Issues) — tickets manager
+- [Github: Lingua-libre/SignIt/Issues](https://github.com/lingua-libre/SignIt/issues) — tickets manager
 - [Github: Lingua-libre/SignIt](https://github.com/lingua-libre/SignIt) — code (JS)
-* [Translate SignIt's user interface](https://translatewiki.net/wiki/Translating:Lingua_Libre_SignIt)
+- [Translate SignIt's user interface](https://translatewiki.net/wiki/Translating:Lingua_Libre_SignIt)
 
 ## Documentation
 * [:meta:Lingua Libre/SignIt](https://meta.wikimedia.org/wiki/Lingua_Libre/SignIt) — Wikimedia project page with mission statement.
