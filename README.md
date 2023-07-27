@@ -13,13 +13,14 @@ Manual install is possible for Chrome, Chromium. Should be eqully possible with 
 ```
 # git clone the repository first, then...
 npm install                 # Install dependencies
+# Bump version in package.json and manifest.json, ex: 1.0.12 -> 1.0.13
 npm run web-ext:build       # build the firefox extension into an instalable .zip
 npm run web-ext:test        # runs current dev version in Firefox, opens url defined in package.json
 ```
 See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
 
 [Inspect Firefox extension](https://extensionworkshop.com/documentation/develop/debugging/) : Open url `about:debugging#/runtime/this-firefox`.
-There, `Load temporary Add-on`, fin "Lingua Libre SignIt" : click `Inspect`.
+There, `Load temporary Add-on`, find "Lingua Libre SignIt" : click `Inspect`.
 
 ## Visuals
 <img src="doc/LinguaLibre_SignIt-01.png"/>
