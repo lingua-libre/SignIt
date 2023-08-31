@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Buscando a lista de todos os vídeos dispoñibles en Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Multimedia:",
+	"si-overlay-coreContent-left-novideo": "Aínda non se gravou esta palabra,<br>pero SignIt é un proxecto colaborativo e podes contribuír a el.",
+	"si-overlay-coreContent-left-contribute-label": "Contribuír en lingua de sinais",
+	"si-overlay-coreContent-right-title": "Definicións:",
+	"si-overlay-coreContent-right-wikt-iso": "gl",
+	"si-overlay-coreContent-right-wikt-section-id": "#Galego",
+	"si-overlay-coreContent-right-wikt-pointer": "ollar no Galizionario",
+	"si-overlay-coreContent-right-error": "Non se atopou a definición.",
+	"si-popup-browse-title": "Navegar",
+	"si-popup-browse-placeholder": "Buscar entre os $1 sinais.",
+	"si-popup-browse-label": "Procurar",
+	"si-popup-browse-icon": "Comezar a busca",
+	"si-popup-history-title": "Historial",
+	"si-popup-history-noHistory": "Está baleiro",
+	"si-popup-settings-title": "Axustes",
+	"si-popup-settings-signlanguage": "Lingua de sinais:",
+	"si-popup-settings-signlanguage-help": "Cambiar os vídeos a outra lingua de sinais.",
+	"si-popup-settings-signlanguage-dropdown": "Cambiar a lingua dos vídeos",
+	"si-popup-settings-uilanguage": "Lingua da interface:",
+	"si-popup-settings-uilanguage-help": "Cambiar a lingua da interface de usuario.",
+	"si-popup-settings-uilanguage-dropdown": "Cambiar a lingua da interface",
+	"si-popup-settings-history": "Lonxitude do historial:",
+	"si-popup-settings-history-help": "Establecer a 0 desactiva o rexistro do historial",
+	"si-popup-settings-wpintegration": "Integración nativa coa Wikipedia:",
+	"si-popup-settings-twospeed": "Reproducir a velocidade normal e despois a velocidade lenta:",
+	"si-popup-settings-hint-icon": "Icona de atallo no texto seleccionado:",
+	"si-popup-settings-enlighten": "Destacar as palabras dispoñibles:",
+	"si-videosGallery-video": "por {{link|$1|$2}} – Vídeo $3 de $4"
+}
