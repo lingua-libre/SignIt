@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre тӀехь йолу йерриге видео могӀам гойту.",
+	"si-overlay-coreContent-left-title": "Медиа:",
+	"si-overlay-coreContent-left-novideo": "И дош хӀинца а дӀайаздина дац,<br> делахь SignIt — краудсорсинган проект йу, цундела ахьа къахьега мега!",
+	"si-overlay-coreContent-right-title": "Билгалдалар:",
+	"si-overlay-coreContent-right-wikt-iso": "en",
+	"si-overlay-coreContent-right-wikt-section-id": "#ингалсан",
+	"si-overlay-coreContent-right-wikt-pointer": "хьажа Викидошам тӀехь",
+	"si-overlay-coreContent-right-error": "Билгалдалар цакарий.",
+	"si-popup-browse-title": "Хьажар",
+	"si-popup-browse-label": "Лаха",
+	"si-popup-browse-icon": "Доладе лехар",
+	"si-popup-history-title": "Истори",
+	"si-popup-history-noHistory": "Кхузахь йаьсса йу",
+	"si-popup-settings-title": "Нисдаран гӀирс",
+	"si-popup-settings-signlanguage-dropdown": "Видео тӀера мотт хийца",
+	"si-popup-settings-uilanguage": "Интерфейсан мотт:",
+	"si-popup-settings-uilanguage-help": "Долара интерфейс тӀера мотт хийца.",
+	"si-popup-settings-uilanguage-dropdown": "Интерфейсан мотт хийца",
+	"si-popup-settings-history": "Историн йохалла:",
+	"si-popup-settings-history-help": "ХӀоттаде 0, историн тептарна деактивици йан",
+	"si-popup-settings-wpintegration": "Нативан интеграци Википедица:",
+	"si-popup-settings-hint-icon": "Билгалдина йозанан сиха тӀекхачаран веназ:",
+	"si-popup-settings-enlighten": "ТӀекхочуш долу дешнаш билгалде:",
+	"si-videosGallery-video": "авторалла: {{link|$1|$2}} – $3 видео $4 чохь"
+}
