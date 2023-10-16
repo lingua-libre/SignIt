@@ -7,10 +7,11 @@
 	"si-addon-title": "လုပ်အကံက်လေန်ဂွါ လဳပရေ",
 	"si-addon-preload": "သ္ပတံၚ်ကေတ်ဗဳဒဳယဝ်စရၚ်မနွံပ္ဍဲလ္တူလေန်ဂွါ လဳပရေသီုဖအိုတ်။",
 	"si-overlay-coreContent-left-title": "မဳဒဳယာ:",
+	"si-overlay-coreContent-left-novideo": "ဝေါဟာတဏအ်ဝွံဟွံဂွံစၟတ်သမ္တီရမျာၚ်ဏီ၊ <br>ဆ္ဂးသေတ်နေတ်ဂှ်ဝွံမကၠုၚ်နူတံရိုဟ်ပရဝ်ဂျေတ်ညးဍုၚ်ကွာန်၊ ဇကုကီုလေဝ်ဗီုၚ်ရီုဗၚ်မကၠောန်သ္ပဂွံမာန်။",
 	"si-overlay-coreContent-left-contribute-label": "မနွံပံၚ်ကောံနကဵုအရေဝ်သာသာတဲ",
 	"si-overlay-coreContent-right-title": "မပွံက်အဓိပ္ပာဲ:",
 	"si-overlay-coreContent-right-wikt-iso": "mnw",
-	"si-overlay-coreContent-right-wikt-section-id": "#မန်",
+	"si-overlay-coreContent-right-wikt-section-id": "# မန်",
 	"si-overlay-coreContent-right-wikt-pointer": "ဗဵုလ္တူဝိက်ရှေန်နရဳ",
 	"si-overlay-coreContent-right-error": "မအရေဝ်မပွံက်အဓိပ္ပာဲလဝ်ဟွံဆဵု။",
 	"si-popup-browse-title": "ကိတ်ဍေက်",
@@ -23,5 +24,11 @@
 	"si-popup-settings-signlanguage": "အရေဝ်ဘာသာမသမ္တီလဝ်:",
 	"si-popup-settings-signlanguage-help": "ပြံၚ်လှာဲဗဳဒဳယဝ်တၞဟ်နကဵုအရေဝ်ဘာသာတဲ။",
 	"si-popup-settings-signlanguage-dropdown": "ပြံၚ်လှာဲအရေဝ်ဘာသာဗဳဒဳယဝ်",
-	"si-popup-settings-uilanguage": "အရေဝ်ဘာသာမုက်လဒဲ:"
+	"si-popup-settings-uilanguage": "အရေဝ်ဘာသာမုက်လဒဲ:",
+	"si-popup-settings-uilanguage-help": "မပြံၚ်လှာဲအရေဝ်ဘာသာအိန်တာဖှေန်နကဵုညးမသုၚ်စောဲ။",
+	"si-popup-settings-uilanguage-dropdown": "မပြံၚ်လှာဲအရေဝ်ဘာသာအိန်တာဖှေန်",
+	"si-popup-settings-history": "ဇမၠိၚ်မဆေၚ်စပ်ကဵုဝၚ်:",
+	"si-popup-settings-history-help": "စကၠောန်မဒှ် ၀ တၟာတ်ထောံပရေၚ်ရပ်စပ်မဆေၚ်စပ်ကဵုဝၚ်စၟတ်သမ္တီ",
+	"si-popup-settings-wpintegration": "ဂကောံပံၚ်စပ်ဒၞာဲဇာတိနူကဵုဝဳကဳပဳဒဳယာ:",
+	"si-popup-settings-twospeed": "ဝေၚ်ဒရိပ်လအာဗီုဓမ္မတာ၊ တုဲတှ်ေဒရိပ်လအာအိၚ်:"
 }
