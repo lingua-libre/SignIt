@@ -13,7 +13,7 @@ Manual install is possible for Chrome, Chromium. Should be eqully possible with 
 ```
 # git clone the repository first, then...
 npm install                 # Install dependencies
-# Bump version in package.json and manifest.json, ex: 1.0.12 -> 1.0.13
+# Bump version : edit package.json and manifest.json, ex: 1.0.12 -> 1.0.13
 npm run web-ext:build       # build the firefox extension into an instalable .zip
 npm run web-ext:test        # runs current dev version in Firefox, opens url defined in package.json
 ```
