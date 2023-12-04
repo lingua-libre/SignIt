@@ -6,18 +6,8 @@ var SignItCoreContent = function () {
   // background.js not accessible natively
   // HOW TO IMPORT background.js and its banana i18n ?
   // See issue #21
-  $(document).ready(function () {
-    // Initializing the visibility state
-    let video_pop = false;
 
-    // Function to toggle the visibility of the of video-section
-    function toggleVideoPop() {
-      video_pop = !video_pop;
-      $(".signit-panel-videos").toggle(video_pop);
-    }
-
-    this.$container = $(
-      `
+  this.$container = $(`
 		<div class="signit-popup-container">
 			<h1></h1>
 			<div class="signit-popup-content">
@@ -50,12 +40,9 @@ var SignItCoreContent = function () {
         /* ${ banana.i18n("si-overlay-coreContent-right-error") } */ `</div>
 			</div>
 		</div>
-	`
-    );
-    // Button click event
-    $("#video_toggle").on("click", function () {
-      toggleVideoPop();
-    });
+	  `);
+    
+    // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
       label:
@@ -85,7 +72,22 @@ var SignItCoreContent = function () {
     // this.contributeButton.on( 'click', function () {
     //	// TODO: Do something
     // }.bind( this ) );
-  });
+
+  // @saltykheera's toggle video solution :
+  document.addEventListener("DOMContentLoaded", function(){
+     // Initializing the visibility state
+     let video_pop = false;
+     // Toggle video-section visibility
+     function toggleVideoPop() {
+       console.log("Toggle video : " + video_pop)
+       video_pop = !video_pop;
+       $(".signit-panel-videos").toggle(video_pop);
+     }    
+     // Button toggle video
+     $("#video_toggle").on("click", function () {
+       toggleVideoPop();
+     });
+  }); 
 
   SignItCoreContent.prototype.refresh = function (title, files) {
     files = files || [];

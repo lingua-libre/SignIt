@@ -73,6 +73,8 @@
   box-shadow: 0 0 0.5rem #999;
   width: 100%;
 }
+
+/* Toggle video button */
 #video_toggle {
   cursor: pointer;
   display: inline-block;
