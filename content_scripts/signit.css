@@ -1,83 +1,110 @@
 /* *************************************************************** */
 /* Modal structure *********************************************** */
 .signit-popup-anchor {
-	position: absolute;
-	z-index: -99999; /* put it under everything else so it doesn't disturb anything */
+  position: absolute;
+  z-index: -99999; /* put it under everything else so it doesn't disturb anything */
 }
 
 /* *************************************************************** */
 /* Popup outline ************************************************* */
-.signit-popup { z-index: 9999; }  /* above everythings */
+.signit-popup {
+  z-index: 9999;
+} /* above everythings */
 
 .signit-popup .oo-ui-popupWidget-popup {
-	max-height: 500px;
+  max-height: 500px;
 }
 
 .signit-popup .oo-ui-popupWidget-body {
-	margin: 0;
+  margin: 0;
 }
 
 /* *************************************************************** */
 /* Popup content ************************************************* */
 .signit-popup h1 {
-	margin-bottom: 0.6em;
-	font-size: 188%;
-	color: black;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
-	border-bottom: 1px solid #a2a9b1;
-	text-align: center;
-	background-color: #00a99d;
-	color: white;
-	box-shadow: 0 0px 5px -2px black;
+  margin-bottom: 0.6em;
+  font-size: 188%;
+  color: black;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #a2a9b1;
+  text-align: center;
+  background-color: #00a99d;
+  color: white;
+  box-shadow: 0 0px 5px -2px black;
 }
 
 .signit-popup h2 {
-	display: none;
+  display: none;
 }
 
 .signit-popup-content {
-	display: flex;
-	flex: 1;
-	align-items: center;
-	margin: 0 0.85714286em 0.57142857em;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 0 0.85714286em 0.57142857em;
 }
 
 .signit-panel-separator {
-	flex: 0 0 1px;
-	margin: 25px 10px;
-	background: #a2a9b1;
-	align-self: stretch;
+  flex: 0 0 1px;
+  margin: 25px 10px;
+  background: #a2a9b1;
+  align-self: stretch;
 }
 
 .signit-panel-videos,
 .signit-panel-definition {
-	flex: 0 1 auto;
-	width: 50%;
+  flex: 0 1 auto;
+  width: 50%;
 }
 
 /* *************************************************************** */
 /* Video gallery panel (left or top) ***************************** */
 .signit-panel-videos {
-	text-align: center;
+  text-align: center;
 }
 
 .signit-video {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .signit-video video {
-	box-shadow: 0 0 .5rem #999;
-	width: 100%;
+  box-shadow: 0 0 0.5rem #999;
+  width: 100%;
+}
+#video_toggle {
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+}
+
+#video_toggle::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: transform 0.3s;
+}
+
+#video_toggle.active::before {
+  transform: translateX(20px);
 }
 
 /* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */
 .signit-definition-text {
-	overflow-y: auto;
-	max-height: 340px;
-	text-align: left;
+  overflow-y: auto;
+  max-height: 340px;
+  text-align: left;
 }
 
 .signit-definition-text p,
@@ -87,113 +114,117 @@
 .signit-definition-text a,
 .signit-definition-text ol,
 .signit-definition-text li {
-	all: initial;
-	font-size: 16px;
-	font-family: sans-serif;
-	line-height: 1.42857143em;
-	color: #222222;
+  all: initial;
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.42857143em;
+  color: #222222;
 }
 
 .signit-definition-text p {
-	margin: 0.4em 0 0.5em 0;
-	padding: 0;
-	display: block;
+  margin: 0.4em 0 0.5em 0;
+  padding: 0;
+  display: block;
 }
 
 .signit-definition-text ol {
-	list-style-type: decimal;
-	margin: 0.3em 0 0 3.2em;
-	display: block;
+  list-style-type: decimal;
+  margin: 0.3em 0 0 3.2em;
+  display: block;
 }
 
 .signit-definition-text ol li {
-	display: list-item;
-	list-style-type: decimal;
-	margin-bottom: 0.8em;
+  display: list-item;
+  list-style-type: decimal;
+  margin-bottom: 0.8em;
 }
 
 .signit-definition-text i {
-	font-style: italic;
+  font-style: italic;
 }
 
 .signit-definition-text b {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .signit-definition-text a {
-	color: #0645ad;
+  color: #0645ad;
 }
 
 .signit-definition-text a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .signit-definition-text ol ul {
-	display: none;
+  display: none;
 }
 
 .signit-definition-text .reference {
-	display: none;
+  display: none;
 }
 
 .signit-definition-source {
-	height: 20px;
-	text-align: right;
-	margin-top: 4px;
-	width: 100%;
-	font-style: italic;
+  height: 20px;
+  text-align: right;
+  margin-top: 4px;
+  width: 100%;
+  font-style: italic;
 }
 
 /* *************************************************************** */
 /* Loading ******************************************************* */
 @keyframes spinner {
-  to {transform: rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .signit-loading {
-	text-align: center;
-	color: black;
+  text-align: center;
+  color: black;
 }
 
 .signit-loading-spinner {
-	animation: spinner 1.5s linear infinite;
-	width:40px;
-	margin: auto;
+  animation: spinner 1.5s linear infinite;
+  width: 40px;
+  margin: auto;
 }
 
 /* *************************************************************** */
 /* Icons ********************************************************* */
 .oo-ui-icon-next {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQluZXh0Cgk8L3RpdGxlPgoJPHBhdGggZD0iTTcgMUw1LjYgMi41IDEzIDEwbC03LjQgNy41TDcgMTlsOS05eiIvPgo8L3N2Zz4K' );
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQluZXh0Cgk8L3RpdGxlPgoJPHBhdGggZD0iTTcgMUw1LjYgMi41IDEzIDEwbC03LjQgNy41TDcgMTlsOS05eiIvPgo8L3N2Zz4K");
 }
 
 .oo-ui-icon-previous {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5wcmV2aW91czwvdGl0bGU+PHBhdGggZD0iTTQgMTBsOSA5IDEuNC0xLjVMNyAxMGw3LjQtNy41TDEzIDF6Ii8+PC9zdmc+' );
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5wcmV2aW91czwvdGl0bGU+PHBhdGggZD0iTTQgMTBsOSA5IDEuNC0xLjVMNyAxMGw3LjQtNy41TDEzIDF6Ii8+PC9zdmc+");
 }
 
 .oo-ui-icon-search {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' );
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K");
 }
 
 /* *************************************************************** */
 /* Hint icon ***************************************************** */
 .signit-hint-container {
-	/* border:1px solid #00a99d;  #00a99d: logo green*/
-	background: #FFF; /*#484848 : logo grey */
-	height: 32px !important; 
-	width: 32px !important;
-	border-radius:3px;
-	cursor: pointer; 
-	z-index: 1000;
-} 
+  /* border:1px solid #00a99d;  #00a99d: logo green*/
+  background: #fff; /*#484848 : logo grey */
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1000;
+}
 .signit-hint-icon {
-	background-image: url( '../icons/Lingualibre_SignIt-logo-no-text.svg' );
-	background-size: cover;
-	opacity:0.5;
+  background-image: url("../icons/Lingualibre_SignIt-logo-no-text.svg");
+  background-size: cover;
+  opacity: 0.5;
 }
 .signit-hint-icon:hover {
-	opacity:1;
+  opacity: 1;
 }
 /* *************************************************************** */
 /* Hint icon ***************************************************** */
-si.signit-colored { background-color: #FFFF0055; }
+si.signit-colored {
+  background-color: #ffff0055;
+}
