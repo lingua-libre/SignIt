@@ -54,7 +54,7 @@
 	}
 
 	/* *************************************************************** */
-	/* HintIcon: init, coords, toogle ******************************** */
+	/* HintIcon: init, coords, toggle ******************************** */
 	var hintIconElement = function(iconX=0,iconY=0){ 
 		return `<img class="signit-hint-container signit-hint-icon" 
 					style="left: ${iconX}px; top:${iconY}px; position: absolute; display:none;"
@@ -135,7 +135,19 @@
 			uncolorWords();
 		}
 	}
-			
+
+	/* *************************************************************** */
+	/* Toggle video panel ******************************************** */
+	async function toggleVideoPanel(arr) {
+		// @hugolpz's toggle video solution :
+		console.log("before")
+		var showvideoStatus = await browser.storage.local.get( 'showvideo' ); 
+		showvideo = Object.values( showvideoStatus  )[0]
+		console.log("after: showvideoStatus = ", showvideo)
+		if(!showvideo) {
+			$(".signit-panel-videos").toggle(showvideo);
+		}
+	}	
 
 	/* *************************************************************** */
 	/* Modal: init helped by SignItCoreContent *********************** */
@@ -181,6 +193,7 @@
 		// Hide the popup if it was still open for a previous request
 		popup.toggle( false );
 		content.refresh( message.text, message.files );
+		toggleVideoPanel();
 		popup.toggle( true );
 		popup.toggleClipping( false );
 	}

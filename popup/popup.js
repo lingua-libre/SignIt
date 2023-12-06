@@ -241,18 +241,28 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-enlighten"),
 			align: 'top',
 		} );
-		// Show video 
-		// Show definitions 
+		// Show video panel
+		showvideoWidget = new OO.ui.ToggleSwitchWidget( {
+			value: true
+		} );
+		showvideoLayout = new OO.ui.FieldLayout( showvideoWidget, {
+			label: banana.i18n("si-popup-settings-showvideo"),
+			align: 'top',
+		} );
+		// Show definitions
 
 
 		// Populate UI with correct values
+		// Select menus
 		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
 		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
+		// Toogle buttons
 		historyWidget.setValue( _backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
 		twospeedWidget.setValue( _backgroundPage.params.twospeed );
 		hinticonWidget.setValue( _backgroundPage.params.hinticon );
 		coloredwordsWidget.setValue( _backgroundPage.params.coloredwords );
+		showvideoWidget.setValue( _backgroundPage.params.showvideo );
 
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
@@ -270,6 +280,7 @@ var browser = browser || chrome;
 		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
 		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) )
 		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) )
+		showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'showvideo' ) )
 
 
 		// Build Settings UI
@@ -280,7 +291,8 @@ var browser = browser || chrome;
 			.append( wpintegrationLayout.$element )
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element )
-			.append( coloredwordsLayout.$element );
+			.append( coloredwordsLayout.$element )
+			.append( showvideoLayout.$element );
 	};
 
 	/* *********************************************************** */

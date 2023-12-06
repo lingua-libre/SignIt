@@ -406,6 +406,7 @@ async function main() {
     // storeParam( 'twospeed', params.twospeed ); //
 	await getStoredParam( 'hinticon' );
 	await getStoredParam( 'coloredwords' );
+	await getStoredParam( 'showvideo' );
 
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();
