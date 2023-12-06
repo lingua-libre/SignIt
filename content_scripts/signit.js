@@ -146,6 +146,7 @@
 		console.log("after: showvideoStatus = ", showvideo)
 		if(!showvideo) {
 			$(".signit-panel-videos").toggle(showvideo);
+			$(".signit-panel-separator").toggle(showvideo);
 		}
 	}	
 
