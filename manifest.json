@@ -15,6 +15,11 @@
 		"48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
 		"64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
 	},
+	"browser_action": {
+		"default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
+		"default_title": "Lingua Libre SignIt",
+		"default_popup": "popup/popup.html"
+	},
 	"permissions": [
 		"activeTab",
 		"contextMenus",
@@ -23,11 +28,6 @@
 		"webRequestBlocking",
 		"<all_urls>"
 	],
-	"browser_action": {
-		"default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
-		"default_title": "Lingua Libre SignIt",
-		"default_popup": "popup/popup.html"
-	},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
