@@ -9,6 +9,7 @@
 /* Popup outline ************************************************* */
 .signit-popup {
   z-index: 9999;
+  width:850px;
 } /* above everythings */
 
 .signit-popup .oo-ui-popupWidget-popup {
@@ -55,7 +56,7 @@
 .signit-panel-videos,
 .signit-panel-definition {
   flex: 0 1 auto;
-  width: 50%;
+  width: 400px;
 }
 
 /* *************************************************************** */
@@ -74,7 +75,7 @@
   width: 100%;
 }
 
-/* Toggle video button */
+/* TEST Toggle video button */
 #video_toggle {
   cursor: pointer;
   display: inline-block;
