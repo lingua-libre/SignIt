@@ -1,6 +1,7 @@
 // const { default: backgroundPage } = require("./background-script"); // to try
 
-var SignItCoreContent = function () {
+var SignItCoreContent = function (banana) {
+  console.log("Passed trough ! :", banana)
   console.log("SignItCoreContent.js");
   // console.log("banana",banana) // -> Uncaught (in promise) Error: banana is not defined
   // background.js not accessible natively

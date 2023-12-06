@@ -129,6 +129,8 @@ banana.registerParserPlugin('link', (nodes) => {
 	return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
 });
 
+storeParam('bananaInStore',banana)
+
 /* ************************************************ 
 async function fetchJS(filepath) {
 	try {

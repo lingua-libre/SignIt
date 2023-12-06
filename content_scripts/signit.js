@@ -151,8 +151,12 @@
 
 	/* *************************************************************** */
 	/* Modal: init helped by SignItCoreContent *********************** */
-	function initModalUI() {
-		content = new SignItCoreContent();
+	async function initModalUI() {
+		console.log("before")
+		var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
+		console.log("after: BetterBanana = ", BetterBanana.bananaInStore)
+
+		content = new SignItCoreContent(BetterBanana.bananaInStore);
 
 		// Setup an absolute-positionned $anchorModal we can programatically move
 		// to be able to point exactly some coords with our popup later
