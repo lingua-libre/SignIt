@@ -6,22 +6,20 @@ var SignItCoreContent = function () {
   // background.js not accessible natively
   // HOW TO IMPORT background.js and its banana i18n ?
   // See issue #21
-
   this.$container = $(`
 		<div class="signit-popup-container">
 			<h1></h1>
 			<div class="signit-popup-content">
-				<h2>Media:` +
-        /* ${ banana.i18n("si-overlay-coreContent-left-title") } */ `</h2>
 				<div class="signit-panel-videos signit-novideo">
-					Pas de video disponible.` +
-        /* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */ `<br><br>
+				  <h2>Media:` +
+          /* ${ banana.i18n("si-overlay-coreContent-left-title") } */ `</h2>
+					Pas de video disponible.` + /* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
 				</div>
 				<div class="signit-panel-videos signit-video"></div>
 				<div class="signit-panel-separator"></div>
-				<h2>Definition:` +
-        /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
 				<div class="signit-panel-definition signit-definition">
+				  <h2>Definition:` +
+          /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
 				    <button id="video_toggle" >video?</button>
 					
 					<div class="signit-definition-text"></div>
