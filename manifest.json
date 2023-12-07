@@ -78,7 +78,7 @@
 		"icons/*"
 	],
 	"commands": {
-		"_execute_action": {
+		"_execute_browser_action": {
 			"suggested_key": {
 				"default": "Ctrl+Shift+L"
 			}
