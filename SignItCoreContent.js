@@ -21,8 +21,6 @@ var SignItCoreContent = function (banana) {
 				<div class="signit-panel-definition signit-definition">
 				  <h2>Definition:` +
           /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
-				    <button id="video_toggle" >video?</button>
-					
 					<div class="signit-definition-text"></div>
 					<div class="signit-definition-source">
 						<a href="https://fr` +
@@ -71,22 +69,6 @@ var SignItCoreContent = function (banana) {
     // this.contributeButton.on( 'click', function () {
     //	// TODO: Do something
     // }.bind( this ) );
-
-  // @saltykheera's toggle video solution :
-  document.addEventListener("DOMContentLoaded", function(){
-     // Initializing the visibility state
-     let video_pop = false;
-     // Toggle video-section visibility
-     function toggleVideoPop() {
-       console.log("Toggle video : " + video_pop)
-       video_pop = !video_pop;
-       $(".signit-panel-videos").toggle(video_pop);
-     }    
-     // Button toggle video
-     $("#video_toggle").on("click", function () {
-       toggleVideoPop();
-     });
-  }); 
 
   SignItCoreContent.prototype.refresh = function (title, files) {
     files = files || [];

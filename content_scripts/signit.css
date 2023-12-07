@@ -75,33 +75,6 @@
   width: 100%;
 }
 
-/* TEST Toggle video button */
-#video_toggle {
-  cursor: pointer;
-  display: inline-block;
-  width: 50px;
-  height: 30px;
-  background-color: #ccc;
-  border-radius: 15px;
-  position: relative;
-}
-
-#video_toggle::before {
-  content: "";
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background-color: white;
-  top: 1px;
-  left: 1px;
-  transition: transform 0.3s;
-}
-
-#video_toggle.active::before {
-  transform: translateX(20px);
-}
-
 /* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */
 .signit-definition-text {
