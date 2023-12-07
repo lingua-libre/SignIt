@@ -122,6 +122,7 @@ var SignItCoreContent = function (banana) {
         mobileformat: 1,
         noimages: 1,
         formatversion: "2",
+        origin: "*"
       });
     } catch (error) {
       result = { error: { code: error } };
