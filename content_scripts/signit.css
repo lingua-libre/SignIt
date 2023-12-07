@@ -9,7 +9,6 @@
 /* Popup outline ************************************************* */
 .signit-popup {
   z-index: 9999;
-  width:850px;
 } /* above everythings */
 
 .signit-popup .oo-ui-popupWidget-popup {

@@ -153,6 +153,8 @@
 	/* *************************************************************** */
 	/* Modal: init helped by SignItCoreContent *********************** */
 	async function initModalUI() {
+
+		// Banana test, search `bananaInStore` in files for more
 		console.log("before")
 		var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
 		console.log("after: BetterBanana = ", BetterBanana.bananaInStore)
@@ -193,12 +195,21 @@
 		$selector.css( 'width', coords.width );
 		$selector.css( 'height', coords.height );
 	}
+	// SignIt modal width depends on number of active panels
+	var signItModalWidth  = async function(){
+		var showvideo = Object.values( await browser.storage.local.get( 'showvideo' ) )[0];
+		numberOfPanels = (showvideo?1:0)+1;
+		return numberOfPanels==2? 850:450;
+	}
 
 	var refreshModal = function(message){
-		// Hide the popup if it was still open for a previous request
+		// Hide the popup if still open from a previous request
 		popup.toggle( false );
+		// refresh with new content, panels check, width.
 		content.refresh( message.text, message.files );
 		toggleVideoPanel();
+		$( 'signit-popup').css( 'width', signItModalWidth() );
+		// Show again
 		popup.toggle( true );
 		popup.toggleClipping( false );
 	}
