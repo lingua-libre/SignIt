@@ -138,7 +138,7 @@
 
 	/* *************************************************************** */
 	/* Toggle video panel ******************************************** */
-	async function toggleVideoPanel(arr) {
+	async function toggleVideoPanel() {
 		// @hugolpz's toggle video solution :
 		console.log("before")
 		var showvideoStatus = await browser.storage.local.get( 'showvideo' ); 
