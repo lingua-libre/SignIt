@@ -10,3 +10,5 @@ dist/*
 .accountRecovery.txt
 assets/
 doc/*.pdf
+icons/proper/
+tryV3/
