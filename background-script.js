@@ -71,6 +71,7 @@ var state = 'up', // up, loading, ready, error
 		// Preparation for issues/36
 		showvideo: true,
 		showdefinition: true,
+		choosepanels: 'both',
 	};
 
 /* *************************************************************** */
@@ -129,7 +130,6 @@ banana.registerParserPlugin('link', (nodes) => {
 	return '<a href="' + nodes[0] + '">' + nodes[1] + '</a>';
 });
 
-storeParam('bananaInStore',banana)
 
 /* ************************************************ 
 async function fetchJS(filepath) {
@@ -167,6 +167,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 
 	// Declare localisation
 	banana.setLocale(locale); // Change to new locale
+	storeParam('bananaInStore',banana)
 	
 	state = 'ready';
 
@@ -177,24 +178,25 @@ async function loadI18nLocalization( uiLanguageQid ) {
 /* Settings management : memory, updates ************************* */
 // Save parameter and value in localStorage
 async function storeParam( name, value ) {
-	// If the value is an array, we make a copy of it to avoid dead references issues
+	// If value of type array, we make a copy of it to avoid dead references issues
 	if ( Array.isArray( value ) ) {
 		value = Array.from( value ); // copy
 	}
-	// create object { name: value }
+	// else, create object { name: value }
+	console.log('HERE ! Selected option: { ', name+': '+value+' }' );
 	var tmp = {};
 	tmp[ name ] = value;
 	// reset params
 	params[ name ] = value;
 	return await browser.storage.local.set( tmp );
 }
-// Check if localStorage has parameter value, else use and save default value
+// Get stored values from init hard coded `params` or from prefered local storage
+// Also synchronize both.
 async function getStoredParam( name ) {
 	var tmp = await browser.storage.local.get( name );
 	params[ name ] = tmp[ name ] || params[ name ] || null;	
-	// Missing from local storage, save default values there
+	// If missing from local storage, then save init values in local storage
 	if(tmp.length == undefined ) { await storeParam(name, params[name]); }
-	var tmp = await browser.storage.local.get( name );
 	return params[ name ];
 }
 
@@ -409,6 +411,7 @@ async function main() {
 	await getStoredParam( 'hinticon' );
 	await getStoredParam( 'coloredwords' );
 	await getStoredParam( 'showvideo' );
+	await getStoredParam( 'choosepanels' );
 
 	signLanguage = await getStoredParam( 'signLanguage' );
 	signLanguages = await getSignLanguagesWithVideos();

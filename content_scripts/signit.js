@@ -139,15 +139,13 @@
 	/* *************************************************************** */
 	/* Toggle video panel ******************************************** */
 	async function toggleVideoPanel() {
-		// @hugolpz's toggle video solution :
-		console.log("before")
-		var showvideoStatus = await browser.storage.local.get( 'showvideo' ); 
-		showvideo = Object.values( showvideoStatus  )[0]
-		console.log("after: showvideoStatus = ", showvideo)
-		if(!showvideo) {
-			$(".signit-panel-videos").toggle(showvideo);
-			$(".signit-panel-separator").toggle(showvideo);
-		}
+		var activePanels = await browser.storage.local.get( 'choosepanels' ); 
+		activepanels = Object.values( activePanels)[0];
+		console.log('toggle: ', activePanels, activepanels )
+
+		$(".signit-popup-content > .signit-panel-videos").toggle(activepanels == 'definition'?false:true);
+		$(".signit-popup-content > .signit-panel-separator").toggle(activepanels == 'both'?true:false);
+		$(".signit-popup-content > .signit-panel-definition").toggle(activepanels == 'video'? false:true);
 	}	
 
 	/* *************************************************************** */
@@ -197,8 +195,10 @@
 	}
 	// SignIt modal width depends on number of active panels
 	var signItModalWidth  = async function(){
-		var showvideo = Object.values( await browser.storage.local.get( 'showvideo' ) )[0];
-		numberOfPanels = (showvideo?1:0)+1;
+		// var showvideo = Object.values( await browser.storage.local.get( 'showvideo' ) )[0];
+		// numberOfPanels = (showvideo?1:0)+1;
+		var activepanels = Object.values( await browser.storage.local.get( 'choosepanels' ) )[0];
+		var numberOfPanels = activepanels == 'both' ? 2:1;
 		return numberOfPanels==2? 850:450;
 	}
 

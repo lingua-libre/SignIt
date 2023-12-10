@@ -249,10 +249,31 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-showvideo"),
 			align: 'top',
 		} );
-		// Show definitions
+
+		// Choose panels : both, definition, video
+		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
+			data: 'definition',
+			label: 'Wiktionary text only'
+		} ),
+		panelsOption1 = new OO.ui.ButtonOptionWidget( {
+			data: 'both',
+			label: 'Both'
+		} );
+		panelsOption2 = new OO.ui.ButtonOptionWidget( {
+			data: 'video',
+			label: 'Signed video only'
+		} );
+		choosepanelsWidget = new OO.ui.ButtonSelectWidget( {
+			items: [ panelsOption0, panelsOption1, panelsOption2 ]
+		} );
+		// Layout
+		choosepanelsLayout = new OO.ui.FieldLayout( choosepanelsWidget, {
+			label: "Panels to display:",
+			align: 'top',
+		} );
 
 
-		// Populate UI with correct values
+		// Populate UI with correct up to date user's selected values
 		// Select menus
 		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
 		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
@@ -263,25 +284,31 @@ var browser = browser || chrome;
 		hinticonWidget.setValue( _backgroundPage.params.hinticon );
 		coloredwordsWidget.setValue( _backgroundPage.params.coloredwords );
 		showvideoWidget.setValue( _backgroundPage.params.showvideo );
+		// TEST Tri-buttons : selectItemByData or setData
+		choosepanelsWidget.setData( _backgroundPage.params.showvideo );
+		choosepanelsWidget.selectItemByData( _backgroundPage.params.showvideo );
 
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
 		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
-		historyWidget.on( 'change', function( newLimit ) {
-			// newLimit = parseInt( newLimit ) >-1 ? parseInt( newLimit ) : 0; // works ?
-			newLimit = parseInt( newLimit ) || 0;
-			if ( newLimit < 0 ) { newLimit = 0; }
-			_backgroundPage.storeParam( 'historylimit', newLimit );
+		historyWidget.on( 'change', function( val ) {
+			val = parseInt( val ) >=0 ? parseInt( val ) : 0;
+			_backgroundPage.storeParam( 'historylimit', val );
 			this.cleanHistory();
 		}.bind( this ) );
-		wpintegrationWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'wpintegration' ) )
-		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) )
+		wpintegrationWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'wpintegration' ) );
+		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) );
 		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
-		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) )
-		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) )
-		showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'showvideo' ) )
-
+		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) );
+		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) );
+		// TEST: Choose panels to display 
+		showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'showvideo' ) );
+		// Listen for item selection events
+		choosepanelsWidget.on('choose', (d)=>{ 
+			_backgroundPage.storeParam('showvideo', d.getData()); 
+			
+		});
 
 		// Build Settings UI
 		this.paramTab.$element
@@ -292,7 +319,8 @@ var browser = browser || chrome;
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element )
 			.append( coloredwordsLayout.$element )
-			.append( showvideoLayout.$element );
+			.append( showvideoLayout.$element )
+			.append( choosepanelsLayout.$element );
 	};
 
 	/* *********************************************************** */
