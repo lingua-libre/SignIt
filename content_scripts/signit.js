@@ -138,15 +138,15 @@
 
 	/* *************************************************************** */
 	/* Toggle video panel ******************************************** */
-	async function toggleVideoPanel() {
+	async function showPanels() {
 		var activePanels = await browser.storage.local.get( 'choosepanels' ); 
 		activepanels = Object.values( activePanels)[0];
 		console.log('toggle: ', activePanels, activepanels )
-
+		$(".signit-popup-content > *").hide();
 		$(".signit-popup-content > .signit-panel-videos").toggle(activepanels == 'definition'?false:true);
 		$(".signit-popup-content > .signit-panel-separator").toggle(activepanels == 'both'?true:false);
 		$(".signit-popup-content > .signit-panel-definition").toggle(activepanels == 'video'? false:true);
-	}	
+	}
 
 	/* *************************************************************** */
 	/* Modal: init helped by SignItCoreContent *********************** */
@@ -207,7 +207,7 @@
 		popup.toggle( false );
 		// refresh with new content, panels check, width.
 		content.refresh( message.text, message.files );
-		toggleVideoPanel();
+		showPanels();
 		$( 'signit-popup').css( 'width', signItModalWidth() );
 		// Show again
 		popup.toggle( true );

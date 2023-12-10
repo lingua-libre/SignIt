@@ -11,31 +11,35 @@ var SignItCoreContent = function (banana) {
 		<div class="signit-popup-container">
 			<h1></h1>
 			<div class="signit-popup-content">
-				<div class="signit-panel-videos signit-novideo">
-				  <h2>Media:` +
-          /* ${ banana.i18n("si-overlay-coreContent-left-title") } */ `</h2>
-					Pas de video disponible.` + /* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
-				</div>
-				<div class="signit-panel-videos signit-video"></div>
+        <div class="signit-panel-videos">
+          <div class="signit-panel-videos signit-novideo">
+            <h2>Media:` +
+            /* ${ banana.i18n("si-overlay-coreContent-left-title") } */ `</h2>
+            Pas de video disponible.` + /* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
+          </div>
+          <div class="signit-panel-videos signit-video"></div>
+        </div>
 				<div class="signit-panel-separator"></div>
-				<div class="signit-panel-definition signit-definition">
-				  <h2>Definition:` +
-          /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
-				  <button id="video_toggle" >video?</button>
-					<div class="signit-definition-text"></div>
-					<div class="signit-definition-source">
-						<a href="https://fr` +
-        /* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */ `.wiktionary.org">voir sur Wiktionaire` +
-        /* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */ `</a>
-					</div>
-				</div>
-				<div class="signit-panel-definition signit-loading">
-					<img class="signit-loading-spinner" src="${browser.runtime.getURL(
-            "icons/Spinner_font_awesome.svg"
-          )}" width="40" height="40">
-				</div>
-				<div class="signit-panel-definition signit-error">Pas définition disponible.` +
-        /* ${ banana.i18n("si-overlay-coreContent-right-error") } */ `</div>
+        <div class="signit-panel-definition">
+          <div class="signit-panel-definition signit-definition">
+            <h2>Definition:` +
+            /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
+            <button id="video_toggle" >video?</button>
+            <div class="signit-definition-text"></div>
+            <div class="signit-definition-source">
+              <a href="https://fr` +
+          /* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */ `.wiktionary.org">voir sur Wiktionaire` +
+          /* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */ `</a>
+            </div>
+          </div>
+          <div class="signit-panel-definition signit-loading">
+            <img class="signit-loading-spinner" src="${browser.runtime.getURL(
+              "icons/Spinner_font_awesome.svg"
+            )}" width="40" height="40">
+          </div>
+          <div class="signit-panel-definition signit-error">Pas définition disponible.` +
+          /* ${ banana.i18n("si-overlay-coreContent-right-error") } */ `</div>
+        </div>
 			</div>
 		</div>
 	  `);
@@ -55,15 +59,11 @@ var SignItCoreContent = function (banana) {
       .find(".signit-novideo")
       .append(this.contributeButton.$element);
     this.$videosPanelContent = this.$container.find(".signit-video");
-    this.$videosPanelGallery = new SignItVideosGallery(
-      this.$videosPanelContent
-    );
+    this.$videosPanelGallery = new SignItVideosGallery( this.$videosPanelContent );
 
     this.$definitionPanelContent = this.$container.find(".signit-definition");
     this.$definitionPanelText = this.$container.find(".signit-definition-text");
-    this.$definitionPanelSource = this.$container.find(
-      ".signit-definition-source a"
-    );
+    this.$definitionPanelSource = this.$container.find(".signit-definition-source a");
     this.$definitionPanelSpinner = this.$container.find(".signit-loading");
     this.$definitionPanelError = this.$container.find(".signit-error");
 
@@ -72,6 +72,7 @@ var SignItCoreContent = function (banana) {
     // }.bind( this ) );
 
   // @saltykheera's toggle video solution :
+  /* 
   document.addEventListener("DOMContentLoaded", function(){
      // Initializing the visibility state
      let video_pop = false;
@@ -86,7 +87,7 @@ var SignItCoreContent = function (banana) {
      $("#video_toggle").on("click", function () {
        toggleVideoPop();
      });
-  }); 
+  }); */
 
   SignItCoreContent.prototype.refresh = function (title, files) {
     files = files || [];

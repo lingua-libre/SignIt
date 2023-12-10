@@ -45,15 +45,15 @@
   margin: 0 0.85714286em 0.57142857em;
 }
 
-.signit-panel-separator {
+.signit-popup-content > .signit-panel-separator {
   flex: 0 0 1px;
   margin: 25px 10px;
   background: #a2a9b1;
   align-self: stretch;
 }
 
-.signit-panel-videos,
-.signit-panel-definition {
+.signit-popup-content > .signit-panel-videos,
+.signit-popup-content > .signit-panel-definition {
   flex: 0 1 auto;
   width: 400px;
 }
