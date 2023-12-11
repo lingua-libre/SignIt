@@ -34,6 +34,7 @@
 	"si-popup-settings-wpintegration": "與維基百科的原生整合：",
 	"si-popup-settings-twospeed": "先以正常速度播放，然後慢速播放：",
 	"si-popup-settings-hint-icon": "在所選文字的捷徑圖示：",
+	"si-popup-settings-showvideo": "顯示手語影片面板：",
 	"si-popup-settings-enlighten": "突顯可用的字詞：",
 	"si-videosGallery-video": "貢獻者：{{link|$1|$2}} – 影片$3/$4"
 }

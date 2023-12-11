@@ -36,7 +36,7 @@
 	"si-popup-settings-wpintegration": "Setting title to toggle sign language video integration into Wikip|media websites.",
 	"si-popup-settings-twospeed": "Setting title to toggle video double play, at normal then slow speed.",
 	"si-popup-settings-hint-icon": "Setting title to toggle shortcut icon on selected text.",
-	"si-popup-settings-enlighten": "Setting title to toggle highlight coloring of available words in currently browsed web page.",
 	"si-popup-settings-showvideo": "Setting title to toggle the video panel.",
+	"si-popup-settings-enlighten": "Setting title to toggle highlight coloring of available words in currently browsed web page.",
 	"si-videosGallery-video": "Video attibution at bottom of video gallery.\n\n* $1 - Сommons URL\n* $2 - speaker name\n* $3 and $4 - position of the video within gallery.\n\n'''Example:''' \"by MariaNore - Video 1 of 3\", with MariaNore being the author of the video.\n\nAlso, '''do not''' translate <code>{link|$1|$2}</code>."
 }

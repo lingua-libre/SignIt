@@ -33,6 +33,7 @@
 	"si-popup-settings-wpintegration": "Матично вклопување со Википедија:",
 	"si-popup-settings-twospeed": "Пушти со нормална брзина, а потоа бавно:",
 	"si-popup-settings-hint-icon": "Икона за кратенка на избраниот текст:",
+	"si-popup-settings-showvideo": "Давај видеоприказник за знаковни јазици.",
 	"si-popup-settings-enlighten": "Истакни достапни зборови:",
 	"si-videosGallery-video": "од {{link|$1|$2}} — Видео $3 од $4"
 }

@@ -34,7 +34,7 @@
 	"si-popup-settings-wpintegration": "Intégration native sur Wikipédia :",
 	"si-popup-settings-twospeed": "Lecture à vitesse normale, puis lente :",
 	"si-popup-settings-hint-icon": "Icône de raccourci sur les sélections de texte :",
-	"si-popup-settings-enlighten": "Mettre en évidence les mots disponibles :",
 	"si-popup-settings-showvideo": "Afficher la video pour les mots signés:",
+	"si-popup-settings-enlighten": "Mettre en évidence les mots disponibles :",
 	"si-videosGallery-video": "par {{link|$1|$2}} – Vidéo $3 sur $4"
 }

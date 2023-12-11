@@ -33,6 +33,7 @@
 	"si-popup-settings-wpintegration": "Нативная интеграция с Википедией:",
 	"si-popup-settings-twospeed": "Воспроизводить на нормальной скорости, а после на замедленной:",
 	"si-popup-settings-hint-icon": "Значок быстрого доступа к выделенному тексту:",
+	"si-popup-settings-showvideo": "Показывать видеопанель жестовых языков:",
 	"si-popup-settings-enlighten": "Выделить доступные слова:",
 	"si-videosGallery-video": "авторство: {{link|$1|$2}} – видео $3 в $4"
 }
