@@ -306,8 +306,7 @@ var browser = browser || chrome;
 		showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'showvideo' ) );
 		// Listen for item selection events
 		choosepanelsWidget.on('choose', (d)=>{ 
-			_backgroundPage.storeParam('showvideo', d.getData()); 
-			
+			_backgroundPage.storeParam('choosepanels', d.getData()); 
 		});
 
 		// Build Settings UI
