@@ -253,25 +253,24 @@ var browser = browser || chrome;
 		// Choose panels : both, definition, video
 		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
 			data: 'definition',
-			label: 'Wiktionary text only'
+			label: banana.i18n("si-popup-settings-choosepanels-definition")
 		} ),
 		panelsOption1 = new OO.ui.ButtonOptionWidget( {
 			data: 'both',
-			label: 'Both'
+			label: banana.i18n("si-popup-settings-choosepanels-both")
 		} );
 		panelsOption2 = new OO.ui.ButtonOptionWidget( {
 			data: 'video',
-			label: 'Signed video only'
+			label:  banana.i18n("si-popup-settings-choosepanels-video")
 		} );
 		choosepanelsWidget = new OO.ui.ButtonSelectWidget( {
 			items: [ panelsOption0, panelsOption1, panelsOption2 ]
 		} );
 		// Layout
 		choosepanelsLayout = new OO.ui.FieldLayout( choosepanelsWidget, {
-			label: "Panels to display:",
+			label:  banana.i18n("si-popup-settings-choosepanels"),
 			align: 'top',
 		} );
-
 
 		// Populate UI with correct up to date user's selected values
 		// Select menus
