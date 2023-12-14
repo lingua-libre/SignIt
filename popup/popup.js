@@ -284,8 +284,8 @@ var browser = browser || chrome;
 		coloredwordsWidget.setValue( _backgroundPage.params.coloredwords );
 		showvideoWidget.setValue( _backgroundPage.params.showvideo );
 		// TEST Tri-buttons : selectItemByData or setData
-		choosepanelsWidget.setData( _backgroundPage.params.showvideo );
-		choosepanelsWidget.selectItemByData( _backgroundPage.params.showvideo );
+		choosepanelsWidget.setData( _backgroundPage.params.choosepanels );
+		choosepanelsWidget.selectItemByData( _backgroundPage.params.choosepanels );
 
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
