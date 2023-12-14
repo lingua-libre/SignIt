@@ -97,8 +97,6 @@
 	// Add behavior to toggle hintIcon into appearing / disapearing
 	//function captureUserEvents() {
 		document.addEventListener("mouseup",toggleHintIcon);
-		// document.addEventListener("click", click);
-		// document.addEventListener("keydown", keyDown);
 	//}
 
 	/* *************************************************************** */
