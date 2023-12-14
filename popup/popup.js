@@ -241,14 +241,6 @@ var browser = browser || chrome;
 			label: banana.i18n("si-popup-settings-enlighten"),
 			align: 'top',
 		} );
-		// Show video panel
-		showvideoWidget = new OO.ui.ToggleSwitchWidget( {
-			value: true
-		} );
-		showvideoLayout = new OO.ui.FieldLayout( showvideoWidget, {
-			label: banana.i18n("si-popup-settings-showvideo"),
-			align: 'top',
-		} );
 
 		// Choose panels : both, definition, video
 		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
@@ -282,8 +274,8 @@ var browser = browser || chrome;
 		twospeedWidget.setValue( _backgroundPage.params.twospeed );
 		hinticonWidget.setValue( _backgroundPage.params.hinticon );
 		coloredwordsWidget.setValue( _backgroundPage.params.coloredwords );
-		showvideoWidget.setValue( _backgroundPage.params.showvideo );
-		// TEST Tri-buttons : selectItemByData or setData
+
+		// Tri-buttons : selectItemByData or setData
 		choosepanelsWidget.setData( _backgroundPage.params.choosepanels );
 		choosepanelsWidget.selectItemByData( _backgroundPage.params.choosepanels );
 
@@ -301,8 +293,6 @@ var browser = browser || chrome;
 		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
 		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) );
 		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) );
-		// TEST: Choose panels to display 
-		showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'showvideo' ) );
 		// Listen for item selection events
 		choosepanelsWidget.on('choose', (d)=>{ 
 			_backgroundPage.storeParam('choosepanels', d.getData()); 
@@ -317,7 +307,6 @@ var browser = browser || chrome;
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element )
 			.append( coloredwordsLayout.$element )
-			.append( showvideoLayout.$element )
 			.append( choosepanelsLayout.$element );
 	};
 

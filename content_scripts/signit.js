@@ -193,8 +193,6 @@
 	}
 	// SignIt modal width depends on number of active panels
 	var signItModalWidth  = async function(){
-		// var showvideo = Object.values( await browser.storage.local.get( 'showvideo' ) )[0];
-		// numberOfPanels = (showvideo?1:0)+1;
 		var activepanels = Object.values( await browser.storage.local.get( 'choosepanels' ) )[0];
 		var numberOfPanels = activepanels == 'both' ? 2:1;
 		return numberOfPanels==2? 850:450;

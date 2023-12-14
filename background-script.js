@@ -68,10 +68,7 @@ var state = 'up', // up, loading, ready, error
 		twospeed: true,
 		hinticon: true,
 		coloredwords: true,
-		// Preparation for issues/36
-		showvideo: true,
-		showdefinition: true,
-		choosepanels: 'both',
+		choosepanels: 'both', // issues/36
 	};
 
 /* *************************************************************** */
@@ -410,7 +407,6 @@ async function main() {
     // storeParam( 'twospeed', params.twospeed ); //
 	await getStoredParam( 'hinticon' );
 	await getStoredParam( 'coloredwords' );
-	await getStoredParam( 'showvideo' );
 	await getStoredParam( 'choosepanels' );
 
 	signLanguage = await getStoredParam( 'signLanguage' );
