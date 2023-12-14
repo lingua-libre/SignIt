@@ -33,6 +33,10 @@
 	"si-popup-settings-twospeed": "Нормал терклик бла, сора да акъыртын теркликде ойнат:",
 	"si-popup-settings-hint-icon": "Сайланнган текстде къысхаджол белги:",
 	"si-popup-settings-showvideo": "Къол силкме тиллени видео панели:",
+	"si-popup-settings-choosepanels": "Кёрюнюм ючюн панелле:",
+	"si-popup-settings-choosepanels-definition": "Къуру сёзлюк текст",
+	"si-popup-settings-choosepanels-both": "Экиси да",
+	"si-popup-settings-choosepanels-video": "Къуру тюб ангылатыулу видеола",
 	"si-popup-settings-enlighten": "Ушагъыулу сёзлени черт:",
 	"si-videosGallery-video": "{{link|$1|$2}} – Видео $3/$4"
 }

@@ -33,6 +33,7 @@
 	"si-popup-settings-wpintegration": "विकिपीडिया के साथ मूल एकीकरण:",
 	"si-popup-settings-twospeed": "पहले साधारण गति से, और उसके बाद धीमी गति से देखें:",
 	"si-popup-settings-hint-icon": "चयनित टेक्स्ट पर शॉर्टकट आइकॉन:",
+	"si-popup-settings-choosepanels-both": "दोनों",
 	"si-popup-settings-enlighten": "उपलब्ध शब्दों को हाइलाइट करें:",
 	"si-videosGallery-video": "{{link|$1|$2}} द्वारा – $4 में से $3 नंबरी वीडियो"
 }
