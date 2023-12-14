@@ -37,7 +37,7 @@
 	"si-popup-settings-showvideo": "Afficher la video pour les mots signés:",
 	"si-popup-settings-choosepanels": "Panneaux à afficher:",
 	"si-popup-settings-choosepanels-definition": "Dictionaire seul",
-	"si-popup-settings-choosepanels-both": "Dictionnaire et vidéos signées",
+	"si-popup-settings-choosepanels-both": "Les deux",
 	"si-popup-settings-choosepanels-video": "Vidéos signées seules",
 	"si-popup-settings-enlighten": "Mettre en évidence les mots disponibles :",
 	"si-videosGallery-video": "par {{link|$1|$2}} – Vidéo $3 sur $4"
