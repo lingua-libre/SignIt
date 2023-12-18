@@ -32,6 +32,11 @@
 	"si-popup-settings-wpintegration": "Avtohtona integracija z Wikipedijo:",
 	"si-popup-settings-twospeed": "Predvajanje z normalno hitrostjo, nato s počasno hitrostjo:",
 	"si-popup-settings-hint-icon": "Ikona bližnjice na označenem besedilu:",
+	"si-popup-settings-showvideo": "Pokaži video podokno za znakovne jezike:",
+	"si-popup-settings-choosepanels": "Paneli za prikaz:",
+	"si-popup-settings-choosepanels-definition": "Samo slovarsko besedilo",
+	"si-popup-settings-choosepanels-both": "Oba",
+	"si-popup-settings-choosepanels-video": "Sami podpisani videoposnetki",
 	"si-popup-settings-enlighten": "Označevanje razpoložljivih besed:",
 	"si-videosGallery-video": "avtor {{link|$1|$2}} – video $3 od $4"
 }

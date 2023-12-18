@@ -33,6 +33,10 @@
 	"si-popup-settings-twospeed": "Reproducir a velocidade normal e despois a velocidade lenta:",
 	"si-popup-settings-hint-icon": "Icona de atallo no texto seleccionado:",
 	"si-popup-settings-showvideo": "Mostrar o panel de vídeo en linguas de signos:",
+	"si-popup-settings-choosepanels": "Paneis a amosar:",
+	"si-popup-settings-choosepanels-definition": "Só texto do dicionario",
+	"si-popup-settings-choosepanels-both": "Ambos",
+	"si-popup-settings-choosepanels-video": "Só vídeos asinados",
 	"si-popup-settings-enlighten": "Destacar as palabras dispoñibles:",
 	"si-videosGallery-video": "por {{link|$1|$2}} – Vídeo $3 de $4"
 }
