@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Dream Star.cn",
+			"GuoPC",
 			"Yfdyh000",
 			"Yug"
 		]
@@ -34,7 +35,11 @@
 	"si-popup-settings-wpintegration": "与维基百科的集成：",
 	"si-popup-settings-twospeed": "先正常速度播放，然后慢速播放：",
 	"si-popup-settings-hint-icon": "选中文本时的快捷图标：",
+	"si-popup-settings-showvideo": "显示手语视频面板：",
 	"si-popup-settings-choosepanels": "要显示的面板：",
+	"si-popup-settings-choosepanels-definition": "仅字典文本",
+	"si-popup-settings-choosepanels-both": "二者均显示",
+	"si-popup-settings-choosepanels-video": "仅手语视频",
 	"si-popup-settings-enlighten": "突出显示可用的词汇：",
 	"si-videosGallery-video": "贡献者 {{link|$1|$2}} – 视频 $3 / $4"
 }
