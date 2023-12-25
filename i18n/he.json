@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amire80"
+			"Amire80",
+			"YaronSh"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -33,6 +34,10 @@
 	"si-popup-settings-twospeed": "לנגן במהירות רגילה, ואחר־כך לאט:",
 	"si-popup-settings-hint-icon": "סמל קיצור דרך בטקסט מסומן:",
 	"si-popup-settings-showvideo": "הצגת חלונית וידאו של שפות סימנים:",
+	"si-popup-settings-choosepanels": "לוחות להצגה:",
+	"si-popup-settings-choosepanels-definition": "טקסט מילון בלבד",
+	"si-popup-settings-choosepanels-both": "שניהם",
+	"si-popup-settings-choosepanels-video": "סרטונים חתומים בלבד",
 	"si-popup-settings-enlighten": "סימון מילים זמינות:",
 	"si-videosGallery-video": "מאת {{link|$1|$2}} – סרט $3 מתוך $4"
 }
