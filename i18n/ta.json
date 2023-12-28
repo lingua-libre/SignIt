@@ -1,0 +1,18 @@
+{
+	"@metadata": {
+		"authors": [
+			"ElangoRamanujam",
+			"Fahimrazick",
+			"Sriveenkat"
+		]
+	},
+	"si-popup-browse-label": "தேடு",
+	"si-popup-history-title": "வரலாறு",
+	"si-popup-settings-title": "அமைப்புகள்",
+	"si-popup-settings-uilanguage": "இடைமுக மொழி:",
+	"si-popup-settings-uilanguage-help": "பயனர் இடைமுகத்தின் மொழியை மாற்று.",
+	"si-popup-settings-uilanguage-dropdown": "இடைமுக மொழியை மாற்று",
+	"si-popup-settings-choosepanels-definition": "அகராதி உரை மட்டும்",
+	"si-popup-settings-choosepanels-both": "இரண்டும்",
+	"si-popup-settings-choosepanels-video": "ஒப்பமிடப்பட்ட காணொளிகள் மட்டும்"
+}
