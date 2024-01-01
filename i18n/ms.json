@@ -33,6 +33,11 @@
 	"si-popup-settings-wpintegration": "Penyepaduan asli dengan Wikipedia:",
 	"si-popup-settings-twospeed": "Main pada kelajuan biasa, kemudian pada kelajuan perlahan:",
 	"si-popup-settings-hint-icon": "Ikon pintasan pada teks yang dipilih:",
+	"si-popup-settings-showvideo": "Tunjukkan panel video bahasa isyarat:",
+	"si-popup-settings-choosepanels": "Panel untuk dipaparkan:",
+	"si-popup-settings-choosepanels-definition": "Teks kamus sahaja",
+	"si-popup-settings-choosepanels-both": "Kedua-duanya",
+	"si-popup-settings-choosepanels-video": "Video berisyarat sahaja",
 	"si-popup-settings-enlighten": "Serlahkan perkataan yang tersedia:",
 	"si-videosGallery-video": "karya {{link|$1|$2}} – Video $3 dari $4"
 }
