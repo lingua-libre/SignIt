@@ -1,88 +1,101 @@
 {
-	"manifest_version": 2,
-	"name": "Lingua Libre SignIt",
-	"version": "1.0.20",
-	"author": "Antoine '0x010C' Lamielle, Hugo Lopez",
-	"description": "SignIt translate a selected word into Sign Language videos.",
-	"homepage_url": "https://lingualibre.org",
-	"applications": {
-		"gecko": {
-			"id": "signit@lingualibre.fr"
-		}
-	},
-	"icons": {
-		"32": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
-		"48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
-		"64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
-	},
-	"browser_action": {
-		"default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
-		"default_title": "Lingua Libre SignIt",
-		"default_popup": "popup/popup.html"
-	},
-	"permissions": [
-		"activeTab",
-		"contextMenus",
-		"storage",
-		"webRequest",
-		"webRequestBlocking",
-		"<all_urls>"
-	],
-	"content_scripts": [
-		{
-			"matches": ["<all_urls>"],
-			"css": [
-				"lib/oojs-ui-wikimediaui.min.css",
-				"content_scripts/signit.css"
-			],
-			"js": [
-				"lib/browser-polyfill.min.js",
-				"lib/jquery.min.js",
-				"lib/banana-i18n.js",
-				"lib/oojs.jquery.min.js",
-				"lib/oojs-ui.min.js",
-				"lib/oojs-ui-wikimediaui.min.js",
-				"SignItVideosGallery.js",
-				"SignItCoreContent.js",
-				"content_scripts/signit.js"
-			]
-		},
-		{
-			"matches": ["https://*.wikipedia.org/*"],
-			"css": [
-				"lib/oojs-ui-wikimediaui.min.css",
-				"content_scripts/wpintegration.css"
-			],
-			"js": [
-				"lib/browser-polyfill.min.js",
-				"lib/jquery.min.js",
-				"lib/banana-i18n.js",
-				"lib/oojs.jquery.min.js",
-				"lib/oojs-ui.min.js",
-				"lib/oojs-ui-wikimediaui.min.js",
-				"SignItVideosGallery.js",
-				"content_scripts/wpintegration.js"
-			],
-		"run_at": "document_end"
-		}
-	],
-	"background": {
-		"scripts": [
-		"lib/browser-polyfill.min.js",
-		"lib/jquery.min.js",
-		"lib/banana-i18n.js",
-		"background-script.js"
-		]
-	},
-	"web_accessible_resources": [
-		"icons/*"
-	],
-	"commands": {
-		"_execute_browser_action": {
-			"suggested_key": {
-				"default": "Ctrl+Shift+L"
-			}
-		}
-	},
-	"content_security_policy": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+  "manifest_version": 3,
+  "name": "Lingua Libre SignIt",
+  "version": "1.0.20",
+  "author": "Antoine '0x010C' Lamielle, Hugo Lopez",
+  "description": "SignIt translate a selected word into Sign Language videos.",
+  "homepage_url": "https://lingualibre.org",
+  "applications": {
+    "gecko": {
+      "id": "signit@lingualibre.fr"
+    }
+  },
+  "icons": {
+    "32": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
+    "48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
+    "64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
+  },
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "lib/oojs-ui-wikimediaui.min.css",
+        "content_scripts/signit.css"
+      ],
+      "js": [
+        "lib/browser-polyfill.min.js",
+        "lib/jquery.min.js",
+        "lib/banana-i18n.js",
+        "lib/oojs.jquery.min.js",
+        "lib/oojs-ui.min.js",
+        "lib/oojs-ui-wikimediaui.min.js",
+        "SignItVideosGallery.js",
+        "SignItCoreContent.js",
+        "content_scripts/signit.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.wikipedia.org/*"
+      ],
+      "css": [
+        "lib/oojs-ui-wikimediaui.min.css",
+        "content_scripts/wpintegration.css"
+      ],
+      "js": [
+        "lib/browser-polyfill.min.js",
+        "lib/jquery.min.js",
+        "lib/banana-i18n.js",
+        "lib/oojs.jquery.min.js",
+        "lib/oojs-ui.min.js",
+        "lib/oojs-ui-wikimediaui.min.js",
+        "SignItVideosGallery.js",
+        "content_scripts/wpintegration.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "scripts": [
+        "lib/browser-polyfill.min.js",
+        "lib/jquery.min.js",
+        "lib/banana-i18n.js",
+        "background-script.js"
+    ]
+},
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L"
+      }
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+  },
+  "action": {
+    "default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
+    "default_title": "Lingua Libre SignIt",
+    "default_popup": "popup/popup.html"
+  }
 }
