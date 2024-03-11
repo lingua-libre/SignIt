@@ -270,6 +270,16 @@ function normalize( selection ) { // this could do more
 	return selection.trim();
 }
 
+// Check a string with multiple words and return the word whose record is available
+function getAvailableWord( word ) {
+	const wordArray = word.split(" ");
+	for ( let newWord of wordArray ) {
+		if( records.hasOwnProperty(newWord.toLowerCase()) ){
+			return newWord;
+		}
+	}
+}
+
 // Given a word string, check if exist in available records data, if so return data on that word
 // returns format: { filename: url, speaker: name }
 function wordToFiles( word ) {
@@ -342,8 +352,11 @@ var callModal = async function(msg){
 	await checkActiveTabInjections( tabs[ 0 ].id );
 	console.log("Call modal > #282 > tab id", tabs[0].id)
 	// Data
-	var word = msg.text,
-		videosFiles = msg.files || wordToFiles( word ) || [];
+	var word = msg.text
+	if(word.split(" ").length > 1){
+		word = getAvailableWord(word)
+	}
+	var videosFiles = msg.files || wordToFiles( word ) || [];
 	// Send message which opens the modal
 	browser.tabs.sendMessage( tabs[ 0 ].id, {
 		command: "signit.sign",
