@@ -209,38 +209,38 @@ var browser = browser || chrome;
 		
 		/* Toogle settings options : on/off ******************************** */
 		// WP integrator
-		wpintegrationWidget = new OO.ui.ToggleSwitchWidget( {
-			value: true
+		wpintegrationWidget = new OO.ui.CheckboxInputWidget( {
+			selected: _backgroundPage.params.wpintegration,
 		} );
 		wpintegrationLayout = new OO.ui.FieldLayout( wpintegrationWidget, {
 			label: banana.i18n("si-popup-settings-wpintegration"),
-			align: 'top',
+			align: 'inline',
 		} );
 
 		// Two speed playback integrator
-		twospeedWidget = new OO.ui.ToggleSwitchWidget( {
-			value: true
+		twospeedWidget = new OO.ui.CheckboxInputWidget( {
+			selected: _backgroundPage.params.twospeed,
 		} );
 		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
 			label: banana.i18n("si-popup-settings-twospeed"),
-			align: 'top',
+			align: 'inline',
 		} );
 		// Hint icon shortcut
-		hinticonWidget = new OO.ui.ToggleSwitchWidget( {
-			value: true
-		} );
-		hinticonLayout = new OO.ui.FieldLayout( hinticonWidget, {
-			label: banana.i18n("si-popup-settings-hint-icon"),
-			align: 'top',
-		} );
-		// Colored text
-		coloredwordsWidget = new OO.ui.ToggleSwitchWidget( {
-			value: true
-		} );
-		coloredwordsLayout = new OO.ui.FieldLayout( coloredwordsWidget, {
-			label: banana.i18n("si-popup-settings-enlighten"),
-			align: 'top',
-		} );
+		hinticonWidget = new OO.ui.CheckboxInputWidget({
+      selected: _backgroundPage.params.hinticon,
+    });
+    hinticonLayout = new OO.ui.FieldLayout(hinticonWidget, {
+      label: banana.i18n('si-popup-settings-hint-icon'),
+      align: 'inline',
+    });
+    // Colored text
+    coloredwordsWidget = new OO.ui.CheckboxInputWidget({
+      selected: _backgroundPage.params.coloredwords,
+    });
+    coloredwordsLayout = new OO.ui.FieldLayout(coloredwordsWidget, {
+      label: banana.i18n('si-popup-settings-enlighten'),
+      align: 'inline',
+    });
 
 		// Choose panels : both, definition, video
 		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
@@ -288,11 +288,11 @@ var browser = browser || chrome;
 			_backgroundPage.storeParam( 'historylimit', val );
 			this.cleanHistory();
 		}.bind( this ) );
-		wpintegrationWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'wpintegration' ) );
-		twospeedWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'twospeed' ) );
+		wpintegrationWidget.on( 'change', () => _backgroundPage.storeParam('wpintegration',!_backgroundPage.params.wpintegration) );
+		twospeedWidget.on( 'change', () => _backgroundPage.storeParam('twospeed',!_backgroundPage.params.twospeed) );
 		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
-		hinticonWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'hinticon' ) );
-		coloredwordsWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'coloredwords' ) );
+		hinticonWidget.on('change', () => _backgroundPage.storeParam('hinticon',!_backgroundPage.params.hinticon));
+    coloredwordsWidget.on('change', () => _backgroundPage.storeParam('coloredwords',!_backgroundPage.params.coloredwords));
 		// Listen for item selection events
 		choosepanelsWidget.on('choose', (d)=>{ 
 			_backgroundPage.storeParam('choosepanels', d.getData()); 
