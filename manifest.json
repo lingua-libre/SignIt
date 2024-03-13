@@ -5,22 +5,18 @@
   "author": "Antoine '0x010C' Lamielle, Hugo Lopez",
   "description": "SignIt translate a selected word into Sign Language videos.",
   "homepage_url": "https://lingualibre.org",
-  "applications": {
-    "gecko": {
-      "id": "signit@lingualibre.fr"
-    }
-  },
   "icons": {
     "32": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
     "48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
     "64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
   },
   "permissions": [
+    "scripting",
     "activeTab",
     "contextMenus",
     "storage",
     "webRequest",
-    "webRequestBlocking",
+    "offscreen",
     "<all_urls>"
   ],
   "content_scripts": [
@@ -66,13 +62,9 @@
     }
   ],
   "background": {
-    "scripts": [
-        "lib/browser-polyfill.min.js",
-        "lib/jquery.min.js",
-        "lib/banana-i18n.js",
-        "background-script.js"
-    ]
-},
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
   "web_accessible_resources": [
     {
       "resources": [
@@ -91,7 +83,8 @@
     }
   },
   "content_security_policy": {
-    "extension_pages": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self'; object-src 'self' https://commons.wikimedia.org; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    "extension_pages": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self';  style-src 'self' 'unsafe-inline'; img-src 'self' data",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
   },
   "action": {
     "default_icon": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
