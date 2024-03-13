@@ -11,7 +11,11 @@ module.exports = {
 		'videos/',
 		'doc/',
 		'README.md',
-		'web-ext-config.js'
+		'web-ext-config.js',
+		'manifest3.json',
+		'tryV3/',
+		'SignIt3/',
+		'arch/',
 	],
 	artifactsDir: 'dist'
 };

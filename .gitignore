@@ -11,4 +11,10 @@ dist/*
 assets/
 doc/*.pdf
 icons/proper/
+# Test devs:
+manifest3.json
 tryV3/
+arch/*
+SignIt3/*
+SignIt3.crx
+SignIt3.pem

@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Inabat Allanova"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Librede bar bolǵan barlıq videolar dizimi alınbaqta.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Bul sóz ele jazıp alınbaǵan,<br>biraq SignIt tolıq derekli joybar bolıp, oǵan úles qosıwıńız múmkin.",
+	"si-overlay-coreContent-left-contribute-label": "Belgi tili arqalı úles qosıń",
+	"si-overlay-coreContent-right-title": "Túsindirmeler:",
+	"si-overlay-coreContent-right-wikt-iso": "ingl",
+	"si-overlay-coreContent-right-wikt-section-id": "#Inglis tili",
+	"si-overlay-coreContent-right-wikt-pointer": "Wikisózlikten kóriń",
+	"si-overlay-coreContent-right-error": "Heshqanday túsindirme tabılmadı.",
+	"si-popup-browse-title": "Sholıw",
+	"si-popup-browse-placeholder": "$1 belgilerinen izleń.",
+	"si-popup-browse-label": "Izlew",
+	"si-popup-browse-icon": "Izlewdi baslań",
+	"si-popup-history-title": "Tariyxı",
+	"si-popup-history-noHistory": "Bul bos",
+	"si-popup-settings-title": "Sazlawlar",
+	"si-popup-settings-signlanguage": "Belgi tili:",
+	"si-popup-settings-signlanguage-help": "Videolardı basqa belgi tiline ózgertiriń.",
+	"si-popup-settings-signlanguage-dropdown": "Videolardıń tilin ózgertiń",
+	"si-popup-settings-uilanguage": "Interfeys tili:",
+	"si-popup-settings-uilanguage-help": "Paydalanıwshı interfeysi tilin ózgertiriń.",
+	"si-popup-settings-uilanguage-dropdown": "Interfeys tilin ózgertiń",
+	"si-popup-settings-history": "Tariyxtıń uzınlıǵı:",
+	"si-popup-settings-history-help": "0 ge ornatılǵan bolsa, tariyx jurnalın óshiredi",
+	"si-popup-settings-wpintegration": "Wikipedia menen jergilikli integraciya:",
+	"si-popup-settings-twospeed": "Ápiwayı tezlikte, keyin áste tezlikte oynań:",
+	"si-popup-settings-hint-icon": "Saylanǵan teksttegi jarlıq belgisi:",
+	"si-popup-settings-showvideo": "Qosılǵan tillerdiń video panelin kórsetiw:",
+	"si-popup-settings-choosepanels": "Kórsetiletuǵın paneller:",
+	"si-popup-settings-choosepanels-definition": "Tek sózlik teksti",
+	"si-popup-settings-choosepanels-both": "Ekewi",
+	"si-popup-settings-choosepanels-video": "Tek jalǵanǵan videolar",
+	"si-popup-settings-enlighten": "Ámeldegi sózlerdi ajıratıp kórsetiw:",
+	"si-videosGallery-video": "{{silteme|$1|$2}} tárepinen $4 nıń $3 videosı"
+}
