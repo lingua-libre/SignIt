@@ -24,7 +24,14 @@ var SignItCoreContent = function (banana) {
           <div class="signit-panel-definition signit-definition">
             <h2>Definition:` +
             /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
-            <button id="video_toggle" >video?</button>
+            
+            <!-- this is improved toggle btn -->
+            <label class="toggle-btn">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+
+
             <div class="signit-definition-text"></div>
             <div class="signit-definition-source">
               <a href="https://fr` +
