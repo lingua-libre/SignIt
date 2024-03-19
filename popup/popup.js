@@ -1,7 +1,19 @@
-var browser = browser || chrome;
+var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox' :
+                  (typeof chrome !== 'undefined' && chrome.runtime) ? 'chrome' :
+                  'unknown';
 (async function() {
-	var ui,
+	var ui,_backgroundPage;
+	// This if statement is made so that we are able to communicate with background-scripts(now sw.js/service worker) by passing messages 
+	// since we cant directly do it in V3 in chrome ofc, (not complete yet but had to start somewhere) . . . while making sure that 
+	// old getBackgroundPage() script works fine with firefox 
+	if (browserType === 'chrome') {
+		// Use Chrome Extensions API,
+		_backgroundPage = await chrome.runtime.sendMessage({ action: "getBackground" });
+
+	} else if (browserType === 'firefox') {
+		// Use Firefox WebExtensions API
 		_backgroundPage = await browser.runtime.getBackgroundPage();
+	}
 
 	/* *********************************************************** */
 	// Master
@@ -344,8 +356,9 @@ var browser = browser || chrome;
 		ui.switchPanel( 'loaded' );
 	}
 
+	let state = _backgroundPage.state;
 	function waitWhileLoading() {
-		if ( _backgroundPage.state === 'ready' ) {
+		if (state === 'ready' ) {
 			ui = new UI();
 		} else {
 			setTimeout( waitWhileLoading, 100 );
