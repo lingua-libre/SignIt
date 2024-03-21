@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"NMW03"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre-də mövcud olan bütün videoların siyahısı gətirilir.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Bu söz hələ qeydə alınmayıb,<br> lakin SignIt icma əsaslı layihədir, siz ona töhfə verə bilərsiniz.",
+	"si-overlay-coreContent-left-contribute-label": "İşarə dili ilə töhfə verin",
+	"si-overlay-coreContent-right-title": "Təriflər:",
+	"si-overlay-coreContent-right-wikt-iso": "az",
+	"si-overlay-coreContent-right-wikt-section-id": "#Azərbaycanca",
+	"si-overlay-coreContent-right-wikt-pointer": "Vikilüğətdə baxın",
+	"si-overlay-coreContent-right-error": "Heç bir tərif tapılmadı.",
+	"si-popup-browse-title": "Gözdən keçir",
+	"si-popup-browse-placeholder": "$1 işarə arasında axtarın.",
+	"si-popup-browse-label": "Axtar",
+	"si-popup-browse-icon": "Axtarışa başlayın",
+	"si-popup-history-title": "Tarixçə",
+	"si-popup-history-noHistory": "Boşdur",
+	"si-popup-settings-title": "Parametrlər",
+	"si-popup-settings-signlanguage": "İşarə dili:",
+	"si-popup-settings-signlanguage-help": "Videoları başqa işarə dilinə dəyişdirin.",
+	"si-popup-settings-signlanguage-dropdown": "Videoların dilini dəyişdirin",
+	"si-popup-settings-uilanguage": "İnterfeys dili:",
+	"si-popup-settings-uilanguage-help": "İstifadəçi interfeysinin dilini dəyişdirin.",
+	"si-popup-settings-uilanguage-dropdown": "İnterfeys dilini dəyişdirin",
+	"si-popup-settings-history": "Tarixin uzunluğu:",
+	"si-popup-settings-history-help": "0-a təyin ediləndə tarixçəni deaktiv edir",
+	"si-popup-settings-wpintegration": "Vikipediya ilə yerli inteqrasiya:",
+	"si-popup-settings-twospeed": "Normal sürətlə, sonra yavaş sürətlə oxudun:",
+	"si-popup-settings-hint-icon": "Seçilmiş mətndə qısayol işarəsi:",
+	"si-popup-settings-showvideo": "İşarəli dillər video panelini göstərin:",
+	"si-popup-settings-choosepanels": "Göstəriləcək panellər:",
+	"si-popup-settings-choosepanels-definition": "Yalnız lüğət mətni",
+	"si-popup-settings-choosepanels-both": "Hər ikisi",
+	"si-popup-settings-choosepanels-video": "Yalnız işarəli videolar",
+	"si-popup-settings-enlighten": "Mövcud sözləri vurğulayın:",
+	"si-videosGallery-video": "{{link|$1|$2}} – Video $3/$4"
+}
