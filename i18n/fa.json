@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Darafsh"
+			"Darafsh",
+			"Ebraminio"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "در حال واکشی لیست همهٔ ویدیوهای موجود در Lingua Libre.",
 	"si-overlay-coreContent-left-title": "رسانه:",
-	"si-overlay-coreContent-left-novideo": "این کلمه هنوز ثبت نشده‌است،<br>اما SignIt یک پروژهٔ جمعی است، می‌توانید در آن مشارکت کنید.",
+	"si-overlay-coreContent-left-novideo": "این کلمه هنوز ثبت نشده است،<br>اما SignIt یک پروژهٔ جمعی است، می‌توانید در آن مشارکت کنید.",
 	"si-overlay-coreContent-left-contribute-label": "با زبان اشاره همکاری کنید",
 	"si-overlay-coreContent-right-title": "تعاریف:",
 	"si-overlay-coreContent-right-wikt-iso": "en",
