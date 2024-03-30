@@ -2,14 +2,33 @@ var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox
                   (typeof chrome !== 'undefined' && chrome.runtime) ? 'chrome' :
                   'unknown';
 (async function() {
-	var ui,_backgroundPage;
+	var ui,_backgroundPage,banana;
 	// This if statement is made so that we are able to communicate with background-scripts(now sw.js/service worker) by passing messages 
 	// since we cant directly do it in V3 in chrome ofc, (not complete yet but had to start somewhere) . . . while making sure that 
 	// old getBackgroundPage() script works fine with firefox 
 	if (browserType === 'chrome') {
 		// Use Chrome Extensions API,
-		_backgroundPage = await chrome.runtime.sendMessage({ action: "getBackground" });
+		chrome.runtime.sendMessage({ command: "getBackground" }, (response) => {
+			if (response) { 
+			  console.log(response); 
+			  _backgroundPage = response;
+			} else {
+			  console.error("No response received from service worker!");
+			}
+		  });
 
+		// Chrome messaging is limited to simple data types. 
+		// So we cant import complex data types like map/sets directly through messages.  
+		// Hence converting them before sending and recreating them after receiving remains the only way.
+		
+		const sourceMap = new Map(await chrome.runtime.sendMessage({ command: "getBanana" }));
+		
+		// coudn't restore the functionality of i18n so made it a key which stores a functions 
+		// which fetches the messages from sourceMap and replpace them with whatever the key-value pair
+		// for that particular message is
+
+		banana = {i18n: msg => sourceMap.get("fr")[msg]};
+		console.log("banana received: ",banana);
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
 		_backgroundPage = await browser.runtime.getBackgroundPage();
@@ -19,9 +38,13 @@ var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox
 	// Master
 	var UI = function () {
 		// Make internalisations available
-		banana = _backgroundPage.banana;
-		// Placeholder while fetching data
-		document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
+		if (browserType === 'firefox') {
+			// Placeholder while fetching data
+			banana = _backgroundPage.banana;
+			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
+		}else{
+			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
+		}
 
 		// Setup the main tabs
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: banana.i18n('si-popup-browse-title') } );
