@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gregorynelsonmensah1"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-right-title": "Nkyerɛkyerɛmu ahorow",
+	"si-overlay-coreContent-right-wikt-section-id": "#Borɔfo",
+	"si-overlay-coreContent-right-wikt-pointer": "Hu wɔ Wiktionary do",
+	"si-overlay-coreContent-right-error": "Yennhu nkyerɛkyerɛmu biara",
+	"si-popup-browse-placeholder": "Hwehwɛ wɔ $1 signs mu.",
+	"si-popup-browse-label": "Hwewɛ",
+	"si-popup-browse-icon": "Hyɛ nhwehwɛmu n'ase",
+	"si-popup-history-title": "Abakɔsɛm",
+	"si-popup-history-noHistory": "Biribiara nnyi mu",
+	"si-popup-settings-title": "Ndzɛmba toto bea",
+	"si-popup-settings-signlanguage-dropdown": "Sesa videos no kasa",
+	"si-popup-settings-history": "Abakɔsɛm no tsentsen",
+	"si-popup-settings-twospeed": "Bɔ no dɛ mbrɛ ɔtse n'ara, na san bɔ no nyaa:"
+}
