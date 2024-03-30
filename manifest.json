@@ -16,6 +16,7 @@
     "contextMenus",
     "storage",
     "webRequest",
+    "webRequestBlocking",
     "offscreen"
   ],
   "content_scripts": [
