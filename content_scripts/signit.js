@@ -232,7 +232,7 @@
 	var addHintIconEmit = function(){
 		if(!$('.signit-hint-container')[0]){ console.log("No hintIcon element! Create one.") } 
 		$(".signit-hint-container").on( "click", async function(){ 
-			iconText = getSelectionText();
+			var iconText = getSelectionText();
 			// var tabs = await browser.tabs.query({active: true, currentWindow: true});
 			// await checkActiveTabInjections( tabs[ 0 ].id );
 			browser.runtime.sendMessage({
