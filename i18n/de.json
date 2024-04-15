@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"TomatoCake",
 			"Yug"
 		]
 	},
@@ -32,6 +33,11 @@
 	"si-popup-settings-wpintegration": "Native Integration mit Wikipedia:",
 	"si-popup-settings-twospeed": "Abspielen mit normaler Geschwindigkeit, dann mit langsamer Geschwindigkeit:",
 	"si-popup-settings-hint-icon": "Verknüpfungssymbol auf markiertem Text:",
+	"si-popup-settings-showvideo": "Videobedienfeld für Gebärdensprachen anzeigen:",
+	"si-popup-settings-choosepanels": "Anzuzeigende Bedienfelder:",
+	"si-popup-settings-choosepanels-definition": "Nur Wörterbuchtext",
+	"si-popup-settings-choosepanels-both": "Beide",
+	"si-popup-settings-choosepanels-video": "Nur Videos mit Gebärdensprache",
 	"si-popup-settings-enlighten": "Verfügbare Wörter hervorheben:",
 	"si-videosGallery-video": "von {{link|$1|$2}} – Video $3 von $4"
 }
