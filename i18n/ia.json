@@ -32,6 +32,11 @@
 	"si-popup-settings-wpintegration": "Integration native con Wikipedia:",
 	"si-popup-settings-twospeed": "Reproducer a velocitate normal, alora lente:",
 	"si-popup-settings-hint-icon": "Icone de accesso directe in le texto seligite:",
+	"si-popup-settings-showvideo": "Monstrar le pannello de video pro le linguage de signos:",
+	"si-popup-settings-choosepanels": "Pannellos a monstrar:",
+	"si-popup-settings-choosepanels-definition": "Texto de dictionario solmente",
+	"si-popup-settings-choosepanels-both": "Ambes",
+	"si-popup-settings-choosepanels-video": "Videos a signos solmente",
 	"si-popup-settings-enlighten": "Mitter in evidentia le parolas disponibile:",
 	"si-videosGallery-video": "per {{link|$1|$2}} – Video $3 de $4"
 }

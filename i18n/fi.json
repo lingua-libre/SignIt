@@ -32,6 +32,7 @@
 	"si-popup-settings-wpintegration": "Alkuperäinen integrointi Wikipediaan:",
 	"si-popup-settings-twospeed": "Toista normaalilla nopeudella, sitten hitaalla nopeudella:",
 	"si-popup-settings-hint-icon": "Pikakuvake valitussa tekstissä:",
+	"si-popup-settings-choosepanels-both": "Molemmat",
 	"si-popup-settings-enlighten": "Korosta käytettävissä olevat sanat:",
 	"si-videosGallery-video": "tekijä: {{link|$1|$2}} – Video $3 / $4"
 }
