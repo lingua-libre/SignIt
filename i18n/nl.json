@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Siebrand"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Bezig met het ophalen van de lijst van alle video's die beschikbaar zijn op Lingua Libre.",
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-left-novideo": "Dit woord is nog niet opgenomen,<br>maar SignIt is een crowdsourced-project, en u kunt eraan bijdragen.",
+	"si-overlay-coreContent-left-contribute-label": "Bijdragen met gebarentaal",
+	"si-overlay-coreContent-right-title": "Definities:",
+	"si-overlay-coreContent-right-wikt-pointer": "bekijken op WikiWoordenboek",
+	"si-overlay-coreContent-right-error": "Geen definitie gevonden.",
+	"si-popup-browse-title": "Bladeren",
+	"si-popup-browse-placeholder": "Zoeken in $1 gebaren.",
+	"si-popup-browse-label": "Zoeken",
+	"si-popup-browse-icon": "Beginnen met zoeken",
+	"si-popup-history-title": "Geschiedenis",
+	"si-popup-history-noHistory": "Het is leeg",
+	"si-popup-settings-title": "Instellingen",
+	"si-popup-settings-signlanguage": "Gebarentaal:",
+	"si-popup-settings-signlanguage-help": "Video's wijzigen naar een andere gebarentaal.",
+	"si-popup-settings-signlanguage-dropdown": "Taal voor video's wijzigen",
+	"si-popup-settings-uilanguage": "Interfacetaal:",
+	"si-popup-settings-uilanguage-help": "Taal van de gebruikersinterface wijzigen.",
+	"si-popup-settings-uilanguage-dropdown": "Interfacetaal wijzigen",
+	"si-popup-settings-history": "Lengte van de geschiedenis:",
+	"si-popup-settings-history-help": "Instellen op 0 om de geschiedenis uit te schakelen",
+	"si-popup-settings-wpintegration": "Nauwe integratie met Wikipedia:",
+	"si-popup-settings-twospeed": "Afspelen op normale snelheid, daarna langzaam:",
+	"si-popup-settings-hint-icon": "Snelkoppelingspictogram op geselecteerde tekst:",
+	"si-popup-settings-showvideo": "Gebarentalen videopaneel weergeven:",
+	"si-popup-settings-choosepanels": "Weer te geven panelen:",
+	"si-popup-settings-choosepanels-definition": "Alleen woordenboektekst",
+	"si-popup-settings-choosepanels-both": "Beide",
+	"si-popup-settings-choosepanels-video": "Alleen ondertekende video's",
+	"si-popup-settings-enlighten": "Beschikbare woorden markeren:",
+	"si-videosGallery-video": "door {{link|$1|$2 }} – Video $3 of $4"
+}
