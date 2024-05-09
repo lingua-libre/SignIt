@@ -1,0 +1,22 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yupik"
+		]
+	},
+	"si-overlay-coreContent-left-title": "Media:",
+	"si-overlay-coreContent-right-title": "Meäʹrtelm:",
+	"si-overlay-coreContent-right-wikt-iso": "sms",
+	"si-overlay-coreContent-right-wikt-section-id": "#sääʹmǩiõll",
+	"si-overlay-coreContent-right-wikt-pointer": "čuäʹjet Wikisääʹnnǩeeʹrjest",
+	"si-overlay-coreContent-right-error": "Ij käunnʼjam ni õhtt meäʹrtelm.",
+	"si-popup-browse-title": "Ǩiõčč",
+	"si-popup-browse-label": "Ooʒʒ",
+	"si-popup-history-title": "Historia",
+	"si-popup-settings-title": "Asetõõzz",
+	"si-popup-settings-signlanguage": "Sieʹvvemǩiõll:",
+	"si-popup-settings-signlanguage-dropdown": "Vaajted video ǩiõl",
+	"si-popup-settings-uilanguage": "Ââʹnnemõhttõõzz ǩiõll:",
+	"si-popup-settings-uilanguage-help": "Vaajât ââʹnnemõhttõõzz ǩiõl.",
+	"si-popup-settings-uilanguage-dropdown": "Vaajât ââʹnnemõhttõõz kiõl"
+}
