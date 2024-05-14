@@ -231,7 +231,8 @@ html, body {
 }
 
 .oo-ui-icon-search {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' );
+	background-image: url( '../icons/magnifying-glass-solid.svg' );
+	/* background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' ); */
 }
 
 .oo-ui-icon-subtract {
