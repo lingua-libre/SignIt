@@ -66,7 +66,9 @@ WHERE {
 
   /* *************************************************************** */
   /* Initial state if no localStorage ********************************* */
-  var state = "up", // up, loading, ready, error
+  var 
+//   state = "up", // up, loading, ready, error
+  state, // up, loading, ready, error
     records = {},
     signLanguages = [],
     uiLanguages = [],
@@ -397,6 +399,19 @@ async function fetchJS(filepath) {
 }
 messages = await fetchJS(`i18n/${locale}.json`); */
 
+async function setState(value) {
+    // state = await browser.storage.local.set({state:"up"});
+    await browser.storage.local.set({state:"up"});
+    if (value) {
+        await browser.storage.local.set({state:value}).then(()=>{
+           console.log(`Value  = ${value}`);
+        });
+    }
+    
+    const newState = await browser.storage.local.get("state");
+    return newState.state;
+}
+
   // Loading all UI translations
   async function loadI18nLocalization(uiLanguageQid) {
     var localizedPhrases = {};
@@ -404,8 +419,10 @@ messages = await fetchJS(`i18n/${locale}.json`); */
     console.log("uiLanguageQid)", uiLanguageQid);
     console.log("supportedUiLanguages", supportedUiLanguages);
 
-    state = "loading";
-
+    // state = "loading";
+    state = await setState("loading");
+    console.log(`Initial state inside loadI18nLocalization() ${state}`);
+    
     // Get locale code and corresponding wiktionary
     var lang = supportedUiLanguages.filter(
       (item) => item.wdQid == uiLanguageQid
@@ -424,7 +441,9 @@ messages = await fetchJS(`i18n/${locale}.json`); */
     banana.setLocale(locale); // Change to new locale
     storeParam("bananaInStore", banana);
 
-    state = "ready";
+    // state = "ready";
+    state = await setState("ready");
+    console.log(`Final state inside loadI18nLocalization() ${state}`);
 
     console.log(Object.keys(localizedPhrases).length + " i18n messages loaded");
   }
@@ -529,7 +548,8 @@ messages = await fetchJS(`i18n/${locale}.json`); */
       response,
       records = {};
     try {
-      state = "loading";
+    //   state = "loading";
+      state = await setState("loading");
 
       response = await fetch(sparqlEndpoints.lingualibre.url, {
         method: "POST",
@@ -557,7 +577,9 @@ messages = await fetchJS(`i18n/${locale}.json`); */
         });
       }
 
-      state = "ready";
+    //   state = "ready";
+      state = await setState("ready");
+
 
       console.log(Object.keys(records).length + " records loaded");
       return records;
@@ -774,7 +796,8 @@ messages = await fetchJS(`i18n/${locale}.json`); */
   /* *************************************************************** */
   /* Main ********************************************************** */
   async function main() {
-    state = "loading";
+    // state = "loading";
+    state = await setState("loading");
 
     // Get local storage value if exist, else get default values
     // promise.all
@@ -794,7 +817,9 @@ messages = await fetchJS(`i18n/${locale}.json`); */
     uiLanguages = supportedUiLanguages;
     // records = await getAllRecords( signLanguage );
 
-    state = "ready";
+    // state = "ready";
+    state = await setState("ready");
+
   }
 
 // Run it
@@ -803,7 +828,8 @@ main();
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.command === "getBackground") {
     // temporary fix , needs to be persisted in chrome.storage.local but will get to that later
-    const a = {state:"ready",params};
+    console.log(state);
+    const a = {state,params};
     sendResponse(a);
 	}
 });

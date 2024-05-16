@@ -223,28 +223,28 @@ html, body {
 }
 
 .oo-ui-icon-next {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQluZXh0Cgk8L3RpdGxlPgoJPHBhdGggZD0iTTcgMUw1LjYgMi41IDEzIDEwbC03LjQgNy41TDcgMTlsOS05eiIvPgo8L3N2Zz4K' );
+	background-image: url( '../icons/arrow-right-solid.svg' );
 }
 
 .oo-ui-icon-previous {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5wcmV2aW91czwvdGl0bGU+PHBhdGggZD0iTTQgMTBsOSA5IDEuNC0xLjVMNyAxMGw3LjQtNy41TDEzIDF6Ii8+PC9zdmc+' );
+	background-image: url( '../icons/arrow-left-solid.svg' );
 }
 
 .oo-ui-icon-search {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KCTx0aXRsZT4KCQlzZWFyY2gKCTwvdGl0bGU+Cgk8cGF0aCBkPSJNMTkgMTdsLTUuMTUtNS4xNWE3IDcgMCAxIDAtMiAyTDE3IDE5ek0zLjUgOEE0LjUgNC41IDAgMSAxIDggMTIuNSA0LjUgNC41IDAgMCAxIDMuNSA4eiIvPgo8L3N2Zz4K' );
+	background-image: url( '../icons/magnifying-glass-solid.svg' );
 }
 
 .oo-ui-icon-subtract {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5zdWJ0cmFjdDwvdGl0bGU+PHBhdGggZD0iTTQgOWgxMnYySDR6Ii8+PC9zdmc+' );
+	background-image: url( '../icons/minus-solid.svg' );
 
 }
 
 .oo-ui-icon-add {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjAgMjAiPjx0aXRsZT5hZGQ8L3RpdGxlPjxwYXRoIGQ9Ik0xMSA5VjRIOXY1SDR2Mmg1djVoMnYtNWg1Vjl6Ii8+PC9zdmc+' );
+	background-image: url( '../icons/plus-solid.svg' );
 
 }
 
 .oo-ui-indicator-down {
-	background-image: url( 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEyIiBoZWlnaHQ9IjEyIiB2aWV3Qm94PSIwIDAgMTIgMTIiPjx0aXRsZT5kb3duPC90aXRsZT48cGF0aCBkPSJNMTAuMDg1IDIuOTQzTDYuMDUgNi44MDNsLTMuOTQ3LTMuODZMMS4wNSAzLjk5Nmw1IDUgNS01eiIvPjwvc3ZnPg==' );
+	background-image: url( '../icons/down-long-solid.svg' );
 
 }

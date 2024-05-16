@@ -1,6 +1,14 @@
 // const { default: backgroundPage } = require("./background-script"); // to try
 
-var SignItCoreContent = function (banana) {
+var banana;
+(async()=>{
+  const sourceMap = new Map(
+    await chrome.runtime.sendMessage({ command: "getBanana" })
+  );
+  banana = { i18n: (msg) => sourceMap.get("fr")[msg] };
+})();
+
+var SignItCoreContent = function () {
   console.log("Passed trough ! :", banana)
   console.log("SignItCoreContent.js");
   // console.log("banana",banana) // -> Uncaught (in promise) Error: banana is not defined
@@ -13,23 +21,23 @@ var SignItCoreContent = function (banana) {
 			<div class="signit-popup-content">
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
-            <h2>Media:` +
-            /* ${ banana.i18n("si-overlay-coreContent-left-title") } */ `</h2>
-            Pas de video disponible.` + /* ${ banana.i18n("si-overlay-coreContent-left-novideo") } */`<br><br>
+            <h2>Media:
+            ${ banana.i18n("si-overlay-coreContent-left-title") }</h2>
+            Pas de video disponible.${ banana.i18n("si-overlay-coreContent-left-novideo") }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
 				<div class="signit-panel-separator"></div>
         <div class="signit-panel-definition">
           <div class="signit-panel-definition signit-definition">
-            <h2>Definition:` +
-            /* ${ banana.i18n("si-overlay-coreContent-right-title") } */ `</h2>
+            <h2>Definition:
+            ${ banana.i18n("si-overlay-coreContent-right-title") }</h2>
             <button id="video_toggle" >video?</button>
             <div class="signit-definition-text"></div>
             <div class="signit-definition-source">
-              <a href="https://fr` +
-          /* ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") } */ `.wiktionary.org">voir sur Wiktionaire` +
-          /* ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") } */ `</a>
+              <a href="https://fr
+          ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") }.wiktionary.org">voir sur Wiktionaire
+          ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") }</a>
             </div>
           </div>
           <div class="signit-panel-definition signit-loading">
@@ -37,8 +45,8 @@ var SignItCoreContent = function (banana) {
               "icons/Spinner_font_awesome.svg"
             )}" width="40" height="40">
           </div>
-          <div class="signit-panel-definition signit-error">Pas définition disponible.` +
-          /* ${ banana.i18n("si-overlay-coreContent-right-error") } */ `</div>
+          <div class="signit-panel-definition signit-error">Pas définition disponible.
+          ${ banana.i18n("si-overlay-coreContent-right-error") }</div>
         </div>
 			</div>
 		</div>
