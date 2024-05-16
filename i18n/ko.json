@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Suleiman the Magnificent Television",
 			"Ykhwong"
 		]
 	},
@@ -32,6 +33,9 @@
 	"si-popup-settings-wpintegration": "위키백과와의 기본 통합:",
 	"si-popup-settings-twospeed": "정상 속도로 재생한 다음 느린 속도로 재생:",
 	"si-popup-settings-hint-icon": "선택한 텍스트의 바로 가기 아이콘:",
+	"si-popup-settings-choosepanels": "표시할 패널:",
+	"si-popup-settings-choosepanels-definition": "사전 텍스트만",
+	"si-popup-settings-choosepanels-both": "둘 다",
 	"si-popup-settings-enlighten": "사용 가능한 단어 강조:",
 	"si-videosGallery-video": "만든이: {{link|$1|$2}} – 동영상 $3 / $4"
 }
