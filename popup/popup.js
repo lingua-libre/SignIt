@@ -1,33 +1,36 @@
 var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox' :
                   (typeof chrome !== 'undefined' && chrome.runtime) ? 'chrome' :
                   'unknown';
+var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome') ? chrome : unknown;
 (async function() {
 	var ui,_backgroundPage,banana;
 	// This if statement is made so that we are able to communicate with background-scripts(now sw.js/service worker) by passing messages 
 	// since we cant directly do it in V3 in chrome ofc, (not complete yet but had to start somewhere) . . . while making sure that 
 	// old getBackgroundPage() script works fine with firefox 
-	if (browserType === 'chrome') {
-		// Use Chrome Extensions API,
-		chrome.runtime.sendMessage({ command: "getBackground" }, (response) => {
-			if (response) { 
-			  console.log(response); 
-			  _backgroundPage = response;
-			} else {
-			  console.error("No response received from service worker!");
-			}
-		  });
+	if (browserType === "chrome") {
+    // Use Chrome Extensions API,
+    async function getBackgroundPage() {
+      return new Promise((resolve) => {
+        chrome.runtime.sendMessage({ command: "getBackground" }, (response) => {
+          resolve(response);
+        });
+      });
+    }
+    _backgroundPage = await getBackgroundPage();
+    console.log("Background Page  = ", _backgroundPage);
 
 		// Chrome messaging is limited to simple data types. 
 		// So we cant import complex data types like map/sets directly through messages.  
 		// Hence converting them before sending and recreating them after receiving remains the only way.
 		
-		const sourceMap = new Map(await chrome.runtime.sendMessage({ command: "getBanana" }));
+		const resArr = await chrome.runtime.sendMessage({ command: "getBanana" });
+		const sourceMap = new Map(resArr[0]);
 		
 		// coudn't restore the functionality of i18n so made it a key which stores a functions 
 		// which fetches the messages from sourceMap and replpace them with whatever the key-value pair
 		// for that particular message is
 
-		banana = {i18n: msg => sourceMap.get("fr")[msg]};
+		banana = {i18n: msg => sourceMap.get(resArr[1])[msg]};
 		console.log("banana received: ",banana);
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
@@ -75,12 +78,14 @@ var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox
 		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
 		this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
-			icon: 'search',
+			icon:"search",
 			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
 			title: banana.i18n("si-popup-browse-icon")
-		} )
+		} );
+		
 		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
+		// var searchLayout = new OO.ui.ActionFieldLayout( searchButton, {
 			align: 'top',
 			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
@@ -98,7 +103,7 @@ var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox
 
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
-		await _backgroundPage.checkActiveTabInjections( tabs[ 0 ].id );
+		await checkActiveTabInjections( tabs[ 0 ].id );
 	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
@@ -113,12 +118,12 @@ var browserType = (typeof browser !== 'undefined' && browser.runtime) ? 'firefox
 
 	UI.prototype.changeView = function( text ) {
 		if ( typeof text !== 'string' ) {
-			text = this.searchWidget.getValue();
+			// text = this.searchWidget.getValue();
 		}
 		_word = _backgroundPage.normalize( text );
 		_files = _backgroundPage.wordToFiles ( _word );
 		this.coreContent.refresh( _word, _files );
-		this.searchWidget.setValue( _word );
+		// this.searchWidget.setValue( _word );
 		this.coreContent.getContainer().show();
 		this.addHistory( _word );
 	}
