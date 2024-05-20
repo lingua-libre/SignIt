@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"GolyatGeri"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-overlay-coreContent-left-title": "Medya:",
+	"si-overlay-coreContent-right-title": "Şınasiye:",
+	"si-overlay-coreContent-right-wikt-pointer": "Wikiqısebend dı bıvin",
+	"si-overlay-coreContent-right-error": "Sınasnayış nëvineya",
+	"si-popup-browse-title": "Bıweyni",
+	"si-popup-browse-label": "Cıgeyrê",
+	"si-popup-browse-icon": "Cıgeyrayışi bıserene",
+	"si-popup-history-title": "Terix",
+	"si-popup-history-noHistory": "Vengo",
+	"si-popup-settings-title": "Sazi",
+	"si-popup-settings-signlanguage": "Zonê işareti",
+	"si-popup-settings-signlanguage-dropdown": "Zonê video bıvurnên",
+	"si-popup-settings-uilanguage": "Zıwana rıy:",
+	"si-popup-settings-uilanguage-help": "Verrıyê hacetê zıwani bıvırnê",
+	"si-popup-settings-uilanguage-dropdown": "Zıwanê verrıy bıvurne",
+	"si-videosGallery-video": "Be {{link|$1|$2}} ra – Video $3 yê $4"
+}
