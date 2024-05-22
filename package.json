@@ -9,12 +9,13 @@
     "webextension-polyfill": "^0.9.0"
   },
   "devDependencies": {
-    "web-ext": "^7.0.0"
+    "web-ext": "^7.2.0"
   },
   "scripts": {
     "postinstall": "bin/build.sh",
     "web-ext:build": "web-ext build    # zips all content but .git files",
-    "web-ext:test": "web-ext run --source-dir ./ --url=fr.wikipedia.org"
+    "web-ext:test-firefox" : "web-ext run --source-dir ./ --url=fr.wikipedia.org --target=firefox-desktop # --verbose ",
+    "web-ext:test-chromium": "web-ext run --source-dir ./ --url=fr.wikipedia.org --target=chromium"
   },
   "repository": {
     "type": "git",
