@@ -8,19 +8,31 @@ This extension allows you to translate a word into French sign language on any w
 
 Manual install is possible for Chrome, Chromium. Should be eqully possible with Windows Edge.
 
-## Build & hack
+## Hacking
 
-```
+Firefox note: install of Firefox via snap install are not compatible with npm web-ext due to path changes, please [install Firefox from deb](https://support.mozilla.org/en-US/kb/install-firefox-linux#w_install-firefox-deb-package-for-debian-based-distributions). 
+
+### Build & launch
+
+```bash
 # git clone the repository first, then...
 npm install                 # Install dependencies
 # Bump version : edit package.json and manifest.json, ex: 1.0.12 -> 1.0.13
 npm run web-ext:build       # build the firefox extension into an instalable .zip
-npm run web-ext:test        # runs current dev version in Firefox, opens url defined in package.json
+# Opens web browsers with lasted dev of SignIt and url defined in package.json
+npm run web-ext:test-firefox         # Firefox
+npm run web-ext:test-chromium        # Chromium
 ```
+
 See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
 
-[Inspect Firefox extension](https://extensionworkshop.com/documentation/develop/debugging/) : Open url `about:debugging#/runtime/this-firefox`.
-There, `Load temporary Add-on`, find "Lingua Libre SignIt" : click `Inspect`.
+### Inspect
+- Firefox > Open url `about:debugging#/runtime/this-firefox` > Section `Temporary extensions` : "Lingua Libre SignIt" > Click `Inspect`. See also: [inspect Firefox extension](https://extensionworkshop.com/documentation/develop/debugging/).
+- Chromium > Open url `chrome://extensions/` > Find 'Lingua Libre SignIt' : click `Inspect views service worker` or `Errors
+
+### Mouse install
+- Firefox > Open url `about:debugging#/runtime/this-firefox` > `Load temporary Add-on` : load ./dist/lingua_libre_signit-{latest}.zip
+- Chromium > Open url `chrome://extensions/` > Click `Load unpacked` : find SignIt root directory.
 
 ## Visuals
 <img src="doc/LinguaLibre_SignIt-01.png"/>
