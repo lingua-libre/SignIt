@@ -15,6 +15,7 @@ module.exports = {
 		'manifest3.json',
 		'tryV3/',
 		'SignIt3/',
+		'SignItMini/',
 		'arch/',
 	],
 	artifactsDir: 'dist'
