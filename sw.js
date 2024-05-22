@@ -777,13 +777,9 @@ async function setState(value) {
       message.command === "getBanana"
     ) {
       console.log("bg>signit.getfilesB");
-	// var locale = await getStoredParam( 'uiLanguage' )
-	// loadI18nLocalization(locale);
-	//   return banana;
-    
-  // What this does is it accesses the messageStore inside banana amd spreads the sourecMap
-  // which is an instanceof Map thereby converting it into an array. This is later recreated inside popup
-      sendResponse([...banana.messageStore.sourceMap]);
+      // What this does is it accesses the messageStore inside banana amd spreads the sourecMap
+      // which is an instanceof Map thereby converting it into an array. This is later recreated inside popup
+      sendResponse([[...banana.messageStore.sourceMap], banana.locale]);
     }
 
     // Start modal
