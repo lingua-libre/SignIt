@@ -49,7 +49,7 @@ var SignItCoreContent = function (locale) {
               "icons/Spinner_font_awesome.svg"
             )}" width="40" height="40">
           </div>
-          <div class="signit-panel-definition signit-error">Pas définition disponible.
+          <div class="signit-panel-definition signit-error">
           ${ banana.i18n("si-overlay-coreContent-right-error",locale) }</div>
         </div>
 			</div>
@@ -59,8 +59,7 @@ var SignItCoreContent = function (locale) {
     // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
-      label:
-        "Contributer en LSF" /* banana.i18n("si-overlay-coreContent-left-contribute-label") */,
+      label: banana.i18n("si-overlay-coreContent-left-contribute-label",locale) ,
       href: "https://lingualibre.org/wiki/Special:RecordWizard",
     };
     this.contributeButton = new OO.ui.ButtonWidget(optionsContribute);
@@ -147,7 +146,7 @@ var SignItCoreContent = function (locale) {
     );
     $wiktSection = content
       .find(
-        "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id") */
+        "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id",locale) */
       )
       .parent()
       .next();
