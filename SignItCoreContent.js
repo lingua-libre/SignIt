@@ -28,7 +28,7 @@ var SignItCoreContent = function (locale) {
           <div class="signit-panel-videos signit-novideo">
             <h2>Media:
             ${ banana.i18n("si-overlay-coreContent-left-title",locale) }</h2>
-            Pas de video disponible.${ banana.i18n("si-overlay-coreContent-left-novideo",locale) }<br><br>
+            ${ banana.i18n("si-overlay-coreContent-left-novideo",locale) }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
