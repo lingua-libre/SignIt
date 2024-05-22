@@ -1,20 +1,25 @@
 // const { default: backgroundPage } = require("./background-script"); // to try
 
-var banana;
+var banana,resArr;
 (async()=>{
-  const sourceMap = new Map(
-    await chrome.runtime.sendMessage({ command: "getBanana" })
-  );
-  banana = { i18n: (msg) => sourceMap.get("fr")[msg] };
+  resArr = await chrome.runtime.sendMessage({ command: "getBanana" });
+  console.log(resArr);
+  const sourceMap = new Map(resArr[0]);
+  banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
 })();
 
-var SignItCoreContent = function () {
-  console.log("Passed trough ! :", banana)
-  console.log("SignItCoreContent.js");
-  // console.log("banana",banana) // -> Uncaught (in promise) Error: banana is not defined
-  // background.js not accessible natively
-  // HOW TO IMPORT background.js and its banana i18n ?
-  // See issue #21
+var SignItCoreContent = function (locale) {
+  // in case of firefox 
+  if ((locale.messageStore.sourceMap) instanceof Map) { 
+    const sourceMap = new Map(locale.messageStore.sourceMap);
+    locale = locale.locale;
+    banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
+  }
+  else{ // in case of chrome
+    locale = resArr[1];
+  }
+  console.log("Passed trough ! :", locale);
+  console.log("SignItCoreContent.js",banana );
   this.$container = $(`
 		<div class="signit-popup-container">
 			<h1></h1>
@@ -22,8 +27,8 @@ var SignItCoreContent = function () {
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
             <h2>Media:
-            ${ banana.i18n("si-overlay-coreContent-left-title") }</h2>
-            Pas de video disponible.${ banana.i18n("si-overlay-coreContent-left-novideo") }<br><br>
+            ${ banana.i18n("si-overlay-coreContent-left-title",locale) }</h2>
+            Pas de video disponible.${ banana.i18n("si-overlay-coreContent-left-novideo",locale) }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
@@ -31,13 +36,13 @@ var SignItCoreContent = function () {
         <div class="signit-panel-definition">
           <div class="signit-panel-definition signit-definition">
             <h2>Definition:
-            ${ banana.i18n("si-overlay-coreContent-right-title") }</h2>
+            ${ banana.i18n("si-overlay-coreContent-right-title",locale) }</h2>
             <button id="video_toggle" >video?</button>
             <div class="signit-definition-text"></div>
             <div class="signit-definition-source">
               <a href="https://fr
-          ${ banana.i18n("si-overlay-coreContent-right-wikt-iso") }.wiktionary.org">voir sur Wiktionaire
-          ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer") }</a>
+          ${ banana.i18n("si-overlay-coreContent-right-wikt-iso",locale) }.wiktionary.org">
+          ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer",locale) }</a>
             </div>
           </div>
           <div class="signit-panel-definition signit-loading">
@@ -46,7 +51,7 @@ var SignItCoreContent = function () {
             )}" width="40" height="40">
           </div>
           <div class="signit-panel-definition signit-error">Pas définition disponible.
-          ${ banana.i18n("si-overlay-coreContent-right-error") }</div>
+          ${ banana.i18n("si-overlay-coreContent-right-error",locale) }</div>
         </div>
 			</div>
 		</div>
