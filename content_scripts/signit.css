@@ -74,7 +74,8 @@
   width: 100%;
 }
 
-/* TEST Toggle video button */
+/* MODAL > TEST Toggle video button : REMOVED */
+/*
 #video_toggle {
   cursor: pointer;
   display: inline-block;
@@ -100,6 +101,7 @@
 #video_toggle.active::before {
   transform: translateX(20px);
 }
+*/
 
 /* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */

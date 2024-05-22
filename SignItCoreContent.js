@@ -37,7 +37,6 @@ var SignItCoreContent = function (locale) {
           <div class="signit-panel-definition signit-definition">
             <h2>Definition:
             ${ banana.i18n("si-overlay-coreContent-right-title",locale) }</h2>
-            <button id="video_toggle" >video?</button>
             <div class="signit-definition-text"></div>
             <div class="signit-definition-source">
               <a href="https://fr
@@ -83,44 +82,6 @@ var SignItCoreContent = function (locale) {
     // this.contributeButton.on( 'click', function () {
     //	// TODO: Do something
     // }.bind( this ) );
-
-
-  /* 
-  // @saltykheera's toggle video solution :
-
-  document.addEventListener("DOMContentLoaded", function(){
-     // Initializing the visibility state
-     let video_pop = false;
-     // Toggle video-section visibility
-     function toggleVideoPop() {
-       console.log("Toggle video : " + video_pop)
-       video_pop = !video_pop;
-       $(".signit-panel-videos").toggle(video_pop);
-       $(".signit-panel-separator").toggle(video_pop);
-     }
-     // Button toggle video
-     $("#video_toggle").on("click", function () {
-       toggleVideoPop();
-     });
-  }); 
-
-   // @hugolpz toggle video solution :
-  	// Create toggle button to add to definition panel:
-		showvideoWidget = new OO.ui.ToggleSwitchWidget( { value: true } ); // if choosepanels == both
-		showvideoWidget.setValue( _backgroundPage.params.choosepanels == 'both'? true:false; );
-    // Create legend:
-		showvideoLayout = new OO.ui.FieldLayout( showvideoWidget, {
-			label: banana.i18n("si-popup-settings-showvideo"),
-			align: 'top',
-		});
-    // Append in right place :
-    this.$definitionPanelContent.append( showvideoLayout.$element )
-
-		// On change : 1) change choosepanels value in local storage ; 2) refresh modal if possible or just directly toglle.
-		// showvideoWidget.on( 'change', _backgroundPage.storeParam.bind( _backgroundPage, 'choosepanels' ) );
-		// choosepanels= value==true?'both':'definition';
-  
-  */
 
   SignItCoreContent.prototype.refresh = function (title, files) {
     files = files || [];
