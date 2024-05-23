@@ -143,7 +143,7 @@
 		$(".signit-popup-content > *").hide();
 		$(".signit-popup-content > .signit-panel-videos").toggle(activepanels == 'definition'?false:true);
 		$(".signit-popup-content > .signit-panel-separator").toggle(activepanels == 'both'?true:false);
-		$(".signit-popup-content > .signit-panel-definition").toggle(activepanels == 'video'? false:true);
+		$(".signit-popup-content > .signit-panel-definitions").toggle(activepanels == 'video'? false:true);
 	}
 
 	/* *************************************************************** */

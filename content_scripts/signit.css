@@ -53,7 +53,7 @@
 }
 
 .signit-popup-content > .signit-panel-videos,
-.signit-popup-content > .signit-panel-definition {
+.signit-popup-content > .signit-panel-definitions {
   flex: 0 1 auto;
   width: 400px;
 }

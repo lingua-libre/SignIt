@@ -33,8 +33,8 @@ var SignItCoreContent = function (locale) {
           <div class="signit-panel-videos signit-video"></div>
         </div>
 				<div class="signit-panel-separator"></div>
-        <div class="signit-panel-definition">
-          <div class="signit-panel-definition signit-definition">
+        <div class="signit-panel-definitions">
+          <div class="signit-panel-definitions signit-definition">
             <h2>Definition:
             ${ banana.i18n("si-panel-definitions-title",locale) }</h2>
             <div class="signit-definition-text"></div>
@@ -43,12 +43,12 @@ var SignItCoreContent = function (locale) {
           ${ banana.i18n("si-panel-definitions-wikt-pointer",locale) }</a>
             </div>
           </div>
-          <div class="signit-panel-definition signit-loading">
+          <div class="signit-panel-definitions signit-loading">
             <img class="signit-loading-spinner" src="${browser.runtime.getURL(
               "icons/Spinner_font_awesome.svg"
             )}" width="40" height="40">
           </div>
-          <div class="signit-panel-definition signit-error">
+          <div class="signit-panel-definitions signit-error">
           ${ banana.i18n("si-panel-definitions-empty",locale) }</div>
         </div>
 			</div>
