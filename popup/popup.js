@@ -51,16 +51,16 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 		// Setup the main tabs
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: banana.i18n('si-popup-browse-title') } );
-		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: banana.i18n('si-popup-history-title'), classes: [ 'popup-tab-history' ] } );
-		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: banana.i18n('si-popup-settings-title'), classes: [ 'popup-tab-param' ] } );
+		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: banana.i18n('si-popup-history-title'), classes: [ 'signit-popup-tab-history' ] } );
+		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: banana.i18n('si-popup-settings-title'), classes: [ 'signit-popup-tab-settings' ] } );
 
 		// Set up the popup page layout
-		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'popup-tabs' ] } );
+		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'signit-popup-tabs' ] } );
 		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 
 		// Clean up then append
-		document.querySelector( '#popup-loaded' ).innerHTML = "";
-		$( '#popup-loaded' ).append( this.indexLayout.$element );
+		document.querySelector( '#signit-popup-loaded' ).innerHTML = "";
+		$( '#signit-popup-loaded' ).append( this.indexLayout.$element );
 
 		// Build the full tabs inner content
 		this.initView();
@@ -89,7 +89,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			align: 'top',
 			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
-			classes: [ 'popup-tab-view-search' ]
+			classes: [ 'signit-popup-tab-browse' ]
 		} );
 
 		// Add the CoreContent view
@@ -156,7 +156,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 
 		this.history.unshift( word );
-		this.$history.unshift( $( `<a class="popup-historyline">${ word }</a>` ) );
+		this.$history.unshift( $( `<a class="signit-popup-tab-history-line">${ word }</a>` ) );
 		this.$history[ 0 ].on( 'click', this.changeView.bind( this, word ) );
 		this.$history[ 0 ].on( 'click', this.indexLayout.setTabPanel.bind( this.indexLayout, 'view' ) );
 		this.historyTab.$element.prepend( this.$history[ 0 ] );
@@ -353,9 +353,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	/* *********************************************************** */
 	// Tab switcher
 	UI.prototype.switchPanel = function( tab ) {
-		$( '#popup-loading' ).hide();
-		$( '#popup-loaded' ).hide();
-		$( '#popup-' + tab ).show();
+		$( '#signit-popup-loading' ).hide();
+		$( '#signit-popup-loaded' ).hide();
+		$( '#signit-popup-' + tab ).show();
 	};
 	/* *********************************************************** */
 	// Others

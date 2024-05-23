@@ -4,7 +4,7 @@ var SignItVideosGallery = function ( container ) {
 
 	this.previousVideoButton = new OO.ui.ButtonWidget( { icon: 'previous', framed: false } );
 	this.nextVideoButton = new OO.ui.ButtonWidget( { icon: 'next', framed: false } );
-	this.$videoContainer = $( '<div class="signit-videogallery">' );
+	this.$videoContainer = $( '<div class="signit-panel-videos-gallery">' );
 
 	container.append( this.previousVideoButton.$element ).append( this.$videoContainer ).append( this.nextVideoButton.$element );
 

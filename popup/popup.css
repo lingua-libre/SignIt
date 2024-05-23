@@ -11,7 +11,7 @@ html, body {
   to {transform: rotate(360deg);}
 }
 
-#popup-header {
+#signit-popup-header {
 	width: 100%;
 	height: 100px;
 	background-color: #00a99d;
@@ -20,17 +20,17 @@ html, body {
 	text-align: center;
 }
 
-#popup-header a img {
+#signit-popup-header a img {
 	height: 100%;
 }
 
-#popup-loading {
+#signit-popup-loading {
 	width: 100%;
 	text-align: center;
 	color: black;
 }
 
-#popup-loading-spinner {
+#signit-popup-loading-spinner {
 	animation: spinner 1.5s linear infinite;
 	width:40px;
 	padding-top: 40px;
@@ -38,41 +38,41 @@ html, body {
 	margin: auto;
 }
 
-#popup-loaded {
+#signit-popup-loaded {
 	display:none; /* hidden by default, will be shown when it's ready to be shown */
 }
 
-.popup-tabs,
-.popup-tabs .oo-ui-menuLayout-menu,
-.popup-tabs .oo-ui-menuLayout-content {
+.signit-popup-tabs,
+.signit-popup-tabs .oo-ui-menuLayout-menu,
+.signit-popup-tabs .oo-ui-menuLayout-content {
 	position: unset;
 }
 
-.popup-tabs .oo-ui-tabSelectWidget {
+.signit-popup-tabs .oo-ui-tabSelectWidget {
 	background-color: #00a99d;
 }
 
-.popup-tabs .oo-ui-tabOptionWidget, .popup-tabs .oo-ui-tabOptionWidget:hover {
+.signit-popup-tabs .oo-ui-tabOptionWidget, .signit-popup-tabs .oo-ui-tabOptionWidget:hover {
 	color: white;
 }
-.popup-tabs .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
+.signit-popup-tabs .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected {
 	color: #00a99d;
 }
 
-.popup-tabs .oo-ui-panelLayout-expanded {
+.signit-popup-tabs .oo-ui-panelLayout-expanded {
 	position: static;
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.popup-tab-param,
-.popup-tab-view-search {
+.signit-popup-tab-settings,
+.signit-popup-tab-browse {
 	margin: 0 6px 10px 6px;
     padding-right: 10px;
 	overflow-x: hidden;
 }
 
-.popup-historyline {
+.signit-popup-tab-history-line {
     padding: 8px 20px;
     color: #00a99d;
     font-weight: bold;
@@ -80,7 +80,7 @@ html, body {
 	cursor: pointer;
 }
 
-.popup-historyline:hover {
+.signit-popup-tab-history-line:hover {
     background-color: #00a99d;
     color: white;
 }
@@ -97,13 +97,13 @@ html, body {
 
 
 /*  */
-.signit-definition-text p,
-.signit-definition-text b,
-.signit-definition-text span,
-.signit-definition-text i,
-.signit-definition-text a,
-.signit-definition-text ol,
-.signit-definition-text li {
+.signit-definitions-text p,
+.signit-definitions-text b,
+.signit-definitions-text span,
+.signit-definitions-text i,
+.signit-definitions-text a,
+.signit-definitions-text ol,
+.signit-definitions-text li {
 	all: initial;
 	font-size: 16px;
 	font-family: sans-serif;
@@ -111,45 +111,45 @@ html, body {
 	color: #222222;
 }
 
-.signit-definition-text p {
+.signit-definitions-text p {
 	margin: 0.4em 0 0.5em 0;
 	padding: 0;
 	display: block;
 }
 
-.signit-definition-text ol {
+.signit-definitions-text ol {
 	list-style-type: decimal;
 	margin: 0.3em 0 0 3.2em;
 	display: block;
 }
 
-.signit-definition-text ol li {
+.signit-definitions-text ol li {
 	display: list-item;
 	list-style-type: decimal;
 	margin-bottom: 0.8em;
 }
 
-.signit-definition-text i {
+.signit-definitions-text i {
 	font-style: italic;
 }
 
-.signit-definition-text b {
+.signit-definitions-text b {
 	font-weight: bold;
 }
 
-.signit-definition-text a {
+.signit-definitions-text a {
 	color: #0645ad;
 }
 
-.signit-definition-text a:hover {
+.signit-definitions-text a:hover {
 	text-decoration: underline;
 }
 
-.signit-definition-text ol ul {
+.signit-definitions-text ol ul {
 	display: none;
 }
 
-.signit-definition-text .reference {
+.signit-definitions-text .reference {
 	display: none;
 }
 
@@ -159,11 +159,11 @@ html, body {
 
 
 
-.signit-popup-container h1 {
+.signit-modal-container h1 {
 	display: none;
 }
 
-.signit-popup-container h2 {
+.signit-modal-container h2 {
 	background-color: #00a99d;
 	padding: 5px 6px;
 	font-size: 1em;
@@ -190,16 +190,16 @@ html, body {
 	width: 345px;
 }
 
-.signit-definition {
+.signit-definitions {
 	padding-right: 12px;
 	padding-left: 6px;
 }
 
-.signit-definition-text {
+.signit-definitions-text {
 	padding-right: 8px;
 }
 
-.signit-definition-source {
+.signit-definitions-source {
 	height: 20px;
 	text-align: right;
 	margin-top: 4px;

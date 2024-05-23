@@ -140,10 +140,10 @@
 		var activePanels = await browser.storage.local.get( 'choosepanels' ); 
 		activepanels = Object.values( activePanels)[0];
 		console.log('toggle: ', activePanels, activepanels )
-		$(".signit-popup-content > *").hide();
-		$(".signit-popup-content > .signit-panel-videos").toggle(activepanels == 'definition'?false:true);
-		$(".signit-popup-content > .signit-panel-separator").toggle(activepanels == 'both'?true:false);
-		$(".signit-popup-content > .signit-panel-definitions").toggle(activepanels == 'video'? false:true);
+		$(".signit-modal-content > *").hide();
+		$(".signit-modal-content > .signit-panel-videos").toggle(activepanels == 'definition'?false:true);
+		$(".signit-modal-content > .signit-panel-separator").toggle(activepanels == 'both'?true:false);
+		$(".signit-modal-content > .signit-panel-definitions").toggle(activepanels == 'video'? false:true);
 	}
 
 	/* *************************************************************** */
@@ -159,7 +159,7 @@
 
 		// Setup an absolute-positionned $anchorModal we can programatically move
 		// to be able to point exactly some coords with our popup later
-		$anchorModal = $( '<div class="signit-popup-anchor">' );
+		$anchorModal = $( '<div class="signit-modal-anchor">' );
 		$( 'body' ).append( $anchorModal );
 
 		// Create and add our popup to the DOM
@@ -174,7 +174,7 @@
 			autoFlip: true,
 			hideWhenOutOfView: false,
 			$container: $( 'body' ),
-			classes: [ 'signit-popup' ]
+			classes: [ 'signit-modal' ]
 		} );
 		$( 'body' ).append( popup.$element );
 	}
@@ -204,7 +204,7 @@
 		// refresh with new content, panels check, width.
 		content.refresh( message.text, message.files );
 		showPanels();
-		$( 'signit-popup').css( 'width', signItModalWidth() );
+		$( 'signit-modal').css( 'width', signItModalWidth() );
 		// Show again
 		popup.toggle( true );
 		popup.toggleClipping( false );

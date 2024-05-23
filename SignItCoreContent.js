@@ -21,9 +21,9 @@ var SignItCoreContent = function (locale) {
   console.log("Passed trough ! :", locale);
   console.log("SignItCoreContent.js",banana );
   this.$container = $(`
-		<div class="signit-popup-container">
+		<div class="signit-modal-container">
 			<h1></h1>
-			<div class="signit-popup-content">
+			<div class="signit-modal-content">
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
             <h2>Media:
@@ -34,11 +34,11 @@ var SignItCoreContent = function (locale) {
         </div>
 				<div class="signit-panel-separator"></div>
         <div class="signit-panel-definitions">
-          <div class="signit-panel-definitions signit-definition">
+          <div class="signit-panel-definitions signit-definitions">
             <h2>Definition:
             ${ banana.i18n("si-panel-definitions-title",locale) }</h2>
-            <div class="signit-definition-text"></div>
-            <div class="signit-definition-source">
+            <div class="signit-definitions-text"></div>
+            <div class="signit-definitions-source">
               <a href="https://${ banana.i18n("si-panel-definitions-wikt-iso",locale) }.wiktionary.org">
           ${ banana.i18n("si-panel-definitions-wikt-pointer",locale) }</a>
             </div>
@@ -71,9 +71,9 @@ var SignItCoreContent = function (locale) {
     this.$videosPanelContent = this.$container.find(".signit-video");
     this.$videosPanelGallery = new SignItVideosGallery( this.$videosPanelContent );
 
-    this.$definitionPanelContent = this.$container.find(".signit-definition");
-    this.$definitionPanelText = this.$container.find(".signit-definition-text");
-    this.$definitionPanelSource = this.$container.find(".signit-definition-source a");
+    this.$definitionPanelContent = this.$container.find(".signit-definitions");
+    this.$definitionPanelText = this.$container.find(".signit-definitions-text");
+    this.$definitionPanelSource = this.$container.find(".signit-definitions-source a");
     this.$definitionPanelSpinner = this.$container.find(".signit-loading");
     this.$definitionPanelError = this.$container.find(".signit-error");
 

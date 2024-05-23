@@ -1,27 +1,27 @@
 /* *************************************************************** */
 /* Modal structure *********************************************** */
-.signit-popup-anchor {
+.signit-modal-anchor {
   position: absolute;
   z-index: -99999; /* put it under everything else so it doesn't disturb anything */
 }
 
 /* *************************************************************** */
 /* Popup outline ************************************************* */
-.signit-popup {
+.signit-modal {
   z-index: 9999;
 } /* above everythings */
 
-.signit-popup .oo-ui-popupWidget-popup {
+.signit-modal .oo-ui-popupWidget-popup {
   max-height: 500px;
 }
 
-.signit-popup .oo-ui-popupWidget-body {
+.signit-modal .oo-ui-popupWidget-body {
   margin: 0;
 }
 
 /* *************************************************************** */
 /* Popup content ************************************************* */
-.signit-popup h1 {
+.signit-modal h1 {
   margin-bottom: 0.6em;
   font-size: 188%;
   color: black;
@@ -34,26 +34,26 @@
   box-shadow: 0 0px 5px -2px black;
 }
 
-.signit-popup h2 {
+.signit-modal h2 {
   display: none;
 }
 
-.signit-popup-content {
+.signit-modal-content {
   display: flex;
   flex: 1;
   align-items: center;
   margin: 0 0.85714286em 0.57142857em;
 }
 
-.signit-popup-content > .signit-panel-separator {
+.signit-modal-content > .signit-panel-separator {
   flex: 0 0 1px;
   margin: 25px 10px;
   background: #a2a9b1;
   align-self: stretch;
 }
 
-.signit-popup-content > .signit-panel-videos,
-.signit-popup-content > .signit-panel-definitions {
+.signit-modal-content > .signit-panel-videos,
+.signit-modal-content > .signit-panel-definitions {
   flex: 0 1 auto;
   width: 400px;
 }
@@ -105,19 +105,19 @@
 
 /* *************************************************************** */
 /* Definition panel (right/bottom) ******************************* */
-.signit-definition-text {
+.signit-definitions-text {
   overflow-y: auto;
   max-height: 340px;
   text-align: left;
 }
 
-.signit-definition-text p,
-.signit-definition-text b,
-.signit-definition-text span,
-.signit-definition-text i,
-.signit-definition-text a,
-.signit-definition-text ol,
-.signit-definition-text li {
+.signit-definitions-text p,
+.signit-definitions-text b,
+.signit-definitions-text span,
+.signit-definitions-text i,
+.signit-definitions-text a,
+.signit-definitions-text ol,
+.signit-definitions-text li {
   all: initial;
   font-size: 16px;
   font-family: sans-serif;
@@ -125,49 +125,49 @@
   color: #222222;
 }
 
-.signit-definition-text p {
+.signit-definitions-text p {
   margin: 0.4em 0 0.5em 0;
   padding: 0;
   display: block;
 }
 
-.signit-definition-text ol {
+.signit-definitions-text ol {
   list-style-type: decimal;
   margin: 0.3em 0 0 3.2em;
   display: block;
 }
 
-.signit-definition-text ol li {
+.signit-definitions-text ol li {
   display: list-item;
   list-style-type: decimal;
   margin-bottom: 0.8em;
 }
 
-.signit-definition-text i {
+.signit-definitions-text i {
   font-style: italic;
 }
 
-.signit-definition-text b {
+.signit-definitions-text b {
   font-weight: bold;
 }
 
-.signit-definition-text a {
+.signit-definitions-text a {
   color: #0645ad;
 }
 
-.signit-definition-text a:hover {
+.signit-definitions-text a:hover {
   text-decoration: underline;
 }
 
-.signit-definition-text ol ul {
+.signit-definitions-text ol ul {
   display: none;
 }
 
-.signit-definition-text .reference {
+.signit-definitions-text .reference {
   display: none;
 }
 
-.signit-definition-source {
+.signit-definitions-source {
   height: 20px;
   text-align: right;
   margin-top: 4px;
