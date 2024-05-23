@@ -8,14 +8,16 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Fetching the list of all videos available on Lingua Libre.",
 
-	"si-overlay-coreContent-left-title":"Media:",
-	"si-overlay-coreContent-left-novideo":"This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
-	"si-overlay-coreContent-left-contribute-label":"Contribute with Sign Language",
-	"si-overlay-coreContent-right-title":"Definitions:",
-	"si-overlay-coreContent-right-wikt-iso":"en",
-	"si-overlay-coreContent-right-wikt-section-id":"#English",
-	"si-overlay-coreContent-right-wikt-pointer":"see on Wiktionary",
-	"si-overlay-coreContent-right-error":"No definition found.",
+	"si-panel-videos-title":"Media:",
+	"si-panel-videos-gallery-attribution": "by {{link|$1|$2}} – Video $3 of $4",
+	"si-panel-videos-empty":"This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
+	"si-panel-videos-contribute-label":"Contribute with Sign Language",
+
+	"si-panel-definitions-title":"Definitions:",
+	"si-panel-definitions-wikt-iso":"en",
+	"si-panel-definitions-wikt-section-id":"#English",
+	"si-panel-definitions-wikt-pointer":"see on Wiktionary",
+	"si-panel-definitions-empty":"No definition found.",
 	
 	"si-popup-browse-title":"Browse",
 	"si-popup-browse-placeholder":"Search among $1 signs.",
@@ -23,7 +25,7 @@
 	"si-popup-browse-icon":"Start the search",
 	
 	"si-popup-history-title":"History",
-	"si-popup-history-noHistory":"It's empty",
+	"si-popup-history-empty":"It's empty",
 	
 	"si-popup-settings-title":"Settings",
 	"si-popup-settings-signlanguage":"Sign language:",
@@ -46,7 +48,5 @@
 	"si-popup-settings-choosepanels-both": "Both",
 	"si-popup-settings-choosepanels-video": "Signed videos only",
 
-	"si-popup-settings-enlighten":"Highlight available words:",
-
-	"si-videosGallery-video": "by {{link|$1|$2}} – Video $3 of $4"
+	"si-popup-settings-enlighten":"Highlight available words:"
 }

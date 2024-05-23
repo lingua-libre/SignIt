@@ -27,8 +27,8 @@ var SignItCoreContent = function (locale) {
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
             <h2>Media:
-            ${ banana.i18n("si-overlay-coreContent-left-title",locale) }</h2>
-            ${ banana.i18n("si-overlay-coreContent-left-novideo",locale) }<br><br>
+            ${ banana.i18n("si-panel-videos-title",locale) }</h2>
+            ${ banana.i18n("si-panel-videos-empty",locale) }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
@@ -36,12 +36,11 @@ var SignItCoreContent = function (locale) {
         <div class="signit-panel-definition">
           <div class="signit-panel-definition signit-definition">
             <h2>Definition:
-            ${ banana.i18n("si-overlay-coreContent-right-title",locale) }</h2>
+            ${ banana.i18n("si-panel-definitions-title",locale) }</h2>
             <div class="signit-definition-text"></div>
             <div class="signit-definition-source">
-              <a href="https://fr
-          ${ banana.i18n("si-overlay-coreContent-right-wikt-iso",locale) }.wiktionary.org">
-          ${ banana.i18n("si-overlay-coreContent-right-wikt-pointer",locale) }</a>
+              <a href="https://${ banana.i18n("si-panel-definitions-wikt-iso",locale) }.wiktionary.org">
+          ${ banana.i18n("si-panel-definitions-wikt-pointer",locale) }</a>
             </div>
           </div>
           <div class="signit-panel-definition signit-loading">
@@ -50,7 +49,7 @@ var SignItCoreContent = function (locale) {
             )}" width="40" height="40">
           </div>
           <div class="signit-panel-definition signit-error">
-          ${ banana.i18n("si-overlay-coreContent-right-error",locale) }</div>
+          ${ banana.i18n("si-panel-definitions-empty",locale) }</div>
         </div>
 			</div>
 		</div>
@@ -59,7 +58,7 @@ var SignItCoreContent = function (locale) {
     // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
-      label: banana.i18n("si-overlay-coreContent-left-contribute-label",locale) ,
+      label: banana.i18n("si-panel-videos-contribute-label",locale) ,
       href: "https://lingualibre.org/wiki/Special:RecordWizard",
     };
     this.contributeButton = new OO.ui.ButtonWidget(optionsContribute);
@@ -146,7 +145,7 @@ var SignItCoreContent = function (locale) {
     );
     $wiktSection = content
       .find(
-        "#Français" /* banana.i18n("si-overlay-coreContent-right-wikt-section-id",locale) */
+        "#Français" /* banana.i18n("si-panel-definitions-wikt-section-id",locale) ? banana.i18n("si-panel-definitions-wikt-section-id",locale) : ''*/
       )
       .parent()
       .next();

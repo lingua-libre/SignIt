@@ -132,7 +132,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// History tab 
 	// .initHistory calls .addHistory which calls .cleanHistory
 	UI.prototype.initHistory = function () {
-		this.$noHistory = $( `<div>${banana.i18n("si-popup-history-noHistory")}</div>` );
+		this.$noHistory = $( `<div>${banana.i18n("si-popup-history-empty")}</div>` );
 		this.history = [];
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );

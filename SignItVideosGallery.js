@@ -31,7 +31,7 @@ SignItVideosGallery.prototype.refresh = function ( files ) {
 		// url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
 		// speaker = files[ i ].speaker,
 		// total = files.length;
-		// ${ banana.i18n("si-videosGallery-video", url, speaker, i+1, total) }
+		// ${ banana.i18n("si-panel-videos-gallery-attribution", url, speaker, i+1, total) }
 		this.$videos.push( $( `
 			<div style="display: none;">
 				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></video>
