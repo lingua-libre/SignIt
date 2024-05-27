@@ -26,7 +26,7 @@ var SignItCoreContent = function (locale) {
 			<div class="signit-modal-content">
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
-            <h2>Media:
+            <h2>
             ${ banana.i18n("si-panel-videos-title",locale) }</h2>
             ${ banana.i18n("si-panel-videos-empty",locale) }<br><br>
           </div>
@@ -35,7 +35,7 @@ var SignItCoreContent = function (locale) {
 				<div class="signit-panel-separator"></div>
         <div class="signit-panel-definitions">
           <div class="signit-panel-definitions signit-definitions">
-            <h2>Definition:
+            <h2>
             ${ banana.i18n("si-panel-definitions-title",locale) }</h2>
             <div class="signit-definitions-text"></div>
             <div class="signit-definitions-source">
