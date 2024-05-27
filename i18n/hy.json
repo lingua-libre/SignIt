@@ -5,11 +5,11 @@
 			"GeoO"
 		]
 	},
-	"si-overlay-coreContent-right-wikt-section-id": "#անգլերեն",
-	"si-overlay-coreContent-right-wikt-pointer": "տես Վիքիբառարանում",
+	"si-panel-definitions-wikt-section-id": "#անգլերեն",
+	"si-panel-definitions-wikt-pointer": "տես Վիքիբառարանում",
 	"si-popup-browse-icon": "Սկսեք որոնումը",
 	"si-popup-history-title": "Պատմություն",
-	"si-popup-history-noHistory": "Դատարկ է",
+	"si-popup-history-empty": "Դատարկ է",
 	"si-popup-settings-title": "Կարգավորումներ",
 	"si-popup-settings-signlanguage": "Ժեստերի լեզու.",
 	"si-popup-settings-signlanguage-dropdown": "Փոխել տեսանյութերի լեզուն",

@@ -4,12 +4,12 @@
 			"CptViraj"
 		]
 	},
-	"si-overlay-coreContent-right-title": "વ્યાખ્યાઓ:",
-	"si-overlay-coreContent-right-wikt-iso": "gu",
-	"si-overlay-coreContent-right-wikt-pointer": "વિકિકોશ પર જુઓ",
-	"si-overlay-coreContent-right-error": "કોઈ વ્યાખ્યા મળી નથી.",
+	"si-panel-definitions-title": "વ્યાખ્યાઓ:",
+	"si-panel-definitions-wikt-iso": "gu",
+	"si-panel-definitions-wikt-pointer": "વિકિકોશ પર જુઓ",
+	"si-panel-definitions-empty": "કોઈ વ્યાખ્યા મળી નથી.",
 	"si-popup-browse-label": "શોધ",
 	"si-popup-browse-icon": "શોધ શરૂ કરો",
 	"si-popup-history-title": "ઇતિહાસ",
-	"si-popup-history-noHistory": "ખાલી છે"
+	"si-popup-history-empty": "ખાલી છે"
 }
