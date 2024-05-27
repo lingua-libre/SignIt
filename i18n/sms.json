@@ -4,12 +4,12 @@
 			"Yupik"
 		]
 	},
-	"si-overlay-coreContent-left-title": "Media:",
-	"si-overlay-coreContent-right-title": "Meäʹrtelm:",
-	"si-overlay-coreContent-right-wikt-iso": "sms",
-	"si-overlay-coreContent-right-wikt-section-id": "#sääʹmǩiõll",
-	"si-overlay-coreContent-right-wikt-pointer": "čuäʹjet Wikisääʹnnǩeeʹrjest",
-	"si-overlay-coreContent-right-error": "Ij käunnʼjam ni õhtt meäʹrtelm.",
+	"si-panel-videos-title": "Media:",
+	"si-panel-definitions-title": "Meäʹrtelm:",
+	"si-panel-definitions-wikt-iso": "sms",
+	"si-panel-definitions-wikt-section-id": "#sääʹmǩiõll",
+	"si-panel-definitions-wikt-pointer": "čuäʹjet Wikisääʹnnǩeeʹrjest",
+	"si-panel-definitions-empty": "Ij käunnʼjam ni õhtt meäʹrtelm.",
 	"si-popup-browse-title": "Ǩiõčč",
 	"si-popup-browse-label": "Ooʒʒ",
 	"si-popup-history-title": "Historia",
