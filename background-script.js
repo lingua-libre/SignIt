@@ -103,7 +103,7 @@ var supportedUiLanguages = [
   {i18nCode: "mnw",labelEN: "Mon",labelNative: "ဘာသာမန်",wdQid: "Q13349",wiki: "mnw"},
   {i18nCode: "ms",labelEN: "Malay",labelNative: "Bahasa Melayu",wdQid: "Q9237",wiki: "ms"},
   {i18nCode: "nb",labelEN: "Bokmål",labelNative: "Bokmål",wdQid: "Q25167",wiki: "nb"},
-  {i18nCode: "pnb",labelEN: "Western Punjabi",labelNative: "ਪੰਜਾਬੀ",wdQid: "Q1389492"},
+  {i18nCode: "urdu",labelEN: "Urdu",labelNative: "اردو",wdQid: "Q1389492"},
     {i18nCode: "pt",labelEN: "Portuguese",labelNative: "Português (pt)",wdQid: "Q5146",wiki: "pt"},
     {i18nCode: "pt-br",labelEN: "Portuguese",labelNative: "Português (br)",wdQid: "Q5146",wiki: "pt"},
   {i18nCode: "ru",labelEN: "Russian",labelNative: "Русский язык",wdQid: "Q7737",wiki: "ru"},
@@ -256,7 +256,7 @@ async function changeLanguage( newLang ) {
 // Given language's Qid, reload available translations
 async function changeUiLanguage( newLang ) {
 	console.log('changeUiLanguage newLang', newLang); // => 'Q150' for french
-	messages = await loadI18nLocalization( newLang );
+	await loadI18nLocalization( newLang );
 	await storeParam( 'uiLanguage', newLang ); // localStorage save
 }
 
@@ -384,6 +384,18 @@ browser.contextMenus.onClicked.addListener( async function( menuMessage, __tab )
 // Listen for other signals
 browser.runtime.onMessage.addListener( async function ( message ) {
 	console.log("Message heard in background-script.js: ", message, "---------------------" )
+	
+	// Passing messages instead of browser type checking since its not scalable
+	// inside both chrome and firefox
+	
+	if (message.command === "checkActiveTabInjections") {
+    await checkActiveTabInjections(message.currentTabId);
+    return;
+  } else if (message.command === "normalizeWordAndReturnFiles") {
+    const w = normalize(message.text);
+    const f = wordToFiles(w);
+    return [w, f];
+  }
 	message = normalizeMessage(message);
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
@@ -404,6 +416,14 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 	else if ( message.command === 'signit.hinticon' ) {
 		callModal(message);
 	}
+	else if (message.command === "storeParam") {
+		storeParam([...message.arguments]);
+		return;
+	}
+	// else if (message.command === "changeUiLanguage") {
+	// 	await changeUiLanguage(message.newLanguage);
+	// 	return;
+	// }
 });
 
 /* *************************************************************** */
