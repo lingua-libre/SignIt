@@ -44,6 +44,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		if (browserType === 'firefox') {
 			// Placeholder while fetching data
 			banana = _backgroundPage.banana;
+			console.log(banana);
 			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
 		}else{
 			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
@@ -75,8 +76,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
-		this.searchWidget.setRecords( _backgroundPage.records );
+		// this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
+		// this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon:"search",
 			label: banana.i18n("si-popup-browse-label"),
@@ -84,8 +85,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			title: banana.i18n("si-popup-browse-icon")
 		} );
 		
-		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
-		// var searchLayout = new OO.ui.ActionFieldLayout( searchButton, {
+		// var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
+		var searchLayout = new OO.ui.ActionFieldLayout( searchButton, {
 			align: 'top',
 			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
@@ -93,7 +94,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		} );
 
 		// Add the CoreContent view
-		this.coreContent = new SignItCoreContent();
+		// similar to what we did in signit.js since here banana is defined solely as per i18n functionality 
+		var BetterBanana = await browser.storage.local.get( 'bananaInStore' ); 
+		this.coreContent = new SignItCoreContent(BetterBanana.bananaInStore);
 		this.coreContent.getContainer().hide();
 
 		// Put all that in the tab
@@ -103,8 +106,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
-		await checkActiveTabInjections( tabs[ 0 ].id );
-	  	var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
+		
+		// since we cant send functions through sendMessages, nor can we store them
+		// in local storage and having a shared common functions file returns 
+		// "checkActiveTabInjections is not defined" error , I am passing message to execute the 
+		// function it directly in sw.js...can't think of anoy other soln as of now
+
+		await browser.runtime.sendMessage({command:"checkActiveTabInjections",currentTabId:tabs[0].id });
+		var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
 		if ( selection !== '' ) {
@@ -113,20 +122,24 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 		// refresh the view each time a search is made
 		searchButton.on( 'click', this.changeView.bind( this ) );
-		this.searchWidget.lookupMenu.on( 'choose', this.changeView.bind( this ) );
+		// this.searchWidget.lookupMenu.on( 'choose', this.changeView.bind( this ) );
 	};
 
-	UI.prototype.changeView = function( text ) {
-		if ( typeof text !== 'string' ) {
-			// text = this.searchWidget.getValue();
-		}
-		_word = _backgroundPage.normalize( text );
-		_files = _backgroundPage.wordToFiles ( _word );
-		this.coreContent.refresh( _word, _files );
-		// this.searchWidget.setValue( _word );
-		this.coreContent.getContainer().show();
-		this.addHistory( _word );
-	}
+	UI.prototype.changeView = async function (text) {
+    if (typeof text !== "string") {
+      // text = this.searchWidget.getValue();
+    }
+    // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
+
+    const [_word, _files] = await browser.runtime.sendMessage({
+      command: "normalizeWordAndReturnFiles",
+      text: text,
+    });
+    this.coreContent.refresh(_word, _files);
+    // this.searchWidget.setValue( _word );
+    this.coreContent.getContainer().show();
+    this.addHistory(_word);
+  };
 	
 	/* *********************************************************** */
 	// History tab 
@@ -164,7 +177,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		this.cleanHistory( store );
 	}
 
-	UI.prototype.cleanHistory = function( store ) {
+	UI.prototype.cleanHistory = async function( store ) {
 		while ( this.history.length > _backgroundPage.params.historylimit ) {
 			this.history.pop();
 			this.$history.pop().remove();
@@ -175,7 +188,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 
 		if ( store !== false ) {
-			_backgroundPage.storeParam( 'history', this.history );
+			await browser.runtime.sendMessage({command:"storeParam",arguments:['history', this.history ]})
 		}
 	}
 
@@ -185,16 +198,16 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		/* Sign Language picker */
 		// Data
 		var items = [];
-		_signLanguages = _backgroundPage.signLanguages;
-		console.log("148 signLanguages", _signLanguages )
-		for (var i=0;i<_signLanguages.length;i++ ) {
-			lang = _signLanguages[i];
-			console.log("151 lang", lang ) // #136
-			items.push( new OO.ui.MenuOptionWidget( {
-				data: lang.wdQid, // qid
-				label: lang.labelNative, // sign language name (en)
-			} ) );
-		}
+		// _signLanguages = _backgroundPage.signLanguages;
+		// console.log("148 signLanguages", _signLanguages )
+		// for (var i=0;i<_signLanguages.length;i++ ) {
+		// 	lang = _signLanguages[i];
+		// 	console.log("151 lang", lang ) // #136
+		// 	items.push( new OO.ui.MenuOptionWidget( {
+		// 		data: lang.wdQid, // qid
+		// 		label: lang.labelNative, // sign language name (en)
+		// 	} ) );
+		// }
 		// Layout
 		signLanguageDropdown = new OO.ui.DropdownWidget( { 
 			label: banana.i18n("si-popup-settings-signlanguage-dropdown"), 
@@ -379,7 +392,17 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 		ui.switchPanel( 'loading' );
 		//banana = _backgroundPage.banana;
-		await _backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
+
+		// temporary workaround . . . neeeds to be fixed later
+		// in case of chrome, whole page has to be reloaded and in case of firefox, the UI language changes 
+		// but needs a page reload in order for those changes to reflect in modal   
+		
+		if (browserType === 'firefox') {
+			await _backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
+		}
+		else{
+			await browser.runtime.sendMessage({command:"changeUiLanguage",newLanguage});
+		}
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
