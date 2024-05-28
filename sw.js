@@ -286,9 +286,9 @@ WHERE {
       wiki: "nb",
     },
     {
-      i18nCode: "pnb",
-      labelEN: "Western Punjabi",
-      labelNative: "ਪੰਜਾਬੀ",
+      i18nCode: "urdu",
+      labelEN: "Urdu",
+      labelNative: "اردو",
       wdQid: "Q1389492",
     },
     {
@@ -421,7 +421,6 @@ async function setState(value) {
 
     // state = "loading";
     state = await setState("loading");
-    console.log(`Initial state inside loadI18nLocalization() ${state}`);
     
     // Get locale code and corresponding wiktionary
     var lang = supportedUiLanguages.filter(
@@ -443,7 +442,6 @@ async function setState(value) {
 
     // state = "ready";
     state = await setState("ready");
-    console.log(`Final state inside loadI18nLocalization() ${state}`);
 
     console.log(Object.keys(localizedPhrases).length + " i18n messages loaded");
   }
@@ -477,27 +475,6 @@ async function setState(value) {
 
   // Get sign languages covered by Lingualibre
   // returns: [{ wdQid: "Q99628", labelNative: "langue des signes française"},{},...]
-  // async function getSignLanguagesWithVideos() {
-  // 	var i,
-  // 		signLanguage,
-  // 		signLanguages = [], // ?? already define in global scopte
-  // 		response = await $.post(
-  // 			sparqlEndpoints.lingualibre.url,
-  // 			{ format: 'json', query: sparqlSignLanguagesQuery }
-  // 		);
-  // 		for ( i = 0; i < response.results.bindings.length; i++ ) {
-  // 			var signLanguageRaw = response.results.bindings[ i ];
-  // 			console.log("#149",signLanguageRaw)
-  // 			signLanguage = { wdQid: signLanguageRaw.id.value.split( '/' ).pop(), labelNative: signLanguageRaw.idLabel.value }
-  // 			signLanguages[i] = signLanguage;
-  // 		}
-  // 	// create signLanguages objects
-  // 	// TEMPORARY, WHEN ONLY LSF HAS VIDEOS
-  // 	signLanguages = filterArrayBy(signLanguages,"wdQid", "Q99628");
-  // 	console.log(signLanguages)
-
-  // 	return signLanguages;
-  // }
 
   async function getSignLanguagesWithVideos() {
     try {
@@ -597,7 +574,7 @@ async function setState(value) {
   // Given language's Qid, reload available translations
   async function changeUiLanguage(newLang) {
     console.log("changeUiLanguage newLang", newLang); // => 'Q150' for french
-    messages = await loadI18nLocalization(newLang);
+    await loadI18nLocalization(newLang);
     await storeParam("uiLanguage", newLang); // localStorage save
   }
 
@@ -761,6 +738,14 @@ async function setState(value) {
       message,
       "---------------------"
     );
+    // keeping it above normalizeMessage() since it deletes the selecton text inside 
+    // the message which renders the test undefined
+
+    if (message.command === "normalizeWordAndReturnFiles") {
+      const w  = normalize(message.text);
+      const f  = wordToFiles(w);
+      sendResponse([w,f]);
+    }
     message = normalizeMessage(message);
 
     // When message 'signit.getfiles' is heard, returns relevant extract of records[]
@@ -786,6 +771,15 @@ async function setState(value) {
     // When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
     else if (message.command === "signit.hinticon") {
       callModal(message);
+    } 
+    else if (message.command === "checkActiveTabInjections") {
+      checkActiveTabInjections(message.currentTabId);
+    }
+    else if (message.command === "storeParam") {
+      storeParam([...message.arguments]);
+    }
+    else if (message.command === "changeUiLanguage") {
+      await changeUiLanguage(message.newLanguage);
     }
   });
 
@@ -823,9 +817,9 @@ main();
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.command === "getBackground") {
-    // temporary fix , needs to be persisted in chrome.storage.local but will get to that later
+    // persisted the state inside chrome.storage.local but will get to that later
     console.log(state);
-    const a = {state,params};
+    const a = {state,params,uiLanguages};
     sendResponse(a);
 	}
 });
