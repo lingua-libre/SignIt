@@ -165,6 +165,7 @@ async function loadI18nLocalization( uiLanguageQid ) {
 	// Declare localisation
 	banana.setLocale(locale); // Change to new locale
 	storeParam('bananaInStore',banana)
+    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
 	
 	state = 'ready';
 
@@ -272,7 +273,15 @@ function normalize( selection ) { // this could do more
 
 // Check a string with multiple words and return the word whose record is available
 function getAvailableWord( word ) {
-	const wordArray = word.split(" ");
+
+	// while this makes for an ungly regex , I couldn't think of anything else. 
+	// Using metacharcters like /W or /w meant removing accented letters as well, which would have broken 
+	// many french words . . .so I retorted to this;
+	
+	const regex = /[!"#$%&()*+,-./:;<=>?@[\\\]^_{|}~]/;
+	const stringWithoutSpecialChars = word.replace(regex,"");
+	const wordArray = stringWithoutSpecialChars.split(" ");
+	console.log(wordArray);
 	for ( let newWord of wordArray ) {
 		if( records.hasOwnProperty(newWord.toLowerCase()) ){
 			return newWord;
@@ -389,13 +398,17 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 	// inside both chrome and firefox
 	
 	if (message.command === "checkActiveTabInjections") {
-    await checkActiveTabInjections(message.currentTabId);
+    await checkActiveTabInjections(message.argument);
     return;
   } else if (message.command === "normalizeWordAndReturnFiles") {
-    const w = normalize(message.text);
-    const f = wordToFiles(w);
-    return [w, f];
+    const word = normalize(message.argument);
+    const files = wordToFiles(word);
+    return [word, files];
   }
+  else if (message.command === "changeUiLanguage") {
+	await changeUiLanguage(message.argument);
+	return;
+}
 	message = normalizeMessage(message);
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
@@ -420,10 +433,6 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 		storeParam([...message.arguments]);
 		return;
 	}
-	// else if (message.command === "changeUiLanguage") {
-	// 	await changeUiLanguage(message.newLanguage);
-	// 	return;
-	// }
 });
 
 /* *************************************************************** */

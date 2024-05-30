@@ -1,23 +1,6 @@
-// const { default: backgroundPage } = require("./background-script"); // to try
-
-var banana,resArr;
-(async()=>{
-  resArr = await chrome.runtime.sendMessage({ command: "getBanana" });
-  console.log(resArr);
-  const sourceMap = new Map(resArr[0]);
+var SignItCoreContent = function (locale,map) {
+  const sourceMap = new Map(map);
   banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
-})();
-
-var SignItCoreContent = function (locale) {
-  // in case of firefox 
-  if ((locale.messageStore.sourceMap) instanceof Map) { 
-    const sourceMap = new Map(locale.messageStore.sourceMap);
-    locale = locale.locale;
-    banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
-  }
-  else{ // in case of chrome
-    locale = resArr[1];
-  }
   console.log("Passed trough ! :", locale);
   console.log("SignItCoreContent.js",banana );
   this.$container = $(`

@@ -439,6 +439,7 @@ async function setState(value) {
     // Declare localisation
     banana.setLocale(locale); // Change to new locale
     storeParam("bananaInStore", banana);
+    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
 
     // state = "ready";
     state = await setState("ready");
@@ -742,9 +743,9 @@ async function setState(value) {
     // the message which renders the test undefined
 
     if (message.command === "normalizeWordAndReturnFiles") {
-      const w  = normalize(message.text);
-      const f  = wordToFiles(w);
-      sendResponse([w,f]);
+      const word  = normalize(message.argument);
+      const files  = wordToFiles(word);
+      sendResponse([word,files]);
     }
     message = normalizeMessage(message);
 
@@ -773,13 +774,13 @@ async function setState(value) {
       callModal(message);
     } 
     else if (message.command === "checkActiveTabInjections") {
-      checkActiveTabInjections(message.currentTabId);
+      checkActiveTabInjections(message.argument);
     }
     else if (message.command === "storeParam") {
-      storeParam([...message.arguments]);
+      storeParam([...message.argument]);
     }
     else if (message.command === "changeUiLanguage") {
-      await changeUiLanguage(message.newLanguage);
+      await changeUiLanguage(message.argument);
     }
   });
 

@@ -153,9 +153,10 @@
 		// Banana test, search `bananaInStore` in files for more
 		console.log("before")
 		var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
-		console.log("after: BetterBanana = ", BetterBanana.bananaInStore)
+		var messageStore = await browser.storage.local.get( 'sourceMap' ); 
+		console.log("after: BetterBanana = ", BetterBanana.bananaInStore.locale,messageStore.sourceMap)
 
-		content = new SignItCoreContent(BetterBanana.bananaInStore);
+		content = new SignItCoreContent(BetterBanana.bananaInStore.locale,messageStore.sourceMap);
 
 		// Setup an absolute-positionned $anchorModal we can programatically move
 		// to be able to point exactly some coords with our popup later
@@ -217,7 +218,9 @@
 
 		// Modal generation or refresh
 		if ( message.command === 'signit.sign' || message.command === 'signit.hinticon') {
-			if ( popup === undefined ) { initModalUI(); }
+			// initialising modal everytime not only when popup is undefined ,
+			// by this we won't have to reload the web page everytime 
+			initModalUI(); 
 			var coords = getSelectionCoords();
 			repositionElement($anchorModal,coords);
 			resizeElement($anchorModal,coords);
