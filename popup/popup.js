@@ -72,6 +72,11 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		this.switchPanel( 'loaded' );
 	};
 	
+	async function sendMsgAndExecFn(msg,argument){
+		const response = await browser.runtime.sendMessage({command:msg,argument});
+		if (response !== undefined) return response;
+	}
+
 	/* *********************************************************** */
 	// Browse tab
 	UI.prototype.initView = async function () {
@@ -96,7 +101,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// Add the CoreContent view
 		// similar to what we did in signit.js since here banana is defined solely as per i18n functionality 
 		var BetterBanana = await browser.storage.local.get( 'bananaInStore' ); 
-		this.coreContent = new SignItCoreContent(BetterBanana.bananaInStore);
+		var messageStore = await browser.storage.local.get( 'sourceMap' ); 
+		this.coreContent = new SignItCoreContent(BetterBanana.bananaInStore.locale,messageStore.sourceMap);
 		this.coreContent.getContainer().hide();
 
 		// Put all that in the tab
@@ -107,12 +113,10 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// if the current window has a selected text, initialise the view with it
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
 		
-		// since we cant send functions through sendMessages, nor can we store them
-		// in local storage and having a shared common functions file returns 
-		// "checkActiveTabInjections is not defined" error , I am passing message to execute the 
-		// function it directly in sw.js...can't think of anoy other soln as of now
+		// optimizing message passing for the functions that are present in 
+		// sw.js as well background-script.js
 
-		await browser.runtime.sendMessage({command:"checkActiveTabInjections",currentTabId:tabs[0].id });
+		await sendMsgAndExecFn("checkActiveTabInjections",tabs[0].id);
 		var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
@@ -131,10 +135,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     }
     // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
 
-    const [_word, _files] = await browser.runtime.sendMessage({
-      command: "normalizeWordAndReturnFiles",
-      text: text,
-    });
+	const [_word,_files] = await sendMsgAndExecFn("normalizeWordAndReturnFiles",text);
     this.coreContent.refresh(_word, _files);
     // this.searchWidget.setValue( _word );
     this.coreContent.getContainer().show();
@@ -188,7 +189,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 
 		if ( store !== false ) {
-			await browser.runtime.sendMessage({command:"storeParam",arguments:['history', this.history ]})
+			await sendMsgAndExecFn("storeParam",['history', this.history ]);
 		}
 	}
 
@@ -338,17 +339,17 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( val ) {
 			val = parseInt( val ) >=0 ? parseInt( val ) : 0;
-			_backgroundPage.storeParam( 'historylimit', val );
+			sendMsgAndExecFn("storeParam",['historylimit', val])
 			this.cleanHistory();
 		}.bind( this ) );
-		wpintegrationWidget.on( 'change', () => _backgroundPage.storeParam('wpintegration',!_backgroundPage.params.wpintegration) );
-		twospeedWidget.on( 'change', () => _backgroundPage.storeParam('twospeed',!_backgroundPage.params.twospeed) );
-		// _backgroundPage.storeParam( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
-		hinticonWidget.on('change', () => _backgroundPage.storeParam('hinticon',!_backgroundPage.params.hinticon));
-    coloredwordsWidget.on('change', () => _backgroundPage.storeParam('coloredwords',!_backgroundPage.params.coloredwords));
+		wpintegrationWidget.on( 'change', () => sendMsgAndExecFn("storeParam",['wpintegration',!_backgroundPage.params.wpintegration]) );
+		twospeedWidget.on( 'change', () => sendMsgAndExecFn("storeParam",['twospeed',!_backgroundPage.params.twospeed] ));
+		// sendMsgAndExecFn("storeParam"( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
+		hinticonWidget.on('change', () => sendMsgAndExecFn("storeParam",['hinticon',!_backgroundPage.params.hinticon]));
+    coloredwordsWidget.on('change', () => sendMsgAndExecFn("storeParam",['coloredwords',!_backgroundPage.params.coloredwords]));
 		// Listen for item selection events
 		choosepanelsWidget.on('choose', (d)=>{ 
-			_backgroundPage.storeParam('choosepanels', d.getData()); 
+			sendMsgAndExecFn("storeParam",['choosepanels', d.getData()]); 
 		});
 
 		// Build Settings UI
@@ -393,16 +394,13 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		ui.switchPanel( 'loading' );
 		//banana = _backgroundPage.banana;
 
-		// temporary workaround . . . neeeds to be fixed later
-		// in case of chrome, whole page has to be reloaded and in case of firefox, the UI language changes 
-		// but needs a page reload in order for those changes to reflect in modal   
-		
-		if (browserType === 'firefox') {
-			await _backgroundPage.changeUiLanguage( newLanguage ); // save in localStorage
-		}
-		else{
-			await browser.runtime.sendMessage({command:"changeUiLanguage",newLanguage});
-		}
+		// now in case of the chrome,both popup and modal update, 
+		// but in case of popup you have to off->on again in order to see changes  
+		// and in FF popup UI updates first
+		// in both browsers for the changes to reflect in modal you have to
+		// send another signit.hinticon command in order to see changes
+
+		await sendMsgAndExecFn("changeUiLanguage",newLanguage);
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
