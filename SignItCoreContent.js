@@ -1,5 +1,5 @@
-var SignItCoreContent = function (locale,map) {
-  const sourceMap = new Map(map);
+var SignItCoreContent = function (locale,mapi18n) {
+  const sourceMap = new Map(mapi18n);
   banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
   console.log("Passed trough ! :", locale);
   console.log("SignItCoreContent.js",banana );
