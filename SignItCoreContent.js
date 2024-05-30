@@ -1,6 +1,6 @@
 var SignItCoreContent = function (locale,mapi18n) {
   const sourceMap = new Map(mapi18n);
-  banana = { i18n: (msg,locale) => sourceMap.get(locale)[msg] };
+  banana = { i18n: (msg) => sourceMap.get(locale)[msg] };
   console.log("Passed trough ! :", locale);
   console.log("SignItCoreContent.js",banana );
   this.$container = $(`
@@ -10,8 +10,8 @@ var SignItCoreContent = function (locale,mapi18n) {
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
             <h2>
-            ${ banana.i18n("si-panel-videos-title",locale) }</h2>
-            ${ banana.i18n("si-panel-videos-empty",locale) }<br><br>
+            ${ banana.i18n("si-panel-videos-title") }</h2>
+            ${ banana.i18n("si-panel-videos-empty") }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
@@ -19,11 +19,11 @@ var SignItCoreContent = function (locale,mapi18n) {
         <div class="signit-panel-definitions">
           <div class="signit-panel-definitions signit-definitions">
             <h2>
-            ${ banana.i18n("si-panel-definitions-title",locale) }</h2>
+            ${ banana.i18n("si-panel-definitions-title") }</h2>
             <div class="signit-definitions-text"></div>
             <div class="signit-definitions-source">
-              <a href="https://${ banana.i18n("si-panel-definitions-wikt-iso",locale) }.wiktionary.org">
-          ${ banana.i18n("si-panel-definitions-wikt-pointer",locale) }</a>
+              <a href="https://${ banana.i18n("si-panel-definitions-wikt-iso") }.wiktionary.org">
+          ${ banana.i18n("si-panel-definitions-wikt-pointer") }</a>
             </div>
           </div>
           <div class="signit-panel-definitions signit-loading">
@@ -32,7 +32,7 @@ var SignItCoreContent = function (locale,mapi18n) {
             )}" width="40" height="40">
           </div>
           <div class="signit-panel-definitions signit-error">
-          ${ banana.i18n("si-panel-definitions-empty",locale) }</div>
+          ${ banana.i18n("si-panel-definitions-empty") }</div>
         </div>
 			</div>
 		</div>
@@ -41,7 +41,7 @@ var SignItCoreContent = function (locale,mapi18n) {
     // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
-      label: banana.i18n("si-panel-videos-contribute-label",locale) ,
+      label: banana.i18n("si-panel-videos-contribute-label") ,
       href: "https://lingualibre.org/wiki/Special:RecordWizard",
     };
     this.contributeButton = new OO.ui.ButtonWidget(optionsContribute);
@@ -128,7 +128,7 @@ var SignItCoreContent = function (locale,mapi18n) {
     );
     $wiktSection = content
       .find(
-        "#Français" /* banana.i18n("si-panel-definitions-wikt-section-id",locale) ? banana.i18n("si-panel-definitions-wikt-section-id",locale) : ''*/
+        "#Français" /* banana.i18n("si-panel-definitions-wikt-section-id") ? banana.i18n("si-panel-definitions-wikt-section-id",locale) : ''*/
       )
       .parent()
       .next();
