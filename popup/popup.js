@@ -72,7 +72,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		this.switchPanel( 'loaded' );
 	};
 	
-	async function sendMsgAndExecFn(msg,argument){
+	async function sendMessageUp(msg,argument){
 		const response = await browser.runtime.sendMessage({command:msg,argument});
 		if (response !== undefined) return response;
 	}
@@ -116,7 +116,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// optimizing message passing for the functions that are present in 
 		// sw.js as well background-script.js
 
-		await sendMsgAndExecFn("checkActiveTabInjections",tabs[0].id);
+		await sendMessageUp("checkActiveTabInjections",tabs[0].id);
 		var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
 			command: "signit.getSelection",
 		} );
@@ -135,7 +135,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     }
     // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
 
-	const [_word,_files] = await sendMsgAndExecFn("normalizeWordAndReturnFiles",text);
+	const [_word,_files] = await sendMessageUp("normalizeWordAndReturnFiles",text);
     this.coreContent.refresh(_word, _files);
     // this.searchWidget.setValue( _word );
     this.coreContent.getContainer().show();
@@ -189,7 +189,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 
 		if ( store !== false ) {
-			await sendMsgAndExecFn("storeParam",['history', this.history ]);
+			await sendMessageUp("storeParam",['history', this.history ]);
 		}
 	}
 
@@ -339,17 +339,17 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( val ) {
 			val = parseInt( val ) >=0 ? parseInt( val ) : 0;
-			sendMsgAndExecFn("storeParam",['historylimit', val])
+			sendMessageUp("storeParam",['historylimit', val])
 			this.cleanHistory();
 		}.bind( this ) );
-		wpintegrationWidget.on( 'change', () => sendMsgAndExecFn("storeParam",['wpintegration',!_backgroundPage.params.wpintegration]) );
-		twospeedWidget.on( 'change', () => sendMsgAndExecFn("storeParam",['twospeed',!_backgroundPage.params.twospeed] ));
-		// sendMsgAndExecFn("storeParam"( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
-		hinticonWidget.on('change', () => sendMsgAndExecFn("storeParam",['hinticon',!_backgroundPage.params.hinticon]));
-    coloredwordsWidget.on('change', () => sendMsgAndExecFn("storeParam",['coloredwords',!_backgroundPage.params.coloredwords]));
+		wpintegrationWidget.on( 'change', () => sendMessageUp("storeParam",['wpintegration',!_backgroundPage.params.wpintegration]) );
+		twospeedWidget.on( 'change', () => sendMessageUp("storeParam",['twospeed',!_backgroundPage.params.twospeed] ));
+		// sendMessageUp("storeParam"( 'twospeed', _backgroundPage.params.twospeed ); // twospeed in localStorage before first usage-change
+		hinticonWidget.on('change', () => sendMessageUp("storeParam",['hinticon',!_backgroundPage.params.hinticon]));
+    coloredwordsWidget.on('change', () => sendMessageUp("storeParam",['coloredwords',!_backgroundPage.params.coloredwords]));
 		// Listen for item selection events
 		choosepanelsWidget.on('choose', (d)=>{ 
-			sendMsgAndExecFn("storeParam",['choosepanels', d.getData()]); 
+			sendMessageUp("storeParam",['choosepanels', d.getData()]); 
 		});
 
 		// Build Settings UI
@@ -400,7 +400,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// in both browsers for the changes to reflect in modal you have to
 		// send another signit.hinticon command in order to see changes
 
-		await sendMsgAndExecFn("changeUiLanguage",newLanguage);
+		await sendMessageUp("changeUiLanguage",newLanguage);
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
