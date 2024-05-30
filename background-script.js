@@ -402,7 +402,7 @@ browser.runtime.onMessage.addListener( async function ( message ) {
     return;
   } else if (message.command === "normalizeWordAndReturnFiles") {
     const word = normalize(message.argument);
-    const files = wordToFiles(w);
+    const files = wordToFiles(word);
     return [word, files];
   }
   else if (message.command === "changeUiLanguage") {
