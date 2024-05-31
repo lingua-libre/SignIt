@@ -16,7 +16,25 @@ var SignItVideosGallery = function ( container ) {
 	}.bind( this ) );
 };
 
-SignItVideosGallery.prototype.refresh = function ( files ) {
+SignItVideosGallery.prototype.refresh = async function ( files ) {
+	var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
+	var messageStore = await chrome.storage.local.get( 'sourceMap' ); 
+	var sourceMap = new Map(messageStore.sourceMap);
+	var locale = BetterBanana.bananaInStore.locale;
+	var banana = {
+    i18n: (msg, url, speaker,index, total) => {
+		let string = sourceMap.get(locale)[msg];
+		let Speaker = `<a href=${url}>${speaker} </a>`;
+		let patterns = ["{{link|$1|$2}}", "$3", "$4"];
+		let replacements = [Speaker, index, total];
+
+		patterns.forEach((pattern,index)=>{
+			string = string.replace(pattern, replacements[index]);
+		})
+
+		return string;
+    },
+  };
 	console.log("#20 files ",files )
 	console.log("Expected: [{ filename: url, speaker: ... },...]")	
 	var i;
@@ -27,17 +45,17 @@ SignItVideosGallery.prototype.refresh = function ( files ) {
 	this.currentIndex = 0;
 
 	for ( i = 0; i < files.length; i++ ) {
-		// filename = files[ i ].filename,
-		// url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
-		// speaker = files[ i ].speaker,
-		// total = files.length;
-		// ${ banana.i18n("si-panel-videos-gallery-attribution", url, speaker, i+1, total) }
+		filename = files[ i ].filename,
+		url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
+		speaker = files[ i ].speaker,
+		total = files.length;
 		this.$videos.push( $( `
 			<div style="display: none;">
 				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></video>
-				par <a href="https://commons.wikimedia.org/wiki/File:${ files[ i ].filename.split( '/' ).pop() }">${ files[ i ].speaker }</a> – Vidéo ${ i + 1 } sur ${ files.length }
+				${banana.i18n("si-panel-videos-gallery-attribution", url, speaker, i+1, total)}
 			</div>
 		` ) );
+
 		this.$videoContainer.append( this.$videos[ i ] );
 	}
 	this.switchVideo( 0 );
