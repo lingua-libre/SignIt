@@ -55,4 +55,4 @@ jobs:
           # Push changes to Github
           git add ./_locales/**
           git commit -m "Update _locales"
-          git push origin main
+          git push origin master
