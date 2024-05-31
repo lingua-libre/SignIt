@@ -21,15 +21,18 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 	var messageStore = await chrome.storage.local.get( 'sourceMap' ); 
 	var sourceMap = new Map(messageStore.sourceMap);
 	var locale = BetterBanana.bananaInStore.locale;
-	console.log(sourceMap);
 	var banana = {
     i18n: (msg, url, speaker,index, total) => {
-		let  string  = sourceMap.get(locale)[msg];
-		let Speaker = `<a href=${url}>${speaker}</a>`;
-		let stringWithSpeaker = string.replace("{{link|$1|$2}}",Speaker);
-		let stringWithIndex = stringWithSpeaker.replace("$3",index);
-		let stringWithTotal = stringWithIndex.replace("$4",total);
-      return stringWithTotal;
+		let string = sourceMap.get(locale)[msg];
+		let Speaker = `<a href=${url}>${speaker} </a>`;
+		let patterns = ["{{link|$1|$2}}", "$3", "$4"];
+		let replacements = [Speaker, index, total];
+
+		patterns.forEach((pattern,index)=>{
+			string = string.replace(pattern, replacements[index]);
+		})
+
+		return string;
     },
   };
 	console.log("#20 files ",files )
