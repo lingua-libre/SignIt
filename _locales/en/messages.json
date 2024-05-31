@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Fetching the list of all videos available on Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "by {{link|$1|$2}} – Video $3 of $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribute with Sign Language",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definitions:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#English",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "see on Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "No definition found.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Browse",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Search among $1 signs.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Search",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Start the search",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "History",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "It's empty",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Settings",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Sign language:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Change videos to another sign language.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Change videos language",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Interface language:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Change the user interface's language.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Change interface language",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Length of the history:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Set to 0 deactivates the history log",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Native integration with Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Play at normal speed, then at slow speed:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Shortcut icon on selected text:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Panels to display:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Dictionary text only",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Both",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Signed videos only",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Highlight available words:",
+    "description": ""
+  }
+}

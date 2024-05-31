@@ -1,0 +1,102 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre тӀехь йолу йерриге видео могӀам гойту.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Медиа:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "авторалла: {{link|$1|$2}} – $3 видео $4 чохь",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "И дош хӀинца а дӀайаздина дац,<br> делахь SignIt — краудсорсинган проект йу, цундела ахьа къахьега мега!",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Билгалдалар:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#ингалсан",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "хьажа Викидошам тӀехь",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Билгалдалар цакарий.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Хьажар",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Лаха",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Доладе лехар",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Истори",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Кхузахь йаьсса йу",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Нисдаран гӀирс",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Видео тӀера мотт хийца",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Интерфейсан мотт:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Долара интерфейс тӀера мотт хийца.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Интерфейсан мотт хийца",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Историн йохалла:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "ХӀоттаде 0, историн тептарна деактивици йан",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Нативан интеграци Википедица:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Билгалдина йозанан сиха тӀекхачаран веназ:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "ТӀекхочуш долу дешнаш билгалде:",
+    "description": ""
+  }
+}

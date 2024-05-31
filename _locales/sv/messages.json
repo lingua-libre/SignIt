@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Hämtar listan över alla tillgängliga videor på Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "av {{link|$1|$2}} – Video $3 av $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Det här ordet har ännu inte spelats in,<br>men SignIt är ett samarbetsprojekt så du kan bidra med det.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Bidra med teckenspråk",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definitioner:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "sv",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Svenska",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "läs på Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Ingen definition hittades.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Bläddra",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Sök igenom $1 tecken.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Sök",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Starta sökningen",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historik",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Den är tom",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Inställningar",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Teckenspråk:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Byt videorna till ett annat teckenspråk.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Byt videospråk",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Gränssnittsspråk:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Byt användargränssnittsspråk.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Byt gränssnittsspråk",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Historikens längd:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Sätts detta till 0 inaktiveras historikloggen",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Inbyggd integration med Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Spela i normal hastighet, sedan i låg hastighet:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Genvägsikon på vald text:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Markera tillgängliga ord:",
+    "description": ""
+  }
+}

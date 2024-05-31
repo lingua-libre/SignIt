@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Преземам список на сите видеоснимки достапни на Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Снимка:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "од {{link|$1|$2}} — Видео $3 од $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Овој збор сè уште не е снимен,<br> но SignIt е проект со општо учество, и затоа и Вие можете да придонесувате.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Учествувајте со знаковен јазик",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Дефиниции:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "mk",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Македонски",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "погл. на Викиречникот",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Не најдов дефиниции.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Прелистај",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Пребарувам меѓу $1 знаци.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Пребарај",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Почни со пребарување",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Историја",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Празно е",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Нагодувања",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Знаковен јазик:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Смени друг знаковен јазик на видеата.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Смени јазик на видеата",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Јазик на посредникот:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Измени го јазикот на корисничкиот посредник.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Измени го јазикот на посредникот",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Должина на историјата:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Задајте 0 за да го исклучите дневникот на историјата",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Матично вклопување со Википедија:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Пушти со нормална брзина, а потоа бавно:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Икона за кратенка на избраниот текст:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Кои приказници да се појавуваат:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Само речнички текст",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Обете",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Само видео со знаковен јазик",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Истакни достапни зборови:",
+    "description": ""
+  }
+}

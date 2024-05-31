@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre'de bulunan tüm videoların listesi getiriliyor.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Medya:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{link|$1|$2}} – Video $3/$4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Bu kelime henüz kaydedilmedi<br> ancak SignIt kitle kaynaklı bir projedir ve SignIt'e katkıda bulunabilirsiniz.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "İşaret Dili ile Katkıda Bulunun",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Tanımlar:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "tr",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Türkçe",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Vikisözlük'te gör",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Herhangi bir tanım bulunamadı.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Göz at",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 işaret arasında arama yapın.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Ara",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Aramayı başlat",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Geçmiş",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Boş",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Ayarlar",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "İşaret dili:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Videoları başka bir işaret diliyle değiştirin.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Videoların dilini değiştir",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Arayüz dili:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Kullanıcı arayüz dilini değiştirin.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Arayüz dilini değiştir",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Değişiklik geçmişi uzunluğu:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0 yapılırsa geçmiş günlüğünü devre dışı bırakılır",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Wikipedia ile yerel entegrasyon:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Normal hızda, ardından yavaş hızda oynatın:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Seçili metinde kısayol simgesi:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Mevcut kelimeleri vurgulayın:",
+    "description": ""
+  }
+}

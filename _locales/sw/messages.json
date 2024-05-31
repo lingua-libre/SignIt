@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Inaleta orodha ya video zote zinazopatikana kwenye Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Vyombo vya habari:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "na {{kiungo|$1|$2}} - Video $3 kati ya $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Neno hili bado halijarekodiwa,<br> lakini SignIt ni mradi unaotokana na umati, unaweza kuuchangia.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Changia kwa Lugha ya Ishara",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Ufafanuzi:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "sw",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Swahili",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "tazama kwenye Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Hakuna ufafanuzi uliopatikana.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Vinjari",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Tafuta kati ya ishara $1.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Tafuta",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Anza utafutaji",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historia",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Hamna",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Mipangilio",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Lugha ya ishara:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Badilisha video hadi lugha nyingine ya ishara",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Badilisha lugha ya video",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Lugha ya kiolesura:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Badilisha lugha ya kiolesura cha mtumiaji.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Badilisha lugha ya kiolesura",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Urefu wa historia:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Zima kumbukumbu ya historia kwa kuweka 0",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Ujumuishaji wa asili na Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Cheza kwa kasi ya kawaida, kisha kwa kasi ndogo:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Aikoni ya njia ya mkato kwenye maandishi yaliyochaguliwa:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Angazia maneno yanayopatikana:",
+    "description": ""
+  }
+}

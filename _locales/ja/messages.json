@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libreの利用可能なすべての動画のリストを取得しています。",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "メディア：",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{link|$1|$2}}に帰属  – 動画 $4件中の$3件目",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "この言葉はまだ記録されていません<br>SignItから手話を投稿することもできます。",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "手話で貢献する",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "定義:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "ja",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#日本語",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "ウィクショナリーで確認",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "定義が見つかりません。",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "閲覧",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1件の手話から検索します。",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "検索",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "検索を開始",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "履歴",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "空っぽです",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "設定",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "手話：",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "動画を他の手話に変更します。",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "動画の言語を変更",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "インターフェイスの言語:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "利用者インターフェースの言語を変更します。",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "インターフェース言語を変更",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "履歴の長さ:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0に設定すると、履歴ログが無効になります",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "ウィキペディアとのネイティブな統合：",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "通常速度で再生し、次に低速で再生：",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "選択したテキストのショートカットアイコン：",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "使用可能な単語をハイライト表示：",
+    "description": ""
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre-де қолжетімді барлық видео тізімі алынып жатыр.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Медиа:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "ауторы: {{link|$1|$2}} — $3/$4 видео",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Бұл сөз әлі жазылмаған,<br>бірақ SignIt краудсорсиң жобасы болғандықтан, сіз оған үлес қоса аласыз.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Ым тілінмен үлес қосу",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Мағыналары:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#English",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Уикисөздіктен қараңыз",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Анықтама табылмады.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Шолу",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 ым ішінен іздеу.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Іздеу",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Іздей бастау",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Тарихы",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Бұл бос",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Баптау",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Ым тілі:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Видеоларды басқа ым тіліне ауыстыру.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Видео тілін ауыстыру",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Интерфейс тілі:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Қолданушы интерфейсінің тілін ауыстыру.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Интерфейс тілін ауыстыру",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Тарих ұзындығы:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Тарих журналын өшіру үшін 0-ге орнатыңыз",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Уикипедиямен табиғи ынтымақтастық:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Қалыпты жылдамдықпен, сосын баяу жылдамдықпен ойнату:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Таңдалған тексте таңбаша белгісі:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Қолжетімді сөздерді ерекшелеу:",
+    "description": ""
+  }
+}

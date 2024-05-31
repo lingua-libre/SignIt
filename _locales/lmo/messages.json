@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Adree a portà a voltra la lista de tucc i video disponibil in su Lengua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "de {{link|$1|$2}} - Video $3 de $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Questa parolla chì l'è stada nan'mò registrada,<br>ma SignIt a l'è un proget in collaborazzion, te podet contribuì an' ti.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribuiss con la lengua di segni",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definizzionː",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "lmo",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Lombard",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "varda in sul Wikizzionari",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Nanca ona definizzion trovada.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Curiosa",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Cerca intra i $1 segn.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Cerca",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Taca a cercà",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Storia",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "A l'è voeuja",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Impostazzion",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Lengua di segnː",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Cambia la lengua di segn drovada doperada in di video.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Cambia la lengua di video",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Lengua de l'interfaciaː",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Cambia la lengua de l'interfacia de l'utent.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Cambia la lengua de l'interfacia",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Longhezza de la storiaː",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Imposta a 0 per fà via la storia",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Completament nativ con la Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Riproduss a la velocità normal, donca adasi:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Imagin sul test catad foeura:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Marca le parolle disponibil:",
+    "description": ""
+  }
+}

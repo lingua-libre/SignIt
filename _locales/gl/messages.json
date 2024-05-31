@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Buscando a lista de todos os vídeos dispoñibles en Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Multimedia:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "por {{link|$1|$2}} – Vídeo $3 de $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Aínda non se gravou esta palabra,<br>pero SignIt é un proxecto colaborativo e podes contribuír a el.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribuír en lingua de sinais",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definicións:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "gl",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Galego",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "ollar no Galizionario",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Non se atopou a definición.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Navegar",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Buscar entre os $1 sinais.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Procurar",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Comezar a busca",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historial",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Está baleiro",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Axustes",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Lingua de sinais:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Cambiar os vídeos a outra lingua de sinais.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Cambiar a lingua dos vídeos",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Lingua da interface:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Cambiar a lingua da interface de usuario.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Cambiar a lingua da interface",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Lonxitude do historial:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Establecer a 0 desactiva o rexistro do historial",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Integración nativa coa Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Reproducir a velocidade normal e despois a velocidade lenta:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Icona de atallo no texto seleccionado:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Paneis a amosar:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Só texto do dicionario",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Ambos",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Só vídeos asinados",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Destacar as palabras dispoñibles:",
+    "description": ""
+  }
+}

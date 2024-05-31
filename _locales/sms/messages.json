@@ -1,0 +1,62 @@
+{
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Meäʹrtelm:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "sms",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#sääʹmǩiõll",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "čuäʹjet Wikisääʹnnǩeeʹrjest",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Ij käunnʼjam ni õhtt meäʹrtelm.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Ǩiõčč",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Ooʒʒ",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historia",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Asetõõzz",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Sieʹvvemǩiõll:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Vaajted video ǩiõl",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Ââʹnnemõhttõõzz ǩiõll:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Vaajât ââʹnnemõhttõõzz ǩiõl.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Vaajât ââʹnnemõhttõõz kiõl",
+    "description": ""
+  }
+}

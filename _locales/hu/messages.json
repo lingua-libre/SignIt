@@ -1,0 +1,78 @@
+{
+  "si-panel-videos-title": {
+    "message": "Média:",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definíciók:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Angol",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "lásd a Wikiszótárban",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Nincs leírás.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Böngészés",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Keresés indítása",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Előzmények",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Üres",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Beállítások",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Egyéb jelnyelv megadása a videókhoz.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Interfész nyelve:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Felület nyelvének megváltoztatása",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Előzmény terjedelme:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0-ra állítva deaktiválhatod az előzménynaplót",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Natív integráció a Wikipédiával:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Játszd normál sebességen, majd lassan:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Parancsikon a kiválasztott szövegben:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Elérhető szavak kiemelése:",
+    "description": ""
+  }
+}

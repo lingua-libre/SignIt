@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Chargement des vidéos disponibles sur Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Média :",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "par {{link|$1|$2}} – Vidéo $3 sur $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Ce mot n’a pas encore été enregistré<br/> mais SignIt est un projet participatif auquel vous pouvez prendre part.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribuer en langue des signes",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Définitions :",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "fr",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Français",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "voir sur le Wiktionnaire",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Aucune définition n’a été trouvée.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Consulter",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Rechercher parmi $1 signes.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Rechercher",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Lancer la recherche",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historique",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "C’est vide",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Paramètres",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Langue des signes :",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Change la langue des signes utilisée dans les vidéos.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Change la langue des vidéos",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Langue de l’interface :",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Change la langue de l’interface utilisateur.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Change la langue de l’interface",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Nombre de lignes d’historique :",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Mettre à 0 désactive le journal de l’historique",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Intégration native sur Wikipédia :",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Lecture à vitesse normale, puis lente :",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Icône de raccourci sur les sélections de texte :",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Panneaux à afficher:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Dictionaire seul",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Les deux",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Vidéos signées seules",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Mettre en évidence les mots disponibles :",
+    "description": ""
+  }
+}

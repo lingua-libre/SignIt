@@ -1,0 +1,62 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Medien:",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Mat Gebäerdesprooch bäidroen",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definitioun:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "lb",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Keng Definitioun fonnt.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Sichen",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Astellungen",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Zeechesprooch:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Videoen an eng aner Gebäerdesprooch änneren.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Sprooch vun de Videoen änneren",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Sprooch vum Interface:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "D'Sprooch vum Benotzerinterface änneren.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Benotzersprooch änneren",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Béid",
+    "description": ""
+  }
+}

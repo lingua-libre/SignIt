@@ -1,0 +1,54 @@
+{
+  "si-addon-preload": {
+    "message": "Lingua Libre-de bar bolan wideolaryň sanawyny almak.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Mediýa:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "tk",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Kesgitleme tapylmady.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Göz aýla",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Taryh",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Boş",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Sazlamalar",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Interfeýs dili:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Ulanyjy interfeýsiniň dilini üýtgediň.",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Wikipediýa bilen ýerli integrasiýa:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Adaty tizlikde, soňra haýal tizlikde oýnaň:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Elýeterli sözleri belläň:",
+    "description": ""
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Buscando a lista de todos os vídeos disponíveis no Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Mídia:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "por {{link|$1|$2}} – Vídeo $3 de $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Esta palavra ainda não foi gravada,<br /> mas SignIt é um projeto de crowdsourcingpara o qual você pode contribuir.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribuir com a língua de sinais",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definições:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "pt",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Português",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "veja no Wikcionário",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Nenhuma definição encontrada.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Navegar",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Pesquise entre $1 sinais.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Pesquisar",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Começar a busca",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Histórico",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Está vazio",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Configurações",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Linguagem de sinais:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Alterar os vídeos para outra língua de sinais.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Alterar o idioma dos vídeos",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Idioma da interface:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Alterar o idioma da interface do usuário.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Alterar o idioma da interface",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Duração da história:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Defina como 0 para desativar o registro do histórico",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Integração nativa com a Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Jogue em velocidade normal e depois em velocidade lenta:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Ícone de atalho no texto selecionado:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Destaque as palavras disponíveis:",
+    "description": ""
+  }
+}

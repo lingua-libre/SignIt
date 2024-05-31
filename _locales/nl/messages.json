@@ -1,0 +1,130 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Bezig met het ophalen van de lijst van alle video's die beschikbaar zijn op Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "door {{link|$1|$2 }} – Video $3 of $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Dit woord is nog niet opgenomen,<br>maar SignIt is een crowdsourced-project, en u kunt eraan bijdragen.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Bijdragen met gebarentaal",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definities:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "bekijken op WikiWoordenboek",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Geen definitie gevonden.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Bladeren",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Zoeken in $1 gebaren.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Zoeken",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Beginnen met zoeken",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Geschiedenis",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Het is leeg",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Instellingen",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Gebarentaal:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Video's wijzigen naar een andere gebarentaal.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Taal voor video's wijzigen",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Interfacetaal:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Taal van de gebruikersinterface wijzigen.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Interfacetaal wijzigen",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Lengte van de geschiedenis:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Instellen op 0 om de geschiedenis uit te schakelen",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Nauwe integratie met Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Afspelen op normale snelheid, daarna langzaam:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Snelkoppelingspictogram op geselecteerde tekst:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Weer te geven panelen:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Alleen woordenboektekst",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Beide",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Alleen ondertekende video's",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Beschikbare woorden markeren:",
+    "description": ""
+  }
+}

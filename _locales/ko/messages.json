@@ -1,0 +1,134 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre에서 사용 가능한 모든 동영상의 목록을 가져옵니다.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "미디어:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "만든이: {{link|$1|$2}} – 동영상 $3 / $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "이 단어는 아직 녹화되지 않았습니다.<br>SignIt은 크라우드 소싱 프로젝트이므로 직접 기여할 수 있습니다.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "수화로 기여",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "정의:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "ko",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#한국어",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "위키낱말사전에서 보기",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "정의를 찾을 수 없습니다.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "찾아보기",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "수화 $1개 중에 검색합니다.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "검색",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "검색 시작",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "역사",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "비어 있음",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "설정",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "수화:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "동영상을 다른 수화로 변경합니다.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "동영상 언어 변경",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "인터페이스 언어:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "사용자 인터페이스의 언어를 변경합니다.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "인터페이스 언어 변경",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "역사의 길이:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0으로 설정하면 기록 로그가 비활성화됩니다",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "위키백과와의 기본 통합:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "정상 속도로 재생한 다음 느린 속도로 재생:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "선택한 텍스트의 바로 가기 아이콘:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "표시할 패널:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "사전 텍스트만",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "둘 다",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "사용 가능한 단어 강조:",
+    "description": ""
+  }
+}

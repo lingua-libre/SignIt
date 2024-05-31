@@ -1,0 +1,70 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Medya:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "Be {{link|$1|$2}} ra – Video $3 yê $4",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Şınasiye:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Wikiqısebend dı bıvin",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Sınasnayış nëvineya",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Bıweyni",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Cıgeyrê",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Cıgeyrayışi bıserene",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Terix",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Vengo",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Sazi",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Zonê işareti",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Zonê video bıvurnên",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Zıwana rıy:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Verrıyê hacetê zıwani bıvırnê",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Zıwanê verrıy bıvurne",
+    "description": ""
+  }
+}

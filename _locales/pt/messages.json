@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "A obter a lista de todos os vídeos disponíveis em Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Multimédia:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "de {{link|$1|$2}} – Vídeo $3 de $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Esta palavra ainda não foi gravada,<br> mas como SignIt é um projeto de ''crowdsourcing'' pode participar nele.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Contribuir com língua de sinais",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definições:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "pt",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Português",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "ver no Wikcionário",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Não foi encontrada nenhuma definição.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Procurar",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Procurar entre $1 sinais.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Procurar",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Iniciar a pesquisa",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Histórico",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Está vazio",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Definições",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Língua dos sinais:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Alterar a língua de sinais dos vídeos.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Alterar a língua dos vídeos",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Língua da interface:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Alterar a língua da interface do utilizador.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Alterar a língua da interface",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Dimensão do histórico:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Dimensão 0 desativa o registo do histórico",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Integração nativa com a Wikipédia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Reproduzir em velocidade normal e depois em velocidade lenta:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Ícone de atalho sobre o texto selecionado:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Destacar as palavras disponíveis:",
+    "description": ""
+  }
+}
