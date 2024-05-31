@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: cron
+
+# Controls when the workflow will run
+on:
+  # On repository events
+  push:
+    branches: [ "main" ]
+  # pull_request:
+  #  branches: [ "main" ]
+  # Triggers the workflow every 1:30am each day
+  schedule:
+    - cron: "00 1 * * 1"
+  # Manually from Github's Actions tab
+  workflow_dispatch:
+
+permissions: write-all
+#  contents: write
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: ls -1
+        
+      # Runs multi-lines command
+      # Enters credential
+      - name: Configure Git user
+        run: |
+          echo "${GITHUB_ACTOR}"
+          git config --global user.email "hugo.lpz@gmail.com"
+          # "${GITHUB_ACTOR}@users.noreply.github.com"
+          git config --global user.name "${GITHUB_ACTOR}"
+          
+      # Runs the script
+      - name: Runs the script
+        run: |
+          # git update-index --chmod=+x ./_locales/buildLocales.sh
+          bash ./_locales/buildLocales.sh
+          
+      # Commits changes
+      - name: Commit changes
+        run: |
+          # Push changes to Github
+          git add ./_locales/**/*
+          git commit -m "Update _locales"
+          git push origin main
