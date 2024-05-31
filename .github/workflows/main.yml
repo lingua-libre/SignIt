@@ -53,6 +53,6 @@ jobs:
       - name: Commit changes
         run: |
           # Push changes to Github
-          git add ./_locales/**/*
+          git add ./_locales/**
           git commit -m "Update _locales"
           git push origin main
