@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Librede bar bolǵan barlıq videolar dizimi alınbaqta.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{silteme|$1|$2}} tárepinen $4 nıń $3 videosı",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Bul sóz ele jazıp alınbaǵan,<br>biraq SignIt tolıq derekli joybar bolıp, oǵan úles qosıwıńız múmkin.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Belgi tili arqalı úles qosıń",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Túsindirmeler:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "ingl",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Inglis tili",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Wikisózlikten kóriń",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Heshqanday túsindirme tabılmadı.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Sholıw",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 belgilerinen izleń.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Izlew",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Izlewdi baslań",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Tariyxı",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Bul bos",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Sazlawlar",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Belgi tili:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Videolardı basqa belgi tiline ózgertiriń.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Videolardıń tilin ózgertiń",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Interfeys tili:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Paydalanıwshı interfeysi tilin ózgertiriń.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Interfeys tilin ózgertiń",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Tariyxtıń uzınlıǵı:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0 ge ornatılǵan bolsa, tariyx jurnalın óshiredi",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Wikipedia menen jergilikli integraciya:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Ápiwayı tezlikte, keyin áste tezlikte oynań:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Saylanǵan teksttegi jarlıq belgisi:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Kórsetiletuǵın paneller:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Tek sózlik teksti",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Ekewi",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Tek jalǵanǵan videolar",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Ámeldegi sózlerdi ajıratıp kórsetiw:",
+    "description": ""
+  }
+}

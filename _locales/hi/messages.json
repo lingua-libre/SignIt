@@ -1,0 +1,126 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre पर उपलब्ध सभी वीडियों की सूची प्राप्त की जा रही है।",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "मीडिया:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{link|$1|$2}} द्वारा – $4 में से $3 नंबरी वीडियो",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "इस शब्द को अभी तक रिकॉर्ड नहीं किया गया है,<br>मगर SignIt, लोगों द्वारा बनाई गई एक परियोजना है, और आप इसमें योगदान कर सकते हैं।",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "सांकेतिक भाषा पर योगदान करें",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "परिभाषाएँ:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Hindi",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "विकिकोष पर देखें",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "कोई परिभाषा नहीं मिली।",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "खोजें",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 संकेतों में खोजें।",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "खोजें",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "खोज शुरू करें",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "इतिहास",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "यह खाली है",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "सेटिंग्स",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "सांकेतिक भाषा:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "दूसरी सांकेतिक भाषा में वीडियों को बदलें।",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "वीडियो की भाषा बदलें",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "इंटरफ़ेस की भाषा:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "सदस्य इंटरफ़ेस की भाषा बदलें।",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "इंटरफ़ेस की भाषा बदलें",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "इतिहास की लंबाई:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0 पर सेट करने पर इतिहास लॉग अक्षम हो जाता है",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "विकिपीडिया के साथ मूल एकीकरण:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "पहले साधारण गति से, और उसके बाद धीमी गति से देखें:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "चयनित टेक्स्ट पर शॉर्टकट आइकॉन:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "दोनों",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "उपलब्ध शब्दों को हाइलाइट करें:",
+    "description": ""
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Abruf der Liste aller auf Lingua Libre verfügbaren Videos.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Medien:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "von {{link|$1|$2}} – Video $3 von $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Dieses Wort wurde noch nicht aufgenommen,<br>aber SignIt ist ein Crowd-Sourced-Projekt, zu dem du beitragen kannst.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Mit Gebärdensprache beitragen",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definitionen:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "de",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Deutsch",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "siehe auf Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Keine Definition gefunden.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Durchsuchen",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Suche unter $1-Zeichen.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Suchen",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Suche starten",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Verlauf",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Es ist leer",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Einstellungen",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Gebärdensprache:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Videos in eine andere Gebärdensprache ändern.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Sprache der Videos ändern",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Sprache der Benutzeroberfläche:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Die Sprache der Benutzeroberfläche ändern.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Benutzersprache ändern",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Länge des Verlaufsprotokolls:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Mit dem Wert 0 wird das Verlaufsprotokoll deaktiviert.",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Native Integration mit Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Abspielen mit normaler Geschwindigkeit, dann mit langsamer Geschwindigkeit:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Verknüpfungssymbol auf markiertem Text:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Anzuzeigende Bedienfelder:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Nur Wörterbuchtext",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Beide",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Nur Videos mit Gebärdensprache",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Verfügbare Wörter hervorheben:",
+    "description": ""
+  }
+}

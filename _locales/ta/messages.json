@@ -1,0 +1,38 @@
+{
+  "si-popup-browse-label": {
+    "message": "தேடு",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "வரலாறு",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "அமைப்புகள்",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "இடைமுக மொழி:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "பயனர் இடைமுகத்தின் மொழியை மாற்று.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "இடைமுக மொழியை மாற்று",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "அகராதி உரை மட்டும்",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "இரண்டும்",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "ஒப்பமிடப்பட்ட காணொளிகள் மட்டும்",
+    "description": ""
+  }
+}

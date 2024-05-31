@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Mengambil daftar semua video yang tersedia di Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "oleh {{link|$1|$2}} – Video $3 dari $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Kata ini belum direkam,<br>tetapi karena SignIt adalah proyek urun daya, Anda dapat ikut berkontribusi.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Berkontribusi dengan Bahasa Isyarat",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definisi:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "id",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Bahasa_Indonesia",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "lihat di Wikikamus",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Tidak ada definisi yang ditemukan.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Jelajahi",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Carilah dalam $1 bahasa isyarat.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Cari",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Mulai pencarian",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Riwayat",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Tidak ada log.",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Pengaturan",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Bahasa isyarat:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Ubah video ke bahasa isyarat lain.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Ubah bahasa video",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Bahasa antarmuka:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Ubah bahasa antarmuka pengguna.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Ubah bahasa antarmuka",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Panjang riwayat:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Setel ke 0 menonaktifkan log riwayat",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Integrasi natif dengan Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Putar dengan kecepatan normal, lalu dengan kecepatan lambat:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Ikon pintasan pada teks yang dipilih:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Sorot kata-kata yang tersedia:",
+    "description": ""
+  }
+}

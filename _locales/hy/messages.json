@@ -1,0 +1,42 @@
+{
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#անգլերեն",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "տես Վիքիբառարանում",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Սկսեք որոնումը",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Պատմություն",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Դատարկ է",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Կարգավորումներ",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Ժեստերի լեզու.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Փոխել տեսանյութերի լեզուն",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Ինտերֆեյսի լեզու.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Փոխել ինտերֆեյսի լեզուն",
+    "description": ""
+  }
+}

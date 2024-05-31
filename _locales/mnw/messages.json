@@ -1,0 +1,114 @@
+{
+  "si-addon-title": {
+    "message": "လုပ်အကံက်လေန်ဂွါ လဳပရေ",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "သ္ပတံၚ်ကေတ်ဗဳဒဳယဝ်စရၚ်မနွံပ္ဍဲလ္တူလေန်ဂွါ လဳပရေသီုဖအိုတ်။",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "မဳဒဳယာ:",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "ဝေါဟာတဏအ်ဝွံဟွံဂွံစၟတ်သမ္တီရမျာၚ်ဏီ၊ <br>ဆ္ဂးသေတ်နေတ်ဂှ်ဝွံမကၠုၚ်နူတံရိုဟ်ပရဝ်ဂျေတ်ညးဍုၚ်ကွာန်၊ ဇကုကီုလေဝ်ဗီုၚ်ရီုဗၚ်မကၠောန်သ္ပဂွံမာန်။",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "မနွံပံၚ်ကောံနကဵုအရေဝ်သာသာတဲ",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "မပွံက်အဓိပ္ပာဲ:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "mnw",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "# မန်",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "ဗဵုလ္တူဝိက်ရှေန်နရဳ",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "မအရေဝ်မပွံက်အဓိပ္ပာဲလဝ်ဟွံဆဵု။",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "ကိတ်ဍေက်",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "ဂၠာဲရံၚ်နကဵုအကြာမသမ္တီလဝ် $1 ။",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "ဂၠာဲ",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "စဂၠာဲရံၚ်",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "ဝၚ်",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "မသၠးမံၚ်",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "ဖျေဟ်ဒၞာဲ",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "အရေဝ်ဘာသာမသမ္တီလဝ်:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "ပြံၚ်လှာဲဗဳဒဳယဝ်တၞဟ်နကဵုအရေဝ်ဘာသာတဲ။",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "ပြံၚ်လှာဲအရေဝ်ဘာသာဗဳဒဳယဝ်",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "အရေဝ်ဘာသာမုက်လဒဲ:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "မပြံၚ်လှာဲအရေဝ်ဘာသာအိန်တာဖှေန်နကဵုညးမသုၚ်စောဲ။",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "မပြံၚ်လှာဲအရေဝ်ဘာသာအိန်တာဖှေန်",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "ဇမၠိၚ်မဆေၚ်စပ်ကဵုဝၚ်:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "စကၠောန်မဒှ် ၀ တၟာတ်ထောံပရေၚ်ရပ်စပ်မဆေၚ်စပ်ကဵုဝၚ်စၟတ်သမ္တီ",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "ဂကောံပံၚ်စပ်ဒၞာဲဇာတိနူကဵုဝဳကဳပဳဒဳယာ:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "ဝေၚ်ဒရိပ်လအာဗီုဓမ္မတာ၊ တုဲတှ်ေဒရိပ်လအာအိၚ်:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "ဗောတ်",
+    "description": ""
+  }
+}

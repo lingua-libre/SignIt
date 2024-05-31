@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "در حال واکشی لیست همهٔ ویدیوهای موجود در Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "رسانه:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "توسط {{link|$1|$2}} – ویدئو $3 از میان $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "این کلمه هنوز ثبت نشده است،<br>اما SignIt یک پروژهٔ جمعی است، می‌توانید در آن مشارکت کنید.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "با زبان اشاره همکاری کنید",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "تعاریف:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#انگلیسی",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "در ویکی‌واژه ببینید",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "هیچ تعریفی پیدا نشد.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "مرور",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "جستجو در میان علائم $1.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "جستجو",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "آغاز جستجو",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "تاریخچه",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "خالی است",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "تنظیمات",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "زبان اشاره:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "ویدیوها را به زبان اشارهٔ دیگری تغییر دهید.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "تغییر زبان ویدیوها",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "زبان رابط کاربری:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "زبان رابط کاربری را تغییر دهید.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "تغییر زبان رابط کاربری",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "طول تاریخچه:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "تنظیم روی ۰ (صفر)، گزارش سابقه را غیرفعال می‌کند",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "ادغام بومی با ویکی پدیا:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "با سرعت معمولی و سپس با سرعت آهسته پخش شود:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "نماد میانبر روی متن انتخاب‌شده:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "برجسته‌سازی واژه‌های موجود:",
+    "description": ""
+  }
+}

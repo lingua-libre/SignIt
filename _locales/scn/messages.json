@@ -1,0 +1,130 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Carricamentu di l'alencu di tutti li vìdii dispunìbbili supra Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Midia:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "di {{link|$1|$2}} – Vìdiu $3 di $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Sta palora nun è ancora riggistrata,<br>pirò SignIt è nu pruggettu participativu, a cui tu poi cuntribbuiri.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Cuntribbuisci ntâ lingua dî signa",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Difinizzioni:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "scn",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Sicilianu",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "talìa supra lu Wikizziunariu",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Nuḍḍa difinizzioni attruvata.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Sfogghia",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Arricerca ntra $1 signa.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Arricerca",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Accuminza l'arricerca",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Crunuluggìa",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "È vacanti",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Mpustazzioni",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Lingua dî signa:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Cancia la lingua dî signa usata ntî vìdii.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Cancia la lingua dî vìdii",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Lingua dâ ntirfaccia:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Cancia la lingua dâ ntirfaccia utenti.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Cancia la lingua dâ ntirfaccia.",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Lunchizza dâ crunuluggìa:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Mpustari a 0 disattiva lu riggistru dâ crunuluggìa",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Ntigrazzioni nativa cu Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Littura a vilucitati nurmali, appoi a vilucitati lenta:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Cona d'accurzu supra lu testu silizziunatu:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Sulu testu di dizziunariu",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Ntrammi",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Evidenzia li palori dispunìbbili:",
+    "description": ""
+  }
+}

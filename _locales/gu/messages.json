@@ -1,0 +1,34 @@
+{
+  "si-panel-definitions-title": {
+    "message": "વ્યાખ્યાઓ:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "gu",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "વિકિકોશ પર જુઓ",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "કોઈ વ્યાખ્યા મળી નથી.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "શોધ",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "શોધ શરૂ કરો",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "ઇતિહાસ",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "ખાલી છે",
+    "description": ""
+  }
+}

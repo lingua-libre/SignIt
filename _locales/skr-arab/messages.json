@@ -1,0 +1,58 @@
+{
+  "si-panel-videos-title": {
+    "message": "میڈیا",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "تعریفاں:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "skr",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#سرائیکی",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "کوئی تعریف کائنی لبھی۔",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "براؤز",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "ڳولو",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "ڳولݨ شروع کرو",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "تاریخ",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "ایہ خالی ہے",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "ترتیباں",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "وڈیو دی زبان وٹاؤ",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "انٹر فیس زبان",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "ݙون٘ہیں",
+    "description": ""
+  }
+}

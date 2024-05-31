@@ -1,0 +1,122 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Kinukuha ang listahan ng lahat ng mga magagamit na video sa Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Midya:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "ni {{link|$1|$2}} - Video $3 ng $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Hindi pa nare-record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag-ambag rito.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Mag-ambag gamit ang Wikang Nakasenyas",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Mga kahulugan:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#English",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "tingnan sa Ingles na Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Walang nakitang kahulugan.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Mag-browse",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Maghanap sa $1 (na) senyas.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Maghanap",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Maghanap na",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Nakaraan",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Walang laman",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Pagsasaayos",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Wikang nakasenyas:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Palitan ang mga video sa iba pang wikang nakasenyas.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Palitan ang mga wika ng video",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Wika ng interface:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Palitan ang wika ng user interface.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Palitan ang wika ng interface",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Haba ng nakaraan:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Itakda sa 0 para patayin ang log sa nakaraan",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Native na integration sa Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "I-play nang normal muna, tapos mabagal:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Shortcut icon sa napiling teksto:",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "I-highlight ang mga available na salita:",
+    "description": ""
+  }
+}

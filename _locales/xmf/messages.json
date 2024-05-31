@@ -1,0 +1,42 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre-ს ხემიოლუ არძა ვიდეოშ ერკებულს მუკარჩქინანს.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "მედია:",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "ათე ზიტყვა დიო ვენოჭარჷ,<br> მარა SignIt — ქრაუდსორსინგული პროექტი რე დო შეილებჷნა თიშა თქვან თიაშ მიშაღალა!",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "თქვან თიაშ მიშაღალა ჟესტურ ნინაშა",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "გოთანჯუეფი:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#ინგლისური",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "ქძ. ვიქსიკონს",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "გოთანჯუეფქ ვეგორინჷ.",
+    "description": ""
+  }
+}

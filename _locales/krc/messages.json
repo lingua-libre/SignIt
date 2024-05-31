@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre-де болгъан бютеу видеоланы тизмесин келтиреди.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Медиа:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{link|$1|$2}} – Видео $3/$4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Бу сёз алкъын джаздырылмагъанды<br> алай а SignIt краудсорсинг проект болгъаны себебли, кесигизни юлюшюгюзню къошаргъа боллукъсуз.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Къол силкиу тилде кесигизни юлюшюгюзню къошугъуз",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Ачыкълау:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Ингилизча",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Викисёзлюкде къара",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Ачыкълау табылмады.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Къарау",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 белгилени ичинде изле.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Изле",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Излеуню башла",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Тарих",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Бошду",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Джарашдырыўла",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Къол силкиу тил:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Видеоланы башха къол силкиу тилге ауушдуругъуз.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Видеоланы тиллерин ауушдур",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Интерфейсни тили:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Къошулуучуну интерфейсинде тилни алмашдыр.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Интерфейс тилни алмашдыр",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Тарихни узунлугъу:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0 салсагъыз, тарихни журналы активациядан чыгъарыкъды",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Википедия бла натив интеграция:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Нормал терклик бла, сора да акъыртын теркликде ойнат:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Сайланнган текстде къысхаджол белги:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Кёрюнюм ючюн панелле:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Къуру сёзлюк текст",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Экиси да",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Къуру тюб ангылатыулу видеола",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Ушагъыулу сёзлени черт:",
+    "description": ""
+  }
+}

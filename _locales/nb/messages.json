@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Henter lista over alle videoer som er tilgjengelig på Lingua Libre.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "av {{link|$1|$2}} – video $3 av $4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Dette ordet har ikke blitt spilt inn ennå,<br>men SignIt er et dugnadsprosjekt, så du kan spille det inn.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "Bidra med tegnspråk",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Definisjoner:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "no",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Norsk",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "se på Wiktionary",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Ingen definisjon funnet.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Bla gjennom",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Søk blant $1 tegn.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Søk",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Start søket",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Historikk",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Det er tomt",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Innstillinger",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "Tegnspråk:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Endre videoer til et annet tegnspråk.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Endre videospråk",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "Grensesnittspråk:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "Endre språket for brukergrensesnittet.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "Endre grensesnittspråk",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Historikkens lengde:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "Å sette denne til 0 deaktiverer historikkloggen",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Innebygd integrasjon med Wikipedia:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Spill av i normal hastighet, deretter saktere hastighet:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Ikon som vises på merket tekst:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Paneler som skal vises:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Kun ordboktekst",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Begge",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Kun tegnspråkvideoer",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Merk tilgjengelige ord:",
+    "description": ""
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Nkyerɛkyerɛmu ahorow",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Borɔfo",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Hu wɔ Wiktionary do",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Yennhu nkyerɛkyerɛmu biara",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "Hwehwɛ wɔ $1 signs mu.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Hwewɛ",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Hyɛ nhwehwɛmu n'ase",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Abakɔsɛm",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Biribiara nnyi mu",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Ndzɛmba toto bea",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Sesa videos no kasa",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Abakɔsɛm no tsentsen",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Bɔ no dɛ mbrɛ ɔtse n'ara, na san bɔ no nyaa:",
+    "description": ""
+  }
+}

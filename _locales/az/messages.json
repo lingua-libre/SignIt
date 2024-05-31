@@ -1,0 +1,138 @@
+{
+  "si-addon-title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si-addon-preload": {
+    "message": "Lingua Libre-də mövcud olan bütün videoların siyahısı gətirilir.",
+    "description": ""
+  },
+  "si-panel-videos-title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si-panel-videos-gallery-attribution": {
+    "message": "{{link|$1|$2}} – Video $3/$4",
+    "description": ""
+  },
+  "si-panel-videos-empty": {
+    "message": "Bu söz hələ qeydə alınmayıb,<br> lakin SignIt icma əsaslı layihədir, siz ona töhfə verə bilərsiniz.",
+    "description": ""
+  },
+  "si-panel-videos-contribute-label": {
+    "message": "İşarə dili ilə töhfə verin",
+    "description": ""
+  },
+  "si-panel-definitions-title": {
+    "message": "Təriflər:",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-iso": {
+    "message": "az",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-section-id": {
+    "message": "#Azərbaycanca",
+    "description": ""
+  },
+  "si-panel-definitions-wikt-pointer": {
+    "message": "Vikilüğətdə baxın",
+    "description": ""
+  },
+  "si-panel-definitions-empty": {
+    "message": "Heç bir tərif tapılmadı.",
+    "description": ""
+  },
+  "si-popup-browse-title": {
+    "message": "Gözdən keçir",
+    "description": ""
+  },
+  "si-popup-browse-placeholder": {
+    "message": "$1 işarə arasında axtarın.",
+    "description": ""
+  },
+  "si-popup-browse-label": {
+    "message": "Axtar",
+    "description": ""
+  },
+  "si-popup-browse-icon": {
+    "message": "Axtarışa başlayın",
+    "description": ""
+  },
+  "si-popup-history-title": {
+    "message": "Tarixçə",
+    "description": ""
+  },
+  "si-popup-history-empty": {
+    "message": "Boşdur",
+    "description": ""
+  },
+  "si-popup-settings-title": {
+    "message": "Parametrlər",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage": {
+    "message": "İşarə dili:",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-help": {
+    "message": "Videoları başqa işarə dilinə dəyişdirin.",
+    "description": ""
+  },
+  "si-popup-settings-signlanguage-dropdown": {
+    "message": "Videoların dilini dəyişdirin",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage": {
+    "message": "İnterfeys dili:",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-help": {
+    "message": "İstifadəçi interfeysinin dilini dəyişdirin.",
+    "description": ""
+  },
+  "si-popup-settings-uilanguage-dropdown": {
+    "message": "İnterfeys dilini dəyişdirin",
+    "description": ""
+  },
+  "si-popup-settings-history": {
+    "message": "Tarixin uzunluğu:",
+    "description": ""
+  },
+  "si-popup-settings-history-help": {
+    "message": "0-a təyin ediləndə tarixçəni deaktiv edir",
+    "description": ""
+  },
+  "si-popup-settings-wpintegration": {
+    "message": "Vikipediya ilə yerli inteqrasiya:",
+    "description": ""
+  },
+  "si-popup-settings-twospeed": {
+    "message": "Normal sürətlə, sonra yavaş sürətlə oxudun:",
+    "description": ""
+  },
+  "si-popup-settings-hint-icon": {
+    "message": "Seçilmiş mətndə qısayol işarəsi:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels": {
+    "message": "Göstəriləcək panellər:",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-definition": {
+    "message": "Yalnız lüğət mətni",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-both": {
+    "message": "Hər ikisi",
+    "description": ""
+  },
+  "si-popup-settings-choosepanels-video": {
+    "message": "Yalnız işarəli videolar",
+    "description": ""
+  },
+  "si-popup-settings-enlighten": {
+    "message": "Mövcud sözləri vurğulayın:",
+    "description": ""
+  }
+}
