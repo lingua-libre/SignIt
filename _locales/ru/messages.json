@@ -1,137 +1,137 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "Выдаёт список всех видео, доступных на Lingua Libre.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Медиа:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "авторство: {{link|$1|$2}} – видео $3 в $4",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "Это слово еще не записано,<br> но SignIt — это краудсорсинговый проект, и вы можете внести свой вклад!",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "Внесите свой вклад на жестовом языке",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Определения:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "en",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#английский",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "см. в Викисловаре",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Определение не найдено.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Обзор",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "Поиск среди $1 {{PLURAL:$1|жеста|жестов}}",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Искать",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Начать поиск",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "История",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Здесь пусто",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Настройки",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Жестовый язык:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Изменить видео на другой жестовый язык.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Изменить язык в видео",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Язык интерфейса:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Изменить язык в пользовательском интерфейсе.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Изменить язык в интерфейсе",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Длина истории:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "Установите 0, чтобы деактивировать журнал истории",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Нативная интеграция с Википедией:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Воспроизводить на нормальной скорости, а после на замедленной:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Значок быстрого доступа к выделенному тексту:",
     "description": ""
   },
-  "si-popup-settings-choosepanels": {
+  "si_popup_settings_choosepanels": {
     "message": "Панели для отображения:",
     "description": ""
   },
-  "si-popup-settings-choosepanels-definition": {
+  "si_popup_settings_choosepanels_definition": {
     "message": "Только текст словаря",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "Обе",
     "description": ""
   },
-  "si-popup-settings-choosepanels-video": {
+  "si_popup_settings_choosepanels_video": {
     "message": "Только жестовые видео",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Выделить доступные слова:",
     "description": ""
   }

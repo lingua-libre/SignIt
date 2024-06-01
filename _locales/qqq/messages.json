@@ -1,137 +1,137 @@
 {
-  "si-addon-title": {
-    "message": "The add-on name",
+  "si_addon_title": {
+    "message": "The add_on name",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "A placeholder for when the web query for available sign language videos is running. Can take few seconds.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Title of the section displaying the video (or audio).",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
-    "message": "Video attibution at bottom of video gallery.\n\n* $1 - Сommons URL\n* $2 - speaker name\n* $3 and $4 - position of the video within gallery.\n\n'''Example:''' \"by MariaNore - Video 1 of 3\", with MariaNore being the author of the video.\n\nAlso, '''do not''' translate <code>{link|$1|$2}</code>.",
+  "si_panel_videos_gallery_attribution": {
+    "message": "Video attibution at bottom of video gallery.\n\n* $1 _ Сommons URL\n* $2 _ speaker name\n* $3 and $4 _ position of the video within gallery.\n\n'''Example:''' \"by MariaNore _ Video 1 of 3\", with MariaNore being the author of the video.\n\nAlso, '''do not''' translate <code>{link|$1|$2}</code>.",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "Placeholder paragraph when no media is available for this word, encouraging user to contribute a video.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "One liner to direct user to Sign Language video recorder on LinguaLibre. Should stay short, will go into a clickable button element.",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Title of the section displaying Wiktionary's definitions.",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "Default Wiktionary to use on installation, its language wiki code.",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "Within the target wiktionary, the html id anchor of the relevant section from which we extract the definition.",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "A short phrase to point to Wiktionary and it's definition of the written word.",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Placeholder when no defition found.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Title of the search / browse tab.",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "Announce the number ($1) of available videos in the selected sign language.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Search label.",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Search button flyover's message",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Title of the history / search logs' tab.",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Placeholder when the user's search log is clean and empty.",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Title of the settings tab.",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Setting title for the sign language selection among available sign languages.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Hover hint/helper message on the element to change sign language.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Placeholder if no language available (for developers)",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Setting title for the interface language selection among available interface languages.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Hover hint/helper message on the element to change interface language.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Placeholder if no language available (for developers)",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Setting title to change history's length.",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "Hover hint/helper message on how to deactivate history logs",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Setting title to toggle sign language video integration into Wikip|media websites.",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Setting title to toggle video double play, at normal then slow speed.",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Setting title to toggle shortcut icon on selected text.",
     "description": ""
   },
-  "si-popup-settings-choosepanels": {
+  "si_popup_settings_choosepanels": {
     "message": "Setting title to chose which panels are active.",
     "description": ""
   },
-  "si-popup-settings-choosepanels-definition": {
+  "si_popup_settings_choosepanels_definition": {
     "message": "Option button for wiktionary textual definition panel *alone* to be activated",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "Option button for both panels to be activated",
     "description": ""
   },
-  "si-popup-settings-choosepanels-video": {
+  "si_popup_settings_choosepanels_video": {
     "message": "Option button for signed videos panel *alone* to be activated",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Setting title to toggle highlight coloring of available words in currently browsed web page.",
     "description": ""
   }

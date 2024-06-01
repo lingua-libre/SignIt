@@ -1,129 +1,129 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "লিঙ্গুয়া লিব্রে সাইনইট",
     "description": ""
   },
-  "si-addon-preload": {
-    "message": "Lingua Libre-এ উপলব্ধ সমস্ত ভিডিওর তালিকা আনা হচ্ছে।",
+  "si_addon_preload": {
+    "message": "Lingua Libre_এ উপলব্ধ সমস্ত ভিডিওর তালিকা আনা হচ্ছে।",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "মিডিয়া:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "{{link|$1|$2}} দ্বারা – $4 এর মধ্যে $3 নং ভিডিও",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "এই শব্দটি এখনও রেকর্ড করা হয়নি,<br>তবে SignIt একটি ক্রাউড সোর্স প্রকল্প, আপনি এতে অবদান রাখতে পারেন।",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "ইশারা ভাষার মাধ্যমে অবদান রাখুন",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "সংজ্ঞা:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "bn",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#বাংলা",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "উইকিঅভিধানে দেখুন",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "কোনও সংজ্ঞা পাওয়া যায়নি।",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "ব্রাউজ করুন",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "$1টি চিহ্নের মধ্যে খুঁজুন।",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "অনুসন্ধান",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "অনুসন্ধান শুরু করুন",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "ইতিহাস",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "এটি খালি",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "সেটিংস",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "ইশারা ভাষা:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "ভিডিওগুলি অন্য ইশারা ভাষায় পরিবর্তন করুন।",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "ভিডিওর ভাষা পরিবর্তন করুন",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "ইন্টারফেসের ভাষা:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "ব্যবহারকারী ইন্টারফেসের ভাষা পরিবর্তন করুন।",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "ইন্টারফেসের ভাষা পরিবর্তন করুন",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "ইতিহাসের দৈর্ঘ্য:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "0 তে সেট করলে ইতিহাস লগ নিষ্ক্রিয় করবে",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "উইকিপিডিয়ার সাথে নেটিভ ইন্টিগ্রেশন:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "স্বাভাবিক গতিতে চালান, তারপর ধীর গতিতে:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "নির্বাচিত পাঠ্যের শর্টকাট আইকন:",
     "description": ""
   },
-  "si-popup-settings-choosepanels": {
+  "si_popup_settings_choosepanels": {
     "message": "প্রদর্শনের জন্য প্যানেল:",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "উভয়",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "উপলব্ধ শব্দগুলি হাইলাইট করুন:",
     "description": ""
   }

@@ -1,122 +1,122 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "Kinukuha ang listahan ng lahat ng mga magagamit na video sa Lingua Libre.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Midya:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
-    "message": "ni {{link|$1|$2}} - Video $3 ng $4",
+  "si_panel_videos_gallery_attribution": {
+    "message": "ni {{link|$1|$2}} _ Video $3 ng $4",
     "description": ""
   },
-  "si-panel-videos-empty": {
-    "message": "Hindi pa nare-record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag-ambag rito.",
+  "si_panel_videos_empty": {
+    "message": "Hindi pa nare_record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag_ambag rito.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
-    "message": "Mag-ambag gamit ang Wikang Nakasenyas",
+  "si_panel_videos_contribute_label": {
+    "message": "Mag_ambag gamit ang Wikang Nakasenyas",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Mga kahulugan:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "en",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#English",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "tingnan sa Ingles na Wiktionary",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Walang nakitang kahulugan.",
     "description": ""
   },
-  "si-popup-browse-title": {
-    "message": "Mag-browse",
+  "si_popup_browse_title": {
+    "message": "Mag_browse",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "Maghanap sa $1 (na) senyas.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Maghanap",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Maghanap na",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Nakaraan",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Walang laman",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Pagsasaayos",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Wikang nakasenyas:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Palitan ang mga video sa iba pang wikang nakasenyas.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Palitan ang mga wika ng video",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Wika ng interface:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Palitan ang wika ng user interface.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Palitan ang wika ng interface",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Haba ng nakaraan:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "Itakda sa 0 para patayin ang log sa nakaraan",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Native na integration sa Wikipedia:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
-    "message": "I-play nang normal muna, tapos mabagal:",
+  "si_popup_settings_twospeed": {
+    "message": "I_play nang normal muna, tapos mabagal:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Shortcut icon sa napiling teksto:",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
-    "message": "I-highlight ang mga available na salita:",
+  "si_popup_settings_enlighten": {
+    "message": "I_highlight ang mga available na salita:",
     "description": ""
   }
 }

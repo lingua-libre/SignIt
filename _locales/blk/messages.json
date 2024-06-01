@@ -1,101 +1,101 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "လိင်းကွာလီဗာရယ်ကို တဲမ်းသွော့ꩻစူမုဲင်",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "Lingua Libreအကို ကလꩻနွောင်ꩻဒါႏ ထူႏလꩻ ဗီဒီယိုဖုံႏ ကားကအဝ်ႏယိုလိတ်ထွိုင်။",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "မီဒီယာ:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "{{link|$1|$2}}တွမ်ႏ – ဗီဒီယို $3 ယို $4",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "နွို့စွဲးကမ်းငီꩻသွော့ꩻတွမ်ႏဘာႏသာႏငဝ်းငွါစူမုဲင်",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "အဓိပ္ပာယ်ႏဗွောင်နယ်ဆင်ႏ:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "အေင်ႏကလေတ်",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#အေင်ႏကလေတ်",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "ထွားသွော့ꩻ ဝိစ်သိဉ်နရီကို",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "ထိုမ်ႏမော့ꩻတဝ်းအဓိပ္ပာယ်ႏ။",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "ဗရောင်သာ(ထာꩻထွားလွဉ်ꩻ)",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "ထိုမ်ႏသွော့ꩻ$1လုဲင်ꩻဗွꩻအခါႏကို",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "ထိုမ်ႏ",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "ကောႏစတွမ်ထာꩻထိုမ်ႏ",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "ခြောင်ꩻလီꩻ",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "နဝ်ꩻနဝ်ꩻ တခြေင်",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "အွောန်ႏထွော့ဖျင်ဖိုင်ႏ",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "လုဲင်ꩻဗွေ ဘာႏသာႏငဝ်းငွါ:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "ခြုဲင်းသွော့ꩻ ဗီဒီယိုဖိုင်ႏဘာႏသာႏငဝ်းငွါ",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "လောင်ႏလွိုးတန် ဘာႏသာႏငဝ်းငွါ:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "ခြုဲင်းလုဲင်ႏ လောင်ႏလွိုးတန် ဘာႏသာႏငဝ်းငွါ",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "ခြောင်ꩻလီယိုအဆွာꩻညာꩻ",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "ထာꩻခြွဉ်းဗူႏပါတွမ်ႏဝီခီပီးဒီးယား လွူးလင်ꩻတွူး",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "ကလွိုက်ခါꩻဒါႏလိတ်ယာႏကို လွေꩻဗော့ꩻဒွေါင်ႏအုဲင်ကွန်:",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "အွောန်ႏနယ်ဖေႏအွဉ်ရီးသွော့ꩻ ကလꩻနွောင်ꩻဒါႏငဝ်းငွါဖိုင်ႏ:",
     "description": ""
   }
