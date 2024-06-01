@@ -6,4 +6,3 @@ for file in ./i18n/*.json; do      # Loop
   jq 'del(.["@metadata"]) | with_entries(.key |= gsub("-"; "_") | .value |= {"message": .}) | with_entries(.value.description |= "")' "$file" > "_locales/$iso/messages.json"
 done
 echo "Done creating ./_locales/{iso}/messages.json"
-
