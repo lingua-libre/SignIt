@@ -1,137 +1,137 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "אחזור רשימת כל הסרטים הזמינים בלינגווה ליברה.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "מדיה:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "מאת {{link|$1|$2}} – סרט $3 מתוך $4",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "המילה הזאת עוד לא הוקלטה,<br>אבל SignIt הוא מיזם במיקור המונים, אז יש לך הזדמנות לתרום לו.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "תרומה בשפת סימנים",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "הגדרות:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "he",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#אנגלית",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "לראות בוויקימילון",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "לא נמצאה הגדרה.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "עיון",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "חיפוש ב־$1 סימנים.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "חיפוש",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "תחילת החיפוש",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "היסטוריה",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "היומן ריק",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "הגדרות",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "שפת סימנים:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "שינוי סרטים לשפת סימים אחרת.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "שינוי שפת הסרטים",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "שפת ממשק:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "שינוי שפת הממשק.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "שינוי שפת הממשק",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "אורך ההיסטוריה:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "הגדרת 0 מכבה את יומן ההיסטוריה",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "שילוב ישיר עם ויקיפדיה:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "לנגן במהירות רגילה, ואחר־כך לאט:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "סמל קיצור דרך בטקסט מסומן:",
     "description": ""
   },
-  "si-popup-settings-choosepanels": {
+  "si_popup_settings_choosepanels": {
     "message": "לוחות להצגה:",
     "description": ""
   },
-  "si-popup-settings-choosepanels-definition": {
+  "si_popup_settings_choosepanels_definition": {
     "message": "טקסט מילון בלבד",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "שניהם",
     "description": ""
   },
-  "si-popup-settings-choosepanels-video": {
+  "si_popup_settings_choosepanels_video": {
     "message": "סרטונים חתומים בלבד",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "סימון מילים זמינות:",
     "description": ""
   }

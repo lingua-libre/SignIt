@@ -1,53 +1,53 @@
 {
-  "si-addon-preload": {
-    "message": "Lingua Libre-de bar bolan wideolaryň sanawyny almak.",
+  "si_addon_preload": {
+    "message": "Lingua Libre_de bar bolan wideolaryň sanawyny almak.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Mediýa:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "tk",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Kesgitleme tapylmady.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Göz aýla",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Taryh",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Boş",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Sazlamalar",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Interfeýs dili:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Ulanyjy interfeýsiniň dilini üýtgediň.",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Wikipediýa bilen ýerli integrasiýa:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Adaty tizlikde, soňra haýal tizlikde oýnaň:",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Elýeterli sözleri belläň:",
     "description": ""
   }

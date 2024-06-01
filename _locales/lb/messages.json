@@ -1,61 +1,61 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Medien:",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "Mat Gebäerdesprooch bäidroen",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Definitioun:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "lb",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Keng Definitioun fonnt.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Sichen",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Astellungen",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Zeechesprooch:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Videoen an eng aner Gebäerdesprooch änneren.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Sprooch vun de Videoen änneren",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Sprooch vum Interface:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "D'Sprooch vum Benotzerinterface änneren.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Benotzersprooch änneren",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "Béid",
     "description": ""
   }

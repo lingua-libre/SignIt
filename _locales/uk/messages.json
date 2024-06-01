@@ -1,121 +1,121 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "Отримання списку всіх відео, доступних на Lingua Libre.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Медіа:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "від {{link|$1|$2}} – Відео $3 із $4",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "Це слово ще не записано,<br> але SignIt – це проект, створений натовпом, ви можете зробити свій внесок у нього.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "Зробіть внесок Мовою Жестів",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Визначення:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "en",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#Англійська",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "дивіться у Вікісловнику",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Визначення не знайдено.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Переглянути",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "Пошук серед знаків $1.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Пошук",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Почати пошук",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Історія",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Він порожній",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Налаштування",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Мова жестів:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Змініть відео на іншу мову жестів.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Змінити мову відео",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Мова інтерфейсу:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Змініть мову інтерфейсу користувача.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Змінити мову інтерфейсу",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Тривалість історії:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "Якщо встановити значення 0, журнал історії буде деактивовано",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Нативна інтеграція з Вікіпедією:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Грайте на нормальній швидкості, потім на повільній:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Ярлик на виділеному тексті:",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Виділіть доступні слова:",
     "description": ""
   }

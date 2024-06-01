@@ -1,41 +1,41 @@
 {
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#անգլերեն",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "տես Վիքիբառարանում",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Սկսեք որոնումը",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Պատմություն",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Դատարկ է",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Կարգավորումներ",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Ժեստերի լեզու.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Փոխել տեսանյութերի լեզուն",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Ինտերֆեյսի լեզու.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Փոխել ինտերֆեյսի լեզուն",
     "description": ""
   }

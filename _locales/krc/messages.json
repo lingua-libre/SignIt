@@ -1,137 +1,137 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
-    "message": "Lingua Libre-де болгъан бютеу видеоланы тизмесин келтиреди.",
+  "si_addon_preload": {
+    "message": "Lingua Libre_де болгъан бютеу видеоланы тизмесин келтиреди.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Медиа:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "{{link|$1|$2}} – Видео $3/$4",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "Бу сёз алкъын джаздырылмагъанды<br> алай а SignIt краудсорсинг проект болгъаны себебли, кесигизни юлюшюгюзню къошаргъа боллукъсуз.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "Къол силкиу тилде кесигизни юлюшюгюзню къошугъуз",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Ачыкълау:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "en",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#Ингилизча",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "Викисёзлюкде къара",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Ачыкълау табылмады.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Къарау",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "$1 белгилени ичинде изле.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Изле",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Излеуню башла",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Тарих",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Бошду",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Джарашдырыўла",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Къол силкиу тил:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Видеоланы башха къол силкиу тилге ауушдуругъуз.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Видеоланы тиллерин ауушдур",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Интерфейсни тили:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Къошулуучуну интерфейсинде тилни алмашдыр.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Интерфейс тилни алмашдыр",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Тарихни узунлугъу:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "0 салсагъыз, тарихни журналы активациядан чыгъарыкъды",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Википедия бла натив интеграция:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Нормал терклик бла, сора да акъыртын теркликде ойнат:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Сайланнган текстде къысхаджол белги:",
     "description": ""
   },
-  "si-popup-settings-choosepanels": {
+  "si_popup_settings_choosepanels": {
     "message": "Кёрюнюм ючюн панелле:",
     "description": ""
   },
-  "si-popup-settings-choosepanels-definition": {
+  "si_popup_settings_choosepanels_definition": {
     "message": "Къуру сёзлюк текст",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "Экиси да",
     "description": ""
   },
-  "si-popup-settings-choosepanels-video": {
+  "si_popup_settings_choosepanels_video": {
     "message": "Къуру тюб ангылатыулу видеола",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Ушагъыулу сёзлени черт:",
     "description": ""
   }

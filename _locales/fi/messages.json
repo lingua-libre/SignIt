@@ -1,125 +1,125 @@
 {
-  "si-addon-title": {
+  "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si-addon-preload": {
+  "si_addon_preload": {
     "message": "Haetaan luetteloa kaikista Lingua Libressä saatavilla olevista videoista.",
     "description": ""
   },
-  "si-panel-videos-title": {
+  "si_panel_videos_title": {
     "message": "Media:",
     "description": ""
   },
-  "si-panel-videos-gallery-attribution": {
+  "si_panel_videos_gallery_attribution": {
     "message": "tekijä: {{link|$1|$2}} – Video $3 / $4",
     "description": ""
   },
-  "si-panel-videos-empty": {
+  "si_panel_videos_empty": {
     "message": "Tätä sanaa ei ole vielä tallennettu,<br> mutta SignIt on joukkolähdeprojekti, voit osallistua siihen.",
     "description": ""
   },
-  "si-panel-videos-contribute-label": {
+  "si_panel_videos_contribute_label": {
     "message": "Osallistu viittomakielellä",
     "description": ""
   },
-  "si-panel-definitions-title": {
+  "si_panel_definitions_title": {
     "message": "Määritelmät:",
     "description": ""
   },
-  "si-panel-definitions-wikt-iso": {
+  "si_panel_definitions_wikt_iso": {
     "message": "fi",
     "description": ""
   },
-  "si-panel-definitions-wikt-section-id": {
+  "si_panel_definitions_wikt_section_id": {
     "message": "#suomi",
     "description": ""
   },
-  "si-panel-definitions-wikt-pointer": {
+  "si_panel_definitions_wikt_pointer": {
     "message": "katso Wikisanakirjasta",
     "description": ""
   },
-  "si-panel-definitions-empty": {
+  "si_panel_definitions_empty": {
     "message": "Määritelmiä ei löytynyt.",
     "description": ""
   },
-  "si-popup-browse-title": {
+  "si_popup_browse_title": {
     "message": "Selaa",
     "description": ""
   },
-  "si-popup-browse-placeholder": {
+  "si_popup_browse_placeholder": {
     "message": "Hae $1 viittoman joukosta.",
     "description": ""
   },
-  "si-popup-browse-label": {
+  "si_popup_browse_label": {
     "message": "Hae",
     "description": ""
   },
-  "si-popup-browse-icon": {
+  "si_popup_browse_icon": {
     "message": "Aloita haku",
     "description": ""
   },
-  "si-popup-history-title": {
+  "si_popup_history_title": {
     "message": "Historia",
     "description": ""
   },
-  "si-popup-history-empty": {
+  "si_popup_history_empty": {
     "message": "Se on tyhjä",
     "description": ""
   },
-  "si-popup-settings-title": {
+  "si_popup_settings_title": {
     "message": "Asetukset",
     "description": ""
   },
-  "si-popup-settings-signlanguage": {
+  "si_popup_settings_signlanguage": {
     "message": "Viittomakieli:",
     "description": ""
   },
-  "si-popup-settings-signlanguage-help": {
+  "si_popup_settings_signlanguage_help": {
     "message": "Vaihda videot toiselle viittomakielelle.",
     "description": ""
   },
-  "si-popup-settings-signlanguage-dropdown": {
+  "si_popup_settings_signlanguage_dropdown": {
     "message": "Vaihda videoiden kieli",
     "description": ""
   },
-  "si-popup-settings-uilanguage": {
+  "si_popup_settings_uilanguage": {
     "message": "Käyttöliittymän kieli:",
     "description": ""
   },
-  "si-popup-settings-uilanguage-help": {
+  "si_popup_settings_uilanguage_help": {
     "message": "Vaihda käyttäjän käyttöliittymän kieli.",
     "description": ""
   },
-  "si-popup-settings-uilanguage-dropdown": {
+  "si_popup_settings_uilanguage_dropdown": {
     "message": "Vaihda käyttöliittymän kieli",
     "description": ""
   },
-  "si-popup-settings-history": {
+  "si_popup_settings_history": {
     "message": "Historian pituus:",
     "description": ""
   },
-  "si-popup-settings-history-help": {
+  "si_popup_settings_history_help": {
     "message": "Aseta arvoksi 0 poistaaksesi historialokin käytöstä.",
     "description": ""
   },
-  "si-popup-settings-wpintegration": {
+  "si_popup_settings_wpintegration": {
     "message": "Alkuperäinen integrointi Wikipediaan:",
     "description": ""
   },
-  "si-popup-settings-twospeed": {
+  "si_popup_settings_twospeed": {
     "message": "Toista normaalilla nopeudella, sitten hitaalla nopeudella:",
     "description": ""
   },
-  "si-popup-settings-hint-icon": {
+  "si_popup_settings_hint_icon": {
     "message": "Pikakuvake valitussa tekstissä:",
     "description": ""
   },
-  "si-popup-settings-choosepanels-both": {
+  "si_popup_settings_choosepanels_both": {
     "message": "Molemmat",
     "description": ""
   },
-  "si-popup-settings-enlighten": {
+  "si_popup_settings_enlighten": {
     "message": "Korosta käytettävissä olevat sanat:",
     "description": ""
   }
