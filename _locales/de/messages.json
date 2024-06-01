@@ -16,7 +16,7 @@
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Dieses Wort wurde noch nicht aufgenommen,<br>aber SignIt ist ein Crowd_Sourced_Projekt, zu dem du beitragen kannst.",
+    "message": "Dieses Wort wurde noch nicht aufgenommen,<br>aber SignIt ist ein Crowd-Sourced-Projekt, zu dem du beitragen kannst.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
@@ -48,7 +48,7 @@
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "Suche unter $1_Zeichen.",
+    "message": "Suche unter $1-Zeichen.",
     "description": ""
   },
   "si_popup_browse_label": {

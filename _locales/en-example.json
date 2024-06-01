@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Santhosh"
+        ],
+        "last-updated": "2012-09-21",
+        "locale": "en",
+        "message-documentation": "qqq",
+        "AnotherMetadata": "AnotherMedatadataValue"
+    },
+    "si-panels-videos-title": "My English message",
+    "si-panels-definitions-title": "An other message"
+}

@@ -12,15 +12,15 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "ni {{link|$1|$2}} _ Video $3 ng $4",
+    "message": "ni {{link|$1|$2}} - Video $3 ng $4",
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Hindi pa nare_record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag_ambag rito.",
+    "message": "Hindi pa nare-record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag-ambag rito.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "Mag_ambag gamit ang Wikang Nakasenyas",
+    "message": "Mag-ambag gamit ang Wikang Nakasenyas",
     "description": ""
   },
   "si_panel_definitions_title": {
@@ -44,7 +44,7 @@
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Mag_browse",
+    "message": "Mag-browse",
     "description": ""
   },
   "si_popup_browse_placeholder": {
@@ -108,7 +108,7 @@
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "I_play nang normal muna, tapos mabagal:",
+    "message": "I-play nang normal muna, tapos mabagal:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
@@ -116,7 +116,7 @@
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "I_highlight ang mga available na salita:",
+    "message": "I-highlight ang mga available na salita:",
     "description": ""
   }
 }

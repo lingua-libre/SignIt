@@ -4,7 +4,7 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libre_де қолжетімді барлық видео тізімі алынып жатыр.",
+    "message": "Lingua Libre-де қолжетімді барлық видео тізімі алынып жатыр.",
     "description": ""
   },
   "si_panel_videos_title": {
@@ -100,7 +100,7 @@
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "Тарих журналын өшіру үшін 0_ге орнатыңыз",
+    "message": "Тарих журналын өшіру үшін 0-ге орнатыңыз",
     "description": ""
   },
   "si_popup_settings_wpintegration": {

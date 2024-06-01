@@ -4,7 +4,7 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libre_də mövcud olan bütün videoların siyahısı gətirilir.",
+    "message": "Lingua Libre-də mövcud olan bütün videoların siyahısı gətirilir.",
     "description": ""
   },
   "si_panel_videos_title": {
@@ -100,7 +100,7 @@
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "0_a təyin ediləndə tarixçəni deaktiv edir",
+    "message": "0-a təyin ediləndə tarixçəni deaktiv edir",
     "description": ""
   },
   "si_popup_settings_wpintegration": {

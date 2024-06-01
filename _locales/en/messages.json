@@ -1,12 +1,4 @@
 {
-  "extensionName": {
-    "message": "Lingua Libre SignIt",
-    "description": ""
-  },
-  "extensionDescription": {
-    "message": "SignIt translate a selected word into Sign Language videos.",
-    "description": ""
-  },
   "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
