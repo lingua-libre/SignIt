@@ -6,7 +6,7 @@ name: cron
 on:
   # On repository events
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   # pull_request:
   #  branches: [ "main" ]
   # Triggers the workflow every 1:30am each day
