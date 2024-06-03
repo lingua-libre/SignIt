@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Muddyb",
 			"Wangombe",
 			"Yug"
 		]
@@ -34,5 +35,9 @@
 	"si-popup-settings-wpintegration": "Ujumuishaji wa asili na Wikipedia:",
 	"si-popup-settings-twospeed": "Cheza kwa kasi ya kawaida, kisha kwa kasi ndogo:",
 	"si-popup-settings-hint-icon": "Aikoni ya njia ya mkato kwenye maandishi yaliyochaguliwa:",
+	"si-popup-settings-choosepanels": "Paneli za kuonyesha:",
+	"si-popup-settings-choosepanels-definition": "Maandishi ya kamusi pekee",
+	"si-popup-settings-choosepanels-both": "Zote mbili",
+	"si-popup-settings-choosepanels-video": "Video zilizosainiwa pekee",
 	"si-popup-settings-enlighten": "Angazia maneno yanayopatikana:"
 }

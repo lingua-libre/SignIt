@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Abijeet Patro",
+			"AnupamM",
 			"Saurmandal"
 		]
 	},
@@ -34,6 +35,9 @@
 	"si-popup-settings-wpintegration": "विकिपीडिया के साथ मूल एकीकरण:",
 	"si-popup-settings-twospeed": "पहले साधारण गति से, और उसके बाद धीमी गति से देखें:",
 	"si-popup-settings-hint-icon": "चयनित टेक्स्ट पर शॉर्टकट आइकॉन:",
+	"si-popup-settings-choosepanels": "प्रदर्शित करने हेतु पैनल:",
+	"si-popup-settings-choosepanels-definition": "केवल शब्दकोश पाठ्य भाग",
 	"si-popup-settings-choosepanels-both": "दोनों",
+	"si-popup-settings-choosepanels-video": "केवल हस्ताक्षरित वीडियो",
 	"si-popup-settings-enlighten": "उपलब्ध शब्दों को हाइलाइट करें:"
 }

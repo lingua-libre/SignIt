@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Agam Riyandana",
+			"Ardzun",
 			"DARMAS BUDI SANTOSO",
 			"Veracious"
 		]
@@ -35,5 +36,9 @@
 	"si-popup-settings-wpintegration": "Integrasi natif dengan Wikipedia:",
 	"si-popup-settings-twospeed": "Putar dengan kecepatan normal, lalu dengan kecepatan lambat:",
 	"si-popup-settings-hint-icon": "Ikon pintasan pada teks yang dipilih:",
+	"si-popup-settings-choosepanels": "Panel untuk ditampilkan:",
+	"si-popup-settings-choosepanels-definition": "Hanya teks kamus",
+	"si-popup-settings-choosepanels-both": "Keduanya",
+	"si-popup-settings-choosepanels-video": "Hanya video isyarat",
 	"si-popup-settings-enlighten": "Sorot kata-kata yang tersedia:"
 }

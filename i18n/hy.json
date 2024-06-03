@@ -1,18 +1,43 @@
 {
 	"@metadata": {
 		"authors": [
+			"23artashes",
 			"Armenoid",
 			"GeoO"
 		]
 	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Տալիս է Lingua Libre-ում հասանելի բոլոր տեսանյութերի ցուցակը:",
+	"si-panel-videos-title": "Մեդիա․",
+	"si-panel-videos-gallery-attribution": "հեղինակ՝ {{link|$1|$2}} – տեսանյութ $3 $4-ից",
+	"si-panel-videos-empty": "Այս բառը դեռ ձայնագրված չէ,<br> բայց SignIt-ը քրաուդսորսինգային նախագիծ է, և դուք կարող եք ներդնել ձեր ավանդը:",
+	"si-panel-videos-contribute-label": "Ներդրեք ձեր ավանդը ժեստերի լեզվով",
+	"si-panel-definitions-title": "Սահմանումներ․",
+	"si-panel-definitions-wikt-iso": "en",
 	"si-panel-definitions-wikt-section-id": "#անգլերեն",
 	"si-panel-definitions-wikt-pointer": "տես Վիքիբառարանում",
+	"si-panel-definitions-empty": "Սահմանում չի գտնվել:",
+	"si-popup-browse-title": "Դիտում",
+	"si-popup-browse-placeholder": "Որոնում $1 ժեստերի մեջ։",
+	"si-popup-browse-label": "Որոնում",
 	"si-popup-browse-icon": "Սկսեք որոնումը",
 	"si-popup-history-title": "Պատմություն",
 	"si-popup-history-empty": "Դատարկ է",
 	"si-popup-settings-title": "Կարգավորումներ",
 	"si-popup-settings-signlanguage": "Ժեստերի լեզու.",
+	"si-popup-settings-signlanguage-help": "Փոխել տեսանյութերը ժեստերի մեկ այլ լեզվով։",
 	"si-popup-settings-signlanguage-dropdown": "Փոխել տեսանյութերի լեզուն",
 	"si-popup-settings-uilanguage": "Ինտերֆեյսի լեզու.",
-	"si-popup-settings-uilanguage-dropdown": "Փոխել ինտերֆեյսի լեզուն"
+	"si-popup-settings-uilanguage-help": "Փոխել օգտատիրոջ միջերեսի լեզուն։",
+	"si-popup-settings-uilanguage-dropdown": "Փոխել ինտերֆեյսի լեզուն",
+	"si-popup-settings-history": "Պատմության երկարությունը.",
+	"si-popup-settings-history-help": "Պատմության մատյանն ապաակտիվացնելու համար սահմանեք 0",
+	"si-popup-settings-wpintegration": "Վիքիպեդիայի հետ նատիվ ինտեգրում.",
+	"si-popup-settings-twospeed": "Վերարտադրել նորմալ, այնուհետև՝ դանդաղ արագությամբ.",
+	"si-popup-settings-hint-icon": "Ընտրված տեքստի դյուրանցման պատկերակ.",
+	"si-popup-settings-choosepanels": "Ցուցադրվող վահանակներ.",
+	"si-popup-settings-choosepanels-definition": "Միայն բառարանի տեքստը",
+	"si-popup-settings-choosepanels-both": "Երկուսն էլ",
+	"si-popup-settings-choosepanels-video": "Միայն ժեստային տեսանյութեր",
+	"si-popup-settings-enlighten": "Ընդգծել մատչելի բառերը."
 }

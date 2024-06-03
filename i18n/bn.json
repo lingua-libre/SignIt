@@ -35,6 +35,8 @@
 	"si-popup-settings-twospeed": "স্বাভাবিক গতিতে চালান, তারপর ধীর গতিতে:",
 	"si-popup-settings-hint-icon": "নির্বাচিত পাঠ্যের শর্টকাট আইকন:",
 	"si-popup-settings-choosepanels": "প্রদর্শনের জন্য প্যানেল:",
+	"si-popup-settings-choosepanels-definition": "শুধুমাত্র অভিধানের পাঠ্য",
 	"si-popup-settings-choosepanels-both": "উভয়",
+	"si-popup-settings-choosepanels-video": "শুধুমাত্র স্বাক্ষরিত ভিডিও",
 	"si-popup-settings-enlighten": "উপলব্ধ শব্দগুলি হাইলাইট করুন:"
 }

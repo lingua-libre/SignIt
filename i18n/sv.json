@@ -33,5 +33,9 @@
 	"si-popup-settings-wpintegration": "Inbyggd integration med Wikipedia:",
 	"si-popup-settings-twospeed": "Spela i normal hastighet, sedan i låg hastighet:",
 	"si-popup-settings-hint-icon": "Genvägsikon på vald text:",
+	"si-popup-settings-choosepanels": "Paneler att visa:",
+	"si-popup-settings-choosepanels-definition": "Endast ordbokstext",
+	"si-popup-settings-choosepanels-both": "Båda",
+	"si-popup-settings-choosepanels-video": "Endast signerade videor",
 	"si-popup-settings-enlighten": "Markera tillgängliga ord:"
 }

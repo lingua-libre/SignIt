@@ -7,7 +7,7 @@
 			"Yug"
 		]
 	},
-	"si-addon-title": "Lingua Libera SignIt",
+	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Recupero l'elenco di tutti i video disponibili su Lingua Libre.",
 	"si-panel-videos-title": "Media:",
 	"si-panel-videos-gallery-attribution": "di {{link|$1|$2}} - Video $3 di $4",
@@ -16,7 +16,7 @@
 	"si-panel-definitions-title": "Definizioni:",
 	"si-panel-definitions-wikt-iso": "it",
 	"si-panel-definitions-wikt-section-id": "#Italiano",
-	"si-panel-definitions-wikt-pointer": "vedi su Wikizionario",
+	"si-panel-definitions-wikt-pointer": "vedi sul Wikizionario",
 	"si-panel-definitions-empty": "Nessuna definizione trovata.",
 	"si-popup-browse-title": "Esplora",
 	"si-popup-browse-placeholder": "Cerca tra i $1 segni.",
@@ -34,7 +34,11 @@
 	"si-popup-settings-history": "Lunghezza della cronologia:",
 	"si-popup-settings-history-help": "Imposta a 0 per disabilitare la cronologia",
 	"si-popup-settings-wpintegration": "Integrazione nativa con Wikipedia:",
-	"si-popup-settings-twospeed": "Riproduci a velocità normale, quindi a velocità ridotta:",
-	"si-popup-settings-hint-icon": "Icona sul testo selezionato:",
+	"si-popup-settings-twospeed": "Riproduci a velocità normale, poi a velocità ridotta:",
+	"si-popup-settings-hint-icon": "Icona di scorciatoia sul testo selezionato:",
+	"si-popup-settings-choosepanels": "Pannelli da mostrare:",
+	"si-popup-settings-choosepanels-definition": "Solo testo di dizionario",
+	"si-popup-settings-choosepanels-both": "Entrambi",
+	"si-popup-settings-choosepanels-video": "Solo video segnati",
 	"si-popup-settings-enlighten": "Evidenzia le parole disponibili:"
 }

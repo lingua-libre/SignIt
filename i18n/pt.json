@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Yug"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -33,5 +34,9 @@
 	"si-popup-settings-wpintegration": "Integração nativa com a Wikipédia:",
 	"si-popup-settings-twospeed": "Reproduzir em velocidade normal e depois em velocidade lenta:",
 	"si-popup-settings-hint-icon": "Ícone de atalho sobre o texto selecionado:",
+	"si-popup-settings-choosepanels": "Painéis a mostrar:",
+	"si-popup-settings-choosepanels-definition": "Só dicionário",
+	"si-popup-settings-choosepanels-both": "Ambos",
+	"si-popup-settings-choosepanels-video": "Sozinho videos senhas",
 	"si-popup-settings-enlighten": "Destacar as palavras disponíveis:"
 }

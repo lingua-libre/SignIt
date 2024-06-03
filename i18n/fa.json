@@ -34,5 +34,9 @@
 	"si-popup-settings-wpintegration": "ادغام بومی با ویکی پدیا:",
 	"si-popup-settings-twospeed": "با سرعت معمولی و سپس با سرعت آهسته پخش شود:",
 	"si-popup-settings-hint-icon": "نماد میانبر روی متن انتخاب‌شده:",
+	"si-popup-settings-choosepanels": "پنل‌های نمایش:",
+	"si-popup-settings-choosepanels-definition": "فقط متن فرهنگ لغت",
+	"si-popup-settings-choosepanels-both": "هردو",
+	"si-popup-settings-choosepanels-video": "فقط ویدیوهای امضا شده",
 	"si-popup-settings-enlighten": "برجسته‌سازی واژه‌های موجود:"
 }

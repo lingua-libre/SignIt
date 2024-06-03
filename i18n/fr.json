@@ -3,7 +3,8 @@
 		"authors": [
 			"Antoine Lamielle",
 			"Hugo Lopez",
-			"Verdy p"
+			"Verdy p",
+			"Yug"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -33,11 +34,11 @@
 	"si-popup-settings-history": "Nombre de lignes d’historique :",
 	"si-popup-settings-history-help": "Mettre à 0 désactive le journal de l’historique",
 	"si-popup-settings-wpintegration": "Intégration native sur Wikipédia :",
-	"si-popup-settings-twospeed": "Lecture à vitesse normale, puis lente :",
+	"si-popup-settings-twospeed": "Lecture vidéo rapide puis lente :",
 	"si-popup-settings-hint-icon": "Icône de raccourci sur les sélections de texte :",
 	"si-popup-settings-choosepanels": "Panneaux à afficher:",
 	"si-popup-settings-choosepanels-definition": "Dictionaire seul",
 	"si-popup-settings-choosepanels-both": "Les deux",
 	"si-popup-settings-choosepanels-video": "Vidéos signées seules",
-	"si-popup-settings-enlighten": "Mettre en évidence les mots disponibles :"
+	"si-popup-settings-enlighten": "Surligner les mots disponibles :"
 }

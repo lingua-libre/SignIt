@@ -34,5 +34,9 @@
 	"si-popup-settings-wpintegration": "Integración nativa con Wikipedia:",
 	"si-popup-settings-twospeed": "Juega a velocidad normal, luego a velocidad lenta:",
 	"si-popup-settings-hint-icon": "Icono de acceso directo en el texto seleccionado:",
+	"si-popup-settings-choosepanels": "Paneles a mostrar:",
+	"si-popup-settings-choosepanels-definition": "Sólo diccionario",
+	"si-popup-settings-choosepanels-both": "Ambos",
+	"si-popup-settings-choosepanels-video": "Solo videos señas",
 	"si-popup-settings-enlighten": "Destacar las palabras disponibles:"
 }

@@ -33,5 +33,9 @@
 	"si-popup-settings-wpintegration": "Нативна інтеграція з Вікіпедією:",
 	"si-popup-settings-twospeed": "Грайте на нормальній швидкості, потім на повільній:",
 	"si-popup-settings-hint-icon": "Ярлик на виділеному тексті:",
+	"si-popup-settings-choosepanels": "Панелі для відображення:",
+	"si-popup-settings-choosepanels-definition": "Лише словниковий текст",
+	"si-popup-settings-choosepanels-both": "Обидва",
+	"si-popup-settings-choosepanels-video": "Лише підписані відео",
 	"si-popup-settings-enlighten": "Виділіть доступні слова:"
 }

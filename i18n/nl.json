@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Romaine",
 			"Siebrand"
 		]
 	},
@@ -11,6 +12,8 @@
 	"si-panel-videos-empty": "Dit woord is nog niet opgenomen,<br>maar SignIt is een crowdsourced-project, en u kunt eraan bijdragen.",
 	"si-panel-videos-contribute-label": "Bijdragen met gebarentaal",
 	"si-panel-definitions-title": "Definities:",
+	"si-panel-definitions-wikt-iso": "nl",
+	"si-panel-definitions-wikt-section-id": "#Nederlands",
 	"si-panel-definitions-wikt-pointer": "bekijken op WikiWoordenboek",
 	"si-panel-definitions-empty": "Geen definitie gevonden.",
 	"si-popup-browse-title": "Bladeren",

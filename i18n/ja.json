@@ -6,6 +6,7 @@
 			"Omotecho",
 			"Sou0012",
 			"Yug",
+			"春春眠眠",
 			"紅い目の女の子"
 		]
 	},
@@ -38,5 +39,9 @@
 	"si-popup-settings-wpintegration": "ウィキペディアとのネイティブな統合：",
 	"si-popup-settings-twospeed": "通常速度で再生し、次に低速で再生：",
 	"si-popup-settings-hint-icon": "選択したテキストのショートカットアイコン：",
+	"si-popup-settings-choosepanels": "表示するパネル:",
+	"si-popup-settings-choosepanels-definition": "辞書の文章のみ",
+	"si-popup-settings-choosepanels-both": "両方",
+	"si-popup-settings-choosepanels-video": "手話ビデオのみ",
 	"si-popup-settings-enlighten": "使用可能な単語をハイライト表示："
 }
