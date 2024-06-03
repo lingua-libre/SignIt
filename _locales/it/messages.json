@@ -1,6 +1,6 @@
 {
   "si_addon_title": {
-    "message": "Lingua Libera SignIt",
+    "message": "Lingua Libre SignIt",
     "description": ""
   },
   "si_addon_preload": {
@@ -36,7 +36,7 @@
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "vedi su Wikizionario",
+    "message": "vedi sul Wikizionario",
     "description": ""
   },
   "si_panel_definitions_empty": {
@@ -108,11 +108,27 @@
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Riproduci a velocità normale, quindi a velocità ridotta:",
+    "message": "Riproduci a velocità normale, poi a velocità ridotta:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "Icona sul testo selezionato:",
+    "message": "Icona di scorciatoia sul testo selezionato:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Pannelli da mostrare:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Solo testo di dizionario",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Entrambi",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Solo video segnati",
     "description": ""
   },
   "si_popup_settings_enlighten": {

@@ -115,12 +115,20 @@
     "message": "Cona d'accurzu supra lu testu silizziunatu:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Panneḍḍi d’ammustrari:",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_definition": {
     "message": "Sulu testu di dizziunariu",
     "description": ""
   },
   "si_popup_settings_choosepanels_both": {
     "message": "Ntrammi",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Sulu vidiu signati",
     "description": ""
   },
   "si_popup_settings_enlighten": {

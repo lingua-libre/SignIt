@@ -1,138 +1,122 @@
 {
   "si_addon_title": {
-    "message": "Lingua Libre SignIt",
+    "message": "آزاد سائین بولی والا",
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Hämtar listan över alla tillgängliga videor på Lingua Libre.",
+    "message": "ساریاں ویڈیواں لبھیاں جا رہیاں۔",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "Media:",
+    "message": "میڈیا:",
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "av {{link|$1|$2}} – Video $3 av $4",
+    "message": "{{link|$1|$2}} $4 توں ویڈیو $3 بݨائی اے",
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Det här ordet har ännu inte spelats in,<br>men SignIt är ett samarbetsprojekt så du kan bidra med det.",
+    "message": "حالیہ ریکارڈ نہیں لبھیا،<br>پر تسیں ریکارڈ کر سکیو۔",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "Bidra med teckenspråk",
+    "message": "سائین بھاشا ورتو",
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "Definitioner:",
+    "message": "تعریفاں:",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "sv",
+    "message": "pnb",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#Svenska",
+    "message": "#ناں",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "läs på Wiktionary",
+    "message": "وِکی‌لغت تے ویکھو",
     "description": ""
   },
   "si_panel_definitions_empty": {
-    "message": "Ingen definition hittades.",
+    "message": "کوئی تعریف نہیں لبھی۔",
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Bläddra",
+    "message": "لبھو",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "Sök igenom $1 tecken.",
+    "message": "$1 سائیناں وچ کھوجو۔",
     "description": ""
   },
   "si_popup_browse_label": {
-    "message": "Sök",
+    "message": "کھوج",
     "description": ""
   },
   "si_popup_browse_icon": {
-    "message": "Starta sökningen",
+    "message": "کھوج شروع کرو",
     "description": ""
   },
   "si_popup_history_title": {
-    "message": "Historik",
+    "message": "تریخ",
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Den är tom",
+    "message": "ایہہ خالی اے",
     "description": ""
   },
   "si_popup_settings_title": {
-    "message": "Inställningar",
+    "message": "سیٹنگاں",
     "description": ""
   },
   "si_popup_settings_signlanguage": {
-    "message": "Teckenspråk:",
+    "message": "سائین بولی:",
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "Byt videorna till ett annat teckenspråk.",
+    "message": "ہور سائین بولی نوں ویڈیو بدلو۔",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "Byt videospråk",
+    "message": "ویڈیو دی بولی بدلو",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "Gränssnittsspråk:",
+    "message": "انٹرفیس بولی:",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Byt användargränssnittsspråk.",
+    "message": "ورتنوالے دی اینٹرفیس بولی بدلو۔",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
-    "message": "Byt gränssnittsspråk",
+    "message": "انٹرفیس بولی بدلو",
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "Historikens längd:",
+    "message": "تریخ دی میاد:",
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "Sätts detta till 0 inaktiveras historikloggen",
+    "message": "جدوں صفر نوں لگی جاندی تاں تریخ درج چالو کرن اُلٹاۓگا",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
-    "message": "Inbyggd integration med Wikipedia:",
+    "message": "وِکیپیڈیا نال پیدائشی گُندائی:",
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Spela i normal hastighet, sedan i låg hastighet:",
+    "message": "مول رفتار چلاؤ تے بعد وچ ہولی ہولی رفتار چلاؤ:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "Genvägsikon på vald text:",
-    "description": ""
-  },
-  "si_popup_settings_choosepanels": {
-    "message": "Paneler att visa:",
-    "description": ""
-  },
-  "si_popup_settings_choosepanels_definition": {
-    "message": "Endast ordbokstext",
-    "description": ""
-  },
-  "si_popup_settings_choosepanels_both": {
-    "message": "Båda",
-    "description": ""
-  },
-  "si_popup_settings_choosepanels_video": {
-    "message": "Endast signerade videor",
+    "message": "چُݨی لکھت لئی شورٹ‌کٹ چِنھ دی ورتوں:",
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "Markera tillgängliga ord:",
+    "message": "اُپلبدھ لفظ رنگو:",
     "description": ""
   }
 }

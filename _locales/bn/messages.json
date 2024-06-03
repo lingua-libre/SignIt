@@ -119,8 +119,16 @@
     "message": "প্রদর্শনের জন্য প্যানেল:",
     "description": ""
   },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "শুধুমাত্র অভিধানের পাঠ্য",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_both": {
     "message": "উভয়",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "শুধুমাত্র স্বাক্ষরিত ভিডিও",
     "description": ""
   },
   "si_popup_settings_enlighten": {

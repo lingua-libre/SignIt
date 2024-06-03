@@ -1,10 +1,58 @@
 {
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Տալիս է Lingua Libre-ում հասանելի բոլոր տեսանյութերի ցուցակը:",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Մեդիա․",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "հեղինակ՝ {{link|$1|$2}} – տեսանյութ $3 $4-ից",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Այս բառը դեռ ձայնագրված չէ,<br> բայց SignIt-ը քրաուդսորսինգային նախագիծ է, և դուք կարող եք ներդնել ձեր ավանդը:",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Ներդրեք ձեր ավանդը ժեստերի լեզվով",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Սահմանումներ․",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
   "si_panel_definitions_wikt_section_id": {
     "message": "#անգլերեն",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
     "message": "տես Վիքիբառարանում",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Սահմանում չի գտնվել:",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Դիտում",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Որոնում $1 ժեստերի մեջ։",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Որոնում",
     "description": ""
   },
   "si_popup_browse_icon": {
@@ -27,6 +75,10 @@
     "message": "Ժեստերի լեզու.",
     "description": ""
   },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Փոխել տեսանյութերը ժեստերի մեկ այլ լեզվով։",
+    "description": ""
+  },
   "si_popup_settings_signlanguage_dropdown": {
     "message": "Փոխել տեսանյութերի լեզուն",
     "description": ""
@@ -35,8 +87,52 @@
     "message": "Ինտերֆեյսի լեզու.",
     "description": ""
   },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Փոխել օգտատիրոջ միջերեսի լեզուն։",
+    "description": ""
+  },
   "si_popup_settings_uilanguage_dropdown": {
     "message": "Փոխել ինտերֆեյսի լեզուն",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Պատմության երկարությունը.",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Պատմության մատյանն ապաակտիվացնելու համար սահմանեք 0",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Վիքիպեդիայի հետ նատիվ ինտեգրում.",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Վերարտադրել նորմալ, այնուհետև՝ դանդաղ արագությամբ.",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Ընտրված տեքստի դյուրանցման պատկերակ.",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Ցուցադրվող վահանակներ.",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Միայն բառարանի տեքստը",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Երկուսն էլ",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Միայն ժեստային տեսանյութեր",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Ընդգծել մատչելի բառերը.",
     "description": ""
   }
 }

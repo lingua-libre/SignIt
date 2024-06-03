@@ -115,6 +115,22 @@
     "message": "Aikoni ya njia ya mkato kwenye maandishi yaliyochaguliwa:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Paneli za kuonyesha:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Maandishi ya kamusi pekee",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Zote mbili",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Video zilizosainiwa pekee",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Angazia maneno yanayopatikana:",
     "description": ""

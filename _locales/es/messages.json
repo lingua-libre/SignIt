@@ -115,6 +115,22 @@
     "message": "Icono de acceso directo en el texto seleccionado:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Paneles a mostrar:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Sólo diccionario",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Ambos",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Solo videos señas",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Destacar las palabras disponibles:",
     "description": ""

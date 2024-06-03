@@ -27,6 +27,14 @@
     "message": "Definities:",
     "description": ""
   },
+  "si_panel_definitions_wikt_iso": {
+    "message": "nl",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Nederlands",
+    "description": ""
+  },
   "si_panel_definitions_wikt_pointer": {
     "message": "bekijken op WikiWoordenboek",
     "description": ""

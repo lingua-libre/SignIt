@@ -115,6 +115,22 @@
     "message": "選択したテキストのショートカットアイコン：",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "表示するパネル:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "辞書の文章のみ",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "両方",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "手話ビデオのみ",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "使用可能な単語をハイライト表示：",
     "description": ""

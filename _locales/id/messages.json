@@ -115,6 +115,22 @@
     "message": "Ikon pintasan pada teks yang dipilih:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Panel untuk ditampilkan:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Hanya teks kamus",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Keduanya",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Hanya video isyarat",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Sorot kata-kata yang tersedia:",
     "description": ""

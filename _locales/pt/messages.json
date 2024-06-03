@@ -115,6 +115,22 @@
     "message": "Ícone de atalho sobre o texto selecionado:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Painéis a mostrar:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Só dicionário",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Ambos",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Sozinho videos senhas",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Destacar as palavras disponíveis:",
     "description": ""

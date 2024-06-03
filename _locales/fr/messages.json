@@ -108,7 +108,7 @@
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Lecture à vitesse normale, puis lente :",
+    "message": "Lecture vidéo rapide puis lente :",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
@@ -132,7 +132,7 @@
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "Mettre en évidence les mots disponibles :",
+    "message": "Surligner les mots disponibles :",
     "description": ""
   }
 }

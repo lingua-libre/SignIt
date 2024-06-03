@@ -115,8 +115,20 @@
     "message": "चयनित टेक्स्ट पर शॉर्टकट आइकॉन:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "प्रदर्शित करने हेतु पैनल:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "केवल शब्दकोश पाठ्य भाग",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_both": {
     "message": "दोनों",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "केवल हस्ताक्षरित वीडियो",
     "description": ""
   },
   "si_popup_settings_enlighten": {

@@ -115,6 +115,22 @@
     "message": "نماد میانبر روی متن انتخاب‌شده:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "پنل‌های نمایش:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "فقط متن فرهنگ لغت",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "هردو",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "فقط ویدیوهای امضا شده",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "برجسته‌سازی واژه‌های موجود:",
     "description": ""

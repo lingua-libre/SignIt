@@ -115,6 +115,22 @@
     "message": "Ярлик на виділеному тексті:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Панелі для відображення:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Лише словниковий текст",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Обидва",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Лише підписані відео",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Виділіть доступні слова:",
     "description": ""
