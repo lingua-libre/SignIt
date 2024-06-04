@@ -81,8 +81,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		// this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
-		// this.searchWidget.setRecords( _backgroundPage.records );
+		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", Object.keys( _backgroundPage.records ).length ) } );
+		this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon:"search",
 			label: banana.i18n("si-popup-browse-label"),
@@ -90,8 +90,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			title: banana.i18n("si-popup-browse-icon")
 		} );
 		
-		// var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
-		var searchLayout = new OO.ui.ActionFieldLayout( searchButton, {
+		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
 			align: 'top',
 			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
@@ -126,7 +125,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 		// refresh the view each time a search is made
 		searchButton.on( 'click', this.changeView.bind( this ) );
-		// this.searchWidget.lookupMenu.on( 'choose', this.changeView.bind( this ) );
+		this.searchWidget.lookupMenu.on( 'choose', this.changeView.bind( this ) );
 	};
 
 	UI.prototype.changeView = async function (text) {
@@ -137,7 +136,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 	const [_word,_files] = await sendMessageUp("normalizeWordAndReturnFiles",text);
     this.coreContent.refresh(_word, _files);
-    // this.searchWidget.setValue( _word );
+    this.searchWidget.setValue( _word );
     this.coreContent.getContainer().show();
     this.addHistory(_word);
   };
@@ -199,16 +198,16 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		/* Sign Language picker */
 		// Data
 		var items = [];
-		// _signLanguages = _backgroundPage.signLanguages;
-		// console.log("148 signLanguages", _signLanguages )
-		// for (var i=0;i<_signLanguages.length;i++ ) {
-		// 	lang = _signLanguages[i];
-		// 	console.log("151 lang", lang ) // #136
-		// 	items.push( new OO.ui.MenuOptionWidget( {
-		// 		data: lang.wdQid, // qid
-		// 		label: lang.labelNative, // sign language name (en)
-		// 	} ) );
-		// }
+		_signLanguages = _backgroundPage.signLanguages;
+		console.log("148 signLanguages", _signLanguages )
+		for (var i=0;i<_signLanguages.length;i++ ) {
+			lang = _signLanguages[i];
+			console.log("151 lang", lang ) // #136
+			items.push( new OO.ui.MenuOptionWidget( {
+				data: lang.wdQid, // qid
+				label: lang.labelNative, // sign language name (en)
+			} ) );
+		}
 		// Layout
 		signLanguageDropdown = new OO.ui.DropdownWidget( { 
 			label: banana.i18n("si-popup-settings-signlanguage-dropdown"), 
