@@ -479,21 +479,14 @@ async function setState(value) {
 
   async function getSignLanguagesWithVideos() {
     try {
-      const response = await fetch(sparqlEndpoints.lingualibre.url, {
-        method: "POST",
-        body: JSON.stringify({
-          format: "json",
-          query: sparqlSignLanguagesQuery,
-        }),
-      });
-
+      const response = await fetch(`${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(sparqlSignLanguagesQuery)}&format=json`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json(); // Await the parsed JSON response
 
-      const signLanguages = [];
+      let signLanguages = [];
       for (let i = 0; i < data.results.bindings.length; i++) {
         const signLanguageRaw = data.results.bindings[i];
         const signLanguage = {
@@ -515,9 +508,7 @@ async function setState(value) {
 
   // Loading all vidéos of a given sign language. Format:
   // returns format: { word: { filename: url, speaker: name }, ... };
-  async function getAllRecords(signLanguage) {
-    // response = await $.post( sparqlEndpoints.lingualibre.url, { format: 'json', query: sparqlSignVideosQuery.replace( '$(lang)', signLanguage ) } );
-    
+  async function getAllRecords(signLanguage) {    
     // Using Fetch API since service_worker cant access DOM and hence cant use jquery
 
     var i,
@@ -529,13 +520,7 @@ async function setState(value) {
     //   state = "loading";
       state = await setState("loading");
 
-      response = await fetch(sparqlEndpoints.lingualibre.url, {
-        method: "POST",
-        body: JSON.stringify({
-          format: "json",
-          query: sparqlSignVideosQuery.replace("$(lang)", signLanguage),
-        }),
-      });
+      response = await fetch(`${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(sparqlSignVideosQuery.replace('$(lang)', signLanguage))}&format=json`);
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -802,11 +787,11 @@ async function setState(value) {
     await getStoredParam("choosepanels");
 
     let signLanguage = await getStoredParam("signLanguage");
-    // signLanguages = await getSignLanguagesWithVideos();
+    signLanguages = await getSignLanguagesWithVideos();
     let uiLanguage = await getStoredParam("uiLanguage");
     console.log("supportedUiLanguages", supportedUiLanguages);
     uiLanguages = supportedUiLanguages;
-    // records = await getAllRecords( signLanguage );
+    records = await getAllRecords( signLanguage );
 
     // state = "ready";
     state = await setState("ready");
@@ -820,7 +805,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.command === "getBackground") {
     // persisted the state inside chrome.storage.local but will get to that later
     console.log(state);
-    const a = {state,params,uiLanguages};
+    const a = {state,params,uiLanguages,records,signLanguages};
     sendResponse(a);
 	}
 });
