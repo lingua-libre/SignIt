@@ -30,7 +30,13 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// which fetches the messages from sourceMap and replpace them with whatever the key-value pair
 		// for that particular message is
 
-		banana = {i18n: msg => sourceMap.get(resArr[1])[msg]};
+		banana = {i18n: (msg,argument) => {
+			let string = sourceMap.get(resArr[1])[msg];
+			if ((/\$1/).test(string)) {
+				string = string.replace(/\$1/,argument);
+			}
+			return string;
+		}};
 		console.log("banana received: ",banana);
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
