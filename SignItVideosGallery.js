@@ -24,7 +24,7 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 	var banana = {
     i18n: (msg, url, speaker,index, total) => {
 		let string = sourceMap.get(locale)[msg];
-		let Speaker = `<a href=${url}>${speaker} </a>`;
+		let Speaker = `<a href=${url} target="_blank">${speaker} </a>`;
 		let patterns = ["{{link|$1|$2}}", "$3", "$4"];
 		let replacements = [Speaker, index, total];
 
