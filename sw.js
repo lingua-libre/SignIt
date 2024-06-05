@@ -740,7 +740,7 @@ async function setState(value) {
       console.log(
         records[message.text] || records[message.text.toLowerCase()] || []
       );
-      return records[message.text] || records[message.text.toLowerCase()] || [];
+      sendResponse(records[message.text] || records[message.text.toLowerCase()] || []);
     }
     // When message 'signit.i18nCode' is heard, returns banada object
     else if (
