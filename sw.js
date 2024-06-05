@@ -805,7 +805,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.command === "getBackground") {
     // persisted the state inside chrome.storage.local but will get to that later
     console.log(state);
-    const a = {state,params,uiLanguages,records,signLanguages};
-    sendResponse(a);
+    const extensionData = {state,params,uiLanguages,records,signLanguages};
+    sendResponse(extensionData);
 	}
 });
