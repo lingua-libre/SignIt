@@ -130,7 +130,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 
 	UI.prototype.changeView = async function (text) {
     if (typeof text !== "string") {
-      // text = this.searchWidget.getValue();
+      text = this.searchWidget.getValue();
     }
     // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
 
