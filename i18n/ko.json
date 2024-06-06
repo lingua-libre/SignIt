@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Suleiman the Magnificent Television",
-			"Ykhwong"
+			"Ykhwong",
+			"밥풀떼기"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -37,5 +38,6 @@
 	"si-popup-settings-choosepanels": "표시할 패널:",
 	"si-popup-settings-choosepanels-definition": "사전 텍스트만",
 	"si-popup-settings-choosepanels-both": "둘 다",
+	"si-popup-settings-choosepanels-video": "수화 영상만",
 	"si-popup-settings-enlighten": "사용 가능한 단어 강조:"
 }
