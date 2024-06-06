@@ -127,6 +127,10 @@
     "message": "둘 다",
     "description": ""
   },
+  "si_popup_settings_choosepanels_video": {
+    "message": "수화 영상만",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "사용 가능한 단어 강조:",
     "description": ""

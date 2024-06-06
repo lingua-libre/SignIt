@@ -1,10 +1,10 @@
 {
   "si_panel_videos_gallery_attribution": {
-    "message": "{{delete|error from Hindi (hi) translator editing wrong language}}",
+    "message": "{{delete|error from Hindi (hi) translator editing wrong language (magic words to pass syntax check $1 $2 $3 $4). }}",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "{{delete|error from Hindi (hi) translator editing wrong language}}",
+    "message": "{{delete|error from Hindi (hi) translator editing wrong language ($1). }}",
     "description": ""
   }
 }
