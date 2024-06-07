@@ -222,12 +222,15 @@ html, body {
 	margin: auto;
 }
 
-.oo-ui-icon-next {
-	background-image: url( '../icons/arrow-right-solid.svg' );
+.oo-ui-icon-nextBtn , .oo-ui-icon-previousBtn{
+	padding-top: 5px;
+}
+.oo-ui-icon-nextBtn::after {
+	content: "\25B6";
 }
 
-.oo-ui-icon-previous {
-	background-image: url( '../icons/arrow-left-solid.svg' );
+.oo-ui-icon-previousBtn::after {
+	content: "\25C0";
 }
 
 .oo-ui-icon-search {
