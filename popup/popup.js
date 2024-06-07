@@ -41,20 +41,13 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
 		_backgroundPage = await browser.runtime.getBackgroundPage();
+		banana = _backgroundPage.banana;
 	}
 
 	/* *********************************************************** */
 	// Master
 	var UI = function () {
-		// Make internalisations available
-		if (browserType === 'firefox') {
-			// Placeholder while fetching data
-			banana = _backgroundPage.banana;
-			console.log(banana);
-			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
-		}else{
-			document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
-		}
+		document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
 
 		// Setup the main tabs
 		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: banana.i18n('si-popup-browse-title') } );
