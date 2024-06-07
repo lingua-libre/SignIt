@@ -575,21 +575,20 @@ async function setState(value) {
   }
 
   // Check a string with multiple words and return the word whose record is available
-  function getAvailableWord(word) {
-    const wordArray = word.split(" ");
-    // For some reason iterating through array returns undefined so I switched to filter method
+  function getAvailableWord( word ) {
 
-    // for ( let newWord of wordArray ) {
-    // 	if( records.hasOwnProperty(newWord.toLowerCase()) ){
-    // 		return newWord;
-    // 	}
-    // }
-    wordArray.filter((e) => {
-      if (records.hasOwnProperty(e.toLowerCase())) return e;
-    });
-    return wordArray[0];
+    // similar to what we did in background-script.js;
+    
+    const regex = /[!"#$%&()*+,-./:;<=>?@[\\\]^_{|}~]/;
+    const stringWithoutSpecialChars = word.replace(regex,"");
+    const wordArray = stringWithoutSpecialChars.split(" ");
+    console.log(wordArray);
+    for ( let newWord of wordArray ) {
+      if( records.hasOwnProperty(newWord.toLowerCase()) ){
+        return newWord;
+      }
+    }
   }
-
   // Given a word string, check if exist in available records data, if so return data on that word
   // returns format: { filename: url, speaker: name }
   function wordToFiles(word) {
@@ -623,22 +622,17 @@ async function setState(value) {
     try {
       await browser.tabs.sendMessage(tabId, { command: "ping" });
     } catch (error) {
-      // var i,
       var dependencies = browser.runtime.getManifest().content_scripts[0];
       var scripts = dependencies.js;
       var stylesheets = dependencies.css;
 
       // Using the scripting API as per Manifest V3
 
-      // for( i = 0; i < scripts.length; i++ ) {
-      // await browser.scripting.executeScript( tab, { file: scripts[ i ] } );
       await browser.scripting.executeScript({
         target: { tabId },
         files: [...scripts],
       });
-      // }
-      // for( i = 0; i < stylesheets.length; i++ ) {
-      // await browser.tabs.insertCSS( tab, { file: stylesheets[ i ] } );
+
       await browser.scripting.insertCSS({
         target: { tabId },
         files: [...stylesheets],
@@ -647,26 +641,6 @@ async function setState(value) {
     }
   }
 
-// Insecure CSP not supported in manifest V3 , so no need to for the bypass logic
-
-  // Edit the header of all pages on-the-fly to bypass Content-Security-Policy
-  // browser.webRequest.onHeadersReceived.addListener(info => {
-  //     const headers = info.responseHeaders; // original headers
-  //     for (let i=headers.length-1; i>=0; --i) {
-  //         let header = headers[i].name.toLowerCase();
-  //         if (header === "content-security-policy") { // csp header is found
-  //             // modifying media-src; this implies that the directive is already present
-  //             headers[i].value = headers[i].value.replace("media-src", "media-src https://commons.wikimedia.org https://upload.wikimedia.org");
-  //         }
-  //     }
-  //     // return modified headers
-  //     return {responseHeaders: headers};
-  // }, {
-  //     urls: [ "<all_urls>" ], // match all pages
-  //     types: [ "main_frame" ] // to focus only the main document of a tab
-  // }, ["blocking", "responseHeaders"]);
-
-  /* *************************************************************** */
   /* Browser interactions ****************************************** */
   var callModal = async function (msg) {
     // Tab
@@ -740,7 +714,7 @@ async function setState(value) {
       console.log(
         records[message.text] || records[message.text.toLowerCase()] || []
       );
-      return records[message.text] || records[message.text.toLowerCase()] || [];
+      sendResponse(records[message.text] || records[message.text.toLowerCase()] || []);
     }
     // When message 'signit.i18nCode' is heard, returns banada object
     else if (

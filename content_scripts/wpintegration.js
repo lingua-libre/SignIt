@@ -25,7 +25,7 @@ $( async function () {
 	}
 
 	title = $( 'h1.firstHeading' ).text();
-	files = await browser.runtime.sendMessage({ 
+	files = await chrome.runtime.sendMessage({ 
 		command: 'signit.getfiles', 
 		wpTitle: title 
 	});
