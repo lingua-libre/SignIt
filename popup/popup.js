@@ -30,10 +30,13 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// which fetches the messages from sourceMap and replpace them with whatever the key-value pair
 		// for that particular message is
 
-		banana = {i18n: (msg,argument) => {
+		banana = {i18n: (msg,...arg) => {
 			let string = sourceMap.get(resArr[1])[msg];
-			if ((/\$1/).test(string)) {
-				string = string.replace(/\$1/,argument);
+			for (let i = 0; i < arg.length; i++) {
+				let regex = new RegExp(`\\$${i + 1}`); 
+				if (regex.test(string)) {
+				  string = string.replace(regex, arg[i]);
+				}
 			}
 			return string;
 		}};
