@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "par <a href='$1'>$2</a> – Vidéo $3 sur $4",
+    "message": "par <a href='$1' target='_blank'>$2</a> – Vidéo $3 sur $4",
     "description": ""
   },
   "si_panel_videos_empty": {

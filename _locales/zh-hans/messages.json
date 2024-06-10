@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "贡献者 <a href='$1'>$2</a> – 视频 $3 / $4",
+    "message": "贡献者 <a href='$1' target='_blank'>$2</a> – 视频 $3 / $4",
     "description": ""
   },
   "si_panel_videos_empty": {

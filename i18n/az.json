@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre-də mövcud olan bütün videoların siyahısı gətirilir.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "<a href='$1'>$2</a> – Video $3/$4",
+	"si-panel-videos-gallery-attribution": "<a href='$1' target='_blank'>$2</a> – Video $3/$4",
 	"si-panel-videos-empty": "Bu söz hələ qeydə alınmayıb,<br> lakin SignIt icma əsaslı layihədir, siz ona töhfə verə bilərsiniz.",
 	"si-panel-videos-contribute-label": "İşarə dili ilə töhfə verin",
 	"si-panel-definitions-title": "Təriflər:",
