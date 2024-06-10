@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "در حال واکشی لیست همهٔ ویدیوهای موجود در Lingua Libre.",
 	"si-panel-videos-title": "رسانه:",
-	"si-panel-videos-gallery-attribution": "توسط {{link|$1|$2}} – ویدئو $3 از میان $4",
+	"si-panel-videos-gallery-attribution": "توسط <a href='$1'>$2</a> – ویدئو $3 از میان $4",
 	"si-panel-videos-empty": "این کلمه هنوز ثبت نشده است،<br>اما SignIt یک پروژهٔ جمعی است، می‌توانید در آن مشارکت کنید.",
 	"si-panel-videos-contribute-label": "با زبان اشاره همکاری کنید",
 	"si-panel-definitions-title": "تعاریف:",

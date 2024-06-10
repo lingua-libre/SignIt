@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre-де қолжетімді барлық видео тізімі алынып жатыр.",
 	"si-panel-videos-title": "Медиа:",
-	"si-panel-videos-gallery-attribution": "ауторы: {{link|$1|$2}} — $3/$4 видео",
+	"si-panel-videos-gallery-attribution": "ауторы: <a href='$1'>$2</a> — $3/$4 видео",
 	"si-panel-videos-empty": "Бұл сөз әлі жазылмаған,<br>бірақ SignIt краудсорсиң жобасы болғандықтан, сіз оған үлес қоса аласыз.",
 	"si-panel-videos-contribute-label": "Ым тілінмен үлес қосу",
 	"si-panel-definitions-title": "Мағыналары:",

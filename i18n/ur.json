@@ -7,7 +7,7 @@
 	"si-addon-title": "آزاد سائین بولی والا",
 	"si-addon-preload": "ساریاں ویڈیواں لبھیاں جا رہیاں۔",
 	"si-panel-videos-title": "میڈیا:",
-	"si-panel-videos-gallery-attribution": "{{link|$1|$2}} $4 توں ویڈیو $3 بݨائی اے",
+	"si-panel-videos-gallery-attribution": "<a href='$1'>$2</a> $4 توں ویڈیو $3 بݨائی اے",
 	"si-panel-videos-empty": "حالیہ ریکارڈ نہیں لبھیا،<br>پر تسیں ریکارڈ کر سکیو۔",
 	"si-panel-videos-contribute-label": "سائین بھاشا ورتو",
 	"si-panel-definitions-title": "تعریفاں:",

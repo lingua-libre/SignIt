@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre тӀехь йолу йерриге видео могӀам гойту.",
 	"si-panel-videos-title": "Медиа:",
-	"si-panel-videos-gallery-attribution": "авторалла: {{link|$1|$2}} – $3 видео $4 чохь",
+	"si-panel-videos-gallery-attribution": "авторалла: <a href='$1'>$2</a> – $3 видео $4 чохь",
 	"si-panel-videos-empty": "И дош хӀинца а дӀайаздина дац,<br> делахь SignIt — краудсорсинган проект йу, цундела ахьа къахьега мега!",
 	"si-panel-definitions-title": "Билгалдалар:",
 	"si-panel-definitions-wikt-iso": "en",

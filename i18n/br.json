@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "O kargañ ar videoioù da gaout war Ligua Libre.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "gant {{link|$1|$2}} – $3 eus $4 video",
+	"si-panel-videos-gallery-attribution": "gant <a href='$1'>$2</a> – $3 eus $4 video",
 	"si-panel-videos-empty": "N'eo bet bet enrollet ar ger-se c'hoazh,<br>SignIt zo ur raktres kenlabourat avat ha gallout 'rit degas ho lod ivez.",
 	"si-panel-videos-contribute-label": "Kendeurel gant yezh ar sinoù",
 	"si-panel-definitions-title": "Termenadurioù:",
