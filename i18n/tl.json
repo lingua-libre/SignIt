@@ -33,5 +33,9 @@
 	"si-popup-settings-wpintegration": "Native na integration sa Wikipedia:",
 	"si-popup-settings-twospeed": "I-play nang normal muna, tapos mabagal:",
 	"si-popup-settings-hint-icon": "Shortcut icon sa napiling teksto:",
+	"si-popup-settings-choosepanels": "Mga panel na ipapakita:",
+	"si-popup-settings-choosepanels-definition": "Teksto ng diksiyonaryo lang",
+	"si-popup-settings-choosepanels-both": "Pareho",
+	"si-popup-settings-choosepanels-video": "Mga video naka-sign lang",
 	"si-popup-settings-enlighten": "I-highlight ang mga available na salita:"
 }
