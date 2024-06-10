@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "авторалла: <a href='$1'>$2</a> – $3 видео $4 чохь",
+    "message": "авторалла: <a href='$1' target='_blank'>$2</a> – $3 видео $4 чохь",
     "description": ""
   },
   "si_panel_videos_empty": {

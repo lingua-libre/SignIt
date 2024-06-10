@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "<a href='$1'>$2</a> দ্বারা – $4 এর মধ্যে $3 নং ভিডিও",
+    "message": "<a href='$1' target='_blank'>$2</a> দ্বারা – $4 এর মধ্যে $3 নং ভিডিও",
     "description": ""
   },
   "si_panel_videos_empty": {

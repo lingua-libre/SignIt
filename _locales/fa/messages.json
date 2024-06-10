@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "توسط <a href='$1'>$2</a> – ویدئو $3 از میان $4",
+    "message": "توسط <a href='$1' target='_blank'>$2</a> – ویدئو $3 از میان $4",
     "description": ""
   },
   "si_panel_videos_empty": {
