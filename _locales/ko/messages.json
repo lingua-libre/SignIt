@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "만든이: <a href='$1'>$2</a> – 동영상 $3 / $4",
+    "message": "만든이: {{link|$1|$2}} – 동영상 $3 / $4",
     "description": ""
   },
   "si_panel_videos_empty": {

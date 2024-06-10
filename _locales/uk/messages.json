@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "від <a href='$1'>$2</a> – Відео $3 із $4",
+    "message": "від {{link|$1|$2}} – Відео $3 із $4",
     "description": ""
   },
   "si_panel_videos_empty": {

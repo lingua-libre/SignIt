@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "貢獻者：<a href='$1'>$2</a> – 影片$3/$4",
+    "message": "貢獻者：{{link|$1|$2}} – 影片$3/$4",
     "description": ""
   },
   "si_panel_videos_empty": {

@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "<a href='$1'>$2</a>တွမ်ႏ – ဗီဒီယို $3 ယို $4",
+    "message": "{{link|$1|$2}}တွမ်ႏ – ဗီဒီယို $3 ယို $4",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
