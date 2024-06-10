@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre에서 사용 가능한 모든 동영상의 목록을 가져옵니다.",
 	"si-panel-videos-title": "미디어:",
-	"si-panel-videos-gallery-attribution": "만든이: {{link|$1|$2}} – 동영상 $3 / $4",
+	"si-panel-videos-gallery-attribution": "만든이: <a href='$1'>$2</a> – 동영상 $3 / $4",
 	"si-panel-videos-empty": "이 단어는 아직 녹화되지 않았습니다.<br>SignIt은 크라우드 소싱 프로젝트이므로 직접 기여할 수 있습니다.",
 	"si-panel-videos-contribute-label": "수화로 기여",
 	"si-panel-definitions-title": "정의:",

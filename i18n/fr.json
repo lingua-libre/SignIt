@@ -10,7 +10,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Chargement des vidéos disponibles sur Lingua Libre.",
 	"si-panel-videos-title": "Média :",
-	"si-panel-videos-gallery-attribution": "par {{link|$1|$2}} – Vidéo $3 sur $4",
+	"si-panel-videos-gallery-attribution": "par <a href='$1'>$2</a> – Vidéo $3 sur $4",
 	"si-panel-videos-empty": "Ce mot n’a pas encore été enregistré<br/> mais SignIt est un projet participatif auquel vous pouvez prendre part.",
 	"si-panel-videos-contribute-label": "Contribuer en langue des signes",
 	"si-panel-definitions-title": "Définitions :",

@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Hämtar listan över alla tillgängliga videor på Lingua Libre.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "av {{link|$1|$2}} – Video $3 av $4",
+	"si-panel-videos-gallery-attribution": "av <a href='$1'>$2</a> – Video $3 av $4",
 	"si-panel-videos-empty": "Det här ordet har ännu inte spelats in,<br>men SignIt är ett samarbetsprojekt så du kan bidra med det.",
 	"si-panel-videos-contribute-label": "Bidra med teckenspråk",
 	"si-panel-definitions-title": "Definitioner:",

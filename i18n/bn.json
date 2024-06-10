@@ -8,7 +8,7 @@
 	"si-addon-title": "লিঙ্গুয়া লিব্রে সাইনইট",
 	"si-addon-preload": "Lingua Libre-এ উপলব্ধ সমস্ত ভিডিওর তালিকা আনা হচ্ছে।",
 	"si-panel-videos-title": "মিডিয়া:",
-	"si-panel-videos-gallery-attribution": "{{link|$1|$2}} দ্বারা – $4 এর মধ্যে $3 নং ভিডিও",
+	"si-panel-videos-gallery-attribution": "<a href='$1'>$2</a> দ্বারা – $4 এর মধ্যে $3 নং ভিডিও",
 	"si-panel-videos-empty": "এই শব্দটি এখনও রেকর্ড করা হয়নি,<br>তবে SignIt একটি ক্রাউড সোর্স প্রকল্প, আপনি এতে অবদান রাখতে পারেন।",
 	"si-panel-videos-contribute-label": "ইশারা ভাষার মাধ্যমে অবদান রাখুন",
 	"si-panel-definitions-title": "সংজ্ঞা:",

@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "հեղինակ՝ {{link|$1|$2}} – տեսանյութ $3 $4-ից",
+    "message": "հեղինակ՝ <a href='$1'>$2</a> – տեսանյութ $3 $4-ից",
     "description": ""
   },
   "si_panel_videos_empty": {

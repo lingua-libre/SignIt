@@ -9,7 +9,7 @@
 	"si-addon-preload": "Fetching the list of all videos available on Lingua Libre.",
 
 	"si-panel-videos-title":"Media:",
-	"si-panel-videos-gallery-attribution": "by {{link|$1|$2}} – Video $3 of $4",
+	"si-panel-videos-gallery-attribution": "by <a href='$1'>$2</a> – Video $3 of $4",
 	"si-panel-videos-empty":"This word hasn't been recorded yet,<br>but SignIt is crowd sourced project, you can contribute to it.",
 	"si-panel-videos-contribute-label":"Contribute with Sign Language",
 

@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Carricamentu di l'alencu di tutti li vìdii dispunìbbili supra Lingua Libre.",
 	"si-panel-videos-title": "Midia:",
-	"si-panel-videos-gallery-attribution": "di {{link|$1|$2}} – Vìdiu $3 di $4",
+	"si-panel-videos-gallery-attribution": "di <a href='$1'>$2</a> – Vìdiu $3 di $4",
 	"si-panel-videos-empty": "Sta palora nun è ancora riggistrata,<br>pirò SignIt è nu pruggettu participativu, a cui tu poi cuntribbuiri.",
 	"si-panel-videos-contribute-label": "Cuntribbuisci ntâ lingua dî signa",
 	"si-panel-definitions-title": "Difinizzioni:",

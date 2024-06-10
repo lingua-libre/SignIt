@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "{{link|$1|$2}} द्वारा – $4 में से $3 नंबरी वीडियो",
+    "message": "<a href='$1'>$2</a> द्वारा – $4 में से $3 नंबरी वीडियो",
     "description": ""
   },
   "si_panel_videos_empty": {

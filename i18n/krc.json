@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre-де болгъан бютеу видеоланы тизмесин келтиреди.",
 	"si-panel-videos-title": "Медиа:",
-	"si-panel-videos-gallery-attribution": "{{link|$1|$2}} – Видео $3/$4",
+	"si-panel-videos-gallery-attribution": "<a href='$1'>$2</a> – Видео $3/$4",
 	"si-panel-videos-empty": "Бу сёз алкъын джаздырылмагъанды<br> алай а SignIt краудсорсинг проект болгъаны себебли, кесигизни юлюшюгюзню къошаргъа боллукъсуз.",
 	"si-panel-videos-contribute-label": "Къол силкиу тилде кесигизни юлюшюгюзню къошугъуз",
 	"si-panel-definitions-title": "Ачыкълау:",
