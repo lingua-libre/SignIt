@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "di {{link|$1|$2}} – Vìdiu $3 di $4",
+    "message": "di <a href='$1'>$2</a> – Vìdiu $3 di $4",
     "description": ""
   },
   "si_panel_videos_empty": {

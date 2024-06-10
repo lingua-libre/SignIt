@@ -1,4 +1,12 @@
 {
+  "extensionName": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "extensionDescription": {
+    "message": "SignIt translate a selected word into Sign Language videos.",
+    "description": ""
+  },
   "si_addon_title": {
     "message": "Lingua Libre SignIt",
     "description": ""
@@ -12,7 +20,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "by {{link|$1|$2}} – Video $3 of $4",
+    "message": "by <a href='$1'>$2</a> – Video $3 of $4",
     "description": ""
   },
   "si_panel_videos_empty": {
