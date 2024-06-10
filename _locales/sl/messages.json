@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "avtor <a href='$1'>$2</a> – video $3 od $4",
+    "message": "avtor {{link|$1|$2}} – video $3 od $4",
     "description": ""
   },
   "si_panel_videos_empty": {

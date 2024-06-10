@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "ni <a href='$1'>$2</a> - Video $3 ng $4",
+    "message": "ni {{link|$1|$2}} - Video $3 ng $4",
     "description": ""
   },
   "si_panel_videos_empty": {

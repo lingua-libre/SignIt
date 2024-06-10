@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "מאת <a href='$1'>$2</a> – סרט $3 מתוך $4",
+    "message": "מאת {{link|$1|$2}} – סרט $3 מתוך $4",
     "description": ""
   },
   "si_panel_videos_empty": {

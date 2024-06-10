@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "<a href='$1'>$2</a>に帰属  – 動画 $4件中の$3件目",
+    "message": "{{link|$1|$2}}に帰属  – 動画 $4件中の$3件目",
     "description": ""
   },
   "si_panel_videos_empty": {
