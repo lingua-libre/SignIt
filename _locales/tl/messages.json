@@ -115,6 +115,22 @@
     "message": "Shortcut icon sa napiling teksto:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Mga panel na ipapakita:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Teksto ng diksiyonaryo lang",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Pareho",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Mga video naka-sign lang",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "I-highlight ang mga available na salita:",
     "description": ""

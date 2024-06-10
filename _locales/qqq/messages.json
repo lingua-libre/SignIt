@@ -120,15 +120,15 @@
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {
-    "message": "Option button for wiktionary textual definition panel *alone* to be activated",
+    "message": "Option button for wiktionary textual definition panel *alone* to be activated. Please keep message short.",
     "description": ""
   },
   "si_popup_settings_choosepanels_both": {
-    "message": "Option button for both panels to be activated",
+    "message": "Option button for both panels to be activated. Please keep message short.",
     "description": ""
   },
   "si_popup_settings_choosepanels_video": {
-    "message": "Option button for signed videos panel *alone* to be activated",
+    "message": "Option button for signed videos panel *alone* to be activated. Please keep message short.",
     "description": ""
   },
   "si_popup_settings_enlighten": {
