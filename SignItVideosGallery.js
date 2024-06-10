@@ -52,7 +52,7 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 		this.$videos.push( $( `
 			<div style="display: none;">
 				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></video>
-				${banana.i18n("si-panel-videos-gallery-attribution", url, speaker, i+1, total)}
+				${browser.i18n.getMessage("si_panel_videos_gallery_attribution",[ url, speaker, i+1, total])}
 			</div>
 		` ) );
 

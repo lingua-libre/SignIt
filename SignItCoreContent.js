@@ -3,6 +3,8 @@ var SignItCoreContent = function (locale,mapi18n) {
   banana = { i18n: (msg) => sourceMap.get(locale)[msg] };
   console.log("Passed trough ! :", locale);
   console.log("SignItCoreContent.js",banana );
+  // let hlwa = browser.i18n.getMessage("si-panel-videos-title"); 
+  // console.log("hlwa = ",hlwa); 
   this.$container = $(`
 		<div class="signit-modal-container">
 			<h1></h1>
@@ -10,8 +12,8 @@ var SignItCoreContent = function (locale,mapi18n) {
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
             <h2>
-            ${ banana.i18n("si-panel-videos-title") }</h2>
-            ${ banana.i18n("si-panel-videos-empty") }<br><br>
+            ${ browser.i18n.getMessage("si_panel_videos_title") }</h2>
+            ${ browser.i18n.getMessage("si_panel_videos_empty") }<br><br>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
@@ -19,11 +21,11 @@ var SignItCoreContent = function (locale,mapi18n) {
         <div class="signit-panel-definitions">
           <div class="signit-panel-definitions signit-definitions">
             <h2>
-            ${ banana.i18n("si-panel-definitions-title") }</h2>
+            ${ browser.i18n.getMessage("si_panel_definitions_title") }</h2>
             <div class="signit-definitions-text"></div>
             <div class="signit-definitions-source">
-              <a href="https://${ banana.i18n("si-panel-definitions-wikt-iso") }.wiktionary.org">
-          ${ banana.i18n("si-panel-definitions-wikt-pointer") }</a>
+              <a href="https://${ browser.i18n.getMessage("si_panel_definitions_wikt_iso") }.wiktionary.org">
+          ${ browser.i18n.getMessage("si_panel_definitions_wikt_pointer") }</a>
             </div>
           </div>
           <div class="signit-panel-definitions signit-loading">
@@ -32,7 +34,7 @@ var SignItCoreContent = function (locale,mapi18n) {
             )}" width="40" height="40">
           </div>
           <div class="signit-panel-definitions signit-error">
-          ${ banana.i18n("si-panel-definitions-empty") }</div>
+          ${ browser.i18n.getMessage("si_panel_definitions_empty") }</div>
         </div>
 			</div>
 		</div>
@@ -41,7 +43,7 @@ var SignItCoreContent = function (locale,mapi18n) {
     // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
-      label: banana.i18n("si-panel-videos-contribute-label") ,
+      label: browser.i18n.getMessage("si_panel_videos_contribute_label") ,
       href: "https://lingualibre.org/wiki/Special:RecordWizard",
     };
     this.contributeButton = new OO.ui.ButtonWidget(optionsContribute);
