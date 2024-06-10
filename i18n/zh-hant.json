@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "取得在 Lingua Libre 上的所有可用影片清單。",
 	"si-panel-videos-title": "媒體：",
-	"si-panel-videos-gallery-attribution": "貢獻者：<a href='$1'>$2</a> – 影片$3/$4",
+	"si-panel-videos-gallery-attribution": "貢獻者：<a href='$1' target='_blank'>$2</a> – 影片$3/$4",
 	"si-panel-videos-empty": "SignIt 是個群眾外包專案，<br>因此目前雖然尚無該字詞的影片，您可以參與其中來協助完成。",
 	"si-panel-videos-contribute-label": "以手語貢獻",
 	"si-panel-definitions-title": "定義：",

@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "אחזור רשימת כל הסרטים הזמינים בלינגווה ליברה.",
 	"si-panel-videos-title": "מדיה:",
-	"si-panel-videos-gallery-attribution": "מאת <a href='$1'>$2</a> – סרט $3 מתוך $4",
+	"si-panel-videos-gallery-attribution": "מאת <a href='$1' target='_blank'>$2</a> – סרט $3 מתוך $4",
 	"si-panel-videos-empty": "המילה הזאת עוד לא הוקלטה,<br>אבל SignIt הוא מיזם במיקור המונים, אז יש לך הזדמנות לתרום לו.",
 	"si-panel-videos-contribute-label": "תרומה בשפת סימנים",
 	"si-panel-definitions-title": "הגדרות:",
