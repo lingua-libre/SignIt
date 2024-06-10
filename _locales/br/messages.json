@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "gant {{link|$1|$2}} – $3 eus $4 video",
+    "message": "gant <a href='$1'>$2</a> – $3 eus $4 video",
     "description": ""
   },
   "si_panel_videos_empty": {
