@@ -1,9 +1,9 @@
 {
 	"manifest_version": 3,
-	"name": "Lingua Libre SignIt",
+	"name": "__MSG_extensionName__",	
 	"version": "1.0.22",
 	"author": "Antoine '0x010C' Lamielle, Hugo Lopez",
-	"description": "SignIt translate a selected word into Sign Language videos.",
+	"description": "__MSG_extensionDescription__",
 	"homepage_url": "https://lingualibre.org",
 	"icons": {
 	  "32": "icons/Lingualibre_SignIt-logo-no-text-square-32.png",
