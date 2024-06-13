@@ -422,11 +422,10 @@ else if (message.command === "storeParam") {
 		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
 	}
 	 // When message 'signit.i18nCode' is heard, returns banada object
-	else if ( message.command === 'signit.getfilesb' ) {
-		console.log('bg>signit.getfilesB')
-		// var locale = await getStoredParam( 'uiLanguage' )
-		// loadI18nLocalization(locale);
-		return banana;
+	 else if (message.command === 'bananai18n') {
+		let [msg,placeholderValue] = message.arg;
+		const i18nMessage = banana.i18n(msg,placeholderValue);
+		return i18nMessage;
 	}
 	
 	// Start modal
