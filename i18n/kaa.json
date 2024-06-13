@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajiniyaz Nurniyazov",
 			"Inabat Allanova"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Librede bar bolǵan barlıq videolar dizimi alınbaqta.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "{{silteme|$1|$2}} tárepinen $4 nıń $3 videosı",
+	"si-panel-videos-gallery-attribution": "<a href='$1'>$2</a> paydalanıwshınıń $4 danadan $3-videosı",
 	"si-panel-videos-empty": "Bul sóz ele jazıp alınbaǵan,<br>biraq SignIt tolıq derekli joybar bolıp, oǵan úles qosıwıńız múmkin.",
 	"si-panel-videos-contribute-label": "Belgi tili arqalı úles qosıń",
 	"si-panel-definitions-title": "Túsindirmeler:",
