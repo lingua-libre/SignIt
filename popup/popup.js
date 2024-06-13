@@ -87,10 +87,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		} );
 
 		// Add the CoreContent view
-		// similar to what we did in signit.js since here banana is defined solely as per i18n functionality 
-		var BetterBanana = await browser.storage.local.get( 'bananaInStore' ); 
-		var messageStore = await browser.storage.local.get( 'sourceMap' ); 
-		this.coreContent = new SignItCoreContent(BetterBanana.bananaInStore.locale,messageStore.sourceMap);
+
+		this.coreContent = new SignItCoreContent();
+		this.coreContent.init();
 		this.coreContent.getContainer().hide();
 
 		// Put all that in the tab
