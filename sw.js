@@ -736,7 +736,8 @@ async function setState(value) {
       checkActiveTabInjections(message.argument);
     }
     else if (message.command === "storeParam") {
-      storeParam([...message.argument]);
+      const [name,value] = message.argument;
+      storeParam(name,value);
     }
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);

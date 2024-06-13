@@ -409,6 +409,11 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 	await changeUiLanguage(message.argument);
 	return;
 }
+else if (message.command === "storeParam") {
+	const [name,value] = message.argument;
+	storeParam(name,value);
+	return;
+}
 	message = normalizeMessage(message);
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
@@ -428,10 +433,6 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
 	else if ( message.command === 'signit.hinticon' ) {
 		callModal(message);
-	}
-	else if (message.command === "storeParam") {
-		storeParam([...message.arguments]);
-		return;
 	}
 });
 
