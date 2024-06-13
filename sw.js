@@ -719,7 +719,7 @@ async function setState(value) {
     // When message 'signit.i18nCode' is heard, returns banada object
     else if (message.command === 'bananai18n') {
       let [msg,placeholderValue] = message.arg;
-      const i18nMessage = banana.i18n(msg,placeholderValue);
+      const i18nMessage = banana.i18n(msg,...placeholderValue);
       sendResponse(i18nMessage);
     }
 
