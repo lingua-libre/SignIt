@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "Video attibution at bottom of video gallery.\n\n* $1 - Сommons URL\n* $2 - speaker name\n* $3 and $4 - position of the video within gallery.\n\n'''Example:''' \"by MariaNore - Video 1 of 3\", with MariaNore being the author of the video.\n\nAlso, '''do not''' translate <code>{link|$1|$2}</code>.",
+    "message": "Video attibution at bottom of video gallery.\n\n* $1 - Сommons URL\n* $2 - Author name\n* $3 and $4 - position of the video within gallery.\n\n'''Example:''' \"by MariaNore - Video 1 of 3\", with MariaNore being the author of the video.\n\nAlso, '''do not''' remove the html.",
     "description": ""
   },
   "si_panel_videos_empty": {

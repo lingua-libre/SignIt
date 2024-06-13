@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "లింగ్వా లిబ్రే SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "లింగ్వా లిబ్రే లో అందుబాటులో ఉన్న వీడియోలన్నిటి జాబితాను తెస్తున్నాం.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "మీడియా:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "కర్త: <a href='$1' target='_blank'>$2</a> – $4 వీడియోల్లో $3 వది",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "ఈ పదాన్ని ఇంకా రికార్డు చెయ్యలేదు,<br>కానీ SignIt క్రౌడ్ సోర్సు ప్రాజెక్టు, మీరు దానికి తోడ్పడవచ్చు.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "సంకేత భాషతో తోడ్పాటు నందించండి",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "నిర్వచనాలు:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#ఇంగ్లీషు",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "విక్షనరీలో చూడండి",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "నిర్వచనమేమీ కనబడలేదు.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "శోధించండి",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "$1 గుర్తుల్లో వెతకండి.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "వెతుకులాట",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "వెతకటం మొదలుపెట్టండి",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "చరిత్ర",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "అది ఖాళీగా ఉంది",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "అమరికలు",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "సంకేత భాష:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "వీడియోలను మరొక సంకేత భాషకు మార్చండి.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "వీడియోల భాషను మార్చండి",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "ఇంటర్‌ఫేస్ భాష:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "యూజర్ ఇంటర్ఫేస్ భాషను మార్చండి.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "ఇంటర్ఫేస్ భాషను మార్చండి",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "చరిత్ర పొడవు:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "0 కి సెట్ చేస్తే చరిత్ర లాగ్‌ అచేతనం అవుతుంది",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "వికీపీడియాతో స్థానికంగా మమేకమవడం:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "సాధారణ వేగంతో నడిపి, ఆ తరువాత నెమ్మదిగా నడుపు:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "ఎంచుకున్న పాఠ్యానికి షార్ట్‌కట్ ఐకన్:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "ప్రదర్శించవలసిన ప్యానెళ్ళు:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "నిఘంటువు పాఠ్యం మాత్రమే",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "రెండూ",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "సంతకం చేసిన వీడియోలు మాత్రమే",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "అందుబాటులో ఉన్న పదాలను హైలైట్  చెయ్యి:",
+    "description": ""
+  }
+}
