@@ -71,10 +71,9 @@ var SignItCoreContent = function () {
         const [videosPanelNoVideoTitle, videosPanelNoVideoEmpty, definitionsPanelTitle, contributeButtonLabel, wiktIso, wiktPointer, definitionsEmpty] = translations;
 
         this.$container.find(".signit-panel-videos .signit-novideo h2").text(videosPanelNoVideoTitle); 
-        this.$container.find(".signit-panel-videos .signit-novideo p").text(videosPanelNoVideoEmpty); // -- needs additional css
+        this.$container.find(".signit-panel-videos .signit-novideo p").html(videosPanelNoVideoEmpty); // -- needs additional css
         this.$container.find(".signit-panel-definitions .signit-definitions h2").text(definitionsPanelTitle); 
         this.contributeButton.$label.text(contributeButtonLabel);
-        
         const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
         this.$container
           .find(".signit-definitions-source a")
