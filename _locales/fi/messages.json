@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "tekijä: <a href='$1' target='_blank'>$2</a> – Video $3 / $4",
+    "message": "tekijä: <a href='$1' target='_blank'>$2</a> – video $3 / $4",
     "description": ""
   },
   "si_panel_videos_empty": {
@@ -115,8 +115,20 @@
     "message": "Pikakuvake valitussa tekstissä:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Näytettävät paneelit:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Vain sanakirjateksti",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_both": {
     "message": "Molemmat",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Vain viitotut videot",
     "description": ""
   },
   "si_popup_settings_enlighten": {

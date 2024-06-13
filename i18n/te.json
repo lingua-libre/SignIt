@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chaduvari",
+			"Veeven"
+		]
+	},
+	"si-addon-title": "లింగ్వా లిబ్రే SignIt",
+	"si-addon-preload": "లింగ్వా లిబ్రే లో అందుబాటులో ఉన్న వీడియోలన్నిటి జాబితాను తెస్తున్నాం.",
+	"si-panel-videos-title": "మీడియా:",
+	"si-panel-videos-gallery-attribution": "కర్త: <a href='$1' target='_blank'>$2</a> – $4 వీడియోల్లో $3 వది",
+	"si-panel-videos-empty": "ఈ పదాన్ని ఇంకా రికార్డు చెయ్యలేదు,<br>కానీ SignIt క్రౌడ్ సోర్సు ప్రాజెక్టు, మీరు దానికి తోడ్పడవచ్చు.",
+	"si-panel-videos-contribute-label": "సంకేత భాషతో తోడ్పాటు నందించండి",
+	"si-panel-definitions-title": "నిర్వచనాలు:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#ఇంగ్లీషు",
+	"si-panel-definitions-wikt-pointer": "విక్షనరీలో చూడండి",
+	"si-panel-definitions-empty": "నిర్వచనమేమీ కనబడలేదు.",
+	"si-popup-browse-title": "శోధించండి",
+	"si-popup-browse-placeholder": "$1 గుర్తుల్లో వెతకండి.",
+	"si-popup-browse-label": "వెతుకులాట",
+	"si-popup-browse-icon": "వెతకటం మొదలుపెట్టండి",
+	"si-popup-history-title": "చరిత్ర",
+	"si-popup-history-empty": "అది ఖాళీగా ఉంది",
+	"si-popup-settings-title": "అమరికలు",
+	"si-popup-settings-signlanguage": "సంకేత భాష:",
+	"si-popup-settings-signlanguage-help": "వీడియోలను మరొక సంకేత భాషకు మార్చండి.",
+	"si-popup-settings-signlanguage-dropdown": "వీడియోల భాషను మార్చండి",
+	"si-popup-settings-uilanguage": "ఇంటర్‌ఫేస్ భాష:",
+	"si-popup-settings-uilanguage-help": "యూజర్ ఇంటర్ఫేస్ భాషను మార్చండి.",
+	"si-popup-settings-uilanguage-dropdown": "ఇంటర్ఫేస్ భాషను మార్చండి",
+	"si-popup-settings-history": "చరిత్ర పొడవు:",
+	"si-popup-settings-history-help": "0 కి సెట్ చేస్తే చరిత్ర లాగ్‌ అచేతనం అవుతుంది",
+	"si-popup-settings-wpintegration": "వికీపీడియాతో స్థానికంగా మమేకమవడం:",
+	"si-popup-settings-twospeed": "సాధారణ వేగంతో నడిపి, ఆ తరువాత నెమ్మదిగా నడుపు:",
+	"si-popup-settings-hint-icon": "ఎంచుకున్న పాఠ్యానికి షార్ట్‌కట్ ఐకన్:",
+	"si-popup-settings-choosepanels": "ప్రదర్శించవలసిన ప్యానెళ్ళు:",
+	"si-popup-settings-choosepanels-definition": "నిఘంటువు పాఠ్యం మాత్రమే",
+	"si-popup-settings-choosepanels-both": "రెండూ",
+	"si-popup-settings-choosepanels-video": "సంతకం చేసిన వీడియోలు మాత్రమే",
+	"si-popup-settings-enlighten": "అందుబాటులో ఉన్న పదాలను హైలైట్  చెయ్యి:"
+}

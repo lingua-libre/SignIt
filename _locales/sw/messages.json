@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "na {{kiungo|$1|$2}} - Video $3 kati ya $4",
+    "message": "na <a href='$1'>$2</a> - Video $3 kati ya $4",
     "description": ""
   },
   "si_panel_videos_empty": {

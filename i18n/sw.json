@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Inaleta orodha ya video zote zinazopatikana kwenye Lingua Libre.",
 	"si-panel-videos-title": "Vyombo vya habari:",
-	"si-panel-videos-gallery-attribution": "na {{kiungo|$1|$2}} - Video $3 kati ya $4",
+	"si-panel-videos-gallery-attribution": "na <a href='$1'>$2</a> - Video $3 kati ya $4",
 	"si-panel-videos-empty": "Neno hili bado halijarekodiwa,<br> lakini SignIt ni mradi unaotokana na umati, unaweza kuuchangia.",
 	"si-panel-videos-contribute-label": "Changia kwa Lugha ya Ishara",
 	"si-panel-definitions-title": "Ufafanuzi:",

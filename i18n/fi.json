@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Jack Phoenix",
 			"Pyscowicz"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Haetaan luetteloa kaikista Lingua Libressä saatavilla olevista videoista.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "tekijä: <a href='$1' target='_blank'>$2</a> – Video $3 / $4",
+	"si-panel-videos-gallery-attribution": "tekijä: <a href='$1' target='_blank'>$2</a> – video $3 / $4",
 	"si-panel-videos-empty": "Tätä sanaa ei ole vielä tallennettu,<br> mutta SignIt on joukkolähdeprojekti, voit osallistua siihen.",
 	"si-panel-videos-contribute-label": "Osallistu viittomakielellä",
 	"si-panel-definitions-title": "Määritelmät:",
@@ -33,6 +34,9 @@
 	"si-popup-settings-wpintegration": "Alkuperäinen integrointi Wikipediaan:",
 	"si-popup-settings-twospeed": "Toista normaalilla nopeudella, sitten hitaalla nopeudella:",
 	"si-popup-settings-hint-icon": "Pikakuvake valitussa tekstissä:",
+	"si-popup-settings-choosepanels": "Näytettävät paneelit:",
+	"si-popup-settings-choosepanels-definition": "Vain sanakirjateksti",
 	"si-popup-settings-choosepanels-both": "Molemmat",
+	"si-popup-settings-choosepanels-video": "Vain viitotut videot",
 	"si-popup-settings-enlighten": "Korosta käytettävissä olevat sanat:"
 }

@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "{{silteme|$1|$2}} tárepinen $4 nıń $3 videosı",
+    "message": "<a href='$1'>$2</a> paydalanıwshınıń $4 danadan $3-videosı",
     "description": ""
   },
   "si_panel_videos_empty": {

@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "توليد قائمة بكافة مقاطع الفيديو المتوفرة على لينجوا ليبر.",
 	"si-panel-videos-title": "الوسائط:",
-	"si-panel-videos-gallery-attribution": "بواسطة {{رابط|$1|$2}} – الفيديو $3 من $4",
+	"si-panel-videos-gallery-attribution": "بواسطة <a href='$1'>$2</a> – الفيديو $3 من $4",
 	"si-panel-videos-empty": "لم تُسجل هذه الكلمة بعد،<br> مع العلم بأنَّ SignIt مشروعٌ جماعي، يُمكنك المساهمة فيه.",
 	"si-panel-videos-contribute-label": "ساهم بلغة الإشارة",
 	"si-panel-definitions-title": "التعريفات:",
