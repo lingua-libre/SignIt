@@ -50,12 +50,12 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	/* *********************************************************** */
 	// Master
 	var UI = function () {
-		document.querySelector('#fetchVideosList').innerHTML = browser.i18n.getMessage('si_addon_preload');
+		document.querySelector('#fetchVideosList').innerHTML = banana.i18n('si-addon-preload');
 
 		// Setup the main tabs
-		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: browser.i18n.getMessage('si_popup_browse_title') } );
-		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: browser.i18n.getMessage('si_popup_history_title'), classes: [ 'signit-popup-tab-history' ] } );
-		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: browser.i18n.getMessage('si_popup_settings_title'), classes: [ 'signit-popup-tab-settings' ] } );
+		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: banana.i18n('si-popup-browse-title') } );
+		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: banana.i18n('si-popup-history-title'), classes: [ 'signit-popup-tab-history' ] } );
+		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: banana.i18n('si-popup-settings-title'), classes: [ 'signit-popup-tab-settings' ] } );
 
 		// Set up the popup page layout
 		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'signit-popup-tabs' ] } );
@@ -83,19 +83,19 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		// browser.i18n.getMessage accepts string value as substitutes for placeholders, hence JSON.stringify
-		this.searchWidget = new SearchWidget( { placeholder: browser.i18n.getMessage("si_popup_browse_placeholder", JSON.stringify(Object.keys( _backgroundPage.records ).length) ) } );
+		// banana.i18n accepts string value as substitutes for placeholders, hence JSON.stringify
+		this.searchWidget = new SearchWidget( { placeholder: banana.i18n("si-popup-browse-placeholder", JSON.stringify(Object.keys( _backgroundPage.records ).length) ) } );
 		this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon:"search",
-			label: browser.i18n.getMessage("si_popup_browse_label"),
+			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
-			title: browser.i18n.getMessage("si_popup_browse_icon")
+			title: banana.i18n("si-popup-browse-icon")
 		} );
 		
 		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
 			align: 'top',
-			label: browser.i18n.getMessage("si_popup_browse_label"),
+			label: banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
 			classes: [ 'signit-popup-tab-browse' ]
 		} );
@@ -116,7 +116,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
 		
 		// optimizing message passing for the functions that are present in 
-		// sw.js as well background_script.js
+		// sw.js as well background-script.js
 
 		await sendMessageUp("checkActiveTabInjections",tabs[0].id);
 		var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
@@ -135,7 +135,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     if (typeof text !== "string") {
       text = this.searchWidget.getValue();
     }
-    // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
+    // runs normalize function and wordToFiles in a single go and retruns an array of -word and -files
 
 	const [_word,_files] = await sendMessageUp("normalizeWordAndReturnFiles",text);
     this.coreContent.refresh(_word, _files);
@@ -148,7 +148,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// History tab 
 	// .initHistory calls .addHistory which calls .cleanHistory
 	UI.prototype.initHistory = function () {
-		this.$noHistory = $( `<div>${browser.i18n.getMessage("si_popup_history_empty")}</div>` );
+		this.$noHistory = $( `<div>${banana.i18n("si-popup-history-empty")}</div>` );
 		this.history = [];
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
@@ -213,14 +213,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 		// Layout
 		signLanguageDropdown = new OO.ui.DropdownWidget( { 
-			label: browser.i18n.getMessage("si_popup_settings_signlanguage-dropdown"), 
+			label: banana.i18n("si-popup-settings-signlanguage-dropdown"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		signLanguageLayout = new OO.ui.FieldLayout( signLanguageDropdown, {
-			label: browser.i18n.getMessage("si_popup_settings_signlanguage"),
+			label: banana.i18n("si-popup-settings-signlanguage"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_signlanguage-help"),
+			help: banana.i18n("si-popup-settings-signlanguage-help"),
 			//helpInline: true
 		} );
 		
@@ -240,14 +240,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 		// Layout
 		uiLanguageDropdown = new OO.ui.DropdownWidget({ 
-			label: browser.i18n.getMessage("si_popup-settings_signlanguage"), 
+			label: banana.i18n("si-popup-settings-signlanguage"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		uiLanguageLayout = new OO.ui.FieldLayout( uiLanguageDropdown, {
-			label: browser.i18n.getMessage("si_popup_settings_uilanguage"),
+			label: banana.i18n("si-popup-settings-uilanguage"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_uilanguage-help"),
+			help: banana.i18n("si-popup-settings-uilanguage-help"),
 			//helpInline: true
 		} );
 
@@ -257,9 +257,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			min: 0
 		} );
 		historyLayout = new OO.ui.FieldLayout( historyWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_history"),
+			label: banana.i18n("si-popup-settings-history"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_history_help"),
+			help: banana.i18n("si-popup-settings-history-help"),
 		} );
 
 		
@@ -269,7 +269,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			selected: _backgroundPage.params.wpintegration,
 		} );
 		wpintegrationLayout = new OO.ui.FieldLayout( wpintegrationWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_wpintegration"),
+			label: banana.i18n("si-popup-settings-wpintegration"),
 			align: 'inline',
 		} );
 
@@ -278,7 +278,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			selected: _backgroundPage.params.twospeed,
 		} );
 		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_twospeed"),
+			label: banana.i18n("si-popup-settings-twospeed"),
 			align: 'inline',
 		} );
 		// Hint icon shortcut
@@ -286,7 +286,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
       selected: _backgroundPage.params.hinticon,
     });
     hinticonLayout = new OO.ui.FieldLayout(hinticonWidget, {
-      label: browser.i18n.getMessage('si_popup_settings_hint-icon'),
+      label: banana.i18n('si-popup-settings-hint-icon'),
       align: 'inline',
     });
     // Colored text
@@ -294,29 +294,29 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
       selected: _backgroundPage.params.coloredwords,
     });
     coloredwordsLayout = new OO.ui.FieldLayout(coloredwordsWidget, {
-      label: browser.i18n.getMessage('si_popup_settings_enlighten'),
+      label: banana.i18n('si-popup-settings-enlighten'),
       align: 'inline',
     });
 
 		// Choose panels : both, definition, video
 		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
 			data: 'definition',
-			label: browser.i18n.getMessage("si_popup_settings_choosepanels_definition")
+			label: banana.i18n("si-popup-settings-choosepanels-definition")
 		} ),
 		panelsOption1 = new OO.ui.ButtonOptionWidget( {
 			data: 'both',
-			label: browser.i18n.getMessage("si_popup_settings_choosepanels_both")
+			label: banana.i18n("si-popup-settings-choosepanels-both")
 		} );
 		panelsOption2 = new OO.ui.ButtonOptionWidget( {
 			data: 'video',
-			label:  browser.i18n.getMessage("si_popup_settings_choosepanels_video")
+			label:  banana.i18n("si-popup-settings-choosepanels-video")
 		} );
 		choosepanelsWidget = new OO.ui.ButtonSelectWidget( {
 			items: [ panelsOption0, panelsOption1, panelsOption2 ]
 		} );
 		// Layout
 		choosepanelsLayout = new OO.ui.FieldLayout( choosepanelsWidget, {
-			label:  browser.i18n.getMessage("si_popup_settings_choosepanels"),
+			label:  banana.i18n("si-popup-settings-choosepanels"),
 			align: 'top',
 		} );
 
