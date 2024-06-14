@@ -1,31 +1,23 @@
-var SignItCoreContent = function (locale,mapi18n) {
-  const sourceMap = new Map(mapi18n);
-  banana = { i18n: (msg) => sourceMap.get(locale)[msg] };
-  console.log("Passed trough ! :", locale);
-  console.log("SignItCoreContent.js",banana );
-  // let hlwa = browser.i18n.getMessage("si-panel-videos-title"); 
-  // console.log("hlwa = ",hlwa); 
+var SignItCoreContent = function () {
+  console.log("SignItCoreContent.js");
   this.$container = $(`
 		<div class="signit-modal-container">
 			<h1></h1>
 			<div class="signit-modal-content">
         <div class="signit-panel-videos">
           <div class="signit-panel-videos signit-novideo">
-            <h2>
-            ${ browser.i18n.getMessage("si_panel_videos_title") }</h2>
-            ${ browser.i18n.getMessage("si_panel_videos_empty") }<br><br>
+            <h2></h2>
+            <p></p>
           </div>
           <div class="signit-panel-videos signit-video"></div>
         </div>
 				<div class="signit-panel-separator"></div>
         <div class="signit-panel-definitions">
           <div class="signit-panel-definitions signit-definitions">
-            <h2>
-            ${ browser.i18n.getMessage("si_panel_definitions_title") }</h2>
+            <h2></h2>
             <div class="signit-definitions-text"></div>
             <div class="signit-definitions-source">
-              <a href="https://${ browser.i18n.getMessage("si_panel_definitions_wikt_iso") }.wiktionary.org">
-          ${ browser.i18n.getMessage("si_panel_definitions_wikt_pointer") }</a>
+              <a href></a>
             </div>
           </div>
           <div class="signit-panel-definitions signit-loading">
@@ -33,17 +25,14 @@ var SignItCoreContent = function (locale,mapi18n) {
               "icons/Spinner_font_awesome.svg"
             )}" width="40" height="40">
           </div>
-          <div class="signit-panel-definitions signit-error">
-          ${ browser.i18n.getMessage("si_panel_definitions_empty") }</div>
+          <div class="signit-panel-definitions signit-error"></div>
         </div>
 			</div>
 		</div>
 	  `);
-    
-    // Button contribute
     var optionsContribute = {
       flags: ["primary", "progressive"],
-      label: browser.i18n.getMessage("si_panel_videos_contribute_label") ,
+      label: " ",
       href: "https://lingualibre.org/wiki/Special:RecordWizard",
     };
     this.contributeButton = new OO.ui.ButtonWidget(optionsContribute);
@@ -62,9 +51,41 @@ var SignItCoreContent = function (locale,mapi18n) {
     this.$definitionPanelSpinner = this.$container.find(".signit-loading");
     this.$definitionPanelError = this.$container.find(".signit-error");
 
-    // this.contributeButton.on( 'click', function () {
-    //	// TODO: Do something
-    // }.bind( this ) );
+    SignItCoreContent.prototype.init = async function () {
+      try {
+        var banana = {i18n: async (msg,...arg) => {
+          return await chrome.runtime.sendMessage({
+            command:'bananai18n',arg : [msg,arg]
+          })
+        }
+      };
+        const translations = await Promise.all([
+          banana.i18n("si-panel-videos-title"),
+          banana.i18n("si-panel-videos-empty"),
+          banana.i18n("si-panel-definitions-title"),
+          banana.i18n("si-panel-videos-contribute-label"),
+          banana.i18n("si-panel-definitions-wikt-iso"),
+          banana.i18n("si-panel-definitions-wikt-pointer"),
+          banana.i18n("si-panel-definitions-empty") // May need a different key for error message
+        ]);
+        const [videosPanelNoVideoTitle, videosPanelNoVideoEmpty, definitionsPanelTitle, contributeButtonLabel, wiktIso, wiktPointer, definitionsEmpty] = translations;
+
+        this.$container.find(".signit-panel-videos .signit-novideo h2").text(videosPanelNoVideoTitle); 
+        this.$container.find(".signit-panel-videos .signit-novideo p").html(videosPanelNoVideoEmpty); // -- needs additional css
+        this.$container.find(".signit-panel-definitions .signit-definitions h2").text(definitionsPanelTitle); 
+        this.contributeButton.$label.text(contributeButtonLabel);
+        const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
+        this.$container
+          .find(".signit-definitions-source a")
+          .attr("href", definitionsSourceLink)
+          .text(wiktPointer);
+    
+        this.$container.find(".signit-panel-definitions .signit-error").text(definitionsEmpty);
+    
+      } catch (error) {
+        console.error("Error fetching translations:", error);
+      }
+    };
 
   SignItCoreContent.prototype.refresh = function (title, files) {
     files = files || [];

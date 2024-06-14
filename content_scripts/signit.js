@@ -152,11 +152,8 @@
 
 		// Banana test, search `bananaInStore` in files for more
 		console.log("before")
-		var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
-		var messageStore = await browser.storage.local.get( 'sourceMap' ); 
-		console.log("after: BetterBanana = ", BetterBanana.bananaInStore.locale,messageStore.sourceMap)
-
-		content = new SignItCoreContent(BetterBanana.bananaInStore.locale,messageStore.sourceMap);
+		content = new SignItCoreContent();
+		content.init();
 
 		// Setup an absolute-positionned $anchorModal we can programatically move
 		// to be able to point exactly some coords with our popup later

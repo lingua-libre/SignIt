@@ -17,22 +17,12 @@ var SignItVideosGallery = function ( container ) {
 };
 
 SignItVideosGallery.prototype.refresh = async function ( files ) {
-	var BetterBanana = await browser.storage.local.get( 'bananaInStore' );
-	var messageStore = await chrome.storage.local.get( 'sourceMap' ); 
-	var sourceMap = new Map(messageStore.sourceMap);
-	var locale = BetterBanana.bananaInStore.locale;
 	var banana = {
-    i18n: (msg, url, speaker,index, total) => {
-		let string = sourceMap.get(locale)[msg];
-		let Speaker = `<a href=${url} target="_blank">${speaker} </a>`;
-		let patterns = ["{{link|$1|$2}}", "$3", "$4"];
-		let replacements = [Speaker, index, total];
-
-		patterns.forEach((pattern,index)=>{
-			string = string.replace(pattern, replacements[index]);
-		})
-
-		return string;
+    i18n: async (msg, ...arg) => {
+      return await chrome.runtime.sendMessage({
+        command: "bananai18n",
+        arg: [msg, arg],
+      });
     },
   };
 	console.log("#20 files ",files )
@@ -40,19 +30,19 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 	var i;
 	files = files || [];
 	this.$videos = [];
-
+	
 	this.$videoContainer.empty();
 	this.currentIndex = 0;
-
 	for ( i = 0; i < files.length; i++ ) {
 		filename = files[ i ].filename,
 		url = `https://commons.wikimedia.org/wiki/File:${ filename.split( '/' ).pop()}`,
 		speaker = files[ i ].speaker,
 		total = files.length;
+		console.log(await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total));
 		this.$videos.push( $( `
 			<div style="display: none;">
 				<video controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></video>
-				${browser.i18n.getMessage("si_panel_videos_gallery_attribution",[ url, speaker, i+1, total])}
+				${await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total)}
 			</div>
 		` ) );
 

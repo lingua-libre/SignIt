@@ -438,9 +438,6 @@ async function setState(value) {
 
     // Declare localisation
     banana.setLocale(locale); // Change to new locale
-    storeParam("bananaInStore", banana);
-    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
-
     // state = "ready";
     state = await setState("ready");
 
@@ -717,14 +714,10 @@ async function setState(value) {
       sendResponse(records[message.text] || records[message.text.toLowerCase()] || []);
     }
     // When message 'signit.i18nCode' is heard, returns banada object
-    else if (
-      message.command === "signit.getfilesb" ||
-      message.command === "getBanana"
-    ) {
-      console.log("bg>signit.getfilesB");
-      // What this does is it accesses the messageStore inside banana amd spreads the sourecMap
-      // which is an instanceof Map thereby converting it into an array. This is later recreated inside popup
-      sendResponse([[...banana.messageStore.sourceMap], banana.locale]);
+    else if (message.command === 'bananai18n') {
+      let [msg,placeholderValue] = message.arg;
+      const i18nMessage = banana.i18n(msg,...placeholderValue);
+      sendResponse(i18nMessage);
     }
 
     // Start modal
@@ -736,7 +729,8 @@ async function setState(value) {
       checkActiveTabInjections(message.argument);
     }
     else if (message.command === "storeParam") {
-      storeParam([...message.argument]);
+      const [name,value] = message.argument;
+      storeParam(name,value);
     }
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);

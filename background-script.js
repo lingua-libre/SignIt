@@ -409,6 +409,11 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 	await changeUiLanguage(message.argument);
 	return;
 }
+else if (message.command === "storeParam") {
+	const [name,value] = message.argument;
+	storeParam(name,value);
+	return;
+}
 	message = normalizeMessage(message);
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
@@ -417,21 +422,16 @@ browser.runtime.onMessage.addListener( async function ( message ) {
 		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
 	}
 	 // When message 'signit.i18nCode' is heard, returns banada object
-	else if ( message.command === 'signit.getfilesb' ) {
-		console.log('bg>signit.getfilesB')
-		// var locale = await getStoredParam( 'uiLanguage' )
-		// loadI18nLocalization(locale);
-		return banana;
+	 else if (message.command === 'bananai18n') {
+		let [msg,placeholderValue] = message.arg;
+		const i18nMessage = banana.i18n(msg,placeholderValue);
+		return i18nMessage;
 	}
 	
 	// Start modal
 	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
 	else if ( message.command === 'signit.hinticon' ) {
 		callModal(message);
-	}
-	else if (message.command === "storeParam") {
-		storeParam([...message.arguments]);
-		return;
 	}
 });
 

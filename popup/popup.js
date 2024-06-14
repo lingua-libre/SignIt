@@ -18,60 +18,44 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     }
     _backgroundPage = await getBackgroundPage();
     console.log("Background Page  = ", _backgroundPage);
-
-		// Chrome messaging is limited to simple data types. 
-		// So we cant import complex data types like map/sets directly through messages.  
-		// Hence converting them before sending and recreating them after receiving remains the only way.
-		
-		const resArr = await chrome.runtime.sendMessage({ command: "getBanana" });
-		const sourceMap = new Map(resArr[0]);
-		
-		// coudn't restore the functionality of i18n so made it a key which stores a functions 
-		// which fetches the messages from sourceMap and replpace them with whatever the key-value pair
-		// for that particular message is
-
-		banana = {i18n: (msg,...arg) => {
-			let string = sourceMap.get(resArr[1])[msg];
-			for (let i = 0; i < arg.length; i++) {
-				let regex = new RegExp(`\\$${i + 1}`); 
-				if (regex.test(string)) {
-				  string = string.replace(regex, arg[i]);
-				}
-			}
-			return string;
-		}};
-		console.log("banana received: ",banana);
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
 		_backgroundPage = await browser.runtime.getBackgroundPage();
-		banana = _backgroundPage.banana;
 	}
 
 	/* *********************************************************** */
 	// Master
+	var banana ={i18n:async(msg,...placeholderValue)=>{
+		return await chrome.runtime.sendMessage({
+			command:"bananai18n",
+			arg:[msg,placeholderValue]
+		})
+	}}
 	var UI = function () {
-		document.querySelector('#fetchVideosList').innerHTML = browser.i18n.getMessage('si_addon_preload');
+		(async ()=>{
+			document.querySelector('#fetchVideosList').innerHTML = await banana.i18n('si-addon-preload');
+			
+			// Setup the main tabs
+			this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: await banana.i18n('si-popup-browse-title') } );
+			this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: await banana.i18n('si-popup-history-title'), classes: [ 'signit-popup-tab-history' ] } );
+			this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: await banana.i18n('si-popup-settings-title'), classes: [ 'signit-popup-tab-settings' ] } );
 
-		// Setup the main tabs
-		this.viewTab = new OO.ui.TabPanelLayout( 'view', { label: browser.i18n.getMessage('si_popup_browse_title') } );
-		this.historyTab = new OO.ui.TabPanelLayout( 'history', { label: browser.i18n.getMessage('si_popup_history_title'), classes: [ 'signit-popup-tab-history' ] } );
-		this.paramTab = new OO.ui.TabPanelLayout( 'param', { label: browser.i18n.getMessage('si_popup_settings_title'), classes: [ 'signit-popup-tab-settings' ] } );
+			// Set up the popup page layout
+			this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'signit-popup-tabs' ] } );
+			this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
 
-		// Set up the popup page layout
-		this.indexLayout = new OO.ui.IndexLayout( { autoFocus: false, classes: [ 'signit-popup-tabs' ] } );
-		this.indexLayout.addTabPanels( [ this.viewTab, this.historyTab, this.paramTab ] );
+			// Clean up then append
+			document.querySelector( '#signit-popup-loaded' ).innerHTML = "";
+			$( '#signit-popup-loaded' ).append( this.indexLayout.$element );
 
-		// Clean up then append
-		document.querySelector( '#signit-popup-loaded' ).innerHTML = "";
-		$( '#signit-popup-loaded' ).append( this.indexLayout.$element );
+			// Build the full tabs inner content
+			this.initView();
+			this.initHistory();
+			this.initParam();
 
-		// Build the full tabs inner content
-		this.initView();
-		this.initHistory();
-		this.initParam();
-
-		// Show the UI we have just build
-		this.switchPanel( 'loaded' );
+			// Show the UI we have just build
+			this.switchPanel( 'loaded' );
+		})();
 	};
 	
 	async function sendMessageUp(msg,argument){
@@ -83,28 +67,27 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// Browse tab
 	UI.prototype.initView = async function () {
 		// Word input 2 : text field
-		// browser.i18n.getMessage accepts string value as substitutes for placeholders, hence JSON.stringify
-		this.searchWidget = new SearchWidget( { placeholder: browser.i18n.getMessage("si_popup_browse_placeholder", JSON.stringify(Object.keys( _backgroundPage.records ).length) ) } );
+		// await banana.i18n accepts string value as substitutes for placeholders, hence JSON.stringify
+		this.searchWidget = new SearchWidget( { placeholder: await banana.i18n("si-popup-browse-placeholder", JSON.stringify(Object.keys( _backgroundPage.records ).length) ) } );
 		this.searchWidget.setRecords( _backgroundPage.records );
 		var searchButton = new OO.ui.ButtonWidget( {
 			icon:"search",
-			label: browser.i18n.getMessage("si_popup_browse_label"),
+			label: await banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
-			title: browser.i18n.getMessage("si_popup_browse_icon")
+			title: await banana.i18n("si-popup-browse-icon")
 		} );
 		
 		var searchLayout = new OO.ui.ActionFieldLayout( this.searchWidget, searchButton, {
 			align: 'top',
-			label: browser.i18n.getMessage("si_popup_browse_label"),
+			label: await banana.i18n("si-popup-browse-label"),
 			invisibleLabel: true,
 			classes: [ 'signit-popup-tab-browse' ]
 		} );
 
 		// Add the CoreContent view
-		// similar to what we did in signit.js since here banana is defined solely as per i18n functionality 
-		var BetterBanana = await browser.storage.local.get( 'bananaInStore' ); 
-		var messageStore = await browser.storage.local.get( 'sourceMap' ); 
-		this.coreContent = new SignItCoreContent(BetterBanana.bananaInStore.locale,messageStore.sourceMap);
+
+		this.coreContent = new SignItCoreContent();
+		this.coreContent.init();
 		this.coreContent.getContainer().hide();
 
 		// Put all that in the tab
@@ -116,7 +99,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		var tabs = await browser.tabs.query({active: true, currentWindow: true});
 		
 		// optimizing message passing for the functions that are present in 
-		// sw.js as well background_script.js
+		// sw.js as well background-script.js
 
 		await sendMessageUp("checkActiveTabInjections",tabs[0].id);
 		var selection = await browser.tabs.sendMessage( tabs[ 0 ].id, {
@@ -135,7 +118,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     if (typeof text !== "string") {
       text = this.searchWidget.getValue();
     }
-    // runs normalize function and wordToFiles in a single go and retruns an array of _word and _files
+    // runs normalize function and wordToFiles in a single go and retruns an array of -word and -files
 
 	const [_word,_files] = await sendMessageUp("normalizeWordAndReturnFiles",text);
     this.coreContent.refresh(_word, _files);
@@ -147,8 +130,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	/* *********************************************************** */
 	// History tab 
 	// .initHistory calls .addHistory which calls .cleanHistory
-	UI.prototype.initHistory = function () {
-		this.$noHistory = $( `<div>${browser.i18n.getMessage("si_popup_history_empty")}</div>` );
+	UI.prototype.initHistory = async function () {
+		this.$noHistory = $( `<div>${await banana.i18n("si-popup-history-empty")}</div>` );
 		this.history = [];
 		this.$history = [];
 		this.historyTab.$element.append( this.$noHistory );
@@ -213,14 +196,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 		// Layout
 		signLanguageDropdown = new OO.ui.DropdownWidget( { 
-			label: browser.i18n.getMessage("si_popup_settings_signlanguage-dropdown"), 
+			label: await banana.i18n("si-popup-settings-signlanguage-dropdown"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		signLanguageLayout = new OO.ui.FieldLayout( signLanguageDropdown, {
-			label: browser.i18n.getMessage("si_popup_settings_signlanguage"),
+			label: await banana.i18n("si-popup-settings-signlanguage"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_signlanguage-help"),
+			help: await banana.i18n("si-popup-settings-signlanguage-help"),
 			//helpInline: true
 		} );
 		
@@ -240,14 +223,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		}
 		// Layout
 		uiLanguageDropdown = new OO.ui.DropdownWidget({ 
-			label: browser.i18n.getMessage("si_popup-settings_signlanguage"), 
+			label: await banana.i18n("si-popup-settings-signlanguage"), 
 			menu: { items: items }, 
 			$overlay: $( 'body' ) 
 		} );
 		uiLanguageLayout = new OO.ui.FieldLayout( uiLanguageDropdown, {
-			label: browser.i18n.getMessage("si_popup_settings_uilanguage"),
+			label: await banana.i18n("si-popup-settings-uilanguage"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_uilanguage-help"),
+			help: await banana.i18n("si-popup-settings-uilanguage-help"),
 			//helpInline: true
 		} );
 
@@ -257,9 +240,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			min: 0
 		} );
 		historyLayout = new OO.ui.FieldLayout( historyWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_history"),
+			label: await banana.i18n("si-popup-settings-history"),
 			align: 'top',
-			help: browser.i18n.getMessage("si_popup_settings_history_help"),
+			help: await banana.i18n("si-popup-settings-history-help"),
 		} );
 
 		
@@ -269,7 +252,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			selected: _backgroundPage.params.wpintegration,
 		} );
 		wpintegrationLayout = new OO.ui.FieldLayout( wpintegrationWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_wpintegration"),
+			label: await banana.i18n("si-popup-settings-wpintegration"),
 			align: 'inline',
 		} );
 
@@ -278,7 +261,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			selected: _backgroundPage.params.twospeed,
 		} );
 		twospeedLayout = new OO.ui.FieldLayout( twospeedWidget, {
-			label: browser.i18n.getMessage("si_popup_settings_twospeed"),
+			label: await banana.i18n("si-popup-settings-twospeed"),
 			align: 'inline',
 		} );
 		// Hint icon shortcut
@@ -286,7 +269,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
       selected: _backgroundPage.params.hinticon,
     });
     hinticonLayout = new OO.ui.FieldLayout(hinticonWidget, {
-      label: browser.i18n.getMessage('si_popup_settings_hint-icon'),
+      label: await banana.i18n('si-popup-settings-hint-icon'),
       align: 'inline',
     });
     // Colored text
@@ -294,29 +277,29 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
       selected: _backgroundPage.params.coloredwords,
     });
     coloredwordsLayout = new OO.ui.FieldLayout(coloredwordsWidget, {
-      label: browser.i18n.getMessage('si_popup_settings_enlighten'),
+      label: await banana.i18n('si-popup-settings-enlighten'),
       align: 'inline',
     });
 
 		// Choose panels : both, definition, video
 		var panelsOption0 = new OO.ui.ButtonOptionWidget( {
 			data: 'definition',
-			label: browser.i18n.getMessage("si_popup_settings_choosepanels_definition")
+			label: await banana.i18n("si-popup-settings-choosepanels-definition")
 		} ),
 		panelsOption1 = new OO.ui.ButtonOptionWidget( {
 			data: 'both',
-			label: browser.i18n.getMessage("si_popup_settings_choosepanels_both")
+			label: await banana.i18n("si-popup-settings-choosepanels-both")
 		} );
 		panelsOption2 = new OO.ui.ButtonOptionWidget( {
 			data: 'video',
-			label:  browser.i18n.getMessage("si_popup_settings_choosepanels_video")
+			label:  await banana.i18n("si-popup-settings-choosepanels-video")
 		} );
 		choosepanelsWidget = new OO.ui.ButtonSelectWidget( {
 			items: [ panelsOption0, panelsOption1, panelsOption2 ]
 		} );
 		// Layout
 		choosepanelsLayout = new OO.ui.FieldLayout( choosepanelsWidget, {
-			label:  browser.i18n.getMessage("si_popup_settings_choosepanels"),
+			label:  await banana.i18n("si-popup-settings-choosepanels"),
 			align: 'top',
 		} );
 
@@ -394,13 +377,6 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			return;
 		}
 		ui.switchPanel( 'loading' );
-		//banana = _backgroundPage.banana;
-
-		// now in case of the chrome,both popup and modal update, 
-		// but in case of popup you have to off->on again in order to see changes  
-		// and in FF popup UI updates first
-		// in both browsers for the changes to reflect in modal you have to
-		// send another signit.hinticon command in order to see changes
 
 		await sendMessageUp("changeUiLanguage",newLanguage);
 		ui = new UI();
