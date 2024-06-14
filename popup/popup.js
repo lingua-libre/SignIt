@@ -18,11 +18,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     }
     _backgroundPage = await getBackgroundPage();
     console.log("Background Page  = ", _backgroundPage);
-		console.log("banana received: ",banana);
 	} else if (browserType === 'firefox') {
 		// Use Firefox WebExtensions API
 		_backgroundPage = await browser.runtime.getBackgroundPage();
-		banana = _backgroundPage.banana;
 	}
 
 	/* *********************************************************** */
@@ -379,13 +377,6 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			return;
 		}
 		ui.switchPanel( 'loading' );
-		//banana = _backgroundPage.banana;
-
-		// now in case of the chrome,both popup and modal update, 
-		// but in case of popup you have to off->on again in order to see changes  
-		// and in FF popup UI updates first
-		// in both browsers for the changes to reflect in modal you have to
-		// send another signit.hinticon command in order to see changes
 
 		await sendMessageUp("changeUiLanguage",newLanguage);
 		ui = new UI();
