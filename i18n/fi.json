@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Haetaan luetteloa kaikista Lingua Libressä saatavilla olevista videoista.",
 	"si-panel-videos-title": "Media:",
-	"si-panel-videos-gallery-attribution": "tekijä: <a href='$1' target='_blank'>$2</a> – video $3 / $4",
+	"si-panel-videos-gallery-attribution": "tekijä: {{link:$1|$2}} – video $3 / $4",
 	"si-panel-videos-empty": "Tätä sanaa ei ole vielä tallennettu,<br> mutta SignIt on joukkolähdeprojekti, voit osallistua siihen.",
 	"si-panel-videos-contribute-label": "Osallistu viittomakielellä",
 	"si-panel-definitions-title": "Määritelmät:",

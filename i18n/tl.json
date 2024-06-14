@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Kinukuha ang listahan ng lahat ng mga magagamit na video sa Lingua Libre.",
 	"si-panel-videos-title": "Midya:",
-	"si-panel-videos-gallery-attribution": "ni <a href='$1' target='_blank'>$2</a> - Video $3 ng $4",
+	"si-panel-videos-gallery-attribution": "ni {{link:$1|$2}} - Video $3 ng $4",
 	"si-panel-videos-empty": "Hindi pa nare-record ang salitang ito,<b4>pero crowdsourced na proyekto ang SignIt, kaya naman pwede kang mag-ambag rito.",
 	"si-panel-videos-contribute-label": "Mag-ambag gamit ang Wikang Nakasenyas",
 	"si-panel-definitions-title": "Mga kahulugan:",
