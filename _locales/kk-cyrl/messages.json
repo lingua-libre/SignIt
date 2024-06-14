@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "ауторы: <a href='$1' target='_blank'>$2</a> — $3/$4 видео",
+    "message": "ауторы: {{link:$1|$2}} — $3/$4 видео",
     "description": ""
   },
   "si_panel_videos_empty": {

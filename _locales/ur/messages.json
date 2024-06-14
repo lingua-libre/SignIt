@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "<a href='$1' target='_blank'>$2</a> $4 توں ویڈیو $3 بݨائی اے",
+    "message": "{{link:$1|$2}} $4 توں ویڈیو $3 بݨائی اے",
     "description": ""
   },
   "si_panel_videos_empty": {
