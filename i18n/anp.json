@@ -8,7 +8,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Lingua Libre प उपलब्ध सब्भे वीडियो क सूची प्राप्त होय रहलौ छौं।",
 	"si-panel-videos-title": "मीडिया:",
-	"si-panel-videos-gallery-attribution": "<a href='$1' target='_blank'>$2</a> द्वारा – $4 मँ सँ $3 नंबरिया वीडियो",
+	"si-panel-videos-gallery-attribution": "{{link:$1|$2}} द्वारा – $4 मँ सँ $3 नंबरिया वीडियो",
 	"si-panel-videos-empty": "हैय शब्द क एखनी तलक रिकॉर्ड नाय करलौ गेलौ छौं,<br>किंतु SignIt, लोगौ सिनी द्वारा बनैलौ गेलौ एगो परियोजना छेकै, आरो तोंय एकरा मँ योगदान करै सकै छौ।",
 	"si-panel-videos-contribute-label": "सांकेतिक भाषा प योगदान करौ",
 	"si-panel-definitions-title": "परिभाषा:",

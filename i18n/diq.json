@@ -6,7 +6,7 @@
 	},
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-panel-videos-title": "Medya:",
-	"si-panel-videos-gallery-attribution": "Be <a href='$1' target='_blank'>$2</a> ra – Video $3 yê $4",
+	"si-panel-videos-gallery-attribution": "Be {{link:$1|$2}} ra – Video $3 yê $4",
 	"si-panel-definitions-title": "Şınasiye:",
 	"si-panel-definitions-wikt-pointer": "Wikiqısebend dı bıvin",
 	"si-panel-definitions-empty": "Sınasnayış nëvineya",

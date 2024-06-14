@@ -7,7 +7,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Pridobivanje seznama vseh videoposnetkov, ki so na voljo v Lingua Libre.",
 	"si-panel-videos-title": "Predstavnosti:",
-	"si-panel-videos-gallery-attribution": "avtor <a href='$1' target='_blank'>$2</a> – video $3 od $4",
+	"si-panel-videos-gallery-attribution": "avtor {{link:$1|$2}} – video $3 od $4",
 	"si-panel-videos-empty": "Ta beseda še ni bila zapisana,<br> vendar je SignIt sodelovalni projekt in lahko prispevate k njemu.",
 	"si-panel-videos-contribute-label": "Prispevajte z znakovnim jezikom",
 	"si-panel-definitions-title": "Opredelitve:",

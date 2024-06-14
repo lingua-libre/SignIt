@@ -8,7 +8,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "Be <a href='$1' target='_blank'>$2</a> ra – Video $3 yê $4",
+    "message": "Be {{link:$1|$2}} ra – Video $3 yê $4",
     "description": ""
   },
   "si_panel_definitions_title": {

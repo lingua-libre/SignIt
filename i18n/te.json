@@ -8,7 +8,7 @@
 	"si-addon-title": "లింగ్వా లిబ్రే SignIt",
 	"si-addon-preload": "లింగ్వా లిబ్రే లో అందుబాటులో ఉన్న వీడియోలన్నిటి జాబితాను తెస్తున్నాం.",
 	"si-panel-videos-title": "మీడియా:",
-	"si-panel-videos-gallery-attribution": "కర్త: <a href='$1' target='_blank'>$2</a> – $4 వీడియోల్లో $3 వది",
+	"si-panel-videos-gallery-attribution": "కర్త: {{link:$1|$2}} – $4 వీడియోల్లో $3 వది",
 	"si-panel-videos-empty": "ఈ పదాన్ని ఇంకా రికార్డు చెయ్యలేదు,<br>కానీ SignIt క్రౌడ్ సోర్సు ప్రాజెక్టు, మీరు దానికి తోడ్పడవచ్చు.",
 	"si-panel-videos-contribute-label": "సంకేత భాషతో తోడ్పాటు నందించండి",
 	"si-panel-definitions-title": "నిర్వచనాలు:",

@@ -9,7 +9,7 @@
 	"si-addon-title": "Lingua Libre SignIt",
 	"si-addon-preload": "Տալիս է Lingua Libre-ում հասանելի բոլոր տեսանյութերի ցուցակը:",
 	"si-panel-videos-title": "Մեդիա․",
-	"si-panel-videos-gallery-attribution": "հեղինակ՝ <a href='$1' target='_blank'>$2</a> – տեսանյութ $3 $4-ից",
+	"si-panel-videos-gallery-attribution": "հեղինակ՝ {{link:$1|$2}} – տեսանյութ $3 $4-ից",
 	"si-panel-videos-empty": "Այս բառը դեռ ձայնագրված չէ,<br> բայց SignIt-ը քրաուդսորսինգային նախագիծ է, և դուք կարող եք ներդնել ձեր ավանդը:",
 	"si-panel-videos-contribute-label": "Ներդրեք ձեր ավանդը ժեստերի լեզվով",
 	"si-panel-definitions-title": "Սահմանումներ․",
