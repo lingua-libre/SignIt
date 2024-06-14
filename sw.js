@@ -438,9 +438,6 @@ async function setState(value) {
 
     // Declare localisation
     banana.setLocale(locale); // Change to new locale
-    storeParam("bananaInStore", banana);
-    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
-
     // state = "ready";
     state = await setState("ready");
 
