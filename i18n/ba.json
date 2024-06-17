@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"MR973"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre сайтында булған бөтә видеояҙмаларҙың исемлеген алыу.",
+	"si-panel-videos-title": "Киң мәғлүмәт саралары:",
+	"si-panel-videos-gallery-attribution": "<a href='$1' target='_blank'>$2</a> – Видео $3 of $4",
+	"si-panel-videos-empty": "Был һүҙ әлегә яҙылмаған,<br/> әммә SignIt — краудсорсинг проекты һәм һеҙ үҙ өлөшөгөҙҙө индерә алаһығыҙ.",
+	"si-panel-videos-contribute-label": "Ишаралар телендә үҙ өлөшөгөҙҙө индерегеҙ",
+	"si-panel-definitions-title": "Билдәләмәләр:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#Инглиз",
+	"si-panel-definitions-wikt-pointer": "Викиһүҙлектә ҡарағыҙ",
+	"si-panel-definitions-empty": "Билдәләмә табылманы.",
+	"si-popup-browse-title": "Ҡарап сығыу",
+	"si-popup-browse-placeholder": "$1 {{PLURAL:$1|ишара|ишаралар}} араһында эҙләү.",
+	"si-popup-browse-label": "Эҙләү",
+	"si-popup-browse-icon": "Эҙләүҙе башлау",
+	"si-popup-history-title": "Тарих",
+	"si-popup-history-empty": "Бында буш",
+	"si-popup-settings-title": "Көйләүҙәр",
+	"si-popup-settings-signlanguage": "Ишара теле:",
+	"si-popup-settings-signlanguage-help": "Видеоны икенсе ишара теленә үҙгәртергә.",
+	"si-popup-settings-signlanguage-dropdown": "Видеола телде үҙгәртеү",
+	"si-popup-settings-uilanguage": "Интерфейс теле:",
+	"si-popup-settings-uilanguage-help": "Ҡулланыусы интерфейсында телде үҙгәртеү.",
+	"si-popup-settings-uilanguage-dropdown": "Интерфейста телде үҙгәртеү",
+	"si-popup-settings-history": "Тарих оҙонлоғо:",
+	"si-popup-settings-history-help": "0-ды ҡуйығыҙ, тарих журналын һүндереү өсөн",
+	"si-popup-settings-wpintegration": "Википедия менән туған интеграция:",
+	"si-popup-settings-twospeed": "Ғәҙәти тиҙлектә, ә һуңынан әкрен тиҙлектә уйнау:",
+	"si-popup-settings-hint-icon": "Билдәләнгән текстҡа тиҙ инеү билдәһе:",
+	"si-popup-settings-choosepanels": "Күрһәтеү өсөн панелдәр:",
+	"si-popup-settings-choosepanels-definition": "Һүҙлек тексы ғына",
+	"si-popup-settings-choosepanels-both": "Икеһе лә",
+	"si-popup-settings-choosepanels-video": "Тик ишара видеолары ғына",
+	"si-popup-settings-enlighten": "Булған һүҙҙәрҙе һайлағыҙ:"
+}
