@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Lingua Libre сайтында булған бөтә видеояҙмаларҙың исемлеген алыу.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Киң мәғлүмәт саралары:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "<a href='$1' target='_blank'>$2</a> – Видео $3 of $4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Был һүҙ әлегә яҙылмаған,<br/> әммә SignIt — краудсорсинг проекты һәм һеҙ үҙ өлөшөгөҙҙө индерә алаһығыҙ.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Ишаралар телендә үҙ өлөшөгөҙҙө индерегеҙ",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Билдәләмәләр:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Инглиз",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "Викиһүҙлектә ҡарағыҙ",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Билдәләмә табылманы.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Ҡарап сығыу",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "$1 {{PLURAL:$1|ишара|ишаралар}} араһында эҙләү.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Эҙләү",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Эҙләүҙе башлау",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Тарих",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Бында буш",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Көйләүҙәр",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Ишара теле:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Видеоны икенсе ишара теленә үҙгәртергә.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Видеола телде үҙгәртеү",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Интерфейс теле:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Ҡулланыусы интерфейсында телде үҙгәртеү.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Интерфейста телде үҙгәртеү",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Тарих оҙонлоғо:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "0-ды ҡуйығыҙ, тарих журналын һүндереү өсөн",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Википедия менән туған интеграция:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Ғәҙәти тиҙлектә, ә һуңынан әкрен тиҙлектә уйнау:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Билдәләнгән текстҡа тиҙ инеү билдәһе:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Күрһәтеү өсөн панелдәр:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Һүҙлек тексы ғына",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Икеһе лә",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Тик ишара видеолары ғына",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Булған һүҙҙәрҙе һайлағыҙ:",
+    "description": ""
+  }
+}
