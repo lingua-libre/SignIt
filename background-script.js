@@ -164,8 +164,6 @@ async function loadI18nLocalization( uiLanguageQid ) {
 
 	// Declare localisation
 	banana.setLocale(locale); // Change to new locale
-	storeParam('bananaInStore',banana)
-    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
 	
 	state = 'ready';
 
