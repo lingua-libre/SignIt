@@ -164,8 +164,6 @@ async function loadI18nLocalization( uiLanguageQid ) {
 
 	// Declare localisation
 	banana.setLocale(locale); // Change to new locale
-	storeParam('bananaInStore',banana)
-    storeParam("sourceMap", Array.from(banana.messageStore.sourceMap));
 	
 	state = 'ready';
 
@@ -414,20 +412,18 @@ else if (message.command === "storeParam") {
 	storeParam(name,value);
 	return;
 }
+else if (message.command === 'bananai18n') {
+	let [msg,placeholderValue] = message.arg;
+	const i18nMessage = banana.i18n(msg,...placeholderValue);
+	return i18nMessage;
+}
 	message = normalizeMessage(message);
 
 	// When message 'signit.getfiles' is heard, returns relevant extract of records[]
 	if ( message.command === 'signit.getfiles' ) {
 		console.log('bg>signit.getfiles')
 		return records[ message.text ] || records[ message.text.toLowerCase() ] || [];
-	}
-	 // When message 'signit.i18nCode' is heard, returns banada object
-	 else if (message.command === 'bananai18n') {
-		let [msg,placeholderValue] = message.arg;
-		const i18nMessage = banana.i18n(msg,placeholderValue);
-		return i18nMessage;
-	}
-	
+	}	
 	// Start modal
 	// When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
 	else if ( message.command === 'signit.hinticon' ) {

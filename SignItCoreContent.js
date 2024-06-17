@@ -68,19 +68,19 @@ var SignItCoreContent = function () {
           banana.i18n("si-panel-definitions-wikt-pointer"),
           banana.i18n("si-panel-definitions-empty") // May need a different key for error message
         ]);
-        const [videosPanelNoVideoTitle, videosPanelNoVideoEmpty, definitionsPanelTitle, contributeButtonLabel, wiktIso, wiktPointer, definitionsEmpty] = translations;
+        const [panelVideosTitle, panelVideosEmpty, panelDefinitionsTitle, panelVideosContributeLabel, wiktIso, wiktPointer, panelDefinitionsEmpty] = translations;
 
-        this.$container.find(".signit-panel-videos .signit-novideo h2").text(videosPanelNoVideoTitle); 
-        this.$container.find(".signit-panel-videos .signit-novideo p").html(videosPanelNoVideoEmpty); // -- needs additional css
-        this.$container.find(".signit-panel-definitions .signit-definitions h2").text(definitionsPanelTitle); 
-        this.contributeButton.$label.text(contributeButtonLabel);
+        this.$container.find(".signit-panel-videos .signit-novideo h2").text(panelVideosTitle); 
+        this.$container.find(".signit-panel-videos .signit-novideo p").html(panelVideosEmpty); // -- needs additional css
+        this.$container.find(".signit-panel-definitions .signit-definitions h2").text(panelDefinitionsTitle); 
+        this.contributeButton.$label.text(panelVideosContributeLabel);
         const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
         this.$container
           .find(".signit-definitions-source a")
           .attr("href", definitionsSourceLink)
           .text(wiktPointer);
     
-        this.$container.find(".signit-panel-definitions .signit-error").text(definitionsEmpty);
+        this.$container.find(".signit-panel-definitions .signit-error").text(panelDefinitionsEmpty);
     
       } catch (error) {
         console.error("Error fetching translations:", error);
