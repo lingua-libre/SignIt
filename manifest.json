@@ -17,7 +17,7 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
-    "offscreen"
+    "alarms"
   ],
   "content_scripts": [
     {
