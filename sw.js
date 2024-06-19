@@ -769,11 +769,26 @@ async function setState(value) {
 // Run it
 main();
 
+const WAIT_ALARM = 'waitWhileLoading';
+async function createAlarm() {
+  await chrome.alarms.create(WAIT_ALARM, {
+    periodInMinutes: 1 / 60 // by specifying it as fraction we can run the ⏰ in every 1 second
+  });
+}
+
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	if (message.command === "getBackground") {
-    // persisted the state inside chrome.storage.local but will get to that later
-    console.log(state);
     const extensionData = {state,params,uiLanguages,records,signLanguages};
     sendResponse(extensionData);
+    createAlarm();
 	}
 });
+
+chrome.alarms.onAlarm.addListener((alarm)=>{
+  if (alarm.name === WAIT_ALARM) {
+    if (state === 'ready') {
+      chrome.runtime.sendMessage({state:'ready'});
+        chrome.alarms.clear(WAIT_ALARM);
+    }
+  }
+})
