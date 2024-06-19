@@ -383,9 +383,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		ui.switchPanel( 'loaded' );
 	}
 	chrome.runtime.onMessage.addListener((message, sender) => {
-    console.log(sender);
-    if (message.state === "ready") {
-      ui = new UI();
-    }
-  });
+		console.log(sender);
+		if (message.state === "ready") {
+			ui = new UI();
+		}
+    });
 })();
