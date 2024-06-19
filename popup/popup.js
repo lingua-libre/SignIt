@@ -382,21 +382,10 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
-	if (browserType === "chrome") {
-    chrome.runtime.onMessage.addListener((message, sender) => {
-      if (message.state === "ready") {
-        ui = new UI();
-      }
-    });
-	} else {
-		let state = _backgroundPage.state;
-		function waitWhileLoading() {
-		if (state === "ready") {
+	chrome.runtime.onMessage.addListener((message, sender) => {
+		console.log(sender);
+		if (message.state === "ready") {
 			ui = new UI();
-		} else {
-			setTimeout(waitWhileLoading, 100);
 		}
-		}
-		waitWhileLoading();
-	}
+    });
 })();
