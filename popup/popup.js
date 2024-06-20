@@ -10,10 +10,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	if (browserType === "chrome") {
     // Use Chrome Extensions API,
     async function getBackgroundPage() {
-      return new Promise((resolve) => {
-        chrome.runtime.sendMessage({ command: "getBackground" }, (response) => {
-          resolve(response);
-        });
+      return new Promise(async(resolve) => {
+		let response  = await chrome.runtime.sendMessage({ command: "getBackground" });
+		resolve(response);
       });
     }
     _backgroundPage = await getBackgroundPage();
