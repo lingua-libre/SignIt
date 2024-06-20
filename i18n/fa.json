@@ -32,12 +32,12 @@
 	"si-popup-settings-uilanguage-dropdown": "تغییر زبان رابط کاربری",
 	"si-popup-settings-history": "طول تاریخچه:",
 	"si-popup-settings-history-help": "تنظیم روی ۰ (صفر)، گزارش سابقه را غیرفعال می‌کند",
-	"si-popup-settings-wpintegration": "ادغام بومی با ویکی پدیا:",
+	"si-popup-settings-wpintegration": "ادغام بومی با ویکی‌پدیا:",
 	"si-popup-settings-twospeed": "با سرعت معمولی و سپس با سرعت آهسته پخش شود:",
 	"si-popup-settings-hint-icon": "نماد میانبر روی متن انتخاب‌شده:",
 	"si-popup-settings-choosepanels": "پنل‌های نمایش:",
 	"si-popup-settings-choosepanels-definition": "فقط متن فرهنگ لغت",
 	"si-popup-settings-choosepanels-both": "هردو",
-	"si-popup-settings-choosepanels-video": "فقط ویدیوهای امضا شده",
+	"si-popup-settings-choosepanels-video": "فقط ویدیوهای امضاشده",
 	"si-popup-settings-enlighten": "برجسته‌سازی واژه‌های موجود:"
 }
