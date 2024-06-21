@@ -1,0 +1,11 @@
+[
+    {
+      "id" : 1,
+      "priority": 1,
+      "action" : { "type" : "modifyHeaders" },
+      "condition" : {
+        "urlFilter" : "|https*",
+        "resourceTypes" : ["main_frame"]
+      }
+    }
+  ]
