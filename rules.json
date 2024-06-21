@@ -1,11 +1,21 @@
 [
     {
-      "id" : 1,
-      "priority": 1,
-      "action" : { "type" : "modifyHeaders" },
-      "condition" : {
-        "urlFilter" : "|https*",
-        "resourceTypes" : ["main_frame"]
-      }
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "responseHeaders": [
+                {
+                    "header": "content-security-policy",
+                    "operation": "set"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "|https*",
+            "resourceTypes": [
+                "main_frame"
+            ]
+        }
     }
-  ]
+]
