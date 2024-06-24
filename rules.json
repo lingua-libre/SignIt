@@ -6,8 +6,9 @@
             "type": "modifyHeaders",
             "responseHeaders": [
                 {
-                    "header": "content-security-policy",
-                    "operation": "set"
+                    "header": "Content-Security-Policy",
+                    "operation": "set",
+                    "value": "media-src https://commons.wikimedia.org https://upload.wikimedia.org"
                 }
             ]
         },
