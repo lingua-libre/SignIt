@@ -638,6 +638,9 @@ async function setState(value) {
     }
   }
 
+browser.declarativeNetRequest.getAvailableStaticRuleCount(numOfRulesThatCanStillBeAdded=>console.log(numOfRulesThatCanStillBeAdded));
+browser.declarativeNetRequest.getEnabledRulesets(id=>console.log(id)); // this shows the id we set inside our dnr.rule_resources in manifest.json
+
   /* Browser interactions ****************************************** */
   var callModal = async function (msg) {
     // Tab

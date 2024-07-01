@@ -333,22 +333,25 @@ async function checkActiveTabInjections( tab ) {
 }
 
 // Edit the header of all pages on-the-fly to bypass Content-Security-Policy
-browser.webRequest.onHeadersReceived.addListener(info => {
-    const headers = info.responseHeaders; // original headers
-    for (let i=headers.length-1; i>=0; --i) {
-        let header = headers[i].name.toLowerCase();
-        if (header === "content-security-policy") { // csp header is found
-            // modifying media-src; this implies that the directive is already present
-            headers[i].value = headers[i].value.replace("media-src", "media-src https://commons.wikimedia.org https://upload.wikimedia.org");
-        }
-    }
-    // return modified headers
-    return {responseHeaders: headers};
-}, {
-    urls: [ "<all_urls>" ], // match all pages
-    types: [ "main_frame" ] // to focus only the main document of a tab
-}, ["blocking", "responseHeaders"]);
+// browser.webRequest.onHeadersReceived.addListener(info => {
+// 	const headers = info.responseHeaders; // original headers
+// 	console.log(headers);
+//     for (let i=headers.length-1; i>=0; --i) {
+//         let header = headers[i].name.toLowerCase();
+//         if (header === "content-security-policy") { // csp header is found
+//             // modifying media-src; this implies that the directive is already present
+//             headers[i].value = headers[i].value.replace("media-src", "media-src https://commons.wikimedia.org https://upload.wikimedia.org");
+//         }
+//     }
+//     // return modified headers
+//     return {responseHeaders: headers};
+// }, {
+//     urls: [ "<all_urls>" ], // match all pages
+//     types: [ "main_frame" ] // to focus only the main document of a tab
+// }, ["blocking", "responseHeaders"]);
 
+browser.declarativeNetRequest.getAvailableStaticRuleCount(numOfRulesThatCanStillBeAdded=>console.log(numOfRulesThatCanStillBeAdded));
+browser.declarativeNetRequest.getEnabledRulesets(id=>console.log(id)); // this shows the id we set inside our dnr.rule_resources in manifest.json
 
 /* *************************************************************** */
 /* Browser interactions ****************************************** */
