@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Oujon"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Načítava sa zoznam všetkých videí dostupných na Lingua Libre.",
+	"si-panel-videos-title": "Médiá",
+	"si-panel-videos-gallery-attribution": "od {{odkaz: $1 | $2 }} – Video $3 z $4",
+	"si-panel-videos-empty": "Toto slovo ešte nebolo zaznamenané, ale SignIt je projekt z verejného zdroje, môžete na ňom prispieť.<br/>",
+	"si-panel-videos-contribute-label": "Pridávajte pomocou znakového jazyka",
+	"si-panel-definitions-title": "Definícia",
+	"si-panel-definitions-wikt-iso": "v",
+	"si-panel-definitions-wikt-section-id": "#Angličtina",
+	"si-panel-definitions-wikt-pointer": "pozri na Wiktionary",
+	"si-panel-definitions-empty": "Neboli nájdené žiadne definície.",
+	"si-popup-browse-title": "Prehliadať",
+	"si-popup-browse-placeholder": "Hľadajte medzi znakmi $1 .",
+	"si-popup-browse-label": "Hľadať",
+	"si-popup-browse-icon": "Začnite hľadať",
+	"si-popup-history-title": "Dejiny",
+	"si-popup-history-empty": "Je prázdne",
+	"si-popup-settings-title": "Nastavenia",
+	"si-popup-settings-signlanguage": "Znakový jazyk",
+	"si-popup-settings-signlanguage-help": "Zmeňte videá na iný znakový jazyk.",
+	"si-popup-settings-signlanguage-dropdown": "Zmeňte jazyk videí",
+	"si-popup-settings-uilanguage": "Jazyk rozhrania:",
+	"si-popup-settings-uilanguage-help": "Zmeňte jazyk používateľského rozhrania.",
+	"si-popup-settings-uilanguage-dropdown": "Zmeňte jazyk rozhrania",
+	"si-popup-settings-history": "Dĺžka dejiny:",
+	"si-popup-settings-history-help": "Nastavenie na 0 deaktivuje denník dejiny",
+	"si-popup-settings-wpintegration": "Natívna integrácia s Wikipédiou:",
+	"si-popup-settings-twospeed": "Prehrávajte normálnou rýchlosťou a potom pomalou rýchlosťou:",
+	"si-popup-settings-hint-icon": "Ikona odkazu na vybratom texte:",
+	"si-popup-settings-choosepanels": "Panely na zobrazenie:",
+	"si-popup-settings-choosepanels-definition": "Len text slovníka",
+	"si-popup-settings-choosepanels-both": "Oby dvaja",
+	"si-popup-settings-choosepanels-video": "Iba podpísané videá",
+	"si-popup-settings-enlighten": "Zvýraznite dostupné slová:"
+}
