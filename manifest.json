@@ -10,22 +10,12 @@
 	  "48": "icons/Lingualibre_SignIt-logo-no-text-square-48.png",
 	  "64": "icons/Lingualibre_SignIt-logo-no-text-square-64.png"
 	},
-	"declarative_net_request": {
-		"rule_resources": [
-			{
-				"id": "ruleset",
-				"enabled": true,
-				"path": "rules.json"
-			}
-		]
-	},
 	"permissions": [
     "scripting",
     "activeTab",
     "contextMenus",
     "storage",
     "webRequest",
-    "declarativeNetRequest",
     "alarms"
   ],
   "host_permissions":["https://*/*"],
