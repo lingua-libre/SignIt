@@ -4,131 +4,135 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libre'de bulunan tüm videoların listesi getiriliyor.",
+    "message": "Načítava sa zoznam všetkých videí dostupných na Lingua Libre.",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "Medya:",
+    "message": "Médiá",
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "{{link:$1|$2}} – Video $3/$4",
+    "message": "od {{odkaz: $1 | $2 }} – Video $3 z $4",
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Bu kelime henüz kaydedilmedi<br> ancak SignIt kitle kaynaklı bir projedir ve SignIt'e katkıda bulunabilirsiniz.",
+    "message": "Toto slovo ešte nebolo zaznamenané, ale SignIt je projekt z verejného zdroje, môžete na ňom prispieť.<br/>",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "İşaret Dili ile Katkıda Bulunun",
+    "message": "Pridávajte pomocou znakového jazyka",
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "Tanımlar:",
+    "message": "Definícia",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "tr",
+    "message": "v",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#Türkçe",
+    "message": "#Angličtina",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "Vikisözlük'te gör",
+    "message": "pozri na Wiktionary",
     "description": ""
   },
   "si_panel_definitions_empty": {
-    "message": "Herhangi bir tanım bulunamadı.",
+    "message": "Neboli nájdené žiadne definície.",
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Göz at",
+    "message": "Prehliadať",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "$1 işaret arasında arama yapın.",
+    "message": "Hľadajte medzi znakmi $1 .",
     "description": ""
   },
   "si_popup_browse_label": {
-    "message": "Ara",
+    "message": "Hľadať",
     "description": ""
   },
   "si_popup_browse_icon": {
-    "message": "Aramayı başlat",
+    "message": "Začnite hľadať",
     "description": ""
   },
   "si_popup_history_title": {
-    "message": "Geçmiş",
+    "message": "Dejiny",
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Boş",
+    "message": "Je prázdne",
     "description": ""
   },
   "si_popup_settings_title": {
-    "message": "Ayarlar",
+    "message": "Nastavenia",
     "description": ""
   },
   "si_popup_settings_signlanguage": {
-    "message": "İşaret dili:",
+    "message": "Znakový jazyk",
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "Videoları başka bir işaret diliyle değiştirin.",
+    "message": "Zmeňte videá na iný znakový jazyk.",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "Videoların dilini değiştir",
+    "message": "Zmeňte jazyk videí",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "Arayüz dili:",
+    "message": "Jazyk rozhrania:",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Kullanıcı arayüz dilini değiştirin.",
+    "message": "Zmeňte jazyk používateľského rozhrania.",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
-    "message": "Arayüz dilini değiştir",
+    "message": "Zmeňte jazyk rozhrania",
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "Değişiklik geçmişi uzunluğu:",
+    "message": "Dĺžka dejiny:",
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "0 yapılırsa geçmiş günlüğünü devre dışı bırakılır",
+    "message": "Nastavenie na 0 deaktivuje denník dejiny",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
-    "message": "Wikipedia ile yerel entegrasyon:",
+    "message": "Natívna integrácia s Wikipédiou:",
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Normal hızda, ardından yavaş hızda oynatın:",
+    "message": "Prehrávajte normálnou rýchlosťou a potom pomalou rýchlosťou:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "Seçili metinde kısayol simgesi:",
+    "message": "Ikona odkazu na vybratom texte:",
     "description": ""
   },
   "si_popup_settings_choosepanels": {
-    "message": "Görüntülenecek paneller:",
+    "message": "Panely na zobrazenie:",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {
-    "message": "Sadece sözlük metni",
+    "message": "Len text slovníka",
     "description": ""
   },
   "si_popup_settings_choosepanels_both": {
-    "message": "Her ikisi de",
+    "message": "Oby dvaja",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Iba podpísané videá",
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "Mevcut kelimeleri vurgulayın:",
+    "message": "Zvýraznite dostupné slová:",
     "description": ""
   }
 }
