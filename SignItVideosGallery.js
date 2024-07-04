@@ -57,7 +57,7 @@ SignItVideosGallery.prototype.switchVideo = function ( newIndex ) {
 	this.$videos[ this.currentIndex ].hide();
 	this.currentIndex = newIndex;
 	this.$videos[ this.currentIndex ].show();
-	$currentVideo = this.$videos[ this.currentIndex ].children( 'video' )[ 0 ];
+	$currentVideo = this.$videos[ this.currentIndex ].children( 'iframe' )[ 0 ];
 
 	$( async function () {
 		param = await browser.storage.local.get( 'twospeed' );
@@ -83,9 +83,6 @@ SignItVideosGallery.prototype.switchVideo = function ( newIndex ) {
 			})
 		}
 	})
-
-	// After switching, play
-	$currentVideo.play();
 
 	// Arrows disables when on edges
 	this.currentIndex === 0 ?
