@@ -185,7 +185,7 @@ html, body {
 	align-items: center;
 }
 
-.signit-video video {
+.signit-video iframe {
 	box-shadow: 0 0 .5rem #999;
 	width: 345px;
 }
