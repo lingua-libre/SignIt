@@ -41,7 +41,7 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 		console.log(await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total));
 		this.$videos.push( $( `
 			<div style="display: none;">
-				<iframe controls="" muted="" preload="auto" src="${ files[ i ].filename }" width="250" class=""></iframe>
+				<iframe controls="" muted="" preload="auto" src="${ files[ i ].filename }" class="" allow="autoplay *"></iframe>
 				${await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total)}
 			</div>
 		` ) );
