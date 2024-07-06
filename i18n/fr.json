@@ -3,6 +3,7 @@
 		"authors": [
 			"Antoine Lamielle",
 			"Hugo Lopez",
+			"Oujon",
 			"SleaY",
 			"Verdy p",
 			"Wladek92",
@@ -36,7 +37,7 @@
 	"si-popup-settings-history": "Nombre de lignes d’historique :",
 	"si-popup-settings-history-help": "Mettre à 0 désactive le journal de l’historique",
 	"si-popup-settings-wpintegration": "Intégration native sur Wikipédia :",
-	"si-popup-settings-twospeed": "Lecture à vitesse normale, puis lente :",
+	"si-popup-settings-twospeed": "Lire à vitesse normale, puis lente :",
 	"si-popup-settings-hint-icon": "Icône de raccourci sur les sélections de texte :",
 	"si-popup-settings-choosepanels": "Panneaux à afficher:",
 	"si-popup-settings-choosepanels-definition": "Dictionaire seul",
