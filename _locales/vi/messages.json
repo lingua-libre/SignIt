@@ -4,135 +4,135 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libre тӀехь йолу йерриге видео могӀам гойту.",
+    "message": "Tìm nạp danh sách tất cả các video có sẵn trên Lingua Libre.",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "Медиа:",
+    "message": "Phương tiện:",
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "авторалла: {{link:$1|$2}} – $3 видео $4 чохь",
+    "message": "bởi {{link:$1|$2}} – Video $3 trên $4",
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "И дош хӀинца а дӀайаздина дац,<br> делахь SignIt — краудсорсинган проект йу, цундела ахьа къахьега мега!",
+    "message": "Từ này chưa được ghi lại,<br> nhưng SignIt là dự án có nguồn gốc cộng đồng, bạn có thể đóng góp cho nó.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "Ишарийн маттахь къинхьегам бе",
+    "message": "Đóng góp dùng ngôn ngữ ký hiệu",
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "Билгалдалар:",
+    "message": "Định nghĩa:",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "en",
+    "message": "vi",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#ингалсан",
+    "message": "#Tiếng Việt",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "хьажа Викидошам тӀехь",
+    "message": "xem tại Wiktionary",
     "description": ""
   },
   "si_panel_definitions_empty": {
-    "message": "Билгалдалар цакарий.",
+    "message": "Không tìm thấy định nghĩa.",
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Хьажар",
+    "message": "Đọc",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "Лаха $1 {{PLURAL:$1|ишар|ишарийн}} йукъахь",
+    "message": "Tìm các ký hiệu $1.",
     "description": ""
   },
   "si_popup_browse_label": {
-    "message": "Лаха",
+    "message": "Tìm kiếm",
     "description": ""
   },
   "si_popup_browse_icon": {
-    "message": "Доладе лехар",
+    "message": "Bắt đầu tìm kiếm",
     "description": ""
   },
   "si_popup_history_title": {
-    "message": "Истори",
+    "message": "Lịch sử",
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Кхузахь йаьсса йу",
+    "message": "Trống rỗng",
     "description": ""
   },
   "si_popup_settings_title": {
-    "message": "Нисдаран гӀирс",
+    "message": "Tùy chọn",
     "description": ""
   },
   "si_popup_settings_signlanguage": {
-    "message": "Ишарийн мотт",
+    "message": "Ngôn ngữ ký hiệu:",
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "Видео кхечу ишарийн маттаца хийца.",
+    "message": "Thay đổi video thành ngôn ngữ ký hiệu khác.",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "Видео тӀера мотт хийца",
+    "message": "Thay đổi ngôn ngữ video",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "Интерфейсан мотт:",
+    "message": "Ngôn ngữ giao diện:",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Долара интерфейс тӀера мотт хийца.",
+    "message": "Thay đổi ngôn ngữ giao diện.",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
-    "message": "Интерфейсан мотт хийца",
+    "message": "Thay đổi ngôn ngữ giao diện",
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "Историн йохалла:",
+    "message": "Độ dài lịch sử:",
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "ХӀоттаде 0, историн тептарна деактивици йан",
+    "message": "Đặt là 0 để tắt nhật trình lịch sử",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
-    "message": "Нативан интеграци Википедица:",
+    "message": "Tích hợp trực tiếp với Wikipedia:",
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Нормалан чехкаллица хьажа, тӀаккха меллаша чехкаллица:",
+    "message": "Phát ở tốc độ bình thường rồi chạm hơn:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "Билгалйина текстан сиха тӀекхачаран веназ:",
+    "message": "Hình lối tắt trên văn bản được chọn:",
     "description": ""
   },
   "si_popup_settings_choosepanels": {
-    "message": "Гойтуш йолу панелш:",
+    "message": "Bảng hiển thị:",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {
-    "message": "Дошаман текст бен",
+    "message": "Chỉ văn bản từ điển",
     "description": ""
   },
   "si_popup_settings_choosepanels_both": {
-    "message": "Ший а",
+    "message": "Cả hai",
     "description": ""
   },
   "si_popup_settings_choosepanels_video": {
-    "message": "Ишарийн видеош бен",
+    "message": "Chỉ video có ký hiệu",
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "ТӀекхочуш долу дешнаш билгалде:",
+    "message": "Tô màu các từ ngữ có sẵn:",
     "description": ""
   }
 }
