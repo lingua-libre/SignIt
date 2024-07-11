@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen",
+			"Nguyenphutrong2"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Tìm nạp danh sách tất cả các video có sẵn trên Lingua Libre.",
+	"si-panel-videos-title": "Phương tiện:",
+	"si-panel-videos-gallery-attribution": "bởi {{link:$1|$2}} – Video $3 trên $4",
+	"si-panel-videos-empty": "Từ này chưa được ghi lại,<br> nhưng SignIt là dự án có nguồn gốc cộng đồng, bạn có thể đóng góp cho nó.",
+	"si-panel-videos-contribute-label": "Đóng góp dùng ngôn ngữ ký hiệu",
+	"si-panel-definitions-title": "Định nghĩa:",
+	"si-panel-definitions-wikt-iso": "vi",
+	"si-panel-definitions-wikt-section-id": "#Tiếng Việt",
+	"si-panel-definitions-wikt-pointer": "xem tại Wiktionary",
+	"si-panel-definitions-empty": "Không tìm thấy định nghĩa.",
+	"si-popup-browse-title": "Đọc",
+	"si-popup-browse-placeholder": "Tìm các ký hiệu $1.",
+	"si-popup-browse-label": "Tìm kiếm",
+	"si-popup-browse-icon": "Bắt đầu tìm kiếm",
+	"si-popup-history-title": "Lịch sử",
+	"si-popup-history-empty": "Trống rỗng",
+	"si-popup-settings-title": "Tùy chọn",
+	"si-popup-settings-signlanguage": "Ngôn ngữ ký hiệu:",
+	"si-popup-settings-signlanguage-help": "Thay đổi video thành ngôn ngữ ký hiệu khác.",
+	"si-popup-settings-signlanguage-dropdown": "Thay đổi ngôn ngữ video",
+	"si-popup-settings-uilanguage": "Ngôn ngữ giao diện:",
+	"si-popup-settings-uilanguage-help": "Thay đổi ngôn ngữ giao diện.",
+	"si-popup-settings-uilanguage-dropdown": "Thay đổi ngôn ngữ giao diện",
+	"si-popup-settings-history": "Độ dài lịch sử:",
+	"si-popup-settings-history-help": "Đặt là 0 để tắt nhật trình lịch sử",
+	"si-popup-settings-wpintegration": "Tích hợp trực tiếp với Wikipedia:",
+	"si-popup-settings-twospeed": "Phát ở tốc độ bình thường rồi chạm hơn:",
+	"si-popup-settings-hint-icon": "Hình lối tắt trên văn bản được chọn:",
+	"si-popup-settings-choosepanels": "Bảng hiển thị:",
+	"si-popup-settings-choosepanels-definition": "Chỉ văn bản từ điển",
+	"si-popup-settings-choosepanels-both": "Cả hai",
+	"si-popup-settings-choosepanels-video": "Chỉ video có ký hiệu",
+	"si-popup-settings-enlighten": "Tô màu các từ ngữ có sẵn:"
+}
