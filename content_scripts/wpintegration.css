@@ -6,7 +6,7 @@
 	max-width: 300px;
 }
 
-.signit-inline-container video {
+.signit-inline-container iframe {
 	box-shadow: 0 0 .5rem #999;
 }
 

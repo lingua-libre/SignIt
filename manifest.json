@@ -16,9 +16,9 @@
     "contextMenus",
     "storage",
     "webRequest",
-    "webRequestBlocking",
     "alarms"
   ],
+  "host_permissions":["https://*/*"],
   "content_scripts": [
     {
       "matches": [
