@@ -53,44 +53,16 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 	this.switchVideo( 0 );
 };
 
-SignItVideosGallery.prototype.switchVideo = function ( newIndex ) {
-	var speedNormal = 1, speedSlow = 0.5;
+SignItVideosGallery.prototype.switchVideo = function (newIndex) {
+  this.$videos[this.currentIndex].hide();
+  this.currentIndex = newIndex;
+  this.$videos[this.currentIndex].show();
 
-	this.$videos[ this.currentIndex ].hide();
-	this.currentIndex = newIndex;
-	this.$videos[ this.currentIndex ].show();
-	$currentVideo = this.$videos[ this.currentIndex ].children( 'iframe' )[ 0 ];
-
-	$( async function () {
-		param = await browser.storage.local.get( 'twospeed' );
-		if ( param.twospeed === false ) {
-			console.warn( 'twospeed disabled' );
-			return;
-		}
-		// addClass(), removeClass(), and toggleClass()
-		if ( param.twospeed === true ) {
-			$currentVideo.addEventListener('ended', function(event) {
-				// Normal speed just played
-				if (!this.classList.contains('slow')) {
-					this.classList.add('slow');
-					this.playbackRate = speedSlow || 0.75;
-					this.play();
-				}
-				// Slow speed just played
-				else {
-					this.classList.remove('slow');
-					this.playbackRate = speedNormal || 1;
-					this.pause();
-				}
-			})
-		}
-	})
-
-	// Arrows disables when on edges
-	this.currentIndex === 0 ?
-		this.previousVideoButton.setDisabled( true )
-		:this.previousVideoButton.setDisabled( false );
-	this.currentIndex >= this.$videos.length - 1 ?
-		this.nextVideoButton.setDisabled( true )
-		:this.nextVideoButton.setDisabled( false );
+  // Arrows disables when on edges
+  this.currentIndex === 0
+    ? this.previousVideoButton.setDisabled(true)
+    : this.previousVideoButton.setDisabled(false);
+  this.currentIndex >= this.$videos.length - 1
+    ? this.nextVideoButton.setDisabled(true)
+    : this.nextVideoButton.setDisabled(false);
 };
