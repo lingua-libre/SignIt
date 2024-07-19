@@ -40,8 +40,10 @@ See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
 
 ## Development
 ```
-├── manifest.json (v.2) — defines extensions and dependencies rights.
+├── _locales/ (inactive)
+├── manifest.json (v.3) — defines extensions and dependencies rights.
 ├── background-script.js — main script.
+├── sw.js — main script for Chromium browsers.
 ├── SignItCoreContent.js — creates duo panels "Video | Definition"
 ├── SignItVideosGallery.js — given urls, creates gallery of videos.
 ├── content_scripts/
