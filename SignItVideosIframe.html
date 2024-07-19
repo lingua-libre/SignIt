@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load Video from URL Parameter</title>
+</head>
+<body>
+  <p id="no-video-url" style="display:none;">Video URL missing, try with suffix : 
+    <a href="./SignItVideosIframe.html?twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm">
+    ?twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm
+    </a>
+    </p>
+  <video id="signitVideoElement" controls="" muted="" preload="auto" autoplay="true" src="videoUrl" width="250" class="">
+    Your browser does not support the video tag.
+  </video>
+<script>
+
+/* USAGE ******************************************************* */
+// ./SignItVideosIframe.html?twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm
+  
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Get the video URL from the URL parameter
+    var videoUrl = getUrlParameter('video');
+    // Set the video source if the video URL exists
+    if (videoUrl) {
+        document.getElementById('signitVideoElement').src = videoUrl;
+    } else {
+        // Show the message if video URL is missing
+        document.getElementById('no-video-url').style.display = 'block';
+    }
+
+    var speedNormal = getUrlParameter('speedNormal') || 1;
+        speedSlow = getUrlParameter('speedSlow') || 0.5;
+    var twospeed = true;
+        twospeed = getUrlParameter('twospeed');
+        
+    console.log({videoUrl}, {speedNormal}, {speedSlow}, {twospeed});
+
+if ( twospeed === 'true' ) {
+			document.getElementById('signitVideoElement').addEventListener('ended', function(event) {
+				// Normal speed just played
+				if (!this.classList.contains('slow')) {
+					this.classList.add('slow');
+					this.playbackRate = speedSlow;
+					this.play();
+				}
+				// Slow speed just played
+				else {
+					this.classList.remove('slow');
+					this.playbackRate = speedNormal;
+					this.pause();
+				}
+			})
+		}
+  
+});
+</script>
+</body>
+</html>
