@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var speedNormal = getUrlParameter('speedNormal') || 1;
         speedSlow = getUrlParameter('speedSlow') || 0.5;
-    var twospeed = true;
-        twospeed = getUrlParameter('twospeed');
+    var twospeed = getUrlParameter('twospeed') || true;
         
     console.log({videoUrl}, {speedNormal}, {speedSlow}, {twospeed});
 
