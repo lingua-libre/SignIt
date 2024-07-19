@@ -39,9 +39,11 @@ SignItVideosGallery.prototype.refresh = async function ( files ) {
 		speaker = files[ i ].speaker,
 		total = files.length;
 		console.log(await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total));
+		param = await browser.storage.local.get( 'twospeed' );
+
 		this.$videos.push( $( `
 			<div style="display: none;">
-				<iframe controls="" muted="" preload="auto" src="${ files[ i ].filename }" class="" allow="autoplay *"></iframe>
+				<iframe controls="" muted="" preload="auto" src="https://lingua-libre.github.io/SignIt/SignItVideosIframe.html?twospeed=${param.twospeed}&video=${ files[ i ].filename }" class=""></iframe>
 				${await banana.i18n("si-panel-videos-gallery-attribution",url, speaker, i+1, total)}
 			</div>
 		` ) );
