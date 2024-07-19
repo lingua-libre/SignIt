@@ -1,0 +1,38 @@
+{
+  "si_panel_videos_title": {
+    "message": "မီဒီယာ:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#အင်္ဂလိပ်",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "ရှာဖွေရန်",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "ရှာဖွေမှုကို စတင်ပါ",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "ရာဇဝင်",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "ဗလာ",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "အပြင်အဆင်များ",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "နှစ်ခုစလုံး",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "လက်မှတ်ထိုးထားသော ဗီဒီယိုများသာ",
+    "description": ""
+  }
+}
