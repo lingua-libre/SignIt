@@ -54,6 +54,18 @@ See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
     └── SearchWidget.js — handle the search queries
 ```
 
+### MV2 -> MV3 Brief
+
+Chrome web store had started deprecating the web extensions with manifest version 2 and since we were moving to chrome for bigger market share , we had to migrate our extension as per MV3 in order to publish it. Below are a few points on the achievements , challenges faced and hurdles that still persist :-
+
+* In `popup.js` messages have been passed for various functions that are present in `sw.js` or `background-script.js` , well i.e., because  popup and other content scripts no longer have context of background page which happened to be the case in MV2.
+* i18n : Even for `banana.i18n` , message passing is used. Reason being , earlier we could fetch banana when we fetched the context of background page using `browser.rutime.getBackgroundPage()`,but since we can no longer do that , message passing seemed the only right option. Setback of using this approach is that things become asynchronous , and you have to `await` until the message is fulfilled. It did become problematic when working inside constructor functions. Still has a lot of room for improvement and it is something that should be worked upon in future.
+
+ While there were other options like making your own i18n function , based on the arguments received from `sw.js` , but that was a repetitive task when using i18n inside multiple files.
+ 
+ Other option was to use `browser.i18n` native API. This was an ok option but didn't allow users to change to their desired language , only changed them when browser's language was different. For someone who didn't want the extension to run in his native language or wanted to run it in different language had no control.
+* iframe instead of video tag : While this fix was made so that extension could work on sites with stricter CSPs like github or X, this broke the `twospeed` feature. The `twospeed` feature , when enabled allowed the users to see sign language video first in normal speed then in slow mo. It's code worked with event listeners of video tag , but since we replaced it with iframe , this feature no longer works. While you might think that accessing content document inside  iframe is no biggie , it doesn't work as the video embedded and the parent inside which the iframe is embedded in belong to different origins. Again this is something that can and should be improvised by future devs reading this.
+
 ## Contribute
 ### Contributors
 We look for volunteers:
