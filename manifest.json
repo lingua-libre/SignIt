@@ -88,7 +88,7 @@
     }
   },
   "content_security_policy": {
-    "extension_pages": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org; script-src 'self';  style-src 'self' 'unsafe-inline'; img-src 'self' data",
+    "extension_pages": "default-src 'self' data: https://lingualibre.org https://*.wikimedia.org https://*.wikipedia.org https://*.wiktionary.org https://*.github.io/; script-src 'self';  style-src 'self' 'unsafe-inline'; img-src 'self' data",
     "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
   },
   "action": {
