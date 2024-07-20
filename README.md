@@ -46,6 +46,7 @@ See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
 ├── sw.js — main script for Chromium browsers.
 ├── SignItCoreContent.js — creates duo panels "Video | Definition"
 ├── SignItVideosGallery.js — given urls, creates gallery of videos.
+├── SignItVideosIframe.html — contains intermediate iframe for videos and twsospeed feature.
 ├── content_scripts/
 |   ├── signit.js — creates above text SignIt popup
 |   └── wpintegration.js — on wikimedia sites, if page's title has a sign language video available, then display smartly.
