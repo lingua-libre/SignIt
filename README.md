@@ -46,6 +46,7 @@ See also [Mozilla's web-ext](https://github.com/mozilla/web-ext)
 ├── sw.js — main script for Chromium browsers.
 ├── SignItCoreContent.js — creates duo panels "Video | Definition"
 ├── SignItVideosGallery.js — given urls, creates gallery of videos.
+├── SignItVideosIframe.html — contains intermediate iframe for videos and twsospeed feature.
 ├── content_scripts/
 |   ├── signit.js — creates above text SignIt popup
 |   └── wpintegration.js — on wikimedia sites, if page's title has a sign language video available, then display smartly.
@@ -64,7 +65,7 @@ Chrome web store had started deprecating the web extensions with manifest versio
  While there were other options like making your own i18n function , based on the arguments received from `sw.js` , but that was a repetitive task when using i18n inside multiple files.
  
  Other option was to use `browser.i18n` native API. This was an ok option but didn't allow users to change to their desired language , only changed them when browser's language was different. For someone who didn't want the extension to run in his native language or wanted to run it in different language had no control.
-* iframe instead of video tag : While this fix was made so that extension could work on sites with stricter CSPs like github or X, this broke the `twospeed` feature. The `twospeed` feature , when enabled allowed the users to see sign language video first in normal speed then in slow mo. It's code worked with event listeners of video tag , but since we replaced it with iframe , this feature no longer works. While you might think that accessing content document inside  iframe is no biggie , it doesn't work as the video embedded and the parent inside which the iframe is embedded in belong to different origins. Again this is something that can and should be improvised by future devs reading this.
+* iframe instead of video tag : This fix was made so that extension could work on sites with stricter CSPs like github or X. `declarativeNetRequest` API was certainly an alternative but it is not yet fully functional. We can't append headers , not even a single one despite being mentioned in docs.
 
 ## Contribute
 ### Contributors
