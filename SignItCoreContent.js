@@ -17,8 +17,8 @@ var SignItCoreContent = function () {
                       <h2></h2>
                       <div class="signit-definitions-text"></div>
                       <div class="signit-definitions-source" >
-                          <a href target="_blank"></a>
-                          <a href="#" target="_blank" class="report-link"> Report</a>
+                          <a href="#" target="_blank" class="signit-definitions-source-wikt"></a>
+                          <a href="#" target="_blank" class="signit-definitions-source-report"></a>
                       </div>
                   </div>
                   <div class="signit-panel-definitions signit-loading">
@@ -97,12 +97,12 @@ var SignItCoreContent = function () {
       this.contributeButton.$label.text(panelVideosContributeLabel);
       const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
       this.$container
-        .find(".signit-definitions-source a")
+        .find(".signit-definitions-source-wikt")
         .attr("href", definitionsSourceLink)
         .text(wiktPointer);
       const reportSource = "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
-        .find(".report-link")
+        .find(".signit-definitions-source-report")
         .attr("href", reportSource)
         .text("Report error");
       this.$container
