@@ -9,7 +9,7 @@ var SignItCoreContent = function () {
                       <h2></h2>
                       <p></p>
                   </div>
-                  <div class="signit-panel-videos signit-video"></div>
+                  <div class="signit-panel-videos signit-gallery-videos"></div>
               </div>
               <div class="signit-panel-separator"></div>
               <div class="signit-panel-definitions">
@@ -44,7 +44,7 @@ var SignItCoreContent = function () {
   this.$videosPanelNoVideo = this.$container
     .find(".signit-novideo")
     .append(this.contributeButton.$element);
-  this.$videosPanelContent = this.$container.find(".signit-video");
+  this.$videosPanelContent = this.$container.find(".signit-gallery-videos");
   this.$videosPanelGallery = new SignItVideosGallery(this.$videosPanelContent);
 
   this.$definitionPanelContent = this.$container.find(".signit-definitions");

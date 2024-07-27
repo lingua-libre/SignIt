@@ -180,12 +180,12 @@ html, body {
 	text-align: center;
 }
 
-.signit-video {
+.signit-gallery-videos {
 	display: flex;
 	align-items: center;
 }
 
-.signit-video iframe {
+.signit-gallery-videos iframe {
 	box-shadow: 0 0 .5rem #999;
 	width: 345px;
 }

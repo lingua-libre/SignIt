@@ -5,12 +5,12 @@ var SignItVideosGallery = function (container) {
   this.previousVideoButton = new OO.ui.ButtonWidget({
     icon: "previousBtn",
     framed: false,
-    classes: ["video-gallery-button", "previous-button"],
+    classes: ["signit-gallery-videos-buttons", "signit-gallery-videos-prev"],
   });
   this.nextVideoButton = new OO.ui.ButtonWidget({
     icon: "nextBtn",
     framed: false,
-    classes: ["video-gallery-button", "next-button"],
+    classes: ["signit-gallery-videos-button", "signit-gallery-videos-next"],
   });
   this.$videoContainer = $('<div class="signit-panel-videos-gallery">');
 
@@ -35,20 +35,38 @@ var SignItVideosGallery = function (container) {
 
 const styles = `
 <style>
-  .video-gallery-button {
+  .signit-panel-videos {
+    text-align: center;
+  }
+  .signit-gallery-videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .signit-gallery-videos iframe {
+    box-shadow: 0 0 0.5rem #999;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: -50px;
+    min-height: 220px;
+  }
+  .signit-gallery-videos-buttons {
     background-color: white; /* Customize the background color */       
     border: none;              /* Remove the border */
     border-radius: 5px;        /* Rounded corners */
     cursor: pointer;           /* Pointer cursor on hover */
-    
   }
-  .previous-button {
+  .signit-gallery-videos-prev {
     float: left;               /* Align to the left */
   }
-  .next-button {
+  .signit-gallery-videos-next {
     float: right;              /* Align to the right */
   }
-  .signit-panel-videos-gallery {
+  .signit-gallery-videos-gallery {
     position: relative;
     overflow: hidden;
     height: auto;
