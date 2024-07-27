@@ -34,7 +34,7 @@ var SignItVideosGallery = function (container) {
 };
 
 const styles = `
-<style>
+<style type="text/css">
   .signit-panel-videos {
     text-align: center;
   }
@@ -43,6 +43,7 @@ const styles = `
     align-items: center;
     justify-content: center;
   }
+  .signit-panel-videos-gallery iframe,
   .signit-gallery-videos iframe {
     box-shadow: 0 0 0.5rem #999;
     width: 100%;
