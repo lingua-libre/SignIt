@@ -38,13 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('no-video-url').style.display = 'block';
     }
 
-    var speedNormal = getUrlParameter('speedNormal') || 1;
+    // Pass size parameter
+    var width = getUrlParameter('width') || 250;
+    document.getElementById('signitVideoElement').width = width;
+
+    // Pass speed parameter
+    var speedNormal = getUrlParameter('speedNormal') || 1,
         speedSlow = getUrlParameter('speedSlow') || 0.5;
     var twospeed = getUrlParameter('twospeed') || true;
         
-    console.log({videoUrl}, {speedNormal}, {speedSlow}, {twospeed});
+    console.log({videoUrl}, {speedNormal}, {speedSlow}, {twospeed}, {width});
 
-if ( twospeed === 'true' ) {
+    if ( twospeed === 'true' ) {
 			document.getElementById('signitVideoElement').addEventListener('ended', function(event) {
 				// Normal speed just played
 				if (!this.classList.contains('slow')) {
@@ -60,6 +65,7 @@ if ( twospeed === 'true' ) {
 				}
 			})
 		}
+	
   
 });
 </script>
