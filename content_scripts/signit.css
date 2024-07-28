@@ -60,28 +60,8 @@
 
 /* *************************************************************** */
 /* Video gallery panel (left or top) ***************************** */
-.signit-panel-videos {
-  text-align: center;
-}
-
-
-.signit-video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.signit-video iframe {
-  box-shadow: 0 0 0.5rem #999;
-  width: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin-right: -50px;
-  min-height: 220px;
-}
+/* MOVE TO JS BECAUSE USED IN MODAL AND POPUP ******************** */
+/* *************************************************************** */
 
 /* MODAL > TEST Toggle video button : REMOVED */
 /*

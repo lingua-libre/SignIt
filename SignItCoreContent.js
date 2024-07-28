@@ -9,7 +9,7 @@ var SignItCoreContent = function () {
                       <h2></h2>
                       <p></p>
                   </div>
-                  <div class="signit-panel-videos signit-video"></div>
+                  <div class="signit-panel-videos signit-gallery-videos"></div>
               </div>
               <div class="signit-panel-separator"></div>
               <div class="signit-panel-definitions">
@@ -17,8 +17,8 @@ var SignItCoreContent = function () {
                       <h2></h2>
                       <div class="signit-definitions-text"></div>
                       <div class="signit-definitions-source" >
-                          <a href target="_blank"></a>
-                          <a href="#" target="_blank" class="report-link"> Report</a>
+                          <a href="#" target="_blank" class="signit-definitions-source-wikt"></a>
+                          <a href="#" target="_blank" class="signit-definitions-source-report"></a>
                       </div>
                   </div>
                   <div class="signit-panel-definitions signit-loading">
@@ -44,7 +44,7 @@ var SignItCoreContent = function () {
   this.$videosPanelNoVideo = this.$container
     .find(".signit-novideo")
     .append(this.contributeButton.$element);
-  this.$videosPanelContent = this.$container.find(".signit-video");
+  this.$videosPanelContent = this.$container.find(".signit-gallery-videos");
   this.$videosPanelGallery = new SignItVideosGallery(this.$videosPanelContent);
 
   this.$definitionPanelContent = this.$container.find(".signit-definitions");
@@ -96,16 +96,15 @@ var SignItCoreContent = function () {
         .text(panelDefinitionsTitle);
       this.contributeButton.$label.text(panelVideosContributeLabel);
       const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
-      const reportSource =
-        "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
-        .find(".signit-definitions-source a")
+        .find(".signit-definitions-source-wikt")
         .attr("href", definitionsSourceLink)
         .text(wiktPointer);
+      const reportSource = "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
-        .find(".report-link")
+        .find(".signit-definitions-source-report")
         .attr("href", reportSource)
-        .text("⚠ Report");
+        .text("Report error");
       this.$container
         .find(".signit-panel-definitions .signit-error")
         .text(panelDefinitionsEmpty);
@@ -200,9 +199,8 @@ var SignItCoreContent = function () {
   //adding style to report btn
   // Inject styles
   const styleSheet = `
-   
     .report-link {
-      color: red;
+      /* color: red; */
       text-decoration: underline;
       cursor: pointer;
       text-align:right;
