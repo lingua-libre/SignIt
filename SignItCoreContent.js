@@ -96,16 +96,15 @@ var SignItCoreContent = function () {
         .text(panelDefinitionsTitle);
       this.contributeButton.$label.text(panelVideosContributeLabel);
       const definitionsSourceLink = `https://${wiktIso}.wiktionary.org`;
-      const reportSource =
-        "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
         .find(".signit-definitions-source a")
         .attr("href", definitionsSourceLink)
         .text(wiktPointer);
+      const reportSource = "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
         .find(".report-link")
         .attr("href", reportSource)
-        .text("⚠ Report");
+        .text("Report error");
       this.$container
         .find(".signit-panel-definitions .signit-error")
         .text(panelDefinitionsEmpty);
@@ -200,9 +199,8 @@ var SignItCoreContent = function () {
   //adding style to report btn
   // Inject styles
   const styleSheet = `
-   
     .report-link {
-      color: red;
+      /* color: red; */
       text-decoration: underline;
       cursor: pointer;
       text-align:right;
