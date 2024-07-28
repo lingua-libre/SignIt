@@ -132,22 +132,13 @@ We look for volunteers:
 - [Lingua Libre SignIt for Firefox](https://addons.mozilla.org/en-US/firefox/addon/lingua-libre-signit/) — a browser extension to click words in browser and show sign language videos generated via Lingualibre.
 
 ## Powered By
+| Wikimedia Foundation | Wikimedia France | URFIST Occitanie | Google Summer of Code
+|:----:|:----:|:----:|:----:|
+| 2016-present | 2018 | 2023-2024 | 2024
+| <a href="https://www.wikimedia.fr/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/7/75/Wikimedia_France_logo.svg" alt="Wikimedia France logo linking to its website."></a> | <a href="https://meta.wikimedia.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/3/31/Wikimedia_Foundation_logo_-_vertical.svg" alt="Wikimedia logo linking to its website."></a> | <a href="https://"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/URFIST_Occitanie-2023.svg" alt="URFIST Occitanie."></a> | <a href="https://summerofcode.withgoogle.com/"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/GSoCLogo.png" alt="Google Summer of Code logo linking to its website."></a>
 
-<div align="center">
-<a href="https://summerofcode.withgoogle.com/"><img height="120" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/GSoCLogo.png" alt="Google Summer of Code logo linking to its website."></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://meta.wikimedia.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Wikimedia_Foundation_logo_-_vertical.svg/512px-Wikimedia_Foundation_logo_-_vertical.svg.png" alt="Wikimedia logo linking to its website."></a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.wikimedia.fr/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_France_logo.svg/460px-Wikimedia_France_logo.svg.png" alt="Wikimedia France logo linking to its website."></a>
-</div>
+## Open content communities
 
-## Wikimedia Communities
-
-<div align="center">
-  <br>
-  <a href="https://www.wikidata.org/"><img height="175" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WikidataLogo.png" alt="Wikidata logo"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://www.wikipedia.org/"><img height="190" src="https://raw.githubusercontent.com/scribe-org/Organization/main/resources/images/logos/WikipediaLogo.png" alt="Wikipedia logo"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <br>
-</div>
+| Lingua Libre | Wiktionary | Wikidata | Wikimedia Commons
+|:----:|:----:|:----:|:----:|
+| <a href="https://lingualibre.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Lingualibre-logo.svg" alt="Lingua Libre logo"></a> | <a href="https://www.wikipedia.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/WiktionaryEn.svg" alt="Wiktionary logo"></a> | <a href="https://www.wikidata.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/6/66/Wikidata-logo-en.svg" alt="Wikidata logo"></a> | <a href="https://www.wikipedia.org/"><img height="120" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Commons-logo-en.svg" alt="Wikimedia Commons logo"></a>
