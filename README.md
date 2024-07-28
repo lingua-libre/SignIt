@@ -1,4 +1,4 @@
-<div align="centre">
+<div align="center">
   <img src="icons/SignIt banner.svg"/>
 </div>
 
