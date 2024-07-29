@@ -16,7 +16,7 @@
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Esta palavra ainda não foi gravada,<br /> mas SignIt é um projeto de crowdsourcingpara o qual você pode contribuir.",
+    "message": "Esta palavra ainda não foi gravada,<br /> mas SignIt é um projeto de crowdsourcing o qual você pode contribuir.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
@@ -113,6 +113,22 @@
   },
   "si_popup_settings_hint_icon": {
     "message": "Ícone de atalho no texto selecionado:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Painéis a mostrar:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Apenas texto de dicionário",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Ambos",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Apenas vídeos assinados",
     "description": ""
   },
   "si_popup_settings_enlighten": {
