@@ -8,28 +8,25 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 
 - Ideal for signers as it fully utilizes multi-source and diffused lights.
 
- <img style="height:200px;" src="doc/Images_studio/SignIt-Studio-Elix1.png" alt="good light" />
- <img style="height:200px;" src="doc/Images_studio/SignIt-Studio-IRIS1.png" alt="good light" />
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-Elix2.png" alt="std eg" />
 
-- Studio Example:
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-Elix3.png" alt="std eg" />
 
- <img style="height:200px;" src="doc/Images_studio/std%20eg.png" alt="std eg" />
- <img style="height:200px;" src="doc/Images_studio/std%20eg2.png" alt="std eg" />
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-Elix1.png" alt="good light" />
 
 ### Good Light, Black Background, Black Shirt
 
-<img style="height:200px;" src="doc/Images_studio/SignIt-Studio-black_shirt_black_board.png" alt="Black Bg Black shirt" />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-black_shirt_black_board.png" alt="Black Bg Black shirt" />
 
 ### Good Light, Green Screen, Whitened Background
 
 - Achieved with a green screen and post-editing. Integrates well with computer textual content, especially on white backgrounds.
-
- <img style="height:200px;" src="path/to/Screenshot_20220731_162739.jpg" alt="Screenshot_20220731_162739" />
- <img style="height:200px;" src="path/to/Screenshot_20220731_162707.jpg" alt="Screenshot_20220731_162707" />
+ 
+ <img style="height:300px;" src="./doc/studio/SignIt-Studio-uni_background_coal.png " alt="uniform background, correct light" />
 
 ### Zero Euro Studio with Correct Lighting
 
- <img style="height:300px;" src="doc/Images_studio/zero%20euro%20light%20correct.jpg" alt="zero Euro correct light" />
+ <img style="height:300px;" src="doc/studio/SignIt-Studio-cheap.png" alt="zero Euro correct light" />
 
 ### Poor Lighting
 
@@ -38,19 +35,19 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 - Lacks proper lighting and professional camera.
 - Yellowish background can be partially neutralized with professional cameras' white balancing features.
 
-<img style="height:200px;" src="path/to/Screenshot_20220731_163246.jpg" alt="Screenshot_20220731_163246" />
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-IRIS1.png" alt="good light" />
 
 #### Poor Light and Irregular Background
 
 - Similar issues as poor light with additional visual distractions.
 
-<img style="height:200px;" src="doc/Images_studio/poor%20light.png" alt="Poor Lighting " />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-poor_light.png" alt="Poor Lighting " />
 
 ## 2. Camera Position
 
 Place the camera at eye level to make the lecture more engaging and natural. Use a tripod or stable surface.
 
- <img style="height:200px;" src="doc/Images_studio/camera%20positon.png" alt="Camera Position" />
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-camera_position.png" alt="Camera Position" />
 
 ## 3. Background
 
@@ -70,7 +67,7 @@ Frame yourself well in the shot, leaving some headroom and ensuring you're cente
 - Maintain consistent framing throughout a series.
 - Position camera at shoulder or sternum level.
 
-<img style="height:200px;" src="doc/Images_studio/SignIt-Studio-framing.png" alt="Framing" />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-framing.png" alt="Framing" />
 
 ## 6. Clarity
 
@@ -80,7 +77,7 @@ Speak clearly and at a moderate pace. Avoid excessive jargon unless it's relevan
 
 Maintain eye contact with the camera to engage with your audience.
 
-<img style="height:200px;" src="doc/Images_studio/eye%20to%20eye.png" alt="eye to eye" />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-Eyes.png" alt="eye to eye" />
 
 ## 8. Practice
 
@@ -90,9 +87,9 @@ Rehearse your material to smooth out any rough patches and ensure a confident de
 
 Test your equipment (camera, microphone, and software) before starting to avoid technical issues.
 
- <img style="height:200px;" src="doc/Images_studio/technical%20Checks.png" alt="Sound Check" />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-technical1.png" alt="Sound Check" />
 
- <img style="height:200px;" src="doc/Images_studio/SignIt-Studio-technical.png" alt="tech check" />
+<img style="height:200px;" src="doc/studio/SignIt-Studio-technical2.png" alt="tech check" />
 
 ## 10. Breaks
 
