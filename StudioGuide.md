@@ -35,11 +35,16 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 - Lacks proper lighting and professional camera.
 - Yellowish background can be partially neutralized with professional cameras' white balancing features.
 
- <img style="height:200px;" src="doc/studio/SignIt-Studio-IRIS1.png" alt="good light" />
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-IRIS1.png" alt="average light" />
+ 
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-room_background_white2.png" alt="poor background" />
 
 #### Poor Light and Irregular Background
 
 - Similar issues as poor light with additional visual distractions.
+
+ <img style="height:200px;" src="doc/studio/SignIt-Studio-room_background_white1.png" alt="poor background" />
+
 
 <img style="height:200px;" src="doc/studio/SignIt-Studio-poor_light.png" alt="Poor Lighting " />
 
