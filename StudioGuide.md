@@ -8,6 +8,10 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 
 - Ideal for signers as it fully utilizes multi-source and diffused lights.
 
+ <img style="height:200px;" src="doc/studio/NYT-01.png" alt="New York Times best practice" />
+
+ <img style="height:200px;" src="doc/studio/NYT-02.png" alt="New York Times best practice" />
+
  <img style="height:200px;" src="doc/studio/SignIt-Studio-Elix2.png" alt="std eg" />
 
  <img style="height:200px;" src="doc/studio/SignIt-Studio-Elix3.png" alt="std eg" />
@@ -26,7 +30,11 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 
 ### Zero Euro Studio with Correct Lighting
 
- <img style="height:300px;" src="doc/studio/SignIt-Studio-cheap.png" alt="zero Euro correct light" />
+ <img style="height:300px;" src="doc/studio/SignIt-Studio-cheap-filming.png" alt="cheap studio filming" />
+
+ <img style="height:300px;" src="doc/studio/SignIt-Studio-cheap-result.png" alt="cheap studio result" />
+
+ Note: ideally, Ipad's camera should be at face level.
 
 ### Poor Lighting
 
@@ -36,7 +44,7 @@ Ensure good lighting by positioning yourself facing a light source to avoid shad
 - Yellowish background can be partially neutralized with professional cameras' white balancing features.
 
  <img style="height:200px;" src="doc/studio/SignIt-Studio-IRIS1.png" alt="average light" />
- 
+
  <img style="height:200px;" src="doc/studio/SignIt-Studio-room_background_white2.png" alt="poor background" />
 
 #### Poor Light and Irregular Background
