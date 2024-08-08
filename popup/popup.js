@@ -232,6 +232,31 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			help: await banana.i18n("si-popup-settings-uilanguage-help"),
 			//helpInline: true
 		} );
+    // Position dropdown
+     // Positions Data
+   positionItems = [
+    new OO.ui.MenuOptionWidget({
+        data: 'top',
+        label:"▲"
+    }),
+    new OO.ui.MenuOptionWidget({
+        data: 'bottom',
+        label: "▼" 
+    })
+];
+
+   // Hint-icon layout
+   positionDropdown = new OO.ui.DropdownWidget({ 
+    label: "Hint icon Position", 
+    menu: { items: positionItems }, 
+
+  } );
+  positionLayout = new OO.ui.FieldLayout( positionDropdown, {
+    label: "Position",
+    align: 'top',
+    help: "Choose Hint icon Position",
+    //helpInline: true
+  } );
 
 		// History-logs length
 		historyWidget = new OO.ui.NumberInputWidget( {
@@ -306,6 +331,17 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// Select menus
 		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
 		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
+    positionDropdown.getMenu().on('choose', (item) => {
+      const position = item.getData();
+      sendMessageUp("storeHintIconPosition", position);
+      console.log('position', position)
+  });
+
+    async function sendMessageUp(msg, argument) {
+    console.log('here in sendMessageUp', msg, argument)
+    const response = await browser.runtime.sendMessage({ command: msg, argument });
+    if (response !== undefined) return response;
+    }
 		// Toogle buttons
 		historyWidget.setValue( _backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
@@ -316,7 +352,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// Tri-buttons : selectItemByData or setData
 		choosepanelsWidget.setData( _backgroundPage.params.choosepanels );
 		choosepanelsWidget.selectItemByData( _backgroundPage.params.choosepanels );
-
+    
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
@@ -345,7 +381,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element )
 			.append( coloredwordsLayout.$element )
-			.append( choosepanelsLayout.$element );
+			.append( choosepanelsLayout.$element )
+      .append( positionLayout.$element )
 	};
 
 	/* *********************************************************** */

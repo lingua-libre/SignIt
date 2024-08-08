@@ -83,8 +83,9 @@ WHERE {
       hinticon: true,
       coloredwords: true,
       choosepanels: "both", // issues/36
+      position:'top',
     };
-
+ 
   /* *************************************************************** */
   /* i18n context ************************************************** */
   // List of UI languages with translations on github via translatewiki
@@ -553,6 +554,10 @@ async function setState(value) {
     records = await getAllRecords(newLang);
     await storeParam("signLanguage", newLang); // localStorage save
   }
+  async function changePosition(newPosition) {
+    await storeParam('position',newPosition); // localStorage save
+    console.log("changePosition executed")
+  }
 
   // Given language's Qid, reload available translations
   async function changeUiLanguage(newLang) {
@@ -735,6 +740,13 @@ async function setState(value) {
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);
     }
+    else if (message.command==='storeHintIconPosition'){
+      const position = message.argument;
+      // Store the position in localStorage
+      console.log('Hint icon position stored:', position);
+      storeParam('position',position)
+      console.log("done")
+  }
   });
 
   /* *************************************************************** */
@@ -753,6 +765,7 @@ async function setState(value) {
     await getStoredParam("hinticon");
     await getStoredParam("coloredwords");
     await getStoredParam("choosepanels");
+    await getStoredParam("position");
 
     let signLanguage = await getStoredParam("signLanguage");
     signLanguages = await getSignLanguagesWithVideos();
