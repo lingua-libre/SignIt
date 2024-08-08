@@ -25,7 +25,7 @@
 		}
 		return text.trim();
 	}
-
+   
 	function getSelectionCoords() {
 		var rect,
 			x = 0,
@@ -45,12 +45,17 @@
 		height = rect.bottom - rect.top;
 		return { x: x, y: y, width: width, height: height };
 	}
-   
-	var selectionToHintIconCoords = function (coords,shiftX,shiftY){
+
+	var selectionToHintIconCoords = function (coords,shiftX,shiftY,positionData){
 		console.log(coords);
+		console.log(positionData);
 		const iconX = coords.x + coords.width + shiftX;
-		const iconY = coords.y - shiftY;
-		return { x: iconX, y: iconY }
+		const iconY = coords.y - shiftY ;
+		var HintShift=0
+		if(positionData=='bottom'){
+			HintShift=32
+		}
+		return { x: iconX, y: iconY + HintShift }
 	}
 
 	/* *************************************************************** */
@@ -76,15 +81,16 @@
 
 	async function toggleHintIcon() {
 		var isActive = Object.values( await browser.storage.local.get( 'hinticon' ) )[0]
+		var positiondata= await browser.storage.local.get('position')
 		var selection = getSelectionText();
 		$anchorHintIcon = $(".signit-hint-icon");
 		if(isActive && selection && selection.toString().trim() != '') {
 			// Update title, position, display
 			$anchorHintIcon.attr("title", `Rechercher "${selection}"`);
 			$anchorHintIcon.attr("text", selection);
-
+             console.log('Function toggle Hint icon executed',positiondata.position);
 			var selectionCoords = getSelectionCoords(),
-				hintCoords = selectionToHintIconCoords(selectionCoords,0,25);
+				hintCoords = selectionToHintIconCoords(selectionCoords,0,25,positiondata.position);
 			repositionElement($anchorHintIcon,hintCoords);
 
 			$anchorHintIcon.show();
@@ -179,30 +185,14 @@
 
 	/* *************************************************************** */
 	/* Refreshers: position, size, content *************************** */
-	var repositionElement = function ($selector, coords) {
-		// Fetch the position data from storage
-		browser.storage.local.get('position').then(function(result) {
-			// Ensure the position data exists
-			if (result.position) {
-				console.log("hello vai",result.position); // Log the position data
-	            if(result.position=='top'){
-					$selector.css('top', coords.y);
-				$selector.css('left', coords.x);
-				}
-				else if(result.position=='bottom'){
-					$selector.css('top', coords.y+32);
-				$selector.css('left', coords.x);
-				}
-
-			} else {
-				console.log('No position data found.');
-			}
-		}).catch(function(error) {
-			console.error('Error fetching position data:', error);
-		});
+	var repositionElement = function ($selector, coords ){
+		// Move the element to the new coordinates
+		$selector.css( 'top', coords.y );
+		$selector.css( 'left', coords.x );
 	}
+
 	var resizeElement = function ($selector, coords ){
-		$selector.css( 'width', coords.width );
+		$selector.css( 'width', coords.width  );
 		$selector.css( 'height', coords.height );
 	}
 	// SignIt modal width depends on number of active panels
@@ -234,6 +224,7 @@
 			// initialising modal everytime not only when popup is undefined ,
 			// by this we won't have to reload the web page everytime 
 			initModalUI(); 
+			
 			var coords = getSelectionCoords();
 			repositionElement($anchorModal,coords);
 			resizeElement($anchorModal,coords);

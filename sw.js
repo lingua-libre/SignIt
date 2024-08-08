@@ -85,7 +85,7 @@ WHERE {
       choosepanels: "both", // issues/36
       position:'top',
     };
-
+ 
   /* *************************************************************** */
   /* i18n context ************************************************** */
   // List of UI languages with translations on github via translatewiki
@@ -554,16 +554,16 @@ async function setState(value) {
     records = await getAllRecords(newLang);
     await storeParam("signLanguage", newLang); // localStorage save
   }
+  async function changePosition(newPosition) {
+    await storeParam('position',newPosition); // localStorage save
+    console.log("changePosition executed")
+  }
 
   // Given language's Qid, reload available translations
   async function changeUiLanguage(newLang) {
     console.log("changeUiLanguage newLang", newLang); // => 'Q150' for french
     await loadI18nLocalization(newLang);
     await storeParam("uiLanguage", newLang); // localStorage save
-  }
-  async function changePosition(newPosition){
-    console.log("position",newPosition);
-    await storeParam("position", newPosition); 
   }
 
   /* *************************************************************** */
@@ -739,15 +739,14 @@ async function setState(value) {
     }
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);
-       console.log('done done done')
     }
     else if (message.command==='storeHintIconPosition'){
-        const position = message.argument;
-        // Store the position in localStorage
-        console.log('Hint icon position stored:', position);
-        storeParam('position',position)
-        console.log("done")
-    }
+      const position = message.argument;
+      // Store the position in localStorage
+      console.log('Hint icon position stored:', position);
+      storeParam('position',position)
+      console.log("done")
+  }
   });
 
   /* *************************************************************** */
