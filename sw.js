@@ -83,6 +83,7 @@ WHERE {
       hinticon: true,
       coloredwords: true,
       choosepanels: "both", // issues/36
+      position:'top',
     };
 
   /* *************************************************************** */
@@ -560,6 +561,10 @@ async function setState(value) {
     await loadI18nLocalization(newLang);
     await storeParam("uiLanguage", newLang); // localStorage save
   }
+  async function changePosition(newPosition){
+    console.log("position",newPosition);
+    await storeParam("position", newPosition); 
+  }
 
   /* *************************************************************** */
   /* Toolbox functions ********************************************* */
@@ -734,6 +739,14 @@ async function setState(value) {
     }
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);
+       console.log('done done done')
+    }
+    else if (message.command==='storeHintIconPosition'){
+        const position = message.argument;
+        // Store the position in localStorage
+        console.log('Hint icon position stored:', position);
+        storeParam('position',position)
+        console.log("done")
     }
   });
 
@@ -753,6 +766,7 @@ async function setState(value) {
     await getStoredParam("hinticon");
     await getStoredParam("coloredwords");
     await getStoredParam("choosepanels");
+    await getStoredParam("position");
 
     let signLanguage = await getStoredParam("signLanguage");
     signLanguages = await getSignLanguagesWithVideos();

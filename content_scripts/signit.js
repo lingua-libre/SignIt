@@ -45,7 +45,7 @@
 		height = rect.bottom - rect.top;
 		return { x: x, y: y, width: width, height: height };
 	}
-
+   
 	var selectionToHintIconCoords = function (coords,shiftX,shiftY){
 		console.log(coords);
 		const iconX = coords.x + coords.width + shiftX;
@@ -179,12 +179,28 @@
 
 	/* *************************************************************** */
 	/* Refreshers: position, size, content *************************** */
-	var repositionElement = function ($selector, coords ){
-		// Move the element to the new coordinates
-		$selector.css( 'top', coords.y );
-		$selector.css( 'left', coords.x );
-	}
+	var repositionElement = function ($selector, coords) {
+		// Fetch the position data from storage
+		browser.storage.local.get('position').then(function(result) {
+			// Ensure the position data exists
+			if (result.position) {
+				console.log("hello vai",result.position); // Log the position data
+	            if(result.position=='top'){
+					$selector.css('top', coords.y);
+				$selector.css('left', coords.x);
+				}
+				else if(result.position=='bottom'){
+					$selector.css('top', coords.y+32);
+				$selector.css('left', coords.x);
+				}
 
+			} else {
+				console.log('No position data found.');
+			}
+		}).catch(function(error) {
+			console.error('Error fetching position data:', error);
+		});
+	}
 	var resizeElement = function ($selector, coords ){
 		$selector.css( 'width', coords.width );
 		$selector.css( 'height', coords.height );

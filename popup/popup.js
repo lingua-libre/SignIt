@@ -233,6 +233,31 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			//helpInline: true
 		} );
 
+  // Positions Data
+   positionItems = [
+    new OO.ui.MenuOptionWidget({
+        data: 'top',
+        label:"▲"
+    }),
+    new OO.ui.MenuOptionWidget({
+        data: 'bottom',
+        label: "▼" 
+    })
+];
+
+   // Hint-icon layout
+   positionDropdown = new OO.ui.DropdownWidget({ 
+    label: "Hint icon Position", 
+    menu: { items: positionItems }, 
+    
+  } );
+  positionLayout = new OO.ui.FieldLayout( positionDropdown, {
+    label: "Position",
+    align: 'top',
+    help: "Choose Hint icon Position",
+    //helpInline: true
+  } );
+
 		// History-logs length
 		historyWidget = new OO.ui.NumberInputWidget( {
 			value: 20,
@@ -306,6 +331,19 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// Select menus
 		signLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.signLanguage );
 		uiLanguageDropdown.getMenu().selectItemByData( _backgroundPage.params.uiLanguage );
+    positionDropdown.getMenu().on('choose', (item) => {
+      const position = item.getData();
+      sendMessageUp("storeHintIconPosition", position);
+      console.log('position', position)
+  });
+    //sending message code block:
+    async function sendMessageUp(msg, argument) {
+      console.log('here in sendMessageUp', msg, argument)
+      const response = await browser.runtime.sendMessage({ command: msg, argument });
+      if (response !== undefined) return response;
+  }
+  
+ 
 		// Toogle buttons
 		historyWidget.setValue( _backgroundPage.params.historylimit );
 		wpintegrationWidget.setValue( _backgroundPage.params.wpintegration );
@@ -320,6 +358,12 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		// Changes events
 		signLanguageDropdown.getMenu().on( 'choose', changeSignLanguage );
 		uiLanguageDropdown.getMenu().on( 'choose', changeUiLanguage );
+    //
+    positionDropdown.getMenu().on('choose', (item) => {
+      const position = item.getData();
+      sendMessageUp("storeHintIconPosition", position);
+      console.log('position', position)
+  });
 		// _backgroundPage.storeParam( 'uiLanguage', _backgroundPage.params.uiLanguage ); // uiLanguage in localStorage before first usage-change
 		historyWidget.on( 'change', function( val ) {
 			val = parseInt( val ) >=0 ? parseInt( val ) : 0;
@@ -335,6 +379,7 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		choosepanelsWidget.on('choose', (d)=>{ 
 			sendMessageUp("storeParam",['choosepanels', d.getData()]); 
 		});
+    
 
 		// Build Settings UI
 		this.paramTab.$element
@@ -345,7 +390,8 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 			.append( twospeedLayout.$element )
 			.append( hinticonLayout.$element )
 			.append( coloredwordsLayout.$element )
-			.append( choosepanelsLayout.$element );
+			.append( choosepanelsLayout.$element )
+      .append( positionLayout.$element )
 	};
 
 	/* *********************************************************** */
@@ -378,9 +424,9 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 		ui.switchPanel( 'loading' );
 
 		await sendMessageUp("changeUiLanguage",newLanguage);
-		ui = new UI();
-		ui.switchPanel( 'loaded' );
-	}
+    ui = new UI();
+    ui.switchPanel( 'loaded' );
+  }
 	if (browserType === "chrome") {
     chrome.runtime.onMessage.addListener((message, sender) => {
       if (message.state === "ready") {
@@ -399,3 +445,4 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
     waitWhileLoading();
   }
 })();
+
