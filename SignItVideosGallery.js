@@ -10,7 +10,7 @@ var SignItVideosGallery = function (container) {
   this.nextVideoButton = new OO.ui.ButtonWidget({
     icon: "nextBtn",
     framed: false,
-    classes: ["signit-gallery-videos-button", "signit-gallery-videos-next"],
+    classes: ["signit-gallery-videos-buttons", "signit-gallery-videos-next"],
   });
   this.$videoContainer = $('<div class="signit-panel-videos-gallery">');
 
@@ -38,34 +38,31 @@ const styles = `
   .signit-panel-videos {
     text-align: center;
   }
-  .signit-gallery-videos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .signit-panel-videos-gallery{
+    width: 100%;
+    position:relative;
   }
   .signit-panel-videos-gallery iframe,
   .signit-gallery-videos iframe {
     box-shadow: 0 0 0.5rem #999;
     width: 100%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-right: -50px;
     min-height: 220px;
   }
   .signit-gallery-videos-buttons {
+    position : absolute;
+    top:50%;
+    transform : translateX(-50%);
     background-color: white; /* Customize the background color */       
     border: none;              /* Remove the border */
     border-radius: 5px;        /* Rounded corners */
     cursor: pointer;           /* Pointer cursor on hover */
   }
   .signit-gallery-videos-prev {
-    float: left;               /* Align to the left */
-  }
-  .signit-gallery-videos-next {
-    float: right;              /* Align to the right */
+      z-index:1;
+      left : 10%;
+    }
+    .signit-gallery-videos-next {
+      left : 40%;
   }
   .signit-gallery-videos-gallery {
     position: relative;
@@ -114,7 +111,7 @@ SignItVideosGallery.prototype.refresh = async function (files) {
       $(`
 			<div style="display: none;">
 				<iframe controls="" muted="" preload="auto"
-        src="https://lingua-libre.github.io/SignIt/SignItVideosIframe.html?width=250&twospeed=${param.twospeed}&video=${files[i].filename}" class=""></iframe>
+        src="https://lingua-libre.github.io/SignIt/SignItVideosIframe.html?width=370&twospeed=${param.twospeed}&video=${files[i].filename}" class=""></iframe>
 				${await banana.i18n(
           "si-panel-videos-gallery-attribution",
           url,
