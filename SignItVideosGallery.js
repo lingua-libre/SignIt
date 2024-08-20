@@ -114,7 +114,7 @@ SignItVideosGallery.prototype.refresh = async function (files) {
       $(`
 			<div style="display: none;">
 				<iframe controls="" muted="" preload="auto"
-        src="https://lingua-libre.github.io/SignIt/SignItVideosIframe.html?width=2700&twospeed=${param.twospeed}&video=${files[i].filename}" class=""></iframe>
+        src="https://lingua-libre.github.io/SignIt/SignItVideosIframe.html?width=250&twospeed=${param.twospeed}&video=${files[i].filename}" class=""></iframe>
 				${await banana.i18n(
           "si-panel-videos-gallery-attribution",
           url,
