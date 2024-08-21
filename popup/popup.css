@@ -185,11 +185,6 @@ html, body {
 	align-items: center;
 }
 
-.signit-gallery-videos iframe {
-	box-shadow: 0 0 .5rem #999;
-	width: 345px;
-}
-
 .signit-definitions {
 	padding-right: 12px;
 	padding-left: 6px;
@@ -222,7 +217,8 @@ html, body {
 	margin: auto;
 }
 
-.oo-ui-icon-nextBtn , .oo-ui-icon-previousBtn{
+.oo-ui-icon-nextBtn,
+.oo-ui-icon-previousBtn{
 	padding-top: 5px;
 }
 .oo-ui-icon-nextBtn::after {
@@ -251,6 +247,10 @@ html, body {
 	background-image: url( '../icons/down-long-solid.svg' );
 
 }
+
+/* ****************************************************** */
+/* VIDEO PANEL'S IFRAME ********************************* */
+/* If changed, to copy into wpintegration.css *********** */
 .signit-panel-videos {
     position:relative;
     text-align: center;
@@ -262,19 +262,21 @@ html, body {
 .signit-gallery-videos iframe {
     box-shadow: 0 0 0.5rem #999;
     width: 100%;
-    min-height: 220px;
+    aspect-ratio: 16 / 12;
+    border: 0;       /* no border */
+    overflow:hidden; /* no scroll */
 }
 .signit-gallery-videos-buttons {
     position : absolute;
     top:40%;
     transform : translate(-50%);
-    background-color: white; /* Customize the background color */       
-    border: none;              /* Remove the border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;           /* Pointer cursor on hover */
+    background-color: #FFFFFF66;/* Customize the background color */       
+    border: none;               /* Remove the border */
+    border-radius: 5px;         /* Rounded corners */
+    cursor: pointer;            /* Pointer cursor on hover */
+    z-index:1;
 }
 .signit-gallery-videos-prev {
-	z-index:1;
 	left : 10%;
 }
 .signit-gallery-videos-next {

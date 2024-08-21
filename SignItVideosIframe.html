@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="signitVideo-body">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Load Video from URL Parameter</title>
   </head>
-
-  <body>
+  <body id="signitVideo-body">
     <p id="no-video-url" style="display:none;">Video URL missing, try with suffix :
-      <a href="./SignItVideosIframe.html?width=250&twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm">
-        ?twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm
+      <a href="./SignItVideosIframe.html?width=380&twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm">
+        ?width=380&twospeed=true&video=https://upload.wikimedia.org/wikipedia/commons/6/63/Lapin_Nm_1_2_1_-_Elix.webm
       </a>
     </p>
-    <video id="signitVideoElement" controls="" muted="" preload="auto" autoplay="true" src="videoUrl" width="250" class="">
+    <video id="signitVideoElement"
+           src="videoUrl" width="" class="" >
       Your browser does not support the video tag.
     </video>
     <script>
@@ -38,8 +38,10 @@
         }
 
         // Pass size parameter
-        var width = getUrlParameter('width') || 270;
-        document.getElementById('signitVideoElement').width = width;
+        var width = getUrlParameter('width') || 380;
+        document.querySelector('html').style.width = width;
+        document.querySelector('body').style.width = width;
+        document.querySelector('video').style.width = width;
 
         // Pass speed parameter
         var speedNormal = getUrlParameter('speedNormal') || 1,
