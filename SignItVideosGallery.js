@@ -33,40 +33,6 @@ var SignItVideosGallery = function (container) {
   );
 };
 
-const styles = `
-<style type="text/css">
-  .signit-panel-videos {
-    position:relative;
-    text-align: center;
-  }
-  .signit-panel-videos-gallery{
-    width: 100%;
-  }
-  .signit-panel-videos-gallery iframe,
-  .signit-gallery-videos iframe {
-    box-shadow: 0 0 0.5rem #999;
-    width: 100%;
-    min-height: 220px;
-    }
-    .signit-gallery-videos-buttons {
-    position : absolute;
-    top:40%;
-    transform : translate(-50%);
-    background-color: white; /* Customize the background color */       
-    border: none;              /* Remove the border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;           /* Pointer cursor on hover */
-  }
-  .signit-gallery-videos-prev {
-      z-index:1;
-      left : 10%;
-    }
-    .signit-gallery-videos-next {
-      left : 90%;
-  }
-</style>
-`;
-document.head.insertAdjacentHTML("beforeend", styles);
 SignItVideosGallery.prototype.refresh = async function (files) {
   var banana = {
     i18n: async (msg, ...arg) => {
