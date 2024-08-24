@@ -737,6 +737,9 @@ async function setState(value) {
       const [name,value] = message.argument;
       storeParam(name,value);
     }
+    else if (message.command === "changeLanguage") {
+      await changeLanguage(message.argument);
+    }
     else if (message.command === "changeUiLanguage") {
       await changeUiLanguage(message.argument);
     }
