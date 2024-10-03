@@ -5,9 +5,12 @@
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre de video yê ke estê listey peroyo yeno",
 	"si-panel-videos-title": "Medya:",
 	"si-panel-videos-gallery-attribution": "Be {{link:$1|$2}} ra – Video $3 yê $4",
 	"si-panel-definitions-title": "Şınasiye:",
+	"si-panel-definitions-wikt-iso": "diq",
+	"si-panel-definitions-wikt-section-id": "#Zazaki",
 	"si-panel-definitions-wikt-pointer": "Wikiqısebend dı bıvin",
 	"si-panel-definitions-empty": "Sınasnayış nëvineya",
 	"si-popup-browse-title": "Bıweyni",
