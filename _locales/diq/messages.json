@@ -3,6 +3,10 @@
     "message": "Lingua Libre SignIt",
     "description": ""
   },
+  "si_addon_preload": {
+    "message": "Lingua Libre de video yê ke estê listey peroyo yeno",
+    "description": ""
+  },
   "si_panel_videos_title": {
     "message": "Medya:",
     "description": ""
@@ -13,6 +17,14 @@
   },
   "si_panel_definitions_title": {
     "message": "Şınasiye:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "diq",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Zazaki",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
