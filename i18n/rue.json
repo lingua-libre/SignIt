@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Constraque"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Выдає список вшыткых відео доступных на Lingua Libre.",
+	"si-panel-videos-title": "Медіум:",
+	"si-panel-videos-gallery-attribution": "подля {{link:$1|$2}} – Відео $3 з $4",
+	"si-panel-videos-contribute-label": "Зробити свій вклад з помочі жестового языка",
+	"si-panel-definitions-title": "Дефініція:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#анґліцькый",
+	"si-panel-definitions-wikt-pointer": "см. во Вікісловнику",
+	"si-popup-browse-title": "Переглядати",
+	"si-popup-browse-placeholder": "Гляданя меджі значками $1.",
+	"si-popup-browse-label": "Гляданя",
+	"si-popup-browse-icon": "Почати гляданя",
+	"si-popup-history-title": "Історія",
+	"si-popup-history-empty": "Ту порожнїй",
+	"si-popup-settings-title": "Наставлїня",
+	"si-popup-settings-signlanguage": "Жестовый язык:",
+	"si-popup-settings-signlanguage-dropdown": "Змінити язык відео",
+	"si-popup-settings-choosepanels-both": "Обидва",
+	"si-popup-settings-choosepanels-video": "Лем підписаны відео"
+}
