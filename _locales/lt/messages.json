@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Gaunamas visų „Lingua Libre“ pasiekiamų vaizdo įrašų sąrašas.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Medija:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "sukūrė {{link:$1|$2}} – $3 iš $4 vaizdo įrašų",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Šis žodis dar nebuvo įrašytas,<br> bet SignIt yra bendrai sukurtas projektas, galite prie jo prisidėti.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Prisidėkite naudodami gestų kalbą",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Apibrėžimai:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Anglų",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "žiūrėti Vikižodyne",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Apibrėžimas nerastas.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Naršyti",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Ieškokite tarp $1 ženklų.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Ieškoti",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Pradėti paiešką",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Istorija",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Tuščia",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Nustatymai",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Gestų kalba:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Pakeiskite vaizdo įrašus į kitą gestų kalbą.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Keisti vaizdo įrašų kalbą",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Sąsajos kalba:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Pakeiskite naudotojo sąsajos kalbą.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Keisti sąsajos kalbą",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Istorijos trukmė:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Nustatymas į 0 išjungia istorijos žurnalą",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Vietinė integracija su Vikipedija:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Groti įprastu greičiu, tada lėtai:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Pasirinkto teksto nuorodos piktograma:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Rodomi skydeliai:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Tik žodyno tekstas",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Abu",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Tik gestų vaizdo įrašai",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Paryškinti prieinamus žodžius:",
+    "description": ""
+  }
+}
