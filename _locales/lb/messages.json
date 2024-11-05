@@ -27,6 +27,10 @@
     "message": "Sichen",
     "description": ""
   },
+  "si_popup_history_empty": {
+    "message": "Et ass eidel",
+    "description": ""
+  },
   "si_popup_settings_title": {
     "message": "Astellungen",
     "description": ""
