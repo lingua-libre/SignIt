@@ -127,6 +127,10 @@
     "message": "Her ikisi de",
     "description": ""
   },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Sadece imzalı videolar",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Mevcut kelimeleri vurgulayın:",
     "description": ""
