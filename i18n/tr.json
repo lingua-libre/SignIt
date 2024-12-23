@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"Yug"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -36,5 +37,6 @@
 	"si-popup-settings-choosepanels": "Görüntülenecek paneller:",
 	"si-popup-settings-choosepanels-definition": "Sadece sözlük metni",
 	"si-popup-settings-choosepanels-both": "Her ikisi de",
+	"si-popup-settings-choosepanels-video": "Sadece imzalı videolar",
 	"si-popup-settings-enlighten": "Mevcut kelimeleri vurgulayın:"
 }
