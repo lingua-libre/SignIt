@@ -1,0 +1,114 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Ngala' ḍaftar kabbhi viḍèo sè tasaḍiyâ è Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Mèḍia:",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Oca' kasebbhut ghi' ta' èrekkam,<br> tapè amarghâ SignIt iyâ arèya proyèk dhurrun ḍaya, Bâ'na ngennèng adhurrun kèya.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Adhurrun bi' Bhâsa Isyarat",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Artè:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "mad",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Madhurâ",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "tèngghu è Wikioca'",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Tadâ' artè sè èyasèlaghi.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Jhâlâjhâi",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Sarè è $1 bhâsa isyarat.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Sarè",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Molaè sarèyan",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Riwayât",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Taḍâ' log",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Pangatoran",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Bhâsa isyarat:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Obâ viḍèo ka bhâsa isyarat sè laèn:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Obâ bhâsa viḍèo",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Bhâsa tangas raè:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Obâ bhâsana tangas raè pangangghuy.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Obâ bhâsana tangas raè",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Lanjhânga riwayât:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Ator ka 0 ka'angghuy mamatè log riwayât",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Integrasi sokkla bi' Wikipèḍia:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Pèra' tèks kamus",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Pèra viḍèo isyarat",
+    "description": ""
+  }
+}
