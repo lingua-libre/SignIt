@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Gzhegozh",
 			"Пан Хаунд"
 		]
 	},
@@ -8,7 +9,7 @@
 	"si-addon-preload": "Отримання списку всіх відео, доступних на Lingua Libre.",
 	"si-panel-videos-title": "Медіа:",
 	"si-panel-videos-gallery-attribution": "від {{link:$1|$2}} – Відео $3 із $4",
-	"si-panel-videos-empty": "Це слово ще не записано,<br> але SignIt – це проект, створений натовпом, ви можете зробити свій внесок у нього.",
+	"si-panel-videos-empty": "Це слово ще не записано,<br> але SignIt — це проєкт, створений натовпом, ви можете зробити свій внесок у нього.",
 	"si-panel-videos-contribute-label": "Зробіть внесок Мовою Жестів",
 	"si-panel-definitions-title": "Визначення:",
 	"si-panel-definitions-wikt-iso": "en",
