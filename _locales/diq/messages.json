@@ -15,6 +15,10 @@
     "message": "Be {{link:$1|$2}} ra – Video $3 yê $4",
     "description": ""
   },
+  "si_panel_videos_contribute_label": {
+    "message": "Pê zıwanê işaretiya iştirak bıkerê",
+    "description": ""
+  },
   "si_panel_definitions_title": {
     "message": "Şınasiye:",
     "description": ""
@@ -37,6 +41,10 @@
   },
   "si_popup_browse_title": {
     "message": "Bıweyni",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Sebebê $1 de cıgeyre",
     "description": ""
   },
   "si_popup_browse_label": {
@@ -63,6 +71,10 @@
     "message": "Zonê işareti",
     "description": ""
   },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Videoya yewbina zıwanê işaretiya bıvurne",
+    "description": ""
+  },
   "si_popup_settings_signlanguage_dropdown": {
     "message": "Zonê video bıvurnên",
     "description": ""
@@ -77,6 +89,22 @@
   },
   "si_popup_settings_uilanguage_dropdown": {
     "message": "Zıwanê verrıy bıvurne",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Derganiya verorê vurnayışi:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Piya",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Reyna videoyanê imzayına",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Esten çekuya aver kerê:",
     "description": ""
   }
 }
