@@ -95,6 +95,14 @@
     "message": "Derganiya verorê vurnayışi:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Panelê kê bımocneyê",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Teyna metinê qısebendi",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_both": {
     "message": "Piya",
     "description": ""
