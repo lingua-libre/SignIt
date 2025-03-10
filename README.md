@@ -114,7 +114,7 @@ We look for volunteers:
 
 ### Developers
 - Edouard Lopez (2016)
-- Antoine Lamienne (2016-19)
+- Antoine Lamielle (2016-19)
 - [hugolpz](https://github.com/hugolpz) (2020-now) - project owner & contact
 - [Kabir Singh](https://github.com/kabir-afk) (2024-now) - lead dev
 
