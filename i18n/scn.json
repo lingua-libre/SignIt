@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ajeje Brazorf"
+			"Ajeje Brazorf",
+			"GianAntonucci",
+			"Yug"
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
@@ -17,7 +19,7 @@
 	"si-panel-definitions-empty": "Nuḍḍa difinizzioni attruvata.",
 	"si-popup-browse-title": "Sfogghia",
 	"si-popup-browse-placeholder": "Arricerca ntra $1 signa.",
-	"si-popup-browse-label": "Arricerca",
+	"si-popup-browse-label": "Cerca",
 	"si-popup-browse-icon": "Accuminza l'arricerca",
 	"si-popup-history-title": "Crunuluggìa",
 	"si-popup-history-empty": "È vacanti",
