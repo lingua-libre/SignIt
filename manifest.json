@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "__MSG_si_addon_title__",	
 	"version": "1.0.22",
-	"author": "Antoine '0x010C' Lamielle, Hugo Lopez",
+	"author": "Antoine '0x010C' Lamielle, Hugo Lopez, Kabir Singh",
 	"description": "SignIt translate a selected word into Sign Language videos.",
 	"homepage_url": "https://lingualibre.org",
 	"icons": {
