@@ -4,11 +4,11 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libreの利用可能なすべての動画のリストを取得しています。",
+    "message": "Lingua Libreから利用可能な動画の総覧を取得中です。",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "メディア:",
+    "message": "メディア：",
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
@@ -16,7 +16,7 @@
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "この言葉はまだ記録されていません<br>SignItから手話を投稿することもできます。",
+    "message": "この言葉はまだ録画されていませんが、<br>SignItはクラウドーソースのプロジェクトですから、皆さんも手話を投稿してください。",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
@@ -24,7 +24,7 @@
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "定義:",
+    "message": "定義：",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
@@ -64,7 +64,7 @@
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "空っぽです",
+    "message": "何もありませんでした",
     "description": ""
   },
   "si_popup_settings_title": {
@@ -76,7 +76,7 @@
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "動画を他の手話に変更します。",
+    "message": "他の手話の動画に変更します。",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
@@ -84,7 +84,7 @@
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "インターフェイスの言語:",
+    "message": "インターフェイスの言語：",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
@@ -96,11 +96,11 @@
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "履歴の長さ:",
+    "message": "履歴の長さ：",
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "0に設定すると、履歴ログが無効になります",
+    "message": "0に設定すると、履歴を記録しなくなります",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
@@ -112,11 +112,11 @@
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "選択したテキストのショートカットアイコン：",
+    "message": "選択した文字列にショートカットのアイコンを設定：",
     "description": ""
   },
   "si_popup_settings_choosepanels": {
-    "message": "表示するパネル:",
+    "message": "表示するパネル：",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {

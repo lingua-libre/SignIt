@@ -4,115 +4,111 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Libre de video yê ke estê listey peroyo yeno",
+    "message": "Ngala' ḍaftar kabbhi viḍèo sè tasaḍiyâ è Lingua Libre.",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "Medya:",
+    "message": "Mèḍia:",
     "description": ""
   },
-  "si_panel_videos_gallery_attribution": {
-    "message": "Be {{link:$1|$2}} ra – Video $3 yê $4",
+  "si_panel_videos_empty": {
+    "message": "Oca' kasebbhut ghi' ta' èrekkam,<br> tapè amarghâ SignIt iyâ arèya proyèk dhurrun ḍaya, Bâ'na ngennèng adhurrun kèya.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "Pê zıwanê işaretiya iştirak bıkerê",
+    "message": "Adhurrun bi' Bhâsa Isyarat",
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "Şınasiye:",
+    "message": "Artè:",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "diq",
+    "message": "mad",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#Zazaki",
+    "message": "#Madhurâ",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "Wikiqısebend dı bıvin",
+    "message": "tèngghu è Wikioca'",
     "description": ""
   },
   "si_panel_definitions_empty": {
-    "message": "Sınasnayış nëvineya",
+    "message": "Tadâ' artè sè èyasèlaghi.",
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Bıweyni",
+    "message": "Jhâlâjhâi",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "Sebebê $1 de cıgeyre",
+    "message": "Sarè è $1 bhâsa isyarat.",
     "description": ""
   },
   "si_popup_browse_label": {
-    "message": "Cıgeyrê",
+    "message": "Sarè",
     "description": ""
   },
   "si_popup_browse_icon": {
-    "message": "Cıgeyrayışi bıserene",
+    "message": "Molaè sarèyan",
     "description": ""
   },
   "si_popup_history_title": {
-    "message": "Terix",
+    "message": "Riwayât",
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Vengo",
+    "message": "Taḍâ' log",
     "description": ""
   },
   "si_popup_settings_title": {
-    "message": "Sazi",
+    "message": "Pangatoran",
     "description": ""
   },
   "si_popup_settings_signlanguage": {
-    "message": "Zonê işareti",
+    "message": "Bhâsa isyarat:",
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "Videoya yewbina zıwanê işaretiya bıvurne",
+    "message": "Obâ viḍèo ka bhâsa isyarat sè laèn:",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "Zonê video bıvurnên",
+    "message": "Obâ bhâsa viḍèo",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "Zıwana rıy:",
+    "message": "Bhâsa tangas raè:",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Verrıyê hacetê zıwani bıvırnê",
+    "message": "Obâ bhâsana tangas raè pangangghuy.",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
-    "message": "Zıwanê verrıy bıvurne",
+    "message": "Obâ bhâsana tangas raè",
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "Derganiya verorê vurnayışi:",
+    "message": "Lanjhânga riwayât:",
     "description": ""
   },
-  "si_popup_settings_choosepanels": {
-    "message": "Panelê kê bımocneyê",
+  "si_popup_settings_history_help": {
+    "message": "Ator ka 0 ka'angghuy mamatè log riwayât",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Integrasi sokkla bi' Wikipèḍia:",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {
-    "message": "Teyna metinê qısebendi",
-    "description": ""
-  },
-  "si_popup_settings_choosepanels_both": {
-    "message": "Piya",
+    "message": "Pèra' tèks kamus",
     "description": ""
   },
   "si_popup_settings_choosepanels_video": {
-    "message": "Reyna videoyanê imzayına",
-    "description": ""
-  },
-  "si_popup_settings_enlighten": {
-    "message": "Esten çekuya aver kerê:",
+    "message": "Pèra viḍèo isyarat",
     "description": ""
   }
 }

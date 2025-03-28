@@ -1,0 +1,82 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Выдає список вшыткых відео доступных на Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Медіум:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "подля {{link:$1|$2}} – Відео $3 з $4",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Зробити свій вклад з помочі жестового языка",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Дефініція:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#анґліцькый",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "см. во Вікісловнику",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Переглядати",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Гляданя меджі значками $1.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Гляданя",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Почати гляданя",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Історія",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Ту порожнїй",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Наставлїня",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Жестовый язык:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Змінити язык відео",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Обидва",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Лем підписаны відео",
+    "description": ""
+  }
+}

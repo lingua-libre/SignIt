@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Gaunamas visų „Lingua Libre“ pasiekiamų vaizdo įrašų sąrašas.",
+	"si-panel-videos-title": "Medija:",
+	"si-panel-videos-gallery-attribution": "sukūrė {{link:$1|$2}} – $3 iš $4 vaizdo įrašų",
+	"si-panel-videos-empty": "Šis žodis dar nebuvo įrašytas,<br> bet SignIt yra bendrai sukurtas projektas, galite prie jo prisidėti.",
+	"si-panel-videos-contribute-label": "Prisidėkite naudodami gestų kalbą",
+	"si-panel-definitions-title": "Apibrėžimai:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#Anglų",
+	"si-panel-definitions-wikt-pointer": "žiūrėti Vikižodyne",
+	"si-panel-definitions-empty": "Apibrėžimas nerastas.",
+	"si-popup-browse-title": "Naršyti",
+	"si-popup-browse-placeholder": "Ieškokite tarp $1 ženklų.",
+	"si-popup-browse-label": "Ieškoti",
+	"si-popup-browse-icon": "Pradėti paiešką",
+	"si-popup-history-title": "Istorija",
+	"si-popup-history-empty": "Tuščia",
+	"si-popup-settings-title": "Nustatymai",
+	"si-popup-settings-signlanguage": "Gestų kalba:",
+	"si-popup-settings-signlanguage-help": "Pakeiskite vaizdo įrašus į kitą gestų kalbą.",
+	"si-popup-settings-signlanguage-dropdown": "Keisti vaizdo įrašų kalbą",
+	"si-popup-settings-uilanguage": "Sąsajos kalba:",
+	"si-popup-settings-uilanguage-help": "Pakeiskite naudotojo sąsajos kalbą.",
+	"si-popup-settings-uilanguage-dropdown": "Keisti sąsajos kalbą",
+	"si-popup-settings-history": "Istorijos trukmė:",
+	"si-popup-settings-history-help": "Nustatymas į 0 išjungia istorijos žurnalą",
+	"si-popup-settings-wpintegration": "Vietinė integracija su Vikipedija:",
+	"si-popup-settings-twospeed": "Groti įprastu greičiu, tada lėtai:",
+	"si-popup-settings-hint-icon": "Pasirinkto teksto nuorodos piktograma:",
+	"si-popup-settings-choosepanels": "Rodomi skydeliai:",
+	"si-popup-settings-choosepanels-definition": "Tik žodyno tekstas",
+	"si-popup-settings-choosepanels-both": "Abu",
+	"si-popup-settings-choosepanels-video": "Tik gestų vaizdo įrašai",
+	"si-popup-settings-enlighten": "Paryškinti prieinamus žodžius:"
+}

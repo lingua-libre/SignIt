@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Boesenbergia"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Ngala' ḍaftar kabbhi viḍèo sè tasaḍiyâ è Lingua Libre.",
+	"si-panel-videos-title": "Mèḍia:",
+	"si-panel-videos-empty": "Oca' kasebbhut ghi' ta' èrekkam,<br> tapè amarghâ SignIt iyâ arèya proyèk dhurrun ḍaya, Bâ'na ngennèng adhurrun kèya.",
+	"si-panel-videos-contribute-label": "Adhurrun bi' Bhâsa Isyarat",
+	"si-panel-definitions-title": "Artè:",
+	"si-panel-definitions-wikt-iso": "mad",
+	"si-panel-definitions-wikt-section-id": "#Madhurâ",
+	"si-panel-definitions-wikt-pointer": "tèngghu è Wikioca'",
+	"si-panel-definitions-empty": "Tadâ' artè sè èyasèlaghi.",
+	"si-popup-browse-title": "Jhâlâjhâi",
+	"si-popup-browse-placeholder": "Sarè è $1 bhâsa isyarat.",
+	"si-popup-browse-label": "Sarè",
+	"si-popup-browse-icon": "Molaè sarèyan",
+	"si-popup-history-title": "Riwayât",
+	"si-popup-history-empty": "Taḍâ' log",
+	"si-popup-settings-title": "Pangatoran",
+	"si-popup-settings-signlanguage": "Bhâsa isyarat:",
+	"si-popup-settings-signlanguage-help": "Obâ viḍèo ka bhâsa isyarat sè laèn:",
+	"si-popup-settings-signlanguage-dropdown": "Obâ bhâsa viḍèo",
+	"si-popup-settings-uilanguage": "Bhâsa tangas raè:",
+	"si-popup-settings-uilanguage-help": "Obâ bhâsana tangas raè pangangghuy.",
+	"si-popup-settings-uilanguage-dropdown": "Obâ bhâsana tangas raè",
+	"si-popup-settings-history": "Lanjhânga riwayât:",
+	"si-popup-settings-history-help": "Ator ka 0 ka'angghuy mamatè log riwayât",
+	"si-popup-settings-wpintegration": "Integrasi sokkla bi' Wikipèḍia:",
+	"si-popup-settings-choosepanels-definition": "Pèra' tèks kamus",
+	"si-popup-settings-choosepanels-video": "Pèra viḍèo isyarat"
+}
