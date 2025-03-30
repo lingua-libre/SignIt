@@ -22,31 +22,31 @@
 // can use type:"module" but it interferes with the working of extension in FF, hence using old importScripts
 
 importScripts("./lib/banana-i18n.js");
-  /* *************************************************************** */
-  /* Sparql endpoints *********************************************** */
-  const sparqlEndpoints = {
-    lingualibre: {
-      url: "https://lingualibre.org/bigdata/namespace/wdq/sparql",
-      verb: "POST",
-    },
-    wikidata: { url: "https://query.wikidata.org/sparql", verb: "GET" },
-    commons: { url: "https://commons-query.wikimedia.org/sparql", verb: "GET" },
-    dictionaireFrancophone: {
-      url: "https://www.dictionnairedesfrancophones.org/sparql",
-      verb: "",
-    },
-  };
-  /* *************************************************************** */
-  /* Sparql ******************************************************** */
-  // Lingualibre: All languages (P4) for which media type (P24) is video (Q88890)
-  // TODO: NEEDS QUERY HITING ON LLQS+WDQS, FETCHING NATIVE NAME (P1705)
-  const sparqlSignLanguagesQuery =
-    'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
-  // Lingualibre: Given a language (P4) with media video, fetch the list of writen word (P7), url (P3) speakers (P5)
-  const sparqlSignVideosQuery =
-    'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
-  // Wikidata: All Sign languages who have a Commons lingualibre category
-  const sparqlFilesInCategoryQuery = `SELECT ?file ?url ?title
+/* *************************************************************** */
+/* Sparql endpoints *********************************************** */
+const sparqlEndpoints = {
+  lingualibre: {
+    url: "https://lingualibre.org/bigdata/namespace/wdq/sparql",
+    verb: "POST",
+  },
+  wikidata: { url: "https://query.wikidata.org/sparql", verb: "GET" },
+  commons: { url: "https://commons-query.wikimedia.org/sparql", verb: "GET" },
+  dictionaireFrancophone: {
+    url: "https://www.dictionnairedesfrancophones.org/sparql",
+    verb: "",
+  },
+};
+/* *************************************************************** */
+/* Sparql ******************************************************** */
+// Lingualibre: All languages (P4) for which media type (P24) is video (Q88890)
+// TODO: NEEDS QUERY HITING ON LLQS+WDQS, FETCHING NATIVE NAME (P1705)
+const sparqlSignLanguagesQuery =
+  'SELECT ?id ?idLabel WHERE { ?id prop:P2 entity:Q4 . ?id prop:P24 entity:Q88890 . SERVICE wikibase:label { bd:serviceParam wikibase:language "fr,en". } }';
+// Lingualibre: Given a language (P4) with media video, fetch the list of writen word (P7), url (P3) speakers (P5)
+const sparqlSignVideosQuery =
+  'SELECT ?word ?filename ?speaker WHERE { ?record prop:P2 entity:Q2 . ?record prop:P4 entity:$(lang) . ?record prop:P7 ?word . ?record prop:P3 ?filename . ?record prop:P5 ?speakerItem . ?speakerItem rdfs:label ?speaker filter ( lang( ?speaker ) = "en" ) . }';
+// Wikidata: All Sign languages who have a Commons lingualibre category
+const sparqlFilesInCategoryQuery = `SELECT ?file ?url ?title
 WHERE {
   SERVICE wikibase:mwapi {
     bd:serviceParam wikibase:api "Generator" ;
@@ -62,332 +62,331 @@ WHERE {
   BIND (URI(CONCAT('https://commons.wikimedia.org/wiki/', ?title)) AS ?url)
 }`;
 
-  var browser = chrome;
+var browser = chrome;
 
-  /* *************************************************************** */
-  /* Initial state if no localStorage ********************************* */
-  var 
-//   state = "up", // up, loading, ready, error
+/* *************************************************************** */
+/* Initial state if no localStorage ********************************* */
+var //   state = "up", // up, loading, ready, error
   state, // up, loading, ready, error
-    records = {},
-    signLanguages = [],
-    uiLanguages = [],
-    // Default values, will be stored in localStorage as well for persistency.
-    params = {
-      signLanguage: "Q99628", // for videos : French Sign language
-      uiLanguage: "Q150", // for interface : French
-      historylimit: 6,
-      history: ["lapin", "crabe", "fraise", "canard"], // Some fun
-      wpintegration: true,
-      twospeed: true,
-      hinticon: true,
-      coloredwords: true,
-      choosepanels: "both", // issues/36
-      position:'top',
-    };
- 
-  /* *************************************************************** */
-  /* i18n context ************************************************** */
-  // List of UI languages with translations on github via translatewiki
-  var supportedUiLanguages = [
-    {
-      i18nCode: "anp",
-      labelEN: "Angika",
-      labelNative: "अंगिका",
-      wdQid: "Q28378",
-      wiki: "anp",
-    },
-    {
-      i18nCode: "ar",
-      labelEN: "Arabic",
-      labelNative: "اللُّغَة العَرَبِيّة",
-      wdQid: "Q13955",
-      wiki: "ar",
-    },
-    {
-      i18nCode: "bn",
-      labelEN: "Bengali",
-      labelNative: "বাংলা",
-      wdQid: "Q9610",
-      wiki: "bn",
-    },
-    {
-      i18nCode: "blk",
-      labelEN: "Pa'O",
-      labelNative: "ပအိုဝ်ႏဘာႏသာႏ",
-      wdQid: "",
-      wiki: "Q7121294",
-    },
-    {
-      i18nCode: "br",
-      labelEN: "Breton",
-      labelNative: "Brezhoneg",
-      wdQid: "Q12107",
-      wiki: "br",
-    },
-    {
-      i18nCode: "ce",
-      labelEN: "Chechen",
-      labelNative: "Нохчийн мотт",
-      wdQid: "Q33350",
-      wiki: "ce",
-    },
-    {
-      i18nCode: "de",
-      labelEN: "German",
-      labelNative: "Deutsch",
-      wdQid: "Q188",
-      wiki: "de",
-    },
-    {
-      i18nCode: "en",
-      labelEN: "English",
-      labelNative: "English",
-      wdQid: "Q1860",
-      wiki: "en",
-    },
-    {
-      i18nCode: "es",
-      labelEN: "Spanish",
-      labelNative: "Español",
-      wdQid: "Q1321",
-      wiki: "es",
-    },
-    {
-      i18nCode: "fa",
-      labelEN: "Persian",
-      labelNative: "فارسی",
-      wdQid: "Q9168",
-      wiki: "fa",
-    },
-    {
-      i18nCode: "fi",
-      labelEN: "Finnish",
-      labelNative: "Suomi",
-      wdQid: "Q1412",
-      wiki: "fi",
-    },
-    {
-      i18nCode: "fr",
-      labelEN: "French",
-      labelNative: "Français",
-      wdQid: "Q150",
-      wiki: "fr",
-    },
-    {
-      i18nCode: "gl",
-      labelEN: "Galician",
-      labelNative: "Galego",
-      wdQid: "Q9307",
-      wiki: "gl",
-    },
-    {
-      i18nCode: "he",
-      labelEN: "Hebrew",
-      labelNative: "עברית",
-      wdQid: "Q9288",
-      wiki: "he",
-    },
-    {
-      i18nCode: "hi",
-      labelEN: "Hindi",
-      labelNative: "हिन्दी",
-      wdQid: "Q1568",
-      wiki: "hi",
-    },
-    {
-      i18nCode: "hu",
-      labelEN: "Hungarian",
-      labelNative: "Magyar",
-      wdQid: "Q9067",
-      wiki: "hu",
-    },
-    {
-      i18nCode: "ia",
-      labelEN: "Interlingua",
-      labelNative: "Interlingua",
-      wdQid: "Q35934",
-      wiki: "ia",
-    },
-    {
-      i18nCode: "id",
-      labelEN: "Indonesian",
-      labelNative: "Bahasa Indonesia",
-      wdQid: "Q9240",
-      wiki: "id",
-    },
-    {
-      i18nCode: "it",
-      labelEN: "Italian",
-      labelNative: "Italiano",
-      wdQid: "Q652",
-      wiki: "it",
-    },
-    {
-      i18nCode: "ja",
-      labelEN: "Japanese",
-      labelNative: "日本語",
-      wdQid: "Q5287",
-      wiki: "ja",
-    },
-    {
-      i18nCode: "kk-cyrl",
-      labelEN: "Kazakh",
-      labelNative: "Казақша",
-      wdQid: "Q9252",
-      wiki: "kk",
-    },
-    {
-      i18nCode: "ko",
-      labelEN: "Korean",
-      labelNative: "한국어",
-      wdQid: "Q9176",
-      wiki: "ko",
-    },
-    {
-      i18nCode: "krc",
-      labelEN: "Karachay-Balkar",
-      labelNative: "Qaraçay-malqar",
-      wdQid: "Q33714",
-      wiki: "krc",
-    },
-    {
-      i18nCode: "lmo",
-      labelEN: "Lombard",
-      labelNative: "Lengua lombarda",
-      wdQid: "Q33754",
-      wiki: "lmo",
-    },
-    {
-      i18nCode: "mk",
-      labelEN: "Macedonian",
-      labelNative: "Македонски",
-      wdQid: "Q9296",
-      wiki: "mk",
-    },
-    {
-      i18nCode: "mnw",
-      labelEN: "Mon",
-      labelNative: "ဘာသာမန်",
-      wdQid: "Q13349",
-      wiki: "mnw",
-    },
-    {
-      i18nCode: "ms",
-      labelEN: "Malay",
-      labelNative: "Bahasa Melayu",
-      wdQid: "Q9237",
-      wiki: "ms",
-    },
-    {
-      i18nCode: "nb",
-      labelEN: "Bokmål",
-      labelNative: "Bokmål",
-      wdQid: "Q25167",
-      wiki: "nb",
-    },
-    {
-      i18nCode: "urdu",
-      labelEN: "Urdu",
-      labelNative: "اردو",
-      wdQid: "Q1389492",
-    },
-    {
-      i18nCode: "pt",
-      labelEN: "Portuguese",
-      labelNative: "Português (pt)",
-      wdQid: "Q5146",
-      wiki: "pt",
-    },
-    {
-      i18nCode: "pt-br",
-      labelEN: "Portuguese",
-      labelNative: "Português (br)",
-      wdQid: "Q5146",
-      wiki: "pt",
-    },
-    {
-      i18nCode: "ru",
-      labelEN: "Russian",
-      labelNative: "Русский язык",
-      wdQid: "Q7737",
-      wiki: "ru",
-    },
-    {
-      i18nCode: "scn",
-      labelEN: "Sicilian",
-      labelNative: "Sicilianu",
-      wdQid: "Q33973",
-      wiki: "scn",
-    },
-    {
-      i18nCode: "sl",
-      labelEN: "Slovene",
-      labelNative: "Slovenski jezik",
-      wdQid: "Q9063",
-      wiki: "sl",
-    },
-    {
-      i18nCode: "sv",
-      labelEN: "Swedish",
-      labelNative: "Svenska",
-      wdQid: "Q9027",
-      wiki: "sv",
-    },
-    {
-      i18nCode: "sw",
-      labelEN: "Swahili",
-      labelNative: "Kiswahili",
-      wdQid: "Q7838",
-      wiki: "sw",
-    },
-    {
-      i18nCode: "tl",
-      labelEN: "Tagalog",
-      labelNative: "Wikang Tagalog",
-      wdQid: "Q34057",
-      wiki: "tl",
-    },
-    {
-      i18nCode: "tr",
-      labelEN: "Turkish",
-      labelNative: "Türkçe",
-      wdQid: "Q256",
-      wiki: "tr",
-    },
-    {
-      i18nCode: "uk",
-      labelEN: "Ukrainian",
-      labelNative: "Українська мова",
-      wdQid: "Q8798",
-      wiki: "uk",
-    },
-    // {i18nCode:"zh",labelEN: "Chinese",labelNative: "汉语",wdQid: "Q7850",wiki: "zh"}
-    {
-      i18nCode: "zh-hant",
-      labelEN: "Traditional Chinese",
-      labelNative: "中文 (繁體)",
-      wdQid: "Q18130932",
-      wiki: "zh",
-    },
-    {
-      i18nCode: "zh-hans",
-      labelEN: "Modern Chinese",
-      labelNative: "中文 (简体)",
-      wdQid: "Q13414913",
-      wiki: "zh",
-    },
-  ];
+  records = {},
+  signLanguages = [],
+  uiLanguages = [],
+  // Default values, will be stored in localStorage as well for persistency.
+  params = {
+    signLanguage: "Q99628", // for videos : French Sign language
+    uiLanguage: "Q150", // for interface : French
+    historylimit: 6,
+    history: ["lapin", "crabe", "fraise", "canard"], // Some fun
+    wpintegration: true,
+    twospeed: true,
+    hinticon: true,
+    coloredwords: true,
+    choosepanels: "both", // issues/36
+    position: "top",
+  };
 
-  // Init internationalisation support with Banana-i18n.js
-  var banana = new Banana("fr"); // use document browser language
-  loadI18nLocalization(params.uiLanguage);
-  // Add url support
-  banana.registerParserPlugin("link", (nodes) => {
-    return '<a href="' + nodes[0] + '">' + nodes[1] + "</a>";
-  });
+/* *************************************************************** */
+/* i18n context ************************************************** */
+// List of UI languages with translations on github via translatewiki
+var supportedUiLanguages = [
+  {
+    i18nCode: "anp",
+    labelEN: "Angika",
+    labelNative: "अंगिका",
+    wdQid: "Q28378",
+    wiki: "anp",
+  },
+  {
+    i18nCode: "ar",
+    labelEN: "Arabic",
+    labelNative: "اللُّغَة العَرَبِيّة",
+    wdQid: "Q13955",
+    wiki: "ar",
+  },
+  {
+    i18nCode: "bn",
+    labelEN: "Bengali",
+    labelNative: "বাংলা",
+    wdQid: "Q9610",
+    wiki: "bn",
+  },
+  {
+    i18nCode: "blk",
+    labelEN: "Pa'O",
+    labelNative: "ပအိုဝ်ႏဘာႏသာႏ",
+    wdQid: "",
+    wiki: "Q7121294",
+  },
+  {
+    i18nCode: "br",
+    labelEN: "Breton",
+    labelNative: "Brezhoneg",
+    wdQid: "Q12107",
+    wiki: "br",
+  },
+  {
+    i18nCode: "ce",
+    labelEN: "Chechen",
+    labelNative: "Нохчийн мотт",
+    wdQid: "Q33350",
+    wiki: "ce",
+  },
+  {
+    i18nCode: "de",
+    labelEN: "German",
+    labelNative: "Deutsch",
+    wdQid: "Q188",
+    wiki: "de",
+  },
+  {
+    i18nCode: "en",
+    labelEN: "English",
+    labelNative: "English",
+    wdQid: "Q1860",
+    wiki: "en",
+  },
+  {
+    i18nCode: "es",
+    labelEN: "Spanish",
+    labelNative: "Español",
+    wdQid: "Q1321",
+    wiki: "es",
+  },
+  {
+    i18nCode: "fa",
+    labelEN: "Persian",
+    labelNative: "فارسی",
+    wdQid: "Q9168",
+    wiki: "fa",
+  },
+  {
+    i18nCode: "fi",
+    labelEN: "Finnish",
+    labelNative: "Suomi",
+    wdQid: "Q1412",
+    wiki: "fi",
+  },
+  {
+    i18nCode: "fr",
+    labelEN: "French",
+    labelNative: "Français",
+    wdQid: "Q150",
+    wiki: "fr",
+  },
+  {
+    i18nCode: "gl",
+    labelEN: "Galician",
+    labelNative: "Galego",
+    wdQid: "Q9307",
+    wiki: "gl",
+  },
+  {
+    i18nCode: "he",
+    labelEN: "Hebrew",
+    labelNative: "עברית",
+    wdQid: "Q9288",
+    wiki: "he",
+  },
+  {
+    i18nCode: "hi",
+    labelEN: "Hindi",
+    labelNative: "हिन्दी",
+    wdQid: "Q1568",
+    wiki: "hi",
+  },
+  {
+    i18nCode: "hu",
+    labelEN: "Hungarian",
+    labelNative: "Magyar",
+    wdQid: "Q9067",
+    wiki: "hu",
+  },
+  {
+    i18nCode: "ia",
+    labelEN: "Interlingua",
+    labelNative: "Interlingua",
+    wdQid: "Q35934",
+    wiki: "ia",
+  },
+  {
+    i18nCode: "id",
+    labelEN: "Indonesian",
+    labelNative: "Bahasa Indonesia",
+    wdQid: "Q9240",
+    wiki: "id",
+  },
+  {
+    i18nCode: "it",
+    labelEN: "Italian",
+    labelNative: "Italiano",
+    wdQid: "Q652",
+    wiki: "it",
+  },
+  {
+    i18nCode: "ja",
+    labelEN: "Japanese",
+    labelNative: "日本語",
+    wdQid: "Q5287",
+    wiki: "ja",
+  },
+  {
+    i18nCode: "kk-cyrl",
+    labelEN: "Kazakh",
+    labelNative: "Казақша",
+    wdQid: "Q9252",
+    wiki: "kk",
+  },
+  {
+    i18nCode: "ko",
+    labelEN: "Korean",
+    labelNative: "한국어",
+    wdQid: "Q9176",
+    wiki: "ko",
+  },
+  {
+    i18nCode: "krc",
+    labelEN: "Karachay-Balkar",
+    labelNative: "Qaraçay-malqar",
+    wdQid: "Q33714",
+    wiki: "krc",
+  },
+  {
+    i18nCode: "lmo",
+    labelEN: "Lombard",
+    labelNative: "Lengua lombarda",
+    wdQid: "Q33754",
+    wiki: "lmo",
+  },
+  {
+    i18nCode: "mk",
+    labelEN: "Macedonian",
+    labelNative: "Македонски",
+    wdQid: "Q9296",
+    wiki: "mk",
+  },
+  {
+    i18nCode: "mnw",
+    labelEN: "Mon",
+    labelNative: "ဘာသာမန်",
+    wdQid: "Q13349",
+    wiki: "mnw",
+  },
+  {
+    i18nCode: "ms",
+    labelEN: "Malay",
+    labelNative: "Bahasa Melayu",
+    wdQid: "Q9237",
+    wiki: "ms",
+  },
+  {
+    i18nCode: "nb",
+    labelEN: "Bokmål",
+    labelNative: "Bokmål",
+    wdQid: "Q25167",
+    wiki: "nb",
+  },
+  {
+    i18nCode: "urdu",
+    labelEN: "Urdu",
+    labelNative: "اردو",
+    wdQid: "Q1389492",
+  },
+  {
+    i18nCode: "pt",
+    labelEN: "Portuguese",
+    labelNative: "Português (pt)",
+    wdQid: "Q5146",
+    wiki: "pt",
+  },
+  {
+    i18nCode: "pt-br",
+    labelEN: "Portuguese",
+    labelNative: "Português (br)",
+    wdQid: "Q5146",
+    wiki: "pt",
+  },
+  {
+    i18nCode: "ru",
+    labelEN: "Russian",
+    labelNative: "Русский язык",
+    wdQid: "Q7737",
+    wiki: "ru",
+  },
+  {
+    i18nCode: "scn",
+    labelEN: "Sicilian",
+    labelNative: "Sicilianu",
+    wdQid: "Q33973",
+    wiki: "scn",
+  },
+  {
+    i18nCode: "sl",
+    labelEN: "Slovene",
+    labelNative: "Slovenski jezik",
+    wdQid: "Q9063",
+    wiki: "sl",
+  },
+  {
+    i18nCode: "sv",
+    labelEN: "Swedish",
+    labelNative: "Svenska",
+    wdQid: "Q9027",
+    wiki: "sv",
+  },
+  {
+    i18nCode: "sw",
+    labelEN: "Swahili",
+    labelNative: "Kiswahili",
+    wdQid: "Q7838",
+    wiki: "sw",
+  },
+  {
+    i18nCode: "tl",
+    labelEN: "Tagalog",
+    labelNative: "Wikang Tagalog",
+    wdQid: "Q34057",
+    wiki: "tl",
+  },
+  {
+    i18nCode: "tr",
+    labelEN: "Turkish",
+    labelNative: "Türkçe",
+    wdQid: "Q256",
+    wiki: "tr",
+  },
+  {
+    i18nCode: "uk",
+    labelEN: "Ukrainian",
+    labelNative: "Українська мова",
+    wdQid: "Q8798",
+    wiki: "uk",
+  },
+  // {i18nCode:"zh",labelEN: "Chinese",labelNative: "汉语",wdQid: "Q7850",wiki: "zh"}
+  {
+    i18nCode: "zh-hant",
+    labelEN: "Traditional Chinese",
+    labelNative: "中文 (繁體)",
+    wdQid: "Q18130932",
+    wiki: "zh",
+  },
+  {
+    i18nCode: "zh-hans",
+    labelEN: "Modern Chinese",
+    labelNative: "中文 (简体)",
+    wdQid: "Q13414913",
+    wiki: "zh",
+  },
+];
 
-  /* ************************************************ 
+// Init internationalisation support with Banana-i18n.js
+var banana = new Banana("fr"); // use document browser language
+loadI18nLocalization(params.uiLanguage);
+// Add url support
+banana.registerParserPlugin("link", (nodes) => {
+  return '<a href="' + nodes[0] + '">' + nodes[1] + "</a>";
+});
+
+/* ************************************************ 
 async function fetchJS(filepath) {
 	try {
 		const response = await fetch(`${filepath}`, {
@@ -401,407 +400,428 @@ async function fetchJS(filepath) {
 messages = await fetchJS(`i18n/${locale}.json`); */
 
 async function setState(value) {
-    // state = await browser.storage.local.set({state:"up"});
-    await browser.storage.local.set({state:"up"});
-    if (value) {
-        await browser.storage.local.set({state:value}).then(()=>{
-           console.log(`Value  = ${value}`);
-        });
-    }
-    
-    const newState = await browser.storage.local.get("state");
-    return newState.state;
+  // state = await browser.storage.local.set({state:"up"});
+  await browser.storage.local.set({ state: "up" });
+  if (value) {
+    await browser.storage.local.set({ state: value }).then(() => {
+      console.log(`Value  = ${value}`);
+    });
+  }
+
+  const newState = await browser.storage.local.get("state");
+  return newState.state;
 }
 
-  // Loading all UI translations
-  async function loadI18nLocalization(uiLanguageQid) {
-    var localizedPhrases = {};
+// Loading all UI translations
+async function loadI18nLocalization(uiLanguageQid) {
+  var localizedPhrases = {};
 
-    console.log("uiLanguageQid)", uiLanguageQid);
-    console.log("supportedUiLanguages", supportedUiLanguages);
+  console.log("uiLanguageQid)", uiLanguageQid);
+  console.log("supportedUiLanguages", supportedUiLanguages);
 
-    // state = "loading";
-    state = await setState("loading");
-    
-    // Get locale code and corresponding wiktionary
-    var lang = supportedUiLanguages.filter(
-      (item) => item.wdQid == uiLanguageQid
+  // state = "loading";
+  state = await setState("loading");
+
+  // Get locale code and corresponding wiktionary
+  var lang = supportedUiLanguages.filter((item) => item.wdQid == uiLanguageQid);
+  var locale = lang[0].i18nCode;
+  console.log("locale", locale);
+
+  // Load i18n messages
+  const res = await fetch(`i18n/${locale}.json`);
+  localizedPhrases = await res.json();
+  console.log("messages", localizedPhrases["si-popup-settings-title"]);
+  // Load messages into localisation
+  banana.load(localizedPhrases, locale); // Load localized messages (chould be conditional to empty)
+
+  // Declare localisation
+  banana.setLocale(locale); // Change to new locale
+  // state = "ready";
+  state = await setState("ready");
+
+  console.log(Object.keys(localizedPhrases).length + " i18n messages loaded");
+}
+/* *************************************************************** */
+/* Settings management : memory, updates ************************* */
+// Save parameter and value in localStorage
+async function storeParam(name, value) {
+  // If value of type array, we make a copy of it to avoid dead references issues
+  if (Array.isArray(value)) {
+    value = Array.from(value); // copy
+  }
+  // else, create object { name: value }
+  console.log("HERE ! Selected option: { ", name + ": " + value + " }");
+  var tmp = {};
+  tmp[name] = value;
+  // reset params
+  params[name] = value;
+  return await browser.storage.local.set(tmp);
+}
+// Get stored values from init hard coded `params` or from prefered local storage
+// Also synchronize both.
+async function getStoredParam(name) {
+  var tmp = await browser.storage.local.get(name);
+  params[name] = tmp[name] || params[name] || null;
+  // If missing from local storage, then save init values in local storage
+  if (tmp.length == undefined) {
+    await storeParam(name, params[name]);
+  }
+  return params[name];
+}
+
+// Get sign languages covered by Lingualibre
+// returns: [{ wdQid: "Q99628", labelNative: "langue des signes française"},{},...]
+
+async function getSignLanguagesWithVideos() {
+  try {
+    const response = await fetch(
+      `${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(
+        sparqlSignLanguagesQuery
+      )}&format=json`
     );
-    var locale = lang[0].i18nCode;
-    console.log("locale", locale);
-
-    // Load i18n messages
-    const res = await fetch(`i18n/${locale}.json`);
-    localizedPhrases = await res.json();
-    console.log("messages", localizedPhrases["si-popup-settings-title"]);
-    // Load messages into localisation
-    banana.load(localizedPhrases, locale); // Load localized messages (chould be conditional to empty)
-
-    // Declare localisation
-    banana.setLocale(locale); // Change to new locale
-    // state = "ready";
-    state = await setState("ready");
-
-    console.log(Object.keys(localizedPhrases).length + " i18n messages loaded");
-  }
-  /* *************************************************************** */
-  /* Settings management : memory, updates ************************* */
-  // Save parameter and value in localStorage
-  async function storeParam(name, value) {
-    // If value of type array, we make a copy of it to avoid dead references issues
-    if (Array.isArray(value)) {
-      value = Array.from(value); // copy
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    // else, create object { name: value }
-    console.log("HERE ! Selected option: { ", name + ": " + value + " }");
-    var tmp = {};
-    tmp[name] = value;
-    // reset params
-    params[name] = value;
-    return await browser.storage.local.set(tmp);
-  }
-  // Get stored values from init hard coded `params` or from prefered local storage
-  // Also synchronize both.
-  async function getStoredParam(name) {
-    var tmp = await browser.storage.local.get(name);
-    params[name] = tmp[name] || params[name] || null;
-    // If missing from local storage, then save init values in local storage
-    if (tmp.length == undefined) {
-      await storeParam(name, params[name]);
+
+    const data = await response.json(); // Await the parsed JSON response
+
+    let signLanguages = [];
+    for (let i = 0; i < data.results.bindings.length; i++) {
+      const signLanguageRaw = data.results.bindings[i];
+      const signLanguage = {
+        wdQid: signLanguageRaw.id.value.split("/").pop(),
+        labelNative: signLanguageRaw.idLabel.value,
+      };
+      signLanguages.push(signLanguage);
     }
-    return params[name];
+
+    // Temporary filtering (assuming filterArrayBy is available)
+    signLanguages = filterArrayBy(signLanguages, "wdQid", "Q99628");
+
+    console.log(signLanguages);
+    return signLanguages;
+  } catch (error) {
+    console.error("Error fetching or processing data:", error);
   }
+}
 
-  // Get sign languages covered by Lingualibre
-  // returns: [{ wdQid: "Q99628", labelNative: "langue des signes française"},{},...]
+// Loading all vidéos of a given sign language. Format:
+// returns format: { word: { filename: url, speaker: name }, ... };
+async function getAllRecords(signLanguage) {
+  // Using Fetch API since service_worker cant access DOM and hence cant use jquery
 
-  async function getSignLanguagesWithVideos() {
-    try {
-      const response = await fetch(`${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(sparqlSignLanguagesQuery)}&format=json`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      const data = await response.json(); // Await the parsed JSON response
-
-      let signLanguages = [];
-      for (let i = 0; i < data.results.bindings.length; i++) {
-        const signLanguageRaw = data.results.bindings[i];
-        const signLanguage = {
-          wdQid: signLanguageRaw.id.value.split("/").pop(),
-          labelNative: signLanguageRaw.idLabel.value,
-        };
-        signLanguages.push(signLanguage);
-      }
-
-      // Temporary filtering (assuming filterArrayBy is available)
-      signLanguages = filterArrayBy(signLanguages, "wdQid", "Q99628");
-
-      console.log(signLanguages);
-      return signLanguages;
-    } catch (error) {
-      console.error("Error fetching or processing data:", error);
-    }
-  }
-
-  // Loading all vidéos of a given sign language. Format:
-  // returns format: { word: { filename: url, speaker: name }, ... };
-  async function getAllRecords(signLanguage) {    
-    // Using Fetch API since service_worker cant access DOM and hence cant use jquery
-
-    var i,
-      record,
-      word,
-      response,
-      records = {};
-    try {
+  var i,
+    record,
+    word,
+    response,
+    records = {};
+  try {
     //   state = "loading";
-      state = await setState("loading");
+    state = await setState("loading");
 
-      response = await fetch(`${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(sparqlSignVideosQuery.replace('$(lang)', signLanguage))}&format=json`);
+    response = await fetch(
+      `${sparqlEndpoints.lingualibre.url}/?query=${encodeURI(
+        sparqlSignVideosQuery.replace("$(lang)", signLanguage)
+      )}&format=json`
+    );
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json(); // Await the parsed JSON response
+
+    for (i = 0; i < data.results.bindings.length; i++) {
+      record = data.results.bindings[i];
+      word = record.word.value.toLowerCase();
+      if (records.hasOwnProperty(word) === false) {
+        records[word] = [];
       }
-
-      const data = await response.json(); // Await the parsed JSON response
-
-      for (i = 0; i < data.results.bindings.length; i++) {
-        record = data.results.bindings[i];
-        word = record.word.value.toLowerCase();
-        if (records.hasOwnProperty(word) === false) {
-          records[word] = [];
-        }
-        records[word].push({
-          filename: record.filename.value.replace("http://", "https://"),
-          speaker: record.speaker.value,
-        });
-      }
+      records[word].push({
+        filename: record.filename.value.replace("http://", "https://"),
+        speaker: record.speaker.value,
+      });
+    }
 
     //   state = "ready";
-      state = await setState("ready");
-
-
-      console.log(Object.keys(records).length + " records loaded");
-      return records;
-    } catch (error) {
-      console.error("Error fetching or processing data:", error);
-    }
-  }
-
-  // Given language's Qid, reload list of available videos and records/words data
-  async function changeLanguage(newLang) {
-    records = await getAllRecords(newLang);
-    await storeParam("signLanguage", newLang); // localStorage save
-  }
-  async function changePosition(newPosition) {
-    await storeParam('position',newPosition); // localStorage save
-    console.log("changePosition executed")
-  }
-
-  // Given language's Qid, reload available translations
-  async function changeUiLanguage(newLang) {
-    console.log("changeUiLanguage newLang", newLang); // => 'Q150' for french
-    await loadI18nLocalization(newLang);
-    await storeParam("uiLanguage", newLang); // localStorage save
-  }
-
-  /* *************************************************************** */
-  /* Toolbox functions ********************************************* */
-  var filterArrayBy = function (arr, key, value) {
-    return arr.filter((item) => item[key] == value);
-  };
-  function normalize(selection) {
-    // this could do more
-    return selection.trim();
-  }
-
-  // Check a string with multiple words and return the word whose record is available
-  function getAvailableWord( word ) {
-
-    // similar to what we did in background-script.js;
-    
-    const regex = /[!"#$%&()*+,-./:;<=>?@[\\\]^_{|}~]/;
-    const stringWithoutSpecialChars = word.replace(regex,"");
-    const wordArray = stringWithoutSpecialChars.split(" ");
-    console.log(wordArray);
-    for ( let newWord of wordArray ) {
-      if( records.hasOwnProperty(newWord.toLowerCase()) ){
-        return newWord;
-      }
-    }
-  }
-  // Given a word string, check if exist in available records data, if so return data on that word
-  // returns format: { filename: url, speaker: name }
-  function wordToFiles(word) {
-    var fileData = records.hasOwnProperty(word)
-      ? records[word]
-      : records.hasOwnProperty(word.toLowerCase())
-      ? records[word.toLowerCase()]
-      : null;
-    return fileData;
-  }
-
-  var normalizeMessage = function (msg) {
-    var text = msg.selectionText || msg.iconText || msg.wpTitle;
-    delete msg.selectionText; // when from background-script.js via right-click menu
-    delete msg.iconText; // when from signit.js icon click
-    delete msg.wpTitle; // when from wpintegration.js auto-injection
-    // text = text.trim();
-    const newMsg = { ...msg, text };
-    // msg.list = getAllRecords() <--------- how to do
-    return newMsg;
-  };
-
-  /* *************************************************************** */
-  /* Dependencies, CSP ********************************************* */
-  async function getActiveTabId() {
-    await browser.tabs.query({ active: true, currentWindow: true });
-    return tabs[0].id;
-  }
-  // Ping tab, if fails, then CSS, JS dependencies loaded and executed
-  async function checkActiveTabInjections(tabId) {
-    try {
-      await browser.tabs.sendMessage(tabId, { command: "ping" });
-    } catch (error) {
-      var dependencies = browser.runtime.getManifest().content_scripts[0];
-      var scripts = dependencies.js;
-      var stylesheets = dependencies.css;
-
-      // Using the scripting API as per Manifest V3
-
-      await browser.scripting.executeScript({
-        target: { tabId },
-        files: [...scripts],
-      });
-
-      await browser.scripting.insertCSS({
-        target: { tabId },
-        files: [...stylesheets],
-      });
-      // }
-    }
-  }
-
-  /* Browser interactions ****************************************** */
-  var callModal = async function (msg) {
-    // Tab
-    console.log("Call modal > msg", { msg });
-    var tabs = await browser.tabs.query({ active: true, currentWindow: true });
-    await checkActiveTabInjections(tabs[0].id);
-    console.log("Call modal > #282 > tab id", tabs[0].id);
-    // Data
-    var word = msg.text;
-    if (word.split(" ").length > 1) {
-      word = getAvailableWord(word);
-    }
-    var videosFiles = msg.files || wordToFiles(word) || [];
-    // Send message which opens the modal
-    browser.tabs.sendMessage(tabs[0].id, {
-      command: "signit.sign",
-      text: word,
-      files: videosFiles,
-      supportedWords: Object.keys(records), // <------ array for coloredwords feature
-      banana: banana,
-    });
-    storeParam("history", [word, ...params.history]);
-  };
-
-  // Create a context menu item (right-click on text to see)
-  browser.contextMenus.create(
-    {
-      id: "signit",
-      title: "Lingua Libre SignIt",
-      contexts: ["selection"],
-    },
-    function () {
-      return;
-    }
-  );
-
-  // Listen for right-click menu's signals
-  browser.contextMenus.onClicked.addListener(async function (
-    menuMessage,
-    __tab
-  ) {
-    // var tab not used ? Can remove ?
-    let message = normalizeMessage(menuMessage);
-    callModal(message);
-  });
-
-  // Listen for other signals
-  browser.runtime.onMessage.addListener(async function (
-    message,
-    sender,
-    sendResponse
-  ) {
-    console.log(
-      "Message heard in service_worker: ",
-      message,
-      "---------------------"
-    );
-    // keeping it above normalizeMessage() since it deletes the selecton text inside 
-    // the message which renders the test undefined
-
-    if (message.command === "normalizeWordAndReturnFiles") {
-      const word  = normalize(message.argument);
-      const files  = wordToFiles(word);
-      sendResponse([word,files]);
-    }
-    message = normalizeMessage(message);
-
-    // When message 'signit.getfiles' is heard, returns relevant extract of records[]
-    if (message.command === "signit.getfiles") {
-      console.log("bg>signit.getfiles");
-      console.log(
-        records[message.text] || records[message.text.toLowerCase()] || []
-      );
-      sendResponse(records[message.text] || records[message.text.toLowerCase()] || []);
-    }
-    // When message 'signit.i18nCode' is heard, returns banada object
-    else if (message.command === 'bananai18n') {
-      let [msg,placeholderValue] = message.arg;
-      const i18nMessage = banana.i18n(msg,...placeholderValue);
-      sendResponse(i18nMessage);
-    }
-
-    // Start modal
-    // When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
-    else if (message.command === "signit.hinticon") {
-      callModal(message);
-    } 
-    else if (message.command === "checkActiveTabInjections") {
-      checkActiveTabInjections(message.argument);
-    }
-    else if (message.command === "storeParam") {
-      const [name,value] = message.argument;
-      storeParam(name,value);
-    }
-    else if (message.command === "changeUiLanguage") {
-      await changeUiLanguage(message.argument);
-    }
-    else if (message.command==='storeHintIconPosition'){
-      const position = message.argument;
-      // Store the position in localStorage
-      console.log('Hint icon position stored:', position);
-      storeParam('position',position)
-      console.log("done")
-  }
-  });
-
-  /* *************************************************************** */
-  /* Main ********************************************************** */
-  async function main() {
-    // state = "loading";
-    state = await setState("loading");
-
-    // Get local storage value if exist, else get default values
-    // promise.all
-    await getStoredParam("history");
-    await getStoredParam("historylimit");
-    await getStoredParam("wpintegration");
-    await getStoredParam("twospeed");
-    // storeParam( 'twospeed', params.twospeed ); //
-    await getStoredParam("hinticon");
-    await getStoredParam("coloredwords");
-    await getStoredParam("choosepanels");
-    await getStoredParam("position");
-
-    let signLanguage = await getStoredParam("signLanguage");
-    signLanguages = await getSignLanguagesWithVideos();
-    let uiLanguage = await getStoredParam("uiLanguage");
-    console.log("supportedUiLanguages", supportedUiLanguages);
-    uiLanguages = supportedUiLanguages;
-    records = await getAllRecords( signLanguage );
-
-    // state = "ready";
     state = await setState("ready");
 
+    console.log(Object.keys(records).length + " records loaded");
+    return records;
+  } catch (error) {
+    console.error("Error fetching or processing data:", error);
   }
+}
+
+// Given language's Qid, reload list of available videos and records/words data
+async function changeLanguage(newLang) {
+  records = await getAllRecords(newLang);
+  await storeParam("signLanguage", newLang); // localStorage save
+}
+async function changePosition(newPosition) {
+  await storeParam("position", newPosition); // localStorage save
+  console.log("changePosition executed");
+}
+
+// Given language's Qid, reload available translations
+async function changeUiLanguage(newLang) {
+  console.log("changeUiLanguage newLang", newLang); // => 'Q150' for french
+  await loadI18nLocalization(newLang);
+  await storeParam("uiLanguage", newLang); // localStorage save
+}
+
+/* *************************************************************** */
+/* Toolbox functions ********************************************* */
+var filterArrayBy = function (arr, key, value) {
+  return arr.filter((item) => item[key] == value);
+};
+function normalize(selection) {
+  // this could do more
+  return selection.trim();
+}
+
+// Check a string with multiple words and return the word whose record is available
+function getAvailableWord(word) {
+  // similar to what we did in background-script.js;
+
+  const regex = /[!"#$%&()*+,-./:;<=>?@[\\\]^_{|}~]/;
+  const stringWithoutSpecialChars = word.replace(regex, "");
+  const wordArray = stringWithoutSpecialChars.split(" ");
+  console.log(wordArray);
+  for (let newWord of wordArray) {
+    if (records.hasOwnProperty(newWord.toLowerCase())) {
+      return newWord;
+    }
+  }
+}
+// Given a word string, check if exist in available records data, if so return data on that word
+// returns format: { filename: url, speaker: name }
+function wordToFiles(word) {
+  var fileData = records.hasOwnProperty(word)
+    ? records[word]
+    : records.hasOwnProperty(word.toLowerCase())
+    ? records[word.toLowerCase()]
+    : null;
+  return fileData;
+}
+
+var normalizeMessage = function (msg) {
+  var text = msg.selectionText || msg.iconText || msg.wpTitle;
+  delete msg.selectionText; // when from background-script.js via right-click menu
+  delete msg.iconText; // when from signit.js icon click
+  delete msg.wpTitle; // when from wpintegration.js auto-injection
+  // text = text.trim();
+  const newMsg = { ...msg, text };
+  // msg.list = getAllRecords() <--------- how to do
+  return newMsg;
+};
+
+/* *************************************************************** */
+/* Dependencies, CSP ********************************************* */
+async function getActiveTabId() {
+  await browser.tabs.query({ active: true, currentWindow: true });
+  return tabs[0].id;
+}
+// Ping tab, if fails, then CSS, JS dependencies loaded and executed
+async function checkActiveTabInjections(tabId) {
+  try {
+    await browser.tabs.sendMessage(tabId, { command: "ping" });
+  } catch (error) {
+    var dependencies = browser.runtime.getManifest().content_scripts[0];
+    var scripts = dependencies.js;
+    var stylesheets = dependencies.css;
+
+    // Using the scripting API as per Manifest V3
+
+    await browser.scripting.executeScript({
+      target: { tabId },
+      files: [...scripts],
+    });
+
+    await browser.scripting.insertCSS({
+      target: { tabId },
+      files: [...stylesheets],
+    });
+    // }
+  }
+}
+
+/* Browser interactions ****************************************** */
+var callModal = async function (msg) {
+  // Tab
+  console.log("Call modal > msg", { msg });
+  var tabs = await browser.tabs.query({ active: true, currentWindow: true });
+  await checkActiveTabInjections(tabs[0].id);
+  console.log("Call modal > #282 > tab id", tabs[0].id);
+  // Data
+  var word = msg.text;
+  if (word.split(" ").length > 1) {
+    word = getAvailableWord(word);
+  }
+  var videosFiles = msg.files || wordToFiles(word) || [];
+  // Send message which opens the modal
+  browser.tabs.sendMessage(tabs[0].id, {
+    command: "signit.sign",
+    text: word,
+    files: videosFiles,
+    supportedWords: Object.keys(records), // <------ array for coloredwords feature
+    banana: banana,
+  });
+  storeParam("history", [word, ...params.history]);
+};
+
+// Create a context menu item (right-click on text to see)
+browser.contextMenus.create(
+  {
+    id: "signit",
+    title: "Lingua Libre SignIt",
+    contexts: ["selection"],
+  },
+  function () {
+    return;
+  }
+);
+
+// Listen for right-click menu's signals
+browser.contextMenus.onClicked.addListener(async function (menuMessage, __tab) {
+  // var tab not used ? Can remove ?
+  let message = normalizeMessage(menuMessage);
+  callModal(message);
+});
+
+// Listen for other signals
+browser.runtime.onMessage.addListener(async function (
+  message,
+  sender,
+  sendResponse
+) {
+  console.log(
+    "Message heard in service_worker: ",
+    message,
+    "---------------------"
+  );
+  // keeping it above normalizeMessage() since it deletes the selecton text inside
+  // the message which renders the test undefined
+
+  if (message.command === "normalizeWordAndReturnFiles") {
+    const word = normalize(message.argument);
+    const files = wordToFiles(word);
+    sendResponse([word, files]);
+  }
+  message = normalizeMessage(message);
+
+  // When message 'signit.getfiles' is heard, returns relevant extract of records[]
+  if (message.command === "signit.getfiles") {
+    console.log("bg>signit.getfiles");
+    console.log(
+      records[message.text] || records[message.text.toLowerCase()] || []
+    );
+    sendResponse(
+      records[message.text] || records[message.text.toLowerCase()] || []
+    );
+  }
+  // When message 'signit.i18nCode' is heard, returns banada object
+  else if (message.command === "bananai18n") {
+    let [msg, placeholderValue] = message.arg;
+    const i18nMessage = banana.i18n(msg, ...placeholderValue);
+    sendResponse(i18nMessage);
+  }
+
+  // Start modal
+  // When right click's menu "Lingua Libre SignIt" clicked, send message 'signit.sign' to the content script => opens Signit modal
+  else if (message.command === "signit.hinticon") {
+    callModal(message);
+  } else if (message.command === "checkActiveTabInjections") {
+    checkActiveTabInjections(message.argument);
+  } else if (message.command === "storeParam") {
+    const [name, value] = message.argument;
+    storeParam(name, value);
+  } else if (message.command === "changeUiLanguage") {
+    await changeUiLanguage(message.argument);
+  } else if (message.command === "storeHintIconPosition") {
+    const position = message.argument;
+    // Store the position in localStorage
+    console.log("Hint icon position stored:", position);
+    storeParam("position", position);
+    console.log("done");
+  }
+});
+
+/* *************************************************************** */
+/* Main ********************************************************** */
+async function main() {
+  // state = "loading";
+  state = await setState("loading");
+
+  // Get local storage value if exist, else get default values
+  // promise.all
+  await getStoredParam("history");
+  await getStoredParam("historylimit");
+  await getStoredParam("wpintegration");
+  await getStoredParam("twospeed");
+  // storeParam( 'twospeed', params.twospeed ); //
+  await getStoredParam("hinticon");
+  await getStoredParam("coloredwords");
+  await getStoredParam("choosepanels");
+  await getStoredParam("position");
+
+  let signLanguage = await getStoredParam("signLanguage");
+  // signLanguages = await getSignLanguagesWithVideos();
+  signLanguages = [
+    {
+      wdQid: "Q99628",
+      wikidata: "Q33302",
+      labelNative: "langue des signes française",
+    },
+    {
+      wdQid: "Q1379196",
+      wikidata: "Q3446604",
+      labelNative: "Armenian Sign Language",
+    },
+    {
+      wdQid: "Q806575",
+      wikidata: "Q14759",
+      labelNative: "American Sign Language",
+    },
+  ];
+  let uiLanguage = await getStoredParam("uiLanguage");
+  console.log("supportedUiLanguages", supportedUiLanguages);
+  uiLanguages = supportedUiLanguages;
+  records = await getAllRecords(signLanguage);
+
+  // state = "ready";
+  state = await setState("ready");
+}
 
 // Run it
 main();
 
-const WAIT_ALARM = 'waitWhileLoading';
+const WAIT_ALARM = "waitWhileLoading";
 async function createAlarm() {
   await chrome.alarms.create(WAIT_ALARM, {
-    periodInMinutes: 1 / 60 // by specifying it as fraction we can run the ⏰ in every 1 second
+    periodInMinutes: 1 / 60, // by specifying it as fraction we can run the ⏰ in every 1 second
   });
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-	if (message.command === "getBackground") {
-    const extensionData = {state,params,uiLanguages,records,signLanguages};
+  if (message.command === "getBackground") {
+    const extensionData = {
+      state,
+      params,
+      uiLanguages,
+      records,
+      signLanguages,
+    };
     sendResponse(extensionData);
     createAlarm();
-	}
+  }
 });
 
-chrome.alarms.onAlarm.addListener((alarm)=>{
+chrome.alarms.onAlarm.addListener((alarm) => {
   if (alarm.name === WAIT_ALARM) {
-    if (state === 'ready') {
-      chrome.runtime.sendMessage({state:'ready'});
-        chrome.alarms.clear(WAIT_ALARM);
+    if (state === "ready") {
+      chrome.runtime.sendMessage({ state: "ready" });
+      chrome.alarms.clear(WAIT_ALARM);
     }
   }
-})
+});

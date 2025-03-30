@@ -13,7 +13,7 @@
   },
   "scripts": {
     "postinstall": "bash bin/build.sh",
-    "web-ext:build": "web-ext build    # zips all content but .git files",
+    "web-ext:build": "web-ext build",
     "web-ext:test-firefox": "web-ext run --source-dir ./ --url=fr.wikipedia.org/wiki/Firefox  --target=firefox-desktop",
     "web-ext:test-chromium": "web-ext run --source-dir ./ --url=fr.wikipedia.org/wiki/Chromium --target=chromium"
   },
