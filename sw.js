@@ -485,7 +485,9 @@ async function getSignLanguagesWithVideos() {
 
     const data = await response.json(); // Await the parsed JSON response
 
-    let signLanguages = [];
+    let signLanguages = [],
+      frenchSignLanguage = [],
+      armenianSignLanguage = [];
     for (let i = 0; i < data.results.bindings.length; i++) {
       const signLanguageRaw = data.results.bindings[i];
       const signLanguage = {
@@ -496,10 +498,9 @@ async function getSignLanguagesWithVideos() {
     }
 
     // Temporary filtering (assuming filterArrayBy is available)
-    signLanguages = filterArrayBy(signLanguages, "wdQid", "Q99628");
-
-    console.log(signLanguages);
-    return signLanguages;
+    frenchSignLanguage = filterArrayBy(signLanguages, "wdQid", "Q99628");
+    armenianSignLanguage = filterArrayBy(signLanguages, "wdQid", "Q1379196");
+    return [...frenchSignLanguage, ...armenianSignLanguage];
   } catch (error) {
     console.error("Error fetching or processing data:", error);
   }
@@ -736,6 +737,8 @@ browser.runtime.onMessage.addListener(async function (
   } else if (message.command === "storeParam") {
     const [name, value] = message.argument;
     storeParam(name, value);
+  } else if (message.command === "changeLanguage") {
+    await changeLanguage(message.argument);
   } else if (message.command === "changeUiLanguage") {
     await changeUiLanguage(message.argument);
   } else if (message.command === "storeHintIconPosition") {

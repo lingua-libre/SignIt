@@ -396,12 +396,14 @@ var browser = (browserType === 'firefox') ? browser : (browserType === 'chrome')
 	// Others
 	async function changeSignLanguage( item ) {
 		var newLanguage = item.getData(); // `item` is the oojs Select element's object.
+		
 		if ( _backgroundPage.params.signLanguage === newLanguage ) {
 			return;
 		}
 
 		ui.switchPanel( 'loading' );
-		await _backgroundPage.changeLanguage( newLanguage );
+		await sendMessageUp("changeLanguage",newLanguage);
+
 		ui = new UI();
 		ui.switchPanel( 'loaded' );
 	}
