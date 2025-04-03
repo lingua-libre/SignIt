@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kambai Akau"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Á̱ cat lyulyoot a̱mgba̱m nghwughwu-a̱guguut na̱ shyia̱ di̱ Lingua Libre.",
+	"si-panel-videos-title": "Nyinyiit shei nkhang:",
+	"si-panel-videos-gallery-attribution": "di̱n vak {{link:$1|$2}} – Ghwughwu-a̱guguut $3 neet mi̱ $4",
+	"si-panel-videos-empty": "Á̱ ka̱n byia̱ a̱nwuat swang a̱lyiat jini bah,<br>a̱wot SignIt yet ta̱m cat a̱sorong nkyang hwa, a maai a jhyet ma̱ng a̱nhu.",
+	"si-panel-videos-contribute-label": "Jhyet ma̱ng A̱lyem A̱lama",
+	"si-panel-definitions-title": "Ngwa̱i-a̱lyiat:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#Shong",
+	"si-panel-definitions-wikt-pointer": "nwuan ma̱ a̱gban swáng a̱lyiat wu a li",
+	"si-panel-definitions-empty": "Á̱ sang wa̱i-a̱lyiat.",
+	"si-popup-browse-title": "Nyia̱ bi̱ra̱uzin",
+	"si-popup-browse-placeholder": "Zop a̱mami a̱yaalama $1.",
+	"si-popup-browse-label": "Zop",
+	"si-popup-browse-icon": "Tsa zop ji",
+	"si-popup-history-title": "Nkhang",
+	"si-popup-history-empty": "A̱ swan bwak-nkhwot",
+	"si-popup-settings-title": "A̱yaaseti",
+	"si-popup-settings-signlanguage": "A̱lyem a̱lama:",
+	"si-popup-settings-signlanguage-help": "Shai nghwughwu-a̱guguut naat ma̱ a̱lyem a̱lama a̱ghyang.",
+	"si-popup-settings-signlanguage-dropdown": "Shai nghwughwu-a̱guguut a̱lyem",
+	"si-popup-settings-uilanguage": "A̱lyem tyannwuan:",
+	"si-popup-settings-uilanguage-help": "Shai a̱lyem tyannwuan a̱tyunta̱m ka.",
+	"si-popup-settings-uilanguage-dropdown": "Shai a̱lyem tyannwuan",
+	"si-popup-settings-history": "Shi-a̱swap nkhang hu:",
+	"si-popup-settings-history-help": "Tyei 0 ni̱ hyat nwuo nkhang hu",
+	"si-popup-settings-wpintegration": "Muna̱pyia̱ a̱taada ma̱ng Wukipedia:",
+	"si-popup-settings-twospeed": "Lyui di̱ cung taada, a̱wot a kin ncung shonshyon:",
+	"si-popup-settings-hint-icon": "Ayikwon a̱km-vak di̱ lyuut nang á̱ khai a̱ni:",
+	"si-popup-settings-choosepanels": "Mpanet na̱ myim tyai a̱ni:",
+	"si-popup-settings-choosepanels-definition": "Lyuut a̱gban swáng a̱lyiat ma̱nyin",
+	"si-popup-settings-choosepanels-both": "A̱feang wu",
+	"si-popup-settings-choosepanels-video": "Nghwughwu-a̱guguut nang á̱ tyia̱ bwak tazwa ma̱nyin",
+	"si-popup-settings-enlighten": "Ta̱fi̱t long tazwa swáng a̱lyiat ji̱ shyia̱ a̱ni:"
+}
