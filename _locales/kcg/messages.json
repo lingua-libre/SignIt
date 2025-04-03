@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Á̱ cat lyulyoot a̱mgba̱m nghwughwu-a̱guguut na̱ shyia̱ di̱ Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Nyinyiit shei nkhang:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "di̱n vak {{link:$1|$2}} – Ghwughwu-a̱guguut $3 neet mi̱ $4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Á̱ ka̱n byia̱ a̱nwuat swang a̱lyiat jini bah,<br>a̱wot SignIt yet ta̱m cat a̱sorong nkyang hwa, a maai a jhyet ma̱ng a̱nhu.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Jhyet ma̱ng A̱lyem A̱lama",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Ngwa̱i-a̱lyiat:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Shong",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "nwuan ma̱ a̱gban swáng a̱lyiat wu a li",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Á̱ sang wa̱i-a̱lyiat.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Nyia̱ bi̱ra̱uzin",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Zop a̱mami a̱yaalama $1.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Zop",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Tsa zop ji",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Nkhang",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "A̱ swan bwak-nkhwot",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "A̱yaaseti",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "A̱lyem a̱lama:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Shai nghwughwu-a̱guguut naat ma̱ a̱lyem a̱lama a̱ghyang.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Shai nghwughwu-a̱guguut a̱lyem",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "A̱lyem tyannwuan:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Shai a̱lyem tyannwuan a̱tyunta̱m ka.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Shai a̱lyem tyannwuan",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Shi-a̱swap nkhang hu:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Tyei 0 ni̱ hyat nwuo nkhang hu",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Muna̱pyia̱ a̱taada ma̱ng Wukipedia:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Lyui di̱ cung taada, a̱wot a kin ncung shonshyon:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Ayikwon a̱km-vak di̱ lyuut nang á̱ khai a̱ni:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Mpanet na̱ myim tyai a̱ni:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Lyuut a̱gban swáng a̱lyiat ma̱nyin",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "A̱feang wu",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Nghwughwu-a̱guguut nang á̱ tyia̱ bwak tazwa ma̱nyin",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Ta̱fi̱t long tazwa swáng a̱lyiat ji̱ shyia̱ a̱ni:",
+    "description": ""
+  }
+}
