@@ -3,6 +3,7 @@
 		"authors": [
 			"Dream Star.cn",
 			"GuoPC",
+			"Mishidexfc",
 			"Yfdyh000",
 			"Yug"
 		]
@@ -15,7 +16,7 @@
 	"si-panel-videos-contribute-label": "贡献你的手语",
 	"si-panel-definitions-title": "定义：",
 	"si-panel-definitions-wikt-iso": "zh",
-	"si-panel-definitions-wikt-section-id": "#漢語",
+	"si-panel-definitions-wikt-section-id": "#中文",
 	"si-panel-definitions-wikt-pointer": "查阅维基词典",
 	"si-panel-definitions-empty": "没有找到定义。",
 	"si-popup-browse-title": "浏览",
