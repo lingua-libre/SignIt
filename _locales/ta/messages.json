@@ -1,4 +1,8 @@
 {
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
   "si_popup_browse_label": {
     "message": "தேடு",
     "description": ""

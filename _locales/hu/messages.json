@@ -1,4 +1,8 @@
 {
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
   "si_panel_videos_title": {
     "message": "Média:",
     "description": ""
