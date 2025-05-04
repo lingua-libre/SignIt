@@ -5,7 +5,9 @@
   "main": "background-script.js",
   "dependencies": {
     "banana-i18n": "^2.3.3",
+    "lru-cache": "^11.1.0",
     "oojs-ui": "^0.44.1",
+    "sign-it": "file:",
     "webextension-polyfill": "^0.9.0"
   },
   "devDependencies": {
