@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jimkats"
+		]
+	},
+	"si-panel-videos-title": "Πολυμέσο:",
+	"si-panel-videos-gallery-attribution": "από {{link:$1|$2}} – Βίντεο $3 από $4",
+	"si-panel-definitions-title": "Ορισμοί:",
+	"si-panel-definitions-empty": "Δε βρέθηκε ορισμός.",
+	"si-popup-browse-title": "Περιήγηση",
+	"si-popup-browse-label": "Αναζήτηση",
+	"si-popup-browse-icon": "Ξεκινήστε την αναζήτηση",
+	"si-popup-history-title": "Ιστορικό",
+	"si-popup-history-empty": "Είναι άδειο",
+	"si-popup-settings-title": "Ρυθμίσεις",
+	"si-popup-settings-signlanguage": "Νοηματική γλώσσα:",
+	"si-popup-settings-signlanguage-help": "Αλλάξτε τα βίντεο σε άλλη νοηματική γλώσσα.",
+	"si-popup-settings-signlanguage-dropdown": "Αλλαγή γλώσσας βίντεο",
+	"si-popup-settings-uilanguage": "Γλώσσα διεπαφής:",
+	"si-popup-settings-uilanguage-help": "Αλλάξτε τη γλώσσα της διεπαφής χρήστη.",
+	"si-popup-settings-uilanguage-dropdown": "Αλλαγή γλώσσας διεπαφής",
+	"si-popup-settings-choosepanels-both": "Και τα δύο",
+	"si-popup-settings-enlighten": "Επισήμανση των διαθέσιμων λέξεων:"
+}
