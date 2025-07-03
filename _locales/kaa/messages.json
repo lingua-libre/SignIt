@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "<a href='$1'>$2</a> paydalanıwshınıń $4 danadan $3-videosı",
+    "message": "{{link:$1|$2}} paydalanıwshınıń $4 danadan $3-videosı",
     "description": ""
   },
   "si_panel_videos_empty": {
