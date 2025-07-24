@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "自由語言簽名",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "攞緊所有喺自由語言上面提供嘅影片清單。",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "媒體：",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "由{{link:$1|$2}} – 影片$3 ，共$4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "呢個字仲未錄， <br> 但係 SignIt 係群眾調查項目，你可以為佢作出貢獻。",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "用手語作出貢獻",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "定義：",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "＃英文",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "睇維基詞典",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "搵唔到定義。",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "瀏覽",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "喺 $1 嘅標誌之間搜尋。",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "搵",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "開始搜尋",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "歷史",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "佢係空嘅",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "設定",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "手語：",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "將影片改為另一種手語。",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "改變影片嘅語言",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "介面語言：",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "改變用戶介面語言。",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "改介面語言",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "歷史長度：",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "設定0為停用記錄",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "同維基百科嘅原生整合：",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "用正常速度玩，然後用慢速玩：",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "所選文字上嘅捷徑圖示：",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "要顯示嘅面板：",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "淨係字典文字",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "兩者都係",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "淨係限簽名影片",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "突顯可用嘅字詞：",
+    "description": ""
+  }
+}
