@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "د اشاروي ژبې خپلواک ويونکي",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "په لينگوا ليبرې کې د لاسرسي‌وړ ټولو ويډيگانو لړليک ترلاسه‌کول.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "رسنۍ:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "د {{link:$1|$2}} له خوا – د $4 له منځه $3 ويډيو",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "دا ويوکی تراوسه نه دی کښل شوی، <br>خو SignIt ټولگړې پروژه ده، تاسو کولی شئ ونډه پکې واخلئ.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "له اشاروي ژبې سره ونډه اخيستل",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "پېژندونونه:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "ps",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#پښتو",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "په ويکي‌سيند کې يې وگورئ",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "هېڅ پېژندون ونه موندل شو.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "سپړل",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "د $1 نښو په منځ کې پلټل",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "پلټل",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "پلټل پيلول",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "پېښليک",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "دا تش دی",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "اوڼنې",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "اشاروي ژبه:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "ويډيوگانې بلې اشاروي ژبې ته بدلول.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "د ويډيوگانو ژبه بدلول",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "مخبڼې ژبه:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "د کارن د مخبڼې ژبه بدلول.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "د مخبڼې ژبه بدلول",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "د پېښليک اوږدوالی",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "۰ ته اوڼل پېښليک يادښت ناکارنده‌کوي",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "له ويکيپېډيا سره ځايي يوځايوالی:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "په نورماله چټکتيا، بيا په ورو چټکتيا يې وغږوئ:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "په ټاکلي ليک کې د لنډلارې نښه:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "ښکارېدنې منځدړې:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "يوازې د ويي‌سيند ليک",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "دواړه",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "يوازې لاسليک‌شوې ويډيوگانې",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "دلاسرسي‌وړ ويوکي روښانول:",
+    "description": ""
+  }
+}
