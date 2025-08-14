@@ -4,7 +4,7 @@
     "description": ""
   },
   "si_addon_preload": {
-    "message": "攞緊所有喺自由語言上面提供嘅影片清單。",
+    "message": "攞緊所有喺Lingua Libre上面畀嘅影片清單。",
     "description": ""
   },
   "si_panel_videos_title": {
@@ -80,7 +80,7 @@
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "改變影片嘅語言",
+    "message": "改影片嘅語言",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
@@ -88,7 +88,7 @@
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "改變用戶介面語言。",
+    "message": "改用戶介面語言。",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
