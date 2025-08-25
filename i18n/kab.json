@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"ButterflyOfFire"
+		]
+	},
+	"si-panel-definitions-wikt-iso": "kab",
+	"si-panel-definitions-wikt-section-id": "#Taqbaylit",
+	"si-panel-definitions-wikt-pointer": "wali deg Wikawal",
+	"si-popup-browse-title": "Snirem",
+	"si-popup-browse-label": "Nadi",
+	"si-popup-browse-icon": "Bdu anadi",
+	"si-popup-history-title": "Amazray",
+	"si-popup-history-empty": "D ilem",
+	"si-popup-settings-title": "Iɣewwaren",
+	"si-popup-settings-uilanguage": "Tutlayt n wegrudem:",
+	"si-popup-settings-uilanguage-dropdown": "Snifel tutlayt n ugrudem",
+	"si-popup-settings-choosepanels-both": "I sin"
+}
