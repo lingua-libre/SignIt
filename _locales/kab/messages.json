@@ -1,0 +1,50 @@
+{
+  "si_panel_definitions_wikt_iso": {
+    "message": "kab",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Taqbaylit",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "wali deg Wikawal",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Snirem",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Nadi",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Bdu anadi",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Amazray",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "D ilem",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Iɣewwaren",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Tutlayt n wegrudem:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Snifel tutlayt n ugrudem",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "I sin",
+    "description": ""
+  }
+}
