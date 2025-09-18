@@ -6,7 +6,6 @@
 		]
 	},
 	"si-addon-title": "Lingua Libre SignIt",
-	"si-addon-preload": "Tìm nạp danh sách tất cả các video có sẵn trên Lingua Libre.",
 	"si-panel-videos-title": "Phương tiện:",
 	"si-panel-videos-gallery-attribution": "bởi {{link:$1|$2}} – Video $3 trên $4",
 	"si-panel-videos-empty": "Từ này chưa được ghi lại,<br> nhưng SignIt là dự án có nguồn gốc cộng đồng, bạn có thể đóng góp cho nó.",
