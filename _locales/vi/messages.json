@@ -3,10 +3,6 @@
     "message": "Lingua Libre SignIt",
     "description": ""
   },
-  "si_addon_preload": {
-    "message": "Tìm nạp danh sách tất cả các video có sẵn trên Lingua Libre.",
-    "description": ""
-  },
   "si_panel_videos_title": {
     "message": "Phương tiện:",
     "description": ""
