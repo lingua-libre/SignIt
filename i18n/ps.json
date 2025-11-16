@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"si-addon-title": "د اشاروي ژبې خپلواک ويونکي",
+	"si-addon-preload": "په لينگوا ليبرې کې د لاسرسي‌وړ ټولو ويډيگانو لړليک ترلاسه‌کول.",
+	"si-panel-videos-title": "رسنۍ:",
+	"si-panel-videos-gallery-attribution": "د {{link:$1|$2}} له خوا – د $4 له منځه $3 ويډيو",
+	"si-panel-videos-empty": "دا ويوکی تراوسه نه دی کښل شوی، <br>خو SignIt ټولگړې پروژه ده، تاسو کولی شئ ونډه پکې واخلئ.",
+	"si-panel-videos-contribute-label": "له اشاروي ژبې سره ونډه اخيستل",
+	"si-panel-definitions-title": "پېژندونونه:",
+	"si-panel-definitions-wikt-iso": "ps",
+	"si-panel-definitions-wikt-section-id": "#پښتو",
+	"si-panel-definitions-wikt-pointer": "په ويکي‌سيند کې يې وگورئ",
+	"si-panel-definitions-empty": "هېڅ پېژندون ونه موندل شو.",
+	"si-popup-browse-title": "سپړل",
+	"si-popup-browse-placeholder": "د $1 نښو په منځ کې پلټل",
+	"si-popup-browse-label": "پلټل",
+	"si-popup-browse-icon": "پلټل پيلول",
+	"si-popup-history-title": "پېښليک",
+	"si-popup-history-empty": "دا تش دی",
+	"si-popup-settings-title": "اوڼنې",
+	"si-popup-settings-signlanguage": "اشاروي ژبه:",
+	"si-popup-settings-signlanguage-help": "ويډيوگانې بلې اشاروي ژبې ته بدلول.",
+	"si-popup-settings-signlanguage-dropdown": "د ويډيوگانو ژبه بدلول",
+	"si-popup-settings-uilanguage": "مخبڼې ژبه:",
+	"si-popup-settings-uilanguage-help": "د کارن د مخبڼې ژبه بدلول.",
+	"si-popup-settings-uilanguage-dropdown": "د مخبڼې ژبه بدلول",
+	"si-popup-settings-history": "د پېښليک اوږدوالی",
+	"si-popup-settings-history-help": "۰ ته اوڼل پېښليک يادښت ناکارنده‌کوي",
+	"si-popup-settings-wpintegration": "له ويکيپېډيا سره ځايي يوځايوالی:",
+	"si-popup-settings-twospeed": "په نورماله چټکتيا، بيا په ورو چټکتيا يې وغږوئ:",
+	"si-popup-settings-hint-icon": "په ټاکلي ليک کې د لنډلارې نښه:",
+	"si-popup-settings-choosepanels": "ښکارېدنې منځدړې:",
+	"si-popup-settings-choosepanels-definition": "يوازې د ويي‌سيند ليک",
+	"si-popup-settings-choosepanels-both": "دواړه",
+	"si-popup-settings-choosepanels-video": "يوازې لاسليک‌شوې ويډيوگانې",
+	"si-popup-settings-enlighten": "دلاسرسي‌وړ ويوکي روښانول:"
+}

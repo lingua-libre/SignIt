@@ -1,0 +1,74 @@
+{
+  "si_panel_videos_title": {
+    "message": "Πολυμέσο:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "από {{link:$1|$2}} – Βίντεο $3 από $4",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Ορισμοί:",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Δε βρέθηκε ορισμός.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Περιήγηση",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Αναζήτηση",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Ξεκινήστε την αναζήτηση",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Ιστορικό",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Είναι άδειο",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Ρυθμίσεις",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Νοηματική γλώσσα:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Αλλάξτε τα βίντεο σε άλλη νοηματική γλώσσα.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Αλλαγή γλώσσας βίντεο",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Γλώσσα διεπαφής:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Αλλάξτε τη γλώσσα της διεπαφής χρήστη.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Αλλαγή γλώσσας διεπαφής",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Και τα δύο",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Επισήμανση των διαθέσιμων λέξεων:",
+    "description": ""
+  }
+}

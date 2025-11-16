@@ -1,0 +1,43 @@
+{
+	"@metadata": {
+		"authors": [
+			"JeffreyKim",
+			"Ktchankt",
+			"Yueman"
+		]
+	},
+	"si-addon-title": "自由語言簽名",
+	"si-addon-preload": "攞緊所有喺Lingua Libre上面畀嘅影片清單。",
+	"si-panel-videos-title": "媒體：",
+	"si-panel-videos-gallery-attribution": "由{{link:$1|$2}} – 影片$3 ，共$4",
+	"si-panel-videos-empty": "呢個字仲未錄， <br> 但係 SignIt 係群眾調查項目，你可以為佢作出貢獻。",
+	"si-panel-videos-contribute-label": "用手語作出貢獻",
+	"si-panel-definitions-title": "定義：",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "＃英文",
+	"si-panel-definitions-wikt-pointer": "睇維基詞典",
+	"si-panel-definitions-empty": "搵唔到定義。",
+	"si-popup-browse-title": "瀏覽",
+	"si-popup-browse-placeholder": "喺 $1 嘅標誌之間搜尋。",
+	"si-popup-browse-label": "搵",
+	"si-popup-browse-icon": "開始搜尋",
+	"si-popup-history-title": "歷史",
+	"si-popup-history-empty": "佢係空嘅",
+	"si-popup-settings-title": "設定",
+	"si-popup-settings-signlanguage": "手語：",
+	"si-popup-settings-signlanguage-help": "將影片改為另一種手語。",
+	"si-popup-settings-signlanguage-dropdown": "改影片嘅語言",
+	"si-popup-settings-uilanguage": "介面語言：",
+	"si-popup-settings-uilanguage-help": "改用戶介面語言。",
+	"si-popup-settings-uilanguage-dropdown": "改介面語言",
+	"si-popup-settings-history": "歷史長度：",
+	"si-popup-settings-history-help": "設定0為停用記錄",
+	"si-popup-settings-wpintegration": "同維基百科嘅原生整合：",
+	"si-popup-settings-twospeed": "用正常速度玩，然後用慢速玩：",
+	"si-popup-settings-hint-icon": "所選文字上嘅捷徑圖示：",
+	"si-popup-settings-choosepanels": "要顯示嘅面板：",
+	"si-popup-settings-choosepanels-definition": "淨係字典文字",
+	"si-popup-settings-choosepanels-both": "兩者都係",
+	"si-popup-settings-choosepanels-video": "淨係限簽名影片",
+	"si-popup-settings-enlighten": "突顯可用嘅字詞："
+}

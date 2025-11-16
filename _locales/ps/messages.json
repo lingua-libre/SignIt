@@ -1,138 +1,138 @@
 {
   "si_addon_title": {
-    "message": "Lingua Libre SignIt",
+    "message": "د اشاروي ژبې خپلواک ويونکي",
     "description": ""
   },
   "si_addon_preload": {
-    "message": "Lingua Librede bar bolǵan barlıq videolar dizimi alınbaqta.",
+    "message": "په لينگوا ليبرې کې د لاسرسي‌وړ ټولو ويډيگانو لړليک ترلاسه‌کول.",
     "description": ""
   },
   "si_panel_videos_title": {
-    "message": "Media:",
+    "message": "رسنۍ:",
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "{{link:$1|$2}} paydalanıwshınıń $4 danadan $3-videosı",
+    "message": "د {{link:$1|$2}} له خوا – د $4 له منځه $3 ويډيو",
     "description": ""
   },
   "si_panel_videos_empty": {
-    "message": "Bul sóz ele jazıp alınbaǵan,<br>biraq SignIt tolıq derekli joybar bolıp, oǵan úles qosıwıńız múmkin.",
+    "message": "دا ويوکی تراوسه نه دی کښل شوی، <br>خو SignIt ټولگړې پروژه ده، تاسو کولی شئ ونډه پکې واخلئ.",
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "Belgi tili arqalı úles qosıń",
+    "message": "له اشاروي ژبې سره ونډه اخيستل",
     "description": ""
   },
   "si_panel_definitions_title": {
-    "message": "Túsindirmeler:",
+    "message": "پېژندونونه:",
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "ingl",
+    "message": "ps",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#Inglis tili",
+    "message": "#پښتو",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "Wikisózlikten kóriń",
+    "message": "په ويکي‌سيند کې يې وگورئ",
     "description": ""
   },
   "si_panel_definitions_empty": {
-    "message": "Heshqanday túsindirme tabılmadı.",
+    "message": "هېڅ پېژندون ونه موندل شو.",
     "description": ""
   },
   "si_popup_browse_title": {
-    "message": "Sholıw",
+    "message": "سپړل",
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "$1 belgilerinen izleń.",
+    "message": "د $1 نښو په منځ کې پلټل",
     "description": ""
   },
   "si_popup_browse_label": {
-    "message": "Izlew",
+    "message": "پلټل",
     "description": ""
   },
   "si_popup_browse_icon": {
-    "message": "Izlewdi baslań",
+    "message": "پلټل پيلول",
     "description": ""
   },
   "si_popup_history_title": {
-    "message": "Tariyxı",
+    "message": "پېښليک",
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Bul bos",
+    "message": "دا تش دی",
     "description": ""
   },
   "si_popup_settings_title": {
-    "message": "Sazlawlar",
+    "message": "اوڼنې",
     "description": ""
   },
   "si_popup_settings_signlanguage": {
-    "message": "Belgi tili:",
+    "message": "اشاروي ژبه:",
     "description": ""
   },
   "si_popup_settings_signlanguage_help": {
-    "message": "Videolardı basqa belgi tiline ózgertiriń.",
+    "message": "ويډيوگانې بلې اشاروي ژبې ته بدلول.",
     "description": ""
   },
   "si_popup_settings_signlanguage_dropdown": {
-    "message": "Videolardıń tilin ózgertiń",
+    "message": "د ويډيوگانو ژبه بدلول",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
-    "message": "Interfeys tili:",
+    "message": "مخبڼې ژبه:",
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Paydalanıwshı interfeysi tilin ózgertiriń.",
+    "message": "د کارن د مخبڼې ژبه بدلول.",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
-    "message": "Interfeys tilin ózgertiń",
+    "message": "د مخبڼې ژبه بدلول",
     "description": ""
   },
   "si_popup_settings_history": {
-    "message": "Tariyxtıń uzınlıǵı:",
+    "message": "د پېښليک اوږدوالی",
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "0 ge ornatılǵan bolsa, tariyx jurnalın óshiredi",
+    "message": "۰ ته اوڼل پېښليک يادښت ناکارنده‌کوي",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
-    "message": "Wikipedia menen jergilikli integraciya:",
+    "message": "له ويکيپېډيا سره ځايي يوځايوالی:",
     "description": ""
   },
   "si_popup_settings_twospeed": {
-    "message": "Ápiwayı tezlikte, keyin áste tezlikte oynań:",
+    "message": "په نورماله چټکتيا، بيا په ورو چټکتيا يې وغږوئ:",
     "description": ""
   },
   "si_popup_settings_hint_icon": {
-    "message": "Saylanǵan teksttegi jarlıq belgisi:",
+    "message": "په ټاکلي ليک کې د لنډلارې نښه:",
     "description": ""
   },
   "si_popup_settings_choosepanels": {
-    "message": "Kórsetiletuǵın paneller:",
+    "message": "ښکارېدنې منځدړې:",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {
-    "message": "Tek sózlik teksti",
+    "message": "يوازې د ويي‌سيند ليک",
     "description": ""
   },
   "si_popup_settings_choosepanels_both": {
-    "message": "Ekewi",
+    "message": "دواړه",
     "description": ""
   },
   "si_popup_settings_choosepanels_video": {
-    "message": "Tek jalǵanǵan videolar",
+    "message": "يوازې لاسليک‌شوې ويډيوگانې",
     "description": ""
   },
   "si_popup_settings_enlighten": {
-    "message": "Ámeldegi sózlerdi ajıratıp kórsetiw:",
+    "message": "دلاسرسي‌وړ ويوکي روښانول:",
     "description": ""
   }
 }

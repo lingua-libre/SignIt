@@ -48,7 +48,7 @@
     "description": ""
   },
   "si_popup_browse_placeholder": {
-    "message": "Carilah dalam $1 bahasa isyarat.",
+    "message": "Mencari dalam $1 bahasa isyarat.",
     "description": ""
   },
   "si_popup_browse_label": {
@@ -64,7 +64,7 @@
     "description": ""
   },
   "si_popup_history_empty": {
-    "message": "Tidak ada log.",
+    "message": "Tidak ada log",
     "description": ""
   },
   "si_popup_settings_title": {
@@ -88,7 +88,7 @@
     "description": ""
   },
   "si_popup_settings_uilanguage_help": {
-    "message": "Ubah bahasa antarmuka pengguna.",
+    "message": "Mengubah bahasa antarmuka pengguna.",
     "description": ""
   },
   "si_popup_settings_uilanguage_dropdown": {
@@ -100,7 +100,7 @@
     "description": ""
   },
   "si_popup_settings_history_help": {
-    "message": "Setel ke 0 menonaktifkan log riwayat",
+    "message": "Setel ke 0 untuk menonaktifkan log riwayat",
     "description": ""
   },
   "si_popup_settings_wpintegration": {
@@ -116,7 +116,7 @@
     "description": ""
   },
   "si_popup_settings_choosepanels": {
-    "message": "Panel untuk ditampilkan:",
+    "message": "Panel yang ingin ditampilkan:",
     "description": ""
   },
   "si_popup_settings_choosepanels_definition": {

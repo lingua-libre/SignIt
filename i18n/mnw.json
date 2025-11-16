@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Htawmonzel",
 			"咽頭べさ"
 		]
 	},
@@ -18,7 +19,7 @@
 	"si-popup-browse-placeholder": "ဂၠာဲရံၚ်နကဵုအကြာမသမ္တီလဝ် $1 ။",
 	"si-popup-browse-label": "ဂၠာဲ",
 	"si-popup-browse-icon": "စဂၠာဲရံၚ်",
-	"si-popup-history-title": "ဝၚ်",
+	"si-popup-history-title": "ဝင်",
 	"si-popup-history-empty": "မသၠးမံၚ်",
 	"si-popup-settings-title": "ဖျေဟ်ဒၞာဲ",
 	"si-popup-settings-signlanguage": "အရေဝ်ဘာသာမသမ္တီလဝ်:",

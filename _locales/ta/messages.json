@@ -3,16 +3,84 @@
     "message": "Lingua Libre SignIt",
     "description": ""
   },
+  "si_addon_preload": {
+    "message": "லிங்குவா லிப்ரேயில் கிடைக்கும் அனைத்து வீடியோக்களின் பட்டியலையும் பெறுகிறது.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "ஊடகம்:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "{{இணைப்பு: $1 | $2 }} ஆல் – வீடியோ $3 / $4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "இந்த வார்த்தை இன்னும் பதிவு செய்யப்படவில்லை,<br> ஆனால் சைன்இட் என்பது கூட்டத்தால் உருவாக்கப்பட்ட திட்டம், நீங்கள் அதற்கு பங்களிக்கலாம்.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "சைகை மொழி மூலம் பங்களிக்கவும்",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "வரையறைகள்:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "ta",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#ஆங்கிலம்",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "விக்சனரியில் பார்க்கவும்",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "எந்த வரையறையும் கிடைக்கவில்லை.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "உலவ",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "$1 அடையாளங்களுக்கிடையே தேடுங்கள்.",
+    "description": ""
+  },
   "si_popup_browse_label": {
     "message": "தேடு",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "தேடலைத் தொடங்குங்கள்",
     "description": ""
   },
   "si_popup_history_title": {
     "message": "வரலாறு",
     "description": ""
   },
+  "si_popup_history_empty": {
+    "message": "இது காலியாக உள்ளது.",
+    "description": ""
+  },
   "si_popup_settings_title": {
     "message": "அமைப்புகள்",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "சைகை மொழி:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "வீடியோக்களை வேறு சைகை மொழிக்கு மாற்றவும்.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "வீடியோக்களின் மொழியை மாற்று",
     "description": ""
   },
   "si_popup_settings_uilanguage": {
@@ -27,6 +95,30 @@
     "message": "இடைமுக மொழியை மாற்று",
     "description": ""
   },
+  "si_popup_settings_history": {
+    "message": "வரலாற்றின் நீளம்:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "0 என அமைத்தால் வரலாற்றுப் பதிவை செயலிழக்கச் செய்யும்.",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "விக்கிப்பீடியாவுடன் பூர்வீக ஒருங்கிணைப்பு:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "சாதாரண வேகத்தில் விளையாடவும், பின்னர் மெதுவான வேகத்தில் விளையாடவும்:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "தேர்ந்தெடுக்கப்பட்ட உரையில் குறுக்குவழி ஐகான்:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "காண்பிக்க வேண்டிய பலகைகள்:",
+    "description": ""
+  },
   "si_popup_settings_choosepanels_definition": {
     "message": "அகராதி உரை மட்டும்",
     "description": ""
@@ -37,6 +129,10 @@
   },
   "si_popup_settings_choosepanels_video": {
     "message": "ஒப்பமிடப்பட்ட காணொளிகள் மட்டும்",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "கிடைக்கக்கூடிய சொற்களை முன்னிலைப்படுத்தவும்:",
     "description": ""
   }
 }
