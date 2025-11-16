@@ -100,7 +100,8 @@ var SignItCoreContent = function () {
         .find(".signit-definitions-source-wikt")
         .attr("href", definitionsSourceLink)
         .text(wiktPointer);
-      const reportSource = "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
+      const reportSource =
+        "https://meta.m.wikimedia.org/w/index.php?title=Lingua_Libre/SignIt/Suggestions#/editor/all";
       this.$container
         .find(".signit-definitions-source-report")
         .attr("href", reportSource)
@@ -177,7 +178,7 @@ var SignItCoreContent = function () {
     );
     $wiktSection = content.find("#Français").parent().next();
     definition = $wiktSection
-      .find(".titredef")
+      .find(".titreetym" || ".titredef")
       .parent()
       .parent()
       .nextUntil("h2, h3, h4")
