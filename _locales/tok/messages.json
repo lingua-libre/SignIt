@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "ilo Lingua Libre la o luka",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "mi kama e lipu pi sitelen ale tan ilo Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "sitelen:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "tan {{link:$1|$2}} – sitelen $4 la nanpa $3",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "jan ala li sitelen e nimi ni.<br>taso ilo \"o luka\" la jan ale li ken pali. ni la sina ken sitelen.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "o pana kepeken toki luka",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "kon nimi:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "en",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#English",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "o lukin lon lipu Wikinimi",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "kon nimi li lon ala.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "alasa",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "o alasa tan sitelen $1.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "o alasa",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "o open e alasa",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "tenpo pini",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "ala li lon",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "wile ilo",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "toki luka:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "o ante e sitelen tawa toki luka ante.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "o ante e toki sitelen",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "toki ilo:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "o ante e toki ilo.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "o ante e toki ilo",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "lipu pi tenpo pini o suli seme:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "sina pana e nanpa 0 la lipu pi tenpo pini li weka",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "wan ilo lon lipu Wikipesija:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "o lukin lon tenpo pi nasa ala lon tenpo suli kin:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "nena pi tenpo lili lon toki ni:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "mi pana lukin e poki ni:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "kon nimi taso",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "tu",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "sitelen luka taso",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "o kule e nimi ken:",
+    "description": ""
+  }
+}
