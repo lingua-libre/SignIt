@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ookap",
+			"Robin van der Vliet"
+		]
+	},
+	"si-addon-title": "ilo Lingua Libre la o luka",
+	"si-addon-preload": "mi kama e lipu pi sitelen ale tan ilo Lingua Libre.",
+	"si-panel-videos-title": "sitelen:",
+	"si-panel-videos-gallery-attribution": "tan {{link:$1|$2}} – sitelen $4 la nanpa $3",
+	"si-panel-videos-empty": "jan ala li sitelen e nimi ni.<br>taso ilo \"o luka\" la jan ale li ken pali. ni la sina ken sitelen.",
+	"si-panel-videos-contribute-label": "o pana kepeken toki luka",
+	"si-panel-definitions-title": "kon nimi:",
+	"si-panel-definitions-wikt-iso": "en",
+	"si-panel-definitions-wikt-section-id": "#English",
+	"si-panel-definitions-wikt-pointer": "o lukin lon lipu Wikinimi",
+	"si-panel-definitions-empty": "kon nimi li lon ala.",
+	"si-popup-browse-title": "alasa",
+	"si-popup-browse-placeholder": "o alasa tan sitelen $1.",
+	"si-popup-browse-label": "o alasa",
+	"si-popup-browse-icon": "o open e alasa",
+	"si-popup-history-title": "tenpo pini",
+	"si-popup-history-empty": "ala li lon",
+	"si-popup-settings-title": "wile ilo",
+	"si-popup-settings-signlanguage": "toki luka:",
+	"si-popup-settings-signlanguage-help": "o ante e sitelen tawa toki luka ante.",
+	"si-popup-settings-signlanguage-dropdown": "o ante e toki sitelen",
+	"si-popup-settings-uilanguage": "toki ilo:",
+	"si-popup-settings-uilanguage-help": "o ante e toki ilo.",
+	"si-popup-settings-uilanguage-dropdown": "o ante e toki ilo",
+	"si-popup-settings-history": "lipu pi tenpo pini o suli seme:",
+	"si-popup-settings-history-help": "sina pana e nanpa 0 la lipu pi tenpo pini li weka",
+	"si-popup-settings-wpintegration": "wan ilo lon lipu Wikipesija:",
+	"si-popup-settings-twospeed": "o lukin lon tenpo pi nasa ala lon tenpo suli kin:",
+	"si-popup-settings-hint-icon": "nena pi tenpo lili lon toki ni:",
+	"si-popup-settings-choosepanels": "mi pana lukin e poki ni:",
+	"si-popup-settings-choosepanels-definition": "kon nimi taso",
+	"si-popup-settings-choosepanels-both": "tu",
+	"si-popup-settings-choosepanels-video": "sitelen luka taso",
+	"si-popup-settings-enlighten": "o kule e nimi ken:"
+}
