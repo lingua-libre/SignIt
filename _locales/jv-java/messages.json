@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "ꦚ꧀ꦗꦸꦥꦸꦏ꧀ꦏꦧꦺꦃ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦱꦶꦁ​ꦲꦤ​ꦲꦶꦁ​Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "ꦢꦺꦤꦶꦁ{{link:$1|$2}} – ꦥ꦳ꦶꦢꦺꦪꦺꦴ$3ꦢꦺꦤꦶꦁ$4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Tembung iki durung direkam,<br>nanging SignIt kuwi proyèk sing disumber saka wong akeh, dadi kowé isa nyumbang.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "ꦏꦺꦴꦤ꧀ꦠꦿꦶꦧꦸꦱꦶ​ꦔꦁꦒꦺꦴ​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "ꦢꦺꦥ꦳ꦶꦤꦶꦱꦶ",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "jv",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Basa_Jawa",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "ꦢꦼꦊꦁ​ꦲꦶꦁ​ꦮꦶꦏꦶꦏꦩꦸꦱ꧀",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "ꦲꦺꦴꦫ​ꦲꦤ​ꦢꦺꦥ꦳ꦶꦤꦶꦱꦶ꧉",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "ꦗꦼꦭꦗꦃ",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "ꦒꦺꦴꦭꦺꦏ꧀ꦲꦶꦁ​$1​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀꧈",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "ꦒꦺꦴꦭꦺꦏ꧀",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "ꦩꦸꦭꦲꦶ​ꦒꦺꦴꦭꦺꦏ꧀",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "ꦱꦗꦫꦃ",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "ꦏꦺꦴꦛꦺꦴꦁ",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "ꦱꦼꦠꦺꦭ꧀ꦭꦤ꧀",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "ꦧꦱ​ꦆꦱꦾꦫꦠ꧀:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "ꦲꦺꦴꦮꦃ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦩꦺꦚꦁ​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀ꦭꦶꦪꦤꦺ꧉",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ​ꦥꦔꦁꦒꦺꦴ꧉",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "ꦢꦮꦤꦺ​ꦱꦗꦫꦃ:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Setel ke 0 untuk menonaktifkan log riwayat",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "ꦆꦤ꧀ꦠꦼꦒꦿꦱꦶ​ꦤꦠꦶꦥ꦳꧀ꦏꦫꦺꦴ​ꦮꦶꦏꦶꦥꦺꦢꦶꦪꦃ:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "ꦥꦸꦠꦼꦂ​ꦏꦼꦕꦼꦥꦠ꧀ꦠꦤ꧀ꦤꦺꦴꦂꦩꦭ꧀ ꦠꦿꦸꦱ꧀ꦥꦸꦠꦼꦂ​ꦏꦼꦕꦼꦥꦠ꧀ꦠꦤ꧀ꦲꦭꦺꦴꦤ꧀:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Ikon trabasan ing tèks sing dipilih:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "ꦥꦤꦺꦭ꧀ꦱꦶꦁ​ꦥꦺꦔꦶꦤ꧀ꦢꦶꦠꦩ꧀ꦥꦶꦭ꧀ꦤꦺ:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "ꦩꦸꦁ​ꦠꦺꦏ꧀ꦱ꧀ꦏꦩꦸꦱ꧀",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "ꦭꦺꦴꦫꦺꦴꦭꦺꦴꦫꦺꦴꦤꦺ",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦆꦱꦾꦫꦠ꧀ꦛꦺꦴꦏ꧀",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "ꦱꦺꦴꦫꦺꦴꦠ꧀ꦲꦸꦏꦫ​ꦲꦸꦏꦫ​ꦱꦶꦁ​ꦲꦤ:",
+    "description": ""
+  }
+}
