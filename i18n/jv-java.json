@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bennylin"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "ꦚ꧀ꦗꦸꦥꦸꦏ꧀ꦏꦧꦺꦃ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦱꦶꦁ​ꦲꦤ​ꦲꦶꦁ​Lingua Libre.",
+	"si-panel-videos-title": "Media:",
+	"si-panel-videos-gallery-attribution": "ꦢꦺꦤꦶꦁ{{link:$1|$2}} – ꦥ꦳ꦶꦢꦺꦪꦺꦴ$3ꦢꦺꦤꦶꦁ$4",
+	"si-panel-videos-empty": "Tembung iki durung direkam,<br>nanging SignIt kuwi proyèk sing disumber saka wong akeh, dadi kowé isa nyumbang.",
+	"si-panel-videos-contribute-label": "ꦏꦺꦴꦤ꧀ꦠꦿꦶꦧꦸꦱꦶ​ꦔꦁꦒꦺꦴ​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀",
+	"si-panel-definitions-title": "ꦢꦺꦥ꦳ꦶꦤꦶꦱꦶ",
+	"si-panel-definitions-wikt-iso": "jv",
+	"si-panel-definitions-wikt-section-id": "#Basa_Jawa",
+	"si-panel-definitions-wikt-pointer": "ꦢꦼꦊꦁ​ꦲꦶꦁ​ꦮꦶꦏꦶꦏꦩꦸꦱ꧀",
+	"si-panel-definitions-empty": "ꦲꦺꦴꦫ​ꦲꦤ​ꦢꦺꦥ꦳ꦶꦤꦶꦱꦶ꧉",
+	"si-popup-browse-title": "ꦗꦼꦭꦗꦃ",
+	"si-popup-browse-placeholder": "ꦒꦺꦴꦭꦺꦏ꧀ꦲꦶꦁ​$1​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀꧈",
+	"si-popup-browse-label": "ꦒꦺꦴꦭꦺꦏ꧀",
+	"si-popup-browse-icon": "ꦩꦸꦭꦲꦶ​ꦒꦺꦴꦭꦺꦏ꧀",
+	"si-popup-history-title": "ꦱꦗꦫꦃ",
+	"si-popup-history-empty": "ꦏꦺꦴꦛꦺꦴꦁ",
+	"si-popup-settings-title": "ꦱꦼꦠꦺꦭ꧀ꦭꦤ꧀",
+	"si-popup-settings-signlanguage": "ꦧꦱ​ꦆꦱꦾꦫꦠ꧀:",
+	"si-popup-settings-signlanguage-help": "ꦲꦺꦴꦮꦃ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦩꦺꦚꦁ​ꦧꦱ​ꦆꦱꦾꦫꦠ꧀ꦭꦶꦪꦤꦺ꧉",
+	"si-popup-settings-signlanguage-dropdown": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦥ꦳ꦶꦢꦺꦪꦺꦴ",
+	"si-popup-settings-uilanguage": "ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ:",
+	"si-popup-settings-uilanguage-help": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ​ꦥꦔꦁꦒꦺꦴ꧉",
+	"si-popup-settings-uilanguage-dropdown": "ꦲꦺꦴꦮꦃ​ꦧꦱ​ꦲꦤ꧀ꦠꦂꦩꦸꦏ",
+	"si-popup-settings-history": "ꦢꦮꦤꦺ​ꦱꦗꦫꦃ:",
+	"si-popup-settings-history-help": "Setel ke 0 untuk menonaktifkan log riwayat",
+	"si-popup-settings-wpintegration": "ꦆꦤ꧀ꦠꦼꦒꦿꦱꦶ​ꦤꦠꦶꦥ꦳꧀ꦏꦫꦺꦴ​ꦮꦶꦏꦶꦥꦺꦢꦶꦪꦃ:",
+	"si-popup-settings-twospeed": "ꦥꦸꦠꦼꦂ​ꦏꦼꦕꦼꦥꦠ꧀ꦠꦤ꧀ꦤꦺꦴꦂꦩꦭ꧀ ꦠꦿꦸꦱ꧀ꦥꦸꦠꦼꦂ​ꦏꦼꦕꦼꦥꦠ꧀ꦠꦤ꧀ꦲꦭꦺꦴꦤ꧀:",
+	"si-popup-settings-hint-icon": "Ikon trabasan ing tèks sing dipilih:",
+	"si-popup-settings-choosepanels": "ꦥꦤꦺꦭ꧀ꦱꦶꦁ​ꦥꦺꦔꦶꦤ꧀ꦢꦶꦠꦩ꧀ꦥꦶꦭ꧀ꦤꦺ:",
+	"si-popup-settings-choosepanels-definition": "ꦩꦸꦁ​ꦠꦺꦏ꧀ꦱ꧀ꦏꦩꦸꦱ꧀",
+	"si-popup-settings-choosepanels-both": "ꦭꦺꦴꦫꦺꦴꦭꦺꦴꦫꦺꦴꦤꦺ",
+	"si-popup-settings-choosepanels-video": "ꦥ꦳ꦶꦢꦺꦪꦺꦴ​ꦆꦱꦾꦫꦠ꧀ꦛꦺꦴꦏ꧀",
+	"si-popup-settings-enlighten": "ꦱꦺꦴꦫꦺꦴꦠ꧀ꦲꦸꦏꦫ​ꦲꦸꦏꦫ​ꦱꦶꦁ​ꦲꦤ:"
+}
