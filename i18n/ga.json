@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aindriu80"
+		]
+	},
+	"si-addon-title": "Sínigh é Lingua Libre",
+	"si-addon-preload": "Ag fáil liosta na bhfíseán go léir atá ar fáil ar Lingua Libre.",
+	"si-panel-videos-title": "Meáin:",
+	"si-panel-videos-gallery-attribution": "le {{link:$1|$2}} – Físeán $3 de $4",
+	"si-panel-videos-empty": "Níl an focal seo taifeadta fós,<br>ach is tionscadal foinse sluaite é SignIt, is féidir leat cur leis.",
+	"si-panel-videos-contribute-label": "Rannchuidiú le Teanga Chomharthaíochta",
+	"si-panel-definitions-title": "Sainmhínithe:",
+	"si-panel-definitions-wikt-iso": "ga",
+	"si-panel-definitions-wikt-section-id": "#Gaeilge",
+	"si-panel-definitions-wikt-pointer": "féach ar Vicífhoclóir",
+	"si-panel-definitions-empty": "Níor aimsíodh aon sainmhíniú.",
+	"si-popup-browse-title": "Brabhsáil",
+	"si-popup-browse-placeholder": "Cuardaigh i measc comharthaí $1.",
+	"si-popup-browse-label": "Cuardaigh",
+	"si-popup-browse-icon": "Tosaigh an cuardach",
+	"si-popup-history-title": "Stair",
+	"si-popup-history-empty": "Tá sé folamh",
+	"si-popup-settings-title": "Socruithe",
+	"si-popup-settings-signlanguage": "Teanga chomharthaíochta:",
+	"si-popup-settings-signlanguage-help": "Athraigh físeáin go teanga chomharthaíochta eile.",
+	"si-popup-settings-signlanguage-dropdown": "Athraigh teanga na bhfíseán",
+	"si-popup-settings-uilanguage": "Teanga chomhéadain:",
+	"si-popup-settings-uilanguage-help": "Athraigh teanga an chomhéadain úsáideora.",
+	"si-popup-settings-uilanguage-dropdown": "Athraigh teanga an chomhéadain",
+	"si-popup-settings-history": "Fad na staire:",
+	"si-popup-settings-history-help": "Má shocraítear go 0, díghníomhaítear an log staire",
+	"si-popup-settings-wpintegration": "Comhtháthú dúchasach le Vicipéid:",
+	"si-popup-settings-twospeed": "Seinn ag luas gnáth, ansin ag luas mall:",
+	"si-popup-settings-hint-icon": "Deilbhín aicearra ar théacs roghnaithe:",
+	"si-popup-settings-choosepanels": "Painéil le taispeáint:",
+	"si-popup-settings-choosepanels-definition": "Téacs an fhoclóra amháin",
+	"si-popup-settings-choosepanels-both": "An dá cheann",
+	"si-popup-settings-choosepanels-video": "Físeáin shínithe amháin",
+	"si-popup-settings-enlighten": "Aibhsigh focail atá ar fáil:"
+}
