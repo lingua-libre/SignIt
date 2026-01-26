@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Sínigh é Lingua Libre",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Ag fáil liosta na bhfíseán go léir atá ar fáil ar Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Meáin:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "le {{link:$1|$2}} – Físeán $3 de $4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "Níl an focal seo taifeadta fós,<br>ach is tionscadal foinse sluaite é SignIt, is féidir leat cur leis.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Rannchuidiú le Teanga Chomharthaíochta",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Sainmhínithe:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "ga",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Gaeilge",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "féach ar Vicífhoclóir",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Níor aimsíodh aon sainmhíniú.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Brabhsáil",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Cuardaigh i measc comharthaí $1.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Cuardaigh",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Tosaigh an cuardach",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Stair",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Tá sé folamh",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Socruithe",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Teanga chomharthaíochta:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Athraigh físeáin go teanga chomharthaíochta eile.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Athraigh teanga na bhfíseán",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Teanga chomhéadain:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Athraigh teanga an chomhéadain úsáideora.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Athraigh teanga an chomhéadain",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Fad na staire:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Má shocraítear go 0, díghníomhaítear an log staire",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Comhtháthú dúchasach le Vicipéid:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Seinn ag luas gnáth, ansin ag luas mall:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Deilbhín aicearra ar théacs roghnaithe:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Painéil le taispeáint:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Téacs an fhoclóra amháin",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "An dá cheann",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Físeáin shínithe amháin",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Aibhsigh focail atá ar fáil:",
+    "description": ""
+  }
+}
