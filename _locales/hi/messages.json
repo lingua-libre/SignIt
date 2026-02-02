@@ -20,7 +20,7 @@
     "description": ""
   },
   "si_panel_videos_contribute_label": {
-    "message": "सांकेतिक भाषा पर योगदान करें",
+    "message": "सांकेतिक भाषा से योगदान करें",
     "description": ""
   },
   "si_panel_definitions_title": {
@@ -28,15 +28,15 @@
     "description": ""
   },
   "si_panel_definitions_wikt_iso": {
-    "message": "en",
+    "message": "hi",
     "description": ""
   },
   "si_panel_definitions_wikt_section_id": {
-    "message": "#Hindi",
+    "message": "#हिन्दी",
     "description": ""
   },
   "si_panel_definitions_wikt_pointer": {
-    "message": "विकिकोष पर देखें",
+    "message": "विकिकोश पर देखें",
     "description": ""
   },
   "si_panel_definitions_empty": {
