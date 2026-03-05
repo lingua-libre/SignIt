@@ -4,6 +4,7 @@
 			"Arystanbek",
 			"Casserium",
 			"Darzz",
+			"Moonborn",
 			"Yug"
 		]
 	},
@@ -36,5 +37,9 @@
 	"si-popup-settings-wpintegration": "Уикипедиямен табиғи ынтымақтастық:",
 	"si-popup-settings-twospeed": "Қалыпты жылдамдықпен, сосын баяу жылдамдықпен ойнату:",
 	"si-popup-settings-hint-icon": "Таңдалған тексте таңбаша белгісі:",
+	"si-popup-settings-choosepanels": "Көрсетілетін панельдер",
+	"si-popup-settings-choosepanels-definition": "Тек сөздіктің мәтіні",
+	"si-popup-settings-choosepanels-both": "Екеуі де",
+	"si-popup-settings-choosepanels-video": "Тек ым-ишара видеолар",
 	"si-popup-settings-enlighten": "Қолжетімді сөздерді ерекшелеу:"
 }
