@@ -115,6 +115,22 @@
     "message": "Таңдалған тексте таңбаша белгісі:",
     "description": ""
   },
+  "si_popup_settings_choosepanels": {
+    "message": "Көрсетілетін панельдер",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Тек сөздіктің мәтіні",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Екеуі де",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Тек ым-ишара видеолар",
+    "description": ""
+  },
   "si_popup_settings_enlighten": {
     "message": "Қолжетімді сөздерді ерекшелеу:",
     "description": ""
