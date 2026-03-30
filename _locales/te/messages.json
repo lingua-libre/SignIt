@@ -12,7 +12,7 @@
     "description": ""
   },
   "si_panel_videos_gallery_attribution": {
-    "message": "కర్త: {{link:$1|$2}} – $4 వీడియోల్లో $3 వది",
+    "message": "కర్త: {{link:$1|$2}} – $4 వీడియోల్లో $3వది",
     "description": ""
   },
   "si_panel_videos_empty": {
