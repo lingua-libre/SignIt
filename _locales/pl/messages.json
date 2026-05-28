@@ -1,0 +1,138 @@
+{
+  "si_addon_title": {
+    "message": "Lingua Libre SignIt",
+    "description": ""
+  },
+  "si_addon_preload": {
+    "message": "Pobieranie listy wszystkich dostępnych filmów w Lingua Libre.",
+    "description": ""
+  },
+  "si_panel_videos_title": {
+    "message": "Media:",
+    "description": ""
+  },
+  "si_panel_videos_gallery_attribution": {
+    "message": "przez {{link:$1|$2}} – wideo $3 z $4",
+    "description": ""
+  },
+  "si_panel_videos_empty": {
+    "message": "To słowo nie zostało jeszcze nagrane,<br>ale SignIt jest projektem społecznościowym - możesz się do niego przyczynić.",
+    "description": ""
+  },
+  "si_panel_videos_contribute_label": {
+    "message": "Dodaj nagranie w języku migowym",
+    "description": ""
+  },
+  "si_panel_definitions_title": {
+    "message": "Definicje:",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_iso": {
+    "message": "pl",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_section_id": {
+    "message": "#Polski",
+    "description": ""
+  },
+  "si_panel_definitions_wikt_pointer": {
+    "message": "zobacz na Wikisłowniku",
+    "description": ""
+  },
+  "si_panel_definitions_empty": {
+    "message": "Nie znaleziono definicji.",
+    "description": ""
+  },
+  "si_popup_browse_title": {
+    "message": "Przeglądaj",
+    "description": ""
+  },
+  "si_popup_browse_placeholder": {
+    "message": "Szukaj wśród $1 znaków.",
+    "description": ""
+  },
+  "si_popup_browse_label": {
+    "message": "Szukaj",
+    "description": ""
+  },
+  "si_popup_browse_icon": {
+    "message": "Rozpocznij wyszukiwanie",
+    "description": ""
+  },
+  "si_popup_history_title": {
+    "message": "Historia",
+    "description": ""
+  },
+  "si_popup_history_empty": {
+    "message": "Nic tu nie ma",
+    "description": ""
+  },
+  "si_popup_settings_title": {
+    "message": "Ustawienia",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage": {
+    "message": "Język migowy:",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_help": {
+    "message": "Zmień filmy na inny język migowy.",
+    "description": ""
+  },
+  "si_popup_settings_signlanguage_dropdown": {
+    "message": "Zmień język filmu",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage": {
+    "message": "Język interfejsu:",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_help": {
+    "message": "Zmień język interfejsu użytkownika.",
+    "description": ""
+  },
+  "si_popup_settings_uilanguage_dropdown": {
+    "message": "Zmień język interfejsu.",
+    "description": ""
+  },
+  "si_popup_settings_history": {
+    "message": "Długość historii:",
+    "description": ""
+  },
+  "si_popup_settings_history_help": {
+    "message": "Ustawienie na 0 dezaktywuje historię logów",
+    "description": ""
+  },
+  "si_popup_settings_wpintegration": {
+    "message": "Natywna integracja z Wikipedią:",
+    "description": ""
+  },
+  "si_popup_settings_twospeed": {
+    "message": "Odtwarzaj najpierw z normalną prędkością, a następnie w zwolnionym tempie:",
+    "description": ""
+  },
+  "si_popup_settings_hint_icon": {
+    "message": "Ikona skrótu na wybranym tekście:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels": {
+    "message": "Panele do wyświetlenia:",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_definition": {
+    "message": "Tylko tekst słownikowy",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_both": {
+    "message": "Oba",
+    "description": ""
+  },
+  "si_popup_settings_choosepanels_video": {
+    "message": "Tylko nagrania w języku migowym",
+    "description": ""
+  },
+  "si_popup_settings_enlighten": {
+    "message": "Podkreśl dostępne słowa:",
+    "description": ""
+  }
+}
