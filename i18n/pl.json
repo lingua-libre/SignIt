@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"G3raltJJ"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Pobieranie listy wszystkich dostępnych filmów w Lingua Libre.",
+	"si-panel-videos-title": "Media:",
+	"si-panel-videos-gallery-attribution": "przez {{link:$1|$2}} – wideo $3 z $4",
+	"si-panel-videos-empty": "To słowo nie zostało jeszcze nagrane,<br>ale SignIt jest projektem społecznościowym - możesz się do niego przyczynić.",
+	"si-panel-videos-contribute-label": "Dodaj nagranie w języku migowym",
+	"si-panel-definitions-title": "Definicje:",
+	"si-panel-definitions-wikt-iso": "pl",
+	"si-panel-definitions-wikt-section-id": "#Polski",
+	"si-panel-definitions-wikt-pointer": "zobacz na Wikisłowniku",
+	"si-panel-definitions-empty": "Nie znaleziono definicji.",
+	"si-popup-browse-title": "Przeglądaj",
+	"si-popup-browse-placeholder": "Szukaj wśród $1 znaków.",
+	"si-popup-browse-label": "Szukaj",
+	"si-popup-browse-icon": "Rozpocznij wyszukiwanie",
+	"si-popup-history-title": "Historia",
+	"si-popup-history-empty": "Nic tu nie ma",
+	"si-popup-settings-title": "Ustawienia",
+	"si-popup-settings-signlanguage": "Język migowy:",
+	"si-popup-settings-signlanguage-help": "Zmień filmy na inny język migowy.",
+	"si-popup-settings-signlanguage-dropdown": "Zmień język filmu",
+	"si-popup-settings-uilanguage": "Język interfejsu:",
+	"si-popup-settings-uilanguage-help": "Zmień język interfejsu użytkownika.",
+	"si-popup-settings-uilanguage-dropdown": "Zmień język interfejsu.",
+	"si-popup-settings-history": "Długość historii:",
+	"si-popup-settings-history-help": "Ustawienie na 0 dezaktywuje historię logów",
+	"si-popup-settings-wpintegration": "Natywna integracja z Wikipedią:",
+	"si-popup-settings-twospeed": "Odtwarzaj najpierw z normalną prędkością, a następnie w zwolnionym tempie:",
+	"si-popup-settings-hint-icon": "Ikona skrótu na wybranym tekście:",
+	"si-popup-settings-choosepanels": "Panele do wyświetlenia:",
+	"si-popup-settings-choosepanels-definition": "Tylko tekst słownikowy",
+	"si-popup-settings-choosepanels-both": "Oba",
+	"si-popup-settings-choosepanels-video": "Tylko nagrania w języku migowym",
+	"si-popup-settings-enlighten": "Podkreśl dostępne słowa:"
+}
