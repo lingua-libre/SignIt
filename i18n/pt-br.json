@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Duke of Wikipädia",
+			"EGobi",
 			"Flaviane da Silva"
 		]
 	},
@@ -31,7 +32,7 @@
 	"si-popup-settings-uilanguage-dropdown": "Alterar o idioma da interface",
 	"si-popup-settings-history": "Duração da história:",
 	"si-popup-settings-history-help": "Defina como 0 para desativar o registro do histórico",
-	"si-popup-settings-wpintegration": "Integração nativa com a Wikipedia:",
+	"si-popup-settings-wpintegration": "Integração nativa com a Wikipédia:",
 	"si-popup-settings-twospeed": "Jogue em velocidade normal e depois em velocidade lenta:",
 	"si-popup-settings-hint-icon": "Ícone de atalho no texto selecionado:",
 	"si-popup-settings-choosepanels": "Painéis a mostrar:",
