@@ -8,6 +8,7 @@
 	"si-addon-title": "လုပ်အကံက်လေန်ဂွါ လဳပရေ",
 	"si-addon-preload": "သ္ပတံၚ်ကေတ်ဗဳဒဳယဝ်စရၚ်မနွံပ္ဍဲလ္တူလေန်ဂွါ လဳပရေသီုဖအိုတ်။",
 	"si-panel-videos-title": "မဳဒဳယာ:",
+	"si-panel-videos-gallery-attribution": "နူ {{link:$1|$2}} – ဗဳဒဳယဝ် $3 နကဵု $4",
 	"si-panel-videos-empty": "ဝေါဟာတဏအ်ဝွံဟွံဂွံစၟတ်သမ္တီရမျာၚ်ဏီ၊ <br>ဆ္ဂးသေတ်နေတ်ဂှ်ဝွံမကၠုၚ်နူတံရိုဟ်ပရဝ်ဂျေတ်ညးဍုၚ်ကွာန်၊ ဇကုကီုလေဝ်ဗီုၚ်ရီုဗၚ်မကၠောန်သ္ပဂွံမာန်။",
 	"si-panel-videos-contribute-label": "မနွံပံၚ်ကောံနကဵုအရေဝ်သာသာတဲ",
 	"si-panel-definitions-title": "မပွံက်အဓိပ္ပာဲ:",
@@ -32,5 +33,10 @@
 	"si-popup-settings-history-help": "စကၠောန်မဒှ် ၀ တၟာတ်ထောံပရေၚ်ရပ်စပ်မဆေၚ်စပ်ကဵုဝၚ်စၟတ်သမ္တီ",
 	"si-popup-settings-wpintegration": "ဂကောံပံၚ်စပ်ဒၞာဲဇာတိနူကဵုဝဳကဳပဳဒဳယာ:",
 	"si-popup-settings-twospeed": "ဝေၚ်ဒရိပ်လအာဗီုဓမ္မတာ၊ တုဲတှ်ေဒရိပ်လအာအိၚ်:",
-	"si-popup-settings-choosepanels-both": "ဗောတ်"
+	"si-popup-settings-hint-icon": "မရုဲကေတ်လဝ်လ္တူလက္ခဏာလိက်တတ်ဂၠံၚ်:",
+	"si-popup-settings-choosepanels": "တၠးအရၚ်ဂွံထ္ၜးဟိုတ်:",
+	"si-popup-settings-choosepanels-definition": "ဆၜိုတ်လိက်အဘိဓာန်",
+	"si-popup-settings-choosepanels-both": "ဗောတ်",
+	"si-popup-settings-choosepanels-video": "ဆၜိုတ်ဗဳဒဳယဝ်ထ္ပက်စၟတ်တဲ",
+	"si-popup-settings-enlighten": "မပ္ညုၚ်ထ္ၜးမအရေဝ်မၞုံဒၟံၚ်ဟေၚ်ဂမၠိုၚ်:"
 }
