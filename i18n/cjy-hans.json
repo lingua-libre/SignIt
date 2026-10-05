@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"Villager-bloc-h"
+		]
+	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "从Lingua Libre上把所有视频个列表拉过来。",
+	"si-panel-videos-title": "视频：",
+	"si-panel-videos-gallery-attribution": "贡献者 {{link:$1|$2}} – 视频 $3 / $4",
+	"si-panel-videos-empty": "这个词还没人录过，<br>不过SignIt是个众包项目，你也能给它出份力。",
+	"si-panel-videos-contribute-label": "用手语来出份力",
+	"si-panel-definitions-title": "定义：",
+	"si-panel-definitions-wikt-iso": "cjy",
+	"si-panel-definitions-wikt-section-id": "#晋语",
+	"si-panel-definitions-wikt-pointer": "上维基词典去看",
+	"si-panel-definitions-empty": "没找到定义。",
+	"si-popup-browse-title": "浏览",
+	"si-popup-browse-placeholder": "搜索 $1 种手语。",
+	"si-popup-browse-label": "搜索",
+	"si-popup-browse-icon": "开始搜索",
+	"si-popup-history-title": "历史",
+	"si-popup-history-empty": "空的",
+	"si-popup-settings-title": "设置",
+	"si-popup-settings-signlanguage": "手语：",
+	"si-popup-settings-signlanguage-help": "把视频改成另外个手语。",
+	"si-popup-settings-signlanguage-dropdown": "把视频中个语言改喽",
+	"si-popup-settings-uilanguage": "界面语言：",
+	"si-popup-settings-uilanguage-help": "把界面语言改喽。",
+	"si-popup-settings-uilanguage-dropdown": "把界面语言改喽。",
+	"si-popup-settings-history": "历史长度：",
+	"si-popup-settings-history-help": "设成0就把历史日志关喽。",
+	"si-popup-settings-wpintegration": "与维基百科的集成：",
+	"si-popup-settings-twospeed": "先按正常速度放，再按慢速度放：",
+	"si-popup-settings-hint-icon": "选中文本时个快捷图标：",
+	"si-popup-settings-choosepanels": "要显示个面板：",
+	"si-popup-settings-choosepanels-definition": "仅字典文本",
+	"si-popup-settings-choosepanels-both": "两个都显示",
+	"si-popup-settings-choosepanels-video": "仅手语视频",
+	"si-popup-settings-enlighten": "突出显示可用个词汇："
+}
