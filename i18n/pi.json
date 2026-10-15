@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"咽頭べさ"
+		]
+	},
+	"si-addon-title": "लिंगुआ लिब्रे साइनइट",
+	"si-addon-preload": "दिस्समान सब्ब वीडियो सूचिं आहरणं लिंगुआ लिब्रे॥",
+	"si-panel-videos-title": "मीदीया:",
+	"si-panel-videos-gallery-attribution": "{{link:$1|$2}} वार – वीडियो $3 म्हि $4",
+	"si-panel-videos-empty": "एतं पदं याव इधा न गहितं।<br> तथापि सिञ्ञित नामकं प्रोजेक्ट सब्ब जनानं आयूहनं त्वम्पि एत्थ दानं कातुं सक्कोहि॥",
+	"si-panel-videos-contribute-label": "सङ्केत भासाय उपदहितुं",
+	"si-panel-definitions-title": "अत्थ विञ्ञापनानि:",
+	"si-panel-definitions-wikt-iso": "pi",
+	"si-panel-definitions-wikt-section-id": "#पाळि",
+	"si-panel-definitions-wikt-pointer": "वीकीसद्दकोसं ट्ठाने पस्सतु",
+	"si-panel-definitions-empty": "अत्थ विञ्ञापनं न सुलभं",
+	"si-popup-browse-title": "ब्राउज़",
+	"si-popup-browse-placeholder": "$1 सङ्केतेसू अन्तो विचिनोहि॥",
+	"si-popup-browse-label": "अन्वेसना",
+	"si-popup-browse-icon": "विचयं आरभतु",
+	"si-popup-history-title": "अत्तुप्पत्ति",
+	"si-popup-history-empty": "इदं सुञं",
+	"si-popup-settings-title": "नियामनानि",
+	"si-popup-settings-signlanguage": "सङ्केत भासा:",
+	"si-popup-settings-signlanguage-help": "अञ सङ्केत भासाय वीडियो परिवत्तनं॥",
+	"si-popup-settings-signlanguage-dropdown": "वीडियो भासा परिवत्तेहि",
+	"si-popup-settings-uilanguage": "भासा इंटरफ़ेस:",
+	"si-popup-settings-uilanguage-help": "इंटरफ़ेस भासा योजको परिवत्तेहि॥",
+	"si-popup-settings-uilanguage-dropdown": "इंटरफ़ेस भासा सन्तति",
+	"si-popup-settings-history": "अतीतस्स दीघता:",
+	"si-popup-settings-history-help": "० पन निस्सज्जमानं अतीतस्स महितं असन्तं करोति",
+	"si-popup-settings-wpintegration": "वीकीपीदीया मूल सम्पयुत्तं:",
+	"si-popup-settings-twospeed": "पकतिवेगेन कीळित्वा। पच्छा मन्दवेगेन कीळित्वा:",
+	"si-popup-settings-hint-icon": "संखित्तरूपं रूपितं पदे आनीते:",
+	"si-popup-settings-choosepanels": "दस्सनत्थाय पटा:",
+	"si-popup-settings-choosepanels-definition": "अभिधानस्स पाठमत्तं",
+	"si-popup-settings-choosepanels-both": "द्वेपि",
+	"si-popup-settings-choosepanels-video": "हत्थमुद्दा वीडियो मत्तं",
+	"si-popup-settings-enlighten": "पिहितसद्दे पुप्फितं करोति:"
+}
