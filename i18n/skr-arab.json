@@ -1,21 +1,42 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saraiki"
+			"Saraiki",
+			"Tauqeerkhansurani"
 		]
 	},
+	"si-addon-title": "Lingua Libre SignIt",
+	"si-addon-preload": "Lingua Libre تے دستیاب ساریاں ویڈیو دی لسٹ گھدی ویندی پئی ہے۔",
 	"si-panel-videos-title": "میڈیا",
+	"si-panel-videos-gallery-attribution": "واسطے {{link:$1|$2}} – $4 وچوں $3 ویڈیو",
+	"si-panel-videos-empty": "ایندا لفظ اݨ ریکارڈ تھیا،<br>لیکن SignIt ہک کراؤڈ سورس منصوبہ ہے، تساں ایندے وچ حصہ پاتے سڳدو",
+	"si-panel-videos-contribute-label": "اشارے دی زبان نال حصہ پاؤ",
 	"si-panel-definitions-title": "تعریفاں:",
 	"si-panel-definitions-wikt-iso": "skr",
 	"si-panel-definitions-wikt-section-id": "#سرائیکی",
+	"si-panel-definitions-wikt-pointer": "Wiktionary تے ݙیکھو",
 	"si-panel-definitions-empty": "کوئی تعریف کائنی لبھی۔",
 	"si-popup-browse-title": "براؤز",
+	"si-popup-browse-placeholder": "$1 اشاریاں وچ ڳولو۔",
 	"si-popup-browse-label": "ڳولو",
 	"si-popup-browse-icon": "ڳولݨ شروع کرو",
 	"si-popup-history-title": "تاریخ",
 	"si-popup-history-empty": "ایہ خالی ہے",
 	"si-popup-settings-title": "ترتیباں",
+	"si-popup-settings-signlanguage": "اشارے دی زبان:",
+	"si-popup-settings-signlanguage-help": "ویڈیو کہیں ٻئی اشارے دی زبان وچ بدلو۔",
 	"si-popup-settings-signlanguage-dropdown": "وڈیو دی زبان وٹاؤ",
 	"si-popup-settings-uilanguage": "انٹر فیس زبان",
-	"si-popup-settings-choosepanels-both": "ݙون٘ہیں"
+	"si-popup-settings-uilanguage-help": "ورتیندڑ انٹرفیس دی زبان بدلو۔",
+	"si-popup-settings-uilanguage-dropdown": "انٹرفیس زبان بدلو",
+	"si-popup-settings-history": "تاریخ دی لمبائی:",
+	"si-popup-settings-history-help": "0 تے سیٹ کرݨ نال تاریخ لاگ بند تھی ویندی ہے",
+	"si-popup-settings-wpintegration": "Wikipedia نال مقامی انضمام:",
+	"si-popup-settings-twospeed": "پہلے عام رفتار تے، ولدے ہولے رفتار تے چلاؤ:",
+	"si-popup-settings-hint-icon": "چݨے ہوئے متن تے شارٹ کٹ آئیکن:",
+	"si-popup-settings-choosepanels": "ݙکھاوݨ آلے پینل:",
+	"si-popup-settings-choosepanels-definition": "صرف لغت دا متن",
+	"si-popup-settings-choosepanels-both": "ݙون٘ہیں",
+	"si-popup-settings-choosepanels-video": "صرف اشارے آلیاں ویڈیو",
+	"si-popup-settings-enlighten": "دستیاب لفظاں کوں ہائی لائٹ کرو:"
 }
