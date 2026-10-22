@@ -1,0 +1,41 @@
+{
+	"@metadata": {
+		"authors": [
+			"JiodoJ"
+		]
+	},
+	"si-addon-title": "Iffirmaha Lingwa Libre",
+	"si-addon-preload": "Qed tinġabar il-lista tal-vidji kollha disponibbli fuq Lingua Libre.",
+	"si-panel-videos-title": "Midja:",
+	"si-panel-videos-gallery-attribution": "minn {{ħolqa:$1|$2}} – Vidjo $3 minn $4",
+	"si-panel-videos-empty": "Din il-kelma għadha ma ġietx irreġistrata,<br> iżda Iffirmaha huwa proġett miġbur minn nies, tista' tikkontribwixxi għalih.",
+	"si-panel-videos-contribute-label": "Ikkontribwixxi bil-Lingwa tas-Sinjali",
+	"si-panel-definitions-title": "Definizzjonijiet:",
+	"si-panel-definitions-wikt-iso": "mt",
+	"si-panel-definitions-wikt-section-id": "#Malti",
+	"si-panel-definitions-wikt-pointer": "ara fuq Wikizzjunarju",
+	"si-panel-definitions-empty": "Ma nstabet l-ebda definizzjoni.",
+	"si-popup-browse-title": "Qalleb",
+	"si-popup-browse-placeholder": "Fittex fost sinjali ta' $1.",
+	"si-popup-browse-label": "Fittex",
+	"si-popup-browse-icon": "Ibda t-tfittxija",
+	"si-popup-history-title": "Kronoloġija",
+	"si-popup-history-empty": "Vojt",
+	"si-popup-settings-title": "Għażliet",
+	"si-popup-settings-signlanguage": "Lingwa tas-sinjali:",
+	"si-popup-settings-signlanguage-help": "Biddel il-vidji għal lingwa tas-sinjali oħra.",
+	"si-popup-settings-signlanguage-dropdown": "Biddel il-lingwa tal-vidji",
+	"si-popup-settings-uilanguage": "Lingwa tal-interfaċċja:",
+	"si-popup-settings-uilanguage-help": "Ibdel il-lingwa tal-interfaċċja tal-utent.",
+	"si-popup-settings-uilanguage-dropdown": "Biddel il-lingwa tal-interfaċċja",
+	"si-popup-settings-history": "Tul tal-kronoloġija:",
+	"si-popup-settings-history-help": "Meta tagħmlu 0 jitfi l-logg tal-kronoloġija",
+	"si-popup-settings-wpintegration": "Integrazzjoni nattiva mal-Wikipedija:",
+	"si-popup-settings-twospeed": "Doqqha b'pass normali, imbagħad bil-mod:",
+	"si-popup-settings-hint-icon": "Ikona taqsira fuq test magħżul:",
+	"si-popup-settings-choosepanels": "Panelli biex jintwerew:",
+	"si-popup-settings-choosepanels-definition": "Test tad-dizzjunarju biss",
+	"si-popup-settings-choosepanels-both": "It-tnejn",
+	"si-popup-settings-choosepanels-video": "Vidji ffirmati biss",
+	"si-popup-settings-enlighten": "Immarka l-kliem disponibbli:"
+}
